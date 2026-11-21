@@ -40,6 +40,16 @@ SUMARIO = """<?xml version="1.0" encoding="utf-8"?>
               <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-00001</url_html>
               <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-00001</url_xml></item>
           </epigrafe>
+        </departamento>
+        <departamento codigo="6" nombre="TRIBUNALES DE INSTANCIA. SECCIÓN CIVIL">
+          <item><identificador>BOE-B-2026-00020</identificador>
+            <titulo>SEVILLA</titulo>
+            <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-00020</url_html></item>
+          <item><identificador>BOE-B-2026-00021</identificador>
+            <titulo>SEVILLA</titulo>
+            <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-00021</url_html></item>
+        </departamento>
+        <departamento codigo="7" nombre="JUZGADOS DE PRIMERA INSTANCIA E INSTRUCCIÓN">
           <epigrafe nombre="SEVILLA">
             <item><identificador>BOE-B-2026-00003</identificador>
               <titulo>Edicto de subasta (solo XML)</titulo>
@@ -58,16 +68,22 @@ SUMARIO = """<?xml version="1.0" encoding="utf-8"?>
       </seccion>
       <seccion codigo="5B" nombre="V. Anuncios. B. Otros anuncios oficiales">
         <departamento codigo="4" nombre="MINISTERIO DE HACIENDA">
-          <epigrafe nombre="U.R. SUBASTAS ANDALUCÍA 41">
-            <item><identificador>BOE-B-2026-38437</identificador>
-              <titulo>Anuncio de subasta</titulo>
-              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38437</url_html></item>
-          </epigrafe>
-          <epigrafe nombre="U.R. SUBASTAS CATALUÑA">
-            <item><identificador>BOE-B-2026-38436</identificador>
-              <titulo>Anuncio de subasta SUB-AT-2026-99X0000000001</titulo>
-              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38436</url_html></item>
-          </epigrafe>
+          <item><identificador>BOE-B-2026-38437</identificador>
+            <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+            <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38437</url_html></item>
+          <item><identificador>BOE-B-2026-38436</identificador>
+            <titulo>U.R. SUBASTAS CATALUÑA SUB-AT-2026-99X0000000001</titulo>
+            <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38436</url_html></item>
+        </departamento>
+      </seccion>
+      <seccion codigo="5C" nombre="V. Anuncios. C. Anuncios particulares">
+        <departamento codigo="5" nombre="ANUNCIOS PARTICULARES">
+          <item><identificador>BOE-B-2026-00010</identificador>
+            <titulo>NOTARÍA DE PRUEBA UNO</titulo>
+            <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-00010</url_html></item>
+          <item><identificador>BOE-B-2026-00011</identificador>
+            <titulo>NOTARÍA DE PRUEBA DOS</titulo>
+            <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-00011</url_html></item>
         </departamento>
       </seccion>
     </diario>
@@ -119,6 +135,12 @@ def respuestas_base():
         "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38437": ANUNCIO_AEAT,
         "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-00001": anuncio_juzgado(),
         "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-00002": b"<p>Subasta de parcela</p>",
+        "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-00010":
+            "<p>Venta extrajudicial. Se anuncia subasta de la finca sita en Dos Hermanas (Sevilla).</p>".encode(),
+        "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-00011": b"<p>Extravio de una poliza.</p>",
+        "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-00020":
+            "<p>Edicto. Se anuncia la subasta SUB-JA-2026-000444 del inmueble.</p>".encode(),
+        "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-00021": b"<p>Edicto de declaracion de concurso.</p>",
         sema.CATASTRO_MUNICIPIOS: CATASTRO,
         sema.CSV_JUSTICIA: csv_justicia(),
     }
@@ -192,6 +214,15 @@ class TestFlujo(unittest.TestCase):
         inm = con.execute("SELECT * FROM inmuebles WHERE id_subasta='SUB-JA-2026-000111'").fetchone()
         self.assertEqual(inm["municipio"], "Utrera")
         self.assertEqual(inm["referencia_catastral"], "1234567TG1234N0001AB")
+        self.assertEqual(exp["SUB-AT-2026-26R4186001325"]["autoridad_gestora"],
+                         "MINISTERIO DE HACIENDA · U.R. SUBASTAS ANDALUCÍA 41")
+        # Edicto de tribunal de Sevilla con título «SEVILLA»: subasta detectada por el texto
+        self.assertIn("SUB-JA-2026-000444", exp)
+        self.assertNotIn("BOE-B-2026-00021", {r["id_boe"] for r in con.execute("SELECT id_boe FROM anuncios_boe")})
+        # Notaría: subasta detectada por el texto y Sevilla por la mención en el texto
+        notaria = con.execute("SELECT motivo_sevilla FROM anuncios_boe WHERE id_boe='BOE-B-2026-00010'").fetchone()
+        self.assertEqual(notaria["motivo_sevilla"], "texto_menciona_sevilla")
+        self.assertIsNone(con.execute("SELECT 1 FROM anuncios_boe WHERE id_boe='BOE-B-2026-00011'").fetchone())
         # Justicia: solo Sevilla
         self.assertIn("SUB-JA-2026-000333", exp)
         self.assertEqual(exp["SUB-JA-2026-000333"]["nivel_verificacion"], "A2")
@@ -243,6 +274,21 @@ class TestFlujo(unittest.TestCase):
         self.assertEqual(hechos.get(antiguo.isoformat()), "sin_publicacion")
         self.assertNotIn(hoy.isoformat(), hechos)
         con.close()
+
+
+class TestJusticiaSinProvincia(unittest.TestCase):
+    def test_resumen_nacional(self):
+        tmp = tempfile.TemporaryDirectory()
+        datos = Path(tmp.name) / "datos"
+        csv_real = ('"CantidadReclamada";"TipoSubasta";"Procedimiento";"importeSubasta";"Estado";"Fecha_Publicada"\r\n'
+                    '"1000";"Apremio";"Ejecucion";"900";"Subasta Finalizada";"01/01/2022"\r\n'
+                    '"2000";"Voluntario";"Ejecucion";"1900";"Cancelada";"31/12/2024"\r\n').encode("utf-8")
+        FakeHttp.respuestas = {sema.API_SUMARIO.format(fecha="20261121"): SUMARIO, sema.CSV_JUSTICIA: csv_real}
+        r = sema.ejecutar(FECHA, FECHA, True, datos, http_factory=FakeHttp, base=Path(tmp.name))
+        self.assertEqual(r["justicia_resumen"]["n_filas"], 2)
+        self.assertEqual(r["justicia_resumen"]["fecha_publicada_max"], "2024-12-31")
+        self.assertIn("no permite saber cuáles son de Sevilla", Path(r["informe"]).read_text(encoding="utf-8"))
+        tmp.cleanup()
 
 
 if __name__ == "__main__":

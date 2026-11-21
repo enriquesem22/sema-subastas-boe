@@ -11,7 +11,8 @@ oficiales o autorizadas**.
    (`SUB-…`) y los datos que el anuncio traiga (valor de subasta, tasación, depósito, localidad, referencia
    catastral…).
 2. **Cada lunes** (o si hace más de 7 días) descarga el CSV oficial de subastas judiciales del Ministerio de
-   Justicia (datos.gob.es) y añade las de Sevilla.
+   Justicia (datos.gob.es). Hoy ese CSV no trae provincia ni identificador, así que solo se guarda como
+   estadística nacional (tabla `justicia_resumen`). Si algún día incluye provincia, el script filtra Sevilla solo.
 3. Guarda todo en `datos/sema.sqlite` y lo exporta también a CSV (`datos/export/`, se abren en Excel).
 4. Genera un informe en `datos/informes/informe_AAAA-MM-DD.md` (y `datos/ultimo_informe.md`).
 
@@ -38,9 +39,12 @@ oficiales o autorizadas**.
 
 - Los anuncios de la AEAT en el BOE solo traen el identificador `SUB-AT-…` y un enlace al Portal. No dicen el
   tipo de bien, el valor ni la ubicación. «ANDALUCÍA 41» es la unidad gestora de Sevilla, no la ubicación del bien.
-- El CSV de Justicia solo incluye subastas judiciales.
-- Hay que comprobar con datos reales en qué sección y con qué emisor aparecen las subastas judiciales y
-  notariales. Las primeras ejecuciones lo dirán (`datos/export/anuncios_boe.csv`).
+- El CSV de Justicia solo incluye subastas judiciales, sin provincia ni identificador. En la primera descarga
+  (21/11/2026) cubría publicaciones del 01/01/2022 al 31/12/2024.
+- Las subastas judiciales de Sevilla solo se recogen cuando el BOE publica un edicto (sección IV) cuyo texto
+  habla de una subasta. No hay una fuente oficial abierta que dé su ubicación.
+- En el BOE real, muchos títulos son solo el emisor («SEVILLA», «NOTARÍA DE …»). Para esos casos el script abre
+  el texto (edictos de tribunales de Sevilla y anuncios de notarías) para saber si es una subasta.
 
 ## Ejecución
 

@@ -52,6 +52,7 @@ PAUSA = float(os.environ.get("SEMA_PAUSA", "1.0"))
 DIAS_PRIMERA_CARGA = int(os.environ.get("SEMA_DIAS_PRIMERA_CARGA", "30"))
 
 RE_SUB = re.compile(r"SUB-[A-Z]{2}-\d{4}-[A-Z0-9]+")
+RE_FECHA = re.compile(r"\b\d{1,2}[/-]\d{1,2}[/-]\d{2,4}\b|\b\d{1,2} de [a-záéíóú]+ de \d{4}\b", re.I)
 RE_IMPORTE = re.compile(r"(\d{1,3}(?:\.\d{3})*(?:,\d{1,2})?|\d+(?:,\d{1,2})?)\s*(?:€|EUROS?)")
 
 # Rótulos que se buscan en el texto de los anuncios (comparación sin tildes y en mayúsculas).
@@ -183,6 +184,8 @@ def extraer_rotulos(texto: str) -> dict:
             if campo in encontrados:
                 continue
             if any(rotulo == o or rotulo.endswith(" " + o) for o in opciones):
+                if campo.startswith("fecha") and not RE_FECHA.search(valor):
+                    break  # p. ej. «La subasta se iniciará en la fecha indicada…»: no es una fecha
                 encontrados[campo] = valor[:300]
                 break
     return encontrados
@@ -231,6 +234,10 @@ CREATE TABLE IF NOT EXISTS inmuebles (
 CREATE TABLE IF NOT EXISTS justicia_filas (
   clave TEXT PRIMARY KEY, id_subasta TEXT, motivo_sevilla TEXT, datos_json TEXT,
   sha_fila TEXT, momento_consulta TEXT, id_ejecucion INTEGER
+);
+CREATE TABLE IF NOT EXISTS justicia_resumen (
+  momento_consulta TEXT PRIMARY KEY, n_filas INTEGER, fecha_publicada_min TEXT, fecha_publicada_max TEXT,
+  por_estado TEXT, por_tipo TEXT, por_procedimiento TEXT, sha256_csv TEXT, id_ejecucion INTEGER
 );
 CREATE TABLE IF NOT EXISTS cambios_historicos (
   id INTEGER PRIMARY KEY AUTOINCREMENT, tabla TEXT, clave TEXT, campo TEXT,
@@ -471,34 +478,38 @@ def procesar_dia(con, http: Http, fecha: dt.date, id_ej: int, municipios: set[st
     stats["leidos"] += len(items)
     n_sub = n_sev = 0
     for it in items:
-        if not seccion_relevante(it["seccion_codigo"], it["seccion_nombre"]):
+        sec = (it["seccion_codigo"] or "").upper()
+        if not seccion_relevante(sec, it["seccion_nombre"]):
             continue
-        if not es_subasta(it["departamento"], it["epigrafe"], it["titulo"]):
-            continue
-        n_sub += 1
+        subasta_en_cabecera = es_subasta(it["departamento"], it["epigrafe"], it["titulo"])
         motivo = motivo_sevilla(it["departamento"], it["epigrafe"], it["titulo"], municipios)
+        # En el BOE real muchos títulos son solo el emisor («SEVILLA», «NOTARÍA DE …», «U.R. SUBASTAS …»).
+        # Para esos casos hay que abrir el texto para saber si es una subasta.
+        titulo_emisor = len(it["titulo"] or "") <= 80
+        revisar_texto = (not subasta_en_cabecera) and titulo_emisor and (
+            (sec.startswith("4") and motivo) or sec == "5C" or (sec.startswith("5") and motivo))
+        if not subasta_en_cabecera and not revisar_texto:
+            continue
         ids = sorted(set(RE_SUB.findall(it["titulo"])))
         rotulos: dict = {}
         descargado = 0
-        if motivo:
-            n_sev += 1
-            texto = None
-            for url, tipo in ((it["url_html"], "html"), (it["url_xml"], "xml")):
-                if not url:
-                    continue
-                st, cuerpo = http.get(url, nombre=f"{it['id_boe']}.{tipo}")
-                if st == 200 and cuerpo:
-                    try:
-                        texto = texto_de_xml_anuncio(cuerpo) if tipo == "xml" else texto_de_html(cuerpo)
-                    except ET.ParseError:
-                        texto = texto_de_html(cuerpo)
-                    break
+        texto = None
+        if motivo or revisar_texto:
+            texto = descargar_texto(http, it)
             if texto:
                 descargado = 1
-                ids = sorted(set(ids) | set(RE_SUB.findall(texto)))
-                rotulos = extraer_rotulos(texto)
-            else:
+            elif subasta_en_cabecera:
                 avisos.append(f"{it['id_boe']}: texto del anuncio no disponible; solo datos del sumario")
+        if not subasta_en_cabecera and not (texto and es_subasta(texto)):
+            continue  # el texto no trata de una subasta
+        if not motivo and texto and re.search(r"\bSEVILLA\b", norm(texto)):
+            motivo = "texto_menciona_sevilla"
+        n_sub += 1
+        if texto and motivo:
+            ids = sorted(set(ids) | set(RE_SUB.findall(texto)))
+            rotulos = extraer_rotulos(texto)
+        if motivo:
+            n_sev += 1
         url_fuente = it["url_html"] or it["url_pdf"]
         meta = {"fuente": "BOE API sumario", "url_fuente": url_fuente, "momento_consulta": momento,
                 "nivel_verificacion": "A1", "id_ejecucion": id_ej}
@@ -517,7 +528,7 @@ def procesar_dia(con, http: Http, fecha: dt.date, id_ej: int, municipios: set[st
             meta_e = {"fuente": "BOE anuncio" if descargado else "BOE API sumario", "url_fuente": url_fuente,
                       "momento_consulta": momento, "nivel_verificacion": "A1"}
             r = upsert(con, "expedientes", {"id_subasta": id_sub}, {
-                "prefijo": id_sub.split("-")[1], "autoridad_gestora": it["epigrafe"] or it["departamento"],
+                "prefijo": id_sub.split("-")[1], "autoridad_gestora": autoridad(it),
                 "id_anuncio_boe": it["id_boe"], "fecha_publicacion_boe": fecha.isoformat(),
                 "fecha_inicio": rotulos.get("fecha_inicio"), "fecha_conclusion": rotulos.get("fecha_conclusion"),
                 "estado": "anunciada_en_BOE", "motivo_sevilla": motivo, "nota": nota}, meta_e, id_ej, "BOE")
@@ -534,6 +545,31 @@ def procesar_dia(con, http: Http, fecha: dt.date, id_ej: int, municipios: set[st
                                          inm, meta_e, id_ej, "BOE"))
     con.execute("INSERT OR REPLACE INTO dias_procesados VALUES (?,?,?,?,?,?,?)",
                 (fecha.isoformat(), "procesado", len(items), n_sub, n_sev, id_ej, momento))
+
+
+def descargar_texto(http: Http, it: dict) -> str | None:
+    for url, tipo in ((it["url_html"], "html"), (it["url_xml"], "xml")):
+        if not url:
+            continue
+        st, cuerpo = http.get(url, nombre=f"{it['id_boe']}.{tipo}")
+        if st == 200 and cuerpo:
+            if tipo == "xml":
+                try:
+                    return texto_de_xml_anuncio(cuerpo)
+                except ET.ParseError:
+                    pass
+            return texto_de_html(cuerpo)
+    return None
+
+
+def autoridad(it: dict) -> str | None:
+    """Emisor tal cual aparece en el BOE. Si el título es solo el emisor (p. ej. «U.R. SUBASTAS ANDALUCÍA 41»),
+    se añade al departamento."""
+    if it["epigrafe"]:
+        return f"{it['departamento']} · {it['epigrafe']}" if it["departamento"] else it["epigrafe"]
+    if it["titulo"] and len(it["titulo"]) <= 80:
+        return f"{it['departamento']} · {it['titulo']}" if it["departamento"] else it["titulo"]
+    return it["departamento"]
 
 
 def contar(stats: dict, resultado: str):
@@ -580,6 +616,38 @@ def procesar_justicia(con, http: Http, id_ej: int, stats: dict, avisos: list[str
         f"Consulta: {momento}\n\nFilas totales: {len(filas)}\n\n"
         + "\n".join(f"- `{c}`" + (" ← provincia" if c in cols_prov else "") + (" ← lote" if c == col_lote else "")
                     for c in cabeceras) + "\n", encoding="utf-8")
+    hay_ids = any(RE_SUB.search(" ".join(str(v) for v in f.values() if v)) for f in filas[:5000])
+    if not cols_prov and not hay_ids:
+        # El CSV publicado no trae ni provincia ni identificador: solo sirve como estadística nacional.
+        def fecha(x):
+            try:
+                return dt.datetime.strptime((x or "").strip(), "%d/%m/%Y").date()
+            except ValueError:
+                return None
+        col_fecha = next((c for c in cabeceras if "PUBLICAD" in norm(c)), None)
+        fechas = [d for d in (fecha(f.get(col_fecha)) for f in filas) if d] if col_fecha else []
+
+        def reparto(col_txt):
+            col = next((c for c in cabeceras if norm(c) == col_txt), None)
+            if not col:
+                return {}
+            cuenta: dict[str, int] = {}
+            for f in filas:
+                cuenta[f.get(col) or "(vacío)"] = cuenta.get(f.get(col) or "(vacío)", 0) + 1
+            return dict(sorted(cuenta.items(), key=lambda kv: -kv[1]))
+        resumen = {"n_filas": len(filas),
+                   "fecha_publicada_min": min(fechas).isoformat() if fechas else None,
+                   "fecha_publicada_max": max(fechas).isoformat() if fechas else None,
+                   "por_estado": reparto("ESTADO"), "por_tipo": reparto("TIPOSUBASTA"),
+                   "por_procedimiento": reparto("PROCEDIMIENTO")}
+        con.execute("INSERT OR REPLACE INTO justicia_resumen VALUES (?,?,?,?,?,?,?,?,?)",
+                    (momento, resumen["n_filas"], resumen["fecha_publicada_min"], resumen["fecha_publicada_max"],
+                     json.dumps(resumen["por_estado"], ensure_ascii=False),
+                     json.dumps(resumen["por_tipo"], ensure_ascii=False),
+                     json.dumps(resumen["por_procedimiento"], ensure_ascii=False), sha256(data), id_ej))
+        stats["justicia_total"] = len(filas)
+        stats["justicia_resumen"] = resumen
+        return
     if not cols_prov:
         avisos.append("CSV de Justicia: no hay columna de provincia; se filtra Sevilla por texto en toda la fila")
     contador: dict[str, int] = {}
@@ -683,8 +751,17 @@ def informe(con, id_ej: int, stats: dict, avisos: list[str], base: Path, dir_dat
          f"- Registros nuevos (todas las tablas): {stats['nuevos']} · Cambios detectados: {stats['cambios']}",
          f"- Anuncios de subasta acumulados: {total_esp} en España, {total_sev} asociados a Sevilla"
          f" ({sin_texto} de ellos sin texto descargado)", ""]
-    if "justicia_total" in stats:
-        L += [f"- CSV de Justicia: {stats['justicia_total']} filas, {stats['justicia_sevilla']} de Sevilla", ""]
+    if "justicia_resumen" in stats:
+        r = stats["justicia_resumen"]
+        top = lambda d: ", ".join(f"{k}: {v}" for k, v in list(d.items())[:6])  # noqa: E731
+        L += ["## Subastas judiciales en toda España (CSV de Justicia, nivel A2)",
+              f"- {r['n_filas']} subastas publicadas entre {r['fecha_publicada_min']} y {r['fecha_publicada_max']}.",
+              f"- Por estado: {top(r['por_estado'])}",
+              f"- Por tipo: {top(r['por_tipo'])}",
+              "- El CSV no trae provincia ni identificador de subasta, así que **no permite saber cuáles son de "
+              "Sevilla**. Se usa solo como referencia nacional.", ""]
+    elif "justicia_total" in stats:
+        L += [f"- CSV de Justicia: {stats['justicia_total']} filas, {stats.get('justicia_sevilla', 0)} de Sevilla", ""]
     if dias:
         L += ["## Días procesados", "| Fecha | Resultado | Elementos | Subastas (España) | Sevilla |", "|---|---|---|---|---|"]
         L += [f"| {d['fecha']} | {d['resultado']} | {d['n_items']} | {d['n_subastas']} | {d['n_sevilla']} |" for d in dias]
@@ -720,7 +797,9 @@ def informe(con, id_ej: int, stats: dict, avisos: list[str], base: Path, dir_dat
           "- El precio de cierre y las pujas solo están en el Portal de Subastas, que este sistema no consulta "
           "sin autorización. `precio_cierre` queda vacío hasta tener una fuente autorizada.",
           "- En los anuncios de la AEAT, «ANDALUCIA 41» es la unidad gestora de Sevilla: no garantiza que el bien "
-          "esté en la provincia.", ""]
+          "esté en la provincia. Esos anuncios solo traen el identificador y el enlace al Portal.",
+          "- Las subastas judiciales de Sevilla solo se recogen si el BOE publica un edicto con texto. El CSV de "
+          "Justicia no trae provincia, así que no hay fuente oficial abierta con su ubicación.", ""]
     dir_inf = dir_datos / "informes"
     dir_inf.mkdir(parents=True, exist_ok=True)
     ruta = dir_inf / f"informe_{hoy}.md"
@@ -733,7 +812,7 @@ def exportar_csv(con, dir_datos: Path):
     dest = dir_datos / "export"
     dest.mkdir(parents=True, exist_ok=True)
     for tabla in ("expedientes", "lotes", "inmuebles", "anuncios_boe", "cambios_historicos", "ejecuciones",
-                  "dias_procesados", "justicia_filas"):
+                  "dias_procesados", "justicia_filas", "justicia_resumen"):
         filas = con.execute(f"SELECT * FROM {tabla}").fetchall()
         with open(dest / f"{tabla}.csv", "w", newline="", encoding="utf-8-sig") as f:
             w = csv.writer(f, delimiter=";")
