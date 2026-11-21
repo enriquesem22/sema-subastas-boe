@@ -136,7 +136,9 @@ def respuestas_base():
         "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-00001": anuncio_juzgado(),
         "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-00002": b"<p>Subasta de parcela</p>",
         "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-00010":
-            "<p>Venta extrajudicial. Se anuncia subasta de la finca sita en Dos Hermanas (Sevilla).</p>".encode(),
+            ('<div id="textoxslt"><p>Anuncio de subasta notarial con número de protocolo 1 / 2026.</p>'
+             '<p>Dirección electrónica: https://subastas.boe.es/ds.php?id=SUB-NN-2026-0000001</p>'
+             '<p>Sevilla, 19 de octubre de 2026.- El Notario.</p></div><!-- #textoxslt -->').encode(),
         "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-00011": b"<p>Extravio de una poliza.</p>",
         "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-00020":
             "<p>Edicto. Se anuncia la subasta SUB-JA-2026-000444 del inmueble.</p>".encode(),
@@ -152,8 +154,14 @@ class TestReglas(unittest.TestCase):
         self.assertEqual(sema.motivo_sevilla("MINISTERIO", "U.R. SUBASTAS ANDALUCÍA 41", "x", m), "unidad_gestora_41")
         self.assertIsNone(sema.motivo_sevilla("MINISTERIO", "U.R. SUBASTAS ANDALUCIA 29", "x", m))
         self.assertEqual(sema.motivo_sevilla("JUZGADOS", "UTRERA", "Edicto", m), "emisor_municipio:UTRERA")
-        self.assertEqual(sema.motivo_sevilla("X", "Y", "Finca en Los Palacios y Villafranca", m),
-                         "titulo_municipio:LOS PALACIOS Y VILLAFRANCA")
+        largo = ("Resolución de la Tesorería General de la Seguridad Social por la que se anuncia subasta "
+                 "de un inmueble en Los Palacios y Villafranca")
+        self.assertEqual(sema.motivo_sevilla("X", None, largo, m), "titulo_municipio:LOS PALACIOS Y VILLAFRANCA")
+        # Casos reales que daban falso positivo
+        self.assertIsNone(sema.motivo_sevilla("TRIBUNALES DE INSTANCIA", None, "HERRERA DUQUE", m | {"HERRERA"}))
+        self.assertIsNone(sema.motivo_sevilla("OTROS ENTES", None, "Anuncio de la Comunidad de Regantes Las Pilas "
+                                              "sobre convocatoria de Junta.", m | {"PILAS"}))
+        self.assertEqual(sema.motivo_sevilla("TRIBUNALES DE INSTANCIA", None, "UTRERA", m), "emisor_municipio:UTRERA")
         self.assertEqual(sema.motivo_sevilla("X", "AYUNTAMIENTO DE SEVILLA", "t", m), "menciona_sevilla")
 
     def test_secciones_y_subasta(self):
@@ -171,6 +179,19 @@ class TestReglas(unittest.TestCase):
         n = sema.parse_municipios_catastro(CATASTRO)
         self.assertIn("LOS PALACIOS Y VILLAFRANCA", n)
         self.assertIn("UTRERA", n)
+
+    def test_datos_anuncio_formato_real(self):
+        html = ('<div id="textoxslt"><p class="parrafo">Anuncio de subasta judicial en vía de apremio con número '
+                'de identificación 4090000006026924.</p><p class="parrafo">Dirección electrónica: '
+                'https://subastas.boe.es/ds.php?id=SUB-JA-2026-265153</p><p class="parrafo_2">Sevilla, 24 de julio '
+                'de 2026.- El Letrado de la Administración de Justicia.</p></div><!-- #textoxslt --><p>Menú</p>')
+        t = sema.texto_de_html(html.encode())
+        self.assertNotIn("Menú", t)
+        d = sema.datos_anuncio(t)
+        self.assertEqual(d["tipo_anuncio"], "judicial en vía de apremio")
+        self.assertEqual((d["lugar_firma"], d["fecha_firma"]), ("Sevilla", "24 de julio de 2026"))
+        self.assertNotIn("fecha_inicio", sema.extraer_rotulos(
+            "Fecha de inicio de la subasta: La subasta se iniciará en la fecha indicada."))
 
     def test_rotulos(self):
         r = sema.extraer_rotulos("Valor de subasta: 1.000,00 €\nTasación: 2.000 €\nLocalidad: Écija")
@@ -221,7 +242,8 @@ class TestFlujo(unittest.TestCase):
         self.assertNotIn("BOE-B-2026-00021", {r["id_boe"] for r in con.execute("SELECT id_boe FROM anuncios_boe")})
         # Notaría: subasta detectada por el texto y Sevilla por la mención en el texto
         notaria = con.execute("SELECT motivo_sevilla FROM anuncios_boe WHERE id_boe='BOE-B-2026-00010'").fetchone()
-        self.assertEqual(notaria["motivo_sevilla"], "texto_menciona_sevilla")
+        self.assertEqual(notaria["motivo_sevilla"], "lugar_firma:SEVILLA")
+        self.assertEqual(exp["SUB-NN-2026-0000001"]["tipo_anuncio"], "notarial")
         self.assertIsNone(con.execute("SELECT 1 FROM anuncios_boe WHERE id_boe='BOE-B-2026-00011'").fetchone())
         # Justicia: solo Sevilla
         self.assertIn("SUB-JA-2026-000333", exp)

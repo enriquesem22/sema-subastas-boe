@@ -69,6 +69,8 @@ ROTULOS = {
     "fecha_inicio": ("FECHA DE INICIO",),
     "fecha_conclusion": ("FECHA DE CONCLUSION", "FECHA DE FIN"),
 }
+RE_TIPO_ANUNCIO = re.compile(r"Anuncio de subasta ([^.\n]{3,80}?)(?: con número| con n\.º|\.|$)", re.I | re.M)
+RE_FIRMA = re.compile(r"^\s*([A-ZÁÉÍÓÚÑ][\wÁÉÍÓÚÑáéíóúñü .'()-]{1,60}?),\s*(\d{1,2} de [a-záéíóú]+ de \d{4})\s*\.?-", re.M)
 CAMPOS_IMPORTE = {"valor_subasta", "tasacion", "deposito", "puja_minima"}
 
 
@@ -114,6 +116,9 @@ def quitar_ns(root: ET.Element) -> ET.Element:
 
 def texto_de_html(data: bytes) -> str:
     t = data.decode("utf-8", errors="replace")
+    m = re.search(r'(?is)<div id="textoxslt">(.*?)<!-- #textoxslt -->', t)
+    if m:  # cuerpo del anuncio en las páginas txt.php del BOE (sin menús ni pie)
+        t = m.group(1)
     t = re.sub(r"(?is)<(script|style).*?</\1>", " ", t)
     t = re.sub(r"(?i)<br\s*/?>|</p>|</div>|</li>|</tr>|</h\d>", "\n", t)
     t = re.sub(r"<[^>]+>", " ", t)
@@ -159,14 +164,36 @@ def motivo_sevilla(departamento: str | None, epigrafe: str | None, titulo: str |
         return "unidad_gestora_41"
     if "SEVILLA" in cab:
         return "menciona_sevilla"
-    for emisor in (norm(departamento), norm(epigrafe)):
+    t = norm(titulo)
+    emisores = [norm(departamento), norm(epigrafe)] + ([t] if es_titulo_emisor(titulo) else [])
+    for emisor in emisores:
         if emisor and emisor in municipios:
             return f"emisor_municipio:{emisor}"
-    t = norm(titulo)
+    if es_titulo_emisor(titulo):
+        return None  # título corto que no es exactamente un municipio de Sevilla (p. ej. «HERRERA DUQUE»)
     for m in sorted(municipios, key=len, reverse=True):
-        if len(m) >= 5 and re.search(r"\b" + re.escape(m) + r"\b(?!\s+DE\s+[A-Z])", t):
+        patron = r"(?<!\bEL )(?<!\bLA )(?<!\bLOS )(?<!\bLAS )\b" + re.escape(m) + r"\b(?!\s+DE\s+[A-Z])"
+        if len(m) >= 5 and re.search(patron, t):
             return f"titulo_municipio:{m}"
     return None
+
+
+def es_titulo_emisor(titulo: str | None) -> bool:
+    """En el BOE muchos títulos son solo el emisor: «SEVILLA», «CARMONA», «NOTARÍA DE …», «U.R. SUBASTAS …»."""
+    t = norm(titulo)
+    return 0 < len(t) <= 60 and not re.match(r"(ANUNCIO|RESOLUCION|EDICTO|CORRECCION|ORDEN)\b", t)
+
+
+def datos_anuncio(texto: str) -> dict:
+    """Lo que traen todos los anuncios de subasta del BOE: tipo, lugar y fecha de firma."""
+    d = {}
+    m = RE_TIPO_ANUNCIO.search(texto)
+    if m:
+        d["tipo_anuncio"] = m.group(1).strip(" ,;:")
+    m = RE_FIRMA.search(texto)
+    if m:
+        d["lugar_firma"], d["fecha_firma"] = m.group(1).strip(), m.group(2).strip()
+    return d
 
 
 def extraer_rotulos(texto: str) -> dict:
@@ -216,7 +243,7 @@ CREATE TABLE IF NOT EXISTS anuncios_boe (
 CREATE TABLE IF NOT EXISTS expedientes (
   id_subasta TEXT PRIMARY KEY, prefijo TEXT, autoridad_gestora TEXT, id_anuncio_boe TEXT,
   fecha_publicacion_boe TEXT, fecha_inicio TEXT, fecha_conclusion TEXT, estado TEXT,
-  motivo_sevilla TEXT, nota TEXT,
+  motivo_sevilla TEXT, nota TEXT, tipo_anuncio TEXT, lugar_firma TEXT, fecha_firma TEXT,
   fuente TEXT, url_fuente TEXT, momento_consulta TEXT, nivel_verificacion TEXT
 );
 CREATE TABLE IF NOT EXISTS lotes (
@@ -254,7 +281,22 @@ def conectar(ruta: Path) -> sqlite3.Connection:
     con = sqlite3.connect(ruta)
     con.row_factory = sqlite3.Row
     con.executescript(ESQUEMA)
+    migrar(con)
     return con
+
+
+def migrar(con: sqlite3.Connection):
+    """Añade a una base existente las columnas nuevas del esquema (nunca borra nada)."""
+    tmp = sqlite3.connect(":memory:")
+    tmp.executescript(ESQUEMA)
+    for (tabla,) in tmp.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'"):
+        esperadas = [(r[1], r[2]) for r in tmp.execute(f"PRAGMA table_info({tabla})")]
+        actuales = {r[1] for r in con.execute(f"PRAGMA table_info({tabla})")}
+        for col, tipo in esperadas:
+            if col not in actuales:
+                con.execute(f"ALTER TABLE {tabla} ADD COLUMN {col} {tipo}")
+    tmp.close()
+    con.commit()
 
 
 def upsert(con, tabla: str, claves: dict, valores: dict, meta: dict, id_ej: int, fuente: str) -> str:
@@ -485,7 +527,7 @@ def procesar_dia(con, http: Http, fecha: dt.date, id_ej: int, municipios: set[st
         motivo = motivo_sevilla(it["departamento"], it["epigrafe"], it["titulo"], municipios)
         # En el BOE real muchos títulos son solo el emisor («SEVILLA», «NOTARÍA DE …», «U.R. SUBASTAS …»).
         # Para esos casos hay que abrir el texto para saber si es una subasta.
-        titulo_emisor = len(it["titulo"] or "") <= 80
+        titulo_emisor = es_titulo_emisor(it["titulo"])
         revisar_texto = (not subasta_en_cabecera) and titulo_emisor and (
             (sec.startswith("4") and motivo) or sec == "5C" or (sec.startswith("5") and motivo))
         if not subasta_en_cabecera and not revisar_texto:
@@ -502,6 +544,11 @@ def procesar_dia(con, http: Http, fecha: dt.date, id_ej: int, municipios: set[st
                 avisos.append(f"{it['id_boe']}: texto del anuncio no disponible; solo datos del sumario")
         if not subasta_en_cabecera and not (texto and es_subasta(texto)):
             continue  # el texto no trata de una subasta
+        datos = datos_anuncio(texto) if texto else {}
+        if not motivo and datos.get("lugar_firma"):
+            lugar = norm(datos["lugar_firma"])
+            if lugar == "SEVILLA" or lugar in municipios:
+                motivo = f"lugar_firma:{lugar}"
         if not motivo and texto and re.search(r"\bSEVILLA\b", norm(texto)):
             motivo = "texto_menciona_sevilla"
         n_sub += 1
@@ -531,7 +578,9 @@ def procesar_dia(con, http: Http, fecha: dt.date, id_ej: int, municipios: set[st
                 "prefijo": id_sub.split("-")[1], "autoridad_gestora": autoridad(it),
                 "id_anuncio_boe": it["id_boe"], "fecha_publicacion_boe": fecha.isoformat(),
                 "fecha_inicio": rotulos.get("fecha_inicio"), "fecha_conclusion": rotulos.get("fecha_conclusion"),
-                "estado": "anunciada_en_BOE", "motivo_sevilla": motivo, "nota": nota}, meta_e, id_ej, "BOE")
+                "estado": "anunciada_en_BOE", "motivo_sevilla": motivo, "nota": nota,
+                "tipo_anuncio": datos.get("tipo_anuncio"), "lugar_firma": datos.get("lugar_firma"),
+                "fecha_firma": datos.get("fecha_firma")}, meta_e, id_ej, "BOE")
             contar(stats, r)
             if len(ids) == 1 and rotulos:
                 lote = {k: importe(rotulos.get(k)) for k in CAMPOS_IMPORTE}
@@ -729,9 +778,10 @@ def informe(con, id_ej: int, stats: dict, avisos: list[str], base: Path, dir_dat
     hoy = dt.date.today().isoformat()
     q = lambda s, *a: con.execute(s, a).fetchall()  # noqa: E731
     por_prefijo = q("SELECT prefijo, COUNT(*) n FROM expedientes GROUP BY prefijo ORDER BY n DESC")
+    por_tipo = q("SELECT COALESCE(tipo_anuncio,'(sin dato)') tipo, COUNT(*) n FROM expedientes GROUP BY 1 ORDER BY n DESC")
     por_autoridad = q("SELECT autoridad_gestora, COUNT(*) n FROM expedientes WHERE autoridad_gestora IS NOT NULL "
                       "GROUP BY autoridad_gestora ORDER BY n DESC LIMIT 15")
-    nuevos = q("SELECT e.id_subasta, e.autoridad_gestora, e.fecha_publicacion_boe, e.url_fuente, e.nota "
+    nuevos = q("SELECT e.id_subasta, e.autoridad_gestora, e.fecha_publicacion_boe, e.url_fuente, e.nota, e.tipo_anuncio "
                "FROM expedientes e WHERE e.momento_consulta >= (SELECT inicio FROM ejecuciones WHERE id_ejecucion=?) "
                "ORDER BY e.fecha_publicacion_boe DESC", id_ej)
     cambios = q("SELECT tabla, clave, campo, valor_anterior, valor_nuevo FROM cambios_historicos WHERE id_ejecucion=?",
@@ -769,6 +819,10 @@ def informe(con, id_ej: int, stats: dict, avisos: list[str], base: Path, dir_dat
     L += ["## Expedientes de Sevilla en la base (acumulado)", "| Prefijo del identificador | Expedientes |", "|---|---|"]
     L += [f"| {r['prefijo']} | {r['n']} |" for r in por_prefijo] or ["| — | 0 |"]
     L.append("")
+    if por_tipo:
+        L += ["| Tipo de subasta (literal del anuncio) | Expedientes |", "|---|---|"]
+        L += [f"| {r['tipo']} | {r['n']} |" for r in por_tipo]
+        L.append("")
     if por_autoridad:
         L += ["| Autoridad gestora (literal del BOE) | Expedientes |", "|---|---|"]
         L += [f"| {r['autoridad_gestora']} | {r['n']} |" for r in por_autoridad]
@@ -777,7 +831,8 @@ def informe(con, id_ej: int, stats: dict, avisos: list[str], base: Path, dir_dat
                "FROM anuncios_boe WHERE id_ejecucion=? AND motivo_sevilla IS NOT NULL AND ids_subasta IS NULL "
                "ORDER BY fecha_publicacion DESC", id_ej)
     L += [f"## Nuevos o actualizados en esta ejecución ({len(nuevos)})"]
-    L += [f"- {r['id_subasta']}" + (f" · {r['autoridad_gestora']}" if r["autoridad_gestora"] else "")
+    L += [f"- {r['id_subasta']}" + (f" · {r['tipo_anuncio']}" if r["tipo_anuncio"] else "")
+          + (f" · {r['autoridad_gestora']}" if r["autoridad_gestora"] else "")
           + (f" · BOE {r['fecha_publicacion_boe']}" if r["fecha_publicacion_boe"] else "")
           + f" · [fuente]({r['url_fuente']})" + (f" · _{r['nota']}_" if r["nota"] else "") for r in nuevos[:100]]
     if len(nuevos) > 100:

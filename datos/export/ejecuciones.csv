@@ -1,2 +1,0 @@
-﻿id_ejecucion;inicio;fin;version;parametros;n_leidos;n_nuevos;n_cambios;avisos;errores;estado
-1;2026-11-21T14:54:16+00:00;2026-11-21T14:58:35+00:00;1.0.0;"{""desde"": ""None"", ""hasta"": ""None"", ""forzar_justicia"": true}";6723;606;0;[];[];ok
