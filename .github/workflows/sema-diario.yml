@@ -1,0 +1,64 @@
+name: SeMá diario
+
+on:
+  schedule:
+    # Dos pasadas al día (horas UTC). Es idempotente: si el BOE aún no está publicado, se recoge en la siguiente.
+    - cron: "43 7 * * *"
+    - cron: "43 13 * * *"
+  workflow_dispatch:
+    inputs:
+      desde:
+        description: "Fecha inicial AAAA-MM-DD (opcional, para recargar un rango)"
+        required: false
+      forzar_justicia:
+        description: "Descargar también el CSV de Justicia aunque no sea lunes"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sema
+  cancel-in-progress: false
+
+jobs:
+  ejecutar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pruebas sin red
+        run: python -m unittest discover -s tests -v
+
+      - name: Ejecutar SeMá
+        env:
+          SUBASTASBOEAPI_TOKEN: ${{ secrets.SUBASTASBOEAPI_TOKEN }}
+        run: |
+          ARGS=""
+          if [ -n "${{ github.event.inputs.desde }}" ]; then ARGS="$ARGS --desde ${{ github.event.inputs.desde }}"; fi
+          if [ "${{ github.event.inputs.forzar_justicia }}" = "true" ]; then ARGS="$ARGS --forzar-justicia"; fi
+          python sema.py run $ARGS
+
+      - name: Publicar el informe en el resumen de la ejecución
+        if: always()
+        run: |
+          if [ -f datos/ultimo_informe.md ]; then cat datos/ultimo_informe.md >> "$GITHUB_STEP_SUMMARY"; fi
+
+      - name: Guardar resultados en el repositorio
+        if: always()
+        run: |
+          git config user.name "sema-bot"
+          git config user.email "sema-bot@users.noreply.github.com"
+          git add datos
+          if git diff --cached --quiet; then
+            echo "Sin cambios que guardar"
+          else
+            git commit -m "SeMá: ejecución $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git push
+          fi
