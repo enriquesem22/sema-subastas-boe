@@ -40,7 +40,10 @@ oficiales o autorizadas**.
 - Los anuncios de la AEAT en el BOE solo traen el identificador `SUB-AT-…` y un enlace al Portal. No dicen el
   tipo de bien, el valor ni la ubicación. «ANDALUCÍA 41» es la unidad gestora de Sevilla, no la ubicación del bien.
 - El CSV de Justicia solo incluye subastas judiciales, sin provincia ni identificador. En la primera descarga
-  (21/11/2026) cubría publicaciones del 01/01/2022 al 31/12/2024.
+  (21/11/2026) tenía 81.645 subastas publicadas entre el 02/01/2021 y el 17/11/2026.
+- Todos los anuncios de subasta del BOE (judiciales, notariales, AEAT, OPAEF) tienen el mismo formato breve: tipo de
+  subasta, número de referencia, enlace al Portal, y lugar y fecha de firma. No incluyen el tipo de bien ni los
+  importes; las tablas `lotes` e `inmuebles` se quedan preparadas para cuando haya una fuente autorizada.
 - Las subastas judiciales de Sevilla solo se recogen cuando el BOE publica un edicto (sección IV) cuyo texto
   habla de una subasta. No hay una fuente oficial abierta que dé su ubicación.
 - En el BOE real, muchos títulos son solo el emisor («SEVILLA», «NOTARÍA DE …»). Para esos casos el script abre
