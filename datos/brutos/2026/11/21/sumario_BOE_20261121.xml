@@ -1,0 +1,2263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+  <status>
+    <code>200</code>
+    <text>ok</text>
+  </status>
+  <data>
+    <sumario>
+      <metadatos>
+        <publicacion>BOE</publicacion>
+        <fecha_publicacion>20261121</fecha_publicacion>
+      </metadatos>
+      <diario numero="290">
+        <sumario_diario>
+          <identificador>BOE-S-2026-290</identificador>
+          <url_pdf szBytes="418688" szKBytes="409">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-S-2026-290.pdf</url_pdf>
+        </sumario_diario>
+        <seccion codigo="1" nombre="I. Disposiciones generales">
+          <departamento codigo="7723" nombre="JEFATURA DEL ESTADO">
+            <epigrafe nombre="Medidas urgentes">
+              <item>
+                <identificador>BOE-A-2026-24437</identificador>
+                <control>2026/18354</control>
+                <titulo>Real Decreto-ley 40/2026, de 20 de noviembre, de medidas urgentes para el impulso de la competitividad y la soberanía tecnológica en el ámbito científico e investigador.</titulo>
+                <url_pdf szBytes="421538" szKBytes="412" pagina_inicial="158071" pagina_final="158107">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24437.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24437</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24437</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24438</identificador>
+                <control>2026/18355</control>
+                <titulo>Real Decreto-ley 41/2026, de 20 de noviembre, por el que se modifica la Ley 1/2005, de 9 de marzo, por la que se regula el régimen del comercio de derechos de emisión de gases de efecto invernadero.</titulo>
+                <url_pdf szBytes="722074" szKBytes="705" pagina_inicial="158108" pagina_final="158185">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24438.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24438</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24438</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="9585" nombre="MINISTERIO DE LA PRESIDENCIA, JUSTICIA Y RELACIONES CON LAS CORTES">
+            <epigrafe nombre="Centros de datos">
+              <item>
+                <identificador>BOE-A-2026-24439</identificador>
+                <control>2026/18356</control>
+                <titulo>Real Decreto 1032/2026, de 20 de noviembre, por el que se regulan los requisitos de sostenibilidad energética, medioambiental y de resiliencia y soberanía digital aplicables a los centros de datos.</titulo>
+                <url_pdf szBytes="384503" szKBytes="375" pagina_inicial="158186" pagina_final="158217">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24439.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24439</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24439</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="5140" nombre="MINISTERIO DE HACIENDA">
+            <epigrafe nombre="Tabaco. Precios">
+              <item>
+                <identificador>BOE-A-2026-24440</identificador>
+                <control>2026/18267</control>
+                <titulo>Resolución de 20 de noviembre de 2026, de la Presidencia del Comisionado para el Mercado de Tabacos, por la que se publican los precios de venta al público de determinadas labores de tabaco en Expendedurías de Tabaco y Timbre del área del Monopolio.</titulo>
+                <url_pdf szBytes="260952" szKBytes="255" pagina_inicial="158218" pagina_final="158221">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24440.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24440</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24440</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="9579" nombre="MINISTERIO DE INCLUSIÓN, SEGURIDAD SOCIAL Y MIGRACIONES">
+            <epigrafe nombre="Seguridad Social. Recaudación">
+              <item>
+                <identificador>BOE-A-2026-24441</identificador>
+                <control>2026/18113</control>
+                <titulo>Resolución de 13 de noviembre de 2026, de la Tesorería General de la Seguridad Social, por la que se publica el fallo de la Sentencia de 1 de diciembre de 2025 del Juzgado Central de lo Contencioso-Administrativo n.º 6, relativa a la cuestión de ilegalidad número 1/2025, en relación con la Resolución de 26 de diciembre de 2014, por la que se autoriza la utilización de tarjetas, tanto de débito como de crédito, como medio de pago de las deudas con la Seguridad Social en vía voluntaria no ingresadas dentro del plazo reglamentario, de las deudas en vía ejecutiva y de las deudas que hayan sido objeto de reclamación de deuda.</titulo>
+                <url_pdf szBytes="196608" szKBytes="192" pagina_inicial="158222" pagina_final="158223">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24441.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24441</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24441</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+        </seccion>
+        <seccion codigo="2A" nombre="II. Autoridades y personal. - A. Nombramientos, situaciones e incidencias">
+          <departamento codigo="1820" nombre="CONSEJO GENERAL DEL PODER JUDICIAL">
+            <epigrafe nombre="Nombramientos">
+              <item>
+                <identificador>BOE-A-2026-24442</identificador>
+                <control>2026/18230</control>
+                <titulo>Acuerdo de 17 de noviembre de 2026, de la Comisión Permanente del Consejo General del Poder Judicial, por el que se prorroga el nombramiento como Jueces y Juezas sustitutos/as en funciones de sustitución y/o refuerzo a los miembros de la 75.ª promoción de la Escuela Judicial.</titulo>
+                <url_pdf szBytes="222537" szKBytes="217" pagina_inicial="158224" pagina_final="158229">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24442.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24442</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24442</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="9562" nombre="MINISTERIO DE ASUNTOS EXTERIORES, UNIÓN EUROPEA Y COOPERACIÓN">
+            <epigrafe nombre="Destinos">
+              <item>
+                <identificador>BOE-A-2026-24443</identificador>
+                <control>2026/18269</control>
+                <titulo>Resolución de 18 de noviembre de 2026, de la Subsecretaría, por la que se resuelve la convocatoria de libre designación, efectuada por Resolución de 25 de septiembre de 2026.</titulo>
+                <url_pdf szBytes="214702" szKBytes="210" pagina_inicial="158230" pagina_final="158231">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24443.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24443</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24443</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="7320" nombre="MINISTERIO DEL INTERIOR">
+            <epigrafe nombre="Nombramientos">
+              <item>
+                <identificador>BOE-A-2026-24444</identificador>
+                <control>2026/18260</control>
+                <titulo>Orden INT/1254/2026, de 17 de noviembre, por la que se nombra para el Mando de la 16.ª Zona de la Guardia Civil, Comunidad Autónoma de Canarias, al General de Brigada don Roberto Blanes González.</titulo>
+                <url_pdf szBytes="191399" szKBytes="187" pagina_inicial="158232" pagina_final="158232">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24444.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24444</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24444</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24445</identificador>
+                <control>2026/18261</control>
+                <titulo>Orden INT/1255/2026, de 17 de noviembre, por la que se nombra para el Mando de la 2.ª Zona de la Guardia Civil, Comunidad Autónoma de Castilla-La Mancha (Toledo), al General de Brigada don Jesús Manuel Rodrigo Sánchez.</titulo>
+                <url_pdf szBytes="192068" szKBytes="188" pagina_inicial="158233" pagina_final="158233">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24445.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24445</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24445</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="9589" nombre="MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA">
+            <epigrafe nombre="Destinos">
+              <item>
+                <identificador>BOE-A-2026-24446</identificador>
+                <control>2026/18231</control>
+                <titulo>Resolución de 11 de noviembre de 2026, de la Subsecretaría, por la que se resuelve la convocatoria de libre designación, efectuada por Resolución de 5 de octubre 2026.</titulo>
+                <url_pdf szBytes="258953" szKBytes="253" pagina_inicial="158234" pagina_final="158237">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24446.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24446</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24446</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="310" nombre="UNIVERSIDADES">
+            <epigrafe nombre="Nombramientos">
+              <item>
+                <identificador>BOE-A-2026-24447</identificador>
+                <control>2026/17841</control>
+                <titulo>Resolución de 9 de noviembre de 2026, de la Universitat de València, por la que se nombra Catedrática de Universidad a doña María Oreto García Puchol.</titulo>
+                <url_pdf szBytes="191700" szKBytes="187" pagina_inicial="158238" pagina_final="158238">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24447.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24447</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24447</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24448</identificador>
+                <control>2026/17946</control>
+                <titulo>Resolución de 10 de noviembre de 2026, de la Universidad de Sevilla, por la que se nombra Profesor Titular de Universidad a don Santiago José Castroviejo Fisher.</titulo>
+                <url_pdf szBytes="193459" szKBytes="189" pagina_inicial="158239" pagina_final="158239">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24448.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24448</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24448</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24449</identificador>
+                <control>2026/17947</control>
+                <titulo>Resolución de 10 de noviembre de 2026, de la Universidad de Sevilla, por la que se nombran Profesores Titulares de Universidad.</titulo>
+                <url_pdf szBytes="194845" szKBytes="190" pagina_inicial="158240" pagina_final="158241">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24449.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24449</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24449</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24450</identificador>
+                <control>2026/17846</control>
+                <titulo>Resolución de 11 de noviembre de 2026, de la Universidad Nacional de Educación a Distancia, por la que se nombra Catedrático de Universidad a don Didac Llorens Cubedo.</titulo>
+                <url_pdf szBytes="190386" szKBytes="186" pagina_inicial="158242" pagina_final="158242">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24450.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24450</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24450</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24451</identificador>
+                <control>2026/17847</control>
+                <titulo>Resolución de 11 de noviembre de 2026, de la Universidad Nacional de Educación a Distancia, por la que se nombra Profesor Titular de Universidad a don Adrián Ares Legaspi.</titulo>
+                <url_pdf szBytes="190875" szKBytes="186" pagina_inicial="158243" pagina_final="158243">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24451.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24451</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24451</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24452</identificador>
+                <control>2026/17848</control>
+                <titulo>Resolución de 11 de noviembre de 2026, de la Universidad Nacional de Educación a Distancia, por la que se nombra Profesora Titular de Universidad a doña Genoveva Tusell García.</titulo>
+                <url_pdf szBytes="191228" szKBytes="187" pagina_inicial="158244" pagina_final="158244">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24452.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24452</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24452</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24453</identificador>
+                <control>2026/17948</control>
+                <titulo>Resolución de 11 de noviembre de 2026, de la Universidad Rey Juan Carlos, por la que se nombran Profesoras y Profesores Titulares de Universidad.</titulo>
+                <url_pdf szBytes="197156" szKBytes="193" pagina_inicial="158245" pagina_final="158245">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24453.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24453</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24453</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24454</identificador>
+                <control>2026/18172</control>
+                <titulo>Resolución de 12 de noviembre de 2026, de la Universidad de Alicante, por la que se anula la de 30 de octubre de 2026, por la que se nombra Profesora Titular de Universidad a doña Elena Gutiérrez Pérez.</titulo>
+                <url_pdf szBytes="190222" szKBytes="186" pagina_inicial="158246" pagina_final="158246">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24454.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24454</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24454</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24455</identificador>
+                <control>2026/18175</control>
+                <titulo>Resolución de 13 de noviembre de 2026, de la Universidad Nacional de Educación a Distancia, por la que se corrigen errores en la de 29 de octubre de 2026, por la que se nombra Profesor Titular de Universidad a don Camilo Zamora Ledezma.</titulo>
+                <url_pdf szBytes="191529" szKBytes="187" pagina_inicial="158247" pagina_final="158247">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24455.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24455</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24455</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24456</identificador>
+                <control>2026/18176</control>
+                <titulo>Resolución de 13 de noviembre de 2026, de la Universidad Nacional de Educación a Distancia, por la que se corrigen errores en la de 30 de octubre de 2026, por la que se nombra Profesor Titular de Universidad a don José Manuel Castillo Cara.</titulo>
+                <url_pdf szBytes="191421" szKBytes="187" pagina_inicial="158248" pagina_final="158248">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24456.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24456</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24456</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+        </seccion>
+        <seccion codigo="2B" nombre="II. Autoridades y personal. - B. Oposiciones y concursos">
+          <departamento codigo="9562" nombre="MINISTERIO DE ASUNTOS EXTERIORES, UNIÓN EUROPEA Y COOPERACIÓN">
+            <epigrafe nombre="Procedimientos de libre designación">
+              <item>
+                <identificador>BOE-A-2026-24457</identificador>
+                <control>2026/18297</control>
+                <titulo>Resolución de 18 de noviembre de 2026, de la Subsecretaría, por la que se declaran desiertos puestos de trabajo de libre designación, convocados por Resolución de 24 de septiembre de 2026.</titulo>
+                <url_pdf szBytes="212488" szKBytes="208" pagina_inicial="158249" pagina_final="158250">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24457.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24457</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24457</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="9585" nombre="MINISTERIO DE LA PRESIDENCIA, JUSTICIA Y RELACIONES CON LAS CORTES">
+            <epigrafe nombre="Procedimientos de libre designación">
+              <item>
+                <identificador>BOE-A-2026-24458</identificador>
+                <control>2026/18299</control>
+                <titulo>Resolución de 19 de noviembre de 2026, de la Secretaría de Estado de Justicia, por la que se convoca la provisión de puesto de trabajo por el sistema de libre designación.</titulo>
+                <url_pdf szBytes="315372" szKBytes="308" pagina_inicial="158251" pagina_final="158256">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24458.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24458</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24458</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="6110" nombre="MINISTERIO DE DEFENSA">
+            <epigrafe nombre="Cuerpo de Oficiales de Arsenales de la Armada">
+              <item>
+                <identificador>BOE-A-2026-24459</identificador>
+                <control>2026/18026</control>
+                <titulo>Resolución 430/38456/2026, de 13 de noviembre, de la Subsecretaría, por la que se convoca proceso selectivo para acceso, por el sistema general de acceso libre, en el Cuerpo de Oficiales de Arsenales de la Armada.</titulo>
+                <url_pdf szBytes="400441" szKBytes="391" pagina_inicial="158257" pagina_final="158284">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24459.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24459</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24459</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="7320" nombre="MINISTERIO DEL INTERIOR">
+            <epigrafe nombre="Personal laboral">
+              <item>
+                <identificador>BOE-A-2026-24460</identificador>
+                <control>2026/18353</control>
+                <titulo>Resolución de 19 de noviembre de 2026, de la Subsecretaría, por la que se modifica y se corrigen errores en la relación definitiva de personas admitidas y excluidas, y se modifica la composición de órganos de selección del proceso selectivo para ingreso, por el sistema general de acceso libre y promoción interna, como personal laboral fijo, en los grupos profesionales M3, M2, M1, E2 y E1 sujetos al IV Convenio colectivo único para el personal laboral de la Administración General del Estado, convocado por Resolución de 3 de julio de 2026.</titulo>
+                <url_pdf szBytes="235114" szKBytes="230" pagina_inicial="158285" pagina_final="158289">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24460.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24460</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24460</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="9565" nombre="MINISTERIO DE CIENCIA, INNOVACIÓN Y UNIVERSIDADES">
+            <epigrafe nombre="Personal funcionario. Concursos">
+              <item>
+                <identificador>BOE-A-2026-24461</identificador>
+                <control>2026/18036</control>
+                <titulo>Resolución de 12 de noviembre 2026, de la Subsecretaría, por la que se convoca concurso general para la provisión de puestos de trabajo.</titulo>
+                <url_pdf szBytes="765452" szKBytes="748" pagina_inicial="158290" pagina_final="158314">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24461.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24461</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24461</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="9579" nombre="MINISTERIO DE INCLUSIÓN, SEGURIDAD SOCIAL Y MIGRACIONES">
+            <epigrafe nombre="Procedimientos de libre designación">
+              <item>
+                <identificador>BOE-A-2026-24462</identificador>
+                <control>2026/18038</control>
+                <titulo>Resolución de 10 de noviembre de 2026, de la Subsecretaría, por la que se convoca la provisión de puesto de trabajo por el sistema de libre designación.</titulo>
+                <url_pdf szBytes="253197" szKBytes="247" pagina_inicial="158315" pagina_final="158318">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24462.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24462</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24462</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="9525" nombre="ADMINISTRACIÓN LOCAL">
+            <epigrafe nombre="Personal funcionario y laboral">
+              <item>
+                <identificador>BOE-A-2026-24463</identificador>
+                <control>2026/106286</control>
+                <titulo>Resolución de 28 de octubre de 2026, del Ayuntamiento de Pego (Alicante/Alacant), referente a la convocatoria para proveer una plaza.</titulo>
+                <url_pdf szBytes="190767" szKBytes="186" pagina_inicial="158319" pagina_final="158319">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24463.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24463</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24463</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24464</identificador>
+                <control>2026/106350</control>
+                <titulo>Resolución de 11 de noviembre de 2026, del Cabildo Insular de Tenerife (Santa Cruz de Tenerife), referente a la convocatoria para proveer varias plazas.</titulo>
+                <url_pdf szBytes="190919" szKBytes="186" pagina_inicial="158320" pagina_final="158320">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24464.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24464</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24464</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24465</identificador>
+                <control>2026/106290</control>
+                <titulo>Resolución de 12 de noviembre de 2026, del Ayuntamiento de Dénia (Alicante/Alacant), referente a la convocatoria para proveer una plaza.</titulo>
+                <url_pdf szBytes="190224" szKBytes="186" pagina_inicial="158321" pagina_final="158321">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24465.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24465</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24465</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24466</identificador>
+                <control>2026/106291</control>
+                <titulo>Resolución de 13 de noviembre de 2026, del Ayuntamiento de Vic (Barcelona), Organismo Autónomo Xarxa de Serveis Urbans, referente a la convocatoria para proveer una plaza.</titulo>
+                <url_pdf szBytes="191213" szKBytes="187" pagina_inicial="158322" pagina_final="158322">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24466.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24466</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24466</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24467</identificador>
+                <control>2026/106307</control>
+                <titulo>Resolución de 13 de noviembre de 2026, de la Mancomunitat de Municipis de la Safor (Valencia/València), que deja sin efecto la de 14 de octubre de 2026, referente a la convocatoria para proveer una plaza.</titulo>
+                <url_pdf szBytes="190728" szKBytes="186" pagina_inicial="158323" pagina_final="158323">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24467.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24467</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24467</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24468</identificador>
+                <control>2026/106289</control>
+                <titulo>Resolución de 16 de noviembre de 2026, del Ayuntamiento de Navalcarnero (Madrid), referente a la convocatoria para proveer una plaza.</titulo>
+                <url_pdf szBytes="190269" szKBytes="186" pagina_inicial="158324" pagina_final="158324">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24468.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24468</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24468</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24469</identificador>
+                <control>2026/106287</control>
+                <titulo>Resolución de 17 de noviembre de 2026, del Ayuntamiento de Reus (Tarragona), referente a la convocatoria para proveer varias plazas.</titulo>
+                <url_pdf szBytes="190621" szKBytes="186" pagina_inicial="158325" pagina_final="158325">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24469.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24469</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24469</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24470</identificador>
+                <control>2026/106292</control>
+                <titulo>Resolución de 17 de noviembre de 2026, del Ayuntamiento de Portas (Pontevedra), referente a la convocatoria para proveer una plaza.</titulo>
+                <url_pdf szBytes="190357" szKBytes="186" pagina_inicial="158326" pagina_final="158326">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24470.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24470</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24470</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24471</identificador>
+                <control>2026/106293</control>
+                <titulo>Resolución de 17 de noviembre de 2026, de la Diputación Provincial de Burgos, referente a la convocatoria para proveer varias plazas.</titulo>
+                <url_pdf szBytes="191375" szKBytes="187" pagina_inicial="158327" pagina_final="158327">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24471.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24471</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24471</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24472</identificador>
+                <control>2026/106294</control>
+                <titulo>Resolución de 17 de noviembre de 2026, del Ayuntamiento de Liétor (Albacete), referente a la convocatoria para proveer una plaza.</titulo>
+                <url_pdf szBytes="190164" szKBytes="186" pagina_inicial="158328" pagina_final="158328">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24472.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24472</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24472</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24473</identificador>
+                <control>2026/106296</control>
+                <titulo>Resolución de 17 de noviembre de 2026, del Ayuntamiento de Alzira (Valencia/València), referente a la convocatoria para proveer una plaza.</titulo>
+                <url_pdf szBytes="190959" szKBytes="186" pagina_inicial="158329" pagina_final="158329">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24473.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24473</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24473</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24474</identificador>
+                <control>2026/106308</control>
+                <titulo>Resolución de 17 de noviembre de 2026, del Ayuntamiento de Córdoba, referente a la convocatoria para proveer varias plazas.</titulo>
+                <url_pdf szBytes="191613" szKBytes="187" pagina_inicial="158330" pagina_final="158330">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24474.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24474</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24474</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="310" nombre="UNIVERSIDADES">
+            <epigrafe nombre="Cuerpos docentes universitarios">
+              <item>
+                <identificador>BOE-A-2026-24475</identificador>
+                <control>2026/18309</control>
+                <titulo>Resolución de 9 de noviembre de 2026, de la Universidad de Huelva, por la que se declaran desiertas plazas de cuerpos docentes universitarios.</titulo>
+                <url_pdf szBytes="191355" szKBytes="187" pagina_inicial="158331" pagina_final="158331">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24475.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24475</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24475</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+        </seccion>
+        <seccion codigo="3" nombre="III. Otras disposiciones">
+          <departamento codigo="7320" nombre="MINISTERIO DEL INTERIOR">
+            <epigrafe nombre="Convenios">
+              <item>
+                <identificador>BOE-A-2026-24476</identificador>
+                <control>2026/17975</control>
+                <titulo>Resolución de 12 de noviembre de 2026, de la Secretaría General Técnica, por la que se publica el Convenio entre la Secretaría de Estado de Seguridad y el Ayuntamiento de Madrigalejo, en materia de seguridad.</titulo>
+                <url_pdf szBytes="231507" szKBytes="226" pagina_inicial="158332" pagina_final="158337">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24476.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24476</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24476</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24477</identificador>
+                <control>2026/18139</control>
+                <titulo>Resolución de 17 de noviembre de 2026, de la Secretaría General Técnica, por la que se publica el Convenio entre la Secretaría de Estado de Seguridad y el Ayuntamiento de Bonares, en materia de seguridad.</titulo>
+                <url_pdf szBytes="225630" szKBytes="220" pagina_inicial="158338" pagina_final="158343">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24477.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24477</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24477</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24478</identificador>
+                <control>2026/18324</control>
+                <titulo>Resolución de 19 de noviembre de 2026, de la Secretaría General Técnica, por la que se publica el Convenio con Airbnb.org, para colaborar en la mejora de la gestión de la protección civil y las emergencias.</titulo>
+                <url_pdf szBytes="225881" szKBytes="221" pagina_inicial="158344" pagina_final="158349">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24478.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24478</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24478</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="9590" nombre="MINISTERIO DE EDUCACIÓN, FORMACIÓN PROFESIONAL Y DEPORTES">
+            <epigrafe nombre="Condecoraciones">
+              <item>
+                <identificador>BOE-A-2026-24479</identificador>
+                <control>2026/18326</control>
+                <titulo>Orden EFD/1256/2026, de 16 de noviembre, por la que se concede el ingreso en la Orden Civil de Alfonso X el Sabio con la categoría de Encomienda con Placa a don Santiago García Manzano.</titulo>
+                <url_pdf szBytes="191002" szKBytes="187" pagina_inicial="158350" pagina_final="158350">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24479.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24479</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24479</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="9573" nombre="MINISTERIO DE TRABAJO Y ECONOMÍA SOCIAL">
+            <epigrafe nombre="Convenios colectivos de trabajo">
+              <item>
+                <identificador>BOE-A-2026-24480</identificador>
+                <control>2026/18050</control>
+                <titulo>Resolución de 11 de noviembre de 2026, de la Dirección General de Trabajo, por la que se registra y publica el Convenio colectivo de Cardtronics Spain, SLU.</titulo>
+                <url_pdf szBytes="435169" szKBytes="425" pagina_inicial="158351" pagina_final="158384">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24480.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24480</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24480</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24481</identificador>
+                <control>2026/18051</control>
+                <titulo>Resolución de 11 de noviembre de 2026, de la Dirección General de Trabajo, por la que se registra y publica el Convenio colectivo de Happy Games, SL.</titulo>
+                <url_pdf szBytes="380851" szKBytes="372" pagina_inicial="158385" pagina_final="158410">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24481.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24481</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24481</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24482</identificador>
+                <control>2026/18053</control>
+                <titulo>Resolución de 11 de noviembre de 2026, de la Dirección General de Trabajo, por la que se registra y publica el IV Convenio colectivo de Unedisa Comunicaciones, SL.</titulo>
+                <url_pdf szBytes="619640" szKBytes="605" pagina_inicial="158411" pagina_final="158464">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24482.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24482</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24482</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="3120" nombre="MINISTERIO DE AGRICULTURA, PESCA Y ALIMENTACIÓN">
+            <epigrafe nombre="Comunidad Autónoma de Cataluña. Convenio">
+              <item>
+                <identificador>BOE-A-2026-24483</identificador>
+                <control>2026/18054</control>
+                <titulo>Resolución de 12 de noviembre de 2026, de la Subsecretaría, por la que se publica el Convenio con la Generalitat de Catalunya, en materia de estadística para el año 2026.</titulo>
+                <url_pdf szBytes="265721" szKBytes="259" pagina_inicial="158465" pagina_final="158471">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24483.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24483</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24483</url_xml>
+              </item>
+            </epigrafe>
+            <epigrafe nombre="Comunitat Valenciana. Convenio">
+              <item>
+                <identificador>BOE-A-2026-24484</identificador>
+                <control>2026/18056</control>
+                <titulo>Resolución de 13 de noviembre de 2026, de la Subsecretaría, por la que se publica el Convenio entre la Entidad Estatal de Seguros Agrarios, O.A., y la Comunitat Valenciana, para el intercambio de datos a efectos de gestión y control de subvenciones a los seguros agrarios de los beneficiarios de su Comunidad Autónoma.</titulo>
+                <url_pdf szBytes="309963" szKBytes="303" pagina_inicial="158472" pagina_final="158481">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24484.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24484</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24484</url_xml>
+              </item>
+            </epigrafe>
+            <epigrafe nombre="Convenios">
+              <item>
+                <identificador>BOE-A-2026-24485</identificador>
+                <control>2026/18055</control>
+                <titulo>Resolución de 12 de noviembre de 2026, de la Dirección General de Producciones y Mercados Agrarios, por la que se publica el Convenio con la Asociación Española de Criadores de Ganado Vacuno de Raza Monchina, para el depósito y custodia de material genético de animales de razas puras, consignado en el Banco Nacional de Germoplasma Animal.</titulo>
+                <url_pdf szBytes="221773" szKBytes="217" pagina_inicial="158482" pagina_final="158486">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24485.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24485</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24485</url_xml>
+              </item>
+            </epigrafe>
+            <epigrafe nombre="Pesca marítima">
+              <item>
+                <identificador>BOE-A-2026-24486</identificador>
+                <control>2026/18352</control>
+                <titulo>Orden APA/1257/2026, de 17 de noviembre, por la que se modifican la Orden APA/372/2020, de 24 de abril, por la que se regula la pesquería de patudo («Thunnus obesus») en el Océano Atlántico y se establece un censo de buques autorizados a la pesca de patudo, y la Orden APA/25/2021, de 19 de enero, por la que se regula el ejercicio de la pesca de túnidos tropicales en el Océano Índico y se crea un censo de atuneros cerqueros congeladores autorizados a la pesca de túnidos tropicales en el Océano Índico.</titulo>
+                <url_pdf szBytes="307879" szKBytes="301" pagina_inicial="158487" pagina_final="158497">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24486.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24486</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24486</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="9587" nombre="MINISTERIO DE VIVIENDA Y AGENDA URBANA">
+            <epigrafe nombre="Comunidad Autónoma de Castilla-La Mancha. Convenio">
+              <item>
+                <identificador>BOE-A-2026-24487</identificador>
+                <control>2026/18058</control>
+                <titulo>Resolución de 10 de noviembre de 2026, de la Dirección General de Vivienda y Suelo, por la que se publica el Convenio con la Comunidad Autónoma de Castilla-La Mancha, para la ejecución del Plan Estatal de Vivienda 2026-2030.</titulo>
+                <url_pdf szBytes="476012" szKBytes="465" pagina_inicial="158498" pagina_final="158515">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24487.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24487</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24487</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="4110" nombre="MINISTERIO DE CULTURA">
+            <epigrafe nombre="Convenios">
+              <item>
+                <identificador>BOE-A-2026-24488</identificador>
+                <control>2026/18250</control>
+                <titulo>Resolución de 28 de octubre de 2026, de la Dirección General de Patrimonio Cultural y Bellas Artes, por la que se publica el Convenio con el Ayuntamiento de La Carolina, para el apoyo técnico en materia de explotación conjunta de la aplicación de gestión museográfica DOMUS, e intercambio y difusión de información a través de la misma en el Museo de La Carolina.</titulo>
+                <url_pdf szBytes="246656" szKBytes="241" pagina_inicial="158516" pagina_final="158524">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24488.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24488</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24488</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24489</identificador>
+                <control>2026/18063</control>
+                <titulo>Resolución de 16 de noviembre de 2026, del Museo Nacional Centro de Arte Reina Sofía, por la que se publica la segunda Adenda de prórroga del Convenio con la Sociedad Española de Radiodifusión, SLU, para el mecenazgo de la programación cultural del museo.</titulo>
+                <url_pdf szBytes="205081" szKBytes="200" pagina_inicial="158525" pagina_final="158527">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24489.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24489</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24489</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="9589" nombre="MINISTERIO DE ECONOMÍA, COMERCIO Y EMPRESA">
+            <epigrafe nombre="Procedimientos administrativos. Gestión informatizada">
+              <item>
+                <identificador>BOE-A-2026-24490</identificador>
+                <control>2026/18146</control>
+                <titulo>Resolución de 16 de noviembre de 2026, de la Subsecretaría, por la que se establece el procedimiento para la autoliquidación y el pago por vía telemática de la tasa por el examen de la documentación necesaria para la verificación del cumplimiento de los requisitos para la aprobación de la utilización de modelos internos y parámetros específicos en el cálculo del capital de solvencia obligatorio de la entidades aseguradoras y reaseguradoras.</titulo>
+                <url_pdf szBytes="204181" szKBytes="199" pagina_inicial="158528" pagina_final="158530">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24490.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24490</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24490</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="4335" nombre="MINISTERIO DE SANIDAD">
+            <epigrafe nombre="Ayudas">
+              <item>
+                <identificador>BOE-A-2026-24491</identificador>
+                <control>2026/18147</control>
+                <titulo>Orden SND/1258/2026, de 12 de noviembre, por la que se regula el procedimiento de concurrencia competitiva para la selección de proyectos del programa EU4Health.</titulo>
+                <url_pdf szBytes="231656" szKBytes="226" pagina_inicial="158531" pagina_final="158536">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24491.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24491</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24491</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="9588" nombre="MINISTERIO DE DERECHOS SOCIALES, CONSUMO Y AGENDA 2030">
+            <epigrafe nombre="Ayudas">
+              <item>
+                <identificador>BOE-A-2026-24492</identificador>
+                <control>2026/17908</control>
+                <titulo>Resolución de 30 de octubre de 2026, del Instituto de Mayores y Servicios Sociales, por la que se aprueba la convocatoria para la elección de operaciones en el marco del Programa de Inclusión Social, Garantía Infantil y Lucha Contra la Pobreza, cofinanciado con el Fondo Social Europeo plus (FSE +).</titulo>
+                <url_pdf szBytes="736639" szKBytes="719" pagina_inicial="158537" pagina_final="158591">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24492.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24492</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24492</url_xml>
+              </item>
+            </epigrafe>
+            <epigrafe nombre="Comunidad Autónoma de la Región de Murcia. Convenio">
+              <item>
+                <identificador>BOE-A-2026-24493</identificador>
+                <control>2026/17985</control>
+                <titulo>Resolución de 10 de noviembre de 2026, del Instituto de Mayores y Servicios Sociales, por la que se publica el Convenio con la Comunidad Autónoma de la Región de Murcia, para el desarrollo del Marco de cooperación interadministrativa previsto en la Ley 39/2006, de 14 de diciembre, de Promoción de la Autonomía Personal y Atención a las personas en situación de dependencia y para el establecimiento y financiación del nivel de protección acordado para el ejercicio 2026.</titulo>
+                <url_pdf szBytes="345393" szKBytes="337" pagina_inicial="158592" pagina_final="158608">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24493.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24493</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24493</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="9565" nombre="MINISTERIO DE CIENCIA, INNOVACIÓN Y UNIVERSIDADES">
+            <epigrafe nombre="Comunidad Autónoma de Castilla-La Mancha. Convenio">
+              <item>
+                <identificador>BOE-A-2026-24494</identificador>
+                <control>2026/18068</control>
+                <titulo>Resolución de 6 de noviembre de 2026, de la Presidencia de la Agencia Estatal Consejo Superior de Investigaciones Científicas, M.P., por la que se publica el Convenio con la Comunidad Autónoma de Castilla-La Mancha, para la conservación de las estirpes de cerdo ibérico Torbiscal y Guadyerbas en el Centro de Investigaciones Agropecuarias «Dehesón del Encinar».</titulo>
+                <url_pdf szBytes="251739" szKBytes="246" pagina_inicial="158609" pagina_final="158618">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24494.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24494</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24494</url_xml>
+              </item>
+            </epigrafe>
+            <epigrafe nombre="Comunidad de Madrid. Convenio">
+              <item>
+                <identificador>BOE-A-2026-24495</identificador>
+                <control>2026/18253</control>
+                <titulo>Resolución de 10 de noviembre de 2026, de la Presidencia de la Agencia Estatal Consejo Superior de Investigaciones Científicas, M.P., por la que se publica el Convenio con la Universidad Politécnica de Madrid, para el establecimiento de las condiciones de funcionamiento del centro mixto de I+D+i Centro de Biotecnología y Genómica de Plantas.</titulo>
+                <url_pdf szBytes="767207" szKBytes="749" pagina_inicial="158619" pagina_final="158654">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24495.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24495</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24495</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="1020" nombre="BANCO DE ESPAÑA">
+            <epigrafe nombre="Mercado de divisas">
+              <item>
+                <identificador>BOE-A-2026-24496</identificador>
+                <control>2026/18344</control>
+                <titulo>Resolución de 20 de noviembre de 2026, del Banco de España, por la que se publican los cambios del euro correspondientes al día 20 de noviembre de 2026, publicados por el Banco Central Europeo, que tendrán la consideración de cambios oficiales, de acuerdo con lo dispuesto en el artículo 36 de la Ley 46/1998, de 17 de diciembre, sobre la Introducción del Euro.</titulo>
+                <url_pdf szBytes="216379" szKBytes="211" pagina_inicial="158655" pagina_final="158656">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24496.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24496</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24496</url_xml>
+              </item>
+            </epigrafe>
+            <epigrafe nombre="Política monetaria">
+              <item>
+                <identificador>BOE-A-2026-24497</identificador>
+                <control>2026/18072</control>
+                <titulo>Resolución de 11 de noviembre de 2026, de la Comisión Ejecutiva del Banco de España, por la que se modifica la de 11 de diciembre de 1998, por la que se aprueban las cláusulas generales aplicables a las operaciones de política monetaria del Banco de España.</titulo>
+                <url_pdf szBytes="315712" szKBytes="308" pagina_inicial="158657" pagina_final="158677">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24497.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24497</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24497</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="8150" nombre="COMUNIDAD AUTÓNOMA DEL PRINCIPADO DE ASTURIAS">
+            <epigrafe nombre="Bienes de interés cultural">
+              <item>
+                <identificador>BOE-A-2026-24498</identificador>
+                <control>2026/18074</control>
+                <titulo>Decreto 78/2026, de 13 de octubre, por el que se declara bien de interés cultural, de carácter inmaterial, el Teatro Popular Asturiano-Teatro Costumbrista Asturiano.</titulo>
+                <url_pdf szBytes="243118" szKBytes="237" pagina_inicial="158678" pagina_final="158685">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24498.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24498</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24498</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="310" nombre="UNIVERSIDADES">
+            <epigrafe nombre="Planes de estudios">
+              <item>
+                <identificador>BOE-A-2026-24499</identificador>
+                <control>2026/18075</control>
+                <titulo>Resolución de 22 de octubre de 2026, de la Universidad Loyola Andalucía, por la que se publica el plan de estudios de Graduado o Graduada en Podología.</titulo>
+                <url_pdf szBytes="251042" szKBytes="245" pagina_inicial="158686" pagina_final="158688">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24499.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24499</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24499</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24500</identificador>
+                <control>2026/18076</control>
+                <titulo>Resolución de 26 de octubre de 2026, de la Universidad Loyola Andalucía, por la que se publican planes de estudios de Máster Universitario.</titulo>
+                <url_pdf szBytes="280790" szKBytes="274" pagina_inicial="158689" pagina_final="158693">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24500.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24500</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24500</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24501</identificador>
+                <control>2026/18084</control>
+                <titulo>Resolución de 10 de noviembre de 2026, de la Universidad San Jorge, por la que se publica el plan de estudios de Graduado o Graduada en Odontología.</titulo>
+                <url_pdf szBytes="276641" szKBytes="270" pagina_inicial="158694" pagina_final="158696">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24501.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24501</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24501</url_xml>
+              </item>
+              <item>
+                <identificador>BOE-A-2026-24502</identificador>
+                <control>2026/18085</control>
+                <titulo>Resolución de 10 de noviembre de 2026, de la Universidad San Jorge, por la que se publica el plan de estudios de Máster Universitario en Inteligencia Artificial Aplicada.</titulo>
+                <url_pdf szBytes="247980" szKBytes="242" pagina_inicial="158697" pagina_final="158698">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24502.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24502</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24502</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+          <departamento codigo="1330" nombre="JUNTAS ELECTORALES PROVINCIALES">
+            <epigrafe nombre="Elecciones generales. Proclamación de candidaturas">
+              <item>
+                <identificador>BOE-A-2026-24503</identificador>
+                <control>2026/18351</control>
+                <titulo>Corrección de errores de las candidaturas proclamadas para las elecciones al Congreso de los Diputados y al Senado, convocadas por Real Decreto 806/2026, de 5 de octubre.</titulo>
+                <url_pdf szBytes="190528" szKBytes="186" pagina_inicial="158699" pagina_final="158699">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-A-2026-24503.pdf</url_pdf>
+                <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24503</url_html>
+                <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-A-2026-24503</url_xml>
+              </item>
+            </epigrafe>
+          </departamento>
+        </seccion>
+        <seccion codigo="4" nombre="IV. Administración de Justicia">
+          <departamento codigo="9602" nombre="TRIBUNALES DE INSTANCIA. SECCIÓN CIVIL Y DE INSTRUCCIÓN">
+            <item>
+              <identificador>BOE-B-2026-38248</identificador>
+              <titulo>ALCOY</titulo>
+              <url_pdf szBytes="198222" szKBytes="194" pagina_inicial="61914" pagina_final="61914">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38248.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38248</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38248</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38249</identificador>
+              <titulo>AMPOSTA</titulo>
+              <url_pdf szBytes="198371" szKBytes="194" pagina_inicial="61915" pagina_final="61915">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38249.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38249</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38249</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38250</identificador>
+              <titulo>ARANDA DE DUERO</titulo>
+              <url_pdf szBytes="198363" szKBytes="194" pagina_inicial="61916" pagina_final="61916">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38250.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38250</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38250</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38251</identificador>
+              <titulo>BAÑEZA</titulo>
+              <url_pdf szBytes="198340" szKBytes="194" pagina_inicial="61917" pagina_final="61917">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38251.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38251</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38251</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38252</identificador>
+              <titulo>CARMONA</titulo>
+              <url_pdf szBytes="198352" szKBytes="194" pagina_inicial="61918" pagina_final="61918">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38252.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38252</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38252</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38253</identificador>
+              <titulo>CAROLINA</titulo>
+              <url_pdf szBytes="198245" szKBytes="194" pagina_inicial="61919" pagina_final="61919">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38253.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38253</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38253</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38254</identificador>
+              <titulo>CERDANYOLA DEL VALLES</titulo>
+              <url_pdf szBytes="198919" szKBytes="194" pagina_inicial="61920" pagina_final="61920">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38254.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38254</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38254</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38255</identificador>
+              <titulo>CERDANYOLA DEL VALLES</titulo>
+              <url_pdf szBytes="199000" szKBytes="194" pagina_inicial="61921" pagina_final="61921">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38255.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38255</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38255</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38256</identificador>
+              <titulo>CEUTA</titulo>
+              <url_pdf szBytes="198057" szKBytes="193" pagina_inicial="61922" pagina_final="61922">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38256.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38256</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38256</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38257</identificador>
+              <titulo>COLLADO VILLALBA</titulo>
+              <url_pdf szBytes="198619" szKBytes="194" pagina_inicial="61923" pagina_final="61923">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38257.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38257</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38257</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38258</identificador>
+              <titulo>EL VENDRELL</titulo>
+              <url_pdf szBytes="198224" szKBytes="194" pagina_inicial="61924" pagina_final="61924">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38258.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38258</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38258</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38259</identificador>
+              <titulo>ESTEPONA</titulo>
+              <url_pdf szBytes="198433" szKBytes="194" pagina_inicial="61925" pagina_final="61925">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38259.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38259</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38259</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38260</identificador>
+              <titulo>ESTEPONA</titulo>
+              <url_pdf szBytes="198410" szKBytes="194" pagina_inicial="61926" pagina_final="61926">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38260.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38260</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38260</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38261</identificador>
+              <titulo>GETAFE</titulo>
+              <url_pdf szBytes="198137" szKBytes="193" pagina_inicial="61927" pagina_final="61927">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38261.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38261</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38261</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38262</identificador>
+              <titulo>GETAFE</titulo>
+              <url_pdf szBytes="198101" szKBytes="193" pagina_inicial="61928" pagina_final="61928">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38262.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38262</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38262</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38263</identificador>
+              <titulo>IGUALADA</titulo>
+              <url_pdf szBytes="198172" szKBytes="194" pagina_inicial="61929" pagina_final="61929">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38263.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38263</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38263</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38264</identificador>
+              <titulo>IGUALADA</titulo>
+              <url_pdf szBytes="198273" szKBytes="194" pagina_inicial="61930" pagina_final="61930">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38264.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38264</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38264</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38265</identificador>
+              <titulo>IGUALADA</titulo>
+              <url_pdf szBytes="198348" szKBytes="194" pagina_inicial="61931" pagina_final="61931">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38265.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38265</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38265</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38266</identificador>
+              <titulo>IGUALADA</titulo>
+              <url_pdf szBytes="198253" szKBytes="194" pagina_inicial="61932" pagina_final="61932">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38266.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38266</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38266</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38267</identificador>
+              <titulo>IGUALADA</titulo>
+              <url_pdf szBytes="198257" szKBytes="194" pagina_inicial="61933" pagina_final="61933">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38267.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38267</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38267</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38268</identificador>
+              <titulo>LANGREO</titulo>
+              <url_pdf szBytes="198431" szKBytes="194" pagina_inicial="61934" pagina_final="61934">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38268.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38268</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38268</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38269</identificador>
+              <titulo>LANGREO</titulo>
+              <url_pdf szBytes="198523" szKBytes="194" pagina_inicial="61935" pagina_final="61935">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38269.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38269</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38269</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38270</identificador>
+              <titulo>MAO</titulo>
+              <url_pdf szBytes="197969" szKBytes="193" pagina_inicial="61936" pagina_final="61936">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38270.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38270</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38270</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38271</identificador>
+              <titulo>MARTORELL</titulo>
+              <url_pdf szBytes="198307" szKBytes="194" pagina_inicial="61937" pagina_final="61937">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38271.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38271</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38271</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38272</identificador>
+              <titulo>MONTIJO</titulo>
+              <url_pdf szBytes="198309" szKBytes="194" pagina_inicial="61938" pagina_final="61938">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38272.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38272</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38272</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38273</identificador>
+              <titulo>NOVELDA</titulo>
+              <url_pdf szBytes="198481" szKBytes="194" pagina_inicial="61939" pagina_final="61939">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38273.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38273</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38273</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38274</identificador>
+              <titulo>OLOT</titulo>
+              <url_pdf szBytes="197939" szKBytes="193" pagina_inicial="61940" pagina_final="61940">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38274.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38274</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38274</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38275</identificador>
+              <titulo>RONDA</titulo>
+              <url_pdf szBytes="198287" szKBytes="194" pagina_inicial="61941" pagina_final="61941">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38275.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38275</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38275</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38276</identificador>
+              <titulo>SANLUCAR BARRAMEDA</titulo>
+              <url_pdf szBytes="198845" szKBytes="194" pagina_inicial="61942" pagina_final="61942">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38276.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38276</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38276</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38277</identificador>
+              <titulo>SANLUCAR MAYOR</titulo>
+              <url_pdf szBytes="198870" szKBytes="194" pagina_inicial="61943" pagina_final="61943">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38277.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38277</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38277</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38278</identificador>
+              <titulo>SANT FELIU DE GUIXOLS</titulo>
+              <url_pdf szBytes="198953" szKBytes="194" pagina_inicial="61944" pagina_final="61944">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38278.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38278</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38278</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38279</identificador>
+              <titulo>SANT FELIU DE LLOBREGAT</titulo>
+              <url_pdf szBytes="199143" szKBytes="194" pagina_inicial="61945" pagina_final="61945">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38279.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38279</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38279</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38280</identificador>
+              <titulo>SEU D URGELL (LA)</titulo>
+              <url_pdf szBytes="198864" szKBytes="194" pagina_inicial="61946" pagina_final="61946">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38280.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38280</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38280</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38281</identificador>
+              <titulo>SUECA</titulo>
+              <url_pdf szBytes="198217" szKBytes="194" pagina_inicial="61947" pagina_final="61947">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38281.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38281</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38281</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38282</identificador>
+              <titulo>SUECA</titulo>
+              <url_pdf szBytes="198224" szKBytes="194" pagina_inicial="61948" pagina_final="61948">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38282.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38282</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38282</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38283</identificador>
+              <titulo>TERUEL</titulo>
+              <url_pdf szBytes="198053" szKBytes="193" pagina_inicial="61949" pagina_final="61949">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38283.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38283</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38283</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38284</identificador>
+              <titulo>TORO</titulo>
+              <url_pdf szBytes="198009" szKBytes="193" pagina_inicial="61950" pagina_final="61950">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38284.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38284</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38284</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38285</identificador>
+              <titulo>TORO</titulo>
+              <url_pdf szBytes="197929" szKBytes="193" pagina_inicial="61951" pagina_final="61951">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38285.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38285</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38285</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38286</identificador>
+              <titulo>TORO</titulo>
+              <url_pdf szBytes="197930" szKBytes="193" pagina_inicial="61952" pagina_final="61952">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38286.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38286</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38286</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38287</identificador>
+              <titulo>VALVERDE DEL CAMINO</titulo>
+              <url_pdf szBytes="198853" szKBytes="194" pagina_inicial="61953" pagina_final="61953">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38287.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38287</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38287</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38288</identificador>
+              <titulo>VILANOVA I LA GELTRU</titulo>
+              <url_pdf szBytes="198843" szKBytes="194" pagina_inicial="61954" pagina_final="61954">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38288.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38288</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38288</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38289</identificador>
+              <titulo>VILANOVA I LA GELTRU</titulo>
+              <url_pdf szBytes="198852" szKBytes="194" pagina_inicial="61955" pagina_final="61955">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38289.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38289</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38289</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38290</identificador>
+              <titulo>VILANOVA I LA GELTRU</titulo>
+              <url_pdf szBytes="198840" szKBytes="194" pagina_inicial="61956" pagina_final="61956">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38290.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38290</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38290</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38291</identificador>
+              <titulo>VILLANUEVA DE LA SERENA</titulo>
+              <url_pdf szBytes="198690" szKBytes="194" pagina_inicial="61957" pagina_final="61957">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38291.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38291</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38291</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38292</identificador>
+              <titulo>VILLARROBLEDO</titulo>
+              <url_pdf szBytes="198497" szKBytes="194" pagina_inicial="61958" pagina_final="61958">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38292.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38292</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38292</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38293</identificador>
+              <titulo>ZAMORA</titulo>
+              <url_pdf szBytes="198202" szKBytes="194" pagina_inicial="61959" pagina_final="61959">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38293.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38293</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38293</url_xml>
+            </item>
+          </departamento>
+          <departamento codigo="9603" nombre="TRIBUNALES DE INSTANCIA. SECCIÓN CIVIL">
+            <item>
+              <identificador>BOE-B-2026-38294</identificador>
+              <titulo>ALBACETE</titulo>
+              <url_pdf szBytes="197966" szKBytes="193" pagina_inicial="61960" pagina_final="61960">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38294.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38294</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38294</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38295</identificador>
+              <titulo>ALCALA DE HENARES</titulo>
+              <url_pdf szBytes="198422" szKBytes="194" pagina_inicial="61961" pagina_final="61961">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38295.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38295</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38295</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38296</identificador>
+              <titulo>ALGECIRAS</titulo>
+              <url_pdf szBytes="198362" szKBytes="194" pagina_inicial="61962" pagina_final="61962">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38296.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38296</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38296</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38297</identificador>
+              <titulo>BARCELONA</titulo>
+              <url_pdf szBytes="198195" szKBytes="194" pagina_inicial="61963" pagina_final="61963">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38297.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38297</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38297</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38298</identificador>
+              <titulo>BILBAO</titulo>
+              <url_pdf szBytes="197979" szKBytes="193" pagina_inicial="61964" pagina_final="61964">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38298.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38298</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38298</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38299</identificador>
+              <titulo>CASTELLON DE LA PLANA</titulo>
+              <url_pdf szBytes="198399" szKBytes="194" pagina_inicial="61965" pagina_final="61965">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38299.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38299</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38299</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38300</identificador>
+              <titulo>CASTELLON DE LA PLANA</titulo>
+              <url_pdf szBytes="198448" szKBytes="194" pagina_inicial="61966" pagina_final="61966">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38300.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38300</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38300</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38301</identificador>
+              <titulo>CORDOBA</titulo>
+              <url_pdf szBytes="198172" szKBytes="194" pagina_inicial="61967" pagina_final="61967">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38301.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38301</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38301</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38302</identificador>
+              <titulo>CORDOBA</titulo>
+              <url_pdf szBytes="198096" szKBytes="193" pagina_inicial="61968" pagina_final="61968">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38302.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38302</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38302</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38303</identificador>
+              <titulo>DONOSTIA-SAN SEBASTIAN</titulo>
+              <url_pdf szBytes="198555" szKBytes="194" pagina_inicial="61969" pagina_final="61969">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38303.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38303</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38303</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38304</identificador>
+              <titulo>ELX</titulo>
+              <url_pdf szBytes="197694" szKBytes="193" pagina_inicial="61970" pagina_final="61970">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38304.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38304</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38304</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38305</identificador>
+              <titulo>FUENGIROLA</titulo>
+              <url_pdf szBytes="198499" szKBytes="194" pagina_inicial="61971" pagina_final="61971">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38305.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38305</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38305</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38306</identificador>
+              <titulo>FUENLABRADA</titulo>
+              <url_pdf szBytes="198313" szKBytes="194" pagina_inicial="61972" pagina_final="61972">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38306.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38306</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38306</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38307</identificador>
+              <titulo>FUENLABRADA</titulo>
+              <url_pdf szBytes="198233" szKBytes="194" pagina_inicial="61973" pagina_final="61973">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38307.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38307</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38307</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38308</identificador>
+              <titulo>GRANADA</titulo>
+              <url_pdf szBytes="198226" szKBytes="194" pagina_inicial="61974" pagina_final="61974">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38308.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38308</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38308</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38309</identificador>
+              <titulo>GRANOLLERS</titulo>
+              <url_pdf szBytes="198545" szKBytes="194" pagina_inicial="61975" pagina_final="61975">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38309.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38309</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38309</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38310</identificador>
+              <titulo>GRANOLLERS</titulo>
+              <url_pdf szBytes="198467" szKBytes="194" pagina_inicial="61976" pagina_final="61976">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38310.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38310</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38310</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38311</identificador>
+              <titulo>GRANOLLERS</titulo>
+              <url_pdf szBytes="198567" szKBytes="194" pagina_inicial="61977" pagina_final="61977">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38311.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38311</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38311</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38312</identificador>
+              <titulo>HUELVA</titulo>
+              <url_pdf szBytes="197911" szKBytes="193" pagina_inicial="61978" pagina_final="61978">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38312.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38312</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38312</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38313</identificador>
+              <titulo>HUELVA</titulo>
+              <url_pdf szBytes="197990" szKBytes="193" pagina_inicial="61979" pagina_final="61979">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38313.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38313</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38313</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38314</identificador>
+              <titulo>IBIZA</titulo>
+              <url_pdf szBytes="197712" szKBytes="193" pagina_inicial="61980" pagina_final="61980">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38314.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38314</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38314</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38315</identificador>
+              <titulo>IBIZA</titulo>
+              <url_pdf szBytes="197870" szKBytes="193" pagina_inicial="61981" pagina_final="61981">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38315.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38315</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38315</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38316</identificador>
+              <titulo>JAEN</titulo>
+              <url_pdf szBytes="197804" szKBytes="193" pagina_inicial="61982" pagina_final="61982">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38316.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38316</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38316</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38317</identificador>
+              <titulo>LAS PALMAS DE GRAN CANARIA</titulo>
+              <url_pdf szBytes="198828" szKBytes="194" pagina_inicial="61983" pagina_final="61983">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38317.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38317</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38317</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38318</identificador>
+              <titulo>LEON</titulo>
+              <url_pdf szBytes="197876" szKBytes="193" pagina_inicial="61984" pagina_final="61984">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38318.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38318</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38318</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38319</identificador>
+              <titulo>LEON</titulo>
+              <url_pdf szBytes="197798" szKBytes="193" pagina_inicial="61985" pagina_final="61985">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38319.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38319</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38319</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38320</identificador>
+              <titulo>LLEIDA</titulo>
+              <url_pdf szBytes="197882" szKBytes="193" pagina_inicial="61986" pagina_final="61986">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38320.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38320</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38320</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38321</identificador>
+              <titulo>LLEIDA</titulo>
+              <url_pdf szBytes="197892" szKBytes="193" pagina_inicial="61987" pagina_final="61987">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38321.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38321</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38321</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38322</identificador>
+              <titulo>LLEIDA</titulo>
+              <url_pdf szBytes="197805" szKBytes="193" pagina_inicial="61988" pagina_final="61988">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38322.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38322</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38322</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38323</identificador>
+              <titulo>LLEIDA</titulo>
+              <url_pdf szBytes="197867" szKBytes="193" pagina_inicial="61989" pagina_final="61989">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38323.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38323</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38323</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38324</identificador>
+              <titulo>LLEIDA</titulo>
+              <url_pdf szBytes="197861" szKBytes="193" pagina_inicial="61990" pagina_final="61990">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38324.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38324</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38324</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38325</identificador>
+              <titulo>LLEIDA</titulo>
+              <url_pdf szBytes="197811" szKBytes="193" pagina_inicial="61991" pagina_final="61991">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38325.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38325</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38325</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38326</identificador>
+              <titulo>MADRID</titulo>
+              <url_pdf szBytes="197920" szKBytes="193" pagina_inicial="61992" pagina_final="61992">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38326.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38326</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38326</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38327</identificador>
+              <titulo>MADRID</titulo>
+              <url_pdf szBytes="197989" szKBytes="193" pagina_inicial="61993" pagina_final="61993">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38327.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38327</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38327</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38328</identificador>
+              <titulo>MADRID</titulo>
+              <url_pdf szBytes="197923" szKBytes="193" pagina_inicial="61994" pagina_final="61994">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38328.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38328</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38328</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38329</identificador>
+              <titulo>MADRID</titulo>
+              <url_pdf szBytes="198088" szKBytes="193" pagina_inicial="61995" pagina_final="61995">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38329.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38329</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38329</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38330</identificador>
+              <titulo>MADRID</titulo>
+              <url_pdf szBytes="197912" szKBytes="193" pagina_inicial="61996" pagina_final="61996">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38330.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38330</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38330</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38331</identificador>
+              <titulo>MALAGA</titulo>
+              <url_pdf szBytes="198008" szKBytes="193" pagina_inicial="61997" pagina_final="61997">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38331.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38331</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38331</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38332</identificador>
+              <titulo>MALAGA</titulo>
+              <url_pdf szBytes="197943" szKBytes="193" pagina_inicial="61998" pagina_final="61998">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38332.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38332</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38332</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38333</identificador>
+              <titulo>MALAGA</titulo>
+              <url_pdf szBytes="198004" szKBytes="193" pagina_inicial="61999" pagina_final="61999">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38333.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38333</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38333</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38334</identificador>
+              <titulo>MARBELLA</titulo>
+              <url_pdf szBytes="198141" szKBytes="193" pagina_inicial="62000" pagina_final="62000">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38334.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38334</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38334</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38335</identificador>
+              <titulo>MARBELLA</titulo>
+              <url_pdf szBytes="198174" szKBytes="194" pagina_inicial="62001" pagina_final="62001">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38335.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38335</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38335</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38336</identificador>
+              <titulo>MARBELLA</titulo>
+              <url_pdf szBytes="198096" szKBytes="193" pagina_inicial="62002" pagina_final="62002">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38336.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38336</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38336</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38337</identificador>
+              <titulo>MOSTOLES</titulo>
+              <url_pdf szBytes="198110" szKBytes="193" pagina_inicial="62003" pagina_final="62003">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38337.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38337</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38337</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38338</identificador>
+              <titulo>ORIHUELA</titulo>
+              <url_pdf szBytes="198073" szKBytes="193" pagina_inicial="62004" pagina_final="62004">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38338.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38338</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38338</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38339</identificador>
+              <titulo>ORIHUELA</titulo>
+              <url_pdf szBytes="198312" szKBytes="194" pagina_inicial="62005" pagina_final="62005">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38339.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38339</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38339</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38340</identificador>
+              <titulo>OVIEDO</titulo>
+              <url_pdf szBytes="197877" szKBytes="193" pagina_inicial="62006" pagina_final="62006">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38340.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38340</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38340</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38341</identificador>
+              <titulo>PALMA DE MALLORCA</titulo>
+              <url_pdf szBytes="198366" szKBytes="194" pagina_inicial="62007" pagina_final="62007">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38341.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38341</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38341</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38342</identificador>
+              <titulo>PONFERRADA</titulo>
+              <url_pdf szBytes="198285" szKBytes="194" pagina_inicial="62008" pagina_final="62008">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38342.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38342</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38342</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38343</identificador>
+              <titulo>SABADELL</titulo>
+              <url_pdf szBytes="198051" szKBytes="193" pagina_inicial="62009" pagina_final="62009">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38343.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38343</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38343</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38344</identificador>
+              <titulo>SALAMANCA</titulo>
+              <url_pdf szBytes="198067" szKBytes="193" pagina_inicial="62010" pagina_final="62010">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38344.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38344</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38344</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38345</identificador>
+              <titulo>TORREJON DE ARDOZ</titulo>
+              <url_pdf szBytes="198457" szKBytes="194" pagina_inicial="62011" pagina_final="62011">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38345.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38345</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38345</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38346</identificador>
+              <titulo>TORREMOLINOS</titulo>
+              <url_pdf szBytes="198317" szKBytes="194" pagina_inicial="62012" pagina_final="62012">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38346.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38346</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38346</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38347</identificador>
+              <titulo>TORREVIEJA</titulo>
+              <url_pdf szBytes="198325" szKBytes="194" pagina_inicial="62013" pagina_final="62013">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38347.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38347</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38347</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38348</identificador>
+              <titulo>TORREVIEJA</titulo>
+              <url_pdf szBytes="198091" szKBytes="193" pagina_inicial="62014" pagina_final="62014">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38348.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38348</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38348</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38349</identificador>
+              <titulo>TORREVIEJA</titulo>
+              <url_pdf szBytes="198178" szKBytes="194" pagina_inicial="62015" pagina_final="62015">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38349.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38349</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38349</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38350</identificador>
+              <titulo>TORREVIEJA</titulo>
+              <url_pdf szBytes="198251" szKBytes="194" pagina_inicial="62016" pagina_final="62016">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38350.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38350</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38350</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38351</identificador>
+              <titulo>TORREVIEJA</titulo>
+              <url_pdf szBytes="198283" szKBytes="194" pagina_inicial="62017" pagina_final="62017">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38351.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38351</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38351</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38352</identificador>
+              <titulo>VALLADOLID</titulo>
+              <url_pdf szBytes="198111" szKBytes="193" pagina_inicial="62018" pagina_final="62018">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38352.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38352</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38352</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38353</identificador>
+              <titulo>ZARAGOZA</titulo>
+              <url_pdf szBytes="198234" szKBytes="194" pagina_inicial="62019" pagina_final="62019">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38353.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38353</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38353</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38354</identificador>
+              <titulo>ZARAGOZA</titulo>
+              <url_pdf szBytes="198261" szKBytes="194" pagina_inicial="62020" pagina_final="62020">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38354.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38354</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38354</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38355</identificador>
+              <titulo>ZARAGOZA</titulo>
+              <url_pdf szBytes="198376" szKBytes="194" pagina_inicial="62021" pagina_final="62021">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38355.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38355</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38355</url_xml>
+            </item>
+          </departamento>
+          <departamento codigo="9606" nombre="TRIBUNALES DE INSTANCIA. SECCIÓN DE LO MERCANTIL">
+            <item>
+              <identificador>BOE-B-2026-38356</identificador>
+              <titulo>BARCELONA</titulo>
+              <url_pdf szBytes="198296" szKBytes="194" pagina_inicial="62022" pagina_final="62022">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38356.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38356</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38356</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38357</identificador>
+              <titulo>BARCELONA</titulo>
+              <url_pdf szBytes="198432" szKBytes="194" pagina_inicial="62023" pagina_final="62023">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38357.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38357</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38357</url_xml>
+            </item>
+          </departamento>
+          <departamento codigo="9605" nombre="TRIBUNALES DE INSTANCIA. SECCIÓN DE LO PENAL">
+            <item>
+              <identificador>BOE-B-2026-38358</identificador>
+              <titulo>MADRID</titulo>
+              <url_pdf szBytes="198275" szKBytes="194" pagina_inicial="62024" pagina_final="62024">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38358.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38358</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38358</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38359</identificador>
+              <titulo>MADRID</titulo>
+              <url_pdf szBytes="198275" szKBytes="194" pagina_inicial="62025" pagina_final="62025">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38359.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38359</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38359</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38360</identificador>
+              <titulo>MADRID</titulo>
+              <url_pdf szBytes="198185" szKBytes="194" pagina_inicial="62026" pagina_final="62026">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38360.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38360</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38360</url_xml>
+            </item>
+          </departamento>
+          <departamento codigo="9604" nombre="TRIBUNALES DE INSTANCIA. SECCIÓN DE LO SOCIAL">
+            <item>
+              <identificador>BOE-B-2026-38361</identificador>
+              <titulo>BARCELONA</titulo>
+              <url_pdf szBytes="198453" szKBytes="194" pagina_inicial="62027" pagina_final="62027">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38361.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38361</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38361</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38362</identificador>
+              <titulo>SANTIAGO DE COMPOSTELA</titulo>
+              <url_pdf szBytes="198879" szKBytes="194" pagina_inicial="62028" pagina_final="62028">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38362.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38362</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38362</url_xml>
+            </item>
+          </departamento>
+          <departamento codigo="9598" nombre="TRIBUNALES DE INSTANCIA. SECCIÓN CIVIL/JUZGADOS DE PRIMERA INSTANCIA">
+            <item>
+              <identificador>BOE-B-2026-38363</identificador>
+              <titulo>PALMA DE MALLORCA</titulo>
+              <url_pdf szBytes="199010" szKBytes="194" pagina_inicial="62029" pagina_final="62029">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38363.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38363</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38363</url_xml>
+            </item>
+          </departamento>
+          <departamento codigo="9546" nombre="JUZGADOS DE PRIMERA INSTANCIA E INSTRUCCIÓN">
+            <item>
+              <identificador>BOE-B-2026-38364</identificador>
+              <titulo>ROQUETAS DE MAR</titulo>
+              <url_pdf szBytes="198941" szKBytes="194" pagina_inicial="62030" pagina_final="62030">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38364.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38364</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38364</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38365</identificador>
+              <titulo>TOLEDO</titulo>
+              <url_pdf szBytes="198392" szKBytes="194" pagina_inicial="62031" pagina_final="62031">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38365.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38365</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38365</url_xml>
+            </item>
+          </departamento>
+          <departamento codigo="9571" nombre="SERVICIOS COMUNES PROCESALES">
+            <item>
+              <identificador>BOE-B-2026-38366</identificador>
+              <titulo>ALICANTE/ALACANT</titulo>
+              <url_pdf szBytes="198121" szKBytes="193" pagina_inicial="62032" pagina_final="62032">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38366.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38366</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38366</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38367</identificador>
+              <titulo>MURCIA</titulo>
+              <url_pdf szBytes="198016" szKBytes="193" pagina_inicial="62033" pagina_final="62033">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38367.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38367</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38367</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38368</identificador>
+              <titulo>MURCIA</titulo>
+              <url_pdf szBytes="198003" szKBytes="193" pagina_inicial="62034" pagina_final="62034">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38368.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38368</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38368</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38369</identificador>
+              <titulo>MURCIA</titulo>
+              <url_pdf szBytes="198101" szKBytes="193" pagina_inicial="62035" pagina_final="62035">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38369.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38369</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38369</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38370</identificador>
+              <titulo>MURCIA</titulo>
+              <url_pdf szBytes="198075" szKBytes="193" pagina_inicial="62036" pagina_final="62036">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38370.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38370</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38370</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38371</identificador>
+              <titulo>MURCIA</titulo>
+              <url_pdf szBytes="198106" szKBytes="193" pagina_inicial="62037" pagina_final="62037">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38371.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38371</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38371</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38372</identificador>
+              <titulo>MURCIA</titulo>
+              <url_pdf szBytes="198077" szKBytes="193" pagina_inicial="62038" pagina_final="62038">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38372.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38372</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38372</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38373</identificador>
+              <titulo>MURCIA</titulo>
+              <url_pdf szBytes="198013" szKBytes="193" pagina_inicial="62039" pagina_final="62039">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38373.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38373</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38373</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38374</identificador>
+              <titulo>MURCIA</titulo>
+              <url_pdf szBytes="198083" szKBytes="193" pagina_inicial="62040" pagina_final="62040">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38374.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38374</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38374</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38375</identificador>
+              <titulo>MURCIA</titulo>
+              <url_pdf szBytes="198097" szKBytes="193" pagina_inicial="62041" pagina_final="62041">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38375.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38375</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38375</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38376</identificador>
+              <titulo>MURCIA</titulo>
+              <url_pdf szBytes="198079" szKBytes="193" pagina_inicial="62042" pagina_final="62042">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38376.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38376</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38376</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38377</identificador>
+              <titulo>VALENCIA</titulo>
+              <url_pdf szBytes="198217" szKBytes="194" pagina_inicial="62043" pagina_final="62043">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38377.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38377</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38377</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38378</identificador>
+              <titulo>VALENCIA</titulo>
+              <url_pdf szBytes="198066" szKBytes="193" pagina_inicial="62044" pagina_final="62044">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38378.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38378</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38378</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38379</identificador>
+              <titulo>VALENCIA</titulo>
+              <url_pdf szBytes="198214" szKBytes="194" pagina_inicial="62045" pagina_final="62045">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38379.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38379</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38379</url_xml>
+            </item>
+          </departamento>
+        </seccion>
+        <seccion codigo="5B" nombre="V. Anuncios. - B. Otros anuncios oficiales">
+          <departamento codigo="5140" nombre="MINISTERIO DE HACIENDA">
+            <item>
+              <identificador>BOE-B-2026-38380</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198750" szKBytes="194" pagina_inicial="62046" pagina_final="62046">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38380.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38380</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38380</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38381</identificador>
+              <titulo>U.R. SUBASTAS MURCIA</titulo>
+              <url_pdf szBytes="198796" szKBytes="194" pagina_inicial="62047" pagina_final="62047">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38381.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38381</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38381</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38382</identificador>
+              <titulo>U.R. SUBASTAS CANTABRIA</titulo>
+              <url_pdf szBytes="198784" szKBytes="194" pagina_inicial="62048" pagina_final="62048">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38382.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38382</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38382</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38383</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199026" szKBytes="194" pagina_inicial="62049" pagina_final="62049">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38383.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38383</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38383</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38384</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199028" szKBytes="194" pagina_inicial="62050" pagina_final="62050">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38384.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38384</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38384</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38385</identificador>
+              <titulo>E.R. SUBASTAS.SEDE BADAJOZ</titulo>
+              <url_pdf szBytes="198990" szKBytes="194" pagina_inicial="62051" pagina_final="62051">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38385.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38385</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38385</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38386</identificador>
+              <titulo>E.R. SUBASTAS.SEDE BADAJOZ</titulo>
+              <url_pdf szBytes="198930" szKBytes="194" pagina_inicial="62052" pagina_final="62052">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38386.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38386</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38386</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38387</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199099" szKBytes="194" pagina_inicial="62053" pagina_final="62053">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38387.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38387</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38387</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38388</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199028" szKBytes="194" pagina_inicial="62054" pagina_final="62054">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38388.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38388</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38388</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38389</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199027" szKBytes="194" pagina_inicial="62055" pagina_final="62055">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38389.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38389</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38389</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38390</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199098" szKBytes="194" pagina_inicial="62056" pagina_final="62056">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38390.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38390</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38390</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38391</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199169" szKBytes="195" pagina_inicial="62057" pagina_final="62057">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38391.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38391</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38391</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38392</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199170" szKBytes="195" pagina_inicial="62058" pagina_final="62058">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38392.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38392</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38392</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38393</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199100" szKBytes="194" pagina_inicial="62059" pagina_final="62059">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38393.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38393</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38393</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38394</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198819" szKBytes="194" pagina_inicial="62060" pagina_final="62060">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38394.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38394</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38394</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38395</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199099" szKBytes="194" pagina_inicial="62061" pagina_final="62061">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38395.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38395</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38395</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38396</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 29</titulo>
+              <url_pdf szBytes="199089" szKBytes="194" pagina_inicial="62062" pagina_final="62062">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38396.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38396</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38396</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38397</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198820" szKBytes="194" pagina_inicial="62063" pagina_final="62063">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38397.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38397</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38397</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38398</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199029" szKBytes="194" pagina_inicial="62064" pagina_final="62064">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38398.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38398</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38398</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38399</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199031" szKBytes="194" pagina_inicial="62065" pagina_final="62065">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38399.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38399</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38399</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38400</identificador>
+              <titulo>U.R. SUBASTAS GALICIA</titulo>
+              <url_pdf szBytes="198833" szKBytes="194" pagina_inicial="62066" pagina_final="62066">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38400.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38400</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38400</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38401</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199099" szKBytes="194" pagina_inicial="62067" pagina_final="62067">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38401.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38401</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38401</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38402</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199099" szKBytes="194" pagina_inicial="62068" pagina_final="62068">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38402.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38402</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38402</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38403</identificador>
+              <titulo>U.R. SUBASTAS GALICIA</titulo>
+              <url_pdf szBytes="198833" szKBytes="194" pagina_inicial="62069" pagina_final="62069">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38403.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38403</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38403</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38404</identificador>
+              <titulo>U.R. SUBASTAS MURCIA</titulo>
+              <url_pdf szBytes="198798" szKBytes="194" pagina_inicial="62070" pagina_final="62070">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38404.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38404</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38404</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38405</identificador>
+              <titulo>U.R. SUBASTAS MURCIA</titulo>
+              <url_pdf szBytes="198727" szKBytes="194" pagina_inicial="62071" pagina_final="62071">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38405.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38405</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38405</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38406</identificador>
+              <titulo>U.R. SUBASTAS MURCIA</titulo>
+              <url_pdf szBytes="198728" szKBytes="194" pagina_inicial="62072" pagina_final="62072">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38406.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38406</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38406</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38407</identificador>
+              <titulo>U.R. SUBASTAS MURCIA</titulo>
+              <url_pdf szBytes="198796" szKBytes="194" pagina_inicial="62073" pagina_final="62073">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38407.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38407</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38407</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38408</identificador>
+              <titulo>U.R. SUBASTAS MURCIA</titulo>
+              <url_pdf szBytes="198797" szKBytes="194" pagina_inicial="62074" pagina_final="62074">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38408.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38408</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38408</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38409</identificador>
+              <titulo>U.R. SUBASTAS MURCIA</titulo>
+              <url_pdf szBytes="198799" szKBytes="194" pagina_inicial="62075" pagina_final="62075">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38409.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38409</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38409</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38410</identificador>
+              <titulo>U.R. SUBASTAS MURCIA</titulo>
+              <url_pdf szBytes="198798" szKBytes="194" pagina_inicial="62076" pagina_final="62076">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38410.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38410</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38410</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38411</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198823" szKBytes="194" pagina_inicial="62077" pagina_final="62077">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38411.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38411</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38411</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38412</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198819" szKBytes="194" pagina_inicial="62078" pagina_final="62078">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38412.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38412</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38412</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38413</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198886" szKBytes="194" pagina_inicial="62079" pagina_final="62079">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38413.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38413</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38413</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38414</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198747" szKBytes="194" pagina_inicial="62080" pagina_final="62080">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38414.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38414</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38414</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38415</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198747" szKBytes="194" pagina_inicial="62081" pagina_final="62081">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38415.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38415</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38415</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38416</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198814" szKBytes="194" pagina_inicial="62082" pagina_final="62082">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38416.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38416</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38416</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38417</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198886" szKBytes="194" pagina_inicial="62083" pagina_final="62083">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38417.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38417</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38417</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38418</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198815" szKBytes="194" pagina_inicial="62084" pagina_final="62084">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38418.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38418</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38418</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38419</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198818" szKBytes="194" pagina_inicial="62085" pagina_final="62085">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38419.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38419</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38419</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38420</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198816" szKBytes="194" pagina_inicial="62086" pagina_final="62086">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38420.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38420</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38420</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38421</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198886" szKBytes="194" pagina_inicial="62087" pagina_final="62087">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38421.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38421</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38421</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38422</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198885" szKBytes="194" pagina_inicial="62088" pagina_final="62088">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38422.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38422</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38422</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38423</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198816" szKBytes="194" pagina_inicial="62089" pagina_final="62089">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38423.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38423</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38423</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38424</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198749" szKBytes="194" pagina_inicial="62090" pagina_final="62090">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38424.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38424</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38424</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38425</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198746" szKBytes="194" pagina_inicial="62091" pagina_final="62091">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38425.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38425</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38425</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38426</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198747" szKBytes="194" pagina_inicial="62092" pagina_final="62092">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38426.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38426</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38426</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38427</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198820" szKBytes="194" pagina_inicial="62093" pagina_final="62093">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38427.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38427</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38427</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38428</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198749" szKBytes="194" pagina_inicial="62094" pagina_final="62094">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38428.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38428</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38428</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38429</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198748" szKBytes="194" pagina_inicial="62095" pagina_final="62095">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38429.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38429</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38429</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38430</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198750" szKBytes="194" pagina_inicial="62096" pagina_final="62096">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38430.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38430</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38430</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38431</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198887" szKBytes="194" pagina_inicial="62097" pagina_final="62097">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38431.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38431</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38431</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38432</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198819" szKBytes="194" pagina_inicial="62098" pagina_final="62098">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38432.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38432</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38432</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38433</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198749" szKBytes="194" pagina_inicial="62099" pagina_final="62099">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38433.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38433</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38433</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38434</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198751" szKBytes="194" pagina_inicial="62100" pagina_final="62100">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38434.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38434</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38434</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38435</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199099" szKBytes="194" pagina_inicial="62101" pagina_final="62101">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38435.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38435</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38435</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38436</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198820" szKBytes="194" pagina_inicial="62102" pagina_final="62102">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38436.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38436</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38436</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38437</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199100" szKBytes="194" pagina_inicial="62103" pagina_final="62103">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38437.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38437</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38437</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38438</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199100" szKBytes="194" pagina_inicial="62104" pagina_final="62104">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38438.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38438</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38438</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38439</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199101" szKBytes="194" pagina_inicial="62105" pagina_final="62105">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38439.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38439</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38439</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38440</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199100" szKBytes="194" pagina_inicial="62106" pagina_final="62106">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38440.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38440</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38440</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38441</identificador>
+              <titulo>U.R. SUBASTAS CATALUÑA</titulo>
+              <url_pdf szBytes="198892" szKBytes="194" pagina_inicial="62107" pagina_final="62107">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38441.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38441</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38441</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38442</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199100" szKBytes="194" pagina_inicial="62108" pagina_final="62108">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38442.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38442</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38442</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38443</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199101" szKBytes="194" pagina_inicial="62109" pagina_final="62109">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38443.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38443</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38443</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38444</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199100" szKBytes="194" pagina_inicial="62110" pagina_final="62110">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38444.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38444</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38444</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38445</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199028" szKBytes="194" pagina_inicial="62111" pagina_final="62111">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38445.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38445</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38445</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38446</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199029" szKBytes="194" pagina_inicial="62112" pagina_final="62112">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38446.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38446</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38446</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38447</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199098" szKBytes="194" pagina_inicial="62113" pagina_final="62113">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38447.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38447</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38447</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38448</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199030" szKBytes="194" pagina_inicial="62114" pagina_final="62114">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38448.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38448</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38448</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38449</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199029" szKBytes="194" pagina_inicial="62115" pagina_final="62115">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38449.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38449</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38449</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38450</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199029" szKBytes="194" pagina_inicial="62116" pagina_final="62116">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38450.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38450</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38450</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38451</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199102" szKBytes="194" pagina_inicial="62117" pagina_final="62117">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38451.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38451</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38451</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38452</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199101" szKBytes="194" pagina_inicial="62118" pagina_final="62118">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38452.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38452</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38452</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38453</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199102" szKBytes="194" pagina_inicial="62119" pagina_final="62119">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38453.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38453</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38453</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38454</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199099" szKBytes="194" pagina_inicial="62120" pagina_final="62120">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38454.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38454</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38454</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38455</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="199097" szKBytes="194" pagina_inicial="62121" pagina_final="62121">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38455.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38455</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38455</url_xml>
+            </item>
+          </departamento>
+          <departamento codigo="9573" nombre="MINISTERIO DE TRABAJO Y ECONOMÍA SOCIAL">
+            <item>
+              <identificador>BOE-B-2026-38456</identificador>
+              <titulo>Extracto de la Resolución de 19 de noviembre de 2026 de la Dirección General del Servicio Público de Empleo Estatal por la que se aprueba la convocatoria para la concesión de subvenciones destinadas a la financiación del programa de inserción laboral a través de obras y servicios de interés general y social, en colaboración con órganos de la Administración General del Estado, en el ámbito territorial de las ciudades de Ceuta y Melilla</titulo>
+              <url_pdf szBytes="207678" szKBytes="203" pagina_inicial="62122" pagina_final="62123">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38456.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38456</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38456</url_xml>
+            </item>
+          </departamento>
+          <departamento codigo="9593" nombre="MINISTERIO DE POLÍTICA TERRITORIAL Y MEMORIA DEMOCRÁTICA">
+            <item>
+              <identificador>BOE-B-2026-38457</identificador>
+              <titulo>Anuncio del Área de Industria y Energía de la Subdelegación del Gobierno en Valladolid, por el que se somete a información pública la solicitud de procedimiento simplificado de autorización administrativa previa y autorización administrativa de construcción de los módulos de almacenamiento por baterías de "BESS El Caballero", de 48,9 MW de potencia instalada, "BESS Sinfonía I", de 45,14 MW de potencia instalada y "BESS Adaja I", de 48,9 MW de potencia instalada, para su hibridación con las respectivas instalaciones solares fotovoltaicas El Caballero, Sinfonía I y Adaja I, y sus infraestructuras de evacuación, en la provincia de Valladolid.</titulo>
+              <url_pdf szBytes="229942" szKBytes="225" pagina_inicial="62124" pagina_final="62128">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38457.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38457</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38457</url_xml>
+            </item>
+          </departamento>
+          <departamento codigo="8010" nombre="COMUNIDAD AUTÓNOMA DE ANDALUCÍA">
+            <item>
+              <identificador>BOE-B-2026-38458</identificador>
+              <titulo>AGENCIA TRIBUTARIA DE ANDALUCÍA</titulo>
+              <url_pdf szBytes="198766" szKBytes="194" pagina_inicial="62129" pagina_final="62129">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38458.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38458</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38458</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38459</identificador>
+              <titulo>AGENCIA TRIBUTARIA DE ANDALUCÍA</titulo>
+              <url_pdf szBytes="198851" szKBytes="194" pagina_inicial="62130" pagina_final="62130">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38459.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38459</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38459</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38460</identificador>
+              <titulo>AGENCIA TRIBUTARIA DE ANDALUCÍA</titulo>
+              <url_pdf szBytes="198745" szKBytes="194" pagina_inicial="62131" pagina_final="62131">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38460.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38460</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38460</url_xml>
+            </item>
+          </departamento>
+          <departamento codigo="8170" nombre="COMUNIDAD FORAL DE NAVARRA">
+            <item>
+              <identificador>BOE-B-2026-38461</identificador>
+              <titulo>ORGANISMO AUTÓNOMO DE HACIENDA FORAL DE NAVARRA</titulo>
+              <url_pdf szBytes="199247" szKBytes="195" pagina_inicial="62132" pagina_final="62132">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38461.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38461</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38461</url_xml>
+            </item>
+          </departamento>
+          <departamento codigo="9525" nombre="ADMINISTRACIÓN LOCAL">
+            <item>
+              <identificador>BOE-B-2026-38462</identificador>
+              <titulo>AYUNTAMIENTO DE HUMANES</titulo>
+              <url_pdf szBytes="198543" szKBytes="194" pagina_inicial="62133" pagina_final="62133">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38462.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38462</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38462</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38463</identificador>
+              <titulo>DIPUTACIÓN PROVINCIAL DE SEVILLA ( OPAEF)</titulo>
+              <url_pdf szBytes="199122" szKBytes="194" pagina_inicial="62134" pagina_final="62134">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38463.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38463</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38463</url_xml>
+            </item>
+          </departamento>
+        </seccion>
+        <seccion codigo="5C" nombre="V. Anuncios. - C. Anuncios particulares">
+          <departamento codigo="9202" nombre="ANUNCIOS PARTICULARES">
+            <item>
+              <identificador>BOE-B-2026-38464</identificador>
+              <titulo>NOTARÍA DE FRANCISCO JAVIER MONEDERO SAN MARTÍN</titulo>
+              <url_pdf szBytes="198268" szKBytes="194" pagina_inicial="62135" pagina_final="62135">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38464.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38464</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38464</url_xml>
+            </item>
+            <item>
+              <identificador>BOE-B-2026-38465</identificador>
+              <titulo>NOTARÍA DE FRANCISCO JAVIER MONEDERO SAN MARTÍN</titulo>
+              <url_pdf szBytes="198197" szKBytes="194" pagina_inicial="62136" pagina_final="62136">https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38465.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38465</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38465</url_xml>
+            </item>
+          </departamento>
+        </seccion>
+      </diario>
+    </sumario>
+  </data>
+</response>
