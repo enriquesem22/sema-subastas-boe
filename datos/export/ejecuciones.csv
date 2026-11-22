@@ -1,3 +1,4 @@
 ﻿id_ejecucion;inicio;fin;version;parametros;n_leidos;n_nuevos;n_cambios;avisos;errores;estado
 1;2026-11-21T15:01:22+00:00;2026-11-21T15:05:55+00:00;1.0.0;"{""desde"": ""None"", ""hasta"": ""None"", ""forzar_justicia"": true}";6723;583;0;[];[];ok
 2;2026-11-22T15:40:51+00:00;2026-11-22T15:41:59+00:00;1.0.0;"{""desde"": ""None"", ""hasta"": ""None"", ""forzar_justicia"": false}";285;0;0;[];[];ok
+3;2026-11-22T20:28:46+00:00;2026-11-22T20:29:48+00:00;1.0.0;"{""desde"": ""None"", ""hasta"": ""None"", ""forzar_justicia"": false}";285;0;0;[];[];ok
