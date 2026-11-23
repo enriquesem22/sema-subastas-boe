@@ -1,6 +1,6 @@
 # Columnas del CSV de Justicia (detectadas automáticamente)
 
-Consulta: 2026-11-21T15:05:55+00:00
+Consulta: 2026-11-23T19:29:27+00:00
 
 Filas totales: 81645
 
