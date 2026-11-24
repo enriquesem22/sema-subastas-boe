@@ -1583,10 +1583,16 @@ def exportar(con, dir_datos: Path):
     dest = dir_datos / "panel"
     dest.mkdir(parents=True, exist_ok=True)
     generado = ahora()
+    geo = Geo()
+    nombre_prov = lambda cods: ", ".join(geo.provincias.get(c, c) for c in (cods or "").split(",") if c) or None  # noqa: E731
     for nombre, sql in PANEL.items():
         cur = con.execute(sql)
         cols = [d[0] for d in cur.description]
         rows = [list(r) for r in cur.fetchall()]
+        if nombre == "df_expedientes":  # nombres de provincia para el panel
+            ib, isd = cols.index("provincias_bien"), cols.index("sede_provincia")
+            cols += ["provincias_bien_nombres", "sede_provincia_nombre"]
+            rows = [r + [nombre_prov(r[ib]), nombre_prov(r[isd])] for r in rows]
         with open(dest_csv / f"{nombre}.csv", "w", newline="", encoding="utf-8-sig") as f:
             w = csv.writer(f, delimiter=";")
             w.writerow(cols)
