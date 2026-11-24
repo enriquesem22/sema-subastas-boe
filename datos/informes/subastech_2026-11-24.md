@@ -3,8 +3,8 @@
 Datos de Subastech (servicio de terceros que recoge las subastas publicadas por la [Agencia Estatal Boletín Oficial del Estado](https://www.boe.es)), obtenidos con el conector de Claude. Nivel de verificación C: contrástalos en el Portal de Subastas antes de usarlos. «Remate» es el precio de cierre que publica Subastech (`finalBid`); «% sobre valor» es el remate dividido entre el valor de subasta.
 
 ## Esta carga
-- Respuestas nuevas del conector: 26 (ya cargadas antes: 18)
-- Lotes leídos: 506 · nuevos: 506 · actualizados: 0 · cambios registrados: 0
+- Respuestas nuevas del conector: 0 (ya cargadas antes: 44)
+- Lotes leídos: 0 · nuevos: 0 · actualizados: 0 · cambios registrados: 0
 - Cierres incorporados en esta carga: 0
 
 ## La base (acumulado)

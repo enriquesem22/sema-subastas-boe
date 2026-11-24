@@ -1476,6 +1476,32 @@ def exportar_subastech(con, dir_datos: Path):
             w = csv.writer(f, delimiter=";")
             w.writerow([d[0] for d in cur.description])
             w.writerows([tuple(r) for r in cur.fetchall()])
+    exportar_historico_json(con, dest / "subastech_historico.json")
+
+
+def exportar_historico_json(con, ruta: Path):
+    """Un lote por fila (fichas del mismo lote agrupadas), para el panel del artefacto.
+    En los lotes de varias fincas, la superficie es la suma de sus fincas y el valor por m² se recalcula con ella."""
+    filas = con.execute("SELECT * FROM subastech_lotes ORDER BY COALESCE(fecha_cierre, fecha_fin) DESC, id_subastech").fetchall()
+    grupos: dict[tuple, list] = {}
+    for r in filas:
+        clave = (r["id_subasta"] or r["id_subastech"], r["n_lote"], r["valor_subasta"], r["precio_cierre"], r["estado"])
+        grupos.setdefault(clave, []).append(r)
+    salida = []
+    for g in grupos.values():
+        r, n = g[0], len(g)
+        sup = r["superficie_m2"] if n == 1 else (
+            round(sum(x["superficie_m2"] for x in g), 2) if all(x["superficie_m2"] for x in g) else None)
+        vm2 = r["valor_m2"] if n == 1 else (round(r["valor_subasta"] / sup, 2) if sup and r["valor_subasta"] else None)
+        salida.append({
+            "id": r["id_subastech"], "ref": r["id_subasta"], "n_lote": r["n_lote"], "fichas": n, "origen": r["origen"],
+            "tipo": r["tipo_bien"], "municipio": r["municipio"], "cp": r["codigo_postal"], "direccion": r["direccion"],
+            "estado": r["estado"], "fase": r["fase"], "fecha_fin": r["fecha_fin"], "fecha_cierre": r["fecha_cierre"],
+            "valor_subasta": r["valor_subasta"], "tasacion": r["tasacion"], "remate": r["precio_cierre"],
+            "superficie_m2": sup, "valor_m2": vm2, "lat": r["lat"], "lon": r["lon"], "url": r["url_ficha"],
+            "visto_desde": r["primera_vez"], "nivel_verificacion": r["nivel_verificacion"],
+        })
+    ruta.write_text("[\n" + ",\n".join(json.dumps(x, ensure_ascii=False) for x in salida) + "\n]\n", encoding="utf-8")
 
 
 def ejecutar_subastech(transcripciones: list[Path], recargar: bool, dir_datos: Path) -> dict:

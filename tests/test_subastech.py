@@ -158,6 +158,9 @@ class SubastechTest(unittest.TestCase):
         informe = (self.dir / "datos" / "ultimo_informe_subastech.md").read_text(encoding="utf-8")
         self.assertIn("6 fichas de Subastech → 2 lotes", informe)
         self.assertIn("(5 fincas)", informe)
+        hist = json.loads((self.dir / "datos" / "export" / "subastech_historico.json").read_text(encoding="utf-8"))
+        self.assertEqual(sorted(h["fichas"] for h in hist), [1, 5])
+        self.assertEqual(next(h for h in hist if h["fichas"] == 5)["superficie_m2"], 500.0)
         con.close()
 
     def test_activo_que_desaparece_del_listado(self):
