@@ -97,7 +97,7 @@ class SubastechTest(unittest.TestCase):
         v = con.execute("SELECT pct_sobre_valor FROM v_cierres WHERE id_subastech='AAAAAAAAA1'").fetchone()
         self.assertEqual(v["pct_sobre_valor"], 80.0)
         z = con.execute("SELECT * FROM v_zonas WHERE municipio='Utrera'").fetchone()
-        self.assertEqual((z["lotes"], z["adjudicadas"]), (1, 1))
+        self.assertEqual((z["subastas"], z["fichas"], z["adjudicadas"]), (1, 1, 1))
         # Cada respuesta queda en bruto con su hash y se puede reconstruir la base desde los brutos.
         brutos = list((self.dir / "datos" / "brutos" / "subastech").rglob("*.json"))
         self.assertEqual(len(brutos), 2)
@@ -139,6 +139,26 @@ class SubastechTest(unittest.TestCase):
         os.rename(self.dir / "datos" / "brutos" / "subastech", otra / "brutos" / "subastech")
         res = sema.ejecutar_subastech([], True, otra)
         self.assertEqual((res["respuestas"], res["lotes_nuevos"]), (1, 1))
+
+    def test_fincas_de_un_mismo_lote_cuentan_como_uno(self):
+        a = {"provincia": ["sevilla"], "estado": "adjudicadas", "por_pagina": 20, "pagina": 1}
+        repetida = dict(ref="SUB-AT-2026-9", status="Adjudicada", phase="historica", valueAuction=706280.41,
+                        finalBid=575628.04, municipio="La Roda de Andalucía")
+        t = self.transcripcion("s.jsonl", [
+            ("g1", "buscar_subastas", a, {"items": [item(id=f"ROD{i:07d}", **repetida) for i in range(5)]
+                                          + [item(id="OTRO000001", ref="SUB-JA-2026-7", status="Adjudicada",
+                                                  phase="historica", finalBid=50000.0)], "total": 6},
+             "2026-11-24T10:00:00.000Z")])
+        sema.ejecutar_subastech([t], False, self.dir / "datos")
+        con = self.db()
+        unidades = sema.agrupar_lotes(con.execute("SELECT * FROM subastech_lotes").fetchall())
+        self.assertEqual(sorted(n for _, n in unidades), [1, 5])
+        f = con.execute("SELECT MAX(fichas_mismo_lote) FROM v_cierres WHERE id_subasta='SUB-AT-2026-9'").fetchone()[0]
+        self.assertEqual(f, 5)
+        informe = (self.dir / "datos" / "ultimo_informe_subastech.md").read_text(encoding="utf-8")
+        self.assertIn("6 fichas de Subastech → 2 lotes", informe)
+        self.assertIn("(5 fincas)", informe)
+        con.close()
 
     def test_activo_que_desaparece_del_listado(self):
         a = {"provincia": ["sevilla"], "estado": "activas", "por_pagina": 20, "pagina": 1}

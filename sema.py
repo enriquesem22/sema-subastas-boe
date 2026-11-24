@@ -977,7 +977,8 @@ CREATE TABLE IF NOT EXISTS cambios_historicos (
   id INTEGER PRIMARY KEY AUTOINCREMENT, tabla TEXT, clave TEXT, campo TEXT,
   valor_anterior TEXT, valor_nuevo TEXT, detectado_en TEXT, id_ejecucion INTEGER, fuente TEXT
 );
-CREATE VIEW IF NOT EXISTS v_cierres AS
+DROP VIEW IF EXISTS v_cierres;
+CREATE VIEW v_cierres AS
 SELECT id_subastech, id_subasta, n_lote, origen, tipo_bien, municipio, codigo_postal, direccion,
        fecha_cierre, estado, resultado, valor_subasta, tasacion, precio_cierre, superficie_m2,
        CASE WHEN precio_cierre > 0 AND valor_subasta > 0 THEN ROUND(100.0 * precio_cierre / valor_subasta, 1) END
@@ -986,11 +987,15 @@ SELECT id_subastech, id_subasta, n_lote, origen, tipo_bien, municipio, codigo_po
          AS pct_sobre_tasacion,
        CASE WHEN precio_cierre > 0 AND superficie_m2 > 0 THEN ROUND(precio_cierre / superficie_m2, 0) END
          AS remate_m2,
+       COUNT(*) OVER (PARTITION BY COALESCE(id_subasta, id_subastech), COALESCE(n_lote, 0), valor_subasta,
+                      precio_cierre, estado) AS fichas_mismo_lote,
        url_ficha, nivel_verificacion
 FROM subastech_lotes WHERE fase = 'historica' OR estado IN ('Adjudicada', 'Desierta');
-CREATE VIEW IF NOT EXISTS v_zonas AS
+DROP VIEW IF EXISTS v_zonas;
+CREATE VIEW v_zonas AS
 SELECT COALESCE(municipio, '(sin municipio)') AS municipio,
-       COUNT(*) AS lotes,
+       COUNT(DISTINCT id_subasta) AS subastas,
+       COUNT(*) AS fichas,
        SUM(fase = 'activa') AS activas,
        SUM(estado = 'Adjudicada') AS adjudicadas,
        SUM(estado = 'Desierta') AS desiertas,
@@ -1296,6 +1301,16 @@ def _pct(v: float | None) -> str:
     return "—" if v is None else f"{v:.0f} %"
 
 
+def agrupar_lotes(filas) -> list[tuple]:
+    """Agrupa las fichas que son el mismo lote (misma referencia, n.º de lote, valor, remate y estado).
+    Devuelve (ficha representativa, número de fichas) por lote, en el orden de entrada."""
+    grupos: dict[tuple, list] = {}
+    for r in filas:
+        clave = (r["id_subasta"] or r["id_subastech"], r["n_lote"], r["valor_subasta"], r["precio_cierre"], r["estado"])
+        grupos.setdefault(clave, []).append(r)
+    return [(g[0], len(g)) for g in grupos.values()]
+
+
 def informe_subastech(con, id_ej: int, stats: dict, avisos: list[str], dir_datos: Path) -> Path:
     hoy = dt.date.today().isoformat()
     q = lambda s, *a: con.execute(s, a).fetchall()  # noqa: E731
@@ -1342,24 +1357,33 @@ def informe_subastech(con, id_ej: int, stats: dict, avisos: list[str], dir_datos
             n = f"{n_act - len(no_listados)}" + (f" (+{len(no_listados)} que ya no salen)" if no_listados else "")
         L.append(f"| {estado} | {t[0]['total'] if t else '—'}"
                  f"{' (' + t[0]['momento_consulta'][:10] + ')' if t else ''} | {n} |")
+    # Subastech a veces publica como fichas separadas las fincas de un mismo lote, repitiendo su valor y su
+    # remate (p. ej. una subasta de la AEAT con decenas de parcelas). Para contar y para los precios se agrupan
+    # en un solo lote: misma referencia, mismo número de lote, mismo valor, mismo remate y mismo estado.
+    unidades = agrupar_lotes(lotes)
     zonas: dict[str, dict] = {}
-    for r in lotes:
-        z = zonas.setdefault(r["municipio"] or "(sin municipio)", {"n": 0, "act": 0, "adj": 0, "des": 0, "rat": []})
+    for r, n_fichas in unidades:
+        z = zonas.setdefault(r["municipio"] or "(sin municipio)",
+                             {"subastas": set(), "n": 0, "act": 0, "adj": 0, "des": 0, "rat": []})
+        z["subastas"].add(r["id_subasta"] or r["id_subastech"])
         z["n"] += 1
         z["act"] += r["fase"] == "activa"
         z["adj"] += r["estado"] == "Adjudicada"
         z["des"] += r["estado"] == "Desierta"
         if r["estado"] == "Adjudicada":
             z["rat"].append(ratio(r))
+    agrupadas = sum(1 for _, n in unidades if n > 1)
     L += ["", "## Zonas con más subastas (municipios)",
-          "| Municipio | Lotes | Activas | Adjudicadas | Desiertas | % adjudicadas | Remate mediano / valor |",
-          "|---|---|---|---|---|---|---|"]
-    for mun, z in sorted(zonas.items(), key=lambda kv: (-kv[1]["n"], kv[0]))[:25]:
+          f"_Lotes = fichas agrupadas por lote ({len(lotes)} fichas de Subastech → {len(unidades)} lotes; "
+          f"{agrupadas} lotes venían repartidos en varias fichas con el mismo valor y remate)._",
+          "| Municipio | Subastas | Lotes | Activos | Adjudicados | Desiertos | % adjudicados | Remate mediano / valor |",
+          "|---|---|---|---|---|---|---|---|"]
+    for mun, z in sorted(zonas.items(), key=lambda kv: (-len(kv[1]["subastas"]), -kv[1]["n"], kv[0]))[:25]:
         cerr = z["adj"] + z["des"]
-        L.append(f"| {mun} | {z['n']} | {z['act']} | {z['adj']} | {z['des']} | "
+        L.append(f"| {mun} | {len(z['subastas'])} | {z['n']} | {z['act']} | {z['adj']} | {z['des']} | "
                  f"{_pct(100.0 * z['adj'] / cerr) if cerr else '—'} | {_pct(_mediana(z['rat']))} |")
     tipos: dict[str, dict] = {}
-    for r in lotes:
+    for r, _n in unidades:
         if r["estado"] not in ("Adjudicada", "Desierta"):
             continue
         t = tipos.setdefault(r["tipo_bien"] or "(sin tipo)", {"adj": 0, "des": 0, "rem": [], "rat": [], "m2": []})
@@ -1370,24 +1394,42 @@ def informe_subastech(con, id_ej: int, stats: dict, avisos: list[str], dir_datos
         if r["precio_cierre"] and not raro(r):
             t["rem"].append(r["precio_cierre"])
             t["rat"].append(ratio(r))
-            if r["superficie_m2"]:
+            if r["superficie_m2"] and _n == 1:
                 t["m2"].append(r["precio_cierre"] / r["superficie_m2"])
-    L += ["", "## Precio de cierre por tipo de bien",
-          "| Tipo de bien | Adjudicadas | Desiertas | Remate mediano | Remate mediano / valor | €/m² mediano |",
-          "|---|---|---|---|---|---|"]
+    L += ["", "## Precio de cierre por tipo de bien (lotes)",
+          "| Tipo de bien | Adjudicados | Desiertos | % adjudicados | Remate mediano | Remate mediano / valor | €/m² mediano |",
+          "|---|---|---|---|---|---|---|"]
     for tipo, t in sorted(tipos.items(), key=lambda kv: -(kv[1]["adj"] + kv[1]["des"])):
-        L.append(f"| {tipo} | {t['adj']} | {t['des']} | {_eur(_mediana(t['rem']))} | {_pct(_mediana(t['rat']))} | "
+        cerr = t["adj"] + t["des"]
+        L.append(f"| {tipo} | {t['adj']} | {t['des']} | {_pct(100.0 * t['adj'] / cerr) if cerr else '—'} | "
+                 f"{_eur(_mediana(t['rem']))} | {_pct(_mediana(t['rat']))} | "
                  f"{_eur(_mediana(t['m2'])).replace(' €', ' €/m²') if t['m2'] else '—'} |")
-    recientes = q("SELECT * FROM subastech_lotes WHERE estado IN ('Adjudicada','Desierta') "
-                  "ORDER BY COALESCE(fecha_cierre, fecha_fin) DESC LIMIT 30")
+    meses: dict[str, dict] = {}
+    for r, _n in unidades:
+        if r["estado"] not in ("Adjudicada", "Desierta"):
+            continue
+        mes = (r["fecha_cierre"] or r["fecha_fin"] or "")[:7] or "(sin fecha)"
+        m = meses.setdefault(mes, {"adj": 0, "des": 0, "rat": []})
+        m["adj" if r["estado"] == "Adjudicada" else "des"] += 1
+        if r["estado"] == "Adjudicada":
+            m["rat"].append(ratio(r))
+    L += ["", "## Evolución por mes de cierre (lotes)",
+          "| Mes | Adjudicados | Desiertos | % adjudicados | Remate mediano / valor |", "|---|---|---|---|---|"]
+    for mes, m in sorted(meses.items(), reverse=True)[:18]:
+        cerr = m["adj"] + m["des"]
+        L.append(f"| {mes} | {m['adj']} | {m['des']} | {_pct(100.0 * m['adj'] / cerr) if cerr else '—'} | "
+                 f"{_pct(_mediana(m['rat']))} |")
+    recientes = sorted([u for u in unidades if u[0]["estado"] in ("Adjudicada", "Desierta")],
+                       key=lambda u: u[0]["fecha_cierre"] or u[0]["fecha_fin"] or "", reverse=True)[:30]
     L += ["", "## Últimos cierres",
           "| Cierre | Municipio | Bien | Valor de subasta | Remate | % sobre valor | Referencia |",
           "|---|---|---|---|---|---|---|"]
-    for r in recientes:
+    for r, n_fichas in recientes:
         ficha = f"[{r['id_subasta'] or r['id_subastech']}]({r['url_ficha']})" if r["url_ficha"] else (r["id_subasta"] or "")
         rem = _eur(r["precio_cierre"]) if r["estado"] == "Adjudicada" else "Desierta"
         L.append(f"| {(r['fecha_cierre'] or r['fecha_fin'] or '')[:10]} | {r['municipio'] or ''} | {r['tipo_bien'] or ''}"
-                 f"{' (lote ' + str(r['n_lote']) + ')' if r['n_lote'] else ''} | {_eur(r['valor_subasta'])} | {rem} | "
+                 f"{' (lote ' + str(r['n_lote']) + ')' if r['n_lote'] else ''}"
+                 f"{' (' + str(n_fichas) + ' fincas)' if n_fichas > 1 else ''} | {_eur(r['valor_subasta'])} | {rem} | "
                  f"{_pct(ratio(r))}{' ⚠' if raro(r) else ''} | {ficha} |")
     ids_no_listados = {r["id_subastech"] for r in no_listados}
     pendientes = [r for r in q("SELECT id_subastech, id_subasta, municipio, fecha_fin FROM subastech_lotes "
@@ -1426,7 +1468,7 @@ def exportar_subastech(con, dir_datos: Path):
     dest.mkdir(parents=True, exist_ok=True)
     for nombre, sql in (("subastech_lotes", "SELECT * FROM subastech_lotes ORDER BY id_subastech"),
                         ("subastech_cierres", "SELECT * FROM v_cierres ORDER BY fecha_cierre DESC"),
-                        ("subastech_zonas", "SELECT * FROM v_zonas ORDER BY lotes DESC, municipio"),
+                        ("subastech_zonas", "SELECT * FROM v_zonas ORDER BY subastas DESC, fichas DESC, municipio"),
                         ("subastech_cambios", "SELECT * FROM cambios_historicos ORDER BY id"),
                         ("subastech_respuestas", "SELECT * FROM subastech_respuestas ORDER BY id")):
         cur = con.execute(sql)

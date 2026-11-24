@@ -3,65 +3,83 @@
 Datos de Subastech (servicio de terceros que recoge las subastas publicadas por la [Agencia Estatal Boletín Oficial del Estado](https://www.boe.es)), obtenidos con el conector de Claude. Nivel de verificación C: contrástalos en el Portal de Subastas antes de usarlos. «Remate» es el precio de cierre que publica Subastech (`finalBid`); «% sobre valor» es el remate dividido entre el valor de subasta.
 
 ## Esta carga
-- Respuestas nuevas del conector: 0 (ya cargadas antes: 18)
-- Lotes leídos: 0 · nuevos: 0 · actualizados: 0 · cambios registrados: 0
+- Respuestas nuevas del conector: 26 (ya cargadas antes: 18)
+- Lotes leídos: 506 · nuevos: 506 · actualizados: 0 · cambios registrados: 0
 - Cierres incorporados en esta carga: 0
 
 ## La base (acumulado)
 | Estado | Lotes |
 |---|---|
+| Adjudicada | 408 |
+| Desierta | 138 |
 | Abierta | 40 |
-| Adjudicada | 20 |
-| Desierta | 20 |
 | Próxima | 5 |
 
 ## Cobertura del histórico
 | Consulta | Total que declara Subastech | Cargados en la base |
 |---|---|---|
 | activas | 42 (2026-11-24) | 42 (+3 que ya no salen) |
-| adjudicadas | 408 (2026-11-24) | 20 |
-| desiertas | 138 (2026-11-24) | 20 |
+| adjudicadas | 408 (2026-11-24) | 408 |
+| desiertas | 138 (2026-11-24) | 138 |
 
 ## Zonas con más subastas (municipios)
-| Municipio | Lotes | Activas | Adjudicadas | Desiertas | % adjudicadas | Remate mediano / valor |
-|---|---|---|---|---|---|---|
-| Sevilla | 21 | 6 | 11 | 4 | 73 % | 52 % |
-| Mairena del Alcor | 7 | 4 | 1 | 2 | 33 % | 112 % |
-| Marchena | 6 | 5 | 1 | 0 | 100 % | 34 % |
-| Carmona | 5 | 1 | 2 | 2 | 50 % | 61 % |
-| San Juan de Aznalfarache | 5 | 4 | 1 | 0 | 100 % | 90 % |
-| Camas | 3 | 0 | 2 | 1 | 67 % | 81 % |
-| Espartinas | 3 | 1 | 0 | 2 | 0 % | — |
-| Gelves | 3 | 2 | 0 | 1 | 0 % | — |
-| Morón de la Frontera | 3 | 3 | 0 | 0 | — | — |
-| Utrera | 3 | 1 | 0 | 2 | 0 % | — |
-| Alcalá de Guadaíra | 2 | 2 | 0 | 0 | — | — |
-| Alcalá del Río | 2 | 2 | 0 | 0 | — | — |
-| Bormujos | 2 | 2 | 0 | 0 | — | — |
-| Dos Hermanas | 2 | 2 | 0 | 0 | — | — |
-| El Ronquillo | 2 | 2 | 0 | 0 | — | — |
-| Lebrija | 2 | 2 | 0 | 0 | — | — |
-| Pilas | 2 | 2 | 0 | 0 | — | — |
-| Almadén de la Plata | 1 | 0 | 1 | 0 | 100 % | 18 % |
-| Almensilla | 1 | 0 | 0 | 1 | 0 % | — |
-| Bollullos de la Mitación | 1 | 1 | 0 | 0 | — | — |
-| Castilblanco de los Arroyos | 1 | 0 | 0 | 1 | 0 % | — |
-| El Coronil | 1 | 0 | 0 | 1 | 0 % | — |
-| El Cuervo de Sevilla | 1 | 0 | 0 | 1 | 0 % | — |
-| El Real de la Jara | 1 | 1 | 0 | 0 | — | — |
-| El Viso del Alcor | 1 | 1 | 0 | 0 | — | — |
+_Lotes = fichas agrupadas por lote (591 fichas de Subastech → 517 lotes; 5 lotes venían repartidos en varias fichas con el mismo valor y remate)._
+| Municipio | Subastas | Lotes | Activos | Adjudicados | Desiertos | % adjudicados | Remate mediano / valor |
+|---|---|---|---|---|---|---|---|
+| Sevilla | 131 | 146 | 6 | 110 | 30 | 79 % | 77 % |
+| Burguillos | 19 | 21 | 0 | 19 | 2 | 90 % | 23 % |
+| Utrera | 15 | 41 | 1 | 7 | 33 | 18 % | 65 % |
+| Alcalá de Guadaíra | 14 | 14 | 2 | 9 | 3 | 75 % | 56 % |
+| Dos Hermanas | 13 | 23 | 2 | 15 | 6 | 71 % | 72 % |
+| San Juan de Aznalfarache | 13 | 13 | 4 | 9 | 0 | 100 % | 74 % |
+| Camas | 12 | 12 | 0 | 9 | 3 | 75 % | 59 % |
+| Bormujos | 10 | 11 | 2 | 9 | 0 | 100 % | 80 % |
+| Lebrija | 10 | 11 | 2 | 7 | 2 | 78 % | 60 % |
+| Carmona | 9 | 10 | 1 | 7 | 2 | 78 % | 56 % |
+| Coria del Río | 9 | 9 | 0 | 9 | 0 | 100 % | 31 % |
+| Morón de la Frontera | 9 | 9 | 3 | 3 | 3 | 50 % | 52 % |
+| Tomares | 8 | 8 | 1 | 7 | 0 | 100 % | 74 % |
+| Mairena del Aljarafe | 7 | 9 | 0 | 7 | 2 | 78 % | 83 % |
+| Gelves | 7 | 8 | 2 | 4 | 2 | 67 % | 84 % |
+| Pilas | 6 | 19 | 2 | 6 | 11 | 35 % | 58 % |
+| Sanlúcar la Mayor | 6 | 7 | 0 | 3 | 4 | 43 % | 60 % |
+| La Algaba | 6 | 6 | 0 | 4 | 2 | 67 % | 61 % |
+| La Rinconada | 6 | 6 | 0 | 6 | 0 | 100 % | 63 % |
+| Lora del Río | 5 | 12 | 0 | 10 | 2 | 83 % | 74 % |
+| Marchena | 5 | 10 | 5 | 3 | 2 | 60 % | 90 % |
+| Mairena del Alcor | 5 | 8 | 4 | 2 | 2 | 50 % | 94 % |
+| Alcalá del Río | 5 | 5 | 2 | 2 | 1 | 67 % | 122 % |
+| El Ronquillo | 4 | 5 | 2 | 3 | 0 | 100 % | 238 % |
+| El Cuervo de Sevilla | 4 | 4 | 0 | 3 | 1 | 75 % | 90 % |
 
-## Precio de cierre por tipo de bien
-| Tipo de bien | Adjudicadas | Desiertas | Remate mediano | Remate mediano / valor | €/m² mediano |
-|---|---|---|---|---|---|
-| Vivienda | 9 | 15 | 99.552 € | 68 % | 952 €/m² |
-| Local comercial | 4 | 0 | 22.008 € | 73 % | 149 €/m² |
-| Solar/Suelo | 2 | 1 | 16.184 € | 45 % | — |
-| Oficina | 2 | 1 | 61.880 € | 52 % | 2.134 €/m² |
-| Finca rústica | 0 | 2 | — | — | — |
-| Garaje | 2 | 0 | 11.900 € | 50 % | 915 €/m² |
-| Trastero | 1 | 0 | 16.796 € | 52 % | 884 €/m² |
-| Nave industrial | 0 | 1 | — | — | — |
+## Precio de cierre por tipo de bien (lotes)
+| Tipo de bien | Adjudicados | Desiertos | % adjudicados | Remate mediano | Remate mediano / valor | €/m² mediano |
+|---|---|---|---|---|---|---|
+| Vivienda | 198 | 75 | 73 % | 96.621 € | 70 % | 874 €/m² |
+| Garaje | 40 | 18 | 69 % | 6.175 € | 59 % | 260 €/m² |
+| Solar/Suelo | 37 | 16 | 70 % | 19.933 € | 46 % | 143 €/m² |
+| Local comercial | 18 | 10 | 64 % | 42.951 € | 50 % | 397 €/m² |
+| Finca rústica | 18 | 8 | 69 % | 30.345 € | 63 % | 496 €/m² |
+| Nave industrial | 14 | 4 | 78 % | 102.863 € | 72 % | 375 €/m² |
+| Otros | 2 | 6 | 25 % | 28.098 € | 64 % | 485 €/m² |
+| Trastero | 4 | 0 | 100 % | 11.230 € | 51 % | 850 €/m² |
+| Oficina | 3 | 1 | 75 % | 61.880 € | 52 % | 2.134 €/m² |
+
+## Evolución por mes de cierre (lotes)
+| Mes | Adjudicados | Desiertos | % adjudicados | Remate mediano / valor |
+|---|---|---|---|---|
+| 2026-11 | 47 | 7 | 87 % | 66 % |
+| 2026-10 | 55 | 10 | 85 % | 56 % |
+| 2026-09 | 35 | 5 | 88 % | 74 % |
+| 2026-08 | 10 | 9 | 53 % | 70 % |
+| 2026-07 | 53 | 42 | 56 % | 70 % |
+| 2026-06 | 19 | 8 | 70 % | 70 % |
+| 2026-05 | 13 | 4 | 76 % | 70 % |
+| 2026-04 | 26 | 14 | 65 % | 74 % |
+| 2026-03 | 25 | 19 | 57 % | 70 % |
+| 2026-02 | 24 | 9 | 73 % | 50 % |
+| 2026-01 | 17 | 7 | 71 % | 73 % |
+| 2025-12 | 10 | 4 | 71 % | 69 % |
 
 ## Últimos cierres
 | Cierre | Municipio | Bien | Valor de subasta | Remate | % sobre valor | Referencia |
@@ -89,17 +107,17 @@ Datos de Subastech (servicio de terceros que recoge las subastas publicadas por 
 | 2026-11-12 | Sevilla | Garaje (lote 3) | 23.800 € | 11.900 € | 50 % | [SUB-JA-2026-266953](https://app.subastech.com/subasta/sevilla/sevilla/garaje-plaza-aparcamiento-fs5lMlRENT) |
 | 2026-11-12 | Sevilla | Oficina (lote 2) | 119.000 € | 61.880 € | 52 % | [SUB-JA-2026-266953](https://app.subastech.com/subasta/sevilla/sevilla/local-comercial-avenida-via-apia-it6UVOUgNV) |
 | 2026-11-12 | Sevilla | Garaje (lote 4) | 23.800 € | 11.900 € | 50 % | [SUB-JA-2026-266953](https://app.subastech.com/subasta/sevilla/sevilla/garaje-plaza-aparcamiento-LRRUg34me5) |
+| 2026-11-12 | Sevilla | Trastero (lote 5) | 32.300 € | 16.150 € | 50 % | [SUB-JA-2026-266953](https://app.subastech.com/subasta/sevilla/sevilla/trastero-avenida-via-apia-WEmb3imCRe) |
 | 2026-11-12 | Marchena | Vivienda | 147.000 € | 49.980 € | 34 % | [SUB-JV-2026-260411](https://app.subastech.com/subasta/sevilla/marchena/vivienda-calle-marcos-ruiz-H3KIexMTBp) |
 | 2026-11-12 | Mairena del Alcor | Vivienda | 288.320 € | Desierta | — | [SUB-JA-2026-265594](https://app.subastech.com/subasta/sevilla/mairena-del-alcor/vivienda-urbanizacion-azucena-fyAxdWw3yh) |
-| 2026-11-09 | Gelves | Vivienda (lote 2) | 112.379 € | Desierta | — | [SUB-JA-2026-267138](https://app.subastech.com/subasta/sevilla/gelves/vivienda-barriada-andalucia-qqDCh3OFmF) |
-| 2026-11-02 | Castilblanco de los Arroyos | Vivienda | 313.943 € | Desierta | — | [SUB-JA-2026-266971](https://app.subastech.com/subasta/sevilla/castilblanco-de-los-arroyos/vivienda-calle-pilar-viejo-0SB4o0bLvF) |
-| 2026-10-28 | Almensilla | Solar/Suelo | 490.375 € | Desierta | — | [SUB-RC-2026-4107100104](https://app.subastech.com/subasta/sevilla/almensilla/solar-suelo-sector-f-de-almensilla-hacienda-miro-lmaHWce0QR) |
-| 2026-10-13 | Sevilla | Vivienda | 403.932 € | Desierta | — | [SUB-JA-2026-265282](https://app.subastech.com/subasta/sevilla/sevilla/vivienda-calle-torre-almodovar-Bwp5xaXFnX) |
-| 2026-10-13 | Espartinas | Vivienda | 589.859 € | Desierta | — | [SUB-JA-2026-265486](https://app.subastech.com/subasta/sevilla/espartinas/vivienda-calle-manolo-gonzalez-RgnHiPzjz2) |
+| 2026-11-11 | Sevilla | Garaje (lote 2) | 12.000 € | 7.440 € | 62 % | [SUB-JA-2026-263282](https://app.subastech.com/subasta/sevilla/sevilla/garaje-calle-cromo-9ySeVcftvl) |
+| 2026-11-11 | Sevilla | Garaje (lote 5) | 12.000 € | 7.200 € | 60 % | [SUB-JA-2026-263282](https://app.subastech.com/subasta/sevilla/sevilla/garaje-calle-cromo-ni3TgIFRTL) |
+| 2026-11-11 | Sevilla | Garaje (lote 6) | 12.000 € | 6.960 € | 58 % | [SUB-JA-2026-263282](https://app.subastech.com/subasta/sevilla/sevilla/garaje-calle-cromo-Ogd2GmtqX9) |
+| 2026-11-11 | Sevilla | Garaje (lote 4) | 12.000 € | 6.480 € | 54 % | [SUB-JA-2026-263282](https://app.subastech.com/subasta/sevilla/sevilla/garaje-calle-cromo-WhnNPWe5Hw) |
 
 ## Avisos
 - 3 lotes marcados como activos ya no salen en el último listado de activas de Subastech y no tienen resultado (pueden estar suspendidos o cancelados; no se les asigna estado): SUB-JA-2026-267963 (Lebrija, Vivienda), TGSS-282921002537 (Tomares, Vivienda), TGSS-410513005440 (El Viso del Alcor, Local comercial)
-- 3 lotes con más de 15.000 €/m² de valor de subasta (probable error en el importe): se excluyen de las medianas y se marcan con ⚠.
+- 6 lotes con más de 15.000 €/m² de valor de subasta (probable error en el importe): se excluyen de las medianas y se marcan con ⚠.
 
 ## Próxima carga (llamadas al conector)
 _Lo genera `python sema.py subastech --plan`: lo diario más las páginas del histórico que faltan._
@@ -110,29 +128,5 @@ _Lo genera `python sema.py subastech --plan`: lo diario más las páginas del hi
 - `buscar_por_codigo` {"codigos": ["SUB-JA-2026-267963", "TGSS-282921002537", "TGSS-410513005440"]} · ya no salen entre las activas
 - `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 1} · adjudicadas (recientes)
 - `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 2} · adjudicadas (recientes)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 3} · adjudicadas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 4} · adjudicadas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 5} · adjudicadas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 6} · adjudicadas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 7} · adjudicadas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 8} · adjudicadas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 9} · adjudicadas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 10} · adjudicadas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 11} · adjudicadas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 12} · adjudicadas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 13} · adjudicadas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 14} · adjudicadas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 15} · adjudicadas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 16} · adjudicadas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 17} · adjudicadas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 18} · adjudicadas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 19} · adjudicadas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 20} · adjudicadas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "adjudicadas", "pagina": 21} · adjudicadas (histórico)
 - `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "desiertas", "pagina": 1} · desiertas (recientes)
 - `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "desiertas", "pagina": 2} · desiertas (recientes)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "desiertas", "pagina": 3} · desiertas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "desiertas", "pagina": 4} · desiertas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "desiertas", "pagina": 5} · desiertas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "desiertas", "pagina": 6} · desiertas (histórico)
-- `buscar_subastas` {"provincia": ["sevilla"], "por_pagina": 20, "estado": "desiertas", "pagina": 7} · desiertas (histórico)
