@@ -45,9 +45,43 @@ fecha de cierre. Sus datos se guardan aparte, en `datos/subastech.sqlite`, con `
 - **Lotes que dejan de salir.** Los lotes que dejan de aparecer entre las activas sin tener resultado se avisan en el
   informe. No se les asigna ningún estado.
 
-Una tarea programada de Claude hace la carga diaria: sigue el plan, ejecuta `python sema.py subastech` y sube los
-archivos de Subastech a `main`. No toca `datos/sema.sqlite`, así que nunca choca con la ejecución del BOE en GitHub
+**En pausa desde el 24/11/2026** (el Deal Finder usa solo el BOE). Mientras estuvo activa, una tarea programada de
+Claude hacía la carga diaria: seguía el plan, ejecutaba `python sema.py subastech` y subía los archivos de Subastech a
+`main`. No toca `datos/sema.sqlite`, así que nunca choca con la ejecución del BOE en GitHub
 Actions. Después deja los datos del panel en Google Drive (ver abajo).
+
+## SeMá Deal Finder: solo BOE (diario oficial y Portal de Subastas)
+
+Desde el 24/11/2026 los datos del Deal Finder salen **solo** del BOE. Provincias: Madrid, Barcelona, Sevilla y
+Huelva, con todos sus municipios, seleccionadas por la **ubicación del bien**. Base aparte: `datos/dealfinder.sqlite`
+(`dealfinder.py`, sin dependencias; `python sema.py dealfinder`).
+
+- **Detección diaria (automática).** Sumario de la API de datos abiertos con `Accept: application/json` (si el JSON no
+  es válido, el XML oficial). Se comprueba que la fecha del sumario es la pedida, se recorren todos los diarios y los
+  `item` de las secciones IV (`4`), V.B (`5B`) y V.C (`5C`) dentro de `departamento`, `epigrafe` o `texto`, lleguen como
+  objeto o como lista. De cada anuncio se abre su `url_xml` (si falla, su página HTML del BOE) y se guardan el `BOE-B`,
+  el título, el organismo, las fechas de publicación y actualización, los enlaces oficiales y cada código SUB citado en
+  el texto o en los enlaces (admite sufijos alfanuméricos, p. ej. `SUB-AT-2026-26R2886001460`). Cada anuncio se
+  relaciona con cada SUB (`anuncio_sub`); un SUB con varios anuncios es un solo expediente.
+- **Incidencias** (`incidencias`): días sin sumario, sumarios con otra fecha, errores de descarga (se reintentan en las
+  siguientes ejecuciones sin duplicar nada), anuncios que hablan de una subasta sin SUB, fichas cuyo SUB no coincide y
+  PDF no válidos.
+- **Ubicación.** Los anuncios del BOE con SUB solo traen el SUB, la autoridad, su referencia y el lugar de firma: la
+  ubicación del bien queda **pendiente** hasta leer la ficha. La provincia de la sede de la autoridad se guarda aparte,
+  como pista para elegir qué fichas consultar, y nunca selecciona. Algunos anuncios sin SUB (Seguridad Social, Hacienda,
+  FOGASA) sí escriben la ubicación del inmueble y se usan con el fragmento citado. Si un expediente tiene bienes en
+  varias provincias, `v_bienes` dice cuáles son de cada una.
+- **Ficha del Portal (consultas puntuales).** No se descarga nada de subastas.boe.es (robots.txt, sin autorización de
+  la AEBOE). Las pestañas y los PDF que se guarden a mano en `datos/portal/entrada` (instrucciones en su `LEEME.md`) se
+  leen con su evidencia: cada dato en `campos` con URL, fecha de consulta y pestaña y fila (o documento y página).
+  Importes en euros con el texto de origen, distinguiendo cero, vacío y «Sin puja mínima»; fechas ISO con desfase;
+  la cuenta expediente como texto; la puja como actual o final según el estado; el importe de adjudicación solo si lo
+  acredita un documento de la autoridad gestora. Discrepancias entre fuentes oficiales: `v_discrepancias`.
+- **Pendientes** (`pendientes`, se rehace en cada ejecución): por expediente y lote del ámbito, qué dato falta, dónde
+  consta, qué fuente oficial se revisó y por qué no se pudo comprobar, y si hay un valor de Subastech sin cotejar.
+- **Subastech.** No se consulta. Sus valores ya cargados solo se cotejan con la fuente oficial (`cotejo_subastech`:
+  coincide, difiere o sin cotejar) y nunca se presentan como verificados en el BOE. La carga diaria de Subastech está
+  en pausa hasta nueva autorización.
 
 ## Panel en Claude (datos leídos de Google Drive)
 
@@ -113,6 +147,8 @@ python sema.py run --forzar-justicia    # incluir el CSV de Justicia hoy
 python sema.py subastech --plan         # llamadas al conector de Subastech que tocan hoy
 python sema.py subastech                # carga las respuestas del conector de la sesión de Claude más reciente
 python sema.py panel                    # regenera los archivos del panel (datos/panel)
+python sema.py dealfinder               # Deal Finder: anuncios del BOE y fichas guardadas en datos/portal/entrada
+python sema.py dealfinder --solo-portal # solo relee las fichas guardadas (sin red)
 python -m unittest discover -s tests    # pruebas sin red
 ```
 

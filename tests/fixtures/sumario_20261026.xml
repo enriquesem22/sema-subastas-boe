@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<response>
+  <status>
+    <code>200</code>
+    <text>ok</text>
+  </status>
+  <data>
+    <sumario>
+      <metadatos>
+        <publicacion>BOE</publicacion>
+        <fecha_publicacion>20261026</fecha_publicacion>
+      </metadatos>
+      <diario numero="265">
+        <sumario_diario>
+          <identificador>BOE-S-2026-265</identificador>
+          <url_pdf szBytes="515868" szKBytes="504">https://www.boe.es/boe/dias/2026/10/26/pdfs/BOE-S-2026-265.pdf</url_pdf>
+        </sumario_diario>
+        <seccion codigo="5A" nombre="V. Anuncios. - A. Contratación del Sector Público">
+          <departamento codigo="9585" nombre="MINISTERIO DE LA PRESIDENCIA, JUSTICIA Y RELACIONES CON LAS CORTES">
+            <item>
+              <identificador>BOE-B-2026-34859</identificador>
+              <titulo>Anuncio de formalización de contratos de: Junta de Contratación de la Secretaría de Estado de Justicia. Objeto: Suministro de consumibles para el equipo Hamilton del Departamento de Barcelona del Instituto Nacional de Toxicología y Ciencias Forenses. Expediente: ASU/2026/065.</titulo>
+              <url_pdf szBytes="219286" szKBytes="214" pagina_inicial="56511" pagina_final="56512">https://www.boe.es/boe/dias/2026/10/26/pdfs/BOE-B-2026-34859.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-34859</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-34859</url_xml>
+            </item>
+          </departamento>
+          </seccion>
+        <seccion codigo="5B" nombre="V. Anuncios. - B. Otros anuncios oficiales">
+          <departamento codigo="9586" nombre="MINISTERIO DE TRANSPORTES Y MOVILIDAD SOSTENIBLE">
+            <item>
+              <identificador>BOE-B-2026-34909</identificador>
+              <titulo>Resolución de la Autoridad Portuaria de Valencia sobre modificación sustancial de la concesión administrativa de ocupación de dominio público portuario, de la que es titular Spain Container Depot, S.L.U., en el puerto de Valencia, por prórroga de plazo concesional.</titulo>
+              <url_pdf szBytes="202467" szKBytes="198" pagina_inicial="56616" pagina_final="56616">https://www.boe.es/boe/dias/2026/10/26/pdfs/BOE-B-2026-34909.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-34909</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-34909</url_xml>
+            </item>
+            </departamento>
+          <departamento codigo="9573" nombre="MINISTERIO DE TRABAJO Y ECONOMÍA SOCIAL">
+            <item>
+              <identificador>BOE-B-2026-34912</identificador>
+              <titulo>Anuncio del Fondo de Garantía Salarial O.A. (FOGASA) por el que se convoca la venta en subasta pública al alza mediante presentación inicial de ofertas en sobre cerrado, en un lote, de la finca registral 17341 ubicada en el municipio de Azpeitia, en la provincia de Gipuzkoa, propiedad del FOGASA, (Nº de procedimiento: Subasta-2/2026).</titulo>
+              <url_pdf szBytes="218618" szKBytes="213" pagina_inicial="56619" pagina_final="56621">https://www.boe.es/boe/dias/2026/10/26/pdfs/BOE-B-2026-34912.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-34912</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-34912</url_xml>
+            </item>
+            </departamento>
+          </seccion>
+        </diario>
+    </sumario>
+  </data>
+</response>

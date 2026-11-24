@@ -25,7 +25,7 @@ concurrency:
 jobs:
   ejecutar:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 75
     steps:
       - uses: actions/checkout@v4
 
@@ -34,6 +34,7 @@ jobs:
           python-version: "3.12"
 
       - name: Pruebas sin red
+        id: pruebas
         run: python -m unittest discover -s tests -v
 
       - name: Ejecutar SeMá
@@ -45,10 +46,25 @@ jobs:
           if [ "${{ github.event.inputs.forzar_justicia }}" = "true" ]; then ARGS="$ARGS --forzar-justicia"; fi
           python sema.py run $ARGS
 
+      - name: SeMá Deal Finder (solo BOE)
+        # Anuncios de las secciones IV, V.B y V.C del sumario (JSON) y su XML. Las fichas del Portal solo se
+        # leen de datos/portal/entrada (consultas puntuales guardadas a mano): no se descarga nada del Portal.
+        if: ${{ !cancelled() && steps.pruebas.outcome == 'success' }}
+        env:
+          SEMA_DF_MAX_XML: "1500"
+        run: |
+          if find datos/portal/entrada -iname '*.pdf' 2>/dev/null | grep -q .; then
+            sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils tesseract-ocr tesseract-ocr-spa
+          fi
+          ARGS=""
+          if [ -n "${{ github.event.inputs.desde }}" ]; then ARGS="$ARGS --desde ${{ github.event.inputs.desde }}"; fi
+          python sema.py dealfinder $ARGS
+
       - name: Publicar el informe en el resumen de la ejecución
         if: always()
         run: |
           if [ -f datos/ultimo_informe.md ]; then cat datos/ultimo_informe.md >> "$GITHUB_STEP_SUMMARY"; fi
+          if [ -f datos/ultimo_informe_dealfinder.md ]; then cat datos/ultimo_informe_dealfinder.md >> "$GITHUB_STEP_SUMMARY"; fi
 
       - name: Guardar resultados en el repositorio
         if: always()

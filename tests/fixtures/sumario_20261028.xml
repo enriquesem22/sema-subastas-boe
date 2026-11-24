@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<response>
+  <status>
+    <code>200</code>
+    <text>ok</text>
+  </status>
+  <data>
+    <sumario>
+      <metadatos>
+        <publicacion>BOE</publicacion>
+        <fecha_publicacion>20261028</fecha_publicacion>
+      </metadatos>
+      <diario numero="268">
+        <sumario_diario>
+          <identificador>BOE-S-2026-268</identificador>
+          <url_pdf szBytes="141490" szKBytes="138">https://www.boe.es/boe/dias/2026/10/28/pdfs/BOE-S-2026-268.pdf</url_pdf>
+        </sumario_diario>
+        </diario>
+      <diario numero="267">
+        <sumario_diario>
+          <identificador>BOE-S-2026-267</identificador>
+          <url_pdf szBytes="390885" szKBytes="382">https://www.boe.es/boe/dias/2026/10/28/pdfs/BOE-S-2026-267.pdf</url_pdf>
+        </sumario_diario>
+        <seccion codigo="5A" nombre="V. Anuncios. - A. Contratación del Sector Público">
+          <departamento codigo="1220" nombre="CORTES GENERALES">
+            <item>
+              <identificador>BOE-B-2026-35191</identificador>
+              <titulo>Anuncio de licitación de: Junta de Coordinación del Defensor del Pueblo. Objeto: Servicio de vales restaurante para el personal del Defensor del Pueblo. Expediente: 2026Rg800268.</titulo>
+              <url_pdf szBytes="223772" szKBytes="219" pagina_inicial="57044" pagina_final="57046">https://www.boe.es/boe/dias/2026/10/28/pdfs/BOE-B-2026-35191.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-35191</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-35191</url_xml>
+            </item>
+          </departamento>
+          </seccion>
+        <seccion codigo="5B" nombre="V. Anuncios. - B. Otros anuncios oficiales">
+          <departamento codigo="9562" nombre="MINISTERIO DE ASUNTOS EXTERIORES, UNIÓN EUROPEA Y COOPERACIÓN">
+            <item>
+              <identificador>BOE-B-2026-35248</identificador>
+              <titulo>Extracto de la Resolución de la Dirección General de Casa África por la que se convoca, mediante tramitación anticipada, el concurso fotográfico «Objetivo África» para 2027.</titulo>
+              <url_pdf szBytes="217089" szKBytes="212" pagina_inicial="57178" pagina_final="57180">https://www.boe.es/boe/dias/2026/10/28/pdfs/BOE-B-2026-35248.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-35248</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-35248</url_xml>
+            </item>
+          </departamento>
+          <departamento codigo="5140" nombre="MINISTERIO DE HACIENDA">
+            <item>
+              <identificador>BOE-B-2026-35250</identificador>
+              <titulo>Resolución de la Delegación de Economía y Hacienda de Huelva, por la que se convoca tercera subasta de varios inmuebles propiedad del Estado, sitos en la provincia de Huelva.</titulo>
+              <url_pdf szBytes="218092" szKBytes="213" pagina_inicial="57182" pagina_final="57184">https://www.boe.es/boe/dias/2026/10/28/pdfs/BOE-B-2026-35250.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-35250</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-35250</url_xml>
+            </item>
+          </departamento>
+          <departamento codigo="9579" nombre="MINISTERIO DE INCLUSIÓN, SEGURIDAD SOCIAL Y MIGRACIONES">
+            <item>
+              <identificador>BOE-B-2026-35273</identificador>
+              <titulo>Resolución de la Dirección Provincial de la Tesorería General de la Seguridad Social de Madrid por la que se anuncia subasta pública mediante procedimiento abierto de inmuebles, propiedad de la Tesorería General de la Seguridad Social, ubicados en la carretera M-119 (Camarma-Valdeavero), nº 21, de Alcalá de Henares (Madrid).</titulo>
+              <url_pdf szBytes="217867" szKBytes="213" pagina_inicial="57214" pagina_final="57216">https://www.boe.es/boe/dias/2026/10/28/pdfs/BOE-B-2026-35273.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-35273</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-35273</url_xml>
+            </item>
+            </departamento>
+          </seccion>
+        </diario>
+    </sumario>
+  </data>
+</response>

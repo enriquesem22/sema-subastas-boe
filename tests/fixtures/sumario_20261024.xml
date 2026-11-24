@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<response>
+  <status>
+    <code>200</code>
+    <text>ok</text>
+  </status>
+  <data>
+    <sumario>
+      <metadatos>
+        <publicacion>BOE</publicacion>
+        <fecha_publicacion>20261024</fecha_publicacion>
+      </metadatos>
+      <diario numero="264">
+        <sumario_diario>
+          <identificador>BOE-S-2026-264</identificador>
+          <url_pdf szBytes="430115" szKBytes="420">https://www.boe.es/boe/dias/2026/10/24/pdfs/BOE-S-2026-264.pdf</url_pdf>
+        </sumario_diario>
+        <seccion codigo="4" nombre="IV. Administración de Justicia">
+          <departamento codigo="9602" nombre="TRIBUNALES DE INSTANCIA. SECCIÓN CIVIL Y DE INSTRUCCIÓN">
+            <item>
+              <identificador>BOE-B-2026-34558</identificador>
+              <titulo>CARMONA</titulo>
+              <url_pdf szBytes="198271" szKBytes="194" pagina_inicial="56210" pagina_final="56210">https://www.boe.es/boe/dias/2026/10/24/pdfs/BOE-B-2026-34558.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-34558</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-34558</url_xml>
+            </item>
+            </departamento>
+          </seccion>
+        <seccion codigo="5B" nombre="V. Anuncios. - B. Otros anuncios oficiales">
+          <departamento codigo="5140" nombre="MINISTERIO DE HACIENDA">
+            <item>
+              <identificador>BOE-B-2026-34705</identificador>
+              <titulo>U.R. SUBASTAS ANDALUCÍA 41</titulo>
+              <url_pdf szBytes="198871" szKBytes="194" pagina_inicial="56357" pagina_final="56357">https://www.boe.es/boe/dias/2026/10/24/pdfs/BOE-B-2026-34705.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-34705</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-34705</url_xml>
+            </item>
+            </departamento>
+          <departamento codigo="8170" nombre="COMUNIDAD FORAL DE NAVARRA">
+            <item>
+              <identificador>BOE-B-2026-34797</identificador>
+              <titulo>ORGANISMO AUTÓNOMO DE HACIENDA FORAL DE NAVARRA</titulo>
+              <url_pdf szBytes="199158" szKBytes="194" pagina_inicial="56449" pagina_final="56449">https://www.boe.es/boe/dias/2026/10/24/pdfs/BOE-B-2026-34797.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-34797</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-34797</url_xml>
+            </item>
+            </departamento>
+          </seccion>
+        <seccion codigo="5C" nombre="V. Anuncios. - C. Anuncios particulares">
+          <departamento codigo="9202" nombre="ANUNCIOS PARTICULARES">
+            <item>
+              <identificador>BOE-B-2026-34802</identificador>
+              <titulo>NOTARÍA DE FRANCISCO JAVIER LÓPEZ CANO</titulo>
+              <url_pdf szBytes="198177" szKBytes="194" pagina_inicial="56454" pagina_final="56454">https://www.boe.es/boe/dias/2026/10/24/pdfs/BOE-B-2026-34802.pdf</url_pdf>
+              <url_html>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-34802</url_html>
+              <url_xml>https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-34802</url_xml>
+            </item>
+          </departamento>
+        </seccion>
+      </diario>
+    </sumario>
+  </data>
+</response>

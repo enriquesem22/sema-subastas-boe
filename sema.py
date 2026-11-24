@@ -398,7 +398,7 @@ class Http:
                 carpeta.mkdir(parents=True, exist_ok=True)
                 nombre = nombre or re.sub(r"[^A-Za-z0-9._-]+", "_", url.split("//", 1)[-1])[:150]
                 ruta = carpeta / nombre
-                if len(data) > 1_000_000:  # archivos grandes (CSV de Justicia) comprimidos
+                if len(data) > 1_000_000 or getattr(self, "comprimir", False):  # grandes (CSV de Justicia) o si se pide
                     ruta = ruta.with_name(ruta.name + ".gz")
                     ruta.write_bytes(gzip.compress(data))
                 else:
@@ -1621,14 +1621,31 @@ def main(argv=None):
     s.add_argument("--recargar", action="store_true",
                    help="Aplica también las respuestas guardadas en datos/brutos/subastech que falten en la base")
     s.add_argument("--plan", action="store_true", help="Solo muestra las llamadas al conector que tocan hoy")
+    d = sub.add_parser("dealfinder", help="SeMá Deal Finder: anuncios del BOE (sumario y XML) y fichas del Portal "
+                                          "guardadas a mano, con datos pendientes e incidencias")
+    d.add_argument("--desde", type=dt.date.fromisoformat)
+    d.add_argument("--hasta", type=dt.date.fromisoformat)
+    d.add_argument("--solo-portal", action="store_true",
+                   help="No descarga nada: solo lee datos/portal/entrada y rehace pendientes, cotejo y exportación")
+    d.add_argument("--datos", type=Path, default=Path(os.environ.get("SEMA_DATOS", BASE / "datos")))
     pn = sub.add_parser("panel", help="Regenera los CSV y los archivos JSON del panel (datos/panel) sin cargar nada")
     pn.add_argument("--datos", type=Path, default=Path(os.environ.get("SEMA_DATOS", BASE / "datos")))
     s.add_argument("--datos", type=Path, default=Path(os.environ.get("SEMA_DATOS", BASE / "datos")))
     a = p.parse_args(argv)
+    if a.cmd == "dealfinder":
+        import dealfinder
+        res = dealfinder.ejecutar(a.desde, a.hasta, a.datos, solo_portal=a.solo_portal)
+        print(json.dumps(res, ensure_ascii=False, indent=2))
+        return 0 if res["estado"] in ("ok", "con_errores") else 1
     if a.cmd == "panel":
         con = conectar(a.datos / "subastech.sqlite", SUBASTECH_ESQUEMA)
         exportar_subastech(con, a.datos)
         con.close()
+        if (a.datos / "dealfinder.sqlite").exists():
+            import dealfinder
+            con = conectar(a.datos / "dealfinder.sqlite", dealfinder.ESQUEMA)
+            dealfinder.exportar(con, a.datos)
+            con.close()
         for f in sorted((a.datos / "panel").glob("*.json")):
             print(f"{f.name}\t{f.stat().st_size} bytes")
         return 0
