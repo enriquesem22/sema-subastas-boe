@@ -1553,8 +1553,11 @@ PANEL = {
     "df_anuncios": "SELECT id_boe, fecha_publicacion, seccion_codigo, organismo, titulo, ids_subasta, tipo_subasta_texto,"
                    " referencia_tipo, referencia_texto, lugar_firma, fecha_firma, sede_provincia, ubicacion_estado,"
                    " ubicacion_provincias, ubicacion_municipios, es_inmueble, fecha_actualizacion, xml_estado, texto_desde,"
-                   " url_html, url_pdf, url_xml FROM anuncios WHERE (menciona_subasta=1 OR xml_estado<>'ok')"
-                   " AND fecha_publicacion >= date('now', '-120 day')"
+                   " url_html, url_pdf, url_xml FROM anuncios WHERE fecha_publicacion >= date('now', '-120 day') AND ("
+                   "(menciona_subasta=1 AND (sede_provincia IN ('28','08','41','21') OR n_sub=0"
+                   " OR (','||IFNULL(ubicacion_provincias,'')||',') GLOB '*,28,*' OR (','||IFNULL(ubicacion_provincias,'')||',') GLOB '*,08,*'"
+                   " OR (','||IFNULL(ubicacion_provincias,'')||',') GLOB '*,41,*' OR (','||IFNULL(ubicacion_provincias,'')||',') GLOB '*,21,*'))"
+                   " OR (xml_estado<>'ok' AND fecha_publicacion >= date('now', '-30 day')))"
                    " ORDER BY fecha_publicacion DESC, id_boe",
     "df_pendientes": "SELECT id_expediente, id_subasta, n_lote, COUNT(*) AS n_datos, GROUP_CONCAT(dato, ', ') AS datos_pendientes,"
                      " MAX(CASE WHEN dato <> 'importe_adjudicacion' THEN motivo END) AS motivo,"
