@@ -1,0 +1,16 @@
+{
+ "fuente": "Subastech (conector de Claude)",
+ "herramienta": "buscar_por_codigo",
+ "argumentos": {
+  "codigos": [
+   "SUB-AT-2026-26R4186002085",
+   "SUB-AT-2026-26R4186002086",
+   "SUB-AT-2026-26R4186002088",
+   "SUB-JA-2026-268564"
+  ]
+ },
+ "momento_consulta": "2026-11-21T17:46:12.594Z",
+ "id_llamada": "toolu_014ozfrwP5etNQLK2Kak5xbN",
+ "sha256_respuesta": "1f1b2c6da8c2ae6f2c126dcd2d2bbd7dcb9af3b1205ae6c8412a8ed0a794cbf1",
+ "respuesta": "{\"items\":[{\"id\":\"b0BverT1hn\",\"type\":\"Vivienda\",\"isNew\":true,\"title\":\"Calle Rodrigo de Triana\",\"address\":\"Calle Rodrigo de Triana\",\"municipio\":\"Pilas\",\"provincia\":\"Sevilla\",\"cp\":\"41840\",\"ref\":\"SUB-JA-2026-268564\",\"provinceSlug\":\"sevilla\",\"municipalitySlug\":\"pilas\",\"end\":null,\"contentUpdatedAt\":\"2026-11-21T10:50:01.656Z\",\"daysLeft\":null,\"valueAuction\":5981656.56,\"valueM2\":54378.695999999996,\"minimumBid\":null,\"deposit\":299082.82,\"appraisal\":0,\"occupied\":null,\"discount\":null,\"m2\":110,\"status\":\"Pròxima subhasta\",\"cadastral\":null,\"cadastralReview\":null,\"imageUrl\":\"/api/image/b0BverT1hn\",\"lat\":37.30725,\"lon\":-6.297,\"lot\":null,\"finalBid\":null,\"resultStatus\":null,\"closedAt\":null,\"phase\":\"activa\",\"url\":\"https://app.subastech.com/subasta/sevilla/pilas/vivienda-calle-rodrigo-de-triana-b0BverT1hn\",\"links\":{\"streetView\":null,\"catastroPdf\":null},\"fuente\":\"BOE\"}],\"no_encontrados\":[\"SUB-AT-2026-26R4186002085\",\"SUB-AT-2026-26R4186002086\",\"SUB-AT-2026-26R4186002088\"]}"
+}

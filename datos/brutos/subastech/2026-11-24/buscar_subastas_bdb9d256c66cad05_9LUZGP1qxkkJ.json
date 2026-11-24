@@ -1,0 +1,17 @@
+{
+ "fuente": "Subastech (conector de Claude)",
+ "herramienta": "buscar_subastas",
+ "argumentos": {
+  "provincia": [
+   "sevilla"
+  ],
+  "estado": "activas",
+  "orden": "ending",
+  "por_pagina": 20,
+  "pagina": 3
+ },
+ "momento_consulta": "2026-11-24T17:06:46.898Z",
+ "id_llamada": "toolu_01Kw1gaxvrmj9LUZGP1qxkkJ",
+ "sha256_respuesta": "bdb9d256c66cad05444f3ba0227516da712cb06b216284693798e3dd22b29ba3",
+ "respuesta": "{\"items\":[{\"id\":\"B3DdhGxgo0\",\"type\":\"Vivienda\",\"isNew\":true,\"title\":\"Calle Silos\",\"address\":\"Calle Silos\",\"municipio\":\"Alcalá de Guadaíra\",\"provincia\":\"Sevilla\",\"cp\":\"41500\",\"ref\":\"SUB-JA-2026-267835\",\"provinceSlug\":\"sevilla\",\"municipalitySlug\":\"alcala-de-guadaira\",\"end\":null,\"contentUpdatedAt\":\"2026-11-24T11:11:14.330Z\",\"daysLeft\":null,\"valueAuction\":173400,\"valueM2\":null,\"minimumBid\":null,\"deposit\":8670,\"appraisal\":0,\"occupied\":null,\"discount\":null,\"m2\":null,\"status\":\"Pròxima subhasta\",\"cadastral\":null,\"cadastralReview\":null,\"imageUrl\":\"/api/image/B3DdhGxgo0\",\"lat\":37.34775,\"lon\":-5.847,\"lot\":null,\"finalBid\":null,\"resultStatus\":null,\"closedAt\":null,\"phase\":\"activa\",\"url\":\"https://app.subastech.com/subasta/sevilla/alcala-de-guadaira/vivienda-calle-silos-B3DdhGxgo0\",\"links\":{\"streetView\":null,\"catastroPdf\":null},\"fuente\":\"BOE\"},{\"id\":\"X2hg5IUSo2\",\"type\":\"Nave industrial\",\"isNew\":false,\"title\":\"Hacienda Dolores\",\"address\":\"Hacienda Dolores\",\"municipio\":\"Alcalá de Guadaíra\",\"provincia\":\"Sevilla\",\"cp\":\"41500\",\"ref\":\"SUB-RC-2026-4107100105\",\"provinceSlug\":\"sevilla\",\"municipalitySlug\":\"alcala-de-guadaira\",\"end\":null,\"contentUpdatedAt\":\"2026-11-21T10:50:01.656Z\",\"daysLeft\":null,\"valueAuction\":157179.28,\"valueM2\":148.2823396226415,\"minimumBid\":78589.64,\"deposit\":7858.96,\"appraisal\":560000,\"occupied\":null,\"discount\":72,\"m2\":1060,\"status\":\"Pròxima subhasta\",\"cadastral\":null,\"cadastralReview\":null,\"imageUrl\":\"/api/image/X2hg5IUSo2\",\"lat\":37.36125,\"lon\":-5.883,\"lot\":null,\"finalBid\":null,\"resultStatus\":null,\"closedAt\":null,\"phase\":\"activa\",\"url\":\"https://app.subastech.com/subasta/sevilla/alcala-de-guadaira/nave-industrial-hacienda-dolores-X2hg5IUSo2\",\"links\":{\"streetView\":null,\"catastroPdf\":null},\"fuente\":\"BOE\"}],\"pagina\":3,\"por_pagina\":20,\"total\":42,\"paginas\":3,\"hasMore\":false,\"locked\":{\"scoring\":{\"locked\":true,\"feature\":\"scoring.scoring\",\"label\":\"Scoring\",\"plansLabel\":\"Pro, Team y Enterprise\",\"requiredPlan\":{\"key\":\"pro\",\"name\":\"Pro\",\"priceMonth\":69900,\"priceMonthLabel\":\"699 €/mes\"},\"upgradeUrl\":\"https://app.subastech.com/precios?feature=scoring.scoring&utm_source=mcp\",\"loginUrl\":\"https://app.subastech.com/entrar\"}},\"cta\":{\"text\":\"Ver en Subastech\",\"url\":\"https://app.subastech.com/subastas/sevilla\"}}"
+}

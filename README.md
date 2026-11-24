@@ -16,6 +16,39 @@ oficiales o autorizadas**.
 3. Guarda todo en `datos/sema.sqlite` y lo exporta también a CSV (`datos/export/`, se abren en Excel).
 4. Genera un informe en `datos/informes/informe_AAAA-MM-DD.md` (y `datos/ultimo_informe.md`).
 
+## Subastech: resultados, remates y zonas (nivel C)
+
+El BOE no publica cómo termina cada subasta. Para eso se usa **Subastech** (app.subastech.com), un servicio de
+terceros que recoge las subastas del BOE con su resultado (adjudicada o desierta), el remate (precio de cierre) y la
+fecha de cierre. Sus datos se guardan aparte, en `datos/subastech.sqlite`, con `nivel_verificacion = "C"`.
+
+- **Cómo se obtienen.** Subastech solo se consulta con su conector desde una sesión de Claude: este script no llama a
+  Subastech. `python sema.py subastech` lee las respuestas **literales** del conector en el registro de la sesión de
+  Claude Code (`~/.claude/projects/*/*.jsonl`). Así ningún dato se copia a mano. Cada respuesta se guarda en bruto en
+  `datos/brutos/subastech/AAAA-MM-DD/` junto con la llamada que la produjo y su SHA-256.
+- **Qué llamadas hacer.** `python sema.py subastech --plan` lista las llamadas al conector que tocan: todas las activas
+  de la provincia, los últimos remates, las primeras páginas de adjudicadas y desiertas, y las páginas del histórico que
+  falten. Subastech sirve como máximo 25 páginas de 20 lotes sin cuenta.
+- **Historial.** Si un lote cambia (por ejemplo, de «Abierta» a «Adjudicada»), el valor anterior queda en
+  `cambios_historicos`. Una respuesta más antigua que la ya aplicada solo rellena huecos y nunca deshace datos nuevos.
+- **Reconstruir.** `python sema.py subastech --recargar` vuelve a aplicar los brutos que falten en la base. Sobre una
+  carpeta vacía, rehace la base entera.
+- **Tablas y vistas.**
+  - `subastech_lotes`: un lote por fila, con estado, valores, remate y fechas.
+  - `subastech_respuestas`: cada respuesta del conector.
+  - `cambios_historicos` y `ejecuciones`.
+  - `v_cierres`: adjudicadas y desiertas, con el remate en % del valor de subasta y de la tasación, y en €/m².
+  - `v_zonas`: lotes, activas, adjudicadas, desiertas y % de adjudicación por municipio.
+- **Exportación.** Todo se exporta a `datos/export/subastech_*.csv`. El informe está en `datos/ultimo_informe_subastech.md`.
+- **Importes dudosos.** Los lotes de más de 15.000 €/m² de valor de subasta se marcan como probable error de importe y
+  se excluyen de las medianas.
+- **Lotes que dejan de salir.** Los lotes que dejan de aparecer entre las activas sin tener resultado se avisan en el
+  informe. No se les asigna ningún estado.
+
+Una tarea programada de Claude hace la carga diaria: sigue el plan, ejecuta `python sema.py subastech` y sube los
+archivos de Subastech a `main`. No toca `datos/sema.sqlite`, así que nunca choca con la ejecución del BOE en GitHub
+Actions.
+
 ## Cómo se asegura la fiabilidad
 
 - Cada dato lleva `fuente`, `url_fuente`, `momento_consulta` y `nivel_verificacion`
@@ -61,6 +94,8 @@ En local (Windows, macOS o Linux, Python 3.10+ sin dependencias):
 python sema.py run                      # días pendientes (la primera vez, los últimos 30)
 python sema.py run --desde 2026-10-01   # recargar un rango
 python sema.py run --forzar-justicia    # incluir el CSV de Justicia hoy
+python sema.py subastech --plan         # llamadas al conector de Subastech que tocan hoy
+python sema.py subastech                # carga las respuestas del conector de la sesión de Claude más reciente
 python -m unittest discover -s tests    # pruebas sin red
 ```
 
@@ -68,6 +103,9 @@ python -m unittest discover -s tests    # pruebas sin red
 
 `ejecuciones`, `respuestas_brutas`, `dias_procesados`, `anuncios_boe`, `expedientes`, `lotes`, `inmuebles`,
 `justicia_filas`, `cambios_historicos`, `municipios_sevilla`.
+
+En `datos/subastech.sqlite`: `subastech_lotes`, `subastech_respuestas`, `cambios_historicos`, `ejecuciones` y las vistas
+`v_cierres` y `v_zonas`.
 
 Fuente de los datos: [Agencia Estatal Boletín Oficial del Estado](https://www.boe.es) ·
 [Ministerio de Justicia en datos.gob.es](https://datos.gob.es).

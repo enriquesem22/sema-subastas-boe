@@ -12,7 +12,11 @@ Reglas:
   - Guarda cada respuesta en bruto con su hash SHA-256 para poder auditarla.
 
 Solo usa la biblioteca estándar de Python (3.10+).
+  - C: Subastech (tercero), solo a través del conector de Claude: `python sema.py subastech` carga sus
+    respuestas literales en datos/subastech.sqlite (estado, remate y fecha de cierre de cada lote).
+
 Uso:  python sema.py run [--desde AAAA-MM-DD] [--hasta AAAA-MM-DD] [--forzar-justicia]
+      python sema.py subastech [--transcripcion RUTA|auto] [--recargar] [--plan]
 """
 from __future__ import annotations
 
@@ -24,9 +28,11 @@ import hashlib
 import html
 import io
 import json
+import math
 import os
 import re
 import sqlite3
+import statistics
 import sys
 import time
 import unicodedata
@@ -276,19 +282,20 @@ CREATE TABLE IF NOT EXISTS municipios_sevilla (
 """
 
 
-def conectar(ruta: Path) -> sqlite3.Connection:
+def conectar(ruta: Path, esquema: str | None = None) -> sqlite3.Connection:
+    esquema = esquema or ESQUEMA
     ruta.parent.mkdir(parents=True, exist_ok=True)
     con = sqlite3.connect(ruta)
     con.row_factory = sqlite3.Row
-    con.executescript(ESQUEMA)
-    migrar(con)
+    con.executescript(esquema)
+    migrar(con, esquema)
     return con
 
 
-def migrar(con: sqlite3.Connection):
+def migrar(con: sqlite3.Connection, esquema: str | None = None):
     """Añade a una base existente las columnas nuevas del esquema (nunca borra nada)."""
     tmp = sqlite3.connect(":memory:")
-    tmp.executescript(ESQUEMA)
+    tmp.executescript(esquema or ESQUEMA)
     for (tabla,) in tmp.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'"):
         esperadas = [(r[1], r[2]) for r in tmp.execute(f"PRAGMA table_info({tabla})")]
         actuales = {r[1] for r in con.execute(f"PRAGMA table_info({tabla})")}
@@ -937,6 +944,542 @@ def ejecutar(desde: dt.date | None, hasta: dt.date | None, forzar_justicia: bool
             "avisos": avisos, "errores": errores}
 
 
+# --------------------------------------------------------------------------- Subastech (nivel C)
+# Subastech (app.subastech.com) es un tercero que publica las subastas del BOE con su resultado
+# (adjudicada o desierta) y el remate. Solo se consulta con el conector de Subastech de Claude: este
+# script no llama a Subastech. Lee las respuestas literales del conector en el registro de la sesión de
+# Claude (o en archivos guardados), guarda cada una en bruto con su SHA-256 y las carga en
+# datos/subastech.sqlite. Todo dato de Subastech queda con nivel_verificacion = "C".
+SUBASTECH_ESQUEMA = """
+CREATE TABLE IF NOT EXISTS ejecuciones (
+  id_ejecucion INTEGER PRIMARY KEY AUTOINCREMENT,
+  inicio TEXT, fin TEXT, version TEXT, parametros TEXT,
+  n_leidos INTEGER DEFAULT 0, n_nuevos INTEGER DEFAULT 0, n_cambios INTEGER DEFAULT 0,
+  avisos TEXT, errores TEXT, estado TEXT
+);
+CREATE TABLE IF NOT EXISTS subastech_respuestas (
+  id INTEGER PRIMARY KEY AUTOINCREMENT, id_llamada TEXT UNIQUE, id_ejecucion INTEGER,
+  herramienta TEXT, argumentos TEXT, momento_consulta TEXT, origen TEXT,
+  sha256 TEXT, ruta TEXT, bytes INTEGER, n_items INTEGER, total INTEGER, estado_consulta TEXT, pagina INTEGER
+);
+CREATE TABLE IF NOT EXISTS subastech_lotes (
+  id_subastech TEXT PRIMARY KEY, id_subasta TEXT, n_lote INTEGER, total_lotes INTEGER, origen TEXT,
+  tipo_bien TEXT, provincia TEXT, municipio TEXT, municipio_slug TEXT, codigo_postal TEXT, direccion TEXT,
+  lat REAL, lon REAL, superficie_m2 REAL,
+  valor_subasta REAL, tasacion REAL, deposito REAL, puja_minima REAL, valor_m2 REAL, descuento_pct REAL,
+  ocupada TEXT, fecha_fin TEXT, estado TEXT, fase TEXT, resultado TEXT, precio_cierre REAL, fecha_cierre TEXT,
+  url_ficha TEXT, primera_vez TEXT, ultima_vez TEXT, observado_en TEXT, actualizado_en_fuente TEXT,
+  fuente TEXT, url_fuente TEXT, momento_consulta TEXT, nivel_verificacion TEXT
+);
+CREATE INDEX IF NOT EXISTS ix_subastech_lotes_ref ON subastech_lotes(id_subasta);
+CREATE INDEX IF NOT EXISTS ix_subastech_lotes_mun ON subastech_lotes(municipio);
+CREATE TABLE IF NOT EXISTS cambios_historicos (
+  id INTEGER PRIMARY KEY AUTOINCREMENT, tabla TEXT, clave TEXT, campo TEXT,
+  valor_anterior TEXT, valor_nuevo TEXT, detectado_en TEXT, id_ejecucion INTEGER, fuente TEXT
+);
+CREATE VIEW IF NOT EXISTS v_cierres AS
+SELECT id_subastech, id_subasta, n_lote, origen, tipo_bien, municipio, codigo_postal, direccion,
+       fecha_cierre, estado, resultado, valor_subasta, tasacion, precio_cierre, superficie_m2,
+       CASE WHEN precio_cierre > 0 AND valor_subasta > 0 THEN ROUND(100.0 * precio_cierre / valor_subasta, 1) END
+         AS pct_sobre_valor,
+       CASE WHEN precio_cierre > 0 AND tasacion > 0 THEN ROUND(100.0 * precio_cierre / tasacion, 1) END
+         AS pct_sobre_tasacion,
+       CASE WHEN precio_cierre > 0 AND superficie_m2 > 0 THEN ROUND(precio_cierre / superficie_m2, 0) END
+         AS remate_m2,
+       url_ficha, nivel_verificacion
+FROM subastech_lotes WHERE fase = 'historica' OR estado IN ('Adjudicada', 'Desierta');
+CREATE VIEW IF NOT EXISTS v_zonas AS
+SELECT COALESCE(municipio, '(sin municipio)') AS municipio,
+       COUNT(*) AS lotes,
+       SUM(fase = 'activa') AS activas,
+       SUM(estado = 'Adjudicada') AS adjudicadas,
+       SUM(estado = 'Desierta') AS desiertas,
+       ROUND(100.0 * SUM(estado = 'Adjudicada') / NULLIF(SUM(estado IN ('Adjudicada', 'Desierta')), 0), 0)
+         AS pct_adjudicadas,
+       ROUND(AVG(CASE WHEN estado = 'Adjudicada' AND precio_cierre > 0 AND valor_subasta > 0
+                      THEN 100.0 * precio_cierre / valor_subasta END), 0) AS media_pct_sobre_valor,
+       MIN(fecha_cierre) AS primer_cierre, MAX(fecha_cierre) AS ultimo_cierre
+FROM subastech_lotes GROUP BY 1;
+"""
+SUBASTECH_POR_PAGINA = 20
+SUBASTECH_MAX_PAGINAS = 25  # máximo de páginas que Subastech sirve sin cuenta
+SUBASTECH_PROVINCIA = "sevilla"
+LIMITE_VALOR_M2 = 15000.0  # por encima, el importe suele ser un error de transcripción
+RE_HERRAMIENTA_SUBASTECH = re.compile(r"^mcp__subastech__([a-z0-9_]+)$", re.I)
+
+
+def origen_por_referencia(ref: str | None) -> str:
+    s = (ref or "").upper()
+    if s.startswith("SUB-J"):
+        return "Judicial"
+    if s.startswith("SUB-AT"):
+        return "AEAT"
+    if s.startswith("TGSS"):
+        return "Seguridad Social"
+    if s.startswith("SUB-N"):
+        return "Notarial"
+    if s.startswith("SUB-"):
+        return "Otras administraciones"
+    return "Otra"
+
+
+def estado_subastech(status: str | None) -> str | None:
+    s = (status or "").strip()
+    if not s:
+        return None
+    n = norm(s)
+    if n.startswith("ABIERTA"):
+        return "Abierta"
+    if n.startswith("PROXIM") or n.startswith("PRÒXIM") or "PROXIMA" in n:
+        return "Próxima"
+    if n.startswith("ADJUDICAD"):
+        return "Adjudicada"
+    if n.startswith("DESIERT"):
+        return "Desierta"
+    return s
+
+
+def _num(v) -> float | None:
+    if isinstance(v, bool) or not isinstance(v, (int, float)):
+        return None
+    return float(v) if math.isfinite(v) else None
+
+
+def lote_subastech(it: dict) -> dict | None:
+    """Convierte un elemento de Subastech en columnas de subastech_lotes. No calcula ni corrige importes."""
+    if not isinstance(it, dict) or it.get("id") in (None, ""):
+        return None
+    lot = it.get("lot") if isinstance(it.get("lot"), dict) else {}
+    url = it.get("url") if isinstance(it.get("url"), str) and it["url"].startswith("https://") else None
+    ocup = it.get("occupied")
+    return {
+        "id_subasta": it.get("ref"),
+        "n_lote": lot.get("n") if isinstance(lot.get("n"), int) else None,
+        "total_lotes": lot.get("total") if isinstance(lot.get("total"), int) else None,
+        "origen": origen_por_referencia(it.get("ref")),
+        "tipo_bien": it.get("type"),
+        "provincia": it.get("provincia"),
+        "municipio": it.get("municipio"),
+        "municipio_slug": it.get("municipalitySlug"),
+        "codigo_postal": it.get("cp"),
+        "direccion": it.get("address"),
+        "lat": _num(it.get("lat")),
+        "lon": _num(it.get("lon")),
+        "superficie_m2": _num(it.get("m2")),
+        "valor_subasta": _num(it.get("valueAuction")),
+        "tasacion": _num(it.get("appraisal")),
+        "deposito": _num(it.get("deposit")),
+        "puja_minima": _num(it.get("minimumBid")),
+        "valor_m2": _num(it.get("valueM2")),
+        "descuento_pct": _num(it.get("discount")),
+        "ocupada": "si" if ocup is True else ("no" if ocup is False else None),
+        "fecha_fin": it.get("end"),
+        "estado": estado_subastech(it.get("status")),
+        "fase": it.get("phase"),
+        "resultado": it.get("resultStatus"),
+        "precio_cierre": _num(it.get("finalBid")),
+        "fecha_cierre": it.get("closedAt"),
+        "url_ficha": url,
+    }
+
+
+def items_subastech(datos) -> list[dict]:
+    """Lotes reconocibles en una respuesta: la lista `items` o una ficha suelta con id y ref."""
+    if isinstance(datos, dict):
+        if isinstance(datos.get("items"), list):
+            return [x for x in datos["items"] if isinstance(x, dict) and x.get("id")]
+        if datos.get("id") and datos.get("ref"):
+            return [datos]
+        if isinstance(datos.get("lotes"), list):
+            return [x for x in datos["lotes"] if isinstance(x, dict) and x.get("id") and x.get("ref")]
+    return []
+
+
+def _texto_resultado(contenido) -> str:
+    if isinstance(contenido, str):
+        return contenido
+    if isinstance(contenido, list):
+        return "".join(b.get("text", "") for b in contenido if isinstance(b, dict) and b.get("type") == "text")
+    return ""
+
+
+def leer_transcripcion(ruta: Path) -> list[dict]:
+    """Respuestas del conector de Subastech en un registro de sesión de Claude Code (.jsonl), en orden."""
+    llamadas: dict[str, dict] = {}
+    salida: list[dict] = []
+    with open(ruta, encoding="utf-8", errors="replace") as f:
+        for linea in f:
+            try:
+                o = json.loads(linea)
+            except ValueError:
+                continue
+            msg = o.get("message") if isinstance(o, dict) else None
+            bloques = msg.get("content") if isinstance(msg, dict) else None
+            if not isinstance(bloques, list):
+                continue
+            for b in bloques:
+                if not isinstance(b, dict):
+                    continue
+                if b.get("type") == "tool_use":
+                    m = RE_HERRAMIENTA_SUBASTECH.match(str(b.get("name", "")))
+                    if m and b.get("id"):
+                        llamadas[b["id"]] = {"herramienta": m.group(1).lower(), "argumentos": b.get("input") or {}}
+                elif b.get("type") == "tool_result" and b.get("tool_use_id") in llamadas:
+                    ll = llamadas[b["tool_use_id"]]
+                    salida.append({
+                        "id_llamada": b["tool_use_id"],
+                        "herramienta": ll["herramienta"],
+                        "argumentos": ll["argumentos"],
+                        "momento_consulta": o.get("timestamp") or ahora(),
+                        "texto": _texto_resultado(b.get("content")),
+                        "es_error": bool(b.get("is_error")),
+                    })
+    return salida
+
+
+def transcripcion_reciente() -> Path | None:
+    """El registro de sesión más reciente de Claude Code en esta máquina (~/.claude/projects/*/*.jsonl)."""
+    raiz = Path(os.environ.get("CLAUDE_CONFIG_DIR", Path.home() / ".claude")) / "projects"
+    candidatos = [p for p in raiz.glob("*/*.jsonl") if p.is_file()]
+    return max(candidatos, key=lambda p: p.stat().st_mtime) if candidatos else None
+
+
+def leer_brutos_subastech(dir_brutos: Path) -> list[dict]:
+    """Respuestas guardadas en datos/brutos/subastech (para recargar la base desde los brutos)."""
+    salida = []
+    for p in sorted(dir_brutos.rglob("*.json")):
+        try:
+            d = json.loads(p.read_text(encoding="utf-8"))
+        except ValueError:
+            continue
+        if isinstance(d, dict) and isinstance(d.get("respuesta"), str) and d.get("id_llamada"):
+            salida.append({k: d.get(k) for k in ("id_llamada", "herramienta", "argumentos", "momento_consulta")}
+                          | {"texto": d["respuesta"], "es_error": False, "_ruta": p})
+    return sorted(salida, key=lambda r: str(r.get("momento_consulta") or ""))
+
+
+def registrar_respuesta_subastech(con, r: dict, id_ej: int, origen: str, dir_brutos: Path,
+                                  stats: dict, avisos: list[str]) -> None:
+    if con.execute("SELECT 1 FROM subastech_respuestas WHERE id_llamada=?", (r["id_llamada"],)).fetchone():
+        stats["ya_cargadas"] += 1
+        return
+    if r.get("es_error"):
+        avisos.append(f"Respuesta con error del conector ({r['herramienta']}): {r['texto'][:160]}")
+        return
+    texto = r["texto"] or ""
+    try:
+        datos = json.loads(texto)
+    except ValueError:
+        avisos.append(f"Respuesta de {r['herramienta']} que no es JSON; no se carga: {texto[:120]!r}")
+        return
+    bruto = texto.encode("utf-8")
+    sha = sha256(bruto)
+    momento = str(r.get("momento_consulta") or ahora())
+    ruta = r.get("_ruta")
+    if ruta is None:  # se guarda la respuesta literal junto a la llamada que la produjo
+        dia = momento[:10] if re.match(r"\d{4}-\d{2}-\d{2}", momento) else dt.date.today().isoformat()
+        destino = dir_brutos / dia
+        destino.mkdir(parents=True, exist_ok=True)
+        ruta = destino / f"{r['herramienta']}_{sha[:16]}_{re.sub(r'[^A-Za-z0-9_-]', '', r['id_llamada'])[-12:]}.json"
+        ruta.write_text(json.dumps({
+            "fuente": "Subastech (conector de Claude)",
+            "herramienta": r["herramienta"], "argumentos": r["argumentos"], "momento_consulta": momento,
+            "id_llamada": r["id_llamada"], "sha256_respuesta": sha, "respuesta": texto,
+        }, ensure_ascii=False, indent=1), encoding="utf-8")
+    args = r["argumentos"] if isinstance(r["argumentos"], dict) else {}
+    items = items_subastech(datos)
+    total = datos.get("total") if isinstance(datos, dict) and isinstance(datos.get("total"), int) else None
+    try:
+        ruta_rel = str(Path(ruta).resolve().relative_to(BASE))
+    except ValueError:
+        ruta_rel = str(ruta)
+    con.execute(
+        "INSERT INTO subastech_respuestas (id_llamada, id_ejecucion, herramienta, argumentos, momento_consulta,"
+        " origen, sha256, ruta, bytes, n_items, total, estado_consulta, pagina) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)",
+        (r["id_llamada"], id_ej, r["herramienta"], json.dumps(args, ensure_ascii=False, sort_keys=True), momento,
+         origen, sha, ruta_rel, len(bruto), len(items), total,
+         args.get("estado") or ("adjudicadas" if r["herramienta"] == "resultados_recientes" else None),
+         args.get("pagina") if isinstance(args.get("pagina"), int) else (1 if r["herramienta"] == "buscar_subastas" else None)))
+    stats["respuestas"] += 1
+    if not items and r["herramienta"] in ("buscar_subastas", "resultados_recientes", "subasta"):
+        stats["sin_lotes"] += 1
+    meta = {"fuente": "Subastech", "url_fuente": None, "momento_consulta": momento, "nivel_verificacion": "C"}
+    for it in items:
+        valores = lote_subastech(it)
+        if valores is None:
+            continue
+        ids = str(it["id"])
+        meta["url_fuente"] = valores.get("url_ficha")
+        fila = con.execute("SELECT observado_en FROM subastech_lotes WHERE id_subastech=?", (ids,)).fetchone()
+        if fila is not None and fila["observado_en"] and momento < fila["observado_en"]:
+            # Respuesta más antigua que la ya aplicada: solo rellena huecos, nunca deshace datos más nuevos.
+            actual = con.execute("SELECT * FROM subastech_lotes WHERE id_subastech=?", (ids,)).fetchone()
+            valores = {k: v for k, v in valores.items() if actual[k] is None}
+        res = upsert(con, "subastech_lotes", {"id_subastech": ids}, valores, dict(meta), id_ej, "Subastech")
+        stats["lotes_leidos"] += 1
+        if res == "nuevo":
+            stats["lotes_nuevos"] += 1
+            con.execute("UPDATE subastech_lotes SET primera_vez=? WHERE id_subastech=?", (momento, ids))
+        elif res in ("cambio", "completado"):
+            stats["lotes_actualizados"] += 1
+        con.execute(
+            "UPDATE subastech_lotes SET ultima_vez=MAX(COALESCE(ultima_vez,''),?), "
+            "observado_en=MAX(COALESCE(observado_en,''),?), actualizado_en_fuente=COALESCE(?, actualizado_en_fuente) "
+            "WHERE id_subastech=?", (momento, momento, it.get("contentUpdatedAt"), ids))
+
+
+def activos_no_listados(con) -> list:
+    """Lotes marcados como activos que no salieron en el último listado de activas (sin resultado conocido)."""
+    ult = con.execute("SELECT MAX(momento_consulta) m FROM subastech_respuestas WHERE herramienta='buscar_subastas' "
+                      "AND estado_consulta='activas' AND COALESCE(pagina,1)=1").fetchone()
+    if not ult or not ult["m"]:
+        return []
+    try:  # las páginas de un mismo listado llegan casi a la vez y en cualquier orden: margen de 30 minutos
+        desde = (dt.datetime.fromisoformat(ult["m"].replace("Z", "+00:00")) - dt.timedelta(minutes=30)).isoformat()
+    except ValueError:
+        desde = ult["m"]
+    r = con.execute("SELECT MIN(momento_consulta) m FROM subastech_respuestas WHERE herramienta='buscar_subastas' AND "
+                    "estado_consulta='activas' AND momento_consulta >= ?", (desde,)).fetchone()
+    if not r or not r["m"]:
+        return []
+    return con.execute("SELECT * FROM subastech_lotes WHERE fase='activa' AND ultima_vez < ? ORDER BY fecha_fin",
+                       (r["m"],)).fetchall()
+
+
+def plan_subastech(con) -> list[dict]:
+    """Llamadas al conector que necesita la próxima carga: lo diario más lo que falte del histórico."""
+    plan: list[dict] = []
+    base_args = {"provincia": [SUBASTECH_PROVINCIA], "por_pagina": SUBASTECH_POR_PAGINA}
+
+    def ultimo_total(estado: str) -> int | None:
+        r = con.execute("SELECT total FROM subastech_respuestas WHERE herramienta='buscar_subastas' AND "
+                        "estado_consulta=? AND total IS NOT NULL ORDER BY momento_consulta DESC LIMIT 1",
+                        (estado,)).fetchone()
+        return r["total"] if r else None
+
+    paginas = lambda total: max(1, min(SUBASTECH_MAX_PAGINAS, math.ceil(total / SUBASTECH_POR_PAGINA)))  # noqa: E731
+    t_act = ultimo_total("activas")
+    for p in range(1, (paginas(t_act) if t_act is not None else 1) + 1):
+        plan.append({"herramienta": "buscar_subastas", "motivo": "activas (todas)",
+                     "argumentos": {**base_args, "estado": "activas", "orden": "ending", "pagina": p}})
+    plan.append({"herramienta": "resultados_recientes", "motivo": "últimos remates",
+                 "argumentos": {"provincia": SUBASTECH_PROVINCIA, "limite": 15}})
+    refs = sorted({r["id_subasta"] for r in activos_no_listados(con) if r["id_subasta"]})[:10]
+    for i in range(0, len(refs), 5):
+        plan.append({"herramienta": "buscar_por_codigo", "motivo": "ya no salen entre las activas",
+                     "argumentos": {"codigos": refs[i:i + 5]}})
+    for estado, valor in (("adjudicadas", "Adjudicada"), ("desiertas", "Desierta")):
+        total = ultimo_total(estado)
+        cargados = con.execute("SELECT COUNT(*) n FROM subastech_lotes WHERE estado=?", (valor,)).fetchone()["n"]
+        pags = {1, 2}
+        if total is None:
+            pags = {1}
+        elif cargados < total:  # falta histórico: desde la página donde acaba lo cargado hasta el final
+            pags |= set(range(max(1, cargados // SUBASTECH_POR_PAGINA + 1), paginas(total) + 1))
+        for p in sorted(pags):
+            plan.append({"herramienta": "buscar_subastas",
+                         "motivo": f"{estado} (recientes)" if p <= 2 else f"{estado} (histórico)",
+                         "argumentos": {**base_args, "estado": estado, "pagina": p}})
+    return plan
+
+
+def _mediana(valores: list[float]) -> float | None:
+    v = [x for x in valores if x is not None]
+    return statistics.median(v) if v else None
+
+
+def _eur(v: float | None) -> str:
+    return "—" if v is None else f"{v:,.0f} €".replace(",", ".")
+
+
+def _pct(v: float | None) -> str:
+    return "—" if v is None else f"{v:.0f} %"
+
+
+def informe_subastech(con, id_ej: int, stats: dict, avisos: list[str], dir_datos: Path) -> Path:
+    hoy = dt.date.today().isoformat()
+    q = lambda s, *a: con.execute(s, a).fetchall()  # noqa: E731
+    inicio = q("SELECT inicio FROM ejecuciones WHERE id_ejecucion=?", id_ej)[0]["inicio"]
+    lotes = q("SELECT * FROM subastech_lotes")
+    raro = lambda r: r["valor_m2"] is not None and r["valor_m2"] > LIMITE_VALOR_M2  # noqa: E731
+    ratio = lambda r: (100.0 * r["precio_cierre"] / r["valor_subasta"]  # noqa: E731
+                       if r["precio_cierre"] and r["valor_subasta"] and not raro(r) else None)
+    por_estado: dict[str, int] = {}
+    for r in lotes:
+        por_estado[r["estado"] or "(sin estado)"] = por_estado.get(r["estado"] or "(sin estado)", 0) + 1
+    cierres_nuevos = q(
+        "SELECT DISTINCT clave FROM cambios_historicos WHERE id_ejecucion=? AND tabla='subastech_lotes' "
+        "AND campo='estado' AND valor_nuevo IN ('Adjudicada','Desierta')", id_ej)
+    nuevos_historicos = q("SELECT id_subastech FROM subastech_lotes WHERE primera_vez >= ? AND "
+                          "estado IN ('Adjudicada','Desierta')", inicio)
+    ids_cierre = {r["clave"] for r in cierres_nuevos} | {r["id_subastech"] for r in nuevos_historicos}
+    n_cambios = q("SELECT COUNT(*) n FROM cambios_historicos WHERE id_ejecucion=?", id_ej)[0]["n"]
+
+    L = [f"# SeMá · Subastech · {hoy}", "",
+         "Datos de Subastech (servicio de terceros que recoge las subastas publicadas por la "
+         "[Agencia Estatal Boletín Oficial del Estado](https://www.boe.es)), obtenidos con el conector de Claude. "
+         "Nivel de verificación C: contrástalos en el Portal de Subastas antes de usarlos. "
+         "«Remate» es el precio de cierre que publica Subastech (`finalBid`); «% sobre valor» es el remate dividido "
+         "entre el valor de subasta.", "",
+         "## Esta carga",
+         f"- Respuestas nuevas del conector: {stats['respuestas']} (ya cargadas antes: {stats['ya_cargadas']})",
+         f"- Lotes leídos: {stats['lotes_leidos']} · nuevos: {stats['lotes_nuevos']} · actualizados: "
+         f"{stats['lotes_actualizados']} · cambios registrados: {n_cambios}",
+         f"- Cierres incorporados en esta carga: {len(ids_cierre)}", "",
+         "## La base (acumulado)",
+         "| Estado | Lotes |", "|---|---|"]
+    L += [f"| {k} | {v} |" for k, v in sorted(por_estado.items(), key=lambda kv: -kv[1])] or ["| — | 0 |"]
+    no_listados = activos_no_listados(con)
+    L += ["", "## Cobertura del histórico",
+          "| Consulta | Total que declara Subastech | Cargados en la base |", "|---|---|---|"]
+    for estado, valor in (("activas", None), ("adjudicadas", "Adjudicada"), ("desiertas", "Desierta")):
+        t = q("SELECT total, momento_consulta FROM subastech_respuestas WHERE herramienta='buscar_subastas' AND "
+              "estado_consulta=? AND total IS NOT NULL ORDER BY momento_consulta DESC LIMIT 1", estado)
+        if valor:
+            n = q("SELECT COUNT(*) n FROM subastech_lotes WHERE estado=?", valor)[0]["n"]
+        else:
+            n_act = q("SELECT COUNT(*) n FROM subastech_lotes WHERE fase='activa'")[0]["n"]
+            n = f"{n_act - len(no_listados)}" + (f" (+{len(no_listados)} que ya no salen)" if no_listados else "")
+        L.append(f"| {estado} | {t[0]['total'] if t else '—'}"
+                 f"{' (' + t[0]['momento_consulta'][:10] + ')' if t else ''} | {n} |")
+    zonas: dict[str, dict] = {}
+    for r in lotes:
+        z = zonas.setdefault(r["municipio"] or "(sin municipio)", {"n": 0, "act": 0, "adj": 0, "des": 0, "rat": []})
+        z["n"] += 1
+        z["act"] += r["fase"] == "activa"
+        z["adj"] += r["estado"] == "Adjudicada"
+        z["des"] += r["estado"] == "Desierta"
+        if r["estado"] == "Adjudicada":
+            z["rat"].append(ratio(r))
+    L += ["", "## Zonas con más subastas (municipios)",
+          "| Municipio | Lotes | Activas | Adjudicadas | Desiertas | % adjudicadas | Remate mediano / valor |",
+          "|---|---|---|---|---|---|---|"]
+    for mun, z in sorted(zonas.items(), key=lambda kv: (-kv[1]["n"], kv[0]))[:25]:
+        cerr = z["adj"] + z["des"]
+        L.append(f"| {mun} | {z['n']} | {z['act']} | {z['adj']} | {z['des']} | "
+                 f"{_pct(100.0 * z['adj'] / cerr) if cerr else '—'} | {_pct(_mediana(z['rat']))} |")
+    tipos: dict[str, dict] = {}
+    for r in lotes:
+        if r["estado"] not in ("Adjudicada", "Desierta"):
+            continue
+        t = tipos.setdefault(r["tipo_bien"] or "(sin tipo)", {"adj": 0, "des": 0, "rem": [], "rat": [], "m2": []})
+        if r["estado"] == "Desierta":
+            t["des"] += 1
+            continue
+        t["adj"] += 1
+        if r["precio_cierre"] and not raro(r):
+            t["rem"].append(r["precio_cierre"])
+            t["rat"].append(ratio(r))
+            if r["superficie_m2"]:
+                t["m2"].append(r["precio_cierre"] / r["superficie_m2"])
+    L += ["", "## Precio de cierre por tipo de bien",
+          "| Tipo de bien | Adjudicadas | Desiertas | Remate mediano | Remate mediano / valor | €/m² mediano |",
+          "|---|---|---|---|---|---|"]
+    for tipo, t in sorted(tipos.items(), key=lambda kv: -(kv[1]["adj"] + kv[1]["des"])):
+        L.append(f"| {tipo} | {t['adj']} | {t['des']} | {_eur(_mediana(t['rem']))} | {_pct(_mediana(t['rat']))} | "
+                 f"{_eur(_mediana(t['m2'])).replace(' €', ' €/m²') if t['m2'] else '—'} |")
+    recientes = q("SELECT * FROM subastech_lotes WHERE estado IN ('Adjudicada','Desierta') "
+                  "ORDER BY COALESCE(fecha_cierre, fecha_fin) DESC LIMIT 30")
+    L += ["", "## Últimos cierres",
+          "| Cierre | Municipio | Bien | Valor de subasta | Remate | % sobre valor | Referencia |",
+          "|---|---|---|---|---|---|---|"]
+    for r in recientes:
+        ficha = f"[{r['id_subasta'] or r['id_subastech']}]({r['url_ficha']})" if r["url_ficha"] else (r["id_subasta"] or "")
+        rem = _eur(r["precio_cierre"]) if r["estado"] == "Adjudicada" else "Desierta"
+        L.append(f"| {(r['fecha_cierre'] or r['fecha_fin'] or '')[:10]} | {r['municipio'] or ''} | {r['tipo_bien'] or ''}"
+                 f"{' (lote ' + str(r['n_lote']) + ')' if r['n_lote'] else ''} | {_eur(r['valor_subasta'])} | {rem} | "
+                 f"{_pct(ratio(r))}{' ⚠' if raro(r) else ''} | {ficha} |")
+    ids_no_listados = {r["id_subastech"] for r in no_listados}
+    pendientes = [r for r in q("SELECT id_subastech, id_subasta, municipio, fecha_fin FROM subastech_lotes "
+                               "WHERE fase='activa' AND fecha_fin < ? ORDER BY fecha_fin", ahora())
+                  if r["id_subastech"] not in ids_no_listados]
+    if no_listados:
+        avisos.append(f"{len(no_listados)} lotes marcados como activos ya no salen en el último listado de activas de "
+                      "Subastech y no tienen resultado (pueden estar suspendidos o cancelados; no se les asigna "
+                      "estado): " + ", ".join(f"{r['id_subasta']} ({r['municipio']}, {r['tipo_bien']})"
+                                              for r in no_listados[:15]) + (" …" if len(no_listados) > 15 else ""))
+    n_raros = sum(1 for r in lotes if raro(r))
+    if n_raros:
+        avisos.append(f"{n_raros} lotes con más de {LIMITE_VALOR_M2:,.0f} €/m² de valor de subasta (probable error en "
+                      "el importe): se excluyen de las medianas y se marcan con ⚠.".replace(",", "."))
+    if pendientes:
+        avisos.append(f"{len(pendientes)} lotes ya vencidos siguen como activos en la base (falta su resultado): "
+                      + ", ".join(f"{p['id_subasta']} ({p['municipio']})" for p in pendientes[:15])
+                      + (" …" if len(pendientes) > 15 else ""))
+    if stats["sin_lotes"]:
+        avisos.append(f"{stats['sin_lotes']} respuestas no traían lotes reconocibles (se guardan en bruto igualmente).")
+    L += ["", "## Avisos"] + ([f"- {a}" for a in avisos] or ["- Ninguno"])
+    L += ["", "## Próxima carga (llamadas al conector)",
+          "_Lo genera `python sema.py subastech --plan`: lo diario más las páginas del histórico que faltan._"]
+    L += [f"- `{p['herramienta']}` {json.dumps(p['argumentos'], ensure_ascii=False)} · {p['motivo']}"
+          for p in plan_subastech(con)]
+    dir_inf = dir_datos / "informes"
+    dir_inf.mkdir(parents=True, exist_ok=True)
+    ruta = dir_inf / f"subastech_{hoy}.md"
+    ruta.write_text("\n".join(L) + "\n", encoding="utf-8")
+    (dir_datos / "ultimo_informe_subastech.md").write_text("\n".join(L) + "\n", encoding="utf-8")
+    return ruta
+
+
+def exportar_subastech(con, dir_datos: Path):
+    dest = dir_datos / "export"
+    dest.mkdir(parents=True, exist_ok=True)
+    for nombre, sql in (("subastech_lotes", "SELECT * FROM subastech_lotes ORDER BY id_subastech"),
+                        ("subastech_cierres", "SELECT * FROM v_cierres ORDER BY fecha_cierre DESC"),
+                        ("subastech_zonas", "SELECT * FROM v_zonas ORDER BY lotes DESC, municipio"),
+                        ("subastech_cambios", "SELECT * FROM cambios_historicos ORDER BY id"),
+                        ("subastech_respuestas", "SELECT * FROM subastech_respuestas ORDER BY id")):
+        cur = con.execute(sql)
+        with open(dest / f"{nombre}.csv", "w", newline="", encoding="utf-8-sig") as f:
+            w = csv.writer(f, delimiter=";")
+            w.writerow([d[0] for d in cur.description])
+            w.writerows([tuple(r) for r in cur.fetchall()])
+
+
+def ejecutar_subastech(transcripciones: list[Path], recargar: bool, dir_datos: Path) -> dict:
+    con = conectar(dir_datos / "subastech.sqlite", SUBASTECH_ESQUEMA)
+    dir_brutos = dir_datos / "brutos" / "subastech"
+    avisos: list[str] = []
+    errores: list[str] = []
+    stats = {"respuestas": 0, "ya_cargadas": 0, "sin_lotes": 0, "lotes_leidos": 0, "lotes_nuevos": 0,
+             "lotes_actualizados": 0}
+    cur = con.execute("INSERT INTO ejecuciones (inicio, version, parametros, estado) VALUES (?,?,?,?)",
+                      (ahora(), VERSION, json.dumps({"transcripciones": [p.name for p in transcripciones],
+                                                     "recargar": recargar}), "en_curso"))
+    id_ej = cur.lastrowid
+    con.commit()
+    respuestas: list[tuple[str, dict]] = []
+    if recargar:
+        respuestas += [("brutos", r) for r in leer_brutos_subastech(dir_brutos)]
+    for t in transcripciones:
+        try:
+            respuestas += [("transcripcion", r) for r in leer_transcripcion(t)]
+        except OSError as e:
+            errores.append(f"No se pudo leer {t}: {e}")
+    respuestas.sort(key=lambda x: str(x[1].get("momento_consulta") or ""))
+    for origen, r in respuestas:
+        try:
+            registrar_respuesta_subastech(con, r, id_ej, origen, dir_brutos, stats, avisos)
+            con.commit()
+        except Exception as e:  # una respuesta con error no para el resto
+            con.rollback()
+            errores.append(f"{r.get('herramienta')} {r.get('id_llamada')}: {e.__class__.__name__}: {e}")
+    if not respuestas:
+        avisos.append("No se encontró ninguna respuesta del conector de Subastech que cargar.")
+    estado = "ok" if not errores else "con_errores"
+    n_cambios = con.execute("SELECT COUNT(*) n FROM cambios_historicos WHERE id_ejecucion=?", (id_ej,)).fetchone()["n"]
+    con.execute("UPDATE ejecuciones SET fin=?, n_leidos=?, n_nuevos=?, n_cambios=?, avisos=?, errores=?, estado=?"
+                " WHERE id_ejecucion=?", (ahora(), stats["lotes_leidos"], stats["lotes_nuevos"], n_cambios,
+                                          json.dumps(avisos, ensure_ascii=False), json.dumps(errores, ensure_ascii=False),
+                                          estado, id_ej))
+    con.commit()
+    ruta_inf = informe_subastech(con, id_ej, stats, avisos + [f"ERROR {e}" for e in errores], dir_datos)
+    exportar_subastech(con, dir_datos)
+    con.close()
+    return {"id_ejecucion": id_ej, "estado": estado, "informe": str(ruta_inf), **stats, "cambios": n_cambios,
+            "avisos": avisos, "errores": errores}
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(description="SeMá · Subastas BOE Analytics (Sevilla)")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -945,7 +1488,32 @@ def main(argv=None):
     r.add_argument("--hasta", type=dt.date.fromisoformat)
     r.add_argument("--forzar-justicia", action="store_true")
     r.add_argument("--datos", type=Path, default=Path(os.environ.get("SEMA_DATOS", BASE / "datos")))
+    s = sub.add_parser("subastech", help="Carga en datos/subastech.sqlite las respuestas del conector de Subastech")
+    s.add_argument("--transcripcion", action="append", default=[], metavar="RUTA|auto",
+                   help="Registro de sesión de Claude Code (.jsonl) del que leer las respuestas; 'auto' = el más "
+                        "reciente. Se puede repetir. Si no se indica nada, se usa 'auto'.")
+    s.add_argument("--recargar", action="store_true",
+                   help="Aplica también las respuestas guardadas en datos/brutos/subastech que falten en la base")
+    s.add_argument("--plan", action="store_true", help="Solo muestra las llamadas al conector que tocan hoy")
+    s.add_argument("--datos", type=Path, default=Path(os.environ.get("SEMA_DATOS", BASE / "datos")))
     a = p.parse_args(argv)
+    if a.cmd == "subastech":
+        if a.plan:
+            con = conectar(a.datos / "subastech.sqlite", SUBASTECH_ESQUEMA)
+            print(json.dumps(plan_subastech(con), ensure_ascii=False, indent=1))
+            con.close()
+            return 0
+        rutas: list[Path] = []
+        for t in a.transcripcion or ([] if a.recargar else ["auto"]):
+            ruta = transcripcion_reciente() if t == "auto" else Path(t)
+            if ruta is None:
+                print("No se encontró ningún registro de sesión de Claude Code (~/.claude/projects/*/*.jsonl).",
+                      file=sys.stderr)
+                return 1
+            rutas.append(ruta)
+        res = ejecutar_subastech(rutas, a.recargar, a.datos)
+        print(json.dumps(res, ensure_ascii=False, indent=2))
+        return 0 if res["estado"] in ("ok", "con_errores") else 1
     res = ejecutar(a.desde, a.hasta, a.forzar_justicia, a.datos)
     print(json.dumps(res, ensure_ascii=False, indent=2))
     return 0 if res["estado"] in ("ok", "con_errores") else 1

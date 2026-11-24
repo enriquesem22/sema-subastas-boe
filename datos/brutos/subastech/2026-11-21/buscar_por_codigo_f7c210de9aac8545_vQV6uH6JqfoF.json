@@ -1,0 +1,17 @@
+{
+ "fuente": "Subastech (conector de Claude)",
+ "herramienta": "buscar_por_codigo",
+ "argumentos": {
+  "codigos": [
+   "SUB-AT-2026-26R4186001460",
+   "SUB-AT-2026-26R4186001504",
+   "SUB-AT-2026-26R4186001513",
+   "SUB-AT-2026-26R4186001535",
+   "SUB-AT-2026-26R4186001539"
+  ]
+ },
+ "momento_consulta": "2026-11-21T17:46:12.558Z",
+ "id_llamada": "toolu_01Uq7qL7ayavvQV6uH6JqfoF",
+ "sha256_respuesta": "f7c210de9aac85457f6e7440a563fb6b3865563cdc5f5b55d7dfc5f661e03a2a",
+ "respuesta": "{\"items\":[],\"no_encontrados\":[\"SUB-AT-2026-26R4186001460\",\"SUB-AT-2026-26R4186001504\",\"SUB-AT-2026-26R4186001513\",\"SUB-AT-2026-26R4186001535\",\"SUB-AT-2026-26R4186001539\"]}"
+}
