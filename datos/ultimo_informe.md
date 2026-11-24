@@ -4,7 +4,7 @@ Fuente de los datos: [Agencia Estatal Boletín Oficial del Estado](https://www.b
 
 ## Resumen de esta ejecución
 - Elementos del sumario leídos: 532
-- Registros nuevos (todas las tablas): 2 · Cambios detectados: 0
+- Registros nuevos (todas las tablas): 0 · Cambios detectados: 0
 - Anuncios de subasta acumulados: 488 en España, 100 asociados a Sevilla (0 de ellos sin texto descargado)
 
 ## Días procesados
@@ -41,8 +41,7 @@ Fuente de los datos: [Agencia Estatal Boletín Oficial del Estado](https://www.b
 | ANUNCIOS PARTICULARES · NOTARÍA DE FRANCISCO JAVIER LÓPEZ CANO | 1 |
 | ADMINISTRACIÓN LOCAL · DIPUTACIÓN PROVINCIAL DE SEVILLA ( OPAEF) | 1 |
 
-## Nuevos o actualizados en esta ejecución (1)
-- SUB-JA-2026-266163 · judicial en vía de apremio · TRIBUNALES DE INSTANCIA. SECCIÓN CIVIL · SEVILLA · BOE 2026-11-24 · [fuente](https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38721)
+## Nuevos o actualizados en esta ejecución (0)
 
 ## Cambios detectados (0)
 - Ninguno
