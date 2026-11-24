@@ -1,6 +1,6 @@
 ﻿fecha;estado;formato;http_status;fecha_en_sumario;diarios;n_items_secciones;intentos;momento_consulta;url
-2026-11-24;procesado;json;200;20261124;292;77;1;2026-11-24T20:14:02+00:00;https://www.boe.es/datosabiertos/api/boe/sumario/20261124
-2026-11-23;procesado;json;200;20261123;291;89;1;2026-11-24T20:13:59+00:00;https://www.boe.es/datosabiertos/api/boe/sumario/20261123
+2026-11-24;procesado;json;200;20261124;292;77;2;2026-11-24T23:16:58+00:00;https://www.boe.es/datosabiertos/api/boe/sumario/20261124
+2026-11-23;procesado;json;200;20261123;291;89;2;2026-11-24T23:16:56+00:00;https://www.boe.es/datosabiertos/api/boe/sumario/20261123
 2026-11-22;sin_sumario;json;404;;;;1;2026-11-24T20:13:57+00:00;https://www.boe.es/datosabiertos/api/boe/sumario/20261122
 2026-11-21;procesado;json;200;20261121;290;218;1;2026-11-24T20:13:56+00:00;https://www.boe.es/datosabiertos/api/boe/sumario/20261121
 2026-11-20;procesado;json;200;20261120;289;63;1;2026-11-24T20:13:54+00:00;https://www.boe.es/datosabiertos/api/boe/sumario/20261120
