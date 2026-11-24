@@ -163,6 +163,28 @@ class SubastechTest(unittest.TestCase):
         self.assertEqual(next(h for h in hist if h["fichas"] == 5)["superficie_m2"], 500.0)
         con.close()
 
+    def test_archivos_del_panel_para_drive(self):
+        a = {"provincia": ["sevilla"], "estado": "adjudicadas", "por_pagina": 20, "pagina": 1}
+        t = self.transcripcion("s.jsonl", [
+            ("p1", "buscar_subastas", a, {"items": [item(status="Adjudicada", phase="historica", finalBid=80000.0,
+                                                         municipio="Écija")], "total": 1},
+             "2026-11-24T10:00:00.000Z")])
+        sema.ejecutar_subastech([t], False, self.dir / "datos")
+        panel = self.dir / "datos" / "panel"
+        for nombre in ("lotes", "fichas", "cambios", "cargas"):
+            texto = (panel / f"sema-panel-{nombre}.json").read_text(encoding="utf-8")
+            b64 = (panel / f"sema-panel-{nombre}.b64.txt").read_text(encoding="ascii")
+            self.assertRegex(b64, r"^[A-Za-z0-9+/=]+$")  # una sola línea, sin caracteres que Drive escape
+            self.assertEqual(sema.gzip.decompress(sema.base64.b64decode(b64)).decode("utf-8"), texto)
+            doc = json.loads(texto)
+            self.assertEqual(doc["tabla"], nombre)
+            self.assertTrue(all(len(r) == len(doc["columns"]) for r in doc["rows"]))
+        lotes = json.loads((panel / "sema-panel-lotes.json").read_text(encoding="utf-8"))
+        fila = dict(zip(lotes["columns"], lotes["rows"][0]))
+        self.assertEqual((fila["municipio"], fila["remate"]), ("Écija", 80000.0))
+        # Sin datos/sema.sqlite no se generan las tablas del BOE (no se inventan vacías)
+        self.assertFalse((panel / "sema-panel-boe_expedientes.json").exists())
+
     def test_activo_que_desaparece_del_listado(self):
         a = {"provincia": ["sevilla"], "estado": "activas", "por_pagina": 20, "pagina": 1}
         t = self.transcripcion("s.jsonl", [
