@@ -119,11 +119,13 @@ CREATE TABLE IF NOT EXISTS documentos (
   id_captura INTEGER PRIMARY KEY, id_subasta TEXT, n_lote TEXT, clase TEXT, titulo TEXT, url TEXT,
   pdf_valido INTEGER, paginas INTEGER, metodo_texto TEXT, revisar INTEGER, detalle TEXT
 );
--- Se regeneran en cada ejecución
+-- Se regeneran en cada ejecución. pendientes: una fila por expediente, lote y motivo, con la lista de datos
+-- que faltan; dónde consta cada dato está en datos_ficha.
 CREATE TABLE IF NOT EXISTS pendientes (
-  id_expediente TEXT, id_subasta TEXT, n_lote TEXT, dato TEXT, donde_consta TEXT,
-  fuente_revisada TEXT, motivo TEXT, subastech TEXT, generado_en TEXT
+  id_expediente TEXT, id_subasta TEXT, n_lote TEXT, datos TEXT, n_datos INTEGER, motivo TEXT,
+  fuente_revisada TEXT, con_valor_subastech TEXT, generado_en TEXT
 );
+CREATE TABLE IF NOT EXISTS datos_ficha (dato TEXT PRIMARY KEY, donde_consta TEXT, en_ficha_publica INTEGER);
 CREATE TABLE IF NOT EXISTS cotejo_subastech (
   id_subasta TEXT, n_lote TEXT, campo TEXT, valor_subastech TEXT, valor_boe TEXT, resultado TEXT,
   evidencia_boe TEXT, url_subastech TEXT, generado_en TEXT
@@ -331,8 +333,10 @@ def _recorrer_json(nodo: dict, ctx: dict, items: list):
         if clave == "item":
             for it in lista(valor):
                 if isinstance(it, dict):
+                    pdf = it.get("url_pdf")
+                    pags = (txt(pdf.get("pagina_inicial")) or None, txt(pdf.get("pagina_final")) or None) if isinstance(pdf, dict) else (None, None)
                     items.append(_item(ctx, it.get("identificador"), it.get("control"), it.get("titulo"),
-                                       it.get("url_html"), it.get("url_pdf"), it.get("url_xml")))
+                                       it.get("url_html"), pdf, it.get("url_xml"), pags))
         elif isinstance(valor, (dict, list)):
             for hijo in lista(valor):
                 if not isinstance(hijo, dict):
@@ -368,9 +372,11 @@ def items_sumario_xml(data: bytes) -> tuple[str | None, str | None, list[dict]]:
 def _recorrer_xml(nodo, ctx: dict, items: list):
     for hijo in nodo:
         if hijo.tag == "item":
+            pdf = hijo.find("url_pdf")
+            pags = (pdf.get("pagina_inicial"), pdf.get("pagina_final")) if pdf is not None else (None, None)
             items.append(_item(ctx, hijo.findtext("identificador"), hijo.findtext("control"),
                                hijo.findtext("titulo"), hijo.findtext("url_html"), hijo.findtext("url_pdf"),
-                               hijo.findtext("url_xml")))
+                               hijo.findtext("url_xml"), pags))
             continue
         c = dict(ctx)
         if hijo.tag == "departamento":
@@ -383,9 +389,10 @@ def _recorrer_xml(nodo, ctx: dict, items: list):
         _recorrer_xml(hijo, c, items)
 
 
-def _item(ctx, ident, control, titulo, url_html, url_pdf, url_xml) -> dict:
+def _item(ctx, ident, control, titulo, url_html, url_pdf, url_xml, paginas=(None, None)) -> dict:
     return {**ctx, "id_boe": txt(ident), "control": txt(control) or None, "titulo_sumario": txt(titulo),
-            "url_html": absoluta(txt(url_html)), "url_pdf": absoluta(txt(url_pdf)), "url_xml": absoluta(txt(url_xml))}
+            "url_html": absoluta(txt(url_html)), "url_pdf": absoluta(txt(url_pdf)), "url_xml": absoluta(txt(url_xml)),
+            "pagina_inicial": paginas[0], "pagina_final": paginas[1]}
 
 
 # --------------------------------------------------------------------------- anuncio
@@ -412,9 +419,12 @@ def leer_anuncio_xml(data: bytes) -> dict:
 
 
 def leer_anuncio_html(data: bytes) -> dict:
+    """Página HTML oficial del anuncio (txt.php). Solo cuenta el cuerpo del anuncio, no los menús del BOE."""
     crudo = data.decode("utf-8", errors="replace")
+    m = re.search(r'(?is)<div id="textoxslt">(.*?)<!-- #textoxslt -->', crudo)
+    cuerpo = m.group(1) if m else crudo
     return {"fecha_actualizacion": None, "metadatos": {}, "texto": sema.texto_de_html(data).strip(),
-            "enlaces": [html.unescape(h) for h in re.findall(r'href="([^"]+)"', crudo)]}
+            "enlaces": [html.unescape(h) for h in re.findall(r'href="([^"]+)"', cuerpo)] if m else []}
 
 
 def enlaces_oficiales(it: dict, enlaces: list[str], texto: str) -> list[str]:
@@ -532,7 +542,7 @@ def analizar_anuncio(geo: Geo, it: dict, leido: dict) -> dict:
         "titulo": titulo, "organismo": organismo or None, "fecha_actualizacion": fa_iso,
         "fecha_actualizacion_texto": fa, "pagina_inicial": md.get("pagina_inicial"),
         "pagina_final": md.get("pagina_final"), "enlaces_oficiales": json.dumps(enlaces, ensure_ascii=False),
-        "texto": texto[:20000], "menciona_subasta": int(menciona), "es_inmueble": inmueble, "n_sub": len(subs),
+        "texto": texto[:8000] if menciona else None, "menciona_subasta": int(menciona), "es_inmueble": inmueble, "n_sub": len(subs),
         "ids_subasta": ",".join(sorted(subs)) or None,
         "tipo_subasta_texto": datos.get("tipo_anuncio"),
         "referencia_tipo": ref.group(1).lower() if ref else None, "referencia_texto": ref.group(2).strip() if ref else None,
@@ -543,6 +553,20 @@ def analizar_anuncio(geo: Geo, it: dict, leido: dict) -> dict:
         "ubicacion_evidencia": json.dumps(ubic, ensure_ascii=False) if ubic else None,
         "_subs": subs,
     }
+
+
+def limpiar_version_1_0_0(con):
+    """La primera ejecución guardó el texto de todos los anuncios y, de las páginas HTML, también los enlaces de los
+    menús del BOE. Se deja el texto solo en los anuncios de subasta (el bruto sigue en datos/brutos) y, de los enlaces,
+    solo los del propio anuncio (sus URL del sumario y las que aparecen en su texto). Es idempotente."""
+    con.execute("UPDATE anuncios SET texto=NULL WHERE IFNULL(menciona_subasta,0)=0 AND texto IS NOT NULL")
+    for r in con.execute("SELECT id_boe, url_html, url_pdf, url_xml, texto, enlaces_oficiales FROM anuncios"
+                         " WHERE texto_desde='html' AND enlaces_oficiales IS NOT NULL").fetchall():
+        enl = json.loads(r["enlaces_oficiales"])
+        buenos = [u for u in enl if u in (r["url_html"], r["url_pdf"], r["url_xml"]) or (r["texto"] and u in r["texto"])]
+        if len(buenos) != len(enl):
+            con.execute("UPDATE anuncios SET enlaces_oficiales=? WHERE id_boe=?", (json.dumps(buenos, ensure_ascii=False), r["id_boe"]))
+    con.commit()
 
 
 # --------------------------------------------------------------------------- red
@@ -682,11 +706,12 @@ def procesar_sumario(con, http, fecha: dt.date, id_ej: int, stats: dict, avisos:
         con.execute(
             "INSERT INTO anuncios (id_boe, fecha_publicacion, diario_numero, seccion_codigo, seccion_nombre,"
             " departamento, departamento_codigo, epigrafe, grupo_texto, titulo_sumario, control, url_html, url_pdf,"
-            " url_xml, xml_estado, fuente, url_fuente, momento_consulta, nivel_verificacion, id_ejecucion)"
-            " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,'pendiente',?,?,?,?,?)",
+            " url_xml, pagina_inicial, pagina_final, xml_estado, fuente, url_fuente, momento_consulta, nivel_verificacion,"
+            " id_ejecucion) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,'pendiente',?,?,?,?,?)",
             (it["id_boe"], fecha.isoformat(), it["diario_numero"], it["seccion_codigo"], it["seccion_nombre"],
              it["departamento"], it["departamento_codigo"], it["epigrafe"], it["grupo_texto"], it["titulo_sumario"],
-             it["control"], it["url_html"], it["url_pdf"], it["url_xml"], FUENTE_DIARIO, url, momento, "A1", id_ej))
+             it["control"], it["url_html"], it["url_pdf"], it["url_xml"], it["pagina_inicial"], it["pagina_final"],
+             FUENTE_DIARIO, url, momento, "A1", id_ej))
         stats["nuevos"] += 1
     stats["leidos"] += len(vistos)
     guarda("procesado", formato, status, fecha_sum, ",".join(diarios), None, len(vistos), data)
@@ -696,6 +721,7 @@ def procesar_xml_pendientes(con, http, geo: Geo, id_ej: int, stats: dict, avisos
     filas = con.execute("SELECT * FROM anuncios WHERE xml_estado IN ('pendiente','error') AND xml_intentos < ?"
                         " ORDER BY fecha_publicacion DESC, id_boe LIMIT ?", (MAX_INTENTOS, limite)).fetchall()
     tocados: set[str] = set()
+    alternativas: dict[str, int] = {}
     for n, a in enumerate(filas, 1):
         if n % 100 == 0:  # se guarda el avance: un corte (p. ej. por tiempo) no pierde lo ya leído
             con.commit()
@@ -731,7 +757,8 @@ def procesar_xml_pendientes(con, http, geo: Geo, id_ej: int, stats: dict, avisos
             incidencia(con, "id_no_coincide", it["id_boe"], str(e), it["fecha_publicacion"], it["url_xml"])
             continue
         if fallos:
-            avisos.append(f"{it['id_boe']}: {'; '.join(fallos)}; texto leído de la página HTML del BOE")
+            clave = "; ".join(fallos)
+            alternativas[clave] = alternativas.get(clave, 0) + 1
         subs = d.pop("_subs")
         momento = ahora()
         meta = {"fuente": FUENTE_DIARIO, "url_fuente": it["url_xml"] if desde == "xml" else it["url_html"],
@@ -754,6 +781,9 @@ def procesar_xml_pendientes(con, http, geo: Geo, id_ej: int, stats: dict, avisos
                        it["fecha_publicacion"], it["url_html"])
             tocados.add("BOE:" + it["id_boe"])
         stats["xml_leidos"] = stats.get("xml_leidos", 0) + 1
+    for clave, n in alternativas.items():
+        avisos.append(f"{n} anuncios sin XML ({clave}): su texto se leyó de la página HTML oficial del BOE (txt.php), "
+                      "que publica el mismo anuncio; la fecha de actualización solo consta en el XML")
     return tocados
 
 
@@ -1422,20 +1452,30 @@ def _subastech(dir_datos: Path) -> dict[str, list]:
     return out
 
 
+PENDIENTES_DDL = """CREATE TABLE pendientes (
+  id_expediente TEXT, id_subasta TEXT, n_lote TEXT, datos TEXT, n_datos INTEGER, motivo TEXT,
+  fuente_revisada TEXT, con_valor_subastech TEXT, generado_en TEXT)"""
+
+
 def regenerar_pendientes(con, dir_datos: Path):
-    con.execute("DELETE FROM pendientes")
+    con.execute("DROP TABLE IF EXISTS pendientes")  # tabla derivada: se rehace entera (y con su forma actual)
+    con.execute(PENDIENTES_DDL)
+    con.execute("DELETE FROM datos_ficha")
+    con.executemany("INSERT INTO datos_ficha VALUES (?,?,?)", [(d, w, int(p)) for d, w, p in DATOS_FICHA])
     m = ahora()
     sx = _subastech(dir_datos)
     exps = con.execute("SELECT * FROM expedientes WHERE ambito IN ('ubicacion_en_ambito','sede_en_ambito_ubicacion_pendiente')").fetchall()
     filas = []
     for e in exps:
-        anuncio = con.execute("SELECT url_html, url_xml, referencia_tipo, referencia_texto FROM anuncios WHERE id_boe=?",
+        anuncio = con.execute("SELECT url_html, url_xml, referencia_tipo, referencia_texto, texto_desde FROM anuncios WHERE id_boe=?",
                               (e["primer_anuncio"],)).fetchone()
-        revisada = " ; ".join(x for x in [anuncio["url_xml"] if anuncio else None, anuncio["url_html"] if anuncio else None] if x)
+        revisada = ""
+        if anuncio:
+            revisada = anuncio["url_html"] if anuncio["texto_desde"] == "html" else (anuncio["url_xml"] or anuncio["url_html"])
         if not e["id_subasta"]:
-            filas.append((e["id_expediente"], None, "", "importes, lotes y bienes", "texto del anuncio del BOE (no hay ficha en el Portal)",
-                          revisada, "El anuncio no tiene SUB ni ficha en el Portal; los datos están en su texto y aún no se "
-                          "extraen de forma estructurada", "No aplica", m))
+            filas.append((e["id_expediente"], None, "", "importes, lotes y bienes", 1,
+                          "El anuncio no tiene SUB ni ficha en el Portal; los datos están en su texto y aún no se extraen "
+                          "de forma estructurada", revisada, None, m))
             continue
         sub = e["id_subasta"]
         consultada = con.execute("SELECT GROUP_CONCAT(DISTINCT url) FROM capturas WHERE id_subasta_encabezado=? AND estado='ok'",
@@ -1444,35 +1484,31 @@ def regenerar_pendientes(con, dir_datos: Path):
         for r in con.execute("SELECT DISTINCT n_lote, campo FROM campos WHERE id_subasta=?", (sub,)):
             tiene.setdefault(r["n_lote"] or "", set()).add(r["campo"])
         lotes = sorted((k for k in tiene if k), key=lambda x: (len(x), x)) or [""]
+        todos = set().union(*tiene.values()) if tiene else set()
         ref = f" y su referencia ({anuncio['referencia_tipo']} {anuncio['referencia_texto']})" if anuncio and anuncio["referencia_texto"] else ""
-        for dato, donde, publico in DATOS_FICHA:
-            por_expediente = dato in DATO_EXPEDIENTE
+        if consultada:
+            motivo_pub = "La ficha guardada no muestra este dato"
+        else:
+            motivo_pub = (f"El anuncio {e['primer_anuncio']} solo publica el SUB, la autoridad{ref}; el dato está en la ficha "
+                          "del Portal, que solo se incorpora con una consulta puntual guardada en datos/portal/entrada o con "
+                          "un canal autorizado por la AEBOE")
+        motivo_adj = ("Solo se registra si lo acredita un documento oficial de la autoridad gestora; no se ha incorporado "
+                      "ninguno (Subastech no lo acredita)")
+        grupos: dict[tuple, list] = {}
+        for dato, _donde, publico in DATOS_FICHA:
             buscados = set(CAMPOS_POR_DATO.get(dato, (dato,)))
-            lotes_sin = [lt for lt in ([""] if por_expediente else lotes)
-                         if not buscados & (tiene.get(lt, set()) | tiene.get("", set()) |
-                                            (set().union(*tiene.values()) if por_expediente and tiene else set()))]
-            if not lotes_sin:
-                continue
-            if not publico:
-                motivo = ("Solo se registra si lo acredita un documento oficial de la autoridad gestora; no se ha "
-                          "incorporado ninguno")
-            elif consultada:
-                motivo = "La ficha guardada no muestra este dato"
-            else:
-                motivo = (f"El anuncio {e['primer_anuncio']} solo publica el SUB, la autoridad{ref}; este dato está en la "
-                          "ficha del Portal, que solo se incorpora con una consulta puntual guardada en datos/portal/entrada "
-                          "o con un canal autorizado por la AEBOE")
-            col = SUBASTECH_CAMPO.get(dato)
-            hay_sx = col and any(r[col] not in (None, "") for r in sx.get(sub, []))
-            if hay_sx:
-                nota_sx = "Hay un valor de Subastech sin cotejar: no se usa hasta compararlo con la fuente oficial"
-            elif publico:
-                nota_sx = "No hace falta: lo muestra la ficha pública del Portal"
-            else:
-                nota_sx = "Subastech no lo acredita (no es documento de la autoridad gestora)"
-            for lote in lotes_sin:
-                filas.append((e["id_expediente"], sub, lote, dato, donde,
-                              (consultada + " ; " if consultada else "") + revisada, motivo, nota_sx, m))
+            por_exp = dato in DATO_EXPEDIENTE
+            for lt in ([""] if por_exp else lotes):
+                hay = tiene.get(lt, set()) | tiene.get("", set()) | (todos if por_exp else set())
+                if buscados & hay:
+                    continue
+                grupos.setdefault((lt, motivo_pub if publico else motivo_adj), []).append(dato)
+        fuente = (consultada + " ; " if consultada else "") + revisada
+        for (lt, motivo), datos in grupos.items():
+            con_sx = [d for d in datos if SUBASTECH_CAMPO.get(d) and any(
+                r[SUBASTECH_CAMPO[d]] not in (None, "") for r in sx.get(sub, []))]
+            filas.append((e["id_expediente"], sub, lt, ", ".join(datos), len(datos), motivo, fuente,
+                          ", ".join(con_sx) or None, m))
     con.executemany("INSERT INTO pendientes VALUES (?,?,?,?,?,?,?,?,?)", filas)
 
 
@@ -1530,8 +1566,11 @@ def informe(con, id_ej: int, stats: dict, avisos: list[str], errores: list[str],
     filas = q("SELECT tipo, COUNT(*) n FROM incidencias WHERE resuelta_en IS NULL GROUP BY tipo ORDER BY n DESC")
     L += [f"- {r['tipo']}: {r['n']}" for r in filas] or ["- Ninguna"]
     L += ["", "## Datos pendientes", ""]
-    filas = q("SELECT dato, COUNT(DISTINCT id_expediente) n FROM pendientes GROUP BY dato ORDER BY n DESC")
-    L += [f"- {r['dato']}: {r['n']} expedientes" for r in filas] or ["- Ninguno"]
+    cuenta: dict[str, set] = {}
+    for r in q("SELECT id_expediente, datos FROM pendientes"):
+        for d in (r["datos"] or "").split(", "):
+            cuenta.setdefault(d, set()).add(r["id_expediente"])
+    L += [f"- {d}: {len(s)} expedientes" for d, s in sorted(cuenta.items(), key=lambda x: -len(x[1]))] or ["- Ninguno"]
     disc = q("SELECT COUNT(*) FROM v_discrepancias")[0][0]
     cot = ", ".join(f"{r['resultado']} {r['n']}" for r in q(
         "SELECT resultado, COUNT(*) n FROM cotejo_subastech GROUP BY resultado")) or "sin datos"
@@ -1559,11 +1598,9 @@ PANEL = {
                    " OR (','||IFNULL(ubicacion_provincias,'')||',') GLOB '*,41,*' OR (','||IFNULL(ubicacion_provincias,'')||',') GLOB '*,21,*'))"
                    " OR (xml_estado<>'ok' AND fecha_publicacion >= date('now', '-30 day')))"
                    " ORDER BY fecha_publicacion DESC, id_boe",
-    "df_pendientes": "SELECT id_expediente, id_subasta, n_lote, COUNT(*) AS n_datos, GROUP_CONCAT(dato, ', ') AS datos_pendientes,"
-                     " MAX(CASE WHEN dato <> 'importe_adjudicacion' THEN motivo END) AS motivo,"
-                     " GROUP_CONCAT(CASE WHEN subastech LIKE 'Hay un valor%' THEN dato END, ', ') AS con_valor_subastech_sin_cotejar,"
-                     " MAX(fuente_revisada) AS fuente_revisada FROM pendientes GROUP BY id_expediente, n_lote"
-                     " ORDER BY id_expediente, n_lote",
+    "df_pendientes": "SELECT id_expediente, id_subasta, n_lote, n_datos, datos AS datos_pendientes, motivo,"
+                     " con_valor_subastech AS con_valor_subastech_sin_cotejar, fuente_revisada FROM pendientes"
+                     " ORDER BY id_expediente, n_lote, motivo",
     "df_incidencias": "SELECT tipo, clave, fecha, detalle, url, primera_vez, ultima_vez, veces, resuelta_en FROM incidencias"
                       " ORDER BY resuelta_en IS NOT NULL, ultima_vez DESC",
     "df_bienes": "SELECT * FROM v_bienes ORDER BY id_subasta, n_lote, CAST(n_bien AS INTEGER)",
@@ -1621,6 +1658,7 @@ def ejecutar(desde: dt.date | None, hasta: dt.date | None, dir_datos: Path, http
     geo = Geo()
     tocados: set[str] = set()
     estado = "ok"
+    limpiar_version_1_0_0(con)
     try:
         if not solo_portal:
             http = (http_factory or HttpDiario)(con, id_ej, dir_datos / "brutos" / "dealfinder", avisos)
@@ -1674,5 +1712,6 @@ def ejecutar(desde: dt.date | None, hasta: dt.date | None, dir_datos: Path, http
     con.commit()
     ruta = informe(con, id_ej, stats, avisos, errores, dir_datos)
     exportar(con, dir_datos)
+    con.execute("VACUUM")  # la base va al repositorio en cada ejecución: sin huecos
     con.close()
     return {"id_ejecucion": id_ej, "estado": estado, "informe": str(ruta), **stats, "avisos": avisos[:30], "errores": errores}

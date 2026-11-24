@@ -268,12 +268,15 @@ class DealFinderTest(unittest.TestCase):
         self.assertEqual((e["ambito"], e["ubicacion_estado"], e["sede_provincia"]),
                          ("sede_en_ambito_ubicacion_pendiente", "pendiente", "41"))
         self.assertEqual(e["referencia_anuncio"], "identificación 2927000006060917")
-        p = con.execute("SELECT * FROM pendientes WHERE id_subasta='SUB-JA-2026-239881' AND dato='ubicacion_bien'").fetchone()
+        p = con.execute("SELECT * FROM pendientes WHERE id_subasta='SUB-JA-2026-239881' AND datos LIKE '%ubicacion_bien%'").fetchone()
         self.assertIn("BOE-B-2026-34558", p["motivo"])
         self.assertIn(XML + "BOE-B-2026-34558", p["fuente_revisada"])
         # notaría: el XML falló (HTTP 500) y se leyó la página HTML del BOE
         n = con.execute("SELECT * FROM anuncios WHERE id_boe='BOE-B-2026-34802'").fetchone()
         self.assertEqual((n["xml_estado"], n["texto_desde"], n["ids_subasta"]), ("ok", "html", "SUB-NN-2026-1646099"))
+        self.assertTrue(all("boe.es" in u for u in json.loads(n["enlaces_oficiales"])))
+        self.assertIsNone(con.execute("SELECT texto FROM anuncios WHERE id_boe='BOE-B-2026-34797'").fetchone()[0])
+        self.assertEqual(n["pagina_inicial"], "56454")  # del sumario: la página HTML no la da
         # anuncios sin SUB que tratan de inmuebles, con la ubicación que escribe el propio anuncio
         madrid = con.execute("SELECT * FROM expedientes WHERE id_expediente='BOE:BOE-B-2026-35273'").fetchone()
         self.assertEqual((madrid["ambito"], madrid["provincias_bien"]), ("ubicacion_en_ambito", "28"))
@@ -355,7 +358,7 @@ class DealFinderTest(unittest.TestCase):
         mal = con.execute("SELECT * FROM capturas WHERE archivo LIKE '%equivocada%'").fetchone()
         self.assertEqual((mal["estado"], mal["coincide"]), ("sub_no_coincide", 0))
         self.assertEqual(con.execute("SELECT COUNT(*) FROM campos WHERE id_captura=?", (mal["id_captura"],)).fetchone()[0], 0)
-        pend = {x["dato"] for x in con.execute("SELECT dato FROM pendientes WHERE id_subasta=?", (SUB_CARMONA,))}
+        pend = {d for x in con.execute("SELECT datos FROM pendientes WHERE id_subasta=?", (SUB_CARMONA,)) for d in x["datos"].split(", ")}
         self.assertNotIn("ubicacion_bien", pend)
         self.assertNotIn("cuenta_expediente", pend)
         self.assertIn("autoridad_codigo", pend)
@@ -398,8 +401,9 @@ class DealFinderTest(unittest.TestCase):
         sx.close()
         self.run_df()
         con = self.db()
-        p = con.execute("SELECT subastech FROM pendientes WHERE id_subasta='SUB-AT-2026-26R4186002046' AND dato='valor_subasta'").fetchone()
-        self.assertIn("sin cotejar", p[0])
+        p = con.execute("SELECT con_valor_subastech FROM pendientes WHERE id_subasta='SUB-AT-2026-26R4186002046'"
+                        " AND datos LIKE '%valor_subasta%'").fetchone()
+        self.assertIn("valor_subasta", p[0])
         self.assertEqual(con.execute("SELECT COUNT(*) FROM campos").fetchone()[0], 0)  # nunca se copia como dato del BOE
         con.close()
         self.poner(f"2026-11-25/{SUB_CARMONA}/general.html", ficha_general())
