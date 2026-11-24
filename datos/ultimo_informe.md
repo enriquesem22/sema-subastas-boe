@@ -3,35 +3,35 @@
 Fuente de los datos: [Agencia Estatal Boletín Oficial del Estado](https://www.boe.es) y [Ministerio de Justicia (datos.gob.es)](https://datos.gob.es). Niveles: A1 = BOE oficial · A2 = CSV oficial de Justicia · B = tercero · C = manual.
 
 ## Resumen de esta ejecución
-- Elementos del sumario leídos: 328
-- Registros nuevos (todas las tablas): 0 · Cambios detectados: 0
-- Anuncios de subasta acumulados: 487 en España, 99 asociados a Sevilla (0 de ellos sin texto descargado)
+- Elementos del sumario leídos: 532
+- Registros nuevos (todas las tablas): 2 · Cambios detectados: 0
+- Anuncios de subasta acumulados: 488 en España, 100 asociados a Sevilla (0 de ellos sin texto descargado)
 
 ## Días procesados
 | Fecha | Resultado | Elementos | Subastas (España) | Sevilla |
 |---|---|---|---|---|
-| 2026-11-22 | sin_publicacion | 0 | 0 | 0 |
 | 2026-11-23 | procesado | 328 | 2 | 1 |
+| 2026-11-24 | procesado | 204 | 1 | 1 |
 
 ## Expedientes de Sevilla en la base (acumulado)
 | Prefijo del identificador | Expedientes |
 |---|---|
 | AT | 63 |
-| JA | 34 |
+| JA | 35 |
 | RC | 1 |
 | NN | 1 |
 
 | Tipo de subasta (literal del anuncio) | Expedientes |
 |---|---|
 | administrativa de la Agencia Estatal de Administración Tributaria | 63 |
-| judicial en vía de apremio | 34 |
+| judicial en vía de apremio | 35 |
 | notarial | 1 |
 | administrativa | 1 |
 
 | Autoridad gestora (literal del BOE) | Expedientes |
 |---|---|
 | MINISTERIO DE HACIENDA · U.R. SUBASTAS ANDALUCÍA 41 | 63 |
-| TRIBUNALES DE INSTANCIA. SECCIÓN CIVIL · SEVILLA | 19 |
+| TRIBUNALES DE INSTANCIA. SECCIÓN CIVIL · SEVILLA | 20 |
 | TRIBUNALES DE INSTANCIA. SECCIÓN CIVIL Y DE INSTRUCCIÓN · CARMONA | 6 |
 | TRIBUNALES DE INSTANCIA. SECCIÓN CIVIL Y DE INSTRUCCIÓN · LEBRIJA | 3 |
 | TRIBUNALES DE INSTANCIA. SECCIÓN CIVIL Y DE INSTRUCCIÓN · MORON DE LA FRONTERA | 2 |
@@ -41,7 +41,8 @@ Fuente de los datos: [Agencia Estatal Boletín Oficial del Estado](https://www.b
 | ANUNCIOS PARTICULARES · NOTARÍA DE FRANCISCO JAVIER LÓPEZ CANO | 1 |
 | ADMINISTRACIÓN LOCAL · DIPUTACIÓN PROVINCIAL DE SEVILLA ( OPAEF) | 1 |
 
-## Nuevos o actualizados en esta ejecución (0)
+## Nuevos o actualizados en esta ejecución (1)
+- SUB-JA-2026-266163 · judicial en vía de apremio · TRIBUNALES DE INSTANCIA. SECCIÓN CIVIL · SEVILLA · BOE 2026-11-24 · [fuente](https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-38721)
 
 ## Cambios detectados (0)
 - Ninguno
