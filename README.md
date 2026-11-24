@@ -47,7 +47,23 @@ fecha de cierre. Sus datos se guardan aparte, en `datos/subastech.sqlite`, con `
 
 Una tarea programada de Claude hace la carga diaria: sigue el plan, ejecuta `python sema.py subastech` y sube los
 archivos de Subastech a `main`. No toca `datos/sema.sqlite`, así que nunca choca con la ejecución del BOE en GitHub
-Actions.
+Actions. Después deja los datos del panel en Google Drive (ver abajo).
+
+## Panel en Claude (datos leídos de Google Drive)
+
+El panel «Subastas de inmuebles en Sevilla» es un artefacto de Claude con tres pestañas: las subastas activas (en
+directo con el conector de Subastech), el histórico de cierres y un explorador de todas las tablas de la base. El
+panel no guarda copia de los datos: los lee en directo, con el conector de Google Drive de quien lo abre, de la carpeta
+«SeMá · Subastas Sevilla (datos del panel)». Este repositorio sigue siendo la fuente de verdad.
+
+- `python sema.py panel` regenera `datos/panel/` (no se sube a GitHub) a partir de las dos bases: un
+  `sema-panel-<tabla>.json` legible y un `sema-panel-<tabla>.b64.txt`, que es el mismo JSON comprimido con gzip y en
+  base64. Drive solo devuelve el texto de los archivos, y así llega intacto y pesa menos.
+- Tablas: `lotes` (histórico agrupado), `fichas` (`subastech_lotes`), `cambios`, `cargas` (`subastech_respuestas`),
+  `boe_expedientes` y `boe_anuncios` (de `datos/sema.sqlite`). Los límites municipales (`sema-panel-limites.b64.txt`)
+  se subieron una vez y no cambian.
+- La tarea diaria sube a la carpeta los seis archivos nuevos y deja solo la copia anterior de cada uno, que el panel
+  usa mientras Drive prepara el contenido del nuevo.
 
 ## Cómo se asegura la fiabilidad
 
@@ -96,6 +112,7 @@ python sema.py run --desde 2026-10-01   # recargar un rango
 python sema.py run --forzar-justicia    # incluir el CSV de Justicia hoy
 python sema.py subastech --plan         # llamadas al conector de Subastech que tocan hoy
 python sema.py subastech                # carga las respuestas del conector de la sesión de Claude más reciente
+python sema.py panel                    # regenera los archivos del panel (datos/panel)
 python -m unittest discover -s tests    # pruebas sin red
 ```
 

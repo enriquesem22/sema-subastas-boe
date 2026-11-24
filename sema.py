@@ -21,6 +21,7 @@ Uso:  python sema.py run [--desde AAAA-MM-DD] [--hasta AAAA-MM-DD] [--forzar-jus
 from __future__ import annotations
 
 import argparse
+import base64
 import csv
 import datetime as dt
 import gzip
@@ -1477,6 +1478,63 @@ def exportar_subastech(con, dir_datos: Path):
             w.writerow([d[0] for d in cur.description])
             w.writerows([tuple(r) for r in cur.fetchall()])
     exportar_historico_json(con, dest / "subastech_historico.json")
+    exportar_panel(con, dir_datos)
+
+
+PANEL_TABLAS = {
+    # nombre: (título, base, consulta). Las columnas constantes o repetidas se omiten (ver README).
+    "lotes": ("Lotes (fichas del mismo lote agrupadas)", "subastech", None),
+    "fichas": ("Fichas de Subastech", "subastech",
+               "SELECT id_subastech, id_subasta, n_lote, total_lotes, origen, tipo_bien, municipio, codigo_postal, "
+               "direccion, lat, lon, superficie_m2, valor_subasta, tasacion, deposito, puja_minima, valor_m2, "
+               "descuento_pct, ocupada, fecha_fin, estado, fase, resultado, precio_cierre, fecha_cierre, url_ficha, "
+               "primera_vez, ultima_vez FROM subastech_lotes ORDER BY COALESCE(fecha_cierre, fecha_fin) DESC"),
+    "cambios": ("Cambios detectados", "subastech",
+                "SELECT id, tabla, clave, campo, valor_anterior, valor_nuevo, detectado_en, id_ejecucion, fuente "
+                "FROM cambios_historicos ORDER BY id DESC"),
+    "cargas": ("Respuestas del conector cargadas", "subastech",
+               "SELECT id, id_ejecucion, herramienta, argumentos, momento_consulta, origen, sha256, ruta, bytes, "
+               "n_items, total, estado_consulta, pagina FROM subastech_respuestas ORDER BY id DESC"),
+    "boe_expedientes": ("Expedientes de Sevilla anunciados en el BOE", "boe",
+                        "SELECT id_subasta, prefijo, tipo_anuncio, autoridad_gestora, id_anuncio_boe, "
+                        "fecha_publicacion_boe, lugar_firma, fecha_firma, estado, motivo_sevilla, nota, url_fuente, "
+                        "nivel_verificacion FROM expedientes ORDER BY fecha_publicacion_boe DESC, id_subasta"),
+    "boe_anuncios": ("Anuncios de subasta del BOE asociados a Sevilla", "boe",
+                     "SELECT id_boe, fecha_publicacion, seccion_nombre, departamento, epigrafe, titulo, url_html, "
+                     "motivo_sevilla, ids_subasta, nivel_verificacion FROM anuncios_boe "
+                     "WHERE motivo_sevilla IS NOT NULL ORDER BY fecha_publicacion DESC, id_boe"),
+}
+
+
+def exportar_panel(con, dir_datos: Path):
+    """Tablas en JSON compacto ({columns, rows}) para que el panel del artefacto las lea desde Google Drive."""
+    dest = dir_datos / "panel"
+    dest.mkdir(parents=True, exist_ok=True)
+    boe = None
+    if (dir_datos / "sema.sqlite").exists():
+        boe = sqlite3.connect(f"file:{dir_datos / 'sema.sqlite'}?mode=ro", uri=True)
+    generado = ahora()
+    for nombre, (titulo, base, sql) in PANEL_TABLAS.items():
+        if nombre == "lotes":
+            filas = json.loads((dir_datos / "export" / "subastech_historico.json").read_text(encoding="utf-8"))
+            cols = list(filas[0].keys()) if filas else []
+            rows = [[f.get(c) for c in cols] for f in filas]
+        else:
+            c = con if base == "subastech" else boe
+            if c is None:
+                continue
+            cur = c.execute(sql)
+            cols = [d[0] for d in cur.description]
+            rows = [list(r) for r in cur.fetchall()]
+        doc = {"tabla": nombre, "titulo": titulo, "generado": generado, "columns": cols, "rows": rows}
+        texto = json.dumps(doc, ensure_ascii=False, separators=(",", ":"))
+        (dest / f"sema-panel-{nombre}.json").write_text(texto, encoding="utf-8")
+        # Copia para Google Drive: JSON comprimido con gzip y en base64, en una sola línea de texto. Así el
+        # panel lo lee exacto con read_file_content aunque Drive añada escapes de formato al texto.
+        (dest / f"sema-panel-{nombre}.b64.txt").write_text(
+            base64.b64encode(gzip.compress(texto.encode("utf-8"), 9, mtime=0)).decode("ascii"), encoding="ascii")
+    if boe is not None:
+        boe.close()
 
 
 def exportar_historico_json(con, ruta: Path):
@@ -1563,8 +1621,17 @@ def main(argv=None):
     s.add_argument("--recargar", action="store_true",
                    help="Aplica también las respuestas guardadas en datos/brutos/subastech que falten en la base")
     s.add_argument("--plan", action="store_true", help="Solo muestra las llamadas al conector que tocan hoy")
+    pn = sub.add_parser("panel", help="Regenera los CSV y los archivos JSON del panel (datos/panel) sin cargar nada")
+    pn.add_argument("--datos", type=Path, default=Path(os.environ.get("SEMA_DATOS", BASE / "datos")))
     s.add_argument("--datos", type=Path, default=Path(os.environ.get("SEMA_DATOS", BASE / "datos")))
     a = p.parse_args(argv)
+    if a.cmd == "panel":
+        con = conectar(a.datos / "subastech.sqlite", SUBASTECH_ESQUEMA)
+        exportar_subastech(con, a.datos)
+        con.close()
+        for f in sorted((a.datos / "panel").glob("*.json")):
+            print(f"{f.name}\t{f.stat().st_size} bytes")
+        return 0
     if a.cmd == "subastech":
         if a.plan:
             con = conectar(a.datos / "subastech.sqlite", SUBASTECH_ESQUEMA)
