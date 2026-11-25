@@ -17,9 +17,13 @@ Base de datos auditable de las subastas que se celebran en el **Portal de Subast
 | 4 | `portal_geo.py` | Coordenadas de cada inmueble (Catastro y CartoCiudad) y nueva base | `datos/portal/geo/` |
 | 5 | Tarea programada de Claude | Subir `datos/panel/sema-panel-sp_*.b64.txt` a la carpeta de Drive del panel y la copia de la base `datos/panel/subastas.sqlite.gz` a la carpeta «Sema Deal Finder» | Panel y copia en Drive |
 
-**Cada día, a las 10:13 (hora de Madrid)**, la tarea programada de Claude «SeMá · Panel y copia de la base a Drive»
-lanza el flujo de GitHub (pasos 1 a 4), espera a que termine y hace el paso 5. Si el flujo falla, sube lo que haya y
-lo dice en su resumen. El flujo no tiene programación propia en GitHub porque esta llega a retrasarse horas.
+**Cada día:**
+- **GitHub, de madrugada** (pasos 1 a 4): el flujo está programado a las 01:17 y a las 04:47 UTC. Son dos intentos
+  porque GitHub puede retrasar mucho los programados; si el primero ya descargó ese día, el segundo no repite nada.
+- **Claude, a las 13:13 (hora de Madrid)** (paso 5): la tarea programada «SeMá · Subida diaria a Drive» comprueba que
+  la descarga del día está en `main` (si no, espera hasta una hora), rehace la base y sube las tablas del panel y la
+  copia de la base. Si la descarga del día no llega, sube la última que haya y lo avisa. Una tarea programada de Claude
+  no puede lanzar flujos de GitHub (no tiene sus herramientas), por eso cada parte tiene su propio horario.
 
 Los pasos 1 a 4 los hace el flujo de GitHub **«Portal de Subastas (códigos y fichas)»** (`.github/workflows/portal.yml`):
 Actions → el flujo → *Run workflow*, con el código de provincia (41 Sevilla, 28 Madrid, 08 Barcelona, 21 Huelva). Solo se
