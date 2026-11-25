@@ -1,0 +1,273 @@
+{
+  "sub": "SUB-JA-2026-268332",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268332",
+  "consultado_utc": "2026-11-25T19:11:34+00:00",
+  "captura_codigos": "41/20261125_200830",
+  "peticiones": 8,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "RONDA DE LA TRINIDAD Nº 20",
+      "localidad": "MORON DE LA FRONTERA",
+      "provincia": "Sevilla",
+      "codigo_postal": "41530",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-268332/20261125_201125/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268332&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-268332/20261125_201125/portal/general.html.gz",
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268332",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268332",
+      "consultado_utc": "2026-11-25T19:11:25+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "76bfd3e76e178af9c65829746892ed8e6f3a0248784cff90d08daf4fdbf43b46",
+      "bytes": 10681,
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-268332"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "3983 0000 06 0163 22"
+          ],
+          [
+            "Fecha de inicio",
+            "10-11-2026 18:00:00 CET  (ISO: 2026-11-10T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "30-11-2026 18:00:00 CET (ISO: 2026-11-30T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "78.913,26 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-36390"
+          ],
+          [
+            "Valor subasta",
+            "146.160,00 €"
+          ],
+          [
+            "Tasación",
+            "0,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "2.923,20 €"
+          ],
+          [
+            "Importe del depósito",
+            "7.308,00 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268332/20261125_201125/portal/autoridad.html.gz",
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268332&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268332&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:11:26+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "3a57c9ea9c0d07da14de16c7d38e5d1f2d757bc181c2c9de9bdb97fa121f3b5f",
+      "bytes": 8991,
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4106541001"
+          ],
+          [
+            "Descripción",
+            "Sec. Civil e Inst. TI Morón de la Frontera Plz.n 1"
+          ],
+          [
+            "Dirección",
+            "CL NAVIO S/N 11   ; 41530 MORON DE LA FRONTERA"
+          ],
+          [
+            "Teléfono",
+            "955136126"
+          ],
+          [
+            "Fax",
+            "955859570"
+          ],
+          [
+            "Correo electrónico",
+            "mariag.gonzalez.ius@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268332/20261125_201125/portal/bienes.html.gz",
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268332&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268332&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:11:27+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "10c059b31020cd3fa81211274889869def653d26eedabe425404330f09d9fdfa",
+      "bytes": 9868,
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "EDICTO SUBASTA FINCA Nº 13.345 REGISTRO MORON DE LA FRONTERA"
+          ],
+          [
+            "Dirección",
+            "RONDA DE LA TRINIDAD Nº 20"
+          ],
+          [
+            "Código Postal",
+            "41530"
+          ],
+          [
+            "Localidad",
+            "MORON DE LA FRONTERA"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268332/20261125_201125/portal/pujas.html.gz",
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268332&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268332&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:11:28+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "6207df6b023a4575e3f059a80b1fc76dfc98815c8a96ba3aed89da7a751c2423",
+      "bytes": 8469,
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/a89ee5a3956278ba1273ec333ba2a90622649bf302dccf2287359af333e17270.pdf",
+      "etiqueta": "CERTIFICACION DE CARGAS",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-abcb85b1899ec80b3fa51e853f3f57a0",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268332&idDoc=2-abcb85b1899ec80b3fa51e853f3f57a0",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268332&idDoc=2-abcb85b1899ec80b3fa51e853f3f57a0",
+      "consultado_utc": "2026-11-25T19:11:29+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "a89ee5a3956278ba1273ec333ba2a90622649bf302dccf2287359af333e17270",
+      "bytes": 13396409
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-36390",
+      "publicado": "2026-11-07",
+      "actualizado_fuente": "20261107071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-36390.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36390",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36390",
+          "consultado_utc": "2026-11-25T19:11:32+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "20bb6e86d3b0b7b5707ee5ff522b281755ca6b350ac454acd0da220d1da87f17",
+          "bytes": 1199
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-36390.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/07/pdfs/BOE-B-2026-36390.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/07/pdfs/BOE-B-2026-36390.pdf",
+          "consultado_utc": "2026-11-25T19:11:32+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "489ef928a105a9f33ea17429a593e98802f35944c572ca72375463a2d0de747a",
+          "bytes": 198623
+        }
+      ],
+      "aviso": null,
+      "reutilizado": false
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268332",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

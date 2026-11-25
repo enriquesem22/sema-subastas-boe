@@ -1,0 +1,299 @@
+{
+  "sub": "SUB-JA-2026-268195",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268195",
+  "consultado_utc": "2026-11-25T19:11:00+00:00",
+  "captura_codigos": "41/20261125_200830",
+  "peticiones": 9,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "CALLE NAOS Nº12  - ESC. 1 -2º  IZDA.",
+      "localidad": "SEVILLA",
+      "provincia": "Sevilla",
+      "codigo_postal": "41011",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-268195/20261125_201050/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268195&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-268195/20261125_201050/portal/general.html.gz",
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268195",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268195",
+      "consultado_utc": "2026-11-25T19:10:50+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "34d072e0571c194d36c187d281409fd5be15d7f3800396b7e71e1ee8d1e1f910",
+      "bytes": 10872,
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-268195"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "4119 0000 06 0294 21"
+          ],
+          [
+            "Fecha de inicio",
+            "17-11-2026 18:00:00 CET  (ISO: 2026-11-17T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "07-12-2026 18:00:00 CET (ISO: 2026-12-07T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "45.377,42 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-37367"
+          ],
+          [
+            "Valor subasta",
+            "113.000,00 €"
+          ],
+          [
+            "Tasación",
+            "0,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "2.260,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "5.650,00 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268195/20261125_201050/portal/autoridad.html.gz",
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268195&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268195&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:10:52+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "c0c957dbfe8c25fb94030f85e53b6dcac46b04ab9424bc266462984dd39f66f4",
+      "bytes": 8978,
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4109142021"
+          ],
+          [
+            "Descripción",
+            "Sección Civil TI Sevilla. Plz.n 21"
+          ],
+          [
+            "Dirección",
+            "CL VERMONDO RESTA S/N S/N   ; 41018 SEVILLA"
+          ],
+          [
+            "Teléfono",
+            "676767711"
+          ],
+          [
+            "Fax",
+            "955514038"
+          ],
+          [
+            "Correo electrónico",
+            "scej.subastas.sevilla.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268195/20261125_201050/portal/bienes.html.gz",
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268195&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268195&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:10:53+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "998aad46655b4ea8c846af64de330f1652911a12769952bd055ea2f0c2f78c93",
+      "bytes": 11449,
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "\"URBANA: Número ciento catorce. Piso segundo izquierda de la casa en Sevilla, calle Naos número ciento doce, actualmente número doce, manzana número cuatro. Tiene una superficie de ochenta metros cuadrados edificada. Consta de comedor, tres dormitorios, cocina, cuarto de baño, vestíbulos, lavaderos y terrazas. Linda: al Norte, con el bloque edificado número veinticuatro de calle Naos, número diez; al Sur, con el piso ciento trece o segundo derecha; al Este, con calle Naos, por donde tiene su entrada; y al Oeste, con el patio interior. Su cuota de participación en la comunidad es de dieciséis enteros, sesenta y seis centésimas por ciento."
+          ],
+          [
+            "IDUFIR",
+            "41028000153691"
+          ],
+          [
+            "Referencia catastral",
+            "4410306TG344150005AI"
+          ],
+          [
+            "Dirección",
+            "CALLE NAOS Nº12  - ESC. 1 -2º  IZDA."
+          ],
+          [
+            "Código Postal",
+            "41011"
+          ],
+          [
+            "Localidad",
+            "SEVILLA"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "Sí"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No"
+          ],
+          [
+            "Cargas",
+            "El bien subastado tiene una carga previa. La hipoteca que se ejcuta es la inscripción 8ª, recogida en el certificado de dominio y cargas."
+          ],
+          [
+            "Inscripción registral",
+            "REGISTRO DE LA PROPIEDAD Nº 2 DE SEVILLA FINCA REGISTRAL Nº 9921 , TOMO 1.533, LIBRO 941, FOLIO 209."
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268195/20261125_201050/portal/pujas.html.gz",
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268195&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268195&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:10:54+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "29031e9eecf6b1634dd01d7f29256bdad7f4f5e931ce73e729454de09fecd84b",
+      "bytes": 8530,
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/5f34ccffe92f0c976ecd76300ecc0c17b82761f82b5043f3dc75d34871ebb8af.pdf",
+      "etiqueta": "edicto subasta inmueble ejecución hipotecaria 294/21 Sección Civil del Tribunal de Instancia de Sevilla. Plaza nº 21, Finca registral nº 9921.",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "1-442c6f5a5942b5ea1e51ee2d0af48fd7",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268195&idDoc=1-442c6f5a5942b5ea1e51ee2d0af48fd7",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268195&idDoc=1-442c6f5a5942b5ea1e51ee2d0af48fd7",
+      "consultado_utc": "2026-11-25T19:10:55+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "5f34ccffe92f0c976ecd76300ecc0c17b82761f82b5043f3dc75d34871ebb8af",
+      "bytes": 368391
+    },
+    {
+      "archivo": "documentos/6d7e31d35e6060f32f6f42b30d7d28757ac864c34ef6e8a22103a9c74b501319.pdf",
+      "etiqueta": "Certificado de dominio y cargas Finca Registral nº 9921",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-7ecc0e8d9c2a7c05fff219915ab9e1cd",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268195&idDoc=2-7ecc0e8d9c2a7c05fff219915ab9e1cd",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268195&idDoc=2-7ecc0e8d9c2a7c05fff219915ab9e1cd",
+      "consultado_utc": "2026-11-25T19:10:57+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "6d7e31d35e6060f32f6f42b30d7d28757ac864c34ef6e8a22103a9c74b501319",
+      "bytes": 316040
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-37367",
+      "publicado": "2026-11-14",
+      "actualizado_fuente": "20261114071539",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-37367.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37367",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37367",
+          "consultado_utc": "2026-11-25T19:10:58+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "008841cae70edd37f8cfb4aec6c10735a4a1236a712ab86c9c1d66679f26ce7d",
+          "bytes": 1139
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-37367.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/14/pdfs/BOE-B-2026-37367.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/14/pdfs/BOE-B-2026-37367.pdf",
+          "consultado_utc": "2026-11-25T19:10:58+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "e0b1da1d61ea71fca150cdc7e81eb0529efaaa24fe69513623a731e879bbb752",
+          "bytes": 198045
+        }
+      ],
+      "aviso": null,
+      "reutilizado": false
+    }
+  ],
+  "pendientes": []
+}
