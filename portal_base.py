@@ -27,6 +27,9 @@ sus lotes (derivado; los valores oficiales están en `lotes`).
 Importes: columna numérica en euros (None si el texto no es un importe, p. ej. «Sin puja mínima» o «No consta»)
 y columna *_texto con el texto tal cual. Fechas: la ISO que el propio Portal escribe entre paréntesis.
 
+Además deja en datos/panel/subastas.sqlite.gz una copia comprimida y comprobada de la base, que se guarda en la carpeta
+de Drive «Sema Deal Finder» (las 7 últimas fechas).
+
 Uso: python portal_base.py [--raiz datos/portal] [--base datos/subastas.sqlite] [--panel datos/panel]
 """
 from __future__ import annotations
@@ -34,6 +37,7 @@ from __future__ import annotations
 import argparse
 import base64
 import gzip
+import hashlib
 import json
 import re
 import sqlite3
@@ -440,14 +444,42 @@ def exportar_panel(ruta_base: Path, destino: Path) -> dict:
     return tamanos
 
 
+def copia_comprimida(origen: Path, destino: Path) -> dict:
+    """Copia de la base para la carpeta de Drive «Sema Deal Finder»: hecha con la API de copia de SQLite (coherente),
+    comprobada con integrity_check y comprimida con gzip sin fecha en la cabecera (mismo contenido, mismo archivo). Va
+    comprimida porque el conector de Drive admite unos 3 MB por envío."""
+    import shutil
+    import tempfile
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory() as tmp:
+        copia = Path(tmp) / origen.name
+        src, dst = sqlite3.connect(f"file:{origen}?mode=ro", uri=True), sqlite3.connect(copia)
+        try:
+            src.backup(dst)
+            estado = dst.execute("PRAGMA integrity_check").fetchone()[0]
+        finally:
+            src.close()
+            dst.close()
+        if estado != "ok":
+            raise RuntimeError(f"{origen.name} no pasa integrity_check: {estado}")
+        with open(copia, "rb") as f, open(destino, "wb") as salida, gzip.GzipFile(origen.name, "wb", 9, salida, mtime=0) as gz:
+            shutil.copyfileobj(f, gz)
+        sin_comprimir = copia.stat().st_size
+    datos = destino.read_bytes()
+    return dict(archivo=str(destino), bytes=len(datos), bytes_sin_comprimir=sin_comprimir,
+                sha256=hashlib.sha256(datos).hexdigest())
+
+
 def main(argv=None) -> int:
-    p = argparse.ArgumentParser(description="Rehace datos/subastas.sqlite y las tablas del panel a partir de lo "
-                                            "descargado del Portal. No hace peticiones.")
+    p = argparse.ArgumentParser(description="Rehace datos/subastas.sqlite, las tablas del panel y la copia comprimida "
+                                            "de la base para Drive, a partir de lo descargado del Portal. No hace peticiones.")
     p.add_argument("--raiz", type=Path, default=RAIZ)
     p.add_argument("--base", type=Path, default=BASE_DATOS)
     p.add_argument("--panel", type=Path, default=PANEL)
     a = p.parse_args(argv)
-    print(json.dumps({"base": construir(a.raiz, a.base), "panel": exportar_panel(a.base, a.panel)}, ensure_ascii=False, indent=1))
+    resumen = {"base": construir(a.raiz, a.base), "panel": exportar_panel(a.base, a.panel)}
+    resumen["copia_base"] = copia_comprimida(a.base, a.panel / "subastas.sqlite.gz")
+    print(json.dumps(resumen, ensure_ascii=False, indent=1))
     return 0
 
 

@@ -83,6 +83,17 @@ class PortalBaseTest(unittest.TestCase):
         for t, n in self.panel.items():
             self.assertGreater(n["filas"], 0, t)
 
+    def test_copia_comprimida_de_la_base(self):
+        import gzip
+        a = pb.copia_comprimida(self.base, Path(self.tmp.name) / "a.sqlite.gz")
+        b = pb.copia_comprimida(self.base, Path(self.tmp.name) / "b.sqlite.gz")
+        self.assertEqual(a["sha256"], b["sha256"])  # mismo contenido, mismo archivo
+        restaurada = Path(self.tmp.name) / "restaurada.sqlite"
+        restaurada.write_bytes(gzip.decompress(Path(a["archivo"]).read_bytes()))
+        con = sqlite3.connect(restaurada)
+        self.assertEqual(con.execute("SELECT count(*) FROM subastas").fetchone()[0], 3)
+        con.close()
+
     def test_importes_y_municipios(self):
         self.assertEqual(pb.importe("1.234,56 €"), 1234.56)
         self.assertEqual(pb.importe("0,00 €"), 0.0)

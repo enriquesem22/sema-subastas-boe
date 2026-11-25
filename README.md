@@ -15,7 +15,7 @@ Base de datos auditable de las subastas que se celebran en el **Portal de Subast
 | 2 | `portal_fichas.py` | Ficha completa de cada código: pestañas, lotes, documentos y anuncio del BOE | `datos/portal/fichas/<SUB>/<momento>/` |
 | 3 | `portal_base.py` | Base de datos y tablas del panel, sin hacer peticiones | `datos/subastas.sqlite`, `datos/panel/` |
 | 4 | `portal_geo.py` | Coordenadas de cada inmueble (Catastro y CartoCiudad) y nueva base | `datos/portal/geo/` |
-| 5 | (a mano, por ahora) | Subir `datos/panel/sema-panel-sp_*.b64.txt` a la carpeta de Drive del panel | Panel «SeMá Deal Finder» |
+| 5 | (a mano, por ahora) | Subir `datos/panel/sema-panel-sp_*.b64.txt` a la carpeta de Drive del panel y la copia de la base `datos/panel/subastas.sqlite.gz` a la carpeta «Sema Deal Finder» | Panel y copia en Drive |
 
 Los pasos 1 a 4 los hace el flujo de GitHub **«Portal de Subastas (códigos y fichas)»** (`.github/workflows/portal.yml`):
 Actions → el flujo → *Run workflow*, con el código de provincia (41 Sevilla, 28 Madrid, 08 Barcelona, 21 Huelva). Solo se
@@ -65,7 +65,11 @@ En las subastas con varios lotes el Portal no da importes de conjunto: quedan va
 pero **no va al panel**.
 
 Exporta al panel `datos/panel/sema-panel-sp_<tabla>.json` y su copia `.b64.txt` (gzip + base64): `sp_subastas`,
-`sp_lotes`, `sp_bienes`, `sp_campos`, `sp_documentos`, `sp_pendientes` y `sp_capturas`.
+`sp_lotes`, `sp_bienes`, `sp_campos`, `sp_documentos`, `sp_pendientes` y `sp_capturas`. Y deja la copia de la base
+`datos/panel/subastas.sqlite.gz` (copia coherente con la API de SQLite, comprobada con `integrity_check`, gzip), que se
+guarda en la carpeta de Drive «Sema Deal Finder» como `subastas_AAAA-MM-DD.sqlite.gz` (las 7 últimas fechas). Va
+comprimida porque el conector de Drive admite unos 3 MB por envío; el 25-11-2026 ocupa 96 KB (0,73 MB sin comprimir).
+Se abre descomprimiéndola (doble clic en Mac, 7-Zip en Windows) con DB Browser for SQLite.
 
 ### Paso 4 · Ubicación de los inmuebles (`portal_geo.py`)
 
