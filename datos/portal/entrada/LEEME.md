@@ -1,9 +1,9 @@
 # Fichas del Portal de Subastas (consultas puntuales)
 
-El Deal Finder no descarga nada de subastas.boe.es: su robots.txt no permite el acceso automatizado y no hay
-autorización de la AEBOE. Los datos de la ficha (ubicación del bien, importes, estado, fechas, lotes, bienes,
-pujas y documentos) se incorporan solo desde lo que se guarde aquí tras consultar la ficha a mano en el
-navegador, o desde un canal que autorice la AEBOE.
+El Deal Finder (método anterior) lee de esta carpeta las fichas del Portal guardadas a mano en el navegador: ubicación
+del bien, importes, estado, fechas, lotes, bienes, pujas y documentos. Desde el 25-11-2026 el Portal también se puede
+consultar de forma automatizada (ver `portal_codigos.py` en el README); esta carpeta sigue sirviendo para fichas
+guardadas a mano.
 
 ## Cómo guardar una consulta
 

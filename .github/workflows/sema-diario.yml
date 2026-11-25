@@ -49,7 +49,7 @@ jobs:
 
       - name: SeMá Deal Finder (solo BOE)
         # Anuncios de las secciones IV, V.B y V.C del sumario (JSON) y su XML. Las fichas del Portal solo se
-        # leen de datos/portal/entrada (consultas puntuales guardadas a mano): no se descarga nada del Portal.
+        # leen de datos/portal/entrada (guardadas a mano). Los códigos del Portal: flujo codigos-portal.yml.
         if: ${{ !cancelled() && steps.pruebas.outcome == 'success' }}
         env:
           SEMA_DF_MAX_XML: "1500"

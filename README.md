@@ -6,6 +6,23 @@
 > Actions y la tarea diaria de subida a Drive están pausadas. El código sigue aquí. Lo borrado puede recuperarse
 > del historial de Git (commit anterior a este cambio). Lo que se explica abajo describe el método anterior.
 
+## Método nuevo, paso 1: códigos SUB activos del Portal de Subastas
+
+`portal_codigos.py` (basado en `buscar_codigos_sevilla.py`) hace la búsqueda avanzada del Portal de Subastas del BOE
+(`https://subastas.boe.es/subastas_ava.php`): subastas en estado «Celebrándose» con el **bien** en la provincia indicada
+(`BIEN.COD_PROVINCIA`: 41 Sevilla, 28 Madrid, 08 Barcelona, 21 Huelva), 500 por página y en orden de SUB.
+
+- **Comprobaciones.** Respuesta HTTP 200 en HTML y sin redirección; página del buscador oficial; hora del servidor a
+  menos de 5 minutos de la consulta; recuento «Resultados X a Y de Z» igual a las filas mostradas y páginas sin saltos;
+  un SUB y el estado «Celebrándose» en cada fila; ningún código repetido. Si algo falla, no guarda nada.
+- **Resultado.** `datos/portal/codigos/<provincia>/<AAAAMMDD_HHMMSS>/` con `codigos.txt` (un SUB por línea),
+  `listado.json` (consulta, momento, total, códigos y SHA-256 de cada página) y la página original `pagina-N.html.gz`.
+- **Cómo se lanza.** En GitHub: Actions → «Códigos SUB activos (Portal de Subastas)» → *Run workflow*, con la provincia.
+  En el PC: `py portal_codigos.py --provincia 41`. Desde la nube de Claude no se llega a subastas.boe.es.
+- **Acceso automatizado al Portal.** Por decisión de Enrique (25-11-2026) ya no rige la regla de no extraer datos del
+  Portal de forma automatizada. Las peticiones van de una en una, con 2 segundos entre páginas, y con un
+  `User-Agent` que identifica el proyecto. El flujo solo se lanza a mano.
+
 Base de datos diaria y auditable de subastas de la provincia de Sevilla, construida **solo con fuentes
 oficiales o autorizadas**.
 
@@ -82,8 +99,8 @@ Huelva, con todos sus municipios, seleccionadas por la **ubicación del bien**. 
   varias provincias, `v_bienes` dice cuáles son de cada una. No cuentan las frases sobre la oficina de la autoridad
   («ofertas en la Secretaría … sita en Madrid») ni los nombres de calle («Avenida de Salamanca»); al cambiar estas
   reglas, las ubicaciones guardadas se vuelven a analizar y los cambios quedan en `cambios_historicos`.
-- **Ficha del Portal (consultas puntuales).** No se descarga nada de subastas.boe.es (robots.txt, sin autorización de
-  la AEBOE). Las pestañas y los PDF que se guarden a mano en `datos/portal/entrada` (instrucciones en su `LEEME.md`) se
+- **Ficha del Portal.** En este método anterior, las fichas no se descargaban: las pestañas y los PDF que se
+  guarden a mano en `datos/portal/entrada` (instrucciones en su `LEEME.md`) se
   leen con su evidencia: cada dato en `campos` con URL, fecha de consulta y pestaña y fila (o documento y página).
   Importes en euros con el texto de origen, distinguiendo cero, vacío y «Sin puja mínima»; fechas ISO con desfase;
   la cuenta expediente como texto; la puja como actual o final según el estado; el importe de adjudicación solo si lo
@@ -139,8 +156,9 @@ carpeta «SeMá · Subastas Sevilla (datos del panel)». Este repositorio es la 
 
 ## Qué NO hace (a propósito)
 
-- No accede al Portal de Subastas (subastas.boe.es) ni automatiza ningún inicio de sesión.
-- Respeta el robots.txt de cada dominio. Si una URL no está permitida, no se descarga y el informe lo avisa.
+- No automatiza ningún inicio de sesión (Cl@ve o certificado) ni usa la cuenta de postor de Enrique.
+- `sema.py` y `dealfinder.py` respetan el robots.txt de www.boe.es: si una URL no está permitida, no se descarga y el
+  informe lo avisa. El Portal de Subastas se consulta con `portal_codigos.py` (ver arriba).
 - No inventa datos: lo que la fuente no trae queda vacío.
 - `precio_cierre` queda vacío hasta tener una fuente autorizada: la API de subastasboeapi.com (cuando llegue el
   token y su documentación) o una autorización de reutilización de la Agencia Estatal BOE.

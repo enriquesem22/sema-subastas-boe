@@ -1,0 +1,50 @@
+name: Códigos SUB activos (Portal de Subastas)
+
+# Búsqueda avanzada del Portal de Subastas del BOE: subastas «Celebrándose» con el bien en la provincia indicada.
+# Solo se lanza a mano (pestaña Actions → este flujo → Run workflow). Guarda el resultado en datos/portal/codigos.
+on:
+  workflow_dispatch:
+    inputs:
+      provincia:
+        description: "Provincia del bien, código con dos cifras (41 Sevilla, 28 Madrid, 08 Barcelona, 21 Huelva)"
+        required: false
+        default: "41"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sema
+  cancel-in-progress: false
+
+jobs:
+  codigos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pruebas sin red
+        run: python -m unittest tests.test_portal_codigos -v
+
+      - name: Buscar los códigos en el Portal
+        env:
+          PROVINCIA: ${{ github.event.inputs.provincia || '41' }}
+        run: python portal_codigos.py --provincia "$PROVINCIA" --resumen "$GITHUB_STEP_SUMMARY"
+
+      - name: Guardar en el repositorio
+        run: |
+          git config user.name "sema-bot"
+          git config user.email "sema-bot@users.noreply.github.com"
+          git add datos/portal/codigos
+          if git diff --cached --quiet; then
+            echo "Sin cambios que guardar"
+          else
+            git commit -m "Portal: códigos SUB activos $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git pull --rebase origin main
+            git push
+          fi

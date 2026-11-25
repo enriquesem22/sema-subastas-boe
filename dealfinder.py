@@ -5,9 +5,8 @@ Fuentes, y ninguna más:
   (https://www.boe.es/datosabiertos/api/boe/sumario/AAAAMMDD) y cada anuncio: su XML (url_xml) si el
   robots.txt del BOE lo permite y, si no, su página HTML oficial (url_html), con el mismo texto. Se descargan
   de forma automática, de una en una y con pausa.
-- Portal de Subastas del BOE (subastas.boe.es): fichas y documentos obtenidos por consultas puntuales,
-  que se guardan a mano en datos/portal/entrada, o por un canal autorizado por la AEBOE. Este módulo no
-  descarga nada del Portal: su robots.txt no permite el acceso automatizado.
+- Portal de Subastas del BOE (subastas.boe.es): fichas y documentos guardados a mano en datos/portal/entrada.
+  Este módulo no descarga nada del Portal; la consulta automatizada del Portal está en portal_codigos.py.
 
 Lo que no consta en esas fuentes se deja pendiente, con el dato que falta, el SUB y lote, la fuente
 oficial revisada y el motivo. Los valores de Subastech (datos/subastech.sqlite) nunca se presentan como
@@ -1530,8 +1529,7 @@ def regenerar_pendientes(con, dir_datos: Path):
             motivo_pub = "La ficha guardada no muestra este dato"
         else:
             motivo_pub = (f"El anuncio {e['primer_anuncio']} solo publica el SUB, la autoridad{ref}; el dato está en la ficha "
-                          "del Portal, que solo se incorpora con una consulta puntual guardada en datos/portal/entrada o con "
-                          "un canal autorizado por la AEBOE")
+                          "del Portal, que este módulo solo lee si se guarda en datos/portal/entrada")
         motivo_adj = ("Solo se registra si lo acredita un documento oficial de la autoridad gestora; no se ha incorporado "
                       "ninguno (Subastech no lo acredita)")
         grupos: dict[tuple, list] = {}
