@@ -2,9 +2,9 @@
 
 Fuentes oficiales, por este orden, para cada inmueble de datos/subastas.sqlite:
 1. Catastro (Dirección General del Catastro), coordenadas por referencia catastral (servicio Consulta_CPMRC, con los
-   14 primeros caracteres de la referencia). Se prueban, por este orden, su servicio JSON
-   (OVCWcfCallejero/COVCCoordenadas.svc/json), el clásico por GET (OVCSWLocalizacionRC/OVCCoordenadas.asmx) y el
-   clásico por POST → el punto de la parcela catastral (precisión «parcela»).
+   14 primeros caracteres de la referencia). Se usa su servicio JSON (OVCWcfCallejero/COVCCoordenadas.svc/json,
+   parámetro RefCat), el que funciona; si fallara, el clásico (OVCSWLocalizacionRC/OVCCoordenadas.asmx, parámetro RC)
+   por GET y por POST → el punto de la parcela catastral (precisión «parcela»).
 2. CartoCiudad (Instituto Geográfico Nacional), geocodificador (findJsonp): primero con la referencia catastral y
    luego con la dirección (con código postal, sin él y solo calle y número) → precisión «parcela» o «direccion».
    Solo se acepta si el municipio que devuelve (muniCode, código INE) es el del bien.
@@ -243,8 +243,9 @@ def ubicar(bien: dict, resp: Respuestas) -> dict:
     if ref:
         consultas = [
             (f"{CATASTRO_JSON}?{urlencode({'SRS': 'EPSG:4326', 'RefCat': ref})}", ".json", None),
-            (f"{CATASTRO}?{urlencode({'Provincia': '', 'Municipio': '', 'SRS': 'EPSG:4326', 'RefCat': ref})}", ".xml", None),
-            (CATASTRO, ".xml", urlencode({'Provincia': '', 'Municipio': '', 'SRS': 'EPSG:4326', 'RefCat': ref}).encode()),
+            # el servicio clásico llama RC al parámetro (con RefCat responde «Missing parameter: RC»)
+            (f"{CATASTRO}?{urlencode({'Provincia': '', 'Municipio': '', 'SRS': 'EPSG:4326', 'RC': ref})}", ".xml", None),
+            (CATASTRO, ".xml", urlencode({'Provincia': '', 'Municipio': '', 'SRS': 'EPSG:4326', 'RC': ref}).encode()),
         ]
         for url, ext, cuerpo in consultas:
             datos, meta = resp.obtener(url, ext, cuerpo)

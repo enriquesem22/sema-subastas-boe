@@ -14,12 +14,14 @@ Base de datos auditable de las subastas que se celebran en el **Portal de Subast
 | 1 | `portal_codigos.py` | Búsqueda avanzada del Portal: subastas «Celebrándose» con el bien en la provincia | `datos/portal/codigos/<prov>/<momento>/` |
 | 2 | `portal_fichas.py` | Ficha completa de cada código: pestañas, lotes, documentos y anuncio del BOE | `datos/portal/fichas/<SUB>/<momento>/` |
 | 3 | `portal_base.py` | Base de datos y tablas del panel, sin hacer peticiones | `datos/subastas.sqlite`, `datos/panel/` |
-| 4 | (a mano, por ahora) | Subir `datos/panel/sema-panel-sp_*.b64.txt` a la carpeta de Drive del panel | Panel «SeMá Deal Finder» |
+| 4 | `portal_geo.py` | Coordenadas de cada inmueble (Catastro y CartoCiudad) y nueva base | `datos/portal/geo/` |
+| 5 | (a mano, por ahora) | Subir `datos/panel/sema-panel-sp_*.b64.txt` a la carpeta de Drive del panel | Panel «SeMá Deal Finder» |
 
-Los pasos 1 a 3 los hace el flujo de GitHub **«Portal de Subastas (códigos y fichas)»** (`.github/workflows/portal.yml`):
+Los pasos 1 a 4 los hace el flujo de GitHub **«Portal de Subastas (códigos y fichas)»** (`.github/workflows/portal.yml`):
 Actions → el flujo → *Run workflow*, con el código de provincia (41 Sevilla, 28 Madrid, 08 Barcelona, 21 Huelva). Solo se
-lanza a mano y guarda el resultado en el repositorio. En el PC: `py portal_codigos.py --provincia 41`,
-`py portal_fichas.py` y `py portal_base.py`. Desde la nube de Claude no se llega a subastas.boe.es.
+lanza a mano y guarda el resultado en el repositorio; la opción «Solo ubicar los inmuebles» hace solo los pasos 3 y 4,
+sin pedir nada al Portal. En el PC: `py portal_codigos.py --provincia 41`, `py portal_fichas.py`, `py portal_base.py` y
+`py portal_geo.py`. Desde la nube de Claude no se llega a subastas.boe.es, al Catastro ni a CartoCiudad.
 
 ### Paso 1 · Códigos (`portal_codigos.py`, basado en `buscar_codigos_sevilla.py`)
 
@@ -65,11 +67,32 @@ pero **no va al panel**.
 Exporta al panel `datos/panel/sema-panel-sp_<tabla>.json` y su copia `.b64.txt` (gzip + base64): `sp_subastas`,
 `sp_lotes`, `sp_bienes`, `sp_campos`, `sp_documentos`, `sp_pendientes` y `sp_capturas`.
 
+### Paso 4 · Ubicación de los inmuebles (`portal_geo.py`)
+
+Para cada inmueble, fuentes oficiales por este orden:
+
+1. **Catastro**, por la referencia catastral de la ficha (14 primeros caracteres): servicio JSON
+   `ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG:4326&RefCat=…`
+   → el punto de la parcela (precisión «parcela»). Si fallara, el servicio clásico `OVCCoordenadas.asmx` (parámetro `RC`).
+2. **CartoCiudad (IGN)**, `www.cartociudad.es/geocoder/api/geocoder/findJsonp`: primero con la referencia catastral y
+   luego con la dirección (con código postal, sin él y solo «calle número», quitando escalera, planta, puerta…) →
+   precisión «direccion». Solo se acepta si el municipio que devuelve (`muniCode`, INE) es el del bien.
+3. Si nada sirve, el bien queda sin coordenadas y con el motivo; el panel lo dibuja con punto hueco en el centro de
+   su municipio («aproximada»). No se inventan coordenadas.
+
+Cada respuesta se guarda tal cual en `datos/portal/geo/respuestas/` (URL, momento, HTTP y SHA-256 en `indice.json`;
+los errores, con su cuerpo) y no se repite; `py portal_geo.py --sin-red` vuelve a leerlas sin red. Resultado en
+`datos/portal/geo/ubicaciones.json`, que `portal_base.py` añade a `bienes` (lat, lon, precisión, fuente, URL, texto
+o motivo). El 25-11-2026: 21 inmuebles por parcela catastral, 13 por dirección y 3 sin ubicación exacta (dos fincas
+rústicas de Morón sin referencia y un «km 509» de Carmona). Contraste: Pino Montano 118 sale a 11 m entre el Catastro
+y CartoCiudad.
+
 ### Panel «SeMá Deal Finder»
 
 Lee esas tablas de la carpeta de Drive del panel con el conector de Google Drive de quien lo abre (más los límites
 municipales `sema-panel-limites`). Barra de provincia; resumen (celebrándose, por administración, con pujas, concluyen
-en 7 días); mapa de Sevilla por municipio; listado con filtros (bien, administración, municipio, texto, orden) y, al
+en 7 días); mapa de Sevilla con un punto por inmueble (color por administración, número si coinciden varios, hueco si
+la ubicación es aproximada, zoom) y subastas por municipio; listado con filtros (bien, administración, municipio, texto, orden) y, al
 pulsar una subasta, su ficha: importes, lotes, bienes, documentos con enlace oficial y todos los datos de la ficha.
 
 ### Decisiones

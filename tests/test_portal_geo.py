@@ -1,8 +1,8 @@
 """Pruebas sin red de portal_geo.py.
 
-Las respuestas del Catastro (Consulta_CPMRC) y de CartoCiudad (findJsonp) son SIMULADAS según el formato documentado
-de cada servicio. Las reales quedan guardadas en datos/portal/geo/respuestas tras la primera ejecución en GitHub, y
-el lector se puede volver a pasar sobre ellas sin red (python portal_geo.py --sin-red).
+Las respuestas son SIMULADAS siguiendo el formato de cada servicio, salvo una REAL del servicio JSON del Catastro
+(test_lectores). Las reales de cada ejecución quedan en datos/portal/geo/respuestas, y el lector se puede volver a
+pasar sobre ellas sin red (python portal_geo.py --sin-red).
 """
 import json
 import sqlite3
@@ -60,10 +60,13 @@ class PortalGeoTest(unittest.TestCase):
 
     def test_lectores(self):
         self.assertEqual(pg.leer_catastro(XML_OK)["lat"], 37.37124)
-        js = json.dumps({"Consulta_CPMRCResult": {"control": {"cucoor": 1, "cuerr": 0}, "coordenadas": {"coord": [
-            {"pc": {"pc1": "6297019", "pc2": "TG5369N"}, "geo": {"xcen": -5.7, "ycen": 37.3, "srs": "EPSG:4326"},
-             "ldt": "CL JESUS 62"}]}}}).encode()
-        self.assertEqual((pg.leer_catastro(js)["lat"], pg.leer_catastro(js)["texto"]), (37.3, "CL JESUS 62"))
+        # respuesta REAL del servicio JSON del Catastro (25-11-2026, referencia 7046406TG3474N)
+        js = (b'{"Consulta_CPMRCResult":{"control":{"cucoor":1},"coordenadas":{"coord":[{"pc":{"pc1":"7046406",'
+              b'"pc2":"TG3474N"},"geo":{"xcen":"-5.97244445923165","ycen":"37.4090250666255","srs":"EPSG:4326"},'
+              b'"ldt":"AV PINO MONTANO (DE) 118 SEVILLA (SEVILLA)"}]}}}')
+        r = pg.leer_catastro(js)
+        self.assertEqual((r["lat"], r["lon"], r["texto"]), (37.4090250666255, -5.97244445923165, "AV PINO MONTANO (DE) 118 SEVILLA (SEVILLA)"))
+        self.assertIn("RC", pg.leer_catastro(b"Missing parameter: RC.")["error"] + "RC")
         self.assertIn("NO EXISTE", pg.leer_catastro(XML_ERR)["error"])
         r = pg.leer_cartociudad(jsonp(muni="Marchena", province="Sevilla", type="portal", address="HUERTA GAVIRA",
                                       portalNumber=25, lat=37.33, lng=-5.42, stateMsg="Resultado exacto de la búsqueda"))
