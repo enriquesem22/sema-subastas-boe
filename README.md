@@ -112,6 +112,13 @@ carpeta «SeMá · Subastas Sevilla (datos del panel)». Este repositorio es la 
 - La tarea programada «SeMá · Panel del Deal Finder a Drive (diario, solo BOE)» (10:13, hora de Madrid) sube cada día
   las tablas del Deal Finder y del BOE y deja solo la copia anterior de cada una, que el panel usa mientras Drive
   prepara el contenido de la nueva. Necesita el conector de Google Drive en la tarea.
+- La misma tarea guarda una copia de la base del Deal Finder en la carpeta de Drive «Sema Deal Finder»:
+  `dealfinder_AAAA-MM-DD.sqlite.gz`, de las 7 últimas fechas. `python sema.py panel` la prepara en
+  `datos/panel/dealfinder.sqlite.gz`: copia coherente con la API de SQLite, comprobada con `integrity_check` y
+  comprimida con gzip. Va comprimida porque el conector de Drive admite unos 3 MB por envío y la base ya pasa de 8 MB.
+  La copia crece unos 0,85 MB al mes y llegará a ese límite hacia febrero o marzo de 2027. Desde 2,5 MB la tarea
+  avisa, y por encima de 3 MB deja de subirla. Entonces habrá que subirla desde GitHub Actions con una credencial de
+  Google.
 
 ## Cómo se asegura la fiabilidad
 

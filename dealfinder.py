@@ -1686,6 +1686,32 @@ def exportar(con, dir_datos: Path, geo: Geo | None = None):
             base64.b64encode(gzip.compress(texto.encode("utf-8"), 9, mtime=0)).decode("ascii"), encoding="ascii")
 
 
+def copia_comprimida(origen: Path, destino: Path) -> dict:
+    """Copia de la base para guardarla en Drive: se hace con la API de copia de SQLite (coherente aunque otra
+    conexión esté escribiendo), se comprueba con integrity_check y se comprime con gzip sin fecha en la cabecera,
+    así que el mismo contenido da siempre el mismo archivo. El conector de Drive admite unos 3 MB por envío y la
+    base sin comprimir ya pasa de 8 MB."""
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory() as tmp:
+        copia = Path(tmp) / origen.name
+        src = sqlite3.connect(f"file:{origen}?mode=ro", uri=True)
+        dst = sqlite3.connect(copia)
+        try:
+            src.backup(dst)
+            estado = dst.execute("PRAGMA integrity_check").fetchone()[0]
+        finally:
+            src.close()
+            dst.close()
+        if estado != "ok":
+            raise RuntimeError(f"{origen.name} no pasa integrity_check: {estado}")
+        with open(copia, "rb") as f, open(destino, "wb") as salida, \
+                gzip.GzipFile(origen.name, "wb", 9, salida, mtime=0) as gz:
+            shutil.copyfileobj(f, gz)
+        bytes_base = copia.stat().st_size
+    datos = destino.read_bytes()
+    return {"archivo": str(destino), "bytes": len(datos), "bytes_sin_comprimir": bytes_base, "sha256": sha256(datos)}
+
+
 def ejecutar(desde: dt.date | None, hasta: dt.date | None, dir_datos: Path, http_factory=None,
              solo_portal: bool = False) -> dict:
     con = sema.conectar(dir_datos / "dealfinder.sqlite", ESQUEMA)

@@ -1635,7 +1635,8 @@ def main(argv=None):
     d.add_argument("--solo-portal", action="store_true",
                    help="No descarga nada: solo lee datos/portal/entrada y rehace pendientes, cotejo y exportación")
     d.add_argument("--datos", type=Path, default=Path(os.environ.get("SEMA_DATOS", BASE / "datos")))
-    pn = sub.add_parser("panel", help="Regenera los CSV y los archivos JSON del panel (datos/panel) sin cargar nada")
+    pn = sub.add_parser("panel", help="Regenera los CSV y los archivos JSON del panel (datos/panel) y la copia "
+                                      "comprimida de dealfinder.sqlite para Drive, sin cargar nada")
     pn.add_argument("--datos", type=Path, default=Path(os.environ.get("SEMA_DATOS", BASE / "datos")))
     s.add_argument("--datos", type=Path, default=Path(os.environ.get("SEMA_DATOS", BASE / "datos")))
     a = p.parse_args(argv)
@@ -1653,6 +1654,9 @@ def main(argv=None):
             con = conectar(a.datos / "dealfinder.sqlite", dealfinder.ESQUEMA)
             dealfinder.exportar(con, a.datos)
             con.close()
+            # copia comprimida de la base para Drive (carpeta «Sema Deal Finder»)
+            copia = dealfinder.copia_comprimida(a.datos / "dealfinder.sqlite", a.datos / "panel" / "dealfinder.sqlite.gz")
+            print(f"COPIA_BASE\t{copia['archivo']}\t{copia['bytes']} bytes\tsha256={copia['sha256']}")
         for f in sorted((a.datos / "panel").glob("*.json")):
             print(f"{f.name}\t{f.stat().st_size} bytes")
         return 0

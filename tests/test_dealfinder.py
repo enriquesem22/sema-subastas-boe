@@ -447,6 +447,23 @@ class DealFinderTest(unittest.TestCase):
         sema.conectar(ruta, df.ESQUEMA).close()
         self.assertEqual(ruta.read_bytes(), antes)
 
+    def test_copia_comprimida_de_la_base(self):
+        import gzip
+        self.run_df(desde=date(2026, 10, 24), hasta=date(2026, 10, 24))
+        ruta = self.datos / "dealfinder.sqlite"
+        a = df.copia_comprimida(ruta, self.datos / "panel" / "a.sqlite.gz")
+        b = df.copia_comprimida(ruta, self.datos / "panel" / "b.sqlite.gz")
+        self.assertEqual(a["sha256"], b["sha256"])  # mismo contenido, mismo archivo
+        self.assertLess(a["bytes"], a["bytes_sin_comprimir"])
+        restaurada = Path(self.tmp.name) / "restaurada.sqlite"
+        restaurada.write_bytes(gzip.decompress(Path(a["archivo"]).read_bytes()))
+        con, orig = sqlite3.connect(restaurada), sqlite3.connect(ruta)
+        for t in ("anuncios", "expedientes", "incidencias", "pendientes"):
+            q = f"SELECT count(*) FROM {t}"
+            self.assertEqual(con.execute(q).fetchone(), orig.execute(q).fetchone())
+        con.close()
+        orig.close()
+
     def test_codigo_sub(self):
         t = "Dirección electrónica: https://subastas.boe.es/ds.php?id=SUB-AT-2026-26R2886001460. Y SUB-JA-2026-1."
         self.assertEqual(sorted(df.subs_de("", t, [])), ["SUB-AT-2026-26R2886001460", "SUB-JA-2026-1"])
