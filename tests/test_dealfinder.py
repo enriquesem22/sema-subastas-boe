@@ -425,6 +425,19 @@ class DealFinderTest(unittest.TestCase):
         self.assertEqual(df.sede_autoridad(geo, {"titulo_sumario": "SANT FELIU DE LLOBREGAT"}, None)[0], "08")
         self.assertEqual(df.ubicacion_en_texto(geo, "Anuncio de subasta judicial", "Carmona, 1 de octubre de 2026.- El Letrado."), [])
 
+    def test_oficina_y_calle_no_son_ubicacion(self):
+        geo = df.Geo()
+        t = ("Venta en subasta de la finca registral 17341 ubicada en el municipio de Azpeitia, en la provincia de "
+             "Gipuzkoa. Las ofertas se presentarán en el Registro General de la Secretaría General del FOGASA sito en "
+             "la C/ Sagasta, 10 (28004-Madrid), en horario de oficina.")
+        provs = {p for u in df.ubicacion_en_texto(geo, "", t) for p in u["provincias"]}
+        self.assertEqual(provs, {"20"})
+        t2 = ("Subasta de un bien urbano situado en la ciudad de Valladolid. Sede de la Delegación Especial de Economía y "
+              "Hacienda, ubicada en Valladolid, Avenida de Salamanca, número 20.")
+        self.assertEqual({p for u in df.ubicacion_en_texto(geo, "", t2) for p in u["provincias"]}, {"47"})
+        t3 = "local en planta baja, situado en calle Roser, nº 101 y 103, en Reus (Tarragona)."
+        self.assertEqual({p for u in df.ubicacion_en_texto(geo, "", t3) for p in u["provincias"]}, {"43"})
+
     def test_codigo_sub(self):
         t = "Dirección electrónica: https://subastas.boe.es/ds.php?id=SUB-AT-2026-26R2886001460. Y SUB-JA-2026-1."
         self.assertEqual(sorted(df.subs_de("", t, [])), ["SUB-AT-2026-26R2886001460", "SUB-JA-2026-1"])

@@ -469,13 +469,27 @@ RE_UBICACION = [
 ]
 
 
+# Frases que describen la oficina de la autoridad (dónde presentar ofertas, su sede), no el bien
+RE_OFICINA = re.compile(r"(registro|sede|oficinas?|delegaci[oó]n|secretar[ií]a|direcci[oó]n (general|provincial)|tesorer[ií]a|"
+                        r"unidad|subdirecci[oó]n|dependencias|domicilio|presentaci[oó]n|horario|servicio de|secci[oó]n de|"
+                        r"gerencia|ayuntamiento de|juzgado|tribunal|notar[ií]a|fondo de garant[ií]a|fogasa)[^.;]{0,70}$", re.I)
+# Nombres de vía: «Avenida de Salamanca» no dice que el bien esté en Salamanca
+RE_VIA = re.compile(r"\b(avenida|avda\.?|calle|c/|plaza|pza\.?|paseo|carretera|ctra\.?|camino|ronda|traves[ií]a|"
+                    r"urbanizaci[oó]n|pol[ií]gono|barrio|glorieta|v[ií]a)\s+(?:de\s+(?:la\s+|los\s+|las\s+|el\s+)?|del\s+)?"
+                    r"[A-ZÁÉÍÓÚÑ][\wÁÉÍÓÚÑáéíóúñ'·-]*(?:\s+(?:de\s+|del\s+|la\s+|las\s+|los\s+|y\s+)?[A-ZÁÉÍÓÚÑ][\wÁÉÍÓÚÑáéíóúñ'·-]*)*", re.I)
+
+
 def ubicacion_en_texto(geo: Geo, titulo: str, texto: str) -> list[dict]:
-    """Ubicación del bien solo cuando el documento oficial la escribe (no la sede de la autoridad)."""
+    """Ubicación del bien solo cuando el documento oficial la escribe (no la sede ni la oficina de la autoridad)."""
     salida = []
     for nombre_fuente, fuente in (("título", titulo or ""), ("texto", texto or "")):
         for metodo, rx in RE_UBICACION:
             for m in rx.finditer(fuente):
-                frag = m.group("frag")
+                previo = fuente[max(0, m.start() - 90):m.start()]
+                of = RE_OFICINA.search(previo)
+                if of and not re.search(r"propiedad\s+(de|del)\s+(la\s+|el\s+|los\s+)?$", previo[:of.start()], re.I):
+                    continue  # habla de la oficina de la autoridad; «propiedad de la Tesorería…» sí es el bien
+                frag = RE_VIA.sub(" ", m.group("frag"))
                 provs, munis = geo.buscar(frag)
                 provs_m = {ine[:2] for ine, _ in munis}
                 if provs:
@@ -553,6 +567,33 @@ def analizar_anuncio(geo: Geo, it: dict, leido: dict) -> dict:
         "ubicacion_evidencia": json.dumps(ubic, ensure_ascii=False) if ubic else None,
         "_subs": subs,
     }
+
+
+def reanalizar_ubicaciones(con, geo: Geo, id_ej: int) -> set[str]:
+    """Vuelve a leer la ubicación de los anuncios de subasta ya guardados (título y texto) con las reglas actuales.
+    Los cambios quedan en cambios_historicos. Devuelve los expedientes afectados."""
+    afectados: set[str] = set()
+    for r in con.execute("SELECT id_boe, titulo, texto, ids_subasta, ubicacion_estado, ubicacion_provincias FROM anuncios"
+                         " WHERE menciona_subasta=1 AND xml_estado='ok'").fetchall():
+        ubic = ubicacion_en_texto(geo, r["titulo"] or "", r["texto"] or "")
+        provs = sorted({x for u in ubic for x in u["provincias"]})
+        munis = sorted({x for u in ubic for x in u["municipios"]})
+        estado = "segun_anuncio_boe" if provs else ("ambigua_en_anuncio" if munis else "pendiente")
+        nuevos = {"ubicacion_estado": estado, "ubicacion_provincias": ",".join(provs) or None,
+                  "ubicacion_municipios": "; ".join(munis) or None,
+                  "ubicacion_evidencia": json.dumps(ubic, ensure_ascii=False) if ubic else None}
+        if (r["ubicacion_estado"], r["ubicacion_provincias"]) == (estado, nuevos["ubicacion_provincias"]):
+            continue
+        for campo, valor in nuevos.items():  # también cuando un valor pasa a vacío
+            viejo = con.execute(f"SELECT {campo} FROM anuncios WHERE id_boe=?", (r["id_boe"],)).fetchone()[0]
+            if viejo != valor:
+                con.execute("INSERT INTO cambios_historicos (tabla, clave, campo, valor_anterior, valor_nuevo, detectado_en,"
+                            " id_ejecucion, fuente) VALUES (?,?,?,?,?,?,?,?)",
+                            ("anuncios", r["id_boe"], campo, viejo, valor, ahora(), id_ej, "BOE (reanálisis de la ubicación)"))
+                con.execute(f"UPDATE anuncios SET {campo}=? WHERE id_boe=?", (valor, r["id_boe"]))
+        afectados |= set((r["ids_subasta"] or "").split(",")) - {""} or {"BOE:" + r["id_boe"]}
+    con.commit()
+    return afectados
 
 
 def limpiar_version_1_0_0(con):
@@ -843,7 +884,8 @@ def actualizar_expedientes(con, ids: set[str] | None, id_ej: int, stats: dict):
             "referencia_anuncio": " | ".join(refs) or None,
             "lugar_firma": next((a["lugar_firma"] for a in anuncios if a["lugar_firma"]), None),
             "sede_provincia": sede, "sede_motivo": sede_motivo, "ubicacion_estado": ubic_estado,
-            "provincias_bien": ",".join(provs) or None, "ambito": ambito_de(provs, sede), "ficha_consultada": int(ficha > 0),
+            # "" y no None: si una provincia deja de constar, el cambio se registra (None no borra en upsert)
+            "provincias_bien": ",".join(provs), "ambito": ambito_de(provs, sede), "ficha_consultada": int(ficha > 0),
         }
         meta = {"fuente": FUENTE_PORTAL if ficha else FUENTE_DIARIO,
                 "url_fuente": primero["url_html"] if primero else None, "momento_consulta": ahora(),
@@ -1659,6 +1701,7 @@ def ejecutar(desde: dt.date | None, hasta: dt.date | None, dir_datos: Path, http
     tocados: set[str] = set()
     estado = "ok"
     limpiar_version_1_0_0(con)
+    tocados |= reanalizar_ubicaciones(con, geo, id_ej)
     try:
         if not solo_portal:
             http = (http_factory or HttpDiario)(con, id_ej, dir_datos / "brutos" / "dealfinder", avisos)
