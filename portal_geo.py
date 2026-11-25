@@ -1,13 +1,13 @@
 """Ubicación (coordenadas) de cada inmueble de las subastas (método nuevo, paso 4).
 
 Fuentes oficiales, por este orden, para cada inmueble de datos/subastas.sqlite:
-1. Catastro (Dirección General del Catastro), coordenadas por referencia catastral (servicio Consulta_CPMRC):
-   https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC
-   ?Provincia=&Municipio=&SRS=EPSG:4326&RefCat=<14 primeros caracteres de la referencia>
-   → el punto de la parcela catastral (precisión «parcela»).
-2. CartoCiudad (Instituto Geográfico Nacional), geocodificador de direcciones:
-   https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=<dirección, municipio, provincia>
-   → el punto de esa dirección (precisión «direccion»), y solo si el municipio que devuelve es el del bien.
+1. Catastro (Dirección General del Catastro), coordenadas por referencia catastral (servicio Consulta_CPMRC, con los
+   14 primeros caracteres de la referencia). Se prueban, por este orden, su servicio JSON
+   (OVCWcfCallejero/COVCCoordenadas.svc/json), el clásico por GET (OVCSWLocalizacionRC/OVCCoordenadas.asmx) y el
+   clásico por POST → el punto de la parcela catastral (precisión «parcela»).
+2. CartoCiudad (Instituto Geográfico Nacional), geocodificador (findJsonp): primero con la referencia catastral y
+   luego con la dirección (con código postal, sin él y solo calle y número) → precisión «parcela» o «direccion».
+   Solo se acepta si el municipio que devuelve (muniCode, código INE) es el del bien.
 3. Si ninguna sirve, el bien queda sin coordenadas y con el motivo. El panel lo dibuja en el centro de su municipio y
    lo marca como aproximado (no se inventan coordenadas en la base).
 
@@ -41,12 +41,14 @@ import portal_base
 BASE = Path(__file__).resolve().parent
 RAIZ = BASE / "datos" / "portal"
 CATASTRO = "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC"
+CATASTRO_JSON = "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC"
 CARTOCIUDAD = "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp"
 HOSTS = {"ovc.catastro.meh.es", "www.cartociudad.es"}
 AGENTE = "SeMa-Deal-Finder/1.0 (ubicacion de los inmuebles de subastas publicas)"
 PAUSA = 1.0
 FUENTE_CATASTRO = "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)"
 FUENTE_CARTOCIUDAD = "CartoCiudad (IGN) · geocodificador de direcciones"
+FUENTE_CARTOCIUDAD_RC = "CartoCiudad (IGN) · búsqueda por referencia catastral"
 # España peninsular, Baleares, Canarias, Ceuta y Melilla
 LAT, LON = (27.0, 44.5), (-18.5, 4.6)
 
@@ -67,7 +69,9 @@ def limpiar_direccion(d: str | None) -> str | None:
         return None
     s = re.sub(r"\bn\.?\s*[ºo°]\.?\s*", " ", d, flags=re.I)
     s = re.sub(r"^\s*edificio\s+", "", s, flags=re.I)
-    s = re.split(r",?\s*\b(?:escalera|esc\.|planta|piso|puerta|pta\.|bloque|portal|bajo|local|edificio)\b", s, flags=re.I)[0]
+    s = re.split(r",?\s*-?\s*\b(?:escalera|esc\b\.?|planta|piso|puerta|pta\b\.?|bloque|bq\b\.?|bj\b|bajo|portal|local|"
+                 r"edificio|izda|izq|dcha|der)\b", s, flags=re.I)[0]
+    s = re.sub(r",\s*(?=\d)", " ", s)  # «Calle Jesús, 62» → «Calle Jesús 62»
     s = re.sub(r"\s+", " ", s).strip(" ,.-")
     return s or None
 
@@ -78,20 +82,40 @@ def _local(tag: str) -> str:
     return tag.rsplit("}", 1)[-1]
 
 
+def _pares_json(o):
+    """Todos los pares clave → valor simple de un JSON anidado, en orden."""
+    if isinstance(o, dict):
+        for k, v in o.items():
+            if isinstance(v, (dict, list)):
+                yield from _pares_json(v)
+            else:
+                yield k, v
+    elif isinstance(o, list):
+        for v in o:
+            yield from _pares_json(v)
+
+
 def leer_catastro(datos: bytes) -> dict:
-    """XML de Consulta_CPMRC → {lat, lon, texto} o {error}. No depende del espacio de nombres."""
-    try:
-        raiz = ET.fromstring(datos)
-    except ET.ParseError as e:
-        return {"error": f"XML no válido: {e}"}
+    """Respuesta de Consulta_CPMRC (XML o JSON) → {lat, lon, texto} o {error}. No depende del espacio de nombres."""
     valores: dict[str, str] = {}
     errores = []
-    for e in raiz.iter():
-        nombre = _local(e.tag)
-        if nombre in {"xcen", "ycen", "ldt", "srs"} and nombre not in valores and (e.text or "").strip():
-            valores[nombre] = e.text.strip()
-        if nombre == "des" and (e.text or "").strip():
-            errores.append(e.text.strip())
+    texto = datos.decode("utf-8-sig", "replace").strip()
+    if texto.startswith(("{", "[")):
+        try:
+            pares = list(_pares_json(json.loads(texto)))
+        except ValueError as e:
+            return {"error": f"JSON no válido: {e}"}
+    else:
+        try:
+            pares = [(_local(e.tag), e.text) for e in ET.fromstring(datos).iter()]
+        except ET.ParseError as e:
+            return {"error": f"XML no válido: {e}"}
+    for nombre, valor in pares:
+        v = str(valor).strip() if valor is not None else ""
+        if nombre in {"xcen", "ycen", "ldt", "srs"} and nombre not in valores and v:
+            valores[nombre] = v
+        if nombre == "des" and v:
+            errores.append(v)
     if "xcen" in valores and "ycen" in valores:
         try:
             lon, lat = float(valores["xcen"]), float(valores["ycen"])
@@ -118,8 +142,9 @@ def leer_cartociudad(datos: bytes) -> dict:
     if not isinstance(r, dict) or r.get("lat") is None or r.get("lng") is None:
         return {"error": str((r or {}).get("stateMsg") or "Sin coordenadas")}
     texto = " ".join(str(x) for x in (r.get("address"), r.get("portalNumber"), r.get("postalCode")) if x not in (None, "", 0))
-    return {"lat": float(r["lat"]), "lon": float(r["lng"]), "municipio": r.get("muni"), "provincia": r.get("province"),
-            "tipo": r.get("type"), "texto": texto or None, "estado": r.get("stateMsg") or r.get("state")}
+    return {"lat": float(r["lat"]), "lon": float(r["lng"]), "municipio": r.get("muni"), "municipio_ine": r.get("muniCode"),
+            "provincia": r.get("province"), "tipo": r.get("type"), "texto": texto or None,
+            "referencia": r.get("refCatastral"), "estado": r.get("stateMsg") or r.get("state")}
 
 
 def en_espana(lat, lon) -> bool:
@@ -141,14 +166,22 @@ class Respuestas:
         self.peticiones = 0
 
     @staticmethod
-    def _abrir(url: str):
-        with urlopen(Request(url, headers={"User-Agent": AGENTE}), timeout=30) as r:
-            if urlsplit(r.geturl()).netloc not in HOSTS:
-                raise ValueError(f"Redirección fuera de los servicios oficiales: {r.geturl()}")
-            return r.status, r.read()
+    def _abrir(url: str, datos: bytes | None = None):
+        cab = {"User-Agent": AGENTE}
+        if datos is not None:
+            cab["Content-Type"] = "application/x-www-form-urlencoded"
+        try:
+            with urlopen(Request(url, data=datos, headers=cab), timeout=30) as r:
+                if urlsplit(r.geturl()).netloc not in HOSTS:
+                    raise ValueError(f"Redirección fuera de los servicios oficiales: {r.geturl()}")
+                return r.status, r.read()
+        except HTTPError as err:
+            return err.code, err.read()
 
-    def obtener(self, url: str, ext: str) -> tuple[bytes | None, dict]:
-        e = self.indice.get(url)
+    def obtener(self, url: str, ext: str, datos: bytes | None = None) -> tuple[bytes | None, dict]:
+        """Respuesta 200 guardada o nueva. Un error no se da por bueno (se reintenta otro día), pero su cuerpo se guarda."""
+        clave = url if datos is None else f"POST {url} {datos.decode()}"
+        e = self.indice.get(clave)
         if e and e.get("archivo") and (self.carpeta / e["archivo"]).exists():
             return (self.carpeta / e["archivo"]).read_bytes(), e
         if not self.red:
@@ -159,20 +192,23 @@ class Respuestas:
         self.peticiones += 1
         momento = utc_ahora()
         try:
-            estado, cuerpo = self.abrir(url)
-        except HTTPError as err:
-            estado, cuerpo = err.code, b""
+            estado, cuerpo = self.abrir(url) if datos is None else self.abrir(url, datos)
         except (URLError, OSError, ValueError) as err:
-            self.indice[url] = {"url": url, "momento": momento, "http": None, "motivo": str(err)}
-            return None, self.indice[url]
+            self.indice[clave] = {"url": url, "momento": momento, "http": None, "motivo": str(err)}
+            return None, self.indice[clave]
         entrada = {"url": url, "momento": momento, "http": estado}
+        if datos is not None:
+            entrada["post"] = datos.decode()
+        nombre = hashlib.sha256(clave.encode()).hexdigest()[:24]
         if estado == 200 and cuerpo:
-            nombre = hashlib.sha256(url.encode()).hexdigest()[:24] + ext
-            (self.carpeta / nombre).write_bytes(cuerpo)
-            entrada.update(archivo=nombre, sha256=hashlib.sha256(cuerpo).hexdigest(), bytes=len(cuerpo))
+            (self.carpeta / (nombre + ext)).write_bytes(cuerpo)
+            entrada.update(archivo=nombre + ext, sha256=hashlib.sha256(cuerpo).hexdigest(), bytes=len(cuerpo))
         else:
             entrada["motivo"] = f"HTTP {estado}"
-        self.indice[url] = entrada
+            if cuerpo:
+                (self.carpeta / (nombre + ".error")).write_bytes(cuerpo[:20000])
+                entrada["archivo_error"] = nombre + ".error"
+        self.indice[clave] = entrada
         return (cuerpo if entrada.get("archivo") else None), entrada
 
     def guardar(self):
@@ -181,36 +217,69 @@ class Respuestas:
 
 # --------------------------------------------------------------------------- ubicación de cada inmueble
 
+def variantes_direccion(bien: dict) -> list[str]:
+    """Formas de la dirección para CartoCiudad: con código postal, sin él y solo «calle número»."""
+    d = limpiar_direccion(bien.get("direccion"))
+    mun = bien.get("municipio") or bien.get("localidad")
+    if not d or not mun:
+        return []
+    cp = (bien.get("codigo_postal") or "").strip()
+    out = [f"{d}, {cp} {mun}" if re.fullmatch(r"\d{5}", cp) else None, f"{d}, {mun}"]
+    if (corta := re.match(r"(.*?[A-Za-zÁÉÍÓÚÑáéíóúñ].*?\d+)\b", d)) and corta[1] != d:
+        out.append(f"{corta[1]}, {mun}")
+    return list(dict.fromkeys(x for x in out if x))
+
+
+def mismo_municipio(r: dict, bien: dict) -> bool:
+    if r.get("municipio_ine") and bien.get("municipio_ine"):
+        return str(r["municipio_ine"]) == str(bien["municipio_ine"])
+    return portal_base.norm(r.get("municipio")) == portal_base.norm(bien.get("municipio") or bien.get("localidad"))
+
+
 def ubicar(bien: dict, resp: Respuestas) -> dict:
-    """Devuelve la ubicación del bien con su fuente, o {"motivo": ...} si no se pudo."""
+    """Devuelve la ubicación del bien con su fuente, o {"motivo": ...} con lo que se intentó."""
     intentos = []
     ref = rc14(bien.get("referencia_catastral"))
     if ref:
-        url = f"{CATASTRO}?{urlencode({'Provincia': '', 'Municipio': '', 'SRS': 'EPSG:4326', 'RefCat': ref})}"
-        datos, meta = resp.obtener(url, ".xml")
-        r = leer_catastro(datos) if datos else {"error": meta.get("motivo")}
-        if "lat" in r and en_espana(r["lat"], r["lon"]):
-            return dict(lat=r["lat"], lon=r["lon"], precision="parcela", fuente=FUENTE_CATASTRO, url=url,
-                        texto=r.get("texto"), referencia=ref, consultado=meta.get("momento"), sha256=meta.get("sha256"))
-        intentos.append(f"Catastro ({ref}): {r.get('error') or 'coordenadas fuera de España'}")
+        consultas = [
+            (f"{CATASTRO_JSON}?{urlencode({'SRS': 'EPSG:4326', 'RefCat': ref})}", ".json", None),
+            (f"{CATASTRO}?{urlencode({'Provincia': '', 'Municipio': '', 'SRS': 'EPSG:4326', 'RefCat': ref})}", ".xml", None),
+            (CATASTRO, ".xml", urlencode({'Provincia': '', 'Municipio': '', 'SRS': 'EPSG:4326', 'RefCat': ref}).encode()),
+        ]
+        for url, ext, cuerpo in consultas:
+            datos, meta = resp.obtener(url, ext, cuerpo)
+            r = leer_catastro(datos) if datos else {"error": meta.get("motivo")}
+            if "lat" in r and en_espana(r["lat"], r["lon"]):
+                return dict(lat=r["lat"], lon=r["lon"], precision="parcela", fuente=FUENTE_CATASTRO, url=url,
+                            metodo="POST" if cuerpo else "GET", texto=r.get("texto"), referencia=ref,
+                            consultado=meta.get("momento"), sha256=meta.get("sha256"))
+            intentos.append(f"Catastro {'POST' if cuerpo else 'GET'} {urlsplit(url).path.rsplit('/', 2)[-2]} ({ref}): "
+                            f"{r.get('error') or 'coordenadas fuera de España'}")
+        url = f"{CARTOCIUDAD}?{urlencode({'q': ref, 'limit': 1})}"
+        datos, meta = resp.obtener(url, ".json")
+        r = leer_cartociudad(datos) if datos else {"error": meta.get("motivo")}
+        if "lat" in r and en_espana(r["lat"], r["lon"]) and mismo_municipio(r, bien):
+            return dict(lat=r["lat"], lon=r["lon"], precision="parcela", fuente=FUENTE_CARTOCIUDAD_RC, url=url,
+                        texto=r.get("texto"), tipo=r.get("tipo"), referencia=ref, consultado=meta.get("momento"),
+                        sha256=meta.get("sha256"))
+        intentos.append(f"CartoCiudad por referencia ({ref}): " + (r.get("error") or
+                        ("otro municipio (" + str(r.get("municipio")) + ")" if "lat" in r else "sin coordenadas")))
     else:
         intentos.append("Sin referencia catastral válida en la ficha")
-    direccion = limpiar_direccion(bien.get("direccion"))
-    municipio = bien.get("municipio") or bien.get("localidad")
-    if direccion and municipio:
-        q = ", ".join(x for x in (direccion, municipio, bien.get("provincia")) if x)
+    variantes = variantes_direccion(bien)
+    for q in variantes:
         url = f"{CARTOCIUDAD}?{urlencode({'q': q, 'limit': 1})}"
         datos, meta = resp.obtener(url, ".json")
         r = leer_cartociudad(datos) if datos else {"error": meta.get("motivo")}
         if "lat" in r and en_espana(r["lat"], r["lon"]):
-            if portal_base.norm(r.get("municipio")) == portal_base.norm(municipio):
+            if mismo_municipio(r, bien):
                 return dict(lat=r["lat"], lon=r["lon"], precision="direccion", fuente=FUENTE_CARTOCIUDAD, url=url,
                             texto=r.get("texto"), tipo=r.get("tipo"), estado=r.get("estado"), consulta=q,
-                            consultado=meta.get("momento"), sha256=meta.get("sha256"))
+                            referencia=r.get("referencia"), consultado=meta.get("momento"), sha256=meta.get("sha256"))
             intentos.append(f"CartoCiudad («{q}»): devuelve otro municipio ({r.get('municipio')})")
         else:
             intentos.append(f"CartoCiudad («{q}»): {r.get('error') or 'coordenadas fuera de España'}")
-    else:
+    if not variantes:
         intentos.append("Sin dirección o municipio para buscarla")
     return {"motivo": " · ".join(intentos)}
 
@@ -220,7 +289,8 @@ def ejecutar(raiz: Path, ruta_base: Path, red: bool = True, resp: Respuestas | N
     con = sqlite3.connect(f"file:{ruta_base}?mode=ro", uri=True)
     con.row_factory = sqlite3.Row
     bienes = [dict(r) for r in con.execute(
-        "SELECT sub, lote, bien, clase, referencia_catastral, direccion, codigo_postal, localidad, municipio, provincia "
+        "SELECT sub, lote, bien, clase, referencia_catastral, direccion, codigo_postal, localidad, municipio, municipio_ine, "
+        "provincia "
         "FROM bienes WHERE clase = 'Inmueble' ORDER BY sub, lote, bien")]
     con.close()
     ubicaciones = {}

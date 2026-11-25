@@ -32,7 +32,7 @@ class Abrir:
     def __init__(self, respuestas):
         self.respuestas, self.pedidas = respuestas, []
 
-    def __call__(self, url):
+    def __call__(self, url, datos=None):
         self.pedidas.append(url)
         for trozo, cuerpo in self.respuestas.items():
             if trozo in url:
@@ -51,13 +51,26 @@ class PortalGeoTest(unittest.TestCase):
     def test_direccion(self):
         self.assertEqual(pg.limpiar_direccion("Calle Costa del sol nº2, bloque 2, planta 1ª, puerta C"), "Calle Costa del sol 2")
         self.assertEqual(pg.limpiar_direccion("EDIFICIO C/ RODRIGO DE TRIANA Nº 66-68"), "C/ RODRIGO DE TRIANA 66-68")
+        self.assertEqual(pg.limpiar_direccion("Calle Jesús, nº 62, escalera 1, planta baja"), "Calle Jesús 62")
+        self.assertEqual(pg.limpiar_direccion("CALLE NAOS 12 - ESC. 1 -2º IZDA"), "CALLE NAOS 12")
+        self.assertEqual(pg.limpiar_direccion("CL SANTA ANA 1 BJ 2A"), "CL SANTA ANA 1")
+        self.assertEqual(pg.variantes_direccion({"direccion": "CALLE CACERES 4", "municipio": "San Juan de Aznalfarache",
+                                                 "codigo_postal": "41920"}),
+                         ["CALLE CACERES 4, 41920 San Juan de Aznalfarache", "CALLE CACERES 4, San Juan de Aznalfarache"])
 
     def test_lectores(self):
         self.assertEqual(pg.leer_catastro(XML_OK)["lat"], 37.37124)
+        js = json.dumps({"Consulta_CPMRCResult": {"control": {"cucoor": 1, "cuerr": 0}, "coordenadas": {"coord": [
+            {"pc": {"pc1": "6297019", "pc2": "TG5369N"}, "geo": {"xcen": -5.7, "ycen": 37.3, "srs": "EPSG:4326"},
+             "ldt": "CL JESUS 62"}]}}}).encode()
+        self.assertEqual((pg.leer_catastro(js)["lat"], pg.leer_catastro(js)["texto"]), (37.3, "CL JESUS 62"))
         self.assertIn("NO EXISTE", pg.leer_catastro(XML_ERR)["error"])
         r = pg.leer_cartociudad(jsonp(muni="Marchena", province="Sevilla", type="portal", address="HUERTA GAVIRA",
                                       portalNumber=25, lat=37.33, lng=-5.42, stateMsg="Resultado exacto de la búsqueda"))
         self.assertEqual((r["lat"], r["lon"], r["municipio"], r["texto"]), (37.33, -5.42, "Marchena", "HUERTA GAVIRA 25"))
+        self.assertTrue(pg.mismo_municipio({"municipio_ine": "41060", "municipio": "X"}, {"municipio_ine": "41060"}))
+        self.assertFalse(pg.mismo_municipio({"municipio_ine": "41091", "municipio": "Sevilla"},
+                                            {"municipio_ine": "41058", "municipio": "Sevilla"}))
         self.assertIn("error", pg.leer_cartociudad(b"callback({})"))
 
     def test_ubicacion_y_base(self):
