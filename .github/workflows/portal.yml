@@ -4,7 +4,9 @@ name: Portal de Subastas (códigos y fichas)
 # Paso 2: ficha completa de cada código (portal_fichas.py). Paso 3: base de datos datos/subastas.sqlite y tablas del
 # panel (portal_base.py, sin peticiones). Paso 4: ubicación de cada inmueble con el Catastro y CartoCiudad
 # (portal_geo.py, guarda las respuestas y no repite las ya hechas). Todo se guarda en el repositorio.
-# Solo se lanza a mano: pestaña Actions → este flujo → Run workflow.
+# Se lanza a mano (pestaña Actions → este flujo → Run workflow) o desde la tarea programada de Claude
+# «SeMá · Panel y copia de la base a Drive», que cada día a las 10:13 (hora de Madrid) lo lanza, espera a que termine
+# y sube el resultado a Drive. No tiene programación propia: la de GitHub llega a retrasarse horas.
 on:
   workflow_dispatch:
     inputs:

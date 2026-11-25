@@ -15,7 +15,8 @@ Cambios respecto al script original (para usarlo en lote dentro del proyecto):
 - Los códigos salen de la última captura de portal_codigos.py (o se pasan a mano). Un mismo cliente HTTP para todos,
   con 1 s entre peticiones; si el Portal corta el acceso, se para el lote entero.
 - Reanuda: un SUB que ya tiene ficha de la misma captura de códigos no se vuelve a descargar (salvo --forzar).
-- Las pestañas se guardan comprimidas (.html.gz). Los adjuntos van a datos/portal/documentos/<sha256>.<ext> y los
+- Las pestañas se guardan comprimidas (.html.gz) y solo si han cambiado: si una pestaña es idéntica (mismo SHA-256) a
+  la de la ficha anterior del mismo SUB, ficha.json apunta a esa copia (igual_que_anterior). Los adjuntos van a datos/portal/documentos/<sha256>.<ext> y los
   anuncios a datos/portal/anuncios/, una sola vez: si una ficha anterior del mismo SUB ya tenía ese documento
   (misma ruta, idDoc y lote) o el anuncio ya está guardado, no se vuelve a pedir.
 - ficha.json no repite el texto completo de cada pestaña (está en el HTML guardado): guarda encabezados y tablas.
@@ -336,6 +337,19 @@ def anuncio_oficial(cliente: Cliente, ident: str, ref: str, raiz: Path):
 
 # --------------------------------------------------------------------------- ficha de un SUB
 
+def paginas_previas(raiz: Path, ref: str) -> dict:
+    """Páginas ya guardadas en fichas anteriores del mismo SUB, por (pestaña, lote): {sha256, archivo}."""
+    previas = {}
+    for f in sorted((raiz / "fichas" / ref).glob("*/ficha.json")):
+        try:
+            for pg in json.loads(f.read_text(encoding="utf-8")).get("paginas", []):
+                if pg.get("sha256") and (raiz / pg["archivo"]).exists():
+                    previas[(pg["pestana"], pg.get("lote") or "")] = pg
+        except (OSError, ValueError):
+            continue
+    return previas
+
+
 def documentos_previos(raiz: Path, ref: str) -> dict:
     """Adjuntos ya guardados en fichas anteriores del mismo SUB, por (ruta, idDoc, lote)."""
     previos = {}
@@ -358,6 +372,7 @@ def descargar_ficha(cliente: Cliente, ref: str, raiz: Path, momento: datetime, c
     (obra / "portal").mkdir(parents=True)
     (raiz / "documentos").mkdir(parents=True, exist_ok=True)
     previos = documentos_previos(raiz, ref)
+    previas = paginas_previas(raiz, ref)
     peticiones_antes = cliente.peticiones
     paginas, adjuntos, anuncios, pendientes = [], [], [], []
     anuncios_vistos: set[str] = set()
@@ -374,9 +389,15 @@ def descargar_ficha(cliente: Cliente, ref: str, raiz: Path, momento: datetime, c
                 pestana, lote = clave[1], clave[2]
                 sufijo = f"_lote_{slug(lote) or sha256(lote.encode())[:12]}" if lote else ""
                 nombre = f"{PESTANAS.get(pestana, 'pestana_' + slug(pestana))}{sufijo}.html.gz"
-                escribir(obra / "portal" / nombre, gzip.compress(contenido, 9, mtime=0))
-                archivo = f"fichas/{ref}/{destino.name}/portal/{nombre}"
-                paginas.append(dict(archivo=archivo, etiqueta=etiqueta, pestana=pestana, lote=lote or None, **meta, **datos))
+                anterior = previas.get((pestana, lote))
+                if anterior and anterior["sha256"] == meta["sha256"]:
+                    # la página no ha cambiado desde la ficha anterior: se apunta a la copia ya guardada
+                    archivo, igual = anterior["archivo"], True
+                else:
+                    escribir(obra / "portal" / nombre, gzip.compress(contenido, 9, mtime=0))
+                    archivo, igual = f"fichas/{ref}/{destino.name}/portal/{nombre}", False
+                paginas.append(dict(archivo=archivo, igual_que_anterior=igual, etiqueta=etiqueta, pestana=pestana,
+                                    lote=lote or None, **meta, **datos))
                 for k, u in ubic.items():
                     if k not in ubicaciones or lote:
                         ubicaciones[k] = dict(**u, fuente=dict(pestana="Bienes", archivo=archivo, url=meta["url_final"]))

@@ -132,6 +132,22 @@ class PortalFichasTest(unittest.TestCase):
         self.assertFalse(any("verDocumento" in u or "boe.es/" in u and "www.boe.es" in u for u in a2.pedidas))
         ficha = json.loads((self.raiz / r["carpeta"] / "ficha.json").read_text())
         self.assertTrue(ficha["adjuntos"][0]["reutilizado"] and ficha["anuncios"][0]["reutilizado"])
+        # las pestañas no han cambiado: no se guardan otra vez y ficha.json apunta a las de la primera descarga
+        self.assertTrue(all(p["igual_que_anterior"] for p in ficha["paginas"]))
+        self.assertEqual(list((self.raiz / r["carpeta"] / "portal").glob("*.html.gz")), [])
+        self.assertTrue(all((self.raiz / p["archivo"]).exists() and "20261125_200000" in p["archivo"] for p in ficha["paginas"]))
+
+    def test_pagina_que_cambia_se_guarda(self):
+        c, _ = cliente(portal())
+        pf.descargar_ficha(c, REF, self.raiz, MOMENTO, "41/a")
+        resp = portal()
+        resp[f"{DET}&ver=5"] = (200, None, "text/html", html("<h3>Pujas</h3><p>La subasta ha recibido alguna puja.</p>"))
+        c2, _ = cliente(resp)
+        r = pf.descargar_ficha(c2, REF, self.raiz, MOMENTO.replace(hour=21), "41/b")
+        ficha = json.loads((self.raiz / r["carpeta"] / "ficha.json").read_text())
+        cambiadas = [p["pestana"] for p in ficha["paginas"] if not p["igual_que_anterior"]]
+        self.assertEqual(cambiadas, ["5"])
+        self.assertEqual([x.name for x in (self.raiz / r["carpeta"] / "portal").glob("*.html.gz")], ["pujas.html.gz"])
 
     def test_429_detiene_el_lote(self):
         resp = portal()

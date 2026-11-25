@@ -15,7 +15,11 @@ Base de datos auditable de las subastas que se celebran en el **Portal de Subast
 | 2 | `portal_fichas.py` | Ficha completa de cada código: pestañas, lotes, documentos y anuncio del BOE | `datos/portal/fichas/<SUB>/<momento>/` |
 | 3 | `portal_base.py` | Base de datos y tablas del panel, sin hacer peticiones | `datos/subastas.sqlite`, `datos/panel/` |
 | 4 | `portal_geo.py` | Coordenadas de cada inmueble (Catastro y CartoCiudad) y nueva base | `datos/portal/geo/` |
-| 5 | (a mano, por ahora) | Subir `datos/panel/sema-panel-sp_*.b64.txt` a la carpeta de Drive del panel y la copia de la base `datos/panel/subastas.sqlite.gz` a la carpeta «Sema Deal Finder» | Panel y copia en Drive |
+| 5 | Tarea programada de Claude | Subir `datos/panel/sema-panel-sp_*.b64.txt` a la carpeta de Drive del panel y la copia de la base `datos/panel/subastas.sqlite.gz` a la carpeta «Sema Deal Finder» | Panel y copia en Drive |
+
+**Cada día, a las 10:13 (hora de Madrid)**, la tarea programada de Claude «SeMá · Panel y copia de la base a Drive»
+lanza el flujo de GitHub (pasos 1 a 4), espera a que termine y hace el paso 5. Si el flujo falla, sube lo que haya y
+lo dice en su resumen. El flujo no tiene programación propia en GitHub porque esta llega a retrasarse horas.
 
 Los pasos 1 a 4 los hace el flujo de GitHub **«Portal de Subastas (códigos y fichas)»** (`.github/workflows/portal.yml`):
 Actions → el flujo → *Run workflow*, con el código de provincia (41 Sevilla, 28 Madrid, 08 Barcelona, 21 Huelva). Solo se
@@ -46,6 +50,9 @@ enlaces del mismo SUB: Información general, Autoridad gestora, Bienes (y cada l
   «Autoridad gestora», «Bien», «Pujas»); un PDF empieza por `%PDF-` y acaba en `%%EOF`; cada redirección se valida.
 - **Cortesía.** Peticiones de una en una con 1 s de pausa; si el Portal responde 401, 403 o 429 se para todo el lote.
 - **Reanuda.** Un SUB que ya tiene ficha de la misma búsqueda no se vuelve a pedir (`--forzar` para repetir).
+- **Sin copias repetidas.** Una pestaña idéntica (mismo SHA-256) a la de la ficha anterior del mismo SUB no se guarda
+  otra vez: `ficha.json` apunta a la copia ya guardada (`igual_que_anterior`). Así la descarga diaria solo añade al
+  repositorio lo que cambia (pujas, estado, subastas nuevas).
 - **Resultado.** `ficha.json` (pestañas con sus tablas, ubicaciones de los bienes, adjuntos, anuncios y pendientes, cada
   uno con URL, momento y SHA-256), `pendientes.json` y `portal/*.html.gz`. Los adjuntos van a
   `datos/portal/documentos/<sha256>.<ext>` y los anuncios a `datos/portal/anuncios/`, una sola vez aunque se repitan.
