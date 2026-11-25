@@ -1,0 +1,64 @@
+{
+  "artefacto": "https://claude.ai/artifact/H4SSBTA2mTkgTDaMDKAoKb",
+  "carpeta_drive": "https://drive.google.com/drive/folders/19VpcNE3XFA48HuHf6Yk7KOn2kfinYGFB",
+  "nota": "Cada tabla del panel es el archivo más reciente con ese nombre en la carpeta de Drive (JSON con gzip y en base64). El panel guarda la página y estas consultas; los datos se leen al abrirlo con el conector de Google Drive de quien lo abre.",
+  "filtros": {
+    "prov": "provincia (código INE)",
+    "sp_bien": "'' inmuebles · 'todos' · 'otros'",
+    "sp_grupo": "administración",
+    "sp_mun": "municipio (código INE)",
+    "sp_q": "texto",
+    "sp_orden": "orden del listado",
+    "sp_sel": "subasta elegida"
+  },
+  "fuentes": {
+    "sp_subastas": {
+      "conector": "Google Drive",
+      "herramienta": "search_files",
+      "consulta": "title = 'sema-panel-sp_subastas.b64.txt' and parentId = '19VpcNE3XFA48HuHf6Yk7KOn2kfinYGFB' and trashed = false",
+      "orden": "modifiedTime desc"
+    },
+    "sp_lotes": {
+      "conector": "Google Drive",
+      "herramienta": "search_files",
+      "consulta": "title = 'sema-panel-sp_lotes.b64.txt' and parentId = '19VpcNE3XFA48HuHf6Yk7KOn2kfinYGFB' and trashed = false",
+      "orden": "modifiedTime desc"
+    },
+    "sp_bienes": {
+      "conector": "Google Drive",
+      "herramienta": "search_files",
+      "consulta": "title = 'sema-panel-sp_bienes.b64.txt' and parentId = '19VpcNE3XFA48HuHf6Yk7KOn2kfinYGFB' and trashed = false",
+      "orden": "modifiedTime desc"
+    },
+    "sp_campos": {
+      "conector": "Google Drive",
+      "herramienta": "search_files",
+      "consulta": "title = 'sema-panel-sp_campos.b64.txt' and parentId = '19VpcNE3XFA48HuHf6Yk7KOn2kfinYGFB' and trashed = false",
+      "orden": "modifiedTime desc"
+    },
+    "sp_documentos": {
+      "conector": "Google Drive",
+      "herramienta": "search_files",
+      "consulta": "title = 'sema-panel-sp_documentos.b64.txt' and parentId = '19VpcNE3XFA48HuHf6Yk7KOn2kfinYGFB' and trashed = false",
+      "orden": "modifiedTime desc"
+    },
+    "sp_pendientes": {
+      "conector": "Google Drive",
+      "herramienta": "search_files",
+      "consulta": "title = 'sema-panel-sp_pendientes.b64.txt' and parentId = '19VpcNE3XFA48HuHf6Yk7KOn2kfinYGFB' and trashed = false",
+      "orden": "modifiedTime desc"
+    },
+    "sp_capturas": {
+      "conector": "Google Drive",
+      "herramienta": "search_files",
+      "consulta": "title = 'sema-panel-sp_capturas.b64.txt' and parentId = '19VpcNE3XFA48HuHf6Yk7KOn2kfinYGFB' and trashed = false",
+      "orden": "modifiedTime desc"
+    },
+    "limites": {
+      "conector": "Google Drive",
+      "herramienta": "search_files",
+      "consulta": "title = 'sema-panel-limites.b64.txt' and parentId = '19VpcNE3XFA48HuHf6Yk7KOn2kfinYGFB' and trashed = false",
+      "orden": "modifiedTime desc"
+    }
+  }
+}

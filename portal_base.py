@@ -11,6 +11,8 @@ Tablas
 - campos          TODOS los pares etiqueta → valor de las tablas de cada pestaña (última ficha de cada SUB), con su
                   pestaña, lote, bien, sección, archivo y URL. Es la información completa y trazable.
 - subastas        una fila por SUB con los datos principales (pestañas 1 y 2, resumen de bienes, lotes y pujas).
+                  activa = sale en la última búsqueda de su provincia; provincias_busqueda = provincias (código INE)
+                  en cuya búsqueda «provincia del bien» ha salido.
 - lotes           una fila por lote (o una sola si la subasta no tiene lotes): importes y puja.
 - bienes          una fila por bien: clase, descripción, referencia catastral, dirección, municipio (con su código
                   INE de la lista del IGN), situación posesoria, cargas, inscripción…
@@ -77,7 +79,8 @@ CREATE TABLE fichas (carpeta TEXT PRIMARY KEY, sub TEXT, consultado_utc TEXT, ca
                      paginas INTEGER, adjuntos INTEGER, anuncios INTEGER, pendientes INTEGER, ultima INTEGER);
 CREATE TABLE campos (sub TEXT, pestana TEXT, lote TEXT, bien INTEGER, seccion TEXT, etiqueta TEXT, valor TEXT,
                      orden INTEGER, archivo TEXT, url TEXT, consultado_utc TEXT);
-CREATE TABLE subastas (sub TEXT PRIMARY KEY, grupo TEXT, tipo_subasta TEXT, activa INTEGER, vista_en TEXT,
+CREATE TABLE subastas (sub TEXT PRIMARY KEY, grupo TEXT, tipo_subasta TEXT, activa INTEGER, provincias_busqueda TEXT,
+                       vista_en TEXT,
                        primera_vez TEXT, ultima_vez TEXT, fecha_inicio TEXT, fecha_conclusion TEXT,
                        lotes_texto TEXT, n_lotes INTEGER, {', '.join(f'{c} REAL, {c}_texto TEXT' for c in IMPORTES_LOTE)},
                        valor_lotes_min REAL, valor_lotes_max REAL,
@@ -370,6 +373,7 @@ def cargar_ficha(con, raiz: Path, carpeta: Path, f: dict, geo: Municipios, vista
     fila = dict(
         sub=sub, grupo=GRUPO_SUB.get(sub.split("-")[1], "Otras administraciones"), tipo_subasta=general.get("tipo_subasta"),
         activa=int(bool(set(vistas) & activas)), vista_en=",".join(vistas) or None,
+        provincias_busqueda=",".join(dict.fromkeys(v.split("/")[0] for v in vistas)) or None,
         primera_vez=vistas[0] if vistas else None, ultima_vez=vistas[-1] if vistas else None,
         fecha_inicio=fecha_iso(general.get("fecha_inicio_texto")), fecha_conclusion=fecha_iso(general.get("fecha_conclusion_texto")),
         lotes_texto=general.get("lotes_texto"), n_lotes=len(lotes),
@@ -397,10 +401,10 @@ PANEL_SQL = {
     "sp_bienes": "SELECT * FROM bienes ORDER BY sub, CAST(lote AS INTEGER), bien",
     "sp_campos": f"SELECT sub, pestana, lote, bien, seccion, etiqueta, valor, orden, url FROM campos "
                  f"WHERE pestana <> '{PESTANA_PERSONAL}' ORDER BY sub, orden",
-    "sp_documentos": "SELECT d.sub, d.etiqueta, d.lote, d.url, d.sha256, d.tipo_mime, d.bytes, d.consultado_utc, "
-                     "a.anuncio, a.url AS url_anuncio FROM documentos d LEFT JOIN anuncios a USING (sub) "
-                     "UNION ALL SELECT sub, 'Anuncio ' || anuncio, NULL, url, NULL, 'text/html', NULL, NULL, anuncio, url "
-                     "FROM anuncios ORDER BY 1, 2",
+    # documentos del Portal y anuncios del BOE, con su URL oficial (la copia guardada está en el repositorio)
+    "sp_documentos": "SELECT sub, 'Documento del Portal' AS tipo, etiqueta, lote, url, tipo_mime, bytes FROM documentos "
+                     "UNION ALL SELECT sub, 'Anuncio del BOE', anuncio || ' · publicado el ' || publicado, NULL, url, "
+                     "'text/html', NULL FROM anuncios ORDER BY 1, 2 DESC, 3",
     "sp_pendientes": "SELECT * FROM pendientes ORDER BY sub, tipo",
     "sp_capturas": "SELECT captura, provincia, fecha_captura, total, url_consulta, ultima FROM capturas ORDER BY captura",
 }

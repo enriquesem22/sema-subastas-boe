@@ -1,27 +1,94 @@
-# SeMá · Subastas BOE Analytics (provincia de Sevilla)
+# SeMá Deal Finder · subastas del Portal del BOE
 
-> **Estado (25-11-2026): datos borrados y automatismos en pausa.** Para cambiar el método de extracción se han
-> borrado las bases (`dealfinder.sqlite`, `sema.sqlite`, `subastech.sqlite`), las respuestas guardadas
-> (`datos/brutos`), los CSV y los informes, y también sus copias en Google Drive. La programación de GitHub
-> Actions y la tarea diaria de subida a Drive están pausadas. El código sigue aquí. Lo borrado puede recuperarse
-> del historial de Git (commit anterior a este cambio). Lo que se explica abajo describe el método anterior.
+Base de datos auditable de las subastas que se celebran en el **Portal de Subastas del BOE**, por provincia del bien
+(de momento, Sevilla), y su panel en Claude. Cada dato dice de qué página oficial sale y cuándo se consultó.
 
-## Método nuevo, paso 1: códigos SUB activos del Portal de Subastas
+> **Estado (25-11-2026).** Método nuevo en marcha (abajo). Los datos del método anterior (sumario del BOE, Deal Finder
+> por anuncios, Subastech) se borraron y su programación está en pausa; su código y su documentación siguen más abajo,
+> en «Método anterior». Lo borrado puede recuperarse del historial de Git.
 
-`portal_codigos.py` (basado en `buscar_codigos_sevilla.py`) hace la búsqueda avanzada del Portal de Subastas del BOE
-(`https://subastas.boe.es/subastas_ava.php`): subastas en estado «Celebrándose» con el **bien** en la provincia indicada
-(`BIEN.COD_PROVINCIA`: 41 Sevilla, 28 Madrid, 08 Barcelona, 21 Huelva), 500 por página y en orden de SUB.
+## Método nuevo: cómo funciona
 
-- **Comprobaciones.** Respuesta HTTP 200 en HTML y sin redirección; página del buscador oficial; hora del servidor a
-  menos de 5 minutos de la consulta; recuento «Resultados X a Y de Z» igual a las filas mostradas y páginas sin saltos;
-  un SUB y el estado «Celebrándose» en cada fila; ningún código repetido. Si algo falla, no guarda nada.
-- **Resultado.** `datos/portal/codigos/<provincia>/<AAAAMMDD_HHMMSS>/` con `codigos.txt` (un SUB por línea),
-  `listado.json` (consulta, momento, total, códigos y SHA-256 de cada página) y la página original `pagina-N.html.gz`.
-- **Cómo se lanza.** En GitHub: Actions → «Portal de Subastas (códigos y fichas)» → *Run workflow*, con la provincia.
-  En el PC: `py portal_codigos.py --provincia 41`. Desde la nube de Claude no se llega a subastas.boe.es.
+| Paso | Programa | Qué hace | Resultado |
+|---|---|---|---|
+| 1 | `portal_codigos.py` | Búsqueda avanzada del Portal: subastas «Celebrándose» con el bien en la provincia | `datos/portal/codigos/<prov>/<momento>/` |
+| 2 | `portal_fichas.py` | Ficha completa de cada código: pestañas, lotes, documentos y anuncio del BOE | `datos/portal/fichas/<SUB>/<momento>/` |
+| 3 | `portal_base.py` | Base de datos y tablas del panel, sin hacer peticiones | `datos/subastas.sqlite`, `datos/panel/` |
+| 4 | (a mano, por ahora) | Subir `datos/panel/sema-panel-sp_*.b64.txt` a la carpeta de Drive del panel | Panel «SeMá Deal Finder» |
+
+Los pasos 1 a 3 los hace el flujo de GitHub **«Portal de Subastas (códigos y fichas)»** (`.github/workflows/portal.yml`):
+Actions → el flujo → *Run workflow*, con el código de provincia (41 Sevilla, 28 Madrid, 08 Barcelona, 21 Huelva). Solo se
+lanza a mano y guarda el resultado en el repositorio. En el PC: `py portal_codigos.py --provincia 41`,
+`py portal_fichas.py` y `py portal_base.py`. Desde la nube de Claude no se llega a subastas.boe.es.
+
+### Paso 1 · Códigos (`portal_codigos.py`, basado en `buscar_codigos_sevilla.py`)
+
+Búsqueda avanzada `https://subastas.boe.es/subastas_ava.php`: estado `EJ` («Celebrándose»), `BIEN.COD_PROVINCIA` (la
+provincia **donde está el bien**, no la sede de la autoridad), 500 por página y en orden de SUB; sigue las páginas
+siguientes si hay más.
+
+- **Comprobaciones.** HTTP 200 en HTML y sin redirección; página del buscador oficial; hora del servidor a menos de
+  5 minutos de la consulta; «Resultados X a Y de Z» igual a las filas mostradas y páginas sin saltos; un SUB y el estado
+  «Celebrándose» en cada fila; ningún código repetido. Si algo falla, no guarda nada.
+- **Resultado.** `codigos.txt` (un SUB por línea), `listado.json` (consulta, momento, total, códigos y SHA-256 de cada
+  página) y la página original `pagina-N.html.gz`.
+
+### Paso 2 · Fichas (`portal_fichas.py`, basado en `descargar_subasta_boe.py`)
+
+Para cada código de la última búsqueda abre `https://subastas.boe.es/ds.php?id=SUB` y recorre la ficha siguiendo solo
+enlaces del mismo SUB: Información general, Autoridad gestora, Bienes (y cada lote), Pujas (y cada lote) y los documentos
+(`verDocumento.php`, `verCertificadoCierre.php`). De la fila «Anuncio BOE» descarga el anuncio oficial en www.boe.es
+(XML y PDF) y comprueba que cita el SUB.
+
+- **Comprobaciones.** El h2 de cada página lleva el SUB pedido y cada pestaña sus encabezados («Datos de la subasta»,
+  «Autoridad gestora», «Bien», «Pujas»); un PDF empieza por `%PDF-` y acaba en `%%EOF`; cada redirección se valida.
+- **Cortesía.** Peticiones de una en una con 1 s de pausa; si el Portal responde 401, 403 o 429 se para todo el lote.
+- **Reanuda.** Un SUB que ya tiene ficha de la misma búsqueda no se vuelve a pedir (`--forzar` para repetir).
+- **Resultado.** `ficha.json` (pestañas con sus tablas, ubicaciones de los bienes, adjuntos, anuncios y pendientes, cada
+  uno con URL, momento y SHA-256), `pendientes.json` y `portal/*.html.gz`. Los adjuntos van a
+  `datos/portal/documentos/<sha256>.<ext>` y los anuncios a `datos/portal/anuncios/`, una sola vez aunque se repitan.
+  Resumen de cada lote en `datos/portal/fichas/_ejecuciones/`.
+- **Pendientes habituales.** «acceso_restringido»: el Portal solo enseña a usuarios registrados la información
+  complementaria y el importe de las pujas (no se inicia sesión). Adjuntos de más de 25 MB: no se guardan en el
+  repositorio (quedan pendientes con su tamaño; se pueden abrir desde la ficha del Portal).
+
+### Paso 3 · Base de datos (`portal_base.py`)
+
+Rehace `datos/subastas.sqlite` entera a partir de lo guardado, sin peticiones: `capturas` y `en_captura` (historial de
+búsquedas), `fichas`, `campos` (todos los pares etiqueta → valor de cada pestaña, con lote, bien, sección, archivo y
+URL), `subastas` (una fila por SUB), `lotes`, `bienes` (municipio oficial con código INE del IGN), `documentos`,
+`anuncios` y `pendientes`. Importes como número en euros y con su texto original; fechas en la ISO que da el Portal.
+En las subastas con varios lotes el Portal no da importes de conjunto: quedan vacíos y `valor_lotes_min` /
+`valor_lotes_max` dan el menor y el mayor valor de sus lotes. La pestaña «Acreedor» (nombre y NIF) se guarda en la base
+pero **no va al panel**.
+
+Exporta al panel `datos/panel/sema-panel-sp_<tabla>.json` y su copia `.b64.txt` (gzip + base64): `sp_subastas`,
+`sp_lotes`, `sp_bienes`, `sp_campos`, `sp_documentos`, `sp_pendientes` y `sp_capturas`.
+
+### Panel «SeMá Deal Finder»
+
+Lee esas tablas de la carpeta de Drive del panel con el conector de Google Drive de quien lo abre (más los límites
+municipales `sema-panel-limites`). Barra de provincia; resumen (celebrándose, por administración, con pujas, concluyen
+en 7 días); mapa de Sevilla por municipio; listado con filtros (bien, administración, municipio, texto, orden) y, al
+pulsar una subasta, su ficha: importes, lotes, bienes, documentos con enlace oficial y todos los datos de la ficha.
+
+### Decisiones
+
 - **Acceso automatizado al Portal.** Por decisión de Enrique (25-11-2026) ya no rige la regla de no extraer datos del
-  Portal de forma automatizada. Las peticiones van de una en una, con 2 segundos entre páginas, y con un
-  `User-Agent` que identifica el proyecto. El flujo solo se lanza a mano.
+  Portal de forma automatizada. Se hace con pausa, de una en una y con un `User-Agent` que identifica el proyecto.
+- **Anuncio del BOE.** `portal_fichas.py` lee el XML del anuncio en `www.boe.es/diario_boe/xml.php`, como el script
+  original, aunque el robots.txt de www.boe.es no lo permite a programas (los programas del método anterior usan la
+  página HTML oficial en su lugar).
+- No se inicia sesión en el Portal ni se usa la cuenta de postor de Enrique.
+
+### Pruebas
+
+`python -m unittest discover -s tests`. Las de `portal_codigos` y `portal_base` usan páginas **reales** del Portal
+guardadas en `tests/fixtures` (Sevilla, 25-11-2026); las de `portal_fichas` usan un Portal simulado.
+
+---
+
+# Método anterior (en pausa, datos borrados)
 
 Base de datos diaria y auditable de subastas de la provincia de Sevilla, construida **solo con fuentes
 oficiales o autorizadas**.
@@ -111,7 +178,7 @@ Huelva, con todos sus municipios, seleccionadas por la **ubicación del bien**. 
   coincide, difiere o sin cotejar) y nunca se presentan como verificados en el BOE. La carga diaria de Subastech está
   en pausa hasta nueva autorización.
 
-## Panel en Claude: SeMá Deal Finder (datos leídos de Google Drive)
+## Panel anterior (sustituido el 25-11-2026 por el del método nuevo)
 
 El panel es un artefacto de Claude. Arriba tiene una barra de provincia (Todas, Madrid, Barcelona, Sevilla, Huelva)
 que filtra toda la página, y tres pestañas:

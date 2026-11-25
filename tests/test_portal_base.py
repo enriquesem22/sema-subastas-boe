@@ -49,6 +49,7 @@ class PortalBaseTest(unittest.TestCase):
         self.assertEqual((s["valor_lotes_min"], s["valor_lotes_max"]), (200200.0, 210900.0))
         self.assertEqual((s["municipios"], s["municipios_ine"], s["es_inmueble"]), ("Mairena del Alcor", "41058", 1))
         self.assertEqual(s["fecha_conclusion"], "2026-11-30T18:00:00+01:00")
+        self.assertEqual(s["provincias_busqueda"], "41")
         self.assertEqual(s["cantidad_reclamada"], 500951.66)
         l2 = self.fila("SELECT * FROM lotes WHERE sub='SUB-JA-2026-267391' AND lote='2'")
         self.assertEqual((l2["valor_subasta"], l2["deposito"], l2["puja_minima_texto"], l2["puja"]),

@@ -1,0 +1,696 @@
+<meta name="dash-one-writer">
+<meta name="dash-form" content="dashboard">
+<style>
+.sv{container-type:inline-size;container-name:sv;display:grid;gap:var(--cds-gap-xl);color:var(--color-fg);font-family:var(--font-anthropic-sans)}
+.sv-head{display:grid;gap:var(--cds-gap-sm);max-width:78ch}
+.sv-eyebrow{margin:0;font-size:var(--cds-font-size-caption);letter-spacing:.07em;text-transform:uppercase;color:var(--color-fg-muted)}
+.sv-title{margin:0;font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);line-height:1.15;text-wrap:balance}
+.sv-lede{margin:0;line-height:1.6}
+.sv-lede b{font-weight:var(--cds-font-weight-medium);font-variant-numeric:tabular-nums}
+.sv-err{margin:0;color:var(--color-bad)}
+.sv-note{margin:0;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);line-height:1.5}
+.sv-warnbox{margin:0;padding:var(--cds-pad-md) var(--cds-pad-lg);border:1px solid var(--color-warn);border-radius:var(--cds-radius);line-height:1.6;font-size:var(--cds-font-size-caption)}
+.sv-warnbox b{font-weight:var(--cds-font-weight-medium);font-variant-numeric:tabular-nums}
+.sv-provbar{position:sticky;top:0;z-index:4;display:flex;flex-wrap:wrap;align-items:center;gap:var(--cds-gap-sm);padding:var(--cds-pad-sm) 0;background:var(--color-bg);border-bottom:1px solid var(--color-border-line)}
+.sv-provbar-label{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);margin-right:var(--cds-gap-xs)}
+.sv-prov{font:inherit;font-size:var(--cds-font-size-body);color:var(--color-fg);background-color:var(--color-panel);border:1px solid var(--color-border-line);border-radius:999px;padding:5px 14px;cursor:pointer;white-space:nowrap}
+.sv-prov:hover{border-color:var(--color-fg-muted)}
+.sv-prov[aria-pressed="true"]{background-color:var(--color-fg);color:var(--color-bg);border-color:var(--color-fg)}
+.sv-prov:focus-visible,.sv-btn:focus-visible,.sv a:focus-visible,.sv-table tbody tr:focus-visible{outline:2px solid var(--color-fg);outline-offset:2px}
+.sv-kpis{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--cds-gap-md)}
+.sv-kpi{display:grid;gap:var(--cds-gap-xs);align-content:start;min-width:0;background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-md) var(--cds-pad-lg)}
+.sv-kpi-label{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.sv-kpi-val{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);line-height:1.1;font-variant-numeric:tabular-nums;min-height:1.1em}
+.sv-card{display:grid;gap:var(--cds-gap-sm);align-content:start;min-width:0;background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-lg)}
+.sv-h2{margin:0;font-size:var(--cds-font-size-heading);font-weight:var(--cds-font-weight-medium);text-wrap:balance}
+.sv-h3{margin:0;font-size:var(--cds-font-size-body);font-weight:var(--cds-font-weight-medium)}
+.sv-geo{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:var(--cds-gap-lg);align-items:start}
+.sv-mapbox{position:relative;border:1px solid var(--color-border-line);border-radius:var(--cds-radius);overflow:hidden;background:color-mix(in srgb,var(--color-fg) 4%,var(--color-bg));min-height:260px}
+.sv-mapbox svg{display:block;width:100%;height:auto}
+.sv-muni{stroke:var(--color-border-line);stroke-width:.8;vector-effect:non-scaling-stroke;cursor:pointer}
+.sv-muni:hover{stroke:var(--color-fg-muted);stroke-width:1.4}
+.sv-muni.sel{stroke:var(--color-fg);stroke-width:2.2}
+.sv-provline{fill:none;stroke:var(--color-fg-muted);stroke-width:1.2;vector-effect:non-scaling-stroke;pointer-events:none}
+.sv-tip{position:absolute;z-index:4;pointer-events:none;display:grid;gap:2px;max-width:260px;background:var(--cds-surface-popover);border:1px solid var(--cds-border);box-shadow:var(--cds-shadow-popover);border-radius:var(--cds-radius);padding:var(--cds-pad-sm) var(--cds-pad-md);font-size:var(--cds-font-size-caption);line-height:1.4}
+.sv-tip strong{font-weight:var(--cds-font-weight-medium)}
+.sv-tip span{color:var(--cds-text-secondary);font-variant-numeric:tabular-nums}
+.sv-filters{display:flex;flex-wrap:wrap;gap:var(--cds-gap-md);align-items:end}
+.sv-field{display:grid;gap:var(--cds-gap-xs);font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);min-width:0}
+.sv-field-grow{flex:1 1 220px}
+.sv-input{font:inherit;font-size:var(--cds-font-size-body);color:var(--color-fg);background-color:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:6px 10px;min-width:0;width:100%}
+.sv-input:focus-visible{outline:2px solid var(--color-fg);outline-offset:1px}
+.sv-btn{font:inherit;font-size:var(--cds-font-size-caption);color:var(--color-fg);background-color:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:6px 12px;cursor:pointer}
+.sv-btn:hover{border-color:var(--color-fg-muted)}
+.sv-count{margin:0 0 0 auto;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);align-self:center}
+.sv-count b{color:var(--color-fg);font-variant-numeric:tabular-nums}
+.sv-main{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:var(--cds-gap-lg);align-items:start}
+.sv-tablewrap{overflow:auto;max-height:640px;min-width:0;border:1px solid var(--color-border-line);border-radius:var(--cds-radius)}
+.sv-card>*,.sv-detail>*,.sv-main>*,.sv-geo>*{min-width:0}
+.sv-tablewrap-s{max-height:none}
+.sv-table{width:100%;border-collapse:collapse;font-size:var(--cds-font-size-caption);font-variant-numeric:tabular-nums}
+.sv-table th{position:sticky;top:0;z-index:1;text-align:left;font-weight:var(--cds-font-weight-medium);color:var(--color-fg-muted);background:var(--color-panel);padding:8px 10px;border-bottom:1px solid var(--color-border-line);white-space:nowrap}
+.sv-table td{padding:8px 10px;border-bottom:1px solid var(--color-border-line);vertical-align:top}
+.sv-table tbody tr:last-child td{border-bottom:0}
+.sv-table .num{text-align:right;white-space:nowrap}
+.sv-table a{color:var(--color-fg);text-underline-offset:2px}
+.sv-table tbody tr.is-click{cursor:pointer}
+.sv-table tbody tr.is-click:hover td{background:color-mix(in srgb,var(--color-fg) 4%,transparent)}
+.sv-table tbody tr.sel td{background:color-mix(in srgb,var(--color-fg) 9%,transparent)}
+.sv-sub{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11px;white-space:nowrap}
+.sv-muted{color:var(--color-fg-muted)}
+.sv-chip{display:inline-flex;align-items:center;font-size:var(--cds-font-size-caption);line-height:1.5;padding:0 8px;border-radius:999px;border:1px solid var(--color-border-line);color:var(--color-fg-muted);white-space:nowrap}
+.sv-chip-ok{color:var(--color-ok);border-color:currentColor}
+.sv-chip-warn{color:var(--color-warn);border-color:currentColor}
+.sv-detail{display:grid;gap:var(--cds-gap-md);align-content:start;min-width:0;position:sticky;top:56px;max-height:calc(100vh - 72px);overflow:auto}
+.sv-kv{display:grid;grid-template-columns:minmax(0,11em) minmax(0,1fr);gap:4px var(--cds-gap-md);margin:0;font-size:var(--cds-font-size-caption);line-height:1.45}
+.sv-kv dt{color:var(--color-fg-muted)}
+.sv-kv dd{margin:0;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.sv-kv a{color:var(--color-fg)}
+.sv-bienes{display:grid;gap:var(--cds-gap-sm)}
+.sv-bien{display:grid;gap:var(--cds-gap-xs);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-md)}
+.sv-list{margin:0;padding-left:1.1em;display:grid;gap:4px;font-size:var(--cds-font-size-caption);line-height:1.45}
+.sv-list a{color:var(--color-fg)}
+.sv-notes{font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);line-height:1.6;max-width:84ch}
+.sv-notes summary{cursor:pointer;color:var(--color-fg);font-weight:var(--cds-font-weight-medium)}
+.sv-notes ol,.sv-notes ul{margin:var(--cds-gap-sm) 0 0;padding-left:1.2em;display:grid;gap:var(--cds-gap-xs)}
+.sv-notes a{color:var(--color-fg)}
+.sv-empty{margin:0;color:var(--color-fg-muted)}
+.sv-legend{display:flex;flex-wrap:wrap;gap:var(--cds-gap-xs) var(--cds-gap-md);align-items:center;font-size:var(--cds-font-size-caption);color:var(--color-fg-muted)}
+.sv-ramp{display:inline-block;width:110px;height:10px;border-radius:5px;border:1px solid var(--color-border-line)}
+@container sv (max-width:960px){.sv-kpis{grid-template-columns:repeat(3,minmax(0,1fr))}.sv-main,.sv-geo{grid-template-columns:minmax(0,1fr)}.sv-detail{position:static;max-height:none;overflow:visible}}
+@container sv (max-width:460px){.sv-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.sv-kv{grid-template-columns:minmax(0,1fr)}.sv-kv dd{margin-bottom:4px}.sv-count{margin-left:0;flex-basis:100%}}
+@media print{.sv-provbar{position:static}.sv-tablewrap,.sv-detail{max-height:none;overflow:visible;position:static}.sv-filters .sv-btn{display:none}}
+</style>
+
+<div class="sv" id="sv">
+  <nav class="sv-provbar" id="provincia" aria-label="Provincia que se muestra en todo el panel">
+    <span class="sv-provbar-label">Provincia</span>
+    <button type="button" class="sv-prov" data-prov="" aria-pressed="true">Todas</button>
+    <button type="button" class="sv-prov" data-prov="28" aria-pressed="false">Madrid</button>
+    <button type="button" class="sv-prov" data-prov="08" aria-pressed="false">Barcelona</button>
+    <button type="button" class="sv-prov" data-prov="41" aria-pressed="false">Sevilla</button>
+    <button type="button" class="sv-prov" data-prov="21" aria-pressed="false">Huelva</button>
+  </nav>
+
+  <header class="sv-head" id="cabecera">
+    <p class="sv-eyebrow">SeMá Deal Finder</p>
+    <h1 class="sv-title">Subastas de inmuebles</h1>
+    <p class="sv-lede" data-read lang="es">Se están celebrando <b class="dash-skeleton" data-draw="sp-kpi" data-source="sp_resumen" data-field="activas" data-row="0">—</b> subastas de <span data-draw="sp-bien-txt">inmuebles</span> en el Portal de Subastas del BOE con el bien en <span data-draw="sp-prov-txt">—</span>, según la búsqueda del <b class="dash-skeleton" data-draw="sp-kpi" data-fmt="fecha" data-source="sp_resumen" data-field="fecha_busqueda" data-row="0">—</b>. <b class="dash-skeleton" data-draw="sp-kpi" data-source="sp_resumen" data-field="concluyen7" data-row="0">—</b> concluyen en los 7 días siguientes y <b class="dash-skeleton" data-draw="sp-kpi" data-source="sp_resumen" data-field="con_pujas" data-row="0">—</b> ya tienen alguna puja.</p>
+    <p class="sv-err" data-sp-err hidden>No se han podido cargar las subastas desde Google Drive.</p>
+    <p class="sv-warnbox" data-sp-sinprov hidden>Todavía no se han descargado las subastas de esta provincia. Se descargan desde GitHub, en el flujo «Portal de Subastas (códigos y fichas)», escribiendo su código de provincia (28 Madrid, 08 Barcelona, 21 Huelva).</p>
+  </header>
+
+  <section class="sv-kpis" id="resumen" aria-label="Resumen de las subastas que se celebran">
+    <div class="sv-kpi"><span class="sv-kpi-label">Celebrándose</span><span class="sv-kpi-val dash-skeleton" data-draw="sp-kpi" data-source="sp_resumen" data-field="activas" data-row="0">—</span></div>
+    <div class="sv-kpi"><span class="sv-kpi-label">Judiciales</span><span class="sv-kpi-val dash-skeleton" data-draw="sp-kpi" data-source="sp_resumen" data-field="judiciales" data-row="0">—</span></div>
+    <div class="sv-kpi"><span class="sv-kpi-label">Agencia Tributaria</span><span class="sv-kpi-val dash-skeleton" data-draw="sp-kpi" data-source="sp_resumen" data-field="aeat" data-row="0">—</span></div>
+    <div class="sv-kpi"><span class="sv-kpi-label">Otras administraciones</span><span class="sv-kpi-val dash-skeleton" data-draw="sp-kpi" data-source="sp_resumen" data-field="otras" data-row="0">—</span></div>
+    <div class="sv-kpi"><span class="sv-kpi-label">Con alguna puja</span><span class="sv-kpi-val dash-skeleton" data-draw="sp-kpi" data-source="sp_resumen" data-field="con_pujas" data-row="0">—</span></div>
+    <div class="sv-kpi"><span class="sv-kpi-label">Concluyen en 7 días</span><span class="sv-kpi-val dash-skeleton" data-draw="sp-kpi" data-source="sp_resumen" data-field="concluyen7" data-row="0">—</span></div>
+  </section>
+
+  <section class="sv-card" id="mapa" aria-labelledby="mapa-titulo">
+    <h2 class="sv-h2" id="mapa-titulo">Dónde están los bienes</h2>
+    <div class="sv-geo">
+      <div class="sv-mapbox" data-draw="sp-mapa" data-source="sp_municipios limites"></div>
+      <p class="sv-err" data-sp-err-mapa hidden>No se han podido cargar los límites municipales desde Google Drive.</p>
+      <div>
+        <h3 class="sv-h3">Subastas por municipio</h3>
+        <div class="sv-tablewrap sv-tablewrap-s">
+          <table class="sv-table" id="tabla-municipios" data-source="sp_municipios" data-row-key="municipio_ine">
+            <thead><tr><th data-field="municipio">Municipio</th><th class="num" data-field="subastas">Subastas</th></tr></thead>
+            <tbody data-draw="sp-tabla-mun"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="sv-legend"><span>Menos</span><span class="sv-ramp" data-draw="sp-rampa"></span><span>Más subastas</span><span>· Pulsa un municipio para ver solo sus subastas. El mapa es de la provincia de Sevilla.</span></div>
+  </section>
+
+  <section class="sv-card" id="listado" aria-labelledby="listado-titulo">
+    <h2 class="sv-h2" id="listado-titulo">Subastas</h2>
+    <div class="sv-filters" id="filtros">
+      <label class="sv-field">Bien
+        <select class="dash-select" data-sp-param="sp_bien" aria-label="Tipo de bien">
+          <option value="">Inmuebles</option>
+          <option value="todos">Todos los bienes</option>
+          <option value="otros">Vehículos y otros bienes</option>
+        </select>
+      </label>
+      <label class="sv-field">Administración
+        <select class="dash-select" data-sp-param="sp_grupo" aria-label="Administración que subasta">
+          <option value="">Todas</option>
+          <option value="Judicial">Judicial</option>
+          <option value="Agencia Tributaria">Agencia Tributaria</option>
+          <option value="Otras administraciones">Otras administraciones</option>
+        </select>
+      </label>
+      <label class="sv-field">Municipio
+        <select class="dash-select" data-draw="sp-sel-mun" data-source="sp_municipios" aria-label="Municipio"></select>
+      </label>
+      <label class="sv-field">Ordenar por
+        <select class="dash-select" data-sp-param="sp_orden" aria-label="Orden del listado">
+          <option value="">Conclusión más próxima</option>
+          <option value="valor_desc">Valor de subasta, de mayor a menor</option>
+          <option value="valor_asc">Valor de subasta, de menor a mayor</option>
+          <option value="municipio">Municipio</option>
+        </select>
+      </label>
+      <label class="sv-field sv-field-grow">Buscar
+        <input class="sv-input" type="search" data-sp-q placeholder="SUB, municipio, calle, referencia catastral, autoridad…" aria-label="Buscar en las subastas">
+      </label>
+      <button type="button" class="sv-btn" data-sp-reset hidden>Quitar filtros</button>
+      <p class="sv-count"><b data-draw="sp-n" data-source="sp_n">—</b> subastas con estos filtros</p>
+    </div>
+    <div class="sv-main">
+      <div>
+        <div class="sv-tablewrap">
+          <table class="sv-table" id="tabla-subastas" data-source="sp_lista" data-row-key="sub">
+            <thead><tr>
+              <th data-field="sub">Subasta</th>
+              <th data-field="fecha_conclusion">Concluye</th>
+              <th data-field="grupo">Administración</th>
+              <th data-field="subtipos">Bien</th>
+              <th data-field="municipios">Municipio</th>
+              <th class="num" data-field="valor_ref">Valor de subasta</th>
+              <th class="num" data-field="n_lotes">Lotes</th>
+              <th data-field="pujas_estado">Pujas</th>
+            </tr></thead>
+            <tbody data-draw="sp-tabla"></tbody>
+          </table>
+        </div>
+        <p class="sv-empty" data-sp-vacio hidden>Ninguna subasta cumple estos filtros.</p>
+        <p class="sv-err" data-sp-err hidden>No se ha podido cargar el listado desde Google Drive.</p>
+        <p class="sv-note">Pulsa una fila para ver la ficha completa. En las subastas con varios lotes el Portal da el valor de cada lote; aquí se muestra el menor («desde»).</p>
+      </div>
+
+      <aside class="sv-detail" id="ficha" aria-labelledby="ficha-titulo">
+        <p class="sv-empty" data-sp-sin-sel>Elige una subasta del listado para ver su ficha.</p>
+        <div class="sv-card" data-sp-con-sel hidden>
+          <h2 class="sv-h2" id="ficha-titulo"><span class="sv-sub" data-draw="sp-det" data-k="sub" data-source="sp_detalle" data-field="sub" data-row="0">—</span></h2>
+          <p class="sv-note"><span data-draw="sp-det-enlace"></span> · consultada el <span data-draw="sp-det" data-k="consultado_utc" data-fmt="fechahora">—</span></p>
+          <dl class="sv-kv">
+            <dt>Tipo de subasta</dt><dd data-draw="sp-det" data-k="tipo_subasta" data-source="sp_detalle" data-field="tipo_subasta" data-row="0">—</dd>
+            <dt>Autoridad gestora</dt><dd data-draw="sp-det" data-k="autoridad" data-source="sp_detalle" data-field="autoridad" data-row="0">—</dd>
+            <dt>Contacto</dt><dd data-draw="sp-det-contacto">—</dd>
+            <dt>Inicio</dt><dd data-draw="sp-det" data-k="fecha_inicio" data-fmt="fechahora">—</dd>
+            <dt>Conclusión</dt><dd data-draw="sp-det" data-k="fecha_conclusion" data-fmt="fechahora">—</dd>
+            <dt>Valor de subasta</dt><dd data-draw="sp-det" data-k="valor_subasta" data-fmt="eur" data-source="sp_detalle" data-field="valor_subasta" data-row="0">—</dd>
+            <dt>Tasación</dt><dd data-draw="sp-det" data-k="tasacion" data-fmt="eur" data-source="sp_detalle" data-field="tasacion" data-row="0">—</dd>
+            <dt>Puja mínima</dt><dd data-draw="sp-det" data-k="puja_minima" data-fmt="eur" data-source="sp_detalle" data-field="puja_minima" data-row="0">—</dd>
+            <dt>Tramos entre pujas</dt><dd data-draw="sp-det" data-k="tramos" data-fmt="eur" data-source="sp_detalle" data-field="tramos" data-row="0">—</dd>
+            <dt>Depósito</dt><dd data-draw="sp-det" data-k="deposito" data-fmt="eur" data-source="sp_detalle" data-field="deposito" data-row="0">—</dd>
+            <dt>Cantidad reclamada</dt><dd data-draw="sp-det" data-k="cantidad_reclamada" data-fmt="eur" data-source="sp_detalle" data-field="cantidad_reclamada" data-row="0">—</dd>
+            <dt>Pujas</dt><dd data-draw="sp-det" data-k="pujas" data-source="sp_detalle" data-field="pujas" data-row="0">—</dd>
+            <dt>Anuncio del BOE</dt><dd data-draw="sp-det" data-k="anuncio_boe" data-source="sp_detalle" data-field="anuncio_boe" data-row="0">—</dd>
+          </dl>
+          <p class="sv-warnbox" data-sp-restringido hidden>Parte de la información de esta subasta solo se muestra a usuarios registrados en el Portal (información complementaria o importe de las pujas). Esa parte no se descarga.</p>
+
+          <h3 class="sv-h3" id="ficha-lotes">Lotes</h3>
+          <div class="sv-tablewrap sv-tablewrap-s">
+            <table class="sv-table" data-source="sp_det_lotes" data-row-key="lote">
+              <thead><tr><th data-field="lote">Lote</th><th class="num" data-field="valor_subasta">Valor</th><th class="num" data-field="deposito">Depósito</th><th class="num" data-field="puja_minima">Puja mínima</th><th data-field="puja">Puja</th></tr></thead>
+              <tbody data-draw="sp-det-lotes"></tbody>
+            </table>
+          </div>
+
+          <h3 class="sv-h3" id="ficha-bienes">Bienes</h3>
+          <div class="sv-bienes" data-draw="sp-det-bienes" data-source="sp_det_bienes"></div>
+
+          <h3 class="sv-h3" id="ficha-documentos">Documentos</h3>
+          <ul class="sv-list" data-draw="sp-det-docs" data-source="sp_det_docs"></ul>
+
+          <details class="sv-notes" id="ficha-todo">
+            <summary>Todos los datos de la ficha</summary>
+            <div class="sv-tablewrap sv-tablewrap-s">
+              <table class="sv-table" data-source="sp_det_campos" data-row-key="orden">
+                <thead><tr><th data-field="seccion">Sección</th><th data-field="etiqueta">Dato</th><th data-field="valor">Valor</th></tr></thead>
+                <tbody data-draw="sp-det-campos"></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <details class="sv-notes" id="metodo">
+    <summary>De dónde salen estos datos</summary>
+    <ol>
+      <li><b>Códigos.</b> Búsqueda avanzada del Portal de Subastas del BOE: subastas en estado «Celebrándose» con el bien en la provincia (filtro «provincia del bien», no la sede de la autoridad). Se guarda la página de resultados con su huella SHA-256.</li>
+      <li><b>Fichas.</b> De cada código se descarga su ficha del Portal: información general, autoridad gestora, bienes (cada lote y cada bien), pujas, documentos y el anuncio oficial en el BOE.</li>
+      <li><b>Base de datos.</b> Cada dato del panel sale de esas páginas guardadas y lleva su pestaña y URL de origen («Todos los datos de la ficha»). Los importes son los del Portal; «desde» en el listado es el menor valor de los lotes.</li>
+      <li><b>Lo que no se ve.</b> Lo que el Portal solo enseña a usuarios registrados (información complementaria, importe de las pujas) no se descarga. Los datos del acreedor se guardan en la base del proyecto pero no se muestran aquí.</li>
+    </ol>
+    <p>Fuente: Agencia Estatal Boletín Oficial del Estado, <a href="https://subastas.boe.es">Portal de Subastas</a> y <a href="https://www.boe.es">BOE</a>. Los datos se actualizan cuando se lanza la descarga en GitHub.</p>
+  </details>
+</div>
+
+<template id="tpl-enlace"><a target="_blank" rel="noopener">Ver la ficha en el Portal de Subastas</a></template>
+
+<template id="tpl-bien">
+  <div class="sv-bien">
+    <h4 class="sv-h3"><span data-b="titulo"></span></h4>
+    <dl class="sv-kv">
+      <dt>Descripción</dt><dd data-b="descripcion"></dd>
+      <dt>Dirección</dt><dd data-b="direccion"></dd>
+      <dt>Municipio</dt><dd data-b="municipio"></dd>
+      <dt>Código postal</dt><dd data-b="codigo_postal"></dd>
+      <dt>Referencia catastral</dt><dd data-b="referencia_catastral"></dd>
+      <dt>IDUFIR</dt><dd data-b="idufir"></dd>
+      <dt>Situación posesoria</dt><dd data-b="situacion_posesoria"></dd>
+      <dt>Visitable</dt><dd data-b="visitable"></dd>
+      <dt>Vivienda habitual</dt><dd data-b="vivienda_habitual"></dd>
+      <dt>Cargas</dt><dd data-b="cargas"></dd>
+      <dt>Título jurídico</dt><dd data-b="titulo_juridico"></dd>
+      <dt>Inscripción registral</dt><dd data-b="inscripcion_registral"></dd>
+      <dt>Información adicional</dt><dd data-b="informacion_adicional"></dd>
+      <dt>Marca y modelo</dt><dd data-b="marca_modelo"></dd>
+      <dt>Matrícula</dt><dd data-b="matricula"></dd>
+    </dl>
+  </div>
+</template>
+
+<script>
+/* Lectura de las tablas desde la carpeta del panel en Google Drive (JSON comprimido con gzip y en base64) */
+const leerTablaDrive = async ({ answer, call }) => {
+  const files = answer && Array.isArray(answer.files) ? answer.files : [];
+  if (!files.length) throw new Error('No se encontró el archivo de esta tabla en la carpeta del panel en Google Drive.');
+  for (const f of files) {
+    const r = await call('read_file_content', { fileId: f.id });
+    const b64 = String((r && r.fileContent) || '').replace(/[^A-Za-z0-9+/=]/g, '');
+    if (!b64) continue;
+    if (typeof DecompressionStream === 'undefined') throw new Error('Este navegador no puede descomprimir los datos del panel; prueba con uno actualizado.');
+    const bin = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
+    const texto = await new Response(new Blob([bin]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
+    const doc = JSON.parse(texto);
+    const meta = [{ label: 'Archivo en Drive', value: String(f.title || '') }, { label: 'Modificado en Drive', value: String(f.modifiedTime || '') }];
+    if (doc && doc.type === 'FeatureCollection') return { data: doc, meta };
+    if (doc && doc.generado) meta.push({ label: 'Generado', value: String(doc.generado) });
+    const cols = Array.isArray(doc.columns) ? doc.columns : [];
+    const rows = (Array.isArray(doc.rows) ? doc.rows : []).map((fila) => {
+      const o = {};
+      cols.forEach((c, i) => { o[c] = fila[i]; });
+      return o;
+    });
+    return { columns: cols, rows, meta };
+  }
+  throw new Error('Google Drive todavía no ofrece el contenido del archivo (tarda unos minutos después de subirlo). Vuelve a cargar en un rato.');
+};
+['sp_subastas', 'sp_lotes', 'sp_bienes', 'sp_campos', 'sp_documentos', 'sp_pendientes', 'sp_capturas', 'limites'].forEach((id) => {
+  dash.loader(id, {
+    description: 'Toma el archivo más reciente de esta tabla en la carpeta del panel en Google Drive, lo lee y lo descomprime (JSON con gzip y en base64). Si Drive aún no ofrece el contenido del más reciente, usa el anterior.',
+    fn: leerTablaDrive
+  });
+});
+</script>
+
+<script>
+/* Utilidades compartidas */
+window.SP = window.SP || {};
+(function (SP) {
+  SP.PROV = [['28', 'Madrid'], ['08', 'Barcelona'], ['41', 'Sevilla'], ['21', 'Huelva']];
+  SP.nombreProv = function (cod) { var p = SP.PROV.find(function (x) { return x[0] === cod; }); return p ? p[1] : ''; };
+  SP.norm = function (s) { return String(s == null ? '' : s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim(); };
+  SP.eur0 = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
+  SP.eur2 = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR', minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  /* Euros sin decimales si el importe es redondo y con dos si tiene céntimos */
+  SP.eur = { format: function (v) { v = Number(v); return (Math.round(v * 100) % 100 === 0 ? SP.eur0 : SP.eur2).format(v); } };
+  SP.int = new Intl.NumberFormat('es-ES', { maximumFractionDigits: 0 });
+  SP.fFecha = new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', day: 'numeric', month: 'short', year: 'numeric' });
+  SP.fFechaHora = new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+  SP.fecha = function (iso, conHora) { if (!iso) return '—'; var d = new Date(iso); return isNaN(d) ? String(iso) : (conHora ? SP.fFechaHora : SP.fFecha).format(d); };
+  SP.safeUrl = function (u) { return typeof u === 'string' && /^https?:\/\//i.test(u) ? u : null; };
+  SP.contiene = function (lista, cod) { return String(lista || '').split(',').map(function (x) { return x.trim(); }).indexOf(cod) >= 0; };
+  SP.clone = function (id) { var t = document.getElementById(id); return t && t.content && t.content.firstElementChild ? t.content.firstElementChild.cloneNode(true) : document.createElement('div'); };
+  SP.tip = function (tipEl, host, e, titulo, lineas) {
+    tipEl.replaceChildren();
+    var s = document.createElement('strong'); s.textContent = titulo; tipEl.appendChild(s);
+    lineas.forEach(function (l) { var sp = document.createElement('span'); sp.textContent = l; tipEl.appendChild(sp); });
+    tipEl.hidden = false;
+    var p = d3.pointer(e, host), hw = host.clientWidth, tw = tipEl.offsetWidth, th = tipEl.offsetHeight;
+    tipEl.style.left = Math.max(6, Math.min(p[0] + 14, hw - tw - 6)) + 'px';
+    tipEl.style.top = (p[1] - th - 12 < 4 ? p[1] + 18 : p[1] - th - 12) + 'px';
+  };
+  /* Filtros de la página: provincia y tipo de bien valen para todo; administración, municipio y texto para el listado */
+  SP.enProvBien = function (r, p) {
+    if (p.prov && !SP.contiene(r.provincias_busqueda, p.prov)) return false;
+    var bien = p.sp_bien || '';
+    if (bien === '' && Number(r.es_inmueble) !== 1) return false;
+    if (bien === 'otros' && Number(r.es_inmueble) === 1) return false;
+    return Number(r.activa) === 1;
+  };
+})(window.SP);
+</script>
+
+<script>
+/* Valores calculados a partir de las tablas */
+dash.calc('sp_resumen', {
+  title: 'Resumen de las subastas que se celebran',
+  description: 'Cuenta las subastas activas (última búsqueda) de la provincia y el tipo de bien elegidos, por administración, con pujas y que concluyen en los 7 días siguientes a la búsqueda.',
+  inputs: ['sp_subastas', 'sp_capturas'],
+  fn: (subastas, capturas) => {
+    const p = dash.params() || {};
+    const rs = subastas.filter((r) => SP.enProvBien(r, p));
+    const caps = capturas.filter((c) => Number(c.ultima) === 1 && (!p.prov || c.provincia === p.prov));
+    const fechas = caps.map((c) => c.fecha_captura).filter(Boolean).sort();
+    const ref = fechas.length ? new Date(fechas[fechas.length - 1]).getTime() : null;
+    const dentro7 = (r) => { const t = new Date(r.fecha_conclusion).getTime(); return ref != null && !isNaN(t) && t >= ref && t <= ref + 7 * 864e5; };
+    return [{
+      activas: rs.length,
+      judiciales: rs.filter((r) => r.grupo === 'Judicial').length,
+      aeat: rs.filter((r) => r.grupo === 'Agencia Tributaria').length,
+      otras: rs.filter((r) => r.grupo === 'Otras administraciones').length,
+      con_pujas: rs.filter((r) => Number(r.con_pujas) === 1).length,
+      concluyen7: rs.filter(dentro7).length,
+      restringidas: rs.filter((r) => Number(r.acceso_restringido) === 1).length,
+      fecha_busqueda: fechas.length ? fechas[fechas.length - 1] : null,
+      busquedas: caps.length
+    }];
+  }
+});
+
+dash.calc('sp_lista', {
+  title: 'Subastas del listado',
+  description: 'Subastas activas con los filtros de la página, en el orden elegido. valor_ref es el valor de subasta o, si tiene varios lotes, el menor de ellos; pujas_estado resume la pestaña de pujas.',
+  inputs: ['sp_subastas'],
+  fn: (subastas) => {
+    const p = dash.params() || {};
+    const q = SP.norm(p.sp_q || '');
+    const rs = subastas.filter((r) => SP.enProvBien(r, p)
+      && (!p.sp_grupo || r.grupo === p.sp_grupo)
+      && (!p.sp_mun || SP.contiene(r.municipios_ine, p.sp_mun))
+      && (!q || SP.norm([r.sub, r.municipios, r.subtipos, r.clases_bien, r.autoridad, r.descripcion, r.codigos_postales, r.tipo_subasta].join(' ')).indexOf(q) >= 0))
+      .map((r) => Object.assign({}, r, {
+        valor_ref: r.valor_subasta != null ? r.valor_subasta : r.valor_lotes_min,
+        pujas_estado: Number(r.con_pujas) === 1 ? 'Con pujas' : 'Sin pujas'
+      }));
+    const orden = p.sp_orden || '';
+    const num = (v) => (v == null ? null : Number(v));
+    rs.sort((a, b) => {
+      if (orden === 'valor_desc' || orden === 'valor_asc') {
+        const va = num(a.valor_ref), vb = num(b.valor_ref);
+        if (va == null || vb == null) return va == null ? 1 : -1;
+        return orden === 'valor_desc' ? vb - va : va - vb;
+      }
+      if (orden === 'municipio') return String(a.municipios || '~').localeCompare(String(b.municipios || '~'), 'es');
+      return String(a.fecha_conclusion || '~').localeCompare(String(b.fecha_conclusion || '~')) || a.sub.localeCompare(b.sub);
+    });
+    return rs;
+  }
+});
+
+dash.calc('sp_n', {
+  title: 'Subastas con estos filtros',
+  description: 'Número de filas del listado con los filtros de la página.',
+  inputs: ['sp_lista'],
+  fn: (lista) => lista.length
+});
+
+dash.calc('sp_municipios', {
+  title: 'Subastas por municipio',
+  description: 'Subastas activas de la provincia y el tipo de bien elegidos, por municipio del bien (código INE), con la administración elegida. Una subasta con bienes en varios municipios cuenta en cada uno.',
+  inputs: ['sp_subastas'],
+  fn: (subastas) => {
+    const p = dash.params() || {};
+    const m = new Map();
+    subastas.filter((r) => SP.enProvBien(r, p) && (!p.sp_grupo || r.grupo === p.sp_grupo)).forEach((r) => {
+      const ines = String(r.municipios_ine || '').split(',').map((x) => x.trim()).filter(Boolean);
+      const noms = String(r.municipios || '').split(',').map((x) => x.trim());
+      ines.forEach((ine, i) => {
+        const o = m.get(ine) || { municipio_ine: ine, municipio: noms[i] || ine, subastas: 0 };
+        o.subastas += 1;
+        m.set(ine, o);
+      });
+    });
+    return Array.from(m.values()).sort((a, b) => b.subastas - a.subastas || a.municipio.localeCompare(b.municipio, 'es'));
+  }
+});
+
+const subastaElegida = (rows) => { const s = (dash.params() || {}).sp_sel; return s ? rows.filter((r) => r.sub === s) : []; };
+dash.calc('sp_detalle', { title: 'Subasta elegida', description: 'La fila de la subasta elegida en el listado.', inputs: ['sp_subastas'], fn: (subastas) => subastaElegida(subastas) });
+dash.calc('sp_det_lotes', { title: 'Lotes de la subasta elegida', description: 'Sus lotes, con importes y puja.', inputs: ['sp_lotes'], fn: (lotes) => subastaElegida(lotes) });
+dash.calc('sp_det_bienes', { title: 'Bienes de la subasta elegida', description: 'Sus bienes, por lote.', inputs: ['sp_bienes'], fn: (bienes) => subastaElegida(bienes) });
+dash.calc('sp_det_docs', { title: 'Documentos de la subasta elegida', description: 'Sus documentos del Portal y su anuncio del BOE.', inputs: ['sp_documentos'], fn: (docs) => subastaElegida(docs) });
+dash.calc('sp_det_campos', { title: 'Todos los datos de la subasta elegida', description: 'Cada dato de su ficha del Portal, en el orden de la ficha (sin los datos del acreedor).', inputs: ['sp_campos'], fn: (campos) => subastaElegida(campos) });
+</script>
+
+<script>
+/* Controles: provincia, filtros y estados que no son dibujos (solo atributos) */
+(function () {
+  document.querySelectorAll('[data-prov]').forEach(function (b) {
+    b.addEventListener('click', function () { dash.setParams({ prov: b.getAttribute('data-prov') || null, sp_mun: null }); });
+  });
+  document.querySelectorAll('[data-sp-param]').forEach(function (sel) {
+    sel.addEventListener('change', function () { var o = {}; o[sel.getAttribute('data-sp-param')] = sel.value || null; if (o.sp_bien !== undefined || o.sp_grupo !== undefined) o.sp_mun = null; dash.setParams(o); });
+  });
+  var t = null;
+  document.querySelectorAll('[data-sp-q]').forEach(function (inp) {
+    inp.addEventListener('input', function () { clearTimeout(t); t = setTimeout(function () { dash.setParams({ sp_q: inp.value.trim() || null }); }, 250); });
+  });
+  document.querySelectorAll('[data-sp-reset]').forEach(function (b) {
+    b.addEventListener('click', function () { dash.setParams({ sp_bien: null, sp_grupo: null, sp_mun: null, sp_q: null, sp_orden: null }); });
+  });
+  dash.onData(function () {
+    var p = dash.params() || {};
+    document.querySelectorAll('[data-prov]').forEach(function (b) { b.setAttribute('aria-pressed', String((b.getAttribute('data-prov') || '') === (p.prov || ''))); });
+    document.querySelectorAll('[data-sp-param]').forEach(function (sel) { sel.value = p[sel.getAttribute('data-sp-param')] || ''; });
+    document.querySelectorAll('[data-sp-q]').forEach(function (inp) { if (document.activeElement !== inp) inp.value = p.sp_q || ''; });
+    document.querySelectorAll('[data-sp-reset]').forEach(function (b) { b.hidden = !(p.sp_bien || p.sp_grupo || p.sp_mun || p.sp_q || p.sp_orden); });
+    var d = dash.data('sp_subastas'), caps = dash.data('sp_capturas');
+    document.querySelectorAll('[data-sp-err]').forEach(function (e) { e.hidden = d.status !== 'error'; });
+    var lim = dash.data('limites');
+    document.querySelectorAll('[data-sp-err-mapa]').forEach(function (e) { e.hidden = lim.status !== 'error'; });
+    var sinProv = !!p.prov && caps.status === 'ok' && !caps.data.some(function (c) { return c.provincia === p.prov; });
+    document.querySelectorAll('[data-sp-sinprov]').forEach(function (e) { e.hidden = !sinProv; });
+    document.querySelectorAll('#cabecera .sv-lede, #resumen, #listado').forEach(function (e) { e.hidden = sinProv; });
+    document.querySelectorAll('#mapa').forEach(function (e) { e.hidden = !!p.prov && p.prov !== '41'; });
+    var l = dash.data('sp_lista');
+    document.querySelectorAll('[data-sp-vacio]').forEach(function (e) { e.hidden = !(l.status === 'ok' && Array.isArray(l.data) && l.data.length === 0); });
+    var hay = !!p.sp_sel;
+    document.querySelectorAll('[data-sp-sin-sel]').forEach(function (e) { e.hidden = hay; });
+    document.querySelectorAll('[data-sp-con-sel]').forEach(function (e) { e.hidden = !hay; });
+    var det = dash.data('sp_detalle');
+    var r = det.status === 'ok' && Array.isArray(det.data) ? det.data[0] : null;
+    document.querySelectorAll('[data-sp-restringido]').forEach(function (e) { e.hidden = !(r && Number(r.acceso_restringido) === 1); });
+  });
+})();
+</script>
+
+<script>
+/* Dibujos */
+(function () {
+  function fmt(v, f) {
+    if (v == null || v === '') return '—';
+    if (f === 'eur') return isNaN(Number(v)) ? String(v) : SP.eur.format(Number(v));
+    if (f === 'fecha') return SP.fecha(v, false);
+    if (f === 'fechahora') return SP.fecha(v, true);
+    return typeof v === 'number' ? SP.int.format(v) : String(v);
+  }
+  function quitarEsqueleto(el, status) { if (status !== 'loading') el.classList.remove('dash-skeleton'); }
+
+  dash.draw('sp-kpi', function (el) {
+    var d = dash.data('sp_resumen');
+    quitarEsqueleto(el, d.status);
+    var r = d.status === 'ok' && Array.isArray(d.data) ? d.data[0] : null;
+    el.textContent = r ? fmt(r[el.getAttribute('data-field')], el.getAttribute('data-fmt')) : '—';
+  });
+  dash.draw('sp-bien-txt', function (el) {
+    var b = (dash.params() || {}).sp_bien || '';
+    el.textContent = b === 'todos' ? 'todo tipo de bienes' : b === 'otros' ? 'vehículos y otros bienes' : 'inmuebles';
+  });
+  dash.draw('sp-prov-txt', function (el) {
+    var p = (dash.params() || {}).prov, c = dash.data('sp_capturas');
+    if (p) { el.textContent = 'la provincia de ' + SP.nombreProv(p); return; }
+    var cods = c.status === 'ok' && Array.isArray(c.data) ? Array.from(new Set(c.data.map(function (x) { return x.provincia; }))) : [];
+    var noms = SP.PROV.filter(function (x) { return cods.indexOf(x[0]) >= 0; }).map(function (x) { return x[1]; });
+    el.textContent = !noms.length ? '—' : noms.length === 1 ? 'la provincia de ' + noms[0] : 'las provincias de ' + noms.slice(0, -1).join(', ') + ' y ' + noms[noms.length - 1];
+  });
+  dash.draw('sp-n', function (el) {
+    var d = dash.data('sp_n');
+    el.textContent = d.status === 'ok' && d.data != null ? SP.int.format(d.data) : '—';
+  });
+
+  dash.draw('sp-sel-mun', function (sel) {
+    var d = dash.data('sp_municipios');
+    var rows = d.status === 'ok' && Array.isArray(d.data) ? d.data.slice().sort(function (a, b) { return a.municipio.localeCompare(b.municipio, 'es'); }) : [];
+    sel.replaceChildren(new Option('Todos', ''));
+    rows.forEach(function (r) { sel.appendChild(new Option(r.municipio + ' (' + r.subastas + ')', r.municipio_ine)); });
+    var p = dash.params() || {};
+    if (p.sp_mun && !rows.some(function (r) { return r.municipio_ine === p.sp_mun; })) sel.appendChild(new Option(p.sp_mun, p.sp_mun));
+    sel.value = p.sp_mun || '';
+    sel.onchange = function () { dash.setParams({ sp_mun: sel.value || null }); };
+  });
+
+  dash.draw('sp-tabla-mun', function (tb) {
+    var d = dash.data('sp_municipios');
+    tb.replaceChildren();
+    if (d.status !== 'ok' || !Array.isArray(d.data)) return;
+    var sel = (dash.params() || {}).sp_mun;
+    d.data.forEach(function (r) {
+      var tr = document.createElement('tr');
+      tr.setAttribute('data-key', encodeURIComponent(r.municipio_ine));
+      tr.className = 'is-click' + (r.municipio_ine === sel ? ' sel' : '');
+      tr.tabIndex = 0;
+      var a = document.createElement('td'); a.textContent = r.municipio;
+      var b = document.createElement('td'); b.className = 'num'; b.textContent = SP.int.format(r.subastas);
+      tr.append(a, b);
+      var elegir = function () { dash.setParams({ sp_mun: r.municipio_ine === sel ? null : r.municipio_ine }); };
+      tr.addEventListener('click', elegir);
+      tr.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); elegir(); } });
+      tb.appendChild(tr);
+    });
+  });
+
+  dash.draw('sp-rampa', function (el) {
+    el.style.background = 'linear-gradient(90deg, color-mix(in srgb, ' + dash.colors[0] + ' 18%, var(--color-panel)), ' + dash.colors[0] + ')';
+  });
+
+  dash.draw('sp-mapa', {
+    mount: function (el) {
+      var svg = d3.select(el).append('svg').attr('role', 'img').attr('aria-label', 'Mapa de los municipios de la provincia de Sevilla, más intensos cuantas más subastas tienen');
+      var tip = d3.select(el).append('div').attr('class', 'sv-tip').attr('hidden', '');
+      return { svg: svg, tip: tip };
+    },
+    update: function (el, m) {
+      var lim = dash.data('limites'), mun = dash.data('sp_municipios');
+      if (lim.status !== 'ok' || !lim.data || !Array.isArray(lim.data.features)) { m.svg.selectAll('*').remove(); return; }
+      var w = Math.max(240, el.clientWidth), h = Math.round(w * 0.82);
+      m.svg.attr('viewBox', '0 0 ' + w + ' ' + h);
+      var feats = lim.data.features;
+      var munis = feats.filter(function (f) { return !(f.properties && f.properties.provincia); });
+      var prov = feats.find(function (f) { return f.properties && f.properties.provincia; });
+      var proj = d3.geoMercator().fitExtent([[10, 10], [w - 10, h - 10]], prov || { type: 'FeatureCollection', features: munis });
+      var path = d3.geoPath(proj);
+      var cuenta = new Map((mun.status === 'ok' && Array.isArray(mun.data) ? mun.data : []).map(function (r) { return [r.municipio_ine, r]; }));
+      var max = d3.max(Array.from(cuenta.values()), function (r) { return r.subastas; }) || 1;
+      var sel = (dash.params() || {}).sp_mun;
+      m.svg.selectAll('path.sv-muni').data(munis, function (f) { return f.properties.ine; }).join('path')
+        .attr('class', function (f) { return 'sv-muni' + (f.properties.ine === sel ? ' sel' : ''); })
+        .attr('d', path)
+        .style('fill', function (f) {
+          var r = cuenta.get(f.properties.ine);
+          return r ? 'color-mix(in srgb, ' + dash.colors[0] + ' ' + Math.round(18 + 82 * r.subastas / max) + '%, var(--color-panel))' : 'var(--color-panel)';
+        })
+        .on('mousemove', function (e, f) {
+          var r = cuenta.get(f.properties.ine);
+          SP.tip(m.tip.node(), el, e, f.properties.nombre, [r ? SP.int.format(r.subastas) + (r.subastas === 1 ? ' subasta' : ' subastas') : 'Sin subastas con estos filtros']);
+        })
+        .on('mouseleave', function () { m.tip.attr('hidden', ''); })
+        .on('click', function (e, f) { dash.setParams({ sp_mun: f.properties.ine === sel ? null : f.properties.ine }); });
+      m.svg.selectAll('path.sv-provline').data(prov ? [prov] : []).join('path').attr('class', 'sv-provline').attr('d', path);
+    }
+  });
+
+  dash.draw('sp-tabla', function (tb) {
+    var d = dash.data('sp_lista');
+    tb.replaceChildren();
+    if (d.status !== 'ok' || !Array.isArray(d.data)) return;
+    var sel = (dash.params() || {}).sp_sel;
+    d.data.forEach(function (r) {
+      var tr = document.createElement('tr');
+      tr.setAttribute('data-key', encodeURIComponent(r.sub));
+      tr.className = 'is-click' + (r.sub === sel ? ' sel' : '');
+      tr.tabIndex = 0;
+      tr.setAttribute('aria-label', 'Ver la ficha de ' + r.sub);
+      var c1 = document.createElement('td'); var s = document.createElement('span'); s.className = 'sv-sub'; s.textContent = r.sub; c1.appendChild(s);
+      var c2 = document.createElement('td'); c2.className = 'sv-nowrap'; c2.textContent = SP.fecha(r.fecha_conclusion, false);
+      var c3 = document.createElement('td'); c3.textContent = r.grupo || '—';
+      var c4 = document.createElement('td'); c4.textContent = r.subtipos || r.clases_bien || '—';
+      var c5 = document.createElement('td'); c5.textContent = r.municipios || '—';
+      var c6 = document.createElement('td'); c6.className = 'num';
+      c6.textContent = r.valor_ref == null ? '—' : (Number(r.n_lotes) > 1 ? 'desde ' : '') + SP.eur.format(Number(r.valor_ref));
+      var c7 = document.createElement('td'); c7.className = 'num'; c7.textContent = SP.int.format(Number(r.n_lotes) || 0);
+      var c8 = document.createElement('td'); var ch = document.createElement('span');
+      ch.className = 'sv-chip' + (r.pujas_estado === 'Con pujas' ? ' sv-chip-ok' : ''); ch.textContent = r.pujas_estado; c8.appendChild(ch);
+      tr.append(c1, c2, c3, c4, c5, c6, c7, c8);
+      var elegir = function () { dash.setParams({ sp_sel: r.sub === sel ? null : r.sub }); };
+      tr.addEventListener('click', elegir);
+      tr.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); elegir(); } });
+      tb.appendChild(tr);
+    });
+  });
+
+  /* Ficha de la subasta elegida */
+  function elegida() { var d = dash.data('sp_detalle'); return d.status === 'ok' && Array.isArray(d.data) ? d.data[0] : null; }
+  dash.draw('sp-det', function (el) {
+    var r = elegida(), k = el.getAttribute('data-k'), f = el.getAttribute('data-fmt');
+    if (!r) { el.textContent = '—'; return; }
+    var v = r[k];
+    if (f === 'eur' && (v == null || v === '')) { el.textContent = r[k + '_texto'] || '—'; return; }
+    el.textContent = fmt(v, f);
+  });
+  dash.draw('sp-det-enlace', function (el) {
+    var r = elegida(), u = r && SP.safeUrl(r.url_ficha);
+    el.replaceChildren();
+    if (!u) { el.textContent = '—'; return; }
+    var a = SP.clone('tpl-enlace'); a.href = u; el.appendChild(a);
+  });
+  dash.draw('sp-det-contacto', function (el) {
+    var r = elegida();
+    el.textContent = r ? [r.autoridad_direccion, r.autoridad_telefono && 'tel. ' + r.autoridad_telefono, r.autoridad_email].filter(Boolean).join(' · ') || '—' : '—';
+  });
+  dash.draw('sp-det-lotes', function (tb) {
+    var d = dash.data('sp_det_lotes');
+    tb.replaceChildren();
+    if (d.status !== 'ok' || !Array.isArray(d.data)) return;
+    d.data.forEach(function (l) {
+      var tr = document.createElement('tr');
+      if (l.lote) tr.setAttribute('data-key', encodeURIComponent(l.lote));
+      var celdas = [l.lote ? 'Lote ' + l.lote : 'Único',
+        l.valor_subasta != null ? SP.eur.format(l.valor_subasta) : (l.valor_subasta_texto || '—'),
+        l.deposito != null ? SP.eur.format(l.deposito) : (l.deposito_texto || '—'),
+        l.puja_minima != null ? SP.eur.format(l.puja_minima) : (l.puja_minima_texto || '—'),
+        l.puja_importe != null ? SP.eur.format(l.puja_importe) : (l.puja || '—')];
+      celdas.forEach(function (t, i) { var td = document.createElement('td'); if (i > 0 && i < 4) td.className = 'num'; td.textContent = t; tr.appendChild(td); });
+      tb.appendChild(tr);
+    });
+  });
+  dash.draw('sp-det-bienes', function (el) {
+    var d = dash.data('sp_det_bienes');
+    el.replaceChildren();
+    if (d.status !== 'ok' || !Array.isArray(d.data)) { el.textContent = d.status === 'loading' ? '' : '—'; return; }
+    d.data.forEach(function (b, i) {
+      var c = SP.clone('tpl-bien');
+      var titulo = (b.lote ? 'Lote ' + b.lote + ' · ' : '') + 'Bien ' + b.bien + ' · ' + [b.clase, b.subtipo].filter(Boolean).join(', ');
+      var vals = Object.assign({}, b, { titulo: titulo, municipio: b.municipio || b.localidad, marca_modelo: [b.marca, b.modelo].filter(Boolean).join(' ') });
+      c.querySelectorAll('[data-b]').forEach(function (dd) {
+        var k = dd.getAttribute('data-b'), v = vals[k];
+        if (k !== 'titulo' && (v == null || v === '')) { var dt = dd.previousElementSibling; if (dt) dt.remove(); dd.remove(); return; }
+        dd.textContent = v;
+        if (k !== 'titulo' && k !== 'marca_modelo' && k in b) { dd.setAttribute('data-source', 'sp_det_bienes'); dd.setAttribute('data-field', k); dd.setAttribute('data-row', String(i)); }
+      });
+      el.appendChild(c);
+    });
+    if (!d.data.length) el.textContent = 'La ficha no describe bienes.';
+  });
+  dash.draw('sp-det-docs', function (ul) {
+    var d = dash.data('sp_det_docs');
+    ul.replaceChildren();
+    if (d.status !== 'ok' || !Array.isArray(d.data)) return;
+    d.data.forEach(function (x) {
+      var li = document.createElement('li'), u = SP.safeUrl(x.url);
+      var nombre = x.tipo + ': ' + (x.etiqueta || 'sin título') + (x.lote ? ' (lote ' + x.lote + ')' : '');
+      if (u) { var a = document.createElement('a'); a.href = u; a.target = '_blank'; a.rel = 'noopener'; a.textContent = nombre; li.appendChild(a); }
+      else li.textContent = nombre;
+      if (x.bytes) { var s = document.createElement('span'); s.className = 'sv-muted'; s.textContent = ' · ' + (Number(x.bytes) / 1048576).toLocaleString('es-ES', { maximumFractionDigits: 1 }) + ' MB'; li.appendChild(s); }
+      ul.appendChild(li);
+    });
+    if (!d.data.length) { var li = document.createElement('li'); li.textContent = 'Sin documentos.'; ul.appendChild(li); }
+  });
+  dash.draw('sp-det-campos', function (tb) {
+    var d = dash.data('sp_det_campos');
+    tb.replaceChildren();
+    if (d.status !== 'ok' || !Array.isArray(d.data)) return;
+    var anterior = null;
+    d.data.forEach(function (c) {
+      var tr = document.createElement('tr');
+      tr.setAttribute('data-key', encodeURIComponent(String(c.orden)));
+      var seccion = c.seccion === anterior ? '' : (c.seccion || '—');
+      anterior = c.seccion;
+      [seccion, c.etiqueta, c.valor].forEach(function (t) { var td = document.createElement('td'); td.textContent = t == null ? '—' : t; tr.appendChild(td); });
+      tb.appendChild(tr);
+    });
+  });
+})();
+</script>
