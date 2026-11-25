@@ -1,0 +1,364 @@
+{
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=0647204TG4404N": {
+  "http": 500,
+  "momento": "2026-11-25T19:44:48+00:00",
+  "motivo": "HTTP 500",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=0647204TG4404N"
+ },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=0790006TG4209S": {
+  "http": 500,
+  "momento": "2026-11-25T19:45:05+00:00",
+  "motivo": "HTTP 500",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=0790006TG4209S"
+ },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=1628001TG4412N": {
+  "http": 500,
+  "momento": "2026-11-25T19:44:44+00:00",
+  "motivo": "HTTP 500",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=1628001TG4412N"
+ },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=2794019TG5129S": {
+  "http": 500,
+  "momento": "2026-11-25T19:44:43+00:00",
+  "motivo": "HTTP 500",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=2794019TG5129S"
+ },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=2888019QB6328N": {
+  "http": 500,
+  "momento": "2026-11-25T19:44:55+00:00",
+  "motivo": "HTTP 500",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=2888019QB6328N"
+ },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=2987202QB6328N": {
+  "http": 500,
+  "momento": "2026-11-25T19:45:03+00:00",
+  "motivo": "HTTP 500",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=2987202QB6328N"
+ },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=2992019QB6329S": {
+  "http": 500,
+  "momento": "2026-11-25T19:44:53+00:00",
+  "motivo": "HTTP 500",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=2992019QB6329S"
+ },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=3511018TG3431S": {
+  "http": 500,
+  "momento": "2026-11-25T19:44:38+00:00",
+  "motivo": "HTTP 500",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=3511018TG3431S"
+ },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=3664722QB6336S": {
+  "http": 500,
+  "momento": "2026-11-25T19:44:46+00:00",
+  "motivo": "HTTP 500",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=3664722QB6336S"
+ },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=41900A01900017": {
+  "http": 500,
+  "momento": "2026-11-25T19:45:08+00:00",
+  "motivo": "HTTP 500",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=41900A01900017"
+ },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=4410306TG34415": {
+  "http": 500,
+  "momento": "2026-11-25T19:45:10+00:00",
+  "motivo": "HTTP 500",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=4410306TG34415"
+ },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=4690808TG4348N": {
+  "http": 500,
+  "momento": "2026-11-25T19:45:23+00:00",
+  "motivo": "HTTP 500",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=4690808TG4348N"
+ },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=6297019TG5369N": {
+  "http": 500,
+  "momento": "2026-11-25T19:45:01+00:00",
+  "motivo": "HTTP 500",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=6297019TG5369N"
+ },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=7046406TG3474N": {
+  "http": 500,
+  "momento": "2026-11-25T19:44:51+00:00",
+  "motivo": "HTTP 500",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=7046406TG3474N"
+ },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=8463834TG4386S": {
+  "http": 500,
+  "momento": "2026-11-25T19:44:32+00:00",
+  "motivo": "HTTP 500",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=8463834TG4386S"
+ },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=8588701PB4188N": {
+  "http": 500,
+  "momento": "2026-11-25T19:45:14+00:00",
+  "motivo": "HTTP 500",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=8588701PB4188N"
+ },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=9336507QB5393N": {
+  "http": 500,
+  "momento": "2026-11-25T19:44:36+00:00",
+  "motivo": "HTTP 500",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=9336507QB5393N"
+ },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=9336509QB5393N": {
+  "http": 500,
+  "momento": "2026-11-25T19:44:34+00:00",
+  "motivo": "HTTP 500",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=9336509QB5393N"
+ },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=9720403QB3392S": {
+  "http": 500,
+  "momento": "2026-11-25T19:45:21+00:00",
+  "motivo": "HTTP 500",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=9720403QB3392S"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=AVDA+PINO+MONTANO+118%2C+Sevilla%2C+Sevilla&limit=1": {
+  "archivo": "1c08d24be0aef0370f9f6d69.json",
+  "bytes": 514,
+  "http": 200,
+  "momento": "2026-11-25T19:44:52+00:00",
+  "sha256": "4928c2c8e831cd5e73d9e95bff054ade4b2d09506c4e6a41ad3942a821c18eb6",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=AVDA+PINO+MONTANO+118%2C+Sevilla%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=C%2F+JEREZ+DE+LA+FRONTERA+5+-+ESC.+1-4%C2%BA+C-+BQ+nUESTRA+SE%C3%91ORA+DE+FATIMA%2C+San+Juan+de+Aznalfarache%2C+Sevilla&limit=1": {
+  "archivo": "644d10416dc0ce1a489bd4f0.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-25T19:45:04+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=C%2F+JEREZ+DE+LA+FRONTERA+5+-+ESC.+1-4%C2%BA+C-+BQ+nUESTRA+SE%C3%91ORA+DE+FATIMA%2C+San+Juan+de+Aznalfarache%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=C%2F+RODRIGO+DE+TRIANA+66-68%2C+Pilas%2C+Sevilla&limit=1": {
+  "archivo": "1aa368b43746e8f36db9b906.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-25T19:45:20+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=C%2F+RODRIGO+DE+TRIANA+66-68%2C+Pilas%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+CACERES+4%2C+San+Juan+de+Aznalfarache%2C+Sevilla&limit=1": {
+  "archivo": "d1809bd2a51e8b9358a6800b.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-25T19:44:56+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+CACERES+4%2C+San+Juan+de+Aznalfarache%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+CONDE+DE+BARCELONA%2C+47%2C+San+Juan+de+Aznalfarache%2C+Sevilla&limit=1": {
+  "archivo": "50c0813ebe8c40b05c08cb34.json",
+  "bytes": 551,
+  "http": 200,
+  "momento": "2026-11-25T19:44:54+00:00",
+  "sha256": "0905aaa2a444f828e0d9e8a88f967e9e78706cfc4ac386a6a4ac62344c67334b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+CONDE+DE+BARCELONA%2C+47%2C+San+Juan+de+Aznalfarache%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+HUERTA+GAVIRA+25%2C+Marchena%2C+Sevilla&limit=1": {
+  "archivo": "601dfd9d0cc9b768bdf8b5ac.json",
+  "bytes": 514,
+  "http": 200,
+  "momento": "2026-11-25T19:45:07+00:00",
+  "sha256": "24ddb6c60d3b9635c067c5ff5f4e31a7ea6d70f6c50d6dcaf768d8b59dc5becb",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+HUERTA+GAVIRA+25%2C+Marchena%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+NAOS+12+-+ESC.+1+-2%C2%BA+IZDA%2C+Sevilla%2C+Sevilla&limit=1": {
+  "archivo": "13d2a501b63ad51c101c826a.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-25T19:45:11+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+NAOS+12+-+ESC.+1+-2%C2%BA+IZDA%2C+Sevilla%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CIENTO+OCHENTA+Y+SEIS%2C+Sevilla%2C+Sevilla&limit=1": {
+  "archivo": "8557b502d1cd5970be1123a4.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-25T19:44:45+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CIENTO+OCHENTA+Y+SEIS%2C+Sevilla%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+HACIENDA+DE+REGLA+45%2C+Palomares+del+R%C3%ADo%2C+Sevilla&limit=1": {
+  "archivo": "e54783270dff0e5062e22f09.json",
+  "bytes": 537,
+  "http": 200,
+  "momento": "2026-11-25T19:44:37+00:00",
+  "sha256": "38e21606c5dcc61e2920e08e303c318d8bf52f206e5747438e3e70b77a5796e3",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+HACIENDA+DE+REGLA+45%2C+Palomares+del+R%C3%ADo%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+HACIENDA+DE+REGLA+47%2C+Palomares+del+R%C3%ADo%2C+Sevilla&limit=1": {
+  "archivo": "cc018e16c2de251bec461690.json",
+  "bytes": 535,
+  "http": 200,
+  "momento": "2026-11-25T19:44:35+00:00",
+  "sha256": "1b6c2d63b9b29ca8cb5ea06386ec4a407c3c64769681b0588e2184dd56a313ca",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+HACIENDA+DE+REGLA+47%2C+Palomares+del+R%C3%ADo%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+JUAN+D%C3%8DAZ+DE+SOL%C3%8DS+13+BJ+C%2C+Sevilla%2C+Sevilla&limit=1": {
+  "archivo": "ac4ee015296cad1c4b959e49.json",
+  "bytes": 515,
+  "http": 200,
+  "momento": "2026-11-25T19:44:39+00:00",
+  "sha256": "0a46ebe856abf71b662d9792fb4fcd86f4eb3f6a8dba2efd31dcd1d2a94cbb8a",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+JUAN+D%C3%8DAZ+DE+SOL%C3%8DS+13+BJ+C%2C+Sevilla%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+SANTA+ANA+1+BJ+2A%2C+Alcal%C3%A1+de+Guada%C3%ADra%2C+Sevilla&limit=1": {
+  "archivo": "bd10ae5f6772cc3b978ea420.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-25T19:44:33+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+SANTA+ANA+1+BJ+2A%2C+Alcal%C3%A1+de+Guada%C3%ADra%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+TORREBLANCA+1+-1+B3%2C+Sevilla%2C+Sevilla&limit=1": {
+  "archivo": "77cb86d0a57ff0ba569b3e45.json",
+  "bytes": 505,
+  "http": 200,
+  "momento": "2026-11-25T19:44:40+00:00",
+  "sha256": "f04128a3b96b90290a3df76634b2e41d6b24fea17b0999d8af9491cf1695359d",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+TORREBLANCA+1+-1+B3%2C+Sevilla%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+TORREBLANCA+1+-1+B4%2C+Sevilla%2C+Sevilla&limit=1": {
+  "archivo": "9112460822603cff60ab2828.json",
+  "bytes": 506,
+  "http": 200,
+  "momento": "2026-11-25T19:44:41+00:00",
+  "sha256": "1ea94a0ea9dea3e22b3b068afb0d29b16cd35d04c1a8492a99471446eae93094",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+TORREBLANCA+1+-1+B4%2C+Sevilla%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Calle+Costa+del+sol+2%2C+Alcal%C3%A1+del+R%C3%ADo%2C+Sevilla&limit=1": {
+  "archivo": "761c84add303903cfecf2c81.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-25T19:44:50+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Calle+Costa+del+sol+2%2C+Alcal%C3%A1+del+R%C3%ADo%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Calle+Jes%C3%BAs%2C+62%2C+Mairena+del+Alcor%2C+Sevilla&limit=1": {
+  "archivo": "2e6086523ca90dcb06c34461.json",
+  "bytes": 515,
+  "http": 200,
+  "momento": "2026-11-25T19:44:58+00:00",
+  "sha256": "958449d594c266252fb9f6492e779001b09783da09e59fd1b372eb80470d4a46",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Calle+Jes%C3%BAs%2C+62%2C+Mairena+del+Alcor%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Calle+Per%C3%BA+49%2C+Bormujos%2C+Sevilla&limit=1": {
+  "archivo": "da41fce51db43d43d875fb24.json",
+  "bytes": 504,
+  "http": 200,
+  "momento": "2026-11-25T19:45:13+00:00",
+  "sha256": "39435043ee71b406e00870d374d81e2b3381710bf7fa1580c713caebd28dc107",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Calle+Per%C3%BA+49%2C+Bormujos%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=DEHESA+DE+LA+MATA+ALCOZARINA+32%2C+Mor%C3%B3n+de+la+Frontera%2C+Sevilla&limit=1": {
+  "archivo": "51ff3319319b5f600003cf1e.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-25T19:45:17+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=DEHESA+DE+LA+MATA+ALCOZARINA+32%2C+Mor%C3%B3n+de+la+Frontera%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=HACIENDA+DOLORES+8+1%2C+Alcal%C3%A1+de+Guada%C3%ADra%2C+Sevilla&limit=1": {
+  "archivo": "5b964acc46bc7222ba778cc9.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-25T19:45:24+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=HACIENDA+DOLORES+8+1%2C+Alcal%C3%A1+de+Guada%C3%ADra%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Muelle+Mart%C3%ADnez+Catena+21%2C+Isla+Cristina%2C+Huelva&limit=1": {
+  "archivo": "6d41d91c90321adb5797eb63.json",
+  "bytes": 524,
+  "http": 200,
+  "momento": "2026-11-25T19:45:15+00:00",
+  "sha256": "82c9eb08dadcb52ae70298bd99e71840fff9f0c1dface44a65ee3ab86ab05857",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Muelle+Mart%C3%ADnez+Catena+21%2C+Isla+Cristina%2C+Huelva&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=PA+LA+MORENA+O+MORONA+0%2C+Mor%C3%B3n+de+la+Frontera%2C+Sevilla&limit=1": {
+  "archivo": "34e86b1e2b5e62072c09fe29.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-25T19:44:31+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=PA+LA+MORENA+O+MORONA+0%2C+Mor%C3%B3n+de+la+Frontera%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=PARCELA+10%2C+POLIGONO+INDUSTRIAL+CRUZ+CHIQUITA%2C+Alcal%C3%A1+del+R%C3%ADo%2C+Sevilla&limit=1": {
+  "archivo": "c04eb54fa43a6c837bf7daa5.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-25T19:44:42+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=PARCELA+10%2C+POLIGONO+INDUSTRIAL+CRUZ+CHIQUITA%2C+Alcal%C3%A1+del+R%C3%ADo%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Plaza+Espa%C3%B1a+24%2C+Pilas%2C+Sevilla&limit=1": {
+  "archivo": "60abac9fecb4119c3980674d.json",
+  "bytes": 502,
+  "http": 200,
+  "momento": "2026-11-25T19:45:22+00:00",
+  "sha256": "963778a1f76f93107751f87a2146bce477fc5ad483aa0f618e1676d0f94c40f8",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Plaza+Espa%C3%B1a+24%2C+Pilas%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Pol%C3%ADgono+19+Parcela+17+LA+TRINIDAD%2C+Sevilla%2C+Sevilla&limit=1": {
+  "archivo": "cc3365d103ce3eeb421b37a8.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-25T19:45:09+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Pol%C3%ADgono+19+Parcela+17+LA+TRINIDAD%2C+Sevilla%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=RONDA+DE+LA+TRINIDAD+20%2C+Mor%C3%B3n+de+la+Frontera%2C+Sevilla&limit=1": {
+  "archivo": "77476fc2d6b505f2447882e0.json",
+  "bytes": 535,
+  "http": 200,
+  "momento": "2026-11-25T19:45:18+00:00",
+  "sha256": "6e5a24354a9525ae0585482331710f4fd18ea81856a878649a2dcdf208716464",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=RONDA+DE+LA+TRINIDAD+20%2C+Mor%C3%B3n+de+la+Frontera%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=URB.+CIUDAD+BLANCA+18+%2C+ESC.+1+-+2%C2%BA+D%2C+Dos+Hermanas%2C+Sevilla&limit=1": {
+  "archivo": "bdf1d3819cb958ff19328e2e.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-25T19:45:06+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=URB.+CIUDAD+BLANCA+18+%2C+ESC.+1+-+2%C2%BA+D%2C+Dos+Hermanas%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Urbanizaci%C3%B3n+Roalcao+9%2C+Espartinas%2C+Sevilla&limit=1": {
+  "archivo": "b660d2027e6bf54a2b991429.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-25T19:45:19+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Urbanizaci%C3%B3n+Roalcao+9%2C+Espartinas%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=calle+GANDIA%2C+Sevilla%2C+Sevilla&limit=1": {
+  "archivo": "b193b272e7b8a4cfd9e7f596.json",
+  "bytes": 566,
+  "http": 200,
+  "momento": "2026-11-25T19:44:49+00:00",
+  "sha256": "20665db0ba4f149bc840c484c7fbcf46d1f9b9eea0c076a21752b6e6809f7ea1",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=calle+GANDIA%2C+Sevilla%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=calle+Per%C3%BA+49%2C+Bormujos%2C+Sevilla&limit=1": {
+  "archivo": "c17f8b76d77660db5fb4a1fb.json",
+  "bytes": 504,
+  "http": 200,
+  "momento": "2026-11-25T19:45:12+00:00",
+  "sha256": "22b573fc28210c9dc06805f8be4e4595f7103c31a1949d56fab67745a26251c0",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=calle+Per%C3%BA+49%2C+Bormujos%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=calle+Real%2C+45%2C+Gelves%2C+Sevilla&limit=1": {
+  "archivo": "4cd92b75ac9564968589a7d2.json",
+  "bytes": 500,
+  "http": 200,
+  "momento": "2026-11-25T19:44:47+00:00",
+  "sha256": "2daa8f133ec688c416dfdd97b53b9f4a282087591aac2eceffa904041f0c17d2",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=calle+Real%2C+45%2C+Gelves%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=carretera+madrid-cadiz%2C+km+509%2C+El+quemadero%2C+Carmona%2C+Sevilla&limit=1": {
+  "archivo": "ee13487ed4d442201ab80af9.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-25T19:45:02+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=carretera+madrid-cadiz%2C+km+509%2C+El+quemadero%2C+Carmona%2C+Sevilla&limit=1"
+ }
+}

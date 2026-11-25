@@ -1,0 +1,263 @@
+{
+ "SUB-AT-2026-26R0886001288||1": {
+  "motivo": "Sin referencia catastral válida en la ficha · CartoCiudad («PA LA MORENA O MORONA 0, Morón de la Frontera, Sevilla»): Sin resultado"
+ },
+ "SUB-AT-2026-26R0886001288||2": {
+  "motivo": "Sin referencia catastral válida en la ficha · CartoCiudad («PA LA MORENA O MORONA 0, Morón de la Frontera, Sevilla»): Sin resultado"
+ },
+ "SUB-AT-2026-26R4186001460||1": {
+  "motivo": "Catastro (8463834TG4386S): HTTP 500 · CartoCiudad («CL SANTA ANA 1 BJ 2A, Alcalá de Guadaíra, Sevilla»): Sin resultado"
+ },
+ "SUB-AT-2026-26R4186001561||1": {
+  "consulta": "CL HACIENDA DE REGLA 47, Palomares del Río, Sevilla",
+  "consultado": "2026-11-25T19:44:35+00:00",
+  "estado": 0,
+  "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
+  "lat": 37.31243824488986,
+  "lon": -6.075845516527004,
+  "precision": "direccion",
+  "sha256": "1b6c2d63b9b29ca8cb5ea06386ec4a407c3c64769681b0588e2184dd56a313ca",
+  "texto": "HACIENDA DE REGLA 45 41928",
+  "tipo": "portal",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+HACIENDA+DE+REGLA+47%2C+Palomares+del+R%C3%ADo%2C+Sevilla&limit=1"
+ },
+ "SUB-AT-2026-26R4186001561||2": {
+  "consulta": "CL HACIENDA DE REGLA 45, Palomares del Río, Sevilla",
+  "consultado": "2026-11-25T19:44:37+00:00",
+  "estado": 0,
+  "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
+  "lat": 37.31252701105283,
+  "lon": -6.075936972572722,
+  "precision": "direccion",
+  "sha256": "38e21606c5dcc61e2920e08e303c318d8bf52f206e5747438e3e70b77a5796e3",
+  "texto": "HACIENDA DE REGLA 43 41928",
+  "tipo": "portal",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+HACIENDA+DE+REGLA+45%2C+Palomares+del+R%C3%ADo%2C+Sevilla&limit=1"
+ },
+ "SUB-AT-2026-26R4186001563||1": {
+  "consulta": "CL JUAN DÍAZ DE SOLÍS 13 BJ C, Sevilla, Sevilla",
+  "consultado": "2026-11-25T19:44:39+00:00",
+  "estado": 0,
+  "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
+  "lat": 37.37848205948305,
+  "lon": -6.008871889668817,
+  "precision": "direccion",
+  "sha256": "0a46ebe856abf71b662d9792fb4fcd86f4eb3f6a8dba2efd31dcd1d2a94cbb8a",
+  "texto": "JUAN DIAZ DE SOLIS 12 41010",
+  "tipo": "portal",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+JUAN+D%C3%8DAZ+DE+SOL%C3%8DS+13+BJ+C%2C+Sevilla%2C+Sevilla&limit=1"
+ },
+ "SUB-AT-2026-26R4186001568||1": {
+  "consulta": "CL TORREBLANCA 1 -1 B3, Sevilla, Sevilla",
+  "consultado": "2026-11-25T19:44:40+00:00",
+  "estado": 0,
+  "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
+  "lat": 37.37503332165031,
+  "lon": -5.923684980257759,
+  "precision": "direccion",
+  "sha256": "f04128a3b96b90290a3df76634b2e41d6b24fea17b0999d8af9491cf1695359d",
+  "texto": "PARSI 1 13 41016",
+  "tipo": "portal",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+TORREBLANCA+1+-1+B3%2C+Sevilla%2C+Sevilla&limit=1"
+ },
+ "SUB-AT-2026-26R4186001568||2": {
+  "consulta": "CL TORREBLANCA 1 -1 B4, Sevilla, Sevilla",
+  "consultado": "2026-11-25T19:44:41+00:00",
+  "estado": 0,
+  "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
+  "lat": 37.37522798588826,
+  "lon": -5.9239171169231115,
+  "precision": "direccion",
+  "sha256": "1ea94a0ea9dea3e22b3b068afb0d29b16cd35d04c1a8492a99471446eae93094",
+  "texto": "PARSI 1 14 41016",
+  "tipo": "portal",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+TORREBLANCA+1+-1+B4%2C+Sevilla%2C+Sevilla&limit=1"
+ },
+ "SUB-JA-2026-257246||1": {
+  "motivo": "Sin referencia catastral válida en la ficha · CartoCiudad («PARCELA 10, POLIGONO INDUSTRIAL CRUZ CHIQUITA, Alcalá del Río, Sevilla»): Sin resultado"
+ },
+ "SUB-JA-2026-260384||1": {
+  "motivo": "Catastro (2794019TG5129S): HTTP 500 · Sin dirección o municipio para buscarla"
+ },
+ "SUB-JA-2026-263908||1": {
+  "motivo": "Catastro (1628001TG4412N): HTTP 500 · CartoCiudad («CIENTO OCHENTA Y SEIS, Sevilla, Sevilla»): Sin resultado"
+ },
+ "SUB-JA-2026-265153||1": {
+  "consulta": "calle Real, 45, Gelves, Sevilla",
+  "consultado": "2026-11-25T19:44:47+00:00",
+  "estado": 0,
+  "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
+  "lat": 37.33608998988882,
+  "lon": -6.025365060101519,
+  "precision": "direccion",
+  "sha256": "2daa8f133ec688c416dfdd97b53b9f4a282087591aac2eceffa904041f0c17d2",
+  "texto": "REAL 44 41120",
+  "tipo": "portal",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=calle+Real%2C+45%2C+Gelves%2C+Sevilla&limit=1"
+ },
+ "SUB-JA-2026-265999||1": {
+  "motivo": "Catastro (0647204TG4404N): HTTP 500 · CartoCiudad («calle GANDIA, Sevilla, Sevilla»): devuelve otro municipio (Cártama)"
+ },
+ "SUB-JA-2026-266091||1": {
+  "motivo": "Sin referencia catastral válida en la ficha · CartoCiudad («Calle Costa del sol 2, Alcalá del Río, Sevilla»): Sin resultado"
+ },
+ "SUB-JA-2026-266147||1": {
+  "consulta": "AVDA PINO MONTANO 118, Sevilla, Sevilla",
+  "consultado": "2026-11-25T19:44:52+00:00",
+  "estado": 0,
+  "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
+  "lat": 37.409076775995665,
+  "lon": -5.972557525632593,
+  "precision": "direccion",
+  "sha256": "4928c2c8e831cd5e73d9e95bff054ade4b2d09506c4e6a41ad3942a821c18eb6",
+  "texto": "PINO MONTANO 118 41008",
+  "tipo": "portal",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=AVDA+PINO+MONTANO+118%2C+Sevilla%2C+Sevilla&limit=1"
+ },
+ "SUB-JA-2026-266659||1": {
+  "consulta": "CALLE CONDE DE BARCELONA, 47, San Juan de Aznalfarache, Sevilla",
+  "consultado": "2026-11-25T19:44:54+00:00",
+  "estado": 0,
+  "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
+  "lat": 37.360597112225705,
+  "lon": -6.033327159670461,
+  "precision": "direccion",
+  "sha256": "0905aaa2a444f828e0d9e8a88f967e9e78706cfc4ac386a6a4ac62344c67334b",
+  "texto": "CONDE DE BARCELONA 46 41920",
+  "tipo": "portal",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+CONDE+DE+BARCELONA%2C+47%2C+San+Juan+de+Aznalfarache%2C+Sevilla&limit=1"
+ },
+ "SUB-JA-2026-267385||1": {
+  "motivo": "Catastro (2888019QB6328N): HTTP 500 · CartoCiudad («CALLE CACERES 4, San Juan de Aznalfarache, Sevilla»): Sin resultado"
+ },
+ "SUB-JA-2026-267391|1|1": {
+  "motivo": "Catastro (6297019TG5369N): HTTP 500 · CartoCiudad («Calle Jesús, 62, Mairena del Alcor, Sevilla»): devuelve otro municipio (Sevilla)"
+ },
+ "SUB-JA-2026-267391|2|1": {
+  "motivo": "Catastro (6297019TG5369N): HTTP 500 · CartoCiudad («Calle Jesús, 62, Mairena del Alcor, Sevilla»): devuelve otro municipio (Sevilla)"
+ },
+ "SUB-JA-2026-267391|3|1": {
+  "motivo": "Catastro (6297019TG5369N): HTTP 500 · CartoCiudad («Calle Jesús, 62, Mairena del Alcor, Sevilla»): devuelve otro municipio (Sevilla)"
+ },
+ "SUB-JA-2026-267391|4|1": {
+  "motivo": "Catastro (6297019TG5369N): HTTP 500 · CartoCiudad («Calle Jesús, 62, Mairena del Alcor, Sevilla»): devuelve otro municipio (Sevilla)"
+ },
+ "SUB-JA-2026-267595||1": {
+  "motivo": "Sin referencia catastral válida en la ficha · CartoCiudad («carretera madrid-cadiz, km 509, El quemadero, Carmona, Sevilla»): Sin resultado"
+ },
+ "SUB-JA-2026-268087|1|1": {
+  "motivo": "Catastro (2987202QB6328N): HTTP 500 · CartoCiudad («C/ JEREZ DE LA FRONTERA 5 - ESC. 1-4º C- BQ nUESTRA SEÑORA DE FATIMA, San Juan de Aznalfarache, Sevilla»): Sin resultado"
+ },
+ "SUB-JA-2026-268087|2|1": {
+  "motivo": "Catastro (0790006TG4209S): HTTP 500 · CartoCiudad («URB. CIUDAD BLANCA 18 , ESC. 1 - 2º D, Dos Hermanas, Sevilla»): Sin resultado"
+ },
+ "SUB-JA-2026-268155|1|1": {
+  "consulta": "CALLE HUERTA GAVIRA 25, Marchena, Sevilla",
+  "consultado": "2026-11-25T19:45:07+00:00",
+  "estado": 0,
+  "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
+  "lat": 37.32916143997746,
+  "lon": -5.4136436010297935,
+  "precision": "direccion",
+  "sha256": "24ddb6c60d3b9635c067c5ff5f4e31a7ea6d70f6c50d6dcaf768d8b59dc5becb",
+  "texto": "HUERTA GAVIRA 24 41620",
+  "tipo": "portal",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+HUERTA+GAVIRA+25%2C+Marchena%2C+Sevilla&limit=1"
+ },
+ "SUB-JA-2026-268155|2|1": {
+  "consulta": "CALLE HUERTA GAVIRA 25, Marchena, Sevilla",
+  "consultado": "2026-11-25T19:45:07+00:00",
+  "estado": 0,
+  "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
+  "lat": 37.32916143997746,
+  "lon": -5.4136436010297935,
+  "precision": "direccion",
+  "sha256": "24ddb6c60d3b9635c067c5ff5f4e31a7ea6d70f6c50d6dcaf768d8b59dc5becb",
+  "texto": "HUERTA GAVIRA 24 41620",
+  "tipo": "portal",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+HUERTA+GAVIRA+25%2C+Marchena%2C+Sevilla&limit=1"
+ },
+ "SUB-JA-2026-268190||1": {
+  "motivo": "Catastro (41900A01900017): HTTP 500 · CartoCiudad («Polígono 19 Parcela 17 LA TRINIDAD, Sevilla, Sevilla»): Sin resultado"
+ },
+ "SUB-JA-2026-268195||1": {
+  "motivo": "Catastro (4410306TG34415): HTTP 500 · CartoCiudad («CALLE NAOS 12 - ESC. 1 -2º IZDA, Sevilla, Sevilla»): Sin resultado"
+ },
+ "SUB-JA-2026-268212|1|1": {
+  "consulta": "calle Perú 49, Bormujos, Sevilla",
+  "consultado": "2026-11-25T19:45:12+00:00",
+  "estado": 0,
+  "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
+  "lat": 37.37446577987274,
+  "lon": -6.079442470111606,
+  "precision": "direccion",
+  "sha256": "22b573fc28210c9dc06805f8be4e4595f7103c31a1949d56fab67745a26251c0",
+  "texto": "PERU 47 41930",
+  "tipo": "portal",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=calle+Per%C3%BA+49%2C+Bormujos%2C+Sevilla&limit=1"
+ },
+ "SUB-JA-2026-268212|2|1": {
+  "consulta": "Calle Perú 49, Bormujos, Sevilla",
+  "consultado": "2026-11-25T19:45:13+00:00",
+  "estado": 0,
+  "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
+  "lat": 37.37446577987274,
+  "lon": -6.079442470111606,
+  "precision": "direccion",
+  "sha256": "39435043ee71b406e00870d374d81e2b3381710bf7fa1580c713caebd28dc107",
+  "texto": "PERU 47 41930",
+  "tipo": "portal",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Calle+Per%C3%BA+49%2C+Bormujos%2C+Sevilla&limit=1"
+ },
+ "SUB-JA-2026-268212|3|1": {
+  "consulta": "Muelle Martínez Catena 21, Isla Cristina, Huelva",
+  "consultado": "2026-11-25T19:45:15+00:00",
+  "estado": 0,
+  "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
+  "lat": 37.20128764358027,
+  "lon": -7.328130436507899,
+  "precision": "direccion",
+  "sha256": "82c9eb08dadcb52ae70298bd99e71840fff9f0c1dface44a65ee3ab86ab05857",
+  "texto": "MARTINEZ CATENA 22 21410",
+  "tipo": "portal",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Muelle+Mart%C3%ADnez+Catena+21%2C+Isla+Cristina%2C+Huelva&limit=1"
+ },
+ "SUB-JA-2026-268284||1": {
+  "motivo": "Sin referencia catastral válida en la ficha · CartoCiudad («DEHESA DE LA MATA ALCOZARINA 32, Morón de la Frontera, Sevilla»): Sin resultado"
+ },
+ "SUB-JA-2026-268332||1": {
+  "consulta": "RONDA DE LA TRINIDAD 20, Morón de la Frontera, Sevilla",
+  "consultado": "2026-11-25T19:45:18+00:00",
+  "estado": 0,
+  "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
+  "lat": 37.128580559974935,
+  "lon": -5.456342500032969,
+  "precision": "direccion",
+  "sha256": "6e5a24354a9525ae0585482331710f4fd18ea81856a878649a2dcdf208716464",
+  "texto": "TRINIDAD 21 41530",
+  "tipo": "portal",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=RONDA+DE+LA+TRINIDAD+20%2C+Mor%C3%B3n+de+la+Frontera%2C+Sevilla&limit=1"
+ },
+ "SUB-JA-2026-268563||1": {
+  "motivo": "Sin referencia catastral válida en la ficha · CartoCiudad («Urbanización Roalcao 9, Espartinas, Sevilla»): Sin resultado"
+ },
+ "SUB-JA-2026-268564||1": {
+  "motivo": "Sin referencia catastral válida en la ficha · CartoCiudad («C/ RODRIGO DE TRIANA 66-68, Pilas, Sevilla»): Sin resultado"
+ },
+ "SUB-JA-2026-268670||1": {
+  "consulta": "Plaza España 24, Pilas, Sevilla",
+  "consultado": "2026-11-25T19:45:22+00:00",
+  "estado": 0,
+  "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
+  "lat": 37.301982547784576,
+  "lon": -6.296457750161487,
+  "precision": "direccion",
+  "sha256": "963778a1f76f93107751f87a2146bce477fc5ad483aa0f618e1676d0f94c40f8",
+  "texto": "ESPAÑA 23 41840",
+  "tipo": "portal",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Plaza+Espa%C3%B1a+24%2C+Pilas%2C+Sevilla&limit=1"
+ },
+ "SUB-RC-2026-4107100105||1": {
+  "motivo": "Catastro (4690808TG4348N): HTTP 500 · CartoCiudad («HACIENDA DOLORES 8 1, Alcalá de Guadaíra, Sevilla»): Sin resultado"
+ }
+}
