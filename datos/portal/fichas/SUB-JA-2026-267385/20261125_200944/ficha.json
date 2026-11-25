@@ -1,0 +1,299 @@
+{
+  "sub": "SUB-JA-2026-267385",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-267385",
+  "consultado_utc": "2026-11-25T19:09:53+00:00",
+  "captura_codigos": "41/20261125_200830",
+  "peticiones": 9,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "CALLE CACERES Nº 4 PISO 3ºA",
+      "localidad": "SAN JUAN DE AZNALFARACHE",
+      "provincia": "Sevilla",
+      "codigo_postal": "41920",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-267385/20261125_200944/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267385&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-267385/20261125_200944/portal/general.html.gz",
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-267385",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267385",
+      "consultado_utc": "2026-11-25T19:09:44+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "91cd8817434a517807d69107168ae0343e2382f5e0a83aa0e2d0ab9c246191f1",
+      "bytes": 10812,
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-267385"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "4033 0000 06 0788 23"
+          ],
+          [
+            "Fecha de inicio",
+            "13-11-2026 18:00:00 CET  (ISO: 2026-11-13T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "03-12-2026 18:00:00 CET (ISO: 2026-12-03T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "30.246,40 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-36652"
+          ],
+          [
+            "Valor subasta",
+            "82.350,00 €"
+          ],
+          [
+            "Tasación",
+            "0,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "1.647,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "4.117,50 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267385/20261125_200944/portal/autoridad.html.gz",
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267385&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267385&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:09:45+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "927fd851bbdc144b69ae9a7f08b84f24ea4b79d100e45d28640003e75bd8cb4b",
+      "bytes": 8988,
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4109142011"
+          ],
+          [
+            "Descripción",
+            "Sección Civil TI Sevilla. Plz.n 11"
+          ],
+          [
+            "Dirección",
+            "CL VERMONDO RESTA S/N S/N   ; 41018 SEVILLA"
+          ],
+          [
+            "Teléfono",
+            "676767711"
+          ],
+          [
+            "Fax",
+            "955043135"
+          ],
+          [
+            "Correo electrónico",
+            "AtPublico.JInstancia.11.Sevilla.JUS@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267385/20261125_200944/portal/bienes.html.gz",
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267385&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267385&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:09:46+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "451feeab13c5610a0de799aadd7f8b80c3f47cc2e5780158349bec1b2d681036",
+      "bytes": 11154,
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "URBANA.  SIETE.  Piso  derecha  mirando  a  fachada  de  la  planta  tercera,  de  la  casa  de San  Juan  de  Aznalfarache,  calle   Cáceres,  número   cuatro   de  gobierno,   parcela  A,  con una  superficie de cincuenta metros setenta decímetros cuadrados"
+          ],
+          [
+            "IDUFIR",
+            "41026000081389"
+          ],
+          [
+            "Referencia catastral",
+            "2888019QB6328N0007LU"
+          ],
+          [
+            "Dirección",
+            "CALLE CACERES Nº 4 PISO 3ºA"
+          ],
+          [
+            "Código Postal",
+            "41920"
+          ],
+          [
+            "Localidad",
+            "SAN JUAN DE AZNALFARACHE"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "Sí"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "Conforme a Certificación de Dominio y Cargas"
+          ],
+          [
+            "Inscripción registral",
+            "INSCRIPCION.- en el Registro de la Propiedad de San Juan de Aznalfarache al Folio 1 del  Tomo 1.844 Libro 269, Finca número 2.470, Inscripción 4ª"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267385/20261125_200944/portal/pujas.html.gz",
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267385&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267385&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:09:47+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "cf7e9b49ff4df7c6974e62447f85dde4172395d4a13b1acaab8bf6840d55dfcb",
+      "bytes": 8469,
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/07f7d38a96f6c7885cac90a046f4db7435503a0f13cbf7bb7692bd1195161413.pdf",
+      "etiqueta": "Vivienda sita en: Calle CACERES nº 4, Escalera:1ª, Planta:3ª Puerta A, CP 41920 - SAN JUAN DE AZNALFARACHE (SEVILLA)",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "1-06f7fea5ffe066d63467f210d0e41fd4",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-267385&idDoc=1-06f7fea5ffe066d63467f210d0e41fd4",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-267385&idDoc=1-06f7fea5ffe066d63467f210d0e41fd4",
+      "consultado_utc": "2026-11-25T19:09:48+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "07f7d38a96f6c7885cac90a046f4db7435503a0f13cbf7bb7692bd1195161413",
+      "bytes": 359480
+    },
+    {
+      "archivo": "documentos/4ed25f0221f73c02349cf11682d458cb600c2ad29e5a7ca4d354bbd426f07328.pdf",
+      "etiqueta": "CERTIFICACION DE DOMINIO y CARGAS",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-4b82b8ea7907cef152490179cca27dc5",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-267385&idDoc=2-4b82b8ea7907cef152490179cca27dc5",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-267385&idDoc=2-4b82b8ea7907cef152490179cca27dc5",
+      "consultado_utc": "2026-11-25T19:09:50+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "4ed25f0221f73c02349cf11682d458cb600c2ad29e5a7ca4d354bbd426f07328",
+      "bytes": 1932997
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-36652",
+      "publicado": "2026-11-10",
+      "actualizado_fuente": "20261110071606",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-36652.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36652",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36652",
+          "consultado_utc": "2026-11-25T19:09:51+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "84866a6132e7808afd3ba24c5a1fbec3444495197b67d2b652cf7c32545e8660",
+          "bytes": 1138
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-36652.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/10/pdfs/BOE-B-2026-36652.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/10/pdfs/BOE-B-2026-36652.pdf",
+          "consultado_utc": "2026-11-25T19:09:51+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "3f83bab8a472144d7675f129756c3cde89cc665dd814f902e464a436c07e86fc",
+          "bytes": 198208
+        }
+      ],
+      "aviso": null,
+      "reutilizado": false
+    }
+  ],
+  "pendientes": []
+}

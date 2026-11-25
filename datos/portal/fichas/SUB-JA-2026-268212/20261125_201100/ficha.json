@@ -1,0 +1,810 @@
+{
+  "sub": "SUB-JA-2026-268212",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268212",
+  "consultado_utc": "2026-11-25T19:11:16+00:00",
+  "captura_codigos": "41/20261125_200830",
+  "peticiones": 17,
+  "lotes_identificados": [
+    "1",
+    "2",
+    "3"
+  ],
+  "ubicaciones_bienes": [
+    {
+      "lote": "1",
+      "bien": 1,
+      "tipo": "Inmueble (Local comercial)",
+      "direccion": "calle Perú nº 49 Escalera primera, planta 2ª, puerta 21 edificio CORONA CENTER",
+      "localidad": "BORMUJOS",
+      "provincia": "Sevilla",
+      "codigo_postal": "41930",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-268212/20261125_201100/portal/bienes_lote_1.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=3&idLote=1&idBus=&numPagBus="
+      }
+    },
+    {
+      "lote": "2",
+      "bien": 1,
+      "tipo": "Inmueble (Garaje)",
+      "direccion": "Calle Perú nº 49, Escalera 1, Planta SM, edificio CORONA CENTER",
+      "localidad": "BORMUJOS",
+      "provincia": "Sevilla",
+      "codigo_postal": "41930",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-268212/20261125_201100/portal/bienes_lote_2.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=3&idLote=2&idBus=&numPagBus="
+      }
+    },
+    {
+      "lote": "3",
+      "bien": 1,
+      "tipo": "Inmueble (Local comercial)",
+      "direccion": "Muelle Martínez Catena nº 21, Bloque 2, Planta 00, Puerta 15",
+      "localidad": "ISLA CRISTINA",
+      "provincia": "Huelva",
+      "codigo_postal": "21410",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-268212/20261125_201100/portal/bienes_lote_3.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=3&idLote=3&idBus=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-268212/20261125_201100/portal/general.html.gz",
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268212",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212",
+      "consultado_utc": "2026-11-25T19:11:00+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "168b3cec15df32928ff976a2e6f7cdfaa8845fce1d0d27e2a8b0fa50b662250d",
+      "bytes": 12011,
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-268212"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "4035 0000 06 0591 21"
+          ],
+          [
+            "Fecha de inicio",
+            "19-11-2026 18:00:00 CET  (ISO: 2026-11-19T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "09-12-2026 18:00:00 CET (ISO: 2026-12-09T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "299.475,73 €"
+          ],
+          [
+            "Lotes",
+            "3"
+          ],
+          [
+            "Forma adjudicación",
+            "Separada para cada lote"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-37589"
+          ],
+          [
+            "Valor subasta",
+            "Ver valor de subasta en cada lote (los lotes se subastan de forma independiente)"
+          ],
+          [
+            "Tasación",
+            "Ver valor de tasación en cada lote (los lotes se subastan de forma independiente)"
+          ],
+          [
+            "Puja mínima",
+            "Ver puja mínima de cada lote (adjudicación independiente)"
+          ],
+          [
+            "Tramos entre pujas",
+            "Ver tramos de cada lote (adjudicación independiente)"
+          ],
+          [
+            "Importe del depósito",
+            "Ver importe de consignación de cada lote (adjudicación independiente)"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268212/20261125_201100/portal/autoridad.html.gz",
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:11:01+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "a4870aaa22b4283724adf5b15b822a084061e0a3b7e284c5c794ae4b64964d0d",
+      "bytes": 8977,
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4109142013"
+          ],
+          [
+            "Descripción",
+            "Sección Civil TI Sevilla. Plz.n 13"
+          ],
+          [
+            "Dirección",
+            "CL VERMONDO RESTA S/N S/N   ; 41018 SEVILLA"
+          ],
+          [
+            "Teléfono",
+            "676767711"
+          ],
+          [
+            "Fax",
+            "955043135"
+          ],
+          [
+            "Correo electrónico",
+            "scej.subastas.sevilla.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268212/20261125_201100/portal/bienes.html.gz",
+      "etiqueta": "Lotes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:11:02+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "3458fca5e97cf6b74cbdd4de320f993392b9155d8bd6bfe4b2c706d120512bb1",
+      "bytes": 13841,
+      "encabezados": [
+        "Lote 1",
+        "Datos relacionados con la subasta del lote 1",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Local comercial)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "182.920,60 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "9.146,03 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "3.658,41 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "C/ PERU 49, Es:1, Pl: 02, Pt: 21, Ed. Corona Center, Bormujos (Sevilla) CP 41930"
+          ],
+          [
+            "IDUFIR",
+            "41024000406485"
+          ],
+          [
+            "Referencia catastral",
+            "NO CONSTA"
+          ],
+          [
+            "Dirección",
+            "calle Perú nº 49 Escalera primera, planta 2ª, puerta 21 edificio CORONA CENTER"
+          ],
+          [
+            "Código Postal",
+            "41930"
+          ],
+          [
+            "Localidad",
+            "BORMUJOS"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "Conforme a certificación de dominio y cargas"
+          ],
+          [
+            "Inscripción registral",
+            "Finca registral 10136 inscrita en el Registro de la Propiedad nº 6 de Sevilla"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268212/20261125_201100/portal/pujas.html.gz",
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:11:03+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "888f7f87cbe6cea9a6b6f508ddd5f6de0a23b2864625b89abce110f3b0325fc1",
+      "bytes": 9354,
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ],
+          [
+            "3",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268212/20261125_201100/portal/bienes_lote_1.html.gz",
+      "etiqueta": "Lote 1",
+      "pestana": "3",
+      "lote": "1",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=3&idLote=1&idBus=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=3&idLote=1&idBus=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:11:08+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "1232c8c0db161686404b3ae5de8d7a44aff2b9e4141e1f56e86c94b8db27c212",
+      "bytes": 13845,
+      "encabezados": [
+        "Lote 1",
+        "Datos relacionados con la subasta del lote 1",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Local comercial)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "182.920,60 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "9.146,03 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "3.658,41 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "C/ PERU 49, Es:1, Pl: 02, Pt: 21, Ed. Corona Center, Bormujos (Sevilla) CP 41930"
+          ],
+          [
+            "IDUFIR",
+            "41024000406485"
+          ],
+          [
+            "Referencia catastral",
+            "NO CONSTA"
+          ],
+          [
+            "Dirección",
+            "calle Perú nº 49 Escalera primera, planta 2ª, puerta 21 edificio CORONA CENTER"
+          ],
+          [
+            "Código Postal",
+            "41930"
+          ],
+          [
+            "Localidad",
+            "BORMUJOS"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "Conforme a certificación de dominio y cargas"
+          ],
+          [
+            "Inscripción registral",
+            "Finca registral 10136 inscrita en el Registro de la Propiedad nº 6 de Sevilla"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268212/20261125_201100/portal/bienes_lote_2.html.gz",
+      "etiqueta": "Lote 2",
+      "pestana": "3",
+      "lote": "2",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=3&idLote=2&idBus=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=3&idLote=2&idBus=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:11:09+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "cce75ad471e4507cb47fb6b4d36df99c93c63d0bdbcfa3829e3fdb994d2f6f5e",
+      "bytes": 13287,
+      "encabezados": [
+        "Lote 2",
+        "Datos relacionados con la subasta del lote 2",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Garaje)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "21.829,55 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "1.091,47 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "436,59 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "C/ PERU 49, Es:1, Pl: SM, Ed. Corona Center, Bormujos (Sevilla) CP 41930"
+          ],
+          [
+            "IDUFIR",
+            "41024000485008"
+          ],
+          [
+            "Dirección",
+            "Calle Perú nº 49, Escalera 1, Planta SM, edificio CORONA CENTER"
+          ],
+          [
+            "Código Postal",
+            "41930"
+          ],
+          [
+            "Localidad",
+            "BORMUJOS"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "Conforme Certificación de dominio y cargas"
+          ],
+          [
+            "Inscripción registral",
+            "Finca registral 11773/18 inscrita en el Registro de la Propiedad nº 6 de Sevilla"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268212/20261125_201100/portal/bienes_lote_3.html.gz",
+      "etiqueta": "Lote 3",
+      "pestana": "3",
+      "lote": "3",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=3&idLote=3&idBus=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=3&idLote=3&idBus=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:11:10+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "96bd09562a50b780bb83c67bc6b3153839b84612a6bdb185e242b120c06f7a8a",
+      "bytes": 13422,
+      "encabezados": [
+        "Lote 3",
+        "Datos relacionados con la subasta del lote 3",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Local comercial)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "183.329,73 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "9.166,48 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "3.666,59 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "Local Comercial en Muelle MARTINEZ CATENA 21, Bl: 2, Pl:00, Pt:15, Isla Cristina (Huelva) CP 21410"
+          ],
+          [
+            "Referencia catastral",
+            "8588701PB4188N0110JP"
+          ],
+          [
+            "Dirección",
+            "Muelle Martínez Catena nº 21, Bloque 2, Planta 00, Puerta 15"
+          ],
+          [
+            "Código Postal",
+            "21410"
+          ],
+          [
+            "Localidad",
+            "ISLA CRISTINA"
+          ],
+          [
+            "Provincia",
+            "Huelva"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "Conforme a Certificación de dominio y cargas"
+          ],
+          [
+            "Inscripción registral",
+            "Finca registral 22222 inscrita en el Registro de la Propiedad de Lepe (Huelva)"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268212/20261125_201100/portal/pujas_lote_1.html.gz",
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": "1",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=5&idBus=&idLote=1&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=5&idBus=&idLote=1&numPagBus=",
+      "consultado_utc": "2026-11-25T19:11:11+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "e7bc6c03ca596f837e53bc1cb322e335634cd02c33126badaf7f26629aedc682",
+      "bytes": 9354,
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ],
+          [
+            "3",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268212/20261125_201100/portal/pujas_lote_2.html.gz",
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": "2",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=5&idBus=&idLote=2&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=5&idBus=&idLote=2&numPagBus=",
+      "consultado_utc": "2026-11-25T19:11:12+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "e69d1ca6922b15f4cf8f5218917110ea51e7b9b672a88a3e2f24bfc62cbeeb84",
+      "bytes": 9354,
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ],
+          [
+            "3",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268212/20261125_201100/portal/pujas_lote_3.html.gz",
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": "3",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=5&idBus=&idLote=3&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268212&ver=5&idBus=&idLote=3&numPagBus=",
+      "consultado_utc": "2026-11-25T19:11:13+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "09104c378590ab2fcecb076565e6b0295a9ff51d7a09a79edb061930b7b2d313",
+      "bytes": 9354,
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ],
+          [
+            "3",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/f6f227326809029b58584e203d12e801c93e308c2c8dc32ea5f64352d18acdb3.pdf",
+      "etiqueta": "CONFORME EDICTO: LOCAL DE OFICINA y APARCAMIENTO CORONA CENTER - LOCAL ISLA CRISTINA TRES LOTES",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "1-7f0e5bc14679f0699cc0c2d6263d7033",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268212&idDoc=1-7f0e5bc14679f0699cc0c2d6263d7033",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268212&idDoc=1-7f0e5bc14679f0699cc0c2d6263d7033",
+      "consultado_utc": "2026-11-25T19:11:04+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "f6f227326809029b58584e203d12e801c93e308c2c8dc32ea5f64352d18acdb3",
+      "bytes": 342099
+    },
+    {
+      "archivo": "documentos/14d09a7537f4bf729e4a49f230201290a7bf82959d95313c8c88526187bb132a.pdf",
+      "etiqueta": "Certificación de Dominio y Cargas - Local de Oficina Edificio Corona Center - BORMUJOS",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-56e7eb8ff87cdb07eafe9641f11a3acb",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268212&idDoc=2-56e7eb8ff87cdb07eafe9641f11a3acb",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268212&idDoc=2-56e7eb8ff87cdb07eafe9641f11a3acb",
+      "consultado_utc": "2026-11-25T19:11:06+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "14d09a7537f4bf729e4a49f230201290a7bf82959d95313c8c88526187bb132a",
+      "bytes": 333093
+    },
+    {
+      "archivo": "documentos/6566e17fc004ad83320d4f79c650e17934a2a972ca2a56b39b7eb447dbb62cfb.pdf",
+      "etiqueta": "Certificación de Dominio y Cargas - Aparcamiento nº 18 Edificio Corona Center - BORMUJOS",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "3-00f16c68a9ae44c710ca55ae91a53eb1",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268212&idDoc=3-00f16c68a9ae44c710ca55ae91a53eb1",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268212&idDoc=3-00f16c68a9ae44c710ca55ae91a53eb1",
+      "consultado_utc": "2026-11-25T19:11:07+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "6566e17fc004ad83320d4f79c650e17934a2a972ca2a56b39b7eb447dbb62cfb",
+      "bytes": 335705
+    },
+    {
+      "archivo": "documentos/7db9f49c72fe43cbb1e617799b6b90e60fcaf87f804a867c36b7b20731f50a8c.pdf",
+      "etiqueta": "Certificación de Dominio y Cargas - Local comercial Muelle Martínez Catena nº 21 Isla Cristina",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "4-546b5460a615d013e569bceebb2c05e9",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268212&idDoc=4-546b5460a615d013e569bceebb2c05e9",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268212&idDoc=4-546b5460a615d013e569bceebb2c05e9",
+      "consultado_utc": "2026-11-25T19:11:08+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "7db9f49c72fe43cbb1e617799b6b90e60fcaf87f804a867c36b7b20731f50a8c",
+      "bytes": 99758
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-37589",
+      "publicado": "2026-11-16",
+      "actualizado_fuente": "20261116071609",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-37589.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37589",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37589",
+          "consultado_utc": "2026-11-25T19:11:14+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "3139673d2aa1a855d9231b36b0e6f944b3c1d90cf0cb29b941ed17049f0f02bb",
+          "bytes": 1139
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-37589.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/16/pdfs/BOE-B-2026-37589.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/16/pdfs/BOE-B-2026-37589.pdf",
+          "consultado_utc": "2026-11-25T19:11:15+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "5636690d7c799d3069402fbb7dd9c89166cfa2e0387c5942004c6518626e1407",
+          "bytes": 198048
+        }
+      ],
+      "aviso": null,
+      "reutilizado": false
+    }
+  ],
+  "pendientes": []
+}

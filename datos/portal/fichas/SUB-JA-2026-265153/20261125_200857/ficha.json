@@ -1,0 +1,337 @@
+{
+  "sub": "SUB-JA-2026-265153",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-265153",
+  "consultado_utc": "2026-11-25T19:09:08+00:00",
+  "captura_codigos": "41/20261125_200830",
+  "peticiones": 11,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "calle Real, 45  escalera 1, planta 1, puerta B1(con fachada a la Avenida de Coria)",
+      "localidad": "Gelves",
+      "provincia": "Sevilla",
+      "codigo_postal": "41120",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-265153/20261125_200857/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-265153&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-265153/20261125_200857/portal/general.html.gz",
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-265153",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-265153",
+      "consultado_utc": "2026-11-25T19:08:57+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "3429580efd3f9ada8c671976c437e0b024aaaa99c45453bb6c736e5eb4b7b8fa",
+      "bytes": 11208,
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-265153"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "4090 0000 06 0269 24"
+          ],
+          [
+            "Fecha de inicio",
+            "17-11-2026 18:00:00 CET  (ISO: 2026-11-17T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "07-12-2026 18:00:00 CET (ISO: 2026-12-07T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "150.303,22 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-37365"
+          ],
+          [
+            "Valor subasta",
+            "207.875,00 €"
+          ],
+          [
+            "Tasación",
+            "0,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "4.157,50 €"
+          ],
+          [
+            "Importe del depósito",
+            "10.393,75 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-265153/20261125_200857/portal/autoridad.html.gz",
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-265153&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-265153&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:08:58+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "5d3ce2d3cfb90feadd62173b491a3e77a2b9c97acaa6721f20da3330d9791a61",
+      "bytes": 8978,
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4109142018"
+          ],
+          [
+            "Descripción",
+            "Sección Civil TI Sevilla. Plz.n 18"
+          ],
+          [
+            "Dirección",
+            "CL VERMONDO RESTA S/N S/N   ; 41018 SEVILLA"
+          ],
+          [
+            "Teléfono",
+            "676767711"
+          ],
+          [
+            "Fax",
+            "955043135"
+          ],
+          [
+            "Correo electrónico",
+            "scej.subastas.sevilla.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-265153/20261125_200857/portal/bienes.html.gz",
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-265153&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-265153&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:08:59+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "7b213ad1ebfc305cc04a635d77b3ecfaeff9285c9384eecc4a76ea17e8857230",
+      "bytes": 11535,
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "Bien inmueble. Finca urbana. vivienda unifamiliar, dúplex de dos plantas con fachada en la Avenida de Coria, Gelves provincia de Sevilla. (Complejo inmobiliario privado) Edificio B. superficie útil 73,82 metros cuadrados. Con anejo de garaje en sótano de 10,50 metros cuadrados. año de construcción: 2006"
+          ],
+          [
+            "IDUFIR",
+            "41030000807528"
+          ],
+          [
+            "Referencia catastral",
+            "3664722QB6336S0011PO"
+          ],
+          [
+            "Dirección",
+            "calle Real, 45  escalera 1, planta 1, puerta B1(con fachada a la Avenida de Coria)"
+          ],
+          [
+            "Código Postal",
+            "41120"
+          ],
+          [
+            "Localidad",
+            "Gelves"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No"
+          ],
+          [
+            "Cargas",
+            "Las que constan en el certificado de titularidad y cargas adjunto."
+          ],
+          [
+            "Inscripción registral",
+            "Registro de la Propiedad nº 3 de Sevilla. Tomo 2404; libro 113; folio 10"
+          ],
+          [
+            "Información adicional",
+            "calle Real, 45  escalera 1, planta 1, puerta B1 (con fachada a la Avenida de Coria). Supercie construida 135 metros cuadrados"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-265153/20261125_200857/portal/pujas.html.gz",
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-265153&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-265153&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:09:00+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "d59d3fc86e4519b9f37dbbbc37780346a6c87d2f5970b61b2fbbf27c81be21e5",
+      "bytes": 8469,
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/f61ab6936a6a0e30f4cdeaedcdabb84a2f2ce0f2bddea2df84067b04d704644e.pdf",
+      "etiqueta": "Edicto anuncio subasta bien inmueble vivienda dúplex en Gelves (Sevilla)",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "1-7b7d78b3c36301af3895c531a1fd669c",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-265153&idDoc=1-7b7d78b3c36301af3895c531a1fd669c",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-265153&idDoc=1-7b7d78b3c36301af3895c531a1fd669c",
+      "consultado_utc": "2026-11-25T19:09:01+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "f61ab6936a6a0e30f4cdeaedcdabb84a2f2ce0f2bddea2df84067b04d704644e",
+      "bytes": 375728
+    },
+    {
+      "archivo": "documentos/8ab268b08cf58f9b0fd7c553648285e8881be08d2d631ca99e78fa161389ba29.pdf",
+      "etiqueta": "Datos catastrales",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-979fbcd3f4611deea36f0f445477ef64",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-265153&idDoc=2-979fbcd3f4611deea36f0f445477ef64",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-265153&idDoc=2-979fbcd3f4611deea36f0f445477ef64",
+      "consultado_utc": "2026-11-25T19:09:03+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "8ab268b08cf58f9b0fd7c553648285e8881be08d2d631ca99e78fa161389ba29",
+      "bytes": 46792
+    },
+    {
+      "archivo": "documentos/898890dc098081fa7add8474884eb6d896e261572d0dda7abb3d0b2ca42883bd.pdf",
+      "etiqueta": "Nota simple Registro de la Propiedad",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "3-fe374da4bed88590444126ae2988219f",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-265153&idDoc=3-fe374da4bed88590444126ae2988219f",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-265153&idDoc=3-fe374da4bed88590444126ae2988219f",
+      "consultado_utc": "2026-11-25T19:09:03+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "898890dc098081fa7add8474884eb6d896e261572d0dda7abb3d0b2ca42883bd",
+      "bytes": 220516
+    },
+    {
+      "archivo": "documentos/0e359e2a2facd1018e3a88dae40e5720ba1d5b80fa62a0a210340b64cf233389.pdf",
+      "etiqueta": "Mandamiento de titularidad y cargas",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "4-ec593e6e0868d2adac635f0450f4c7f8",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-265153&idDoc=4-ec593e6e0868d2adac635f0450f4c7f8",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-265153&idDoc=4-ec593e6e0868d2adac635f0450f4c7f8",
+      "consultado_utc": "2026-11-25T19:09:05+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "0e359e2a2facd1018e3a88dae40e5720ba1d5b80fa62a0a210340b64cf233389",
+      "bytes": 1287480
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-37365",
+      "publicado": "2026-11-14",
+      "actualizado_fuente": "20261114071539",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-37365.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37365",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37365",
+          "consultado_utc": "2026-11-25T19:09:06+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "3d71c1379aa9fb905ca4d259da3a0f8ccfe078e7b279f64646e7f27b3c5c519f",
+          "bytes": 1137
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-37365.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/14/pdfs/BOE-B-2026-37365.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/14/pdfs/BOE-B-2026-37365.pdf",
+          "consultado_utc": "2026-11-25T19:09:06+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "0d6172f17892c9f7605caf11c69567f181a53ba12f05e7900a2c425844fe38fa",
+          "bytes": 197935
+        }
+      ],
+      "aviso": null,
+      "reutilizado": false
+    }
+  ],
+  "pendientes": []
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "tipo": "acceso_restringido",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002074",
+    "etiqueta": "Información general",
+    "motivo": "La página indica que parte de la información requiere identificación."
+  },
+  {
+    "tipo": "acceso_restringido",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002074&ver=3&idBus=&idLote=&numPagBus=",
+    "etiqueta": "Bienes",
+    "motivo": "La página indica que parte de la información requiere identificación."
+  }
+]

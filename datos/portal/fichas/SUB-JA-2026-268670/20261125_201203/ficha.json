@@ -1,0 +1,281 @@
+{
+  "sub": "SUB-JA-2026-268670",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268670",
+  "consultado_utc": "2026-11-25T19:12:11+00:00",
+  "captura_codigos": "41/20261125_200830",
+  "peticiones": 8,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "Plaza España nº 24 Escalera 1 2º Pta 2",
+      "localidad": "Pilas",
+      "provincia": "Sevilla",
+      "codigo_postal": "41840",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-268670/20261125_201203/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268670&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-268670/20261125_201203/portal/general.html.gz",
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268670",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268670",
+      "consultado_utc": "2026-11-25T19:12:03+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "4c57106ffd07c60b5391ac286b5aea66422ef8be785597dd9f58065ddcb2b314",
+      "bytes": 10676,
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-268670"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "3952 0000 06 0466 24"
+          ],
+          [
+            "Fecha de inicio",
+            "19-11-2026 18:00:00 CET  (ISO: 2026-11-19T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "09-12-2026 18:00:00 CET (ISO: 2026-12-09T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "128.542,95 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-37564"
+          ],
+          [
+            "Valor subasta",
+            "115.630,00 €"
+          ],
+          [
+            "Tasación",
+            "115.630,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "2.312,60 €"
+          ],
+          [
+            "Importe del depósito",
+            "5.781,50 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268670/20261125_201203/portal/autoridad.html.gz",
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268670&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268670&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:12:05+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "7c6a8f1b65bacca32dc2803d866b4f2245fc9650556d4d54121d60d919e38161",
+      "bytes": 9007,
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4108741002"
+          ],
+          [
+            "Descripción",
+            "Sec. Civil e Inst. TI Sanlúcar la Mayor. Plz.n 2"
+          ],
+          [
+            "Dirección",
+            "CL DUQUE DE LERMA 8 8   ; 41800 SANLUCAR MAYOR"
+          ],
+          [
+            "Teléfono",
+            "600145436"
+          ],
+          [
+            "Fax",
+            "955622273"
+          ],
+          [
+            "Correo electrónico",
+            "sec.civil-instr.plazan2.ti.smayor.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268670/20261125_201203/portal/bienes.html.gz",
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268670&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268670&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:12:06+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "8a294244cb938217e31e30227f01c43d67b0b456e9e1c59834670006d4dae602",
+      "bytes": 12549,
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "URBANA. 6.- SEIS.- Piso destinado a vivienda, en la primera planta al ta del edificio sito en Pilas, en la calle Nuestra Señora de Fátima sin número, hoy Avenida del Aljarafe número cuatro, señalado con la letra A, en Catastro figura como Plaza de España, número 24, escalera 1, planta 1, puerta 2, y con una superficie construida de ciento doce metros y veinte decímetros cuadrados, y útil de ochenta y seis metros y sesenta y un decímetros cuadrados. Se compone de vestíbulo, salón comedor, cocina, baño, aseo, lavadero y tres dormitorios. Linda: por su frente, con escalera y pasillo por donde tiene su acceso y patio de luces, que solo será visitadle por los dueños de este piso y los del señalado con la letra C, por la derecha entrando, Don Luis Suárez Barco; por la izquierda, el señalado con la letra B, de la misma planta; y por el fondo, la calle Nuestra Señora de Fátima. Cuota de participación. Le corresponde una cuota en el valor total del inmueble, gastos y elementos comunes de diez enteros y veintinueve centésimas por ciento."
+          ],
+          [
+            "Referencia catastral",
+            "9720403QB3392S0008ZZ."
+          ],
+          [
+            "Dirección",
+            "Plaza España nº 24 Escalera 1 2º Pta 2"
+          ],
+          [
+            "Código Postal",
+            "41840"
+          ],
+          [
+            "Localidad",
+            "Pilas"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Inscripción registral",
+            "REGISTRO DE LA PROPIEDAD Nº 2 DE SANLÚCAR LA MAYOR, inscrita al folio 89, tomo 1416, libro 141, finca nº 8195"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268670/20261125_201203/portal/pujas.html.gz",
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268670&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268670&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:12:07+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "36fa76304c0c1f9943aede43c0b02c730ca85a635e859b2e4984bf1ab06879be",
+      "bytes": 8469,
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/1b3c931c66abf1ecaba2a1f1b11b1f2fddcfa1fea1e9f7c7eb3177bce6b278d8.pdf",
+      "etiqueta": "NOTA SIMPLE",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-cbc9429d7e9dec26f6703f62b0ec4ba6",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268670&idDoc=2-cbc9429d7e9dec26f6703f62b0ec4ba6",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268670&idDoc=2-cbc9429d7e9dec26f6703f62b0ec4ba6",
+      "consultado_utc": "2026-11-25T19:12:08+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "1b3c931c66abf1ecaba2a1f1b11b1f2fddcfa1fea1e9f7c7eb3177bce6b278d8",
+      "bytes": 3719464
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-37564",
+      "publicado": "2026-11-16",
+      "actualizado_fuente": "20261116071609",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-37564.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37564",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37564",
+          "consultado_utc": "2026-11-25T19:12:09+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "f50cec7ead9f96515442e3d47962216ba2c9f32cdfd38ffbcaf595b4fc1fc11b",
+          "bytes": 1186
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-37564.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/16/pdfs/BOE-B-2026-37564.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/16/pdfs/BOE-B-2026-37564.pdf",
+          "consultado_utc": "2026-11-25T19:12:10+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "54c73fdab7e5bfeb55361946434158321bb2d3831e9c83e3e29ad810ceb0ea25",
+          "bytes": 198935
+        }
+      ],
+      "aviso": null,
+      "reutilizado": false
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268670",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "sub": "SUB-JA-2026-267595",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-267595",
+  "consultado_utc": "2026-11-25T19:10:16+00:00",
+  "captura_codigos": "41/20261125_200830",
+  "peticiones": 7,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "carretera madrid-cadiz, km 509, El quemadero",
+      "localidad": "carmona",
+      "provincia": "Sevilla",
+      "codigo_postal": "41410",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-267595/20261125_201009/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267595&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-267595/20261125_201009/portal/general.html.gz",
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-267595",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267595",
+      "consultado_utc": "2026-11-25T19:10:09+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "dfb7adaa66f82d5809298e3090c3ae6ae391e7897c30a704eb706ab3a705c4f6",
+      "bytes": 10304,
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-267595"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "3953 0000 06 0557 17"
+          ],
+          [
+            "Fecha de inicio",
+            "24-11-2026 18:00:00 CET  (ISO: 2026-11-24T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "14-12-2026 18:00:00 CET (ISO: 2026-12-14T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "124.041,90 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-38252"
+          ],
+          [
+            "Valor subasta",
+            "150.000,00 €"
+          ],
+          [
+            "Tasación",
+            "150.000,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "3.000,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "7.500,00 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267595/20261125_201009/portal/autoridad.html.gz",
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267595&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267595&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:10:11+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "0abd9492ace8efb018f3106aeed39c1528c8b51caa2df3d61bb703a1b7f935ea",
+      "bytes": 9003,
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4102441001"
+          ],
+          [
+            "Descripción",
+            "Sección Civil e Instrucción TI Carmona. Plz.n 1"
+          ],
+          [
+            "Dirección",
+            "PZ SAN JOSE S/N S/N   ; 41410 CARMONA"
+          ],
+          [
+            "Teléfono",
+            "955623901"
+          ],
+          [
+            "Fax",
+            "955623905"
+          ],
+          [
+            "Correo electrónico",
+            "Sec.Civil-Instr.PlazaN1.TI.Carmona.JUS@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267595/20261125_201009/portal/bienes.html.gz",
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267595&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267595&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:10:12+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "48ac5364061afa77fe25028858bff193846c02588b189ba8fce97456646ca0ca",
+      "bytes": 9973,
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "Superficie de ochenta metros cuadrados en\n          planta. Consta de planta alta y baja comunicadas por las escaleras generales del edificio. Inscrita en el Registro de la Propiedad de Carmona, al tomo 642, libro 542, folio 73"
+          ],
+          [
+            "Dirección",
+            "carretera madrid-cadiz, km 509, El quemadero"
+          ],
+          [
+            "Código Postal",
+            "41410"
+          ],
+          [
+            "Localidad",
+            "carmona"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267595/20261125_201009/portal/pujas.html.gz",
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267595&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267595&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T19:10:13+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "815d502d25c21aa36e7e1d187cd6392b5576e42754bda6482dc56f48aacfdaac",
+      "bytes": 8469,
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-38252",
+      "publicado": "2026-11-21",
+      "actualizado_fuente": "20261121071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-38252.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38252",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38252",
+          "consultado_utc": "2026-11-25T19:10:14+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "42f3b8ce0c35d65806c3d562545d110c6d1d840d0fb10f967338e49ad56bee20",
+          "bytes": 1171
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-38252.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38252.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38252.pdf",
+          "consultado_utc": "2026-11-25T19:10:15+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "7cf65a703deb217511e15d52873933b3da7828530b8eb71f29ba3140369a8fdd",
+          "bytes": 198352
+        }
+      ],
+      "aviso": null,
+      "reutilizado": false
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267595",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}
