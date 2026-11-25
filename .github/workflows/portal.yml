@@ -1,0 +1,61 @@
+name: Portal de Subastas (códigos y fichas)
+
+# Método nuevo. Paso 1: códigos SUB de las subastas «Celebrándose» con el bien en la provincia (portal_codigos.py).
+# Paso 2: ficha completa de cada código (portal_fichas.py). Todo queda en datos/portal y se guarda en el repositorio.
+# Solo se lanza a mano: pestaña Actions → este flujo → Run workflow.
+on:
+  workflow_dispatch:
+    inputs:
+      provincia:
+        description: "Provincia del bien, código con dos cifras (41 Sevilla, 28 Madrid, 08 Barcelona, 21 Huelva)"
+        required: false
+        default: "41"
+      solo_codigos:
+        description: "Sacar solo los códigos, sin descargar las fichas"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sema
+  cancel-in-progress: false
+
+jobs:
+  portal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      PROVINCIA: ${{ github.event.inputs.provincia || '41' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pruebas sin red
+        run: python -m unittest tests.test_portal_codigos tests.test_portal_fichas -v
+
+      - name: "Paso 1: códigos SUB activos"
+        id: codigos
+        run: python portal_codigos.py --provincia "$PROVINCIA" --resumen "$GITHUB_STEP_SUMMARY"
+
+      - name: "Paso 2: ficha de cada subasta"
+        if: ${{ steps.codigos.outcome == 'success' && github.event.inputs.solo_codigos != 'true' }}
+        run: python portal_fichas.py --provincia "$PROVINCIA" --resumen "$GITHUB_STEP_SUMMARY"
+
+      - name: Guardar en el repositorio
+        if: ${{ !cancelled() }}
+        run: |
+          git config user.name "sema-bot"
+          git config user.email "sema-bot@users.noreply.github.com"
+          git add datos/portal
+          if git diff --cached --quiet; then
+            echo "Sin cambios que guardar"
+          else
+            git commit -q -m "Portal: códigos y fichas, provincia $PROVINCIA, $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git pull -q --rebase origin main
+            git push -q
+          fi

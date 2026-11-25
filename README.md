@@ -17,7 +17,7 @@
   un SUB y el estado «Celebrándose» en cada fila; ningún código repetido. Si algo falla, no guarda nada.
 - **Resultado.** `datos/portal/codigos/<provincia>/<AAAAMMDD_HHMMSS>/` con `codigos.txt` (un SUB por línea),
   `listado.json` (consulta, momento, total, códigos y SHA-256 de cada página) y la página original `pagina-N.html.gz`.
-- **Cómo se lanza.** En GitHub: Actions → «Códigos SUB activos (Portal de Subastas)» → *Run workflow*, con la provincia.
+- **Cómo se lanza.** En GitHub: Actions → «Portal de Subastas (códigos y fichas)» → *Run workflow*, con la provincia.
   En el PC: `py portal_codigos.py --provincia 41`. Desde la nube de Claude no se llega a subastas.boe.es.
 - **Acceso automatizado al Portal.** Por decisión de Enrique (25-11-2026) ya no rige la regla de no extraer datos del
   Portal de forma automatizada. Las peticiones van de una en una, con 2 segundos entre páginas, y con un
