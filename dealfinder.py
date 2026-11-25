@@ -2,8 +2,9 @@
 
 Fuentes, y ninguna más:
 - Diario oficial del BOE: la API de datos abiertos del sumario
-  (https://www.boe.es/datosabiertos/api/boe/sumario/AAAAMMDD) y el XML publicado de cada anuncio
-  (url_xml). Se descargan de forma automática, de una en una y con pausa.
+  (https://www.boe.es/datosabiertos/api/boe/sumario/AAAAMMDD) y cada anuncio: su XML (url_xml) si el
+  robots.txt del BOE lo permite y, si no, su página HTML oficial (url_html), con el mismo texto. Se descargan
+  de forma automática, de una en una y con pausa.
 - Portal de Subastas del BOE (subastas.boe.es): fichas y documentos obtenidos por consultas puntuales,
   que se guardan a mano en datos/portal/entrada, o por un canal autorizado por la AEBOE. Este módulo no
   descarga nada del Portal: su robots.txt no permite el acceso automatizado.
@@ -14,7 +15,10 @@ verificados en el BOE: solo se cotejan con lo que diga la fuente oficial.
 """
 from __future__ import annotations
 
+import base64
+import csv
 import datetime as dt
+import gzip
 import html
 import json
 import os
@@ -23,6 +27,7 @@ import shutil
 import sqlite3
 import subprocess
 import tempfile
+import time
 import urllib.parse
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
@@ -45,8 +50,11 @@ MESES = {m: i for i, m in enumerate(["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO
                                        "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"], 1)}
 RE_INMUEBLE = re.compile(r"\b(INMUEBLES?|FINCAS?|VIVIENDAS?|LOCAL(ES)? COMERCIAL(ES)?|SOLAR(ES)?|PARCELAS?|NAVES?|"
                          r"GARAJES?|TRASTEROS?|URBANAS?|RUSTICAS?|EDIFICIOS?|PISOS?|TERRENOS?)\b")
-FUENTE_DIARIO = "BOE · diario oficial (API de datos abiertos)"
+FUENTE_DIARIO = "BOE · diario oficial (API de datos abiertos del sumario)"
+FUENTE_ANUNCIO = {"xml": "BOE · diario oficial (XML del anuncio)", "html": "BOE · diario oficial (página HTML del anuncio)"}
 FUENTE_PORTAL = "BOE · Portal de Subastas (consulta puntual)"
+# Incidencias que son fallos y se reintentan; las demás (dia_sin_sumario, subasta_sin_sub) son registros
+TIPOS_ERROR = {"error_sumario", "fecha_no_coincide", "error_descarga", "id_no_coincide", "ficha_sub_no_coincide", "pdf_no_valido"}
 
 ESQUEMA = """
 CREATE TABLE IF NOT EXISTS ejecuciones (
@@ -596,10 +604,11 @@ def reanalizar_ubicaciones(con, geo: Geo, id_ej: int) -> set[str]:
     return afectados
 
 
-def limpiar_version_1_0_0(con):
-    """La primera ejecución guardó el texto de todos los anuncios y, de las páginas HTML, también los enlaces de los
-    menús del BOE. Se deja el texto solo en los anuncios de subasta (el bruto sigue en datos/brutos) y, de los enlaces,
-    solo los del propio anuncio (sus URL del sumario y las que aparecen en su texto). Es idempotente."""
+def mantenimiento(con):
+    """Arreglos idempotentes de datos guardados por versiones anteriores:
+    - el texto solo se guarda en los anuncios de subasta (el bruto sigue en datos/brutos);
+    - de las páginas HTML, solo cuentan los enlaces del propio anuncio, no los de los menús del BOE;
+    - un domingo sin BOE es lo esperado: su registro queda resuelto."""
     con.execute("UPDATE anuncios SET texto=NULL WHERE IFNULL(menciona_subasta,0)=0 AND texto IS NOT NULL")
     for r in con.execute("SELECT id_boe, url_html, url_pdf, url_xml, texto, enlaces_oficiales FROM anuncios"
                          " WHERE texto_desde='html' AND enlaces_oficiales IS NOT NULL").fetchall():
@@ -607,6 +616,8 @@ def limpiar_version_1_0_0(con):
         buenos = [u for u in enl if u in (r["url_html"], r["url_pdf"], r["url_xml"]) or (r["texto"] and u in r["texto"])]
         if len(buenos) != len(enl):
             con.execute("UPDATE anuncios SET enlaces_oficiales=? WHERE id_boe=?", (json.dumps(buenos, ensure_ascii=False), r["id_boe"]))
+    con.execute("UPDATE incidencias SET resuelta_en=? WHERE tipo='dia_sin_sumario' AND resuelta_en IS NULL"
+                " AND strftime('%w', clave)='0' AND clave < date('now', '-1 day')", (ahora(),))
     con.commit()
 
 
@@ -642,7 +653,6 @@ class HttpDiario(sema.Http):
                 try:
                     contenido, cod = data.decode("utf-8"), "utf-8"
                 except UnicodeDecodeError:
-                    import base64
                     contenido, cod = base64.b64encode(data).decode("ascii"), "base64"
                 self._pendiente.setdefault(ruta, []).append(json.dumps(
                     {"url": url, "momento_consulta": momento, "http": status, "sha256": huella, "nombre": nombre,
@@ -650,13 +660,11 @@ class HttpDiario(sema.Http):
                 ruta_txt = str(ruta.relative_to(self.dir_brutos.parent))
         self.con.execute("INSERT INTO respuestas_brutas (id_ejecucion, url, momento_consulta, http_status, sha256, ruta, bytes)"
                          " VALUES (?,?,?,?,?,?,?)", (self.id_ej, url, momento, status, huella, ruta_txt, len(data) if data else 0))
-        import time
         time.sleep(sema.PAUSA)
         return status, data
 
     def volcar(self):
         """Escribe lo descargado (un bloque gzip por ejecución y día, que se añade al archivo del día)."""
-        import gzip
         for ruta, lineas in self._pendiente.items():
             ruta.parent.mkdir(parents=True, exist_ok=True)
             with open(ruta, "ab") as f:
@@ -665,7 +673,6 @@ class HttpDiario(sema.Http):
 
 
 def leer_brutos(ruta: Path) -> list[dict]:
-    import gzip
     with gzip.open(ruta, "rt", encoding="utf-8") as f:
         return [json.loads(x) for x in f if x.strip()]
 
@@ -716,6 +723,8 @@ def procesar_sumario(con, http, fecha: dt.date, id_ej: int, stats: dict, avisos:
         if reciente:
             detalle += " (fecha reciente: se volverá a pedir)"
         incidencia(con, "dia_sin_sumario", fecha.isoformat(), detalle, fecha.isoformat(), url)
+        if fecha.weekday() == 6 and not reciente:
+            resolver(con, "dia_sin_sumario", fecha.isoformat())  # es lo esperado: queda como registro, no como problema
         guarda("pendiente" if reciente else "sin_sumario", formato, 404)
         return
     if status != 200 or not data or estado != "200":
@@ -733,6 +742,7 @@ def procesar_sumario(con, http, fecha: dt.date, id_ej: int, stats: dict, avisos:
         guarda("fecha_no_coincide", formato, status, fecha_sum, data=data)
         return
     resolver(con, "error_sumario", fecha.isoformat())
+    resolver(con, "dia_sin_sumario", fecha.isoformat())
     resolver(con, "fecha_no_coincide", fecha.isoformat())
     momento = ahora()
     diarios = sorted({i["diario_numero"] for i in items if i["diario_numero"]})
@@ -802,7 +812,7 @@ def procesar_xml_pendientes(con, http, geo: Geo, id_ej: int, stats: dict, avisos
             alternativas[clave] = alternativas.get(clave, 0) + 1
         subs = d.pop("_subs")
         momento = ahora()
-        meta = {"fuente": FUENTE_DIARIO, "url_fuente": it["url_xml"] if desde == "xml" else it["url_html"],
+        meta = {"fuente": FUENTE_ANUNCIO[desde], "url_fuente": it["url_xml"] if desde == "xml" else it["url_html"],
                 "momento_consulta": momento, "nivel_verificacion": "A1", "id_ejecucion": id_ej}
         r = sema.upsert(con, "anuncios", {"id_boe": it["id_boe"]}, d, meta, id_ej, "BOE")
         if r == "cambio":
@@ -839,7 +849,7 @@ def ambito_de(provincias_bien: list[str], sede: str | None) -> str:
     return "fuera_o_sin_datos"
 
 
-def actualizar_expedientes(con, ids: set[str] | None, id_ej: int, stats: dict):
+def actualizar_expedientes(con, ids: set[str] | None, id_ej: int, stats: dict, geo: Geo):
     """Rehace los expedientes tocados (o todos) a partir de sus anuncios y de las fichas del Portal."""
     if ids is None:
         ids = {r["id_subasta"] for r in con.execute("SELECT DISTINCT id_subasta FROM anuncio_sub")}
@@ -857,7 +867,7 @@ def actualizar_expedientes(con, ids: set[str] | None, id_ej: int, stats: dict):
             sub = idx
             url_portal = next((a["url_enlace"] for a in anuncios if a["url_enlace"]), None)
         provs_ficha = sorted({cod for (v,) in con.execute(
-            "SELECT valor FROM campos WHERE id_subasta=? AND campo='provincia'", (sub or idx,)) for cod in [_cod_prov(v)] if cod})
+            "SELECT valor FROM campos WHERE id_subasta=? AND campo='provincia'", (sub or idx,)) for cod in [geo.provincia_de(v)[0]] if cod})
         provs_anuncio = sorted({p for a in anuncios for p in (a["ubicacion_provincias"] or "").split(",") if p})
         if provs_ficha:
             ubic_estado, provs = "confirmada_ficha_portal", provs_ficha
@@ -893,19 +903,6 @@ def actualizar_expedientes(con, ids: set[str] | None, id_ej: int, stats: dict):
         r = sema.upsert(con, "expedientes", {"id_expediente": idx}, valores, meta, id_ej, "BOE")
         if r == "nuevo":
             stats["expedientes_nuevos"] = stats.get("expedientes_nuevos", 0) + 1
-
-
-_GEO: Geo | None = None
-
-
-def _cod_prov(nombre: str | None) -> str | None:
-    global _GEO
-    if not nombre:
-        return None
-    if _GEO is None:
-        _GEO = Geo()
-    cod, _ = _GEO.provincia_de(nombre)
-    return cod
 
 
 # --------------------------------------------------------------------------- Portal de Subastas (consultas puntuales)
@@ -1397,9 +1394,10 @@ def procesar_portal(con, dir_datos: Path, stats: dict, avisos: list[str]) -> set
                 for d in campos_de_ficha(ficha):
                     _guardar_campo(con, enc, d, idc, url, fecha_consulta)
                 tocados.add(enc)
+            faltan = [x for x, v in (("URL", url), ("fecha de consulta", fecha_consulta)) if not v]
+            notas = [x for x in (detalle, "Falta " + " y ".join(faltan) if faltan else None) if x]
             con.execute("UPDATE capturas SET url=?, id_subasta_esperado=?, id_subasta_encabezado=?, coincide=?, estado=?,"
-                        " detalle=? WHERE id_captura=?", (url, esperado, enc, coincide, estado,
-                                                           "; ".join(x for x in [detalle, ("Falta " + " y ".join(faltan)) if faltan and not url else None] if x) or None, idc))
+                        " detalle=? WHERE id_captura=?", (url, esperado, enc, coincide, estado, "; ".join(notas) or None, idc))
         else:
             valido = data[:5] == b"%PDF-" and _n_paginas(ruta) is not None
             paginas, metodo, av = (texto_pdf(ruta) if valido else
@@ -1589,8 +1587,8 @@ def regenerar_cotejo(con, dir_datos: Path):
 def informe(con, id_ej: int, stats: dict, avisos: list[str], errores: list[str], dir_datos: Path) -> Path:
     q = lambda sql, *a: con.execute(sql, a).fetchall()  # noqa: E731
     L = [f"# SeMá Deal Finder · ejecución {id_ej}", "",
-         f"Generado {ahora()}. Fuentes: diario oficial del BOE (API de datos abiertos del sumario y XML de cada anuncio, "
-         "https://www.boe.es) y fichas del Portal de Subastas guardadas en consultas puntuales. Ningún dato procede de Subastech.", ""]
+         f"Generado {ahora()}. Fuentes: diario oficial del BOE (API de datos abiertos del sumario y el texto oficial de "
+         "cada anuncio, https://www.boe.es) y fichas del Portal de Subastas guardadas en consultas puntuales. Ningún dato procede de Subastech.", ""]
     L += ["## Esta ejecución", "",
           f"- Anuncios nuevos en las secciones IV, V.B y V.C: {stats.get('nuevos', 0)}",
           f"- XML de anuncios leídos: {stats.get('xml_leidos', 0)}; con error: {stats.get('errores_descarga', 0)}",
@@ -1604,9 +1602,14 @@ def informe(con, id_ej: int, stats: dict, avisos: list[str], errores: list[str],
         sede = q("SELECT COUNT(*) FROM expedientes WHERE ambito='sede_en_ambito_ubicacion_pendiente' AND sede_provincia=?", cod)[0][0]
         L.append(f"| {nombre} | {conf} | {anun} | {sede} |")
     L += ["", "La provincia de la sede es solo una pista para elegir qué fichas consultar: no se usa para seleccionar.", ""]
-    L += ["## Incidencias abiertas", ""]
-    filas = q("SELECT tipo, COUNT(*) n FROM incidencias WHERE resuelta_en IS NULL GROUP BY tipo ORDER BY n DESC")
-    L += [f"- {r['tipo']}: {r['n']}" for r in filas] or ["- Ninguna"]
+    L += ["## Incidencias", ""]
+    filas = q("SELECT tipo, SUM(resuelta_en IS NULL) abiertas, COUNT(*) total FROM incidencias GROUP BY tipo ORDER BY abiertas DESC")
+    errores = [r for r in filas if r["tipo"] in TIPOS_ERROR]
+    registros = [r for r in filas if r["tipo"] not in TIPOS_ERROR]
+    L += ["Errores por resolver (se reintentan en las siguientes ejecuciones):"]
+    L += [f"- {r['tipo']}: {r['abiertas']}" for r in errores if r["abiertas"]] or ["- Ninguno"]
+    L += ["", "Registros para tener constancia (no son fallos):"]
+    L += [f"- {r['tipo']}: {r['total']}" for r in registros] or ["- Ninguno"]
     L += ["", "## Datos pendientes", ""]
     cuenta: dict[str, set] = {}
     for r in q("SELECT id_expediente, datos FROM pendientes"):
@@ -1656,16 +1659,13 @@ PANEL = {
 }
 
 
-def exportar(con, dir_datos: Path):
-    import base64
-    import csv
-    import gzip as gz
+def exportar(con, dir_datos: Path, geo: Geo | None = None):
     dest_csv = dir_datos / "export"
     dest_csv.mkdir(parents=True, exist_ok=True)
     dest = dir_datos / "panel"
     dest.mkdir(parents=True, exist_ok=True)
     generado = ahora()
-    geo = Geo()
+    geo = geo or Geo()
     nombre_prov = lambda cods: ", ".join(geo.provincias.get(c, c) for c in (cods or "").split(",") if c) or None  # noqa: E731
     for nombre, sql in PANEL.items():
         cur = con.execute(sql)
@@ -1683,7 +1683,7 @@ def exportar(con, dir_datos: Path):
         texto = json.dumps(doc, ensure_ascii=False, separators=(",", ":"))
         (dest / f"sema-panel-{nombre}.json").write_text(texto, encoding="utf-8")
         (dest / f"sema-panel-{nombre}.b64.txt").write_text(
-            base64.b64encode(gz.compress(texto.encode("utf-8"), 9, mtime=0)).decode("ascii"), encoding="ascii")
+            base64.b64encode(gzip.compress(texto.encode("utf-8"), 9, mtime=0)).decode("ascii"), encoding="ascii")
 
 
 def ejecutar(desde: dt.date | None, hasta: dt.date | None, dir_datos: Path, http_factory=None,
@@ -1700,12 +1700,11 @@ def ejecutar(desde: dt.date | None, hasta: dt.date | None, dir_datos: Path, http
     geo = Geo()
     tocados: set[str] = set()
     estado = "ok"
-    limpiar_version_1_0_0(con)
+    mantenimiento(con)
     tocados |= reanalizar_ubicaciones(con, geo, id_ej)
     try:
         if not solo_portal:
             http = (http_factory or HttpDiario)(con, id_ej, dir_datos / "brutos" / "dealfinder", avisos)
-            http.comprimir = True
             dias = dias_a_procesar(con, hasta or dt.date.today(), desde)
             for dia in dias:
                 try:
@@ -1739,7 +1738,7 @@ def ejecutar(desde: dt.date | None, hasta: dt.date | None, dir_datos: Path, http
                                               " (SELECT id_expediente FROM expedientes)")}
         tocados |= {"BOE:" + r[0] for r in con.execute("SELECT clave FROM incidencias WHERE tipo='subasta_sin_sub' AND"
                                                        " 'BOE:' || clave NOT IN (SELECT id_expediente FROM expedientes)")}
-        actualizar_expedientes(con, None if solo_portal else tocados, id_ej, stats)
+        actualizar_expedientes(con, None if solo_portal else tocados, id_ej, stats, geo)
         regenerar_pendientes(con, dir_datos)
         regenerar_cotejo(con, dir_datos)
         con.commit()
@@ -1754,7 +1753,7 @@ def ejecutar(desde: dt.date | None, hasta: dt.date | None, dir_datos: Path, http
                  json.dumps(errores, ensure_ascii=False), estado, id_ej))
     con.commit()
     ruta = informe(con, id_ej, stats, avisos, errores, dir_datos)
-    exportar(con, dir_datos)
+    exportar(con, dir_datos, geo)
     con.execute("VACUUM")  # la base va al repositorio en cada ejecución: sin huecos
     con.close()
     return {"id_ejecucion": id_ej, "estado": estado, "informe": str(ruta), **stats, "avisos": avisos[:30], "errores": errores}

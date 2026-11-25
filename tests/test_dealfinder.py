@@ -252,6 +252,8 @@ class DealFinderTest(unittest.TestCase):
         self.assertTrue(all(a == "application/json" for u, a in FakeHttp.pedidas if "sumario/" in u))
         inc = {(x["tipo"], x["clave"]) for x in con.execute("SELECT tipo, clave FROM incidencias")}
         self.assertIn(("dia_sin_sumario", "2026-10-25"), inc)
+        domingo = con.execute("SELECT resuelta_en FROM incidencias WHERE tipo='dia_sin_sumario' AND clave='2026-10-25'").fetchone()
+        self.assertIsNotNone(domingo[0])  # el BOE no sale en domingo: queda registrado, no como problema abierto
         self.assertIn(("fecha_no_coincide", "2026-10-27"), inc)
         # SUB con sufijo alfanumérico, en el texto y en el enlace
         s = con.execute("SELECT * FROM anuncio_sub WHERE id_boe='BOE-B-2026-34705'").fetchone()
@@ -437,6 +439,13 @@ class DealFinderTest(unittest.TestCase):
         self.assertEqual({p for u in df.ubicacion_en_texto(geo, "", t2) for p in u["provincias"]}, {"47"})
         t3 = "local en planta baja, situado en calle Roser, nº 101 y 103, en Reus (Tarragona)."
         self.assertEqual({p for u in df.ubicacion_en_texto(geo, "", t3) for p in u["provincias"]}, {"43"})
+
+    def test_abrir_la_base_no_la_reescribe(self):
+        self.run_df(desde=date(2026, 10, 24), hasta=date(2026, 10, 24))
+        ruta = self.datos / "dealfinder.sqlite"
+        antes = ruta.read_bytes()
+        sema.conectar(ruta, df.ESQUEMA).close()
+        self.assertEqual(ruta.read_bytes(), antes)
 
     def test_codigo_sub(self):
         t = "Dirección electrónica: https://subastas.boe.es/ds.php?id=SUB-AT-2026-26R2886001460. Y SUB-JA-2026-1."

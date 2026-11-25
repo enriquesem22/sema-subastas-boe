@@ -88,21 +88,30 @@ Huelva, con todos sus municipios, seleccionadas por la **ubicación del bien**. 
   coincide, difiere o sin cotejar) y nunca se presentan como verificados en el BOE. La carga diaria de Subastech está
   en pausa hasta nueva autorización.
 
-## Panel en Claude (datos leídos de Google Drive)
+## Panel en Claude: SeMá Deal Finder (datos leídos de Google Drive)
 
-El panel «Subastas de inmuebles en Sevilla» es un artefacto de Claude con tres pestañas: las subastas activas (en
-directo con el conector de Subastech), el histórico de cierres y un explorador de todas las tablas de la base. El
-panel no guarda copia de los datos: los lee en directo, con el conector de Google Drive de quien lo abre, de la carpeta
-«SeMá · Subastas Sevilla (datos del panel)». Este repositorio sigue siendo la fuente de verdad.
+El panel es un artefacto de Claude. Arriba tiene una barra de provincia (Todas, Madrid, Barcelona, Sevilla, Huelva)
+que filtra toda la página, y tres pestañas:
 
-- `python sema.py panel` regenera `datos/panel/` (no se sube a GitHub) a partir de las dos bases: un
-  `sema-panel-<tabla>.json` legible y un `sema-panel-<tabla>.b64.txt`, que es el mismo JSON comprimido con gzip y en
-  base64. Drive solo devuelve el texto de los archivos, y así llega intacto y pesa menos.
-- Tablas: `lotes` (histórico agrupado), `fichas` (`subastech_lotes`), `cambios`, `cargas` (`subastech_respuestas`),
-  `boe_expedientes` y `boe_anuncios` (de `datos/sema.sqlite`). Los límites municipales (`sema-panel-limites.b64.txt`)
-  se subieron una vez y no cambian.
-- La tarea diaria sube a la carpeta los seis archivos nuevos y deja solo la copia anterior de cada uno, que el panel
-  usa mientras Drive prepara el contenido del nuevo.
+- **Deal Finder (BOE):** expedientes de `datos/dealfinder.sqlite` con su ubicación (confirmada en la ficha, según el
+  anuncio o pendiente), la sede de la autoridad como pista, datos pendientes e incidencias.
+- **Histórico Subastech (sin cotejar):** los cierres de Subastech ya cargados (solo Sevilla, nivel C), marcados como
+  no verificados en el BOE. No se consulta Subastech.
+- **Base de datos:** explorador de todas las tablas exportadas.
+
+El panel no guarda copia de los datos: los lee en directo, con el conector de Google Drive de quien lo abre, de la
+carpeta «SeMá · Subastas Sevilla (datos del panel)». Este repositorio es la fuente de verdad.
+
+- `python sema.py panel` regenera `datos/panel/` (no se sube a GitHub) a partir de las bases, sin descargar nada:
+  un `sema-panel-<tabla>.json` legible y un `sema-panel-<tabla>.b64.txt`, que es el mismo JSON comprimido con gzip y
+  en base64 (Drive solo devuelve el texto de los archivos; así llega intacto y pesa menos).
+- Tablas del Deal Finder: `df_expedientes`, `df_pendientes`, `df_anuncios`, `df_incidencias`, `df_sumarios`,
+  `df_bienes`, `df_campos`, `df_discrepancias` y `df_cotejo`. Del BOE (versión anterior, Sevilla): `boe_expedientes` y
+  `boe_anuncios`. De Subastech (no cambian mientras esté en pausa): `lotes`, `fichas`, `cambios` y `cargas`. Los
+  límites municipales (`sema-panel-limites.b64.txt`) no cambian.
+- La tarea programada «SeMá · Panel del Deal Finder a Drive (diario, solo BOE)» (10:13, hora de Madrid) sube cada día
+  las tablas del Deal Finder y del BOE y deja solo la copia anterior de cada una, que el panel usa mientras Drive
+  prepara el contenido de la nueva. Necesita el conector de Google Drive en la tarea.
 
 ## Cómo se asegura la fiabilidad
 

@@ -1,6 +1,6 @@
-# SeMá Deal Finder · ejecución 5
+# SeMá Deal Finder · ejecución 7
 
-Generado 2026-11-25T06:10:34+00:00. Fuentes: diario oficial del BOE (API de datos abiertos del sumario y XML de cada anuncio, https://www.boe.es) y fichas del Portal de Subastas guardadas en consultas puntuales. Ningún dato procede de Subastech.
+Generado 2026-11-25T16:02:08+00:00. Fuentes: diario oficial del BOE (API de datos abiertos del sumario y el texto oficial de cada anuncio, https://www.boe.es) y fichas del Portal de Subastas guardadas en consultas puntuales. Ningún dato procede de Subastech.
 
 ## Esta ejecución
 
@@ -20,11 +20,14 @@ Generado 2026-11-25T06:10:34+00:00. Fuentes: diario oficial del BOE (API de dato
 
 La provincia de la sede es solo una pista para elegir qué fichas consultar: no se usa para seleccionar.
 
-## Incidencias abiertas
+## Incidencias
 
+Errores por resolver (se reintentan en las siguientes ejecuciones):
+- error_descarga: 1
+
+Registros para tener constancia (no son fallos):
 - subasta_sin_sub: 29
 - dia_sin_sumario: 5
-- error_descarga: 1
 
 ## Datos pendientes
 
@@ -53,3 +56,6 @@ La provincia de la sede es solo una pista para elegir qué fichas consultar: no 
 Discrepancias entre fuentes oficiales: 0.
 Cotejo de los valores de Subastech con la fuente oficial: sin_cotejar 4087.
 
+## Avisos
+
+- ERROR <sqlite3.Row object at 0x7fb0c8f904f0>

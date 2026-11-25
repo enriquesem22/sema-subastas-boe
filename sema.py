@@ -42,6 +42,7 @@ import urllib.parse
 import urllib.request
 import urllib.robotparser
 import xml.etree.ElementTree as ET
+import zlib
 from pathlib import Path
 
 VERSION = "1.0.0"
@@ -288,8 +289,14 @@ def conectar(ruta: Path, esquema: str | None = None) -> sqlite3.Connection:
     ruta.parent.mkdir(parents=True, exist_ok=True)
     con = sqlite3.connect(ruta)
     con.row_factory = sqlite3.Row
-    con.executescript(esquema)
-    migrar(con, esquema)
+    # El esquema (tablas, columnas nuevas y vistas) solo se aplica cuando cambia: abrir la base para leerla o
+    # exportarla no la reescribe, así el repositorio no cambia si no cambian los datos.
+    huella = zlib.crc32(esquema.encode("utf-8")) & 0x7FFFFFFF
+    if con.execute("PRAGMA user_version").fetchone()[0] != huella:
+        con.executescript(esquema)
+        migrar(con, esquema)
+        con.execute(f"PRAGMA user_version = {huella}")
+        con.commit()
     return con
 
 
@@ -398,7 +405,7 @@ class Http:
                 carpeta.mkdir(parents=True, exist_ok=True)
                 nombre = nombre or re.sub(r"[^A-Za-z0-9._-]+", "_", url.split("//", 1)[-1])[:150]
                 ruta = carpeta / nombre
-                if len(data) > 1_000_000 or getattr(self, "comprimir", False):  # grandes (CSV de Justicia) o si se pide
+                if len(data) > 1_000_000:  # archivos grandes (CSV de Justicia) comprimidos
                     ruta = ruta.with_name(ruta.name + ".gz")
                     ruta.write_bytes(gzip.compress(data))
                 else:
