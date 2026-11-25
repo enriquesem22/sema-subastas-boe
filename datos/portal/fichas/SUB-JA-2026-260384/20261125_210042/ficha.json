@@ -1,0 +1,293 @@
+{
+  "sub": "SUB-JA-2026-260384",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-260384",
+  "consultado_utc": "2026-11-25T20:00:47+00:00",
+  "captura_codigos": "41/20261125_210037",
+  "peticiones": 5,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "PISO 2º, PLANTA 2ª, NUM. 9 C/M ANGEL GANNIVET",
+      "localidad": "UTRERA",
+      "provincia": "Sevilla",
+      "codigo_postal": "41710",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-260384/20261125_210042/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-260384&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-260384/20261125_210042/portal/general.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-260384",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-260384",
+      "consultado_utc": "2026-11-25T20:00:42+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "f80b5f665febbab5a716d5ac011c22bcd83570a53d9f511d9435de9edace2205",
+      "bytes": 10697,
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-260384"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "4097 0000 06 0235 12"
+          ],
+          [
+            "Fecha de inicio",
+            "10-11-2026 18:00:00 CET  (ISO: 2026-11-10T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "30-11-2026 18:00:00 CET (ISO: 2026-11-30T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "35.065,92 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-36413"
+          ],
+          [
+            "Valor subasta",
+            "96.175,95 €"
+          ],
+          [
+            "Tasación",
+            "0,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "1.923,51 €"
+          ],
+          [
+            "Importe del depósito",
+            "4.808,79 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-260384/20261125_210042/portal/autoridad.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-260384&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-260384&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T20:00:45+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "1f0581f89b74e1e496ccc0ef93bb498428a98bad5c7055ad7c5bfbb1af6419fb",
+      "bytes": 8986,
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4109541003"
+          ],
+          [
+            "Descripción",
+            "Sección Civil e Instrucción TI Utrera. Plz.n 3"
+          ],
+          [
+            "Dirección",
+            "AV SAN JUAN BOSCO 15 15   ; 41710 UTRERA"
+          ],
+          [
+            "Teléfono",
+            "955839321"
+          ],
+          [
+            "Fax",
+            "955839322"
+          ],
+          [
+            "Correo electrónico",
+            "jmixto.3.utrera.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-260384/20261125_210042/portal/bienes.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-260384&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-260384&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T20:00:45+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "c9b6002b913cbd2635bc6112924c959e7c77a4068e328be7ec42570beec6eddc",
+      "bytes": 10880,
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "INSCRITA REGISTRO PROPIEDAD 1 DE UTRERA TOMO 965, LIBRO 324, FOLIO 136, FINCA 14610, INSCRIPCION 4ª. URBANA:  NUMERO Once. Piso segundo C, en planta segunda tipo C, de la casa marcada con el número  9 o bloque numero 3, en la calle Angel Ganivet, de Utrera"
+          ],
+          [
+            "IDUFIR",
+            "41016000207353"
+          ],
+          [
+            "Referencia catastral",
+            "2794019TG5129S0011BP"
+          ],
+          [
+            "Dirección",
+            "PISO 2º, PLANTA 2ª, NUM. 9 C/M ANGEL GANNIVET"
+          ],
+          [
+            "Código Postal",
+            "41710"
+          ],
+          [
+            "Localidad",
+            "UTRERA"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "Sí"
+          ],
+          [
+            "Situación posesoria",
+            "Ocupantes sin derecho de permanencia (COMPRA VENTA)"
+          ],
+          [
+            "Visitable",
+            "No"
+          ],
+          [
+            "Cargas",
+            "Las que constan en la certificación de cargas unida al procedimiento."
+          ],
+          [
+            "Información adicional",
+            "Código  Registral Único: 41016000207353"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-260384/20261125_210042/portal/pujas.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-260384&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-260384&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T20:00:46+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "358758e03736f18126c781164a1d0198e05fdb543c1a89028006ab695e4b0c4d",
+      "bytes": 8469,
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/3c3c02806cde17bac10f55834b67e13717a2b3cbd40d4a55f3fe22766a12938c.pdf",
+      "etiqueta": "certificación registral actualizada",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-aaf860c7e6f4fe5ca87ea813cd58b1c8",
+        ""
+      ],
+      "reutilizado": true,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-260384&idDoc=2-aaf860c7e6f4fe5ca87ea813cd58b1c8",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-260384&idDoc=2-aaf860c7e6f4fe5ca87ea813cd58b1c8",
+      "consultado_utc": "2026-11-25T19:08:44+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "3c3c02806cde17bac10f55834b67e13717a2b3cbd40d4a55f3fe22766a12938c",
+      "bytes": 1985398
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-36413",
+      "publicado": "2026-11-07",
+      "actualizado_fuente": "20261107071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-36413.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36413",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36413",
+          "consultado_utc": "2026-11-25T19:08:46+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "88affb2f78113292d54b85ce97449bba06e6901914348bbb71c30c6e47c4f652",
+          "bytes": 1168
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-36413.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/07/pdfs/BOE-B-2026-36413.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/07/pdfs/BOE-B-2026-36413.pdf",
+          "consultado_utc": "2026-11-25T19:08:46+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "4c847152df84158cc6d3fbc10c6e75ce6176c2cbef216a732b321caa6adfd072",
+          "bytes": 198198
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-260384",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

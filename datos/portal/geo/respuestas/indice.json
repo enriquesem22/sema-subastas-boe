@@ -1,4 +1,13 @@
 {
+ "POST https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC Provincia=&Municipio=&SRS=EPSG%3A4326&RC=4410306TG34415": {
+  "archivo": "369d37fe88b4e665b3d9bb68.xml",
+  "bytes": 411,
+  "http": 200,
+  "momento": "2026-11-25T20:04:44+00:00",
+  "post": "Provincia=&Municipio=&SRS=EPSG%3A4326&RC=4410306TG34415",
+  "sha256": "5e7a2236c06cad857ca1926865c84c718e3059825651633b94e9d1c5f210fd42",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC"
+ },
  "POST https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=4410306TG34415": {
   "archivo_error": "005cfb805e3a687ea6648e1b.error",
   "http": 500,
@@ -158,6 +167,14 @@
   "momento": "2026-11-25T19:48:57+00:00",
   "sha256": "af9ad958ff8747f003629353d6c10f5a1a9ed3b298c062305f9034415dea54ba",
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=9720403QB3392S"
+ },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RC=4410306TG34415": {
+  "archivo": "e812dd0e8dcf52b13d73903a.xml",
+  "bytes": 411,
+  "http": 200,
+  "momento": "2026-11-25T20:04:43+00:00",
+  "sha256": "5e7a2236c06cad857ca1926865c84c718e3059825651633b94e9d1c5f210fd42",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RC=4410306TG34415"
  },
  "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=0647204TG4404N": {
   "http": 500,

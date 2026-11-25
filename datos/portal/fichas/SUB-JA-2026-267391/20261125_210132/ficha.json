@@ -1,0 +1,895 @@
+{
+  "sub": "SUB-JA-2026-267391",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-267391",
+  "consultado_utc": "2026-11-25T20:01:45+00:00",
+  "captura_codigos": "41/20261125_210037",
+  "peticiones": 13,
+  "lotes_identificados": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "ubicaciones_bienes": [
+    {
+      "lote": "1",
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "Calle Jesús, nº 62, escalera 1, planta baja, puerta izquierda",
+      "localidad": "MAIRENA DEL ALCOR",
+      "provincia": "Sevilla",
+      "codigo_postal": "41510",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-267391/20261125_210132/portal/bienes_lote_1.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=3&idLote=1&idBus=&numPagBus="
+      }
+    },
+    {
+      "lote": "2",
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "Calle Jesús, nº 62, escalera 1, planta baja, puerta derecha",
+      "localidad": "MAIRENA DEL ALCOR",
+      "provincia": "Sevilla",
+      "codigo_postal": "41510",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-267391/20261125_210132/portal/bienes_lote_2.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=3&idLote=2&idBus=&numPagBus="
+      }
+    },
+    {
+      "lote": "3",
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "Calle Jesús, nº 62, escalera 1, planta 1, puerta izquierda",
+      "localidad": "MAIRENA DEL ALCOR",
+      "provincia": "Sevilla",
+      "codigo_postal": "41510",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-267391/20261125_210132/portal/bienes_lote_3.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=3&idLote=3&idBus=&numPagBus="
+      }
+    },
+    {
+      "lote": "4",
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "Calle Jesús, nº 62, escalera 1, planta 1, puerta derecha",
+      "localidad": "MAIRENA DEL ALCOR",
+      "provincia": "Sevilla",
+      "codigo_postal": "41510",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-267391/20261125_210132/portal/bienes_lote_4.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=3&idLote=4&idBus=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-267391/20261125_210132/portal/general.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-267391",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391",
+      "consultado_utc": "2026-11-25T20:01:32+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "93b46a4597c3c1ba6e41151c3284076fd8ccecee9d8a48bad6a124a8c05bf8b3",
+      "bytes": 11260,
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-267391"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "3953 0000 06 0730 17"
+          ],
+          [
+            "Fecha de inicio",
+            "10-11-2026 18:00:00 CET  (ISO: 2026-11-10T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "30-11-2026 18:00:00 CET (ISO: 2026-11-30T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "500.951,66 €"
+          ],
+          [
+            "Lotes",
+            "4"
+          ],
+          [
+            "Forma adjudicación",
+            "Separada para cada lote"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-36357"
+          ],
+          [
+            "Valor subasta",
+            "Ver valor de subasta en cada lote (los lotes se subastan de forma independiente)"
+          ],
+          [
+            "Tasación",
+            "Ver valor de tasación en cada lote (los lotes se subastan de forma independiente)"
+          ],
+          [
+            "Puja mínima",
+            "Ver puja mínima de cada lote (adjudicación independiente)"
+          ],
+          [
+            "Tramos entre pujas",
+            "Ver tramos de cada lote (adjudicación independiente)"
+          ],
+          [
+            "Importe del depósito",
+            "Ver importe de consignación de cada lote (adjudicación independiente)"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267391/20261125_210132/portal/autoridad.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T20:01:34+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "19ee83c1bb4c60167fa782fe16631bfe69f9b803874858f96f617031b9a3b61e",
+      "bytes": 9002,
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4102441001"
+          ],
+          [
+            "Descripción",
+            "Sección Civil e Instrucción TI Carmona. Plz.n 1"
+          ],
+          [
+            "Dirección",
+            "PZ SAN JOSE S/N S/N   ; 41410 CARMONA"
+          ],
+          [
+            "Teléfono",
+            "955623901"
+          ],
+          [
+            "Fax",
+            "955623905"
+          ],
+          [
+            "Correo electrónico",
+            "sec.civil-instr.plazan1.ti.carmona.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267391/20261125_210132/portal/bienes.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Lotes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T20:01:35+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "b92eb03817a2264e3e4dc6565a41a50f6ae9b7c80aa5eba2115455c0791ab42e",
+      "bytes": 13664,
+      "encabezados": [
+        "Lote 1",
+        "Datos relacionados con la subasta del lote 1",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "200.200,00 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "10.010,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "4.004,00 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "1) FINCA Nº 18.024, inscrita en el Registro de la Propiedad nº 1 de Alcalá de Guadaíra, al Folio 176, Tomo 1.789 del archivo, Libro 375 de Mairena del Alcor."
+          ],
+          [
+            "Referencia catastral",
+            "6297019TG5369N0002YX"
+          ],
+          [
+            "Dirección",
+            "Calle Jesús, nº 62, escalera 1, planta baja, puerta izquierda"
+          ],
+          [
+            "Código Postal",
+            "41510"
+          ],
+          [
+            "Localidad",
+            "MAIRENA DEL ALCOR"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "Se adjunta certificación de cargas"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267391/20261125_210132/portal/pujas.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T20:01:36+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "4e8e321fde45202f46600fd96918a251172ea7bdd64f79d315ea9a4b4eb60a55",
+      "bytes": 9496,
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ],
+          [
+            "3",
+            "Sin puja"
+          ],
+          [
+            "4",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267391/20261125_210132/portal/bienes_lote_1.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Lote 1",
+      "pestana": "3",
+      "lote": "1",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=3&idLote=1&idBus=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=3&idLote=1&idBus=&numPagBus=",
+      "consultado_utc": "2026-11-25T20:01:37+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "31872a879af3de25bc38b55a806fcdc6fd453c12930ea9c1f50bf248421a85d9",
+      "bytes": 13668,
+      "encabezados": [
+        "Lote 1",
+        "Datos relacionados con la subasta del lote 1",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "200.200,00 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "10.010,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "4.004,00 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "1) FINCA Nº 18.024, inscrita en el Registro de la Propiedad nº 1 de Alcalá de Guadaíra, al Folio 176, Tomo 1.789 del archivo, Libro 375 de Mairena del Alcor."
+          ],
+          [
+            "Referencia catastral",
+            "6297019TG5369N0002YX"
+          ],
+          [
+            "Dirección",
+            "Calle Jesús, nº 62, escalera 1, planta baja, puerta izquierda"
+          ],
+          [
+            "Código Postal",
+            "41510"
+          ],
+          [
+            "Localidad",
+            "MAIRENA DEL ALCOR"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "Se adjunta certificación de cargas"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267391/20261125_210132/portal/bienes_lote_2.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Lote 2",
+      "pestana": "3",
+      "lote": "2",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=3&idLote=2&idBus=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=3&idLote=2&idBus=&numPagBus=",
+      "consultado_utc": "2026-11-25T20:01:38+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "5bdbc152e16ac5e2c7f9787f30599c7db6ece40b7aca1a24fe20ec781bd71587",
+      "bytes": 13683,
+      "encabezados": [
+        "Lote 2",
+        "Datos relacionados con la subasta del lote 2",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "204.200,00 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "10.210,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "4.084,00 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "2) FINCA Nº 18.026, inscrita en el Registro de la Propiedad nº 1 de Alcalá de Guadaíra, al Folio 181 del Tomo 1.789 del archivo, Libro 375 de Mairena del Alcor."
+          ],
+          [
+            "Referencia catastral",
+            "6297019TG5369N0003UM"
+          ],
+          [
+            "Dirección",
+            "Calle Jesús, nº 62, escalera 1, planta baja, puerta derecha"
+          ],
+          [
+            "Código Postal",
+            "41510"
+          ],
+          [
+            "Localidad",
+            "MAIRENA DEL ALCOR"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "Se adjunta certificación de cargas"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267391/20261125_210132/portal/bienes_lote_3.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Lote 3",
+      "pestana": "3",
+      "lote": "3",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=3&idLote=3&idBus=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=3&idLote=3&idBus=&numPagBus=",
+      "consultado_utc": "2026-11-25T20:01:39+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "aedc14cbbf91064704b84fbead0da848f5f49cfea507942803905a77281b8573",
+      "bytes": 13671,
+      "encabezados": [
+        "Lote 3",
+        "Datos relacionados con la subasta del lote 3",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "206.300,00 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "10.315,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "4.126,00 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "3) FINCA Nº 18.028, inscrita en el Registro de la Propiedad nº 1 de Alcalá de Guadaíra, al Folio 184 del Tomo 1.789 del archivo, Libro 375 de Mairena del Alcor."
+          ],
+          [
+            "Referencia catastral",
+            "6297019TG5369N0004IQ"
+          ],
+          [
+            "Dirección",
+            "Calle Jesús, nº 62, escalera 1, planta 1, puerta izquierda"
+          ],
+          [
+            "Código Postal",
+            "41510"
+          ],
+          [
+            "Localidad",
+            "MAIRENA DEL ALCOR"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "Se adjunta certificación de cargas"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267391/20261125_210132/portal/bienes_lote_4.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Lote 4",
+      "pestana": "3",
+      "lote": "4",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=3&idLote=4&idBus=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=3&idLote=4&idBus=&numPagBus=",
+      "consultado_utc": "2026-11-25T20:01:40+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "a6450b3c179b603761ea94a16eed5f0bcd144ff41faab67f5b01049c19559cbd",
+      "bytes": 13669,
+      "encabezados": [
+        "Lote 4",
+        "Datos relacionados con la subasta del lote 4",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "210.900,00 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "10.545,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "4.218,00 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "4) FINCA Nº 18.030, inscrita en el Registro de la Propiedad nº 1 de Alcalá de Guadaíra, al Folio 187 del Tomo 1.789 del archivo, Libro 375 de Mairena del Alcor."
+          ],
+          [
+            "Referencia catastral",
+            "6297019TG5369N0005OW"
+          ],
+          [
+            "Dirección",
+            "Calle Jesús, nº 62, escalera 1, planta 1, puerta derecha"
+          ],
+          [
+            "Código Postal",
+            "41510"
+          ],
+          [
+            "Localidad",
+            "MAIRENA DEL ALCOR"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "Se adjunta certificación de cargas"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267391/20261125_210132/portal/pujas_lote_1.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": "1",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=5&idBus=&idLote=1&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=5&idBus=&idLote=1&numPagBus=",
+      "consultado_utc": "2026-11-25T20:01:41+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "428241c908c5d4202bfc1ec9dd9ca32f18e69211b24f22681c45a2d7b37d52c0",
+      "bytes": 9496,
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ],
+          [
+            "3",
+            "Sin puja"
+          ],
+          [
+            "4",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267391/20261125_210132/portal/pujas_lote_2.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": "2",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=5&idBus=&idLote=2&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=5&idBus=&idLote=2&numPagBus=",
+      "consultado_utc": "2026-11-25T20:01:42+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "14c586f458a8f8d326ed2717614c0ff5904853aa70556407b0a895e041bdeca9",
+      "bytes": 9496,
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ],
+          [
+            "3",
+            "Sin puja"
+          ],
+          [
+            "4",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267391/20261125_210132/portal/pujas_lote_3.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": "3",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=5&idBus=&idLote=3&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=5&idBus=&idLote=3&numPagBus=",
+      "consultado_utc": "2026-11-25T20:01:43+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "a78700968e39eebe50ed029b2f922d2d67a04662b4cac65efeb0e296b5253c79",
+      "bytes": 9496,
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ],
+          [
+            "3",
+            "Sin puja"
+          ],
+          [
+            "4",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267391/20261125_210132/portal/pujas_lote_4.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": "4",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=5&idBus=&idLote=4&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391&ver=5&idBus=&idLote=4&numPagBus=",
+      "consultado_utc": "2026-11-25T20:01:44+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "dcc1f587d69ef9110d3f293b4d86f82edae23871917c7715cd9ad2f9eb214f55",
+      "bytes": 9496,
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ],
+          [
+            "3",
+            "Sin puja"
+          ],
+          [
+            "4",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/0aae04ed7567d6b986dd798e92ead7367a51e94145b008b404554ae26027e74c.pdf",
+      "etiqueta": "CERTIFICACIÓN CARGAS",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-b0f208d3c33b5b532d590cf36f882f53",
+        ""
+      ],
+      "reutilizado": true,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-267391&idDoc=2-b0f208d3c33b5b532d590cf36f882f53",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-267391&idDoc=2-b0f208d3c33b5b532d590cf36f882f53",
+      "consultado_utc": "2026-11-25T19:09:58+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "0aae04ed7567d6b986dd798e92ead7367a51e94145b008b404554ae26027e74c",
+      "bytes": 4554301
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-36357",
+      "publicado": "2026-11-07",
+      "actualizado_fuente": "20261107071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-36357.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36357",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36357",
+          "consultado_utc": "2026-11-25T19:10:07+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "28ee1a9dcc37f4af9ff0bd24408e22144846196f22ef1d16f2dac5f92d850486",
+          "bytes": 1170
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-36357.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/07/pdfs/BOE-B-2026-36357.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/07/pdfs/BOE-B-2026-36357.pdf",
+          "consultado_utc": "2026-11-25T19:10:08+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "af455b6397b6bf3a635983e7632fbd6b9c7662a5e9664681e0be193b856bfd91",
+          "bytes": 198350
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267391",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

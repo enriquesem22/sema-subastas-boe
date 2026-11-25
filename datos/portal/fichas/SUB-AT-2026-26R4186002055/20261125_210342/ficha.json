@@ -1,0 +1,273 @@
+{
+  "sub": "SUB-AT-2026-26R4186002055",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-AT-2026-26R4186002055",
+  "consultado_utc": "2026-11-25T20:03:47+00:00",
+  "captura_codigos": "41/20261125_210037",
+  "peticiones": 5,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Vehículo (Turismos)",
+      "direccion": null,
+      "localidad": null,
+      "provincia": null,
+      "codigo_postal": null,
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-AT-2026-26R4186002055/20261125_210342/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002055&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186002055/20261125_210342/portal/general.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-AT-2026-26R4186002055",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002055",
+      "consultado_utc": "2026-11-25T20:03:42+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "a23b76c4d62416af7bc6009fa5c10c8460863f1c0ec98a622802ff5314c69d7c",
+      "bytes": 10064,
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-AT-2026-26R4186002055"
+          ],
+          [
+            "Tipo de subasta",
+            "AGENCIA TRIBUTARIA"
+          ],
+          [
+            "Fecha de inicio",
+            "24-11-2026 18:00:00 CET  (ISO: 2026-11-24T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "14-12-2026 18:00:00 CET (ISO: 2026-12-14T18:00:00+01:00)"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-38388"
+          ],
+          [
+            "Valor subasta",
+            "6.426,00 €"
+          ],
+          [
+            "Tasación",
+            "6.426,00 €"
+          ],
+          [
+            "Puja mínima",
+            "642,60 €"
+          ],
+          [
+            "Tramos entre pujas",
+            "500,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "642,60 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186002055/20261125_210342/portal/autoridad.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002055&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002055&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T20:03:44+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "792f05512141560375dff2fe749ac8aad68eb3f59e8b57c9241846e73dff74e3",
+      "bytes": 9008,
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "R41860"
+          ],
+          [
+            "Descripción",
+            "U.R. SUBASTAS ANDALUCÍA 41 (AEAT)"
+          ],
+          [
+            "Dirección",
+            "PZ MINISTRO INDALECIO PRIETO 1 ; 41071 SEVILLA"
+          ],
+          [
+            "Teléfono",
+            "913335333"
+          ],
+          [
+            "Fax",
+            "-"
+          ],
+          [
+            "Correo electrónico",
+            "subastas.andalucia@correo.aeat.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186002055/20261125_210342/portal/bienes.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002055&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002055&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T20:03:45+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "9a4c2369395db52619a4a4c4de4431c040ac5648fe7ed0560322f069d61d096d",
+      "bytes": 10845,
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Vehículo (Turismos)",
+        "Información complementaria del bien"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "VEHICULO 2234LBP   FIAT FIAT 500X"
+          ],
+          [
+            "Matrícula",
+            "2234LBP"
+          ],
+          [
+            "Marca",
+            "FIAT"
+          ],
+          [
+            "Modelo",
+            "FIAT 500X"
+          ],
+          [
+            "Número de bastidor",
+            "ZFA3340000P785288"
+          ],
+          [
+            "Fecha de matriculación",
+            "02-10-2019"
+          ],
+          [
+            "Fecha de adquisición",
+            "18-01-2022"
+          ],
+          [
+            "Referencia Registral",
+            "20220004848"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "0,00 €"
+          ],
+          [
+            "Título jurídico",
+            "PLENO DOMINIO"
+          ],
+          [
+            "Información adicional",
+            "Se anexa documento con la informacion adicional del bien"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186002055/20261125_210342/portal/pujas.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002055&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002055&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T20:03:46+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "5b2037287b883faa7c24c541e1e839dfaa68d69363aa0d9db266b2b0905f6f9c",
+      "bytes": 8504,
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-38388",
+      "publicado": "2026-11-21",
+      "actualizado_fuente": "20261121071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-38388.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38388",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38388",
+          "consultado_utc": "2026-11-25T19:13:12+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "d309c9353296865cbbc357e9ca13e45ea8ba1a43b8b9693c2cd17d1fd1625d0f",
+          "bytes": 1597
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-38388.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38388.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38388.pdf",
+          "consultado_utc": "2026-11-25T19:13:13+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "a61ee4145a8fe6405cde8463068ecdbed9a3016891557ccb33ced28f6429d8e9",
+          "bytes": 199028
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002055",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    },
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002055&ver=3&idBus=&idLote=&numPagBus=",
+      "etiqueta": "Bienes",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

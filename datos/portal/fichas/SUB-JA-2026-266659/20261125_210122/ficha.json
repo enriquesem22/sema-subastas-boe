@@ -1,0 +1,299 @@
+{
+  "sub": "SUB-JA-2026-266659",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-266659",
+  "consultado_utc": "2026-11-25T20:01:27+00:00",
+  "captura_codigos": "41/20261125_210037",
+  "peticiones": 5,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "CALLE CONDE DE BARCELONA, Nº 47",
+      "localidad": "SAN JUAN DE AZNALFARACHE",
+      "provincia": "Sevilla",
+      "codigo_postal": "41920",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-266659/20261125_210122/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266659&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-266659/20261125_210122/portal/general.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-266659",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266659",
+      "consultado_utc": "2026-11-25T20:01:22+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "783bf0058aace026fe96fc0b08d54575b55073188c98d906449d106d470ec8ef",
+      "bytes": 10882,
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-266659"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "4119 0000 06 0647 21"
+          ],
+          [
+            "Fecha de inicio",
+            "10-11-2026 18:00:00 CET  (ISO: 2026-11-10T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "30-11-2026 18:00:00 CET (ISO: 2026-11-30T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "138.530,71 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-36487"
+          ],
+          [
+            "Valor subasta",
+            "190.500,00 €"
+          ],
+          [
+            "Tasación",
+            "190.500,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "3.810,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "9.525,00 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-266659/20261125_210122/portal/autoridad.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266659&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266659&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T20:01:24+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "79f0da8aa322ee365831781eed6aa96a694d5f74411b0a4ecf7482aff1767fa1",
+      "bytes": 8978,
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4109142021"
+          ],
+          [
+            "Descripción",
+            "Sección Civil TI Sevilla. Plz.n 21"
+          ],
+          [
+            "Dirección",
+            "CL VERMONDO RESTA S/N S/N   ; 41018 SEVILLA"
+          ],
+          [
+            "Teléfono",
+            "676767711"
+          ],
+          [
+            "Fax",
+            "955514038"
+          ],
+          [
+            "Correo electrónico",
+            "scej.subastas.sevilla.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-266659/20261125_210122/portal/bienes.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266659&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266659&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T20:01:25+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "fb7c62471328f3da46d915f39dfc5b891716cc858adec89f2ff8bfde6f3b6c76",
+      "bytes": 10921,
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "FINCA: \"URBANA: Casa en San Juan de Aznalfarache, en la calle General Sanjurjo, hoy calle Conde de Barcelona, \n          número cuarenta y siete, con una superficie de cien metros cuadrados, que linda: por la derecha de su entrada con casa de D. Antonio Mena, por la izquierda, con otra de Doña Dolores Martínez Bajonales,; y por el fondo, con casa de calle Calvo Sotelo."
+          ],
+          [
+            "IDUFIR",
+            "41026000083192"
+          ],
+          [
+            "Referencia catastral",
+            "2992019QB6329S0001PE"
+          ],
+          [
+            "Dirección",
+            "CALLE CONDE DE BARCELONA, Nº 47"
+          ],
+          [
+            "Código Postal",
+            "41920"
+          ],
+          [
+            "Localidad",
+            "SAN JUAN DE AZNALFARACHE"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No"
+          ],
+          [
+            "Cargas",
+            "LAS QUE PUEDAN CONSTAR EN LA CERTIFICACION DE TITULARIDAD Y CARGAS"
+          ],
+          [
+            "Inscripción registral",
+            "REGISTRO DE LA PROPIEDAD DE SAN JUAN DE AZNALFARACHE, inscrita al Tomo 2.033, Libro 309, Folio 77"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-266659/20261125_210122/portal/pujas.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266659&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266659&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-25T20:01:26+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "100738aad20077cd7fe55ceb3e15b23ba43a88170e09ad90aa828d6611073259",
+      "bytes": 8469,
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/2aa394570c15de69ee1cd2632b6f55ef0a710ba97beaccfd31c44edf81d26a98.pdf",
+      "etiqueta": "EDICTO ANUNCIA SUBASTA FINCA REGISTRAL Nº 2653, URBANA, Casa sita en San Juan de Aznalfarache, en la calle General Sanjurjo, hoy calle Conde de Barcelona, número cuarenta y siete",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "1-64f138f3783fc6eaf58af1b412922995",
+        ""
+      ],
+      "reutilizado": true,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-266659&idDoc=1-64f138f3783fc6eaf58af1b412922995",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-266659&idDoc=1-64f138f3783fc6eaf58af1b412922995",
+      "consultado_utc": "2026-11-25T19:09:39+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "2aa394570c15de69ee1cd2632b6f55ef0a710ba97beaccfd31c44edf81d26a98",
+      "bytes": 364711
+    },
+    {
+      "archivo": "documentos/716de5e575e8afcb840abe6a9197e78303195a182c2eb7967e5cf685c6a110e3.pdf",
+      "etiqueta": "CERTIFICACION DE TITULARIDAD Y CARGAS",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-de0fd3f696e2e9eea655939ed9b1779b",
+        ""
+      ],
+      "reutilizado": true,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-266659&idDoc=2-de0fd3f696e2e9eea655939ed9b1779b",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-266659&idDoc=2-de0fd3f696e2e9eea655939ed9b1779b",
+      "consultado_utc": "2026-11-25T19:09:41+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "716de5e575e8afcb840abe6a9197e78303195a182c2eb7967e5cf685c6a110e3",
+      "bytes": 170200
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-36487",
+      "publicado": "2026-11-07",
+      "actualizado_fuente": "20261107071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-36487.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36487",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36487",
+          "consultado_utc": "2026-11-25T19:09:42+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "7be5f9b0193678fa358346ebf4f99e68b3b160fc1ce375e3f574ccecb4aca056",
+          "bytes": 1142
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-36487.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/07/pdfs/BOE-B-2026-36487.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/07/pdfs/BOE-B-2026-36487.pdf",
+          "consultado_utc": "2026-11-25T19:09:42+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "3f4369782058c7648cf247162bbf57122ca4c9b302f7a87df316a6ae3d25b7ad",
+          "bytes": 198117
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": []
+}
