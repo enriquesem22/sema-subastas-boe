@@ -1,10 +1,11 @@
 name: SeMá diario
 
 on:
-  schedule:
-    # Dos pasadas al día (horas UTC). Es idempotente: si el BOE aún no está publicado, se recoge en la siguiente.
-    - cron: "43 7 * * *"
-    - cron: "43 13 * * *"
+  # Programación en pausa desde el 25-11-2026: se borraron los datos para cambiar el método de extracción.
+  # Para reactivarla, vuelve a poner aquí:
+  #   schedule:
+  #     - cron: "43 7 * * *"
+  #     - cron: "43 13 * * *"
   workflow_dispatch:
     inputs:
       desde:

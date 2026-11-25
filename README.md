@@ -1,5 +1,11 @@
 # SeMá · Subastas BOE Analytics (provincia de Sevilla)
 
+> **Estado (25-11-2026): datos borrados y automatismos en pausa.** Para cambiar el método de extracción se han
+> borrado las bases (`dealfinder.sqlite`, `sema.sqlite`, `subastech.sqlite`), las respuestas guardadas
+> (`datos/brutos`), los CSV y los informes, y también sus copias en Google Drive. La programación de GitHub
+> Actions y la tarea diaria de subida a Drive están pausadas. El código sigue aquí. Lo borrado puede recuperarse
+> del historial de Git (commit anterior a este cambio). Lo que se explica abajo describe el método anterior.
+
 Base de datos diaria y auditable de subastas de la provincia de Sevilla, construida **solo con fuentes
 oficiales o autorizadas**.
 
