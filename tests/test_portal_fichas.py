@@ -23,8 +23,14 @@ PDF = b"%PDF-1.4\n1 0 obj<<>>endobj\ntrailer<<>>\n%%EOF\n"
 MOMENTO = datetime(2026, 11, 25, 20, 0, 0, tzinfo=ZoneInfo("Europe/Madrid"))
 
 
+RELOJ = {"hora": "20:08:49"}  # el Portal pone en la cabecera la fecha y hora de cada consulta
+
+
 def html(cuerpo, ref=REF):
-    return (f'<html><body><div id="menu"><a href="/index.php">Inicio</a></div><div id="contenido">'
+    h = RELOJ["hora"]
+    return (f'<html><body><div id="menu"><a href="/index.php">Inicio</a><span id="fechaOficial">%72529000, %25 253 %2026</span>'
+            f'<span id="horaOficial">%{h}</span><script>var hoy = new Date(2026,11-1,25,{h.replace(":", ",")});</script>'
+            f'</div><div id="contenido">'
             f'<h2>Subasta {ref}</h2><ul class="navlist">'
             f'<li><a href="./detalleSubasta.php?idSub={ref}&ver=1">Información general</a></li>'
             f'<li><a href="./detalleSubasta.php?idSub={ref}&ver=2">Autoridad gestora</a></li>'
@@ -126,6 +132,8 @@ class PortalFichasTest(unittest.TestCase):
     def test_segunda_vez_no_repite_adjuntos_ni_anuncios(self):
         c, a = cliente(portal())
         pf.descargar_ficha(c, REF, self.raiz, MOMENTO, "41/a")
+        RELOJ["hora"] = "21:00:50"  # otra consulta: solo cambia el reloj de la cabecera
+        self.addCleanup(RELOJ.update, {"hora": "20:08:49"})
         c2, a2 = cliente(portal())
         r = pf.descargar_ficha(c2, REF, self.raiz, MOMENTO.replace(hour=21), "41/b")
         self.assertEqual(r["adjuntos_nuevos"], 0)

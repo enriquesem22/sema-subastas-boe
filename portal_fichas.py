@@ -15,8 +15,9 @@ Cambios respecto al script original (para usarlo en lote dentro del proyecto):
 - Los códigos salen de la última captura de portal_codigos.py (o se pasan a mano). Un mismo cliente HTTP para todos,
   con 1 s entre peticiones; si el Portal corta el acceso, se para el lote entero.
 - Reanuda: un SUB que ya tiene ficha de la misma captura de códigos no se vuelve a descargar (salvo --forzar).
-- Las pestañas se guardan comprimidas (.html.gz) y solo si han cambiado: si una pestaña es idéntica (mismo SHA-256) a
-  la de la ficha anterior del mismo SUB, ficha.json apunta a esa copia (igual_que_anterior). Los adjuntos van a datos/portal/documentos/<sha256>.<ext> y los
+- Las pestañas se guardan comprimidas (.html.gz) y solo si han cambiado: si una pestaña es idéntica a la de la ficha
+  anterior del mismo SUB salvo el reloj de la cabecera del Portal (misma «huella»: SHA-256 sin la fecha y hora
+  oficiales), ficha.json apunta a esa copia (igual_que_anterior). Los adjuntos van a datos/portal/documentos/<sha256>.<ext> y los
   anuncios a datos/portal/anuncios/, una sola vez: si una ficha anterior del mismo SUB ya tenía ese documento
   (misma ruta, idDoc y lote) o el anuncio ya está guardado, no se vuelve a pedir.
 - ficha.json no repite el texto completo de cada pestaña (está en el HTML guardado): guarda encabezados y tablas.
@@ -337,16 +338,31 @@ def anuncio_oficial(cliente: Cliente, ident: str, ref: str, raiz: Path):
 
 # --------------------------------------------------------------------------- ficha de un SUB
 
+# Lo único que cambia de una consulta a otra en una pestaña sin novedades es el reloj de la cabecera del Portal.
+RELOJ = [re.compile(rb'<span id="(?:fechaOficial|horaOficial)">[^<]*</span>'),
+         re.compile(rb"var hoy = new Date\([^)]*\);")]
+
+
+def huella(contenido: bytes) -> str:
+    """SHA-256 de la página sin el reloj de la cabecera: igual si la pestaña no ha cambiado."""
+    for r in RELOJ:
+        contenido = r.sub(b"", contenido)
+    return sha256(contenido)
+
+
 def paginas_previas(raiz: Path, ref: str) -> dict:
-    """Páginas ya guardadas en fichas anteriores del mismo SUB, por (pestaña, lote): {sha256, archivo}."""
+    """Páginas ya guardadas en fichas anteriores del mismo SUB, por (pestaña, lote): {huella, archivo, ...}."""
     previas = {}
     for f in sorted((raiz / "fichas" / ref).glob("*/ficha.json")):
         try:
             for pg in json.loads(f.read_text(encoding="utf-8")).get("paginas", []):
-                if pg.get("sha256") and (raiz / pg["archivo"]).exists():
+                if (raiz / pg["archivo"]).exists():
                     previas[(pg["pestana"], pg.get("lote") or "")] = pg
         except (OSError, ValueError):
             continue
+    for pg in previas.values():  # las fichas guardadas antes de existir la huella la calculan de su archivo
+        if not pg.get("huella"):
+            pg["huella"] = huella(gzip.decompress((raiz / pg["archivo"]).read_bytes()))
     return previas
 
 
@@ -390,7 +406,8 @@ def descargar_ficha(cliente: Cliente, ref: str, raiz: Path, momento: datetime, c
                 sufijo = f"_lote_{slug(lote) or sha256(lote.encode())[:12]}" if lote else ""
                 nombre = f"{PESTANAS.get(pestana, 'pestana_' + slug(pestana))}{sufijo}.html.gz"
                 anterior = previas.get((pestana, lote))
-                if anterior and anterior["sha256"] == meta["sha256"]:
+                meta["huella"] = huella(contenido)
+                if anterior and anterior["huella"] == meta["huella"]:
                     # la página no ha cambiado desde la ficha anterior: se apunta a la copia ya guardada
                     archivo, igual = anterior["archivo"], True
                 else:
