@@ -2,8 +2,9 @@
 
 Las páginas son SINTÉTICAS: siguen la estructura que espera el lector del script original (div#contenido con el h2
 «Subastas. Búsqueda avanzada», div.paginar con «Resultados X a Y de Z», div.listadoResult > ul > li.resultado-busqueda
-con h3 «SUBASTA SUB-…» y un p «Estado: …», y div.paginar2 con «Pág. siguiente»). No son copias del Portal: hay que
-validar el lector con la primera respuesta real, que queda guardada en pagina-N.html.gz.
+con h3 «SUBASTA SUB-…» y un p «Estado: …», y div.paginar2 con «Pág. siguiente»). No son copias del Portal. Además, test_pagina_real
+usa una respuesta REAL del Portal (tests/fixtures/portal_ava_sevilla_20261125.html.gz: Sevilla, «Celebrándose»,
+25-11-2026 19:36:43, 41 resultados), guardada tal cual por la primera ejecución en GitHub.
 """
 import gzip
 import hashlib
@@ -117,6 +118,15 @@ class PortalCodigosTest(unittest.TestCase):
     def test_hora_del_servidor_distinta(self):
         with self.assertRaises(pc.ErrorPortal):
             consultar(FakeHttp([pagina([fila("SUB-JA-2026-1")])], desfase=timedelta(minutes=10)))
+
+    def test_pagina_real(self):
+        html = gzip.decompress((Path(__file__).parent / "fixtures" / "portal_ava_sevilla_20261125.html.gz").read_bytes())
+        primera, ultima, total, codigos, siguiente = pc.analizar_pagina(html.decode("utf-8"))
+        self.assertEqual((primera, ultima, total, siguiente), (1, 41, 41, None))
+        self.assertEqual(len(set(codigos)), 41)
+        self.assertEqual(codigos[0], "SUB-JA-2026-257246")
+        self.assertIn("SUB-AT-2026-26R4186001460", codigos)
+        self.assertEqual(hashlib.sha256(html).hexdigest(), "7d3fe30597d98dd4e39ea8f89fb029495c7ec4552ff4eaef69997e78165eb773")
 
     def test_provincia_no_valida(self):
         self.assertEqual(pc.main(["--provincia", "99", "--salida-raiz", str(self.raiz)]), 2)
