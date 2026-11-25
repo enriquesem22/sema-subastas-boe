@@ -15,7 +15,9 @@ Tablas
                   en cuya búsqueda «provincia del bien» ha salido.
 - lotes           una fila por lote (o una sola si la subasta no tiene lotes): importes y puja.
 - bienes          una fila por bien: clase, descripción, referencia catastral, dirección, municipio (con su código
-                  INE de la lista del IGN), situación posesoria, cargas, inscripción…
+                  INE de la lista del IGN), situación posesoria, cargas, inscripción… y, si portal_geo.py la encontró,
+                  su ubicación (lat, lon, precisión «parcela» del Catastro o «direccion» de CartoCiudad, fuente y URL)
+                  o el motivo de no tenerla.
 - documentos, anuncios, pendientes   lo que trae ficha.json.
 
 En las subastas con varios lotes el Portal no da importes de conjunto («Ver valor de subasta en cada lote…»): esos
@@ -96,6 +98,8 @@ CREATE TABLE lotes (sub TEXT, lote TEXT, {', '.join(f'{c} REAL, {c}_texto TEXT' 
 CREATE TABLE bienes (sub TEXT, lote TEXT, bien INTEGER, clase TEXT, subtipo TEXT,
                      {', '.join(f'{c} TEXT' for c in dict.fromkeys(MAPA_BIEN.values()))},
                      cargas_importe REAL, municipio TEXT, municipio_ine TEXT, archivo TEXT, url TEXT,
+                     lat REAL, lon REAL, ubicacion_precision TEXT, ubicacion_fuente TEXT, ubicacion_url TEXT,
+                     ubicacion_texto TEXT, ubicacion_motivo TEXT,
                      PRIMARY KEY (sub, lote, bien));
 CREATE TABLE documentos (sub TEXT, etiqueta TEXT, lote TEXT, archivo TEXT, url TEXT, sha256 TEXT, tipo_mime TEXT,
                          bytes INTEGER, consultado_utc TEXT);
@@ -231,6 +235,8 @@ def pujas_de_pagina(arbol, lote_pagina: str | None):
 
 def construir(raiz: Path, ruta_base: Path, geo: Municipios | None = None) -> dict:
     geo = geo or Municipios()
+    ruta_ubic = raiz / "geo" / "ubicaciones.json"
+    ubicaciones = json.loads(ruta_ubic.read_text(encoding="utf-8")) if ruta_ubic.exists() else {}
     tmp = ruta_base.with_suffix(".tmp")
     tmp.unlink(missing_ok=True)
     ruta_base.parent.mkdir(parents=True, exist_ok=True)
@@ -260,7 +266,7 @@ def construir(raiz: Path, ruta_base: Path, geo: Municipios | None = None) -> dic
                          f.get("peticiones"), len(f.get("paginas", [])), len(f.get("adjuntos", [])),
                          len(f.get("anuncios", [])), len(f.get("pendientes", [])), int(ultima)))
             if ultima:
-                cargar_ficha(con, raiz, carpeta, f, geo, vistas.get(f["sub"], []), activas)
+                cargar_ficha(con, raiz, carpeta, f, geo, vistas.get(f["sub"], []), activas, ubicaciones)
     con.commit()
     resumen = {t: con.execute(f"SELECT count(*) FROM {t}").fetchone()[0]
                for t in ("capturas", "fichas", "subastas", "lotes", "bienes", "campos", "documentos", "anuncios", "pendientes")}
@@ -270,7 +276,8 @@ def construir(raiz: Path, ruta_base: Path, geo: Municipios | None = None) -> dic
     return resumen
 
 
-def cargar_ficha(con, raiz: Path, carpeta: Path, f: dict, geo: Municipios, vistas: list[str], activas: set[str]):
+def cargar_ficha(con, raiz: Path, carpeta: Path, f: dict, geo: Municipios, vistas: list[str], activas: set[str],
+                 ubicaciones: dict | None = None):
     sub = f["sub"]
     rel = str(carpeta.relative_to(raiz))
     vistos, campos = set(), []
@@ -321,8 +328,12 @@ def cargar_ficha(con, raiz: Path, carpeta: Path, f: dict, geo: Municipios, vista
         clase, subtipo = (clase_sub[1], clase_sub[2]) if clase_sub else ((cab[2] if cab else None), None)
         ine, oficial = geo.buscar(b.get("localidad"), b.get("provincia"))
         b.update(clase=clase, subtipo=subtipo, municipio=oficial, municipio_ine=ine, cargas_importe=importe(b.get("cargas")))
+        u = (ubicaciones or {}).get(f"{sub}|{lote}|{n}") or {}
+        b.update(lat=u.get("lat"), lon=u.get("lon"), ubicacion_precision=u.get("precision"), ubicacion_fuente=u.get("fuente"),
+                 ubicacion_url=u.get("url"), ubicacion_texto=u.get("texto"), ubicacion_motivo=u.get("motivo"))
         cols = ["clase", "subtipo", *dict.fromkeys(MAPA_BIEN.values()), "cargas_importe", "municipio", "municipio_ine",
-                "archivo", "url"]
+                "archivo", "url", "lat", "lon", "ubicacion_precision", "ubicacion_fuente", "ubicacion_url",
+                "ubicacion_texto", "ubicacion_motivo"]
         con.execute(f"INSERT INTO bienes (sub, lote, bien, {', '.join(cols)}) VALUES ({', '.join('?' * (len(cols) + 3))})",
                     (sub, lote, n, *[b.get(c) for c in cols]))
 

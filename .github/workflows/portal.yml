@@ -2,7 +2,8 @@ name: Portal de Subastas (códigos y fichas)
 
 # Método nuevo. Paso 1: códigos SUB de las subastas «Celebrándose» con el bien en la provincia (portal_codigos.py).
 # Paso 2: ficha completa de cada código (portal_fichas.py). Paso 3: base de datos datos/subastas.sqlite y tablas del
-# panel (portal_base.py, sin peticiones). Todo se guarda en el repositorio.
+# panel (portal_base.py, sin peticiones). Paso 4: ubicación de cada inmueble con el Catastro y CartoCiudad
+# (portal_geo.py, guarda las respuestas y no repite las ya hechas). Todo se guarda en el repositorio.
 # Solo se lanza a mano: pestaña Actions → este flujo → Run workflow.
 on:
   workflow_dispatch:
@@ -13,6 +14,10 @@ on:
         default: "41"
       solo_codigos:
         description: "Sacar solo los códigos, sin descargar las fichas"
+        type: boolean
+        default: false
+      solo_ubicaciones:
+        description: "Solo ubicar los inmuebles y rehacer la base, sin pedir nada al Portal"
         type: boolean
         default: false
 
@@ -37,19 +42,24 @@ jobs:
           python-version: "3.12"
 
       - name: Pruebas sin red
-        run: python -m unittest tests.test_portal_codigos tests.test_portal_fichas tests.test_portal_base -v
+        run: python -m unittest tests.test_portal_codigos tests.test_portal_fichas tests.test_portal_base tests.test_portal_geo -v
 
       - name: "Paso 1: códigos SUB activos"
         id: codigos
+        if: ${{ github.event.inputs.solo_ubicaciones != 'true' }}
         run: python portal_codigos.py --provincia "$PROVINCIA" --resumen "$GITHUB_STEP_SUMMARY"
 
       - name: "Paso 2: ficha de cada subasta"
-        if: ${{ steps.codigos.outcome == 'success' && github.event.inputs.solo_codigos != 'true' }}
+        if: ${{ steps.codigos.outcome == 'success' && github.event.inputs.solo_codigos != 'true' && github.event.inputs.solo_ubicaciones != 'true' }}
         run: python portal_fichas.py --provincia "$PROVINCIA" --resumen "$GITHUB_STEP_SUMMARY"
 
       - name: "Paso 3: base de datos y tablas del panel"
         if: ${{ !cancelled() }}
         run: python portal_base.py
+
+      - name: "Paso 4: ubicación de los inmuebles (Catastro y CartoCiudad)"
+        if: ${{ !cancelled() && github.event.inputs.solo_codigos != 'true' }}
+        run: python portal_geo.py
 
       - name: Guardar en el repositorio
         if: ${{ !cancelled() }}
