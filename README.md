@@ -59,10 +59,13 @@ Huelva, con todos sus municipios, seleccionadas por la **ubicación del bien**. 
 - **Detección diaria (automática).** Sumario de la API de datos abiertos con `Accept: application/json` (si el JSON no
   es válido, el XML oficial). Se comprueba que la fecha del sumario es la pedida, se recorren todos los diarios y los
   `item` de las secciones IV (`4`), V.B (`5B`) y V.C (`5C`) dentro de `departamento`, `epigrafe` o `texto`, lleguen como
-  objeto o como lista. De cada anuncio se abre su `url_xml` (si falla, su página HTML del BOE) y se guardan el `BOE-B`,
+  objeto o como lista. De cada anuncio se pide su `url_xml`; el robots.txt de www.boe.es no permite a programas leer
+  `xml.php`, así que se lee la página HTML oficial del mismo anuncio (`url_html`, `txt.php`), con el mismo texto, y un
+  aviso por ejecución lo resume (la fecha de actualización solo consta en el XML). Se guardan el `BOE-B`,
   el título, el organismo, las fechas de publicación y actualización, los enlaces oficiales y cada código SUB citado en
   el texto o en los enlaces (admite sufijos alfanuméricos, p. ej. `SUB-AT-2026-26R2886001460`). Cada anuncio se
-  relaciona con cada SUB (`anuncio_sub`); un SUB con varios anuncios es un solo expediente.
+  relaciona con cada SUB (`anuncio_sub`); un SUB con varios anuncios es un solo expediente. Las respuestas en bruto se
+  guardan en un archivo por día (`datos/brutos/dealfinder/AAAA/MM/AAAA-MM-DD.jsonl.gz`, con URL, momento y SHA-256).
 - **Incidencias** (`incidencias`): días sin sumario, sumarios con otra fecha, errores de descarga (se reintentan en las
   siguientes ejecuciones sin duplicar nada), anuncios que hablan de una subasta sin SUB, fichas cuyo SUB no coincide y
   PDF no válidos.
@@ -70,7 +73,9 @@ Huelva, con todos sus municipios, seleccionadas por la **ubicación del bien**. 
   ubicación del bien queda **pendiente** hasta leer la ficha. La provincia de la sede de la autoridad se guarda aparte,
   como pista para elegir qué fichas consultar, y nunca selecciona. Algunos anuncios sin SUB (Seguridad Social, Hacienda,
   FOGASA) sí escriben la ubicación del inmueble y se usan con el fragmento citado. Si un expediente tiene bienes en
-  varias provincias, `v_bienes` dice cuáles son de cada una.
+  varias provincias, `v_bienes` dice cuáles son de cada una. No cuentan las frases sobre la oficina de la autoridad
+  («ofertas en la Secretaría … sita en Madrid») ni los nombres de calle («Avenida de Salamanca»); al cambiar estas
+  reglas, las ubicaciones guardadas se vuelven a analizar y los cambios quedan en `cambios_historicos`.
 - **Ficha del Portal (consultas puntuales).** No se descarga nada de subastas.boe.es (robots.txt, sin autorización de
   la AEBOE). Las pestañas y los PDF que se guarden a mano en `datos/portal/entrada` (instrucciones en su `LEEME.md`) se
   leen con su evidencia: cada dato en `campos` con URL, fecha de consulta y pestaña y fila (o documento y página).
