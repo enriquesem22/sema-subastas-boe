@@ -111,7 +111,7 @@
     <h1 class="sv-title">Subastas de inmuebles</h1>
     <p class="sv-lede" data-read lang="es">Se están celebrando <b class="dash-skeleton" data-draw="sp-kpi" data-source="sp_resumen" data-field="activas" data-row="0">—</b> subastas de <span data-draw="sp-bien-txt">—</span> en el Portal de Subastas del BOE con el bien en <span data-draw="sp-prov-txt">—</span>, según la búsqueda del <b class="dash-skeleton" data-draw="sp-kpi" data-fmt="fecha" data-source="sp_resumen" data-field="fecha_busqueda" data-row="0">—</b>. <b class="dash-skeleton" data-draw="sp-kpi" data-source="sp_resumen" data-field="concluyen7" data-row="0">—</b> concluyen en los 7 días siguientes y <b class="dash-skeleton" data-draw="sp-kpi" data-source="sp_resumen" data-field="con_pujas" data-row="0">—</b> ya tienen alguna puja.</p>
     <p class="sv-err" data-sp-err hidden>No se han podido cargar las subastas desde Google Drive.</p>
-    <p class="sv-warnbox" data-sp-sinprov hidden>Todavía no se han descargado las subastas de esta provincia. Se descargan desde GitHub, en el flujo «Portal de Subastas (códigos y fichas)», escribiendo su código de provincia (28 Madrid, 08 Barcelona, 21 Huelva).</p>
+    <p class="sv-warnbox" data-sp-sinprov hidden>Todavía no se ha hecho la búsqueda de subastas de esta provincia: solo aparecen sus bienes que están dentro de subastas de otras búsquedas. Se descargan desde GitHub, en el flujo «Portal de Subastas (códigos y fichas)», escribiendo su código de provincia (28 Madrid, 08 Barcelona, 21 Huelva).</p>
   </header>
 
   <section class="sv-kpis" id="resumen" aria-label="Resumen de las subastas que se celebran">
@@ -158,12 +158,8 @@
   <section class="sv-card" id="listado" aria-labelledby="listado-titulo">
     <h2 class="sv-h2" id="listado-titulo">Subastas</h2>
     <div class="sv-filters" id="filtros">
-      <label class="sv-field">Bien
-        <select class="dash-select" data-sp-param="sp_bien" aria-label="Tipo de bien">
-          <option value="">Inmuebles</option>
-          <option value="todos">Todos los bienes</option>
-          <option value="otros">Vehículos y otros bienes</option>
-        </select>
+      <label class="sv-field">Tipo de bien
+        <select class="dash-select" data-draw="sp-sel-tipo" data-source="sp_tipos" aria-label="Tipo de bien"></select>
       </label>
       <label class="sv-field">Administración
         <select class="dash-select" data-sp-param="sp_grupo" aria-label="Administración que subasta">
@@ -181,11 +177,11 @@
           <option value="">Conclusión más próxima</option>
           <option value="valor_desc">Valor de subasta, de mayor a menor</option>
           <option value="valor_asc">Valor de subasta, de menor a mayor</option>
-          <option value="municipio">Municipio</option>
+          <option value="municipio">Municipio del bien</option>
         </select>
       </label>
       <label class="sv-field sv-field-grow">Buscar
-        <input class="sv-input" type="search" data-sp-q placeholder="SUB, municipio, calle, referencia catastral, autoridad…" aria-label="Buscar en las subastas">
+        <input class="sv-input" type="search" data-sp-q placeholder="SUB, calle, municipio, código postal, referencia catastral…" aria-label="Buscar en las subastas">
       </label>
       <button type="button" class="sv-btn" data-sp-reset hidden>Quitar filtros</button>
       <p class="sv-count"><b data-draw="sp-n" data-source="sp_n">—</b> subastas con estos filtros</p>
@@ -198,8 +194,8 @@
               <th data-field="sub">Subasta</th>
               <th data-field="fecha_conclusion">Concluye</th>
               <th data-field="grupo">Administración</th>
-              <th data-field="subtipos">Bien</th>
-              <th data-field="municipios">Municipio</th>
+              <th data-field="bienes_tipos">Bien</th>
+              <th data-field="bienes_ubicacion">Ubicación del bien</th>
               <th class="num" data-field="valor_ref">Valor de subasta</th>
               <th class="num" data-field="n_lotes">Lotes</th>
               <th data-field="pujas_estado">Pujas</th>
@@ -209,7 +205,7 @@
         </div>
         <p class="sv-empty" data-sp-vacio hidden>Ninguna subasta cumple estos filtros.</p>
         <p class="sv-err" data-sp-err hidden>No se ha podido cargar el listado desde Google Drive.</p>
-        <p class="sv-note">Pulsa una fila para ver la ficha completa. En las subastas con varios lotes el Portal da el valor de cada lote; aquí se muestra el menor («desde»).</p>
+        <p class="sv-note">La ubicación es la de cada bien en su ficha del Portal (dirección, código postal y municipio); si una subasta tiene varios, salen todos los que cumplen el filtro. Pulsa una fila para ver la ficha completa. En las subastas con varios lotes el Portal da el valor de cada lote; aquí se muestra el menor («desde»).</p>
       </div>
 
       <aside class="sv-detail" id="ficha" aria-labelledby="ficha-titulo">
@@ -280,11 +276,12 @@
   <div class="sv-bien">
     <h4 class="sv-h3"><span data-b="titulo"></span></h4>
     <dl class="sv-kv">
-      <dt>Descripción</dt><dd data-b="descripcion"></dd>
       <dt>Dirección</dt><dd data-b="direccion"></dd>
-      <dt>Municipio</dt><dd data-b="municipio"></dd>
-      <dt>Ubicación</dt><dd data-b="ubicacion"></dd>
       <dt>Código postal</dt><dd data-b="codigo_postal"></dd>
+      <dt>Municipio</dt><dd data-b="municipio"></dd>
+      <dt>Provincia</dt><dd data-b="provincia"></dd>
+      <dt>Punto en el mapa</dt><dd data-b="punto"></dd>
+      <dt>Descripción</dt><dd data-b="descripcion"></dd>
       <dt>Referencia catastral</dt><dd data-b="referencia_catastral"></dd>
       <dt>IDUFIR</dt><dd data-b="idufir"></dd>
       <dt>Situación posesoria</dt><dd data-b="situacion_posesoria"></dd>
@@ -361,13 +358,39 @@ window.SP = window.SP || {};
     tipEl.style.left = Math.max(6, Math.min(p[0] + 14, hw - tw - 6)) + 'px';
     tipEl.style.top = (p[1] - th - 12 < 4 ? p[1] + 18 : p[1] - th - 12) + 'px';
   };
-  /* Filtros de la página: provincia y tipo de bien valen para todo; administración, municipio y texto para el listado */
-  SP.enProvBien = function (r, p) {
-    if (p.prov && !SP.contiene(r.provincias_busqueda, p.prov)) return false;
-    var bien = p.sp_bien || '';
-    if (bien === '' && Number(r.es_inmueble) !== 1) return false;
-    if (bien === 'otros' && Number(r.es_inmueble) === 1) return false;
-    return Number(r.activa) === 1;
+  /* Los filtros de provincia, tipo de bien y municipio se aplican a CADA BIEN con su propia ubicación (pestaña Bienes de
+     la ficha): una subasta entra si al menos uno de sus bienes los cumple. Administración y texto, a la subasta. */
+  SP.PROV_NOMBRE = { sevilla: '41', madrid: '28', barcelona: '08', huelva: '21' };
+  SP.provBien = function (b) { return b.municipio_ine ? String(b.municipio_ine).slice(0, 2) : (SP.PROV_NOMBRE[SP.norm(b.provincia)] || null); };
+  SP.tipoOk = function (b, p) {
+    var t = p.sp_bien || '';
+    if (t === 'todos') return true;
+    if (t === 'otros') return b.clase !== 'Inmueble';
+    if (t.indexOf('tipo:') === 0) return b.clase === 'Inmueble' && b.subtipo === t.slice(5);
+    return b.clase === 'Inmueble';
+  };
+  SP.porSubasta = function (bienes) {
+    var m = new Map();
+    bienes.forEach(function (b) { if (!m.has(b.sub)) m.set(b.sub, []); m.get(b.sub).push(b); });
+    return m;
+  };
+  SP.bienesQueCumplen = function (r, lista, p, opciones) {
+    var o = opciones || {};
+    if (Number(r.activa) !== 1) return [];
+    return (lista || []).filter(function (b) {
+      if (!o.sinTipo && !SP.tipoOk(b, p)) return false;
+      var pv = SP.provBien(b);
+      // un bien sin ubicación (p. ej. un vehículo) cuenta en la provincia en cuya búsqueda salió la subasta
+      if (p.prov && (pv ? pv !== p.prov : !SP.contiene(r.provincias_busqueda, p.prov))) return false;
+      if (o.conMun && p.sp_mun && b.municipio_ine !== p.sp_mun) return false;
+      return true;
+    });
+  };
+  SP.PLURAL = { 'Vivienda': 'viviendas', 'Garaje': 'garajes', 'Local comercial': 'locales comerciales', 'Nave industrial': 'naves industriales',
+    'Finca rústica': 'fincas rústicas', 'Trastero': 'trasteros', 'Solar': 'solares' };
+  SP.ubicacionBien = function (b) {
+    var lugar = [b.codigo_postal, b.municipio || b.localidad].filter(Boolean).join(' ');
+    return [b.direccion, lugar].filter(Boolean).join(' · ') || (b.clase === 'Inmueble' ? 'Sin dirección en la ficha' : 'Sin ubicación (' + (b.subtipo || b.clase || 'bien') + ')');
   };
 })(window.SP);
 </script>
@@ -376,11 +399,12 @@ window.SP = window.SP || {};
 /* Valores calculados a partir de las tablas */
 dash.calc('sp_resumen', {
   title: 'Resumen de las subastas que se celebran',
-  description: 'Cuenta las subastas activas (última búsqueda) de la provincia y el tipo de bien elegidos, por administración, con pujas y que concluyen en los 7 días siguientes a la búsqueda.',
-  inputs: ['sp_subastas', 'sp_capturas'],
-  fn: (subastas, capturas) => {
+  description: 'Subastas activas (última búsqueda) con algún bien de la provincia y el tipo elegidos, según la ubicación de cada bien en su ficha: por administración, con pujas y que concluyen en los 7 días siguientes a la búsqueda.',
+  inputs: ['sp_subastas', 'sp_bienes', 'sp_capturas'],
+  fn: (subastas, bienes, capturas) => {
     const p = dash.params() || {};
-    const rs = subastas.filter((r) => SP.enProvBien(r, p));
+    const bm = SP.porSubasta(bienes);
+    const rs = subastas.filter((r) => SP.bienesQueCumplen(r, bm.get(r.sub), p).length > 0);
     const caps = capturas.filter((c) => Number(c.ultima) === 1 && (!p.prov || c.provincia === p.prov));
     const fechas = caps.map((c) => c.fecha_captura).filter(Boolean).sort();
     const ref = fechas.length ? new Date(fechas[fechas.length - 1]).getTime() : null;
@@ -399,21 +423,56 @@ dash.calc('sp_resumen', {
   }
 });
 
+dash.calc('sp_tipos', {
+  title: 'Subastas por tipo de bien',
+  description: 'Subastas activas con la provincia, la administración y el municipio elegidos que tienen algún bien de cada tipo (pestaña Bienes de la ficha). Una subasta con bienes de varios tipos cuenta en cada uno.',
+  inputs: ['sp_subastas', 'sp_bienes'],
+  fn: (subastas, bienes) => {
+    const p = dash.params() || {};
+    const bm = SP.porSubasta(bienes);
+    const cuenta = new Map();
+    let inmuebles = 0, otros = 0, todos = 0;
+    subastas.filter((r) => !p.sp_grupo || r.grupo === p.sp_grupo).forEach((r) => {
+      const bs = SP.bienesQueCumplen(r, bm.get(r.sub), p, { sinTipo: true, conMun: true });
+      if (!bs.length) return;
+      todos += 1;
+      if (bs.some((b) => b.clase === 'Inmueble')) inmuebles += 1;
+      if (bs.some((b) => b.clase !== 'Inmueble')) otros += 1;
+      new Set(bs.filter((b) => b.clase === 'Inmueble' && b.subtipo).map((b) => b.subtipo)).forEach((t) => cuenta.set(t, (cuenta.get(t) || 0) + 1));
+    });
+    const filas = Array.from(cuenta, ([tipo, n]) => ({ valor: 'tipo:' + tipo, tipo: tipo, subastas: n }))
+      .sort((a, b) => b.subastas - a.subastas || a.tipo.localeCompare(b.tipo, 'es'));
+    return [{ valor: '', tipo: 'Todos los inmuebles', subastas: inmuebles }, ...filas,
+      { valor: 'otros', tipo: 'Vehículos y otros bienes', subastas: otros }, { valor: 'todos', tipo: 'Todo tipo de bienes', subastas: todos }];
+  }
+});
+
 dash.calc('sp_lista', {
   title: 'Subastas del listado',
-  description: 'Subastas activas con los filtros de la página, en el orden elegido. valor_ref es el valor de subasta o, si tiene varios lotes, el menor de ellos; pujas_estado resume la pestaña de pujas.',
-  inputs: ['sp_subastas'],
-  fn: (subastas) => {
+  description: 'Subastas activas con algún bien que cumple los filtros (provincia, tipo y municipio de cada bien), con la administración y el texto elegidos. bienes_tipos y bienes_ubicacion son el tipo y la ubicación (dirección, código postal y municipio de su ficha) de esos bienes; valor_ref es el valor de subasta o, con varios lotes, el menor.',
+  inputs: ['sp_subastas', 'sp_bienes'],
+  fn: (subastas, bienes) => {
     const p = dash.params() || {};
     const q = SP.norm(p.sp_q || '');
-    const rs = subastas.filter((r) => SP.enProvBien(r, p)
-      && (!p.sp_grupo || r.grupo === p.sp_grupo)
-      && (!p.sp_mun || SP.contiene(r.municipios_ine, p.sp_mun))
-      && (!q || SP.norm([r.sub, r.municipios, r.subtipos, r.clases_bien, r.autoridad, r.descripcion, r.codigos_postales, r.tipo_subasta].join(' ')).indexOf(q) >= 0))
-      .map((r) => Object.assign({}, r, {
+    const bm = SP.porSubasta(bienes);
+    const rs = [];
+    subastas.forEach((r) => {
+      if (p.sp_grupo && r.grupo !== p.sp_grupo) return;
+      const bs = SP.bienesQueCumplen(r, bm.get(r.sub), p, { conMun: true });
+      if (!bs.length) return;
+      if (q) {
+        const texto = [r.sub, r.autoridad, r.tipo_subasta].concat(bs.map((b) => [b.direccion, b.codigo_postal, b.municipio, b.localidad,
+          b.subtipo, b.clase, b.referencia_catastral, b.descripcion].join(' '))).join(' ');
+        if (SP.norm(texto).indexOf(q) < 0) return;
+      }
+      rs.push(Object.assign({}, r, {
         valor_ref: r.valor_subasta != null ? r.valor_subasta : r.valor_lotes_min,
-        pujas_estado: Number(r.con_pujas) === 1 ? 'Con pujas' : 'Sin pujas'
+        pujas_estado: Number(r.con_pujas) === 1 ? 'Con pujas' : 'Sin pujas',
+        bienes_tipos: Array.from(new Set(bs.map((b) => b.subtipo || b.clase))).join(', '),
+        bienes_ubicacion: bs.map(SP.ubicacionBien).join('\n'),
+        municipio_orden: (bs[0] && (bs[0].municipio || bs[0].localidad)) || '~'
       }));
+    });
     const orden = p.sp_orden || '';
     const num = (v) => (v == null ? null : Number(v));
     rs.sort((a, b) => {
@@ -422,7 +481,7 @@ dash.calc('sp_lista', {
         if (va == null || vb == null) return va == null ? 1 : -1;
         return orden === 'valor_desc' ? vb - va : va - vb;
       }
-      if (orden === 'municipio') return String(a.municipios || '~').localeCompare(String(b.municipios || '~'), 'es');
+      if (orden === 'municipio') return a.municipio_orden.localeCompare(b.municipio_orden, 'es');
       return String(a.fecha_conclusion || '~').localeCompare(String(b.fecha_conclusion || '~')) || a.sub.localeCompare(b.sub);
     });
     return rs;
@@ -438,18 +497,20 @@ dash.calc('sp_n', {
 
 dash.calc('sp_municipios', {
   title: 'Subastas por municipio',
-  description: 'Subastas activas de la provincia y el tipo de bien elegidos, por municipio del bien (código INE), con la administración elegida. Una subasta con bienes en varios municipios cuenta en cada uno.',
-  inputs: ['sp_subastas'],
-  fn: (subastas) => {
+  description: 'Subastas activas por municipio de cada bien (código INE, según la ubicación de su ficha), con la provincia, el tipo de bien y la administración elegidos. Una subasta con bienes en varios municipios cuenta en cada uno.',
+  inputs: ['sp_subastas', 'sp_bienes'],
+  fn: (subastas, bienes) => {
     const p = dash.params() || {};
+    const bm = SP.porSubasta(bienes);
     const m = new Map();
-    subastas.filter((r) => SP.enProvBien(r, p) && (!p.sp_grupo || r.grupo === p.sp_grupo)).forEach((r) => {
-      const ines = String(r.municipios_ine || '').split(',').map((x) => x.trim()).filter(Boolean);
-      const noms = String(r.municipios || '').split(',').map((x) => x.trim());
-      ines.forEach((ine, i) => {
-        const o = m.get(ine) || { municipio_ine: ine, municipio: noms[i] || ine, subastas: 0 };
+    subastas.filter((r) => !p.sp_grupo || r.grupo === p.sp_grupo).forEach((r) => {
+      const vistos = new Set();
+      SP.bienesQueCumplen(r, bm.get(r.sub), p).forEach((b) => {
+        if (!b.municipio_ine || vistos.has(b.municipio_ine)) return;
+        vistos.add(b.municipio_ine);
+        const o = m.get(b.municipio_ine) || { municipio_ine: b.municipio_ine, municipio: b.municipio || b.localidad || b.municipio_ine, subastas: 0 };
         o.subastas += 1;
-        m.set(ine, o);
+        m.set(b.municipio_ine, o);
       });
     });
     return Array.from(m.values()).sort((a, b) => b.subastas - a.subastas || a.municipio.localeCompare(b.municipio, 'es'));
@@ -458,17 +519,22 @@ dash.calc('sp_municipios', {
 
 dash.calc('sp_puntos', {
   title: 'Inmuebles en el mapa',
-  description: 'Inmuebles de las subastas del listado con su ubicación: la parcela del Catastro o la dirección en CartoCiudad; si no la hay, solo su municipio, y el mapa lo dibuja en su centro como aproximado.',
+  description: 'Cada inmueble que cumple los filtros, en las subastas del listado. El punto sale de su propia ficha: la parcela de su referencia catastral (Catastro) o su dirección (CartoCiudad); si no se pudo situar, el mapa lo dibuja en el centro de su municipio como aproximado.',
   inputs: ['sp_lista', 'sp_bienes'],
   fn: (lista, bienes) => {
+    const p = dash.params() || {};
     const subs = new Map(lista.map((r) => [r.sub, r]));
-    return bienes.filter((b) => subs.has(b.sub) && b.clase === 'Inmueble').map((b) => {
-      const s = subs.get(b.sub);
-      return { clave: b.sub + '|' + (b.lote || '') + '|' + b.bien, sub: b.sub, lote: b.lote, bien: b.bien, lat: b.lat, lon: b.lon,
-        precision: b.ubicacion_precision || 'municipio', ubicacion_texto: b.ubicacion_texto, municipio_ine: b.municipio_ine,
-        municipio: b.municipio || b.localidad, subtipo: b.subtipo, direccion: b.direccion, grupo: s.grupo, valor_ref: s.valor_ref,
-        n_lotes: s.n_lotes };
+    const bm = SP.porSubasta(bienes);
+    const out = [];
+    subs.forEach((s, sub) => {
+      SP.bienesQueCumplen(s, bm.get(sub), p, { conMun: true }).filter((b) => b.clase === 'Inmueble').forEach((b) => {
+        out.push({ clave: b.sub + '|' + (b.lote || '') + '|' + b.bien, sub: b.sub, lote: b.lote, bien: b.bien, lat: b.lat, lon: b.lon,
+          precision: b.ubicacion_precision || 'municipio', municipio_ine: b.municipio_ine, municipio: b.municipio || b.localidad,
+          codigo_postal: b.codigo_postal, subtipo: b.subtipo, direccion: b.direccion, referencia_catastral: b.referencia_catastral,
+          grupo: s.grupo, valor_ref: s.valor_ref, n_lotes: s.n_lotes });
+      });
     });
+    return out;
   }
 });
 
@@ -500,7 +566,7 @@ dash.calc('sp_det_campos', { title: 'Todos los datos de la subasta elegida', des
     b.addEventListener('click', function () { dash.setParams({ prov: b.getAttribute('data-prov') || null, sp_mun: null }); });
   });
   document.querySelectorAll('[data-sp-param]').forEach(function (sel) {
-    sel.addEventListener('change', function () { var o = {}; o[sel.getAttribute('data-sp-param')] = sel.value || null; if (o.sp_bien !== undefined || o.sp_grupo !== undefined) o.sp_mun = null; dash.setParams(o); });
+    sel.addEventListener('change', function () { var o = {}; o[sel.getAttribute('data-sp-param')] = sel.value || null; dash.setParams(o); });
   });
   var t = null;
   document.querySelectorAll('[data-sp-q]').forEach(function (inp) {
@@ -524,7 +590,9 @@ dash.calc('sp_det_campos', { title: 'Todos los datos de la subasta elegida', des
     document.querySelectorAll('[data-sp-err-mapa]').forEach(function (e) { e.hidden = lim.status !== 'error'; });
     var sinProv = !!p.prov && caps.status === 'ok' && !caps.data.some(function (c) { return c.provincia === p.prov; });
     document.querySelectorAll('[data-sp-sinprov]').forEach(function (e) { e.hidden = !sinProv; });
-    document.querySelectorAll('#cabecera .sv-lede, #resumen, #listado').forEach(function (e) { e.hidden = sinProv; });
+    var res = dash.data('sp_resumen');
+    var vacia = sinProv && res.status === 'ok' && Array.isArray(res.data) && res.data[0] && res.data[0].activas === 0;
+    document.querySelectorAll('#cabecera .sv-lede, #resumen, #listado').forEach(function (e) { e.hidden = vacia; });
     document.querySelectorAll('#mapa').forEach(function (e) { e.hidden = !!p.prov && p.prov !== '41'; });
     var l = dash.data('sp_lista');
     document.querySelectorAll('[data-sp-vacio]').forEach(function (e) { e.hidden = !(l.status === 'ok' && Array.isArray(l.data) && l.data.length === 0); });
@@ -558,7 +626,9 @@ dash.calc('sp_det_campos', { title: 'Todos los datos de la subasta elegida', des
   });
   dash.draw('sp-bien-txt', function (el) {
     var b = (dash.params() || {}).sp_bien || '';
-    el.textContent = b === 'todos' ? 'todo tipo de bienes' : b === 'otros' ? 'vehículos y otros bienes' : 'inmuebles';
+    var t = b.indexOf('tipo:') === 0 ? b.slice(5) : null;
+    el.textContent = b === 'todos' ? 'todo tipo de bienes' : b === 'otros' ? 'vehículos y otros bienes'
+      : t ? (SP.PLURAL[t] || 'inmuebles de tipo «' + t + '»') : 'inmuebles';
   });
   dash.draw('sp-prov-txt', function (el) {
     var p = (dash.params() || {}).prov, c = dash.data('sp_capturas');
@@ -581,6 +651,27 @@ dash.calc('sp_det_campos', { title: 'Todos los datos de la subasta elegida', des
     if (p.sp_mun && !rows.some(function (r) { return r.municipio_ine === p.sp_mun; })) sel.appendChild(new Option(p.sp_mun, p.sp_mun));
     sel.value = p.sp_mun || '';
     sel.onchange = function () { dash.setParams({ sp_mun: sel.value || null }); };
+  });
+
+  dash.draw('sp-sel-tipo', function (sel) {
+    var d = dash.data('sp_tipos');
+    var filas = d.status === 'ok' && Array.isArray(d.data) ? d.data : [];
+    var p = dash.params() || {};
+    sel.replaceChildren();
+    var grupoInm = document.createElement('optgroup'); grupoInm.label = 'Inmuebles';
+    var grupoOtros = document.createElement('optgroup'); grupoOtros.label = 'Otros';
+    filas.forEach(function (r) {
+      var o = new Option(r.tipo + ' (' + r.subastas + ')', r.valor);
+      if (r.valor === '') sel.appendChild(o);
+      else if (r.valor.indexOf('tipo:') === 0) grupoInm.appendChild(o);
+      else grupoOtros.appendChild(o);
+    });
+    if (!filas.length) sel.appendChild(new Option('Todos los inmuebles', ''));
+    if (grupoInm.children.length) sel.appendChild(grupoInm);
+    if (grupoOtros.children.length) sel.appendChild(grupoOtros);
+    if (p.sp_bien && !filas.some(function (r) { return r.valor === p.sp_bien; })) sel.appendChild(new Option(p.sp_bien.replace(/^tipo:/, '') + ' (0)', p.sp_bien));
+    sel.value = p.sp_bien || '';
+    sel.onchange = function () { dash.setParams({ sp_bien: sel.value || null }); };
   });
 
   dash.draw('sp-tabla-mun', function (tb) {
@@ -612,7 +703,7 @@ dash.calc('sp_det_campos', { title: 'Todos los datos de la subasta elegida', des
 
   var COLOR_GRUPO = { 'Judicial': 0, 'Agencia Tributaria': 1 };
   var colorGrupo = function (g) { return dash.colors[g in COLOR_GRUPO ? COLOR_GRUPO[g] : 2]; };
-  var PRECISION = { parcela: 'parcela catastral', direccion: 'dirección (CartoCiudad)', municipio: 'aproximada: centro del municipio' };
+  var PRECISION = { parcela: 'la parcela de su referencia catastral (Catastro)', direccion: 'su dirección, localizada en CartoCiudad', municipio: 'aproximado, en el centro de su municipio' };
 
   dash.draw('sp-mapa', {
     mount: function (el) {
@@ -670,12 +761,15 @@ dash.calc('sp_det_campos', { title: 'Todos los datos de la subasta elegida', des
       var host = el;
       var mostrar = function (e, d) {
         var r0 = d.items[0];
-        var titulo = d.aprox ? (r0.municipio || '') + ' · ubicación aproximada' : (r0.direccion || r0.municipio || '');
-        var lineas = d.items.slice(0, 6).map(function (r) {
-          return r.sub + (r.lote ? ' · lote ' + r.lote : '') + ' · ' + (r.subtipo || 'inmueble') + (r.valor_ref != null ? ' · ' + (Number(r.n_lotes) > 1 ? 'desde ' : '') + SP.eur.format(r.valor_ref) : '');
+        var titulo = d.aprox ? (r0.municipio || '') + ' · sin punto exacto' : (r0.direccion || r0.municipio || '');
+        var lineas = [];
+        if (!d.aprox) lineas.push([r0.codigo_postal, r0.municipio].filter(Boolean).join(' '));
+        d.items.slice(0, 6).forEach(function (r) {
+          lineas.push(r.sub + (r.lote ? ' · lote ' + r.lote : '') + ' · ' + (r.subtipo || 'inmueble') + (d.aprox && r.direccion ? ' · ' + r.direccion : '')
+            + (r.valor_ref != null ? ' · ' + (Number(r.n_lotes) > 1 ? 'desde ' : '') + SP.eur.format(r.valor_ref) : ''));
         });
         if (d.items.length > 6) lineas.push('y ' + (d.items.length - 6) + ' más');
-        if (!d.aprox) lineas.push('Ubicación: ' + PRECISION[r0.precision] + (r0.municipio ? ' · ' + r0.municipio : ''));
+        lineas.push('Punto: ' + PRECISION[r0.precision]);
         SP.tip(m.tip.node(), host, e, titulo, lineas);
       };
       var elegir = function (d) { var s0 = d.items[0].sub; dash.setParams({ sp_sel: d.items.some(function (r) { return r.sub === sel; }) && d.items.length === 1 ? null : s0 }); };
@@ -711,8 +805,12 @@ dash.calc('sp_det_campos', { title: 'Todos los datos de la subasta elegida', des
       var c1 = document.createElement('td'); var s = document.createElement('span'); s.className = 'sv-sub'; s.textContent = r.sub; c1.appendChild(s);
       var c2 = document.createElement('td'); c2.className = 'sv-nowrap'; c2.textContent = SP.fecha(r.fecha_conclusion, false);
       var c3 = document.createElement('td'); c3.textContent = r.grupo || '—';
-      var c4 = document.createElement('td'); c4.textContent = r.subtipos || r.clases_bien || '—';
-      var c5 = document.createElement('td'); c5.textContent = r.municipios || '—';
+      var c4 = document.createElement('td'); c4.textContent = r.bienes_tipos || '—';
+      var c5 = document.createElement('td');
+      var lineas = String(r.bienes_ubicacion || '').split('\n').filter(Boolean);
+      lineas.slice(0, 3).forEach(function (l, i) { if (i) c5.appendChild(document.createElement('br')); c5.appendChild(document.createTextNode(l.length > 90 ? l.slice(0, 88) + '…' : l)); });
+      if (lineas.length > 3) { var mas = document.createElement('span'); mas.className = 'sv-muted'; mas.textContent = ' y ' + (lineas.length - 3) + ' más'; c5.appendChild(document.createElement('br')); c5.appendChild(mas); }
+      if (!lineas.length) c5.textContent = '—';
       var c6 = document.createElement('td'); c6.className = 'num';
       c6.textContent = r.valor_ref == null ? '—' : (Number(r.n_lotes) > 1 ? 'desde ' : '') + SP.eur.format(Number(r.valor_ref));
       var c7 = document.createElement('td'); c7.className = 'num'; c7.textContent = SP.int.format(Number(r.n_lotes) || 0);
@@ -768,14 +866,15 @@ dash.calc('sp_det_campos', { title: 'Todos los datos de la subasta elegida', des
     d.data.forEach(function (b, i) {
       var c = SP.clone('tpl-bien');
       var titulo = (b.lote ? 'Lote ' + b.lote + ' · ' : '') + 'Bien ' + b.bien + ' · ' + [b.clase, b.subtipo].filter(Boolean).join(', ');
-      var ubic = b.lat != null && b.lon != null ? (b.ubicacion_precision === 'parcela' ? 'Parcela catastral' : 'Dirección localizada en CartoCiudad') + (b.ubicacion_texto ? ' (' + b.ubicacion_texto + ')' : '')
-        : (b.clase === 'Inmueble' ? 'Sin ubicación exacta: en el mapa va en el centro del municipio' : null);
-      var vals = Object.assign({}, b, { titulo: titulo, municipio: b.municipio || b.localidad, ubicacion: ubic, marca_modelo: [b.marca, b.modelo].filter(Boolean).join(' ') });
+      var punto = b.clase !== 'Inmueble' ? null : b.lat != null && b.lon != null
+        ? (b.ubicacion_precision === 'parcela' ? 'En la parcela de su referencia catastral (Catastro)' : 'En su dirección, localizada en CartoCiudad (IGN)')
+        : 'Sin punto exacto: en el mapa va en el centro de su municipio';
+      var vals = Object.assign({}, b, { titulo: titulo, municipio: b.municipio || b.localidad, punto: punto, marca_modelo: [b.marca, b.modelo].filter(Boolean).join(' ') });
       c.querySelectorAll('[data-b]').forEach(function (dd) {
         var k = dd.getAttribute('data-b'), v = vals[k];
         if (k !== 'titulo' && (v == null || v === '')) { var dt = dd.previousElementSibling; if (dt) dt.remove(); dd.remove(); return; }
         dd.textContent = v;
-        if (k !== 'titulo' && k !== 'marca_modelo' && k !== 'ubicacion' && k in b) { dd.setAttribute('data-source', 'sp_det_bienes'); dd.setAttribute('data-field', k); dd.setAttribute('data-row', String(i)); }
+        if (k !== 'titulo' && k !== 'marca_modelo' && k !== 'punto' && k in b) { dd.setAttribute('data-source', 'sp_det_bienes'); dd.setAttribute('data-field', k); dd.setAttribute('data-row', String(i)); }
       });
       el.appendChild(c);
     });

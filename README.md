@@ -105,10 +105,15 @@ y CartoCiudad.
 ### Panel «SeMá Deal Finder»
 
 Lee esas tablas de la carpeta de Drive del panel con el conector de Google Drive de quien lo abre (más los límites
-municipales `sema-panel-limites`). Barra de provincia; resumen (celebrándose, por administración, con pujas, concluyen
+municipales `sema-panel-limites`). Barra de provincia; filtro por tipo de bien (vivienda, garaje, local comercial, nave industrial, finca rústica,
+trastero, solar, vehículos y otros); resumen (celebrándose, por administración, con pujas, concluyen
 en 7 días); mapa de Sevilla con un punto por inmueble (color por administración, número si coinciden varios, hueco si
 la ubicación es aproximada, zoom) y subastas por municipio; listado con filtros (bien, administración, municipio, texto, orden) y, al
 pulsar una subasta, su ficha: importes, lotes, bienes, documentos con enlace oficial y todos los datos de la ficha.
+La provincia, el tipo y el municipio se aplican a **cada bien con su propia ubicación** (pestaña Bienes de su ficha:
+dirección, código postal, municipio y provincia): una subasta aparece si alguno de sus bienes cumple el filtro, y el
+listado y el mapa muestran solo esos bienes. Un bien sin ubicación (un vehículo) cuenta en la provincia en cuya
+búsqueda salió la subasta.
 
 ### Decisiones
 
