@@ -106,5 +106,38 @@ class PortalBaseTest(unittest.TestCase):
         self.assertEqual(geo.buscar("Utrera", None), (None, None))
 
 
+class DosProvinciasTest(unittest.TestCase):
+    """Una búsqueda de Huelva (21) posterior que también trae una subasta de la de Sevilla (41): las filas de Sevilla
+    no cambian y el historial de la subasta compartida sigue el orden de fecha, no el de provincia."""
+
+    def test_busquedas_por_fecha(self):
+        import shutil
+        with tempfile.TemporaryDirectory() as tmp:
+            raiz = Path(tmp) / "portal"
+            shutil.copytree(FIX, raiz)
+            sevilla = json.loads((raiz / "codigos" / "41" / "20261125_200830" / "listado.json").read_text(encoding="utf-8"))
+            huelva = dict(sevilla, fecha_captura="2026-11-26T22:06:31+01:00", provincia_bien="Huelva", cod_provincia="21",
+                          total_resultados=1, subastas=[{"sub": "SUB-JA-2026-267391"}])
+            (raiz / "codigos" / "21" / "20261126_220631").mkdir(parents=True)
+            (raiz / "codigos" / "21" / "20261126_220631" / "listado.json").write_text(json.dumps(huelva), encoding="utf-8")
+            solo = Path(tmp) / "solo_sevilla.sqlite"
+            pb.construir(FIX, solo)
+            dos = Path(tmp) / "dos.sqlite"
+            pb.construir(raiz, dos)
+            a, b = sqlite3.connect(solo), sqlite3.connect(dos)
+            q = "SELECT * FROM subastas WHERE sub <> 'SUB-JA-2026-267391' ORDER BY sub"
+            self.assertEqual(a.execute(q).fetchall(), b.execute(q).fetchall())
+            for t in ("lotes", "bienes", "campos"):
+                self.assertEqual(a.execute(f"SELECT * FROM {t} ORDER BY 1, 2, 3").fetchall(),
+                                 b.execute(f"SELECT * FROM {t} ORDER BY 1, 2, 3").fetchall())
+            s = b.execute("SELECT primera_vez, ultima_vez, vista_en, provincias_busqueda, activa FROM subastas "
+                          "WHERE sub = 'SUB-JA-2026-267391'").fetchone()
+            self.assertEqual(s, ("41/20261125_200830", "21/20261126_220631", "41/20261125_200830,21/20261126_220631",
+                                 "41,21", 1))
+            self.assertEqual(b.execute("SELECT count(*) FROM capturas WHERE ultima = 1").fetchone()[0], 2)
+            a.close()
+            b.close()
+
+
 if __name__ == "__main__":
     unittest.main()

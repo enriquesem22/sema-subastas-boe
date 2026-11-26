@@ -1,7 +1,7 @@
 # SeMá Deal Finder · subastas del Portal del BOE
 
 Base de datos auditable de las subastas que se celebran en el **Portal de Subastas del BOE**, por provincia del bien
-(de momento, Sevilla), y su panel en Claude. Cada dato dice de qué página oficial sale y cuándo se consultó.
+(Sevilla y, desde el 26-11-2026, Huelva), y su panel en Claude. Cada dato dice de qué página oficial sale y cuándo se consultó.
 
 > **Estado (26-11-2026).** Método nuevo en marcha (abajo). Los datos del método anterior (sumario del BOE, Deal Finder
 > por anuncios, Subastech) se borraron y su programación está en pausa; su código y su documentación siguen más abajo,
@@ -19,8 +19,10 @@ Base de datos auditable de las subastas que se celebran en el **Portal de Subast
 | 6 | Tarea programada de Claude | Subir `datos/panel/sema-panel-sp_*.b64.txt` a la carpeta de Drive del panel, los mapas `datos/panel/mapas/sema-mapa-*.b64.txt` a su subcarpeta `mapas` y la copia de la base `datos/panel/subastas.sqlite.gz` a la carpeta «Sema Deal Finder» | Panel y copia en Drive |
 
 **Cada día:**
-- **GitHub, de madrugada** (pasos 1 a 5): el flujo está programado a las 01:17 y a las 04:47 UTC. Son dos intentos
-  porque GitHub puede retrasar mucho los programados; si el primero ya descargó ese día, el segundo no repite nada.
+- **GitHub, de madrugada** (pasos 1 a 5): el flujo está programado a las 01:17 y a las 04:47 UTC y descarga Sevilla
+  (41) y después Huelva (21), cada una con su búsqueda, en el mismo commit. Son dos intentos porque GitHub puede retrasar
+  mucho los programados; el segundo solo descarga la provincia que el primero no haya descargado ese día. Si la búsqueda
+  de una provincia falla, la otra sigue.
 - **Claude, a las 13:13 (hora de Madrid)** (paso 6): la tarea programada «SeMá · Subida diaria a Drive» comprueba que
   la descarga del día está en `main` (si no, espera hasta una hora), rehace la base, prepara los mapas sin pedir nada
   (`portal_mapas.py --sin-red`) y sube las tablas del panel, los mapas nuevos o cambiados y la copia de la base. Si la
@@ -28,7 +30,8 @@ Base de datos auditable de las subastas que se celebran en el **Portal de Subast
   de GitHub (no tiene sus herramientas), por eso cada parte tiene su propio horario.
 
 Los pasos 1 a 5 los hace el flujo de GitHub **«Portal de Subastas (códigos y fichas)»** (`.github/workflows/portal.yml`):
-Actions → el flujo → *Run workflow*, con el código de provincia (41 Sevilla, 28 Madrid, 08 Barcelona, 21 Huelva). Además de
+Actions → el flujo → *Run workflow*, con el código de provincia (41 Sevilla, 28 Madrid, 08 Barcelona, 21 Huelva) o
+varios separados por espacios (por defecto, «41 21»). Además de
 los dos horarios, se puede lanzar a mano; guarda el resultado en el repositorio; la opción «Solo ubicar los inmuebles» hace solo los pasos 3, 4 y 5,
 sin pedir nada al Portal. En el PC: `py portal_codigos.py --provincia 41`, `py portal_fichas.py`, `py portal_base.py`,
 `py portal_geo.py` y `py portal_mapas.py`. Desde la nube de Claude no se llega a subastas.boe.es, al Catastro, a
@@ -155,12 +158,38 @@ panel deja cada imagen en base64 (`datos/panel/mapas/sema-mapa-<SUB>_<lote>_<bie
 `sema-panel-sp_mapas` con el origen de cada una. `py portal_mapas.py --sin-red` solo prepara esos archivos a partir de
 las imágenes guardadas.
 
+### Una subasta en dos provincias
+
+Cada búsqueda es por provincia **del bien**, así que una subasta con bienes en Sevilla y en Huelva sale en las dos (el
+26-11-2026, SUB-JA-2026-268212: locales y garaje en Bormujos y un local en Isla Cristina). Es una sola fila en
+`subastas`, con `provincias_busqueda` = «41,21», y su ficha se vuelve a pedir en la búsqueda de Huelva (si no ha cambiado,
+`portal_fichas.py` no guarda otra copia de sus páginas). `vista_en`, `primera_vez` y `ultima_vez` siguen el orden de
+fecha y hora de las búsquedas, no el de provincia. En el panel, cada bien cuenta en la provincia donde está.
+
+Al añadir Huelva se comprobó que las 40 subastas que solo son de Sevilla quedan idénticas en todas las tablas
+(`subastas`, `lotes`, `bienes`, `campos`, `documentos`, `anuncios`, `pendientes`), y en la compartida solo cambian esos
+datos de en qué búsqueda salió y cuándo se consultó.
+
+### Mapa del panel: límites municipales y calles
+
+- **Límites municipales** (`geo_limites.py`): de `es/municipalities.json` del paquete es-atlas 0.6.0 (IGN, Equipamiento
+  Geográfico de Referencia Nacional; se baja con `npm pack es-atlas@0.6.0`), un Feature por municipio y el contorno de
+  la provincia, con coordenadas a 4 decimales. `py geo_limites.py …/municipalities.json --provincia 21 --b64 …` escribe
+  `datos/geo/huelva-municipios.json` y su copia gzip+base64 para Drive. Con `--provincia 41` sale, byte a byte, el
+  `datos/geo/sevilla-municipios.json` que ya usaba el panel. En Drive: `sema-panel-limites.b64.txt` (Sevilla) y
+  `sema-panel-limites-21.b64.txt` (Huelva), en la carpeta del panel; no cambian.
+- **Calles** (`calles_osm.py`): carreteras y calles de OpenStreetMap (© colaboradores de OpenStreetMap, ODbL), solo para
+  dibujar el mapa, en dos archivos compactos por provincia (`calles_red`, que se carga al abrir, y `calles`, al acercar).
+  Son archivos fijos del artefacto, no de Drive. `py -I calles_osm.py --provincia 21 --consulta` escribe la consulta de
+  Overpass API; con la respuesta, `py -I calles_osm.py --provincia 21 respuesta.json carpeta/` hace los dos archivos.
+  El programa va también dentro de cada archivo («meta»).
+
 ### Panel «SeMá Deal Finder»
 
 Lee esas tablas de la carpeta de Drive del panel con el conector de Google Drive de quien lo abre (más los límites
 municipales `sema-panel-limites`). Barra de provincia; filtro por tipo de bien (vivienda, garaje, local comercial, nave industrial, finca rústica,
 trastero, solar, vehículos y otros); resumen (celebrándose, por administración, con pujas, concluyen
-en 7 días); mapa de Sevilla con un punto por inmueble (color por administración, número si coinciden varios, hueco si
+en 7 días); mapa de Sevilla, de Huelva o, con «Todas», de las dos, con un punto por inmueble (color por administración, número si coinciden varios, hueco si
 la ubicación es aproximada, zoom) y subastas por municipio; listado con filtros (bien, administración, municipio, texto, orden) y, al
 pulsar una subasta, su ficha: importes, lotes, bienes, documentos con enlace oficial y todos los datos de la ficha.
 Cada inmueble de la ficha lleva la comprobación de su dirección («✓ Coincide con la dirección oficial» o «⚠» con el
@@ -187,7 +216,8 @@ búsqueda salió la subasta.
 ### Pruebas
 
 `python -m unittest discover -s tests`. Las de `portal_codigos` y `portal_base` usan páginas **reales** del Portal
-guardadas en `tests/fixtures` (Sevilla, 25-11-2026); las de `portal_fichas`, `portal_geo` y `portal_mapas` usan
+guardadas en `tests/fixtures` (Sevilla, 25-11-2026), y una prueba añade a esas fichas una búsqueda de Huelva para
+comprobar que las filas de Sevilla no cambian; las de `portal_fichas`, `portal_geo` y `portal_mapas` usan
 servicios simulados, y `tests/test_portal_geo.py` incluye las direcciones reales con las que se probó la comprobación.
 
 ---

@@ -272,7 +272,9 @@ def construir(raiz: Path, ruta_base: Path, geo: Municipios | None = None) -> dic
     con.executescript(ESQUEMA)
     vistas: dict[str, list[str]] = defaultdict(list)  # SUB → capturas en que salió
     ultima_por_prov: dict[str, str] = {}
-    for listado in sorted((raiz / "codigos").glob("*/*/listado.json")):
+    # por fecha y hora de la búsqueda (y luego provincia): con varias provincias, vista_en, primera_vez y ultima_vez
+    # de una subasta que sale en las dos búsquedas siguen el orden real en que se hicieron
+    for listado in sorted((raiz / "codigos").glob("*/*/listado.json"), key=lambda p: (p.parent.name, p.parent.parent.name)):
         d = json.loads(listado.read_text(encoding="utf-8"))
         captura = f"{listado.parent.parent.name}/{listado.parent.name}"
         ultima_por_prov[listado.parent.parent.name] = captura

@@ -27,12 +27,18 @@
 .sv-geo{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:var(--cds-gap-lg);align-items:start}
 .sv-mapwrap{position:relative;min-width:0}
 .sv-mapbox{position:relative;border:1px solid var(--color-border-line);border-radius:var(--cds-radius);overflow:hidden;background:color-mix(in srgb,var(--color-fg) 4%,var(--color-bg));min-height:260px}
-.sv-mapbox svg{display:block;width:100%;height:auto;cursor:grab;touch-action:pan-y}
+.sv-mapbox svg{position:relative;display:block;width:100%;height:auto;cursor:grab;touch-action:pan-y}
 .sv-mapbox svg:active{cursor:grabbing}
+.sv-mapbox canvas{position:absolute;left:0;top:0;pointer-events:none}
 .sv-zoom{position:absolute;top:8px;right:8px;display:grid;gap:4px;z-index:3}
 .sv-zoom .sv-btn{width:32px;height:32px;padding:0;font-size:16px;line-height:1}
-.sv-muni{fill:var(--color-panel);stroke:var(--color-border-line);stroke-width:.8;vector-effect:non-scaling-stroke;cursor:pointer}
-.sv-muni.con{fill:color-mix(in srgb,var(--color-fg) 7%,var(--color-panel))}
+.sv-maphint{position:absolute;left:8px;bottom:8px;z-index:3;margin:0;max-width:calc(100% - 16px);font-size:var(--cds-font-size-caption);color:var(--color-fg-muted);background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:999px;padding:2px 10px;pointer-events:none}
+.sv-maphint.sv-err{color:var(--color-bad)}
+.sv-attrib{position:absolute;right:1px;bottom:1px;z-index:2;margin:0;font-size:10px;line-height:1.4;color:var(--color-fg-muted);background:color-mix(in srgb,var(--color-panel) 85%,transparent);padding:0 5px;border-radius:var(--cds-radius) 0 var(--cds-radius) 0;pointer-events:none}
+.sv-muni{fill:transparent;stroke:var(--color-border-line);stroke-width:.8;vector-effect:non-scaling-stroke;cursor:pointer}
+.sv-muni.con{fill:color-mix(in srgb,var(--color-fg) 6%,transparent)}
+.sv-cerca .sv-muni.con{fill:transparent}
+.sv-cerca .sv-muni{stroke:var(--color-fg-muted);stroke-dasharray:6 4}
 .sv-pt{cursor:pointer}
 .sv-pt circle{stroke:var(--color-bg);stroke-width:1.5}
 .sv-pt.aprox circle{fill:var(--color-bg)!important;stroke-width:2;stroke-dasharray:3 2}
@@ -118,9 +124,9 @@
   <header class="sv-head" id="cabecera">
     <p class="sv-eyebrow">SeMá Deal Finder</p>
     <h1 class="sv-title">Subastas de inmuebles</h1>
-    <p class="sv-lede" data-read lang="es">Se están celebrando <b class="dash-skeleton" data-draw="sp-kpi" data-source="sp_resumen" data-field="activas" data-row="0">—</b> subastas de <span data-draw="sp-bien-txt">—</span> en el Portal de Subastas del BOE con el bien en <span data-draw="sp-prov-txt">—</span>, según la búsqueda del <b class="dash-skeleton" data-draw="sp-kpi" data-fmt="fecha" data-source="sp_resumen" data-field="fecha_busqueda" data-row="0">—</b>. <b class="dash-skeleton" data-draw="sp-kpi" data-source="sp_resumen" data-field="concluyen7" data-row="0">—</b> concluyen en los 7 días siguientes y <b class="dash-skeleton" data-draw="sp-kpi" data-source="sp_resumen" data-field="con_pujas" data-row="0">—</b> ya tienen alguna puja.</p>
-    <p class="sv-err" data-sp-err hidden>No se han podido cargar las subastas desde Google Drive.</p>
-    <p class="sv-warnbox" data-sp-sinprov hidden>Todavía no se ha hecho la búsqueda de subastas de esta provincia: solo aparecen sus bienes que están dentro de subastas de otras búsquedas. Se descargan desde GitHub, en el flujo «Portal de Subastas (códigos y fichas)», escribiendo su código de provincia (28 Madrid, 08 Barcelona, 21 Huelva).</p>
+    <p class="sv-lede" data-read="" lang="es">Se están celebrando <b class="dash-skeleton" data-draw="sp-kpi" data-source="sp_resumen" data-field="activas" data-row="0">—</b> subastas de <span data-draw="sp-bien-txt">—</span> en el Portal de Subastas del BOE con el bien en <span data-draw="sp-prov-txt">—</span>, según la búsqueda del <b class="dash-skeleton" data-draw="sp-kpi" data-fmt="fecha" data-source="sp_resumen" data-field="fecha_busqueda" data-row="0">—</b>. <b class="dash-skeleton" data-draw="sp-kpi" data-source="sp_resumen" data-field="concluyen7" data-row="0">—</b> concluyen en los 7 días siguientes y <b class="dash-skeleton" data-draw="sp-kpi" data-source="sp_resumen" data-field="con_pujas" data-row="0">—</b> ya tienen alguna puja.</p>
+    <p class="sv-err" data-sp-err="" hidden="">No se han podido cargar las subastas desde Google Drive.</p>
+    <p class="sv-warnbox" data-sp-sinprov="" hidden="">Todavía no se ha hecho la búsqueda de subastas de esta provincia: solo aparecen sus bienes que están dentro de subastas de otras búsquedas. Se descargan desde GitHub, en el flujo «Portal de Subastas (códigos y fichas)», escribiendo su código de provincia (28 Madrid, 08 Barcelona).</p>
   </header>
 
   <section class="sv-kpis" id="resumen" aria-label="Resumen de las subastas que se celebran">
@@ -137,22 +143,20 @@
     <p class="sv-note"><b data-draw="sp-ubic" data-source="sp_ubic_resumen" data-field="exactos" data-row="0">—</b> de los <b data-draw="sp-ubic" data-source="sp_ubic_resumen" data-field="inmuebles" data-row="0">—</b> inmuebles del listado tienen su ubicación exacta: <b data-draw="sp-ubic" data-source="sp_ubic_resumen" data-field="parcela" data-row="0">—</b> por su referencia catastral y <b data-draw="sp-ubic" data-source="sp_ubic_resumen" data-field="direccion" data-row="0">—</b> por su dirección comprobada. Con punto hueco: <b data-draw="sp-ubic" data-source="sp_ubic_resumen" data-field="calle" data-row="0">—</b> en su calle sin el número exacto y <b data-draw="sp-ubic" data-source="sp_ubic_resumen" data-field="aproximados" data-row="0">—</b> en el centro de su municipio. En <b data-draw="sp-ubic" data-source="sp_ubic_resumen" data-field="no_coinciden" data-row="0">—</b> la dirección de la ficha no coincide con la oficial (⚠): revísalas en su ficha.</p>
     <div class="sv-geo">
       <div class="sv-mapwrap">
-        <div class="sv-mapbox" data-draw="sp-mapa" data-source="sp_puntos limites"></div>
+        <div class="sv-mapbox" data-draw="sp-mapa" data-source="sp_puntos limites calles_red"></div>
         <div class="sv-zoom" aria-label="Zoom del mapa">
           <button type="button" class="sv-btn" data-zoom="1" aria-label="Acercar">+</button>
           <button type="button" class="sv-btn" data-zoom="-1" aria-label="Alejar">−</button>
           <button type="button" class="sv-btn" data-zoom="0" aria-label="Ver toda la provincia">⟲</button>
         </div>
+        <p class="sv-maphint" data-sp-calles="lejos">Acerca el mapa para ver todas las calles</p>
+        <p class="sv-maphint" data-sp-calles="cargando" data-sp-calles-prov="41" data-source="calles" hidden="">Cargando las calles…</p>
+        <p class="sv-maphint sv-err" data-sp-calles="error" hidden="">No se han podido cargar las calles</p>
+        <p class="sv-attrib" data-source="calles_red">© colaboradores de OpenStreetMap</p>
+        <span data-sp-mapa-prov="21" data-source="limites_21" hidden=""></span>
       </div>
-      <p class="sv-err" data-sp-err-mapa hidden>No se han podido cargar los límites municipales desde Google Drive.</p>
+      <p class="sv-err" data-sp-err-mapa="" hidden="">No se han podido cargar los límites municipales desde Google Drive.</p>
       <div>
-        <h3 class="sv-h3">Subastas por municipio</h3>
-        <div class="sv-tablewrap sv-tablewrap-s">
-          <table class="sv-table" id="tabla-municipios" data-source="sp_municipios" data-row-key="municipio_ine">
-            <thead><tr><th data-field="municipio">Municipio</th><th class="num" data-field="subastas">Subastas</th></tr></thead>
-            <tbody data-draw="sp-tabla-mun"></tbody>
-          </table>
-        </div>
       </div>
     </div>
     <div class="sv-legend" id="mapa-leyenda" data-source="sp_puntos">
@@ -161,7 +165,6 @@
       <span class="sv-leg"><span class="sv-dot" data-draw="sp-color" data-i="2"></span>Otras administraciones</span>
       <span class="sv-leg"><span class="sv-dot sv-dot-aprox"></span>Ubicación aproximada</span>
     </div>
-    <p class="sv-note">Ubicación exacta: la parcela del Catastro (por la referencia catastral de la ficha) o la dirección en CartoCiudad (IGN) cuando coinciden calle y número con la ficha. Este mapa no puede cargar el mapa del Catastro ni el de Google: en la ficha de cada inmueble están su mapa del Catastro, su foto aérea y los enlaces. Un número dentro del punto indica varios inmuebles en el mismo sitio. Pulsa un punto para ver su subasta o un municipio para filtrar; acerca con los botones, la rueda o pellizcando. El mapa es de la provincia de Sevilla.</p>
   </section>
 
   <section class="sv-card" id="listado" aria-labelledby="listado-titulo">
@@ -190,9 +193,9 @@
         </select>
       </label>
       <label class="sv-field sv-field-grow">Buscar
-        <input class="sv-input" type="search" data-sp-q placeholder="SUB, calle, municipio, código postal, referencia catastral…" aria-label="Buscar en las subastas">
+        <input class="sv-input" type="search" data-sp-q="" placeholder="SUB, calle, municipio, código postal, referencia catastral…" aria-label="Buscar en las subastas">
       </label>
-      <button type="button" class="sv-btn" data-sp-reset hidden>Quitar filtros</button>
+      <button type="button" class="sv-btn" data-sp-reset="" hidden="">Quitar filtros</button>
       <p class="sv-count"><b data-draw="sp-n" data-source="sp_n">—</b> subastas con estos filtros</p>
     </div>
     <div class="sv-main">
@@ -212,14 +215,14 @@
             <tbody data-draw="sp-tabla"></tbody>
           </table>
         </div>
-        <p class="sv-empty" data-sp-vacio hidden>Ninguna subasta cumple estos filtros.</p>
-        <p class="sv-err" data-sp-err hidden>No se ha podido cargar el listado desde Google Drive.</p>
+        <p class="sv-empty" data-sp-vacio="" hidden="">Ninguna subasta cumple estos filtros.</p>
+        <p class="sv-err" data-sp-err="" hidden="">No se ha podido cargar el listado desde Google Drive.</p>
         <p class="sv-note">La ubicación es la de cada bien en su ficha del Portal (dirección, código postal y municipio); si una subasta tiene varios, salen todos los que cumplen el filtro. Pulsa una fila para ver la ficha completa. En las subastas con varios lotes el Portal da el valor de cada lote; aquí se muestra el menor («desde»).</p>
       </div>
 
       <aside class="sv-detail" id="ficha" aria-labelledby="ficha-titulo">
-        <p class="sv-empty" data-sp-sin-sel>Elige una subasta del listado para ver su ficha.</p>
-        <div class="sv-card" data-sp-con-sel hidden>
+        <p class="sv-empty" data-sp-sin-sel="">Elige una subasta del listado para ver su ficha.</p>
+        <div class="sv-card" data-sp-con-sel="" hidden="">
           <h2 class="sv-h2" id="ficha-titulo"><span class="sv-sub" data-draw="sp-det" data-k="sub" data-source="sp_detalle" data-field="sub" data-row="0">—</span></h2>
           <p class="sv-note"><span data-draw="sp-det-enlace"></span> · consultada el <span data-draw="sp-det" data-k="consultado_utc" data-fmt="fechahora">—</span></p>
           <dl class="sv-kv">
@@ -237,7 +240,7 @@
             <dt>Pujas</dt><dd data-draw="sp-det" data-k="pujas" data-source="sp_detalle" data-field="pujas" data-row="0">—</dd>
             <dt>Anuncio del BOE</dt><dd data-draw="sp-det" data-k="anuncio_boe" data-source="sp_detalle" data-field="anuncio_boe" data-row="0">—</dd>
           </dl>
-          <p class="sv-warnbox" data-sp-restringido hidden>Parte de la información de esta subasta solo se muestra a usuarios registrados en el Portal (información complementaria o importe de las pujas). Esa parte no se descarga.</p>
+          <p class="sv-warnbox" data-sp-restringido="" hidden="">Parte de la información de esta subasta solo se muestra a usuarios registrados en el Portal (información complementaria o importe de las pujas). Esa parte no se descarga.</p>
 
           <h3 class="sv-h3" id="ficha-lotes">Lotes</h3>
           <div class="sv-tablewrap sv-tablewrap-s">
@@ -275,7 +278,7 @@
       <li><b>Base de datos.</b> Cada dato del panel sale de esas páginas guardadas y lleva su pestaña y URL de origen («Todos los datos de la ficha»). Los importes son los del Portal; «desde» en el listado es el menor valor de los lotes.</li>
       <li><b>Lo que no se ve.</b> Lo que el Portal solo enseña a usuarios registrados (información complementaria, importe de las pujas) no se descarga. Los datos del acreedor se guardan en la base del proyecto pero no se muestran aquí.</li>
     </ol>
-    <p>Fuente: Agencia Estatal Boletín Oficial del Estado, <a href="https://subastas.boe.es">Portal de Subastas</a> y <a href="https://www.boe.es">BOE</a>. Los datos se actualizan cuando se lanza la descarga en GitHub.</p>
+    <p>Fuente: Agencia Estatal Boletín Oficial del Estado, <a href="https://subastas.boe.es">Portal de Subastas</a> y <a href="https://www.boe.es">BOE</a>. Sevilla y Huelva se descargan cada madrugada en GitHub; otras provincias, cuando se lanza su descarga.</p>
   </details>
 </div>
 
@@ -305,7 +308,7 @@
       <dt>Marca y modelo</dt><dd data-b="marca_modelo"></dd>
       <dt>Matrícula</dt><dd data-b="matricula"></dd>
     </dl>
-    <div class="sv-mini" data-b-mapa hidden>
+    <div class="sv-mini" data-b-mapa="" hidden="">
       <div class="sv-mini-capas" role="group" aria-label="Capa del mapa de detalle">
         <button type="button" class="sv-btn" data-capa="catastro" aria-pressed="true">Catastro</button>
         <button type="button" class="sv-btn" data-capa="orto" aria-pressed="false">Foto aérea</button>
@@ -360,7 +363,7 @@ dash.loader('sp_mapa', {
     return { columns: ['base', 'capa', 'imagen', 'archivo'], rows, meta: [{ label: 'Archivos en Drive', value: String(rows.length) }] };
   }
 });
-['sp_subastas', 'sp_lotes', 'sp_bienes', 'sp_campos', 'sp_documentos', 'sp_pendientes', 'sp_capturas', 'limites'].forEach((id) => {
+['sp_subastas', 'sp_lotes', 'sp_bienes', 'sp_campos', 'sp_documentos', 'sp_pendientes', 'sp_capturas', 'limites', 'limites_21'].forEach((id) => {
   dash.loader(id, {
     description: 'Toma el archivo más reciente de esta tabla en la carpeta del panel en Google Drive, lo lee y lo descomprime (JSON con gzip y en base64). Si Drive aún no ofrece el contenido del más reciente, usa el anterior.',
     fn: leerTablaDrive
@@ -432,6 +435,13 @@ window.SP = window.SP || {};
     return (SP.NO_COINCIDE[b.direccion_comprobacion] ? '⚠ ' : '') + t;
   };
   SP.baseMapa = function (b) { return (b.sub + '_' + (b.lote || 0) + '_' + b.bien).replace(/[^A-Za-z0-9_-]/g, '-'); };
+  /* Provincias con mapa: sus límites municipales y sus calles. Con «Todas», el mapa enseña las dos. alto = alto/ancho
+     fijo del mapa de una provincia (el de Sevilla, como estaba); si no, sale de la forma de lo que se dibuja. */
+  SP.MAPAS = {
+    '41': { nombre: 'Sevilla', limites: 'limites', red: 'calles_red', calles: 'calles', alto: 0.82 },
+    '21': { nombre: 'Huelva', limites: 'limites_21', red: null, calles: null }
+  };
+  SP.provsMapa = function (prov) { return prov ? (SP.MAPAS[prov] ? [prov] : []) : Object.keys(SP.MAPAS).sort().reverse(); };
 })(window.SP);
 </script>
 
@@ -629,14 +639,17 @@ dash.calc('sp_det_campos', { title: 'Todos los datos de la subasta elegida', des
     document.querySelectorAll('[data-sp-reset]').forEach(function (b) { b.hidden = !(p.sp_bien || p.sp_grupo || p.sp_mun || p.sp_q || p.sp_orden); });
     var d = dash.data('sp_subastas'), caps = dash.data('sp_capturas');
     document.querySelectorAll('[data-sp-err]').forEach(function (e) { e.hidden = d.status !== 'error'; });
-    var lim = dash.data('limites');
-    document.querySelectorAll('[data-sp-err-mapa]').forEach(function (e) { e.hidden = lim.status !== 'error'; });
+    var limErr = SP.provsMapa(p.prov).some(function (c) { return dash.data(SP.MAPAS[c].limites).status === 'error'; });
+    document.querySelectorAll('[data-sp-err-mapa]').forEach(function (e) { e.hidden = !limErr; });
     var sinProv = !!p.prov && caps.status === 'ok' && !caps.data.some(function (c) { return c.provincia === p.prov; });
     document.querySelectorAll('[data-sp-sinprov]').forEach(function (e) { e.hidden = !sinProv; });
     var res = dash.data('sp_resumen');
     var vacia = sinProv && res.status === 'ok' && Array.isArray(res.data) && res.data[0] && res.data[0].activas === 0;
     document.querySelectorAll('#cabecera .sv-lede, #resumen, #listado').forEach(function (e) { e.hidden = vacia; });
-    document.querySelectorAll('#mapa').forEach(function (e) { e.hidden = !!p.prov && p.prov !== '41'; });
+    var provsMapa = SP.provsMapa(p.prov);
+    document.querySelectorAll('#mapa').forEach(function (e) { e.hidden = !provsMapa.length; });
+    document.querySelectorAll('[data-sp-mapa-prov]').forEach(function (e) { e.hidden = provsMapa.indexOf(e.getAttribute('data-sp-mapa-prov')) < 0; });
+    document.querySelectorAll('.sv-attrib').forEach(function (e) { e.hidden = !provsMapa.some(function (c) { return SP.MAPAS[c].red; }); });
     var l = dash.data('sp_lista');
     document.querySelectorAll('[data-sp-vacio]').forEach(function (e) { e.hidden = !(l.status === 'ok' && Array.isArray(l.data) && l.data.length === 0); });
     var hay = !!p.sp_sel;
@@ -749,18 +762,220 @@ dash.calc('sp_det_campos', { title: 'Todos los datos de la subasta elegida', des
   var PRECISION = { parcela: 'la parcela de su referencia catastral (Catastro)', direccion: 'su dirección, comprobada en CartoCiudad',
     calle: 'en su calle, pero el número de la ficha no está en CartoCiudad', municipio: 'aproximado, en el centro de su municipio' };
 
+  /* Calles de OpenStreetMap: decenas de miles de tramos, así que van en un canvas bajo el SVG.
+     m = ancho real en metros; min = ancho mínimo en píxeles; tono = % de --color-fg sobre el fondo;
+     mpp = se dibujan por debajo de estos metros por píxel; orden = de menos a más importante. */
+  var ESTILO = {
+    motorway: { m: 22, min: 1.6, tono: 50, mpp: Infinity, orden: 10 },
+    trunk: { m: 18, min: 1.4, tono: 46, mpp: Infinity, orden: 9 },
+    primary: { m: 15, min: 1.2, tono: 42, mpp: Infinity, orden: 8 },
+    secondary: { m: 13, min: 1, tono: 36, mpp: 150, orden: 7 },
+    tertiary: { m: 11, min: 0.8, tono: 30, mpp: 60, orden: 6 },
+    unclassified: { m: 8, min: 0.6, tono: 26, mpp: 30, orden: 5 },
+    residential: { m: 8, min: 0.6, tono: 26, mpp: 30, orden: 5 },
+    road: { m: 7, min: 0.6, tono: 22, mpp: 30, orden: 4 },
+    living_street: { m: 7, min: 0.6, tono: 22, mpp: 30, orden: 4 },
+    pedestrian: { m: 6, min: 0.5, tono: 18, mpp: 30, orden: 3, peatonal: true },
+    service: { m: 5, min: 0.5, tono: 18, mpp: 15, orden: 2 }
+  };
+  var CLAVES = Object.keys(ESTILO).sort(function (a, b) { return ESTILO[a].orden - ESTILO[b].orden; });
+  var MPP_CALLES = 40, MPP_NOMBRES = 8, MPP_MIN = 0.6, BORDE_PX = 3.5;
+
+  function rgbDe(m, css) {
+    m.sonda.style.color = '';
+    m.sonda.style.color = css;
+    var x = m.pixel;
+    x.clearRect(0, 0, 1, 1); x.fillStyle = '#808080'; x.fillStyle = getComputedStyle(m.sonda).color; x.fillRect(0, 0, 1, 1);
+    var d = x.getImageData(0, 0, 1, 1).data;
+    return [d[0], d[1], d[2]];
+  }
+  function colores(m) {
+    var fg = rgbDe(m, 'var(--color-fg)'), fondo = rgbDe(m, 'var(--color-panel)');
+    var mez = function (p) { return 'rgb(' + [0, 1, 2].map(function (i) { return Math.round(fg[i] * p / 100 + fondo[i] * (1 - p / 100)); }).join(',') + ')'; };
+    var c = { fondo: 'rgb(' + fondo.join(',') + ')', texto: mez(72), borde: mez(32), peatonal: mez(8), linea: {} };
+    CLAVES.forEach(function (t) { c.linea[t] = mez(ESTILO[t].tono); });
+    return c;
+  }
+  /* Pasa las coordenadas del archivo (enteros relativos a `origen`) a píxeles del mapa, con la caja de cada
+     tramo y su segmento más largo (donde va su nombre). */
+  function decodificar(doc, proj) {
+    var vias = doc.vias, tipos = doc.tipos || [], o = doc.origen || [0, 0], e = doc.escala || 1e5;
+    var total = 0;
+    vias.forEach(function (v) { total += (v.length - 2) / 2; });
+    var n = vias.length, xy = new Float32Array(total * 2), ini = new Int32Array(n + 1), caja = new Float32Array(n * 4);
+    var larga = new Float32Array(n * 5), tipo = new Array(n), nombre = new Int32Array(n), p = 0;
+    vias.forEach(function (v, i) {
+      tipo[i] = ESTILO[tipos[v[0]]] ? tipos[v[0]] : 'road';
+      nombre[i] = v[1];
+      ini[i] = p;
+      var ix = 0, iy = 0, x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+      for (var j = 2; j < v.length; j += 2) {
+        ix += v[j]; iy += v[j + 1];
+        var q = proj([o[0] + ix / e, o[1] + iy / e]), x = q[0], y = q[1];
+        xy[p * 2] = x; xy[p * 2 + 1] = y; p++;
+        if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y;
+      }
+      caja[i * 4] = x0; caja[i * 4 + 1] = y0; caja[i * 4 + 2] = x1; caja[i * 4 + 3] = y1;
+      /* Trozo casi recto más largo: se alarga mientras cada segmento no se desvíe más de 20° de la dirección del trozo */
+      var mejor = -1, a0 = ini[i], b0 = i * 5;
+      for (var r0 = a0; r0 < p - 1; ) {
+        var dir = Math.atan2(xy[r0 * 2 + 3] - xy[r0 * 2 + 1], xy[r0 * 2 + 2] - xy[r0 * 2]), r1 = r0 + 1;
+        while (r1 < p - 1) {
+          var dd = Math.atan2(xy[r1 * 2 + 3] - xy[r1 * 2 + 1], xy[r1 * 2 + 2] - xy[r1 * 2]) - dir;
+          dd = Math.abs(Math.atan2(Math.sin(dd), Math.cos(dd)));
+          if (dd > 0.35) break;
+          r1++;
+        }
+        var lc = Math.hypot(xy[r1 * 2] - xy[r0 * 2], xy[r1 * 2 + 1] - xy[r0 * 2 + 1]);
+        if (lc > mejor) { mejor = lc; larga[b0] = xy[r0 * 2]; larga[b0 + 1] = xy[r0 * 2 + 1]; larga[b0 + 2] = xy[r1 * 2]; larga[b0 + 3] = xy[r1 * 2 + 1]; larga[b0 + 4] = lc; }
+        r0 = r1;
+      }
+    });
+    ini[n] = p;
+    return { n: n, xy: xy, ini: ini, caja: caja, larga: larga, tipo: tipo, nombre: nombre, nombres: doc.nombres || [] };
+  }
+  function pintar(m) {
+    m.pendiente = false;
+    var cv = m.canvas, ctx = m.ctx;
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    if (!m.w) return;
+    m.col = colores(m);
+    var t = m.t, k = t.k, s = m.s, dpr = m.dpr, a = dpr * s, w = m.w, h = m.h;
+    ctx.setTransform(a * k, 0, 0, a * k, a * t.x, a * t.y);
+    if (m.provPath) { ctx.fillStyle = m.col.fondo; ctx.fill(m.provPath); }
+    var mpp = m.mpp1 / (k * s);
+    var vx0 = -t.x / k, vy0 = -t.y / k, vx1 = (w - t.x) / k, vy1 = (h - t.y) / k;
+    var grupos = {};
+    m.capas.forEach(function (c) {
+      for (var i = 0; i < c.n; i++) {
+        if (mpp >= ESTILO[c.tipo[i]].mpp) continue;
+        var b = i * 4;
+        if (c.caja[b] > vx1 || c.caja[b + 2] < vx0 || c.caja[b + 1] > vy1 || c.caja[b + 3] < vy0) continue;
+        (grupos[c.tipo[i]] || (grupos[c.tipo[i]] = [])).push(c, i);
+      }
+    });
+    var trazos = CLAVES.filter(function (tp) { return grupos[tp]; }).map(function (tp) {
+      var g = grupos[tp], path = new Path2D();
+      for (var j = 0; j < g.length; j += 2) {
+        var c = g[j], i = g[j + 1], p0 = c.ini[i], p1 = c.ini[i + 1];
+        path.moveTo(c.xy[p0 * 2], c.xy[p0 * 2 + 1]);
+        for (var p = p0 + 1; p < p1; p++) path.lineTo(c.xy[p * 2], c.xy[p * 2 + 1]);
+      }
+      var est = ESTILO[tp];
+      return { tp: tp, est: est, path: path, px: Math.max(est.min, est.m / mpp) };
+    });
+    var u = 1 / (s * k);
+    ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    trazos.forEach(function (z) {
+      if (z.px < BORDE_PX) return;
+      ctx.strokeStyle = m.col.borde; ctx.lineWidth = (z.px + 2) * u; ctx.stroke(z.path);
+    });
+    trazos.forEach(function (z) {
+      ctx.strokeStyle = z.px >= BORDE_PX ? (z.est.peatonal ? m.col.peatonal : m.col.fondo) : m.col.linea[z.tp];
+      ctx.lineWidth = z.px * u; ctx.stroke(z.path);
+    });
+    if (mpp < MPP_NOMBRES * 2.5) rotular(m, trazos, grupos, mpp);
+  }
+  /* Nombres de las calles sobre su tramo más largo, sin que se pisen ni se repitan cerca */
+  function rotular(m, trazos, grupos, mpp) {
+    var ctx = m.ctx, t = m.t, k = t.k, s = m.s, W = m.w * s, H = m.h * s;
+    ctx.setTransform(m.dpr, 0, 0, m.dpr, 0, 0);
+    ctx.font = m.fuente; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    var cand = [];
+    trazos.forEach(function (z) {
+      if (mpp >= MPP_NOMBRES && z.est.orden < 6) return;   // de lejos, solo las vías principales
+      var g = grupos[z.tp];
+      for (var j = 0; j < g.length; j += 2) {
+        var c = g[j], i = g[j + 1];
+        if (c.nombre[i] < 0) continue;
+        var len = c.larga[i * 5 + 4] * k * s;
+        if (len >= 36) cand.push({ c: c, i: i, len: len, orden: z.est.orden });
+      }
+    });
+    cand.sort(function (x, y) { return y.orden - x.orden || y.len - x.len; });
+    var puestos = [], porNombre = new Map(), dibujar = [];
+    for (var q = 0; q < cand.length && q < 4000 && dibujar.length < 260; q++) {
+      var cd = cand[q], c = cd.c, b = cd.i * 5, nm = c.nombres[c.nombre[cd.i]];
+      if (!nm) continue;
+      var ancho = m.anchos.get(nm);
+      if (ancho == null) { ancho = ctx.measureText(nm).width; m.anchos.set(nm, ancho); }
+      if (cd.len < ancho + 12) continue;
+      var x1 = s * (t.x + k * c.larga[b]), y1 = s * (t.y + k * c.larga[b + 1]);
+      var x2 = s * (t.x + k * c.larga[b + 2]), y2 = s * (t.y + k * c.larga[b + 3]);
+      var cx = (x1 + x2) / 2, cy = (y1 + y2) / 2;
+      if (cx < 0 || cx > W || cy < 0 || cy > H) continue;
+      var ang = Math.atan2(y2 - y1, x2 - x1);
+      if (ang > Math.PI / 2) ang -= Math.PI; else if (ang < -Math.PI / 2) ang += Math.PI;
+      var co = Math.abs(Math.cos(ang)), si = Math.abs(Math.sin(ang)), hw = (ancho + 6) / 2, hh = 8;
+      var r = [cx - (co * hw + si * hh), cy - (si * hw + co * hh), cx + (co * hw + si * hh), cy + (si * hw + co * hh)];
+      var antes = porNombre.get(nm);
+      if (antes && antes.some(function (p) { return Math.hypot(p[0] - cx, p[1] - cy) < 220; })) continue;
+      if (puestos.some(function (p) { return r[0] < p[2] && r[2] > p[0] && r[1] < p[3] && r[3] > p[1]; })) continue;
+      puestos.push(r);
+      if (!antes) porNombre.set(nm, antes = []);
+      antes.push([cx, cy]);
+      dibujar.push([nm, cx, cy, ang]);
+    }
+    ctx.lineJoin = 'round'; ctx.lineWidth = 3; ctx.strokeStyle = m.col.fondo; ctx.fillStyle = m.col.texto;
+    dibujar.forEach(function (d) {
+      ctx.save(); ctx.translate(d[1], d[2]); ctx.rotate(d[3]);
+      ctx.strokeText(d[0], 0, 0); ctx.fillText(d[0], 0, 0);
+      ctx.restore();
+    });
+  }
+  function pedirPintar(m) {
+    if (m.pendiente) return;
+    m.pendiente = true;
+    requestAnimationFrame(function () { pintar(m); });
+  }
+  /* Al acercar por debajo de MPP_CALLES se piden el resto de calles (solo entonces se descargan) */
+  function avisos(el, m) {
+    var mpp = m.mpp1 ? m.mpp1 / (m.t.k * m.s) : Infinity, cerca = mpp < MPP_CALLES;
+    if (cerca && !m.quiere) { m.quiere = true; setTimeout(function () { dash.draw('sp-mapa'); }, 0); }
+    var provs = (m.provs || []).filter(function (c) { return SP.MAPAS[c].calles; }), est = {};
+    provs.forEach(function (c) { est[c] = m.quiere ? dash.data(SP.MAPAS[c].calles).status : ''; });
+    var vals = provs.map(function (c) { return est[c]; });
+    var st = vals.indexOf('loading') >= 0 ? 'loading' : vals.indexOf('error') >= 0 ? 'error' : vals.length && vals.every(function (v) { return v === 'ok'; }) ? 'ok' : '';
+    var clave = provs.join(',');
+    if (st === 'ok' && !m.conCalles && m.redibujado !== clave) { m.redibujado = clave; setTimeout(function () { dash.draw('sp-mapa'); }, 0); }
+    if (st === 'loading' && !m.esperando) { m.esperando = true; setTimeout(function () { m.esperando = false; avisos(el, m); }, 600); }
+    m.svg.classed('sv-cerca', cerca);
+    var caja = el.parentNode;
+    if (!caja) return;
+    var puesto = false;
+    caja.querySelectorAll('[data-sp-calles]').forEach(function (p) {
+      var cual = p.getAttribute('data-sp-calles'), ver;
+      if (!provs.length) ver = false;  // ninguna provincia del mapa tiene calles
+      else if (cual === 'lejos') ver = !cerca;
+      else if (cual === 'cargando') { ver = cerca && !puesto && est[p.getAttribute('data-sp-calles-prov')] === 'loading'; if (ver) puesto = true; }
+      else ver = cerca && st === 'error';
+      p.hidden = !ver;
+    });
+  }
+
   dash.draw('sp-mapa', {
     mount: function (el) {
-      var svg = d3.select(el).append('svg').attr('role', 'img')
-        .attr('aria-label', 'Mapa de la provincia de Sevilla con un punto por cada inmueble en subasta, del color de la administración que la celebra');
+      var lienzo = d3.select(el).append('canvas').attr('aria-hidden', 'true');
+      var svg = d3.select(el).append('svg').attr('role', 'img');
       var capa = svg.append('g');
-      var m = { svg: svg, capa: capa, munis: capa.append('g'), linea: capa.append('g'), puntos: capa.append('g'), k: 1 };
+      var pixel = document.createElement('canvas');
+      pixel.width = pixel.height = 1;
+      var m = { svg: svg, capa: capa, munis: capa.append('g'), linea: capa.append('g'), puntos: capa.append('g'), k: 1,
+        canvas: lienzo.node(), ctx: lienzo.node().getContext('2d'), pixel: pixel.getContext('2d', { willReadFrequently: true }),
+        t: d3.zoomIdentity, capas: [], cache: {}, anchos: new Map(), quiere: false };
+      m.sonda = d3.select(el).append('span').attr('hidden', '').node();
       m.tip = d3.select(el).append('div').attr('class', 'sv-tip').attr('hidden', '');
       m.escala = function () {
         m.puntos.selectAll('g.sv-pt').attr('transform', function (d) { return 'translate(' + d.x + ',' + d.y + ') scale(' + (1 / m.k) + ')'; });
       };
-      m.zoom = d3.zoom().scaleExtent([1, 24]).on('zoom', function (e) { m.k = e.transform.k; capa.attr('transform', e.transform); m.escala(); m.tip.attr('hidden', ''); });
+      m.zoom = d3.zoom().scaleExtent([1, 24]).on('zoom', function (e) {
+        m.k = e.transform.k; m.t = e.transform;
+        capa.attr('transform', e.transform); m.escala(); m.tip.attr('hidden', '');
+        avisos(el, m); pedirPintar(m);
+      });
       svg.call(m.zoom);
+      if (window.matchMedia) window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () { pedirPintar(m); });
       var dur = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 300;
       SP.zoomMapa = function (dir) {
         if (dir === 0) svg.transition().duration(dur).call(m.zoom.transform, d3.zoomIdentity);
@@ -769,32 +984,81 @@ dash.calc('sp_det_campos', { title: 'Todos los datos de la subasta elegida', des
       return m;
     },
     update: function (el, m) {
-      var lim = dash.data('limites'), pts = dash.data('sp_puntos');
-      if (lim.status !== 'ok' || !lim.data || !Array.isArray(lim.data.features)) { m.munis.selectAll('*').remove(); m.puntos.selectAll('*').remove(); return; }
-      var w = Math.max(240, el.clientWidth), h = Math.round(w * 0.82);
+      var p = dash.params() || {}, pts = dash.data('sp_puntos');
+      /* Provincias del mapa con sus límites ya cargados; mientras alguna carga, se deja el dibujo anterior */
+      var pedidas = SP.provsMapa(p.prov);
+      var lims = pedidas.map(function (c) { return dash.data(SP.MAPAS[c].limites); });
+      var listos = function (l) { return l.status === 'ok' && l.data && Array.isArray(l.data.features); };
+      if (lims.some(function (l) { return l.status === 'loading' && !listos(l); }) && m.w) return;
+      var provs = pedidas.filter(function (c, i) { return listos(lims[i]); });
+      if (!provs.length) {
+        m.munis.selectAll('*').remove(); m.puntos.selectAll('*').remove(); m.w = 0; m.capas = []; m.provs = []; pintar(m); return;
+      }
+      var feats = [];
+      provs.forEach(function (c, i) { feats = feats.concat(lims[pedidas.indexOf(c)].data.features); });
+      var munis = feats.filter(function (f) { return !(f.properties && f.properties.provincia); });
+      var provFeats = feats.filter(function (f) { return f.properties && f.properties.provincia; });
+      var contorno = { type: 'FeatureCollection', features: provFeats.length ? provFeats : munis };
+      var w = Math.max(240, el.clientWidth), alto = provs.length === 1 && SP.MAPAS[provs[0]].alto;
+      if (!alto) {
+        var b0 = d3.geoPath(d3.geoMercator().fitSize([1000, 1000], contorno)).bounds(contorno);
+        alto = Math.max(0.55, Math.min(1.05, (b0[1][1] - b0[0][1] + 20) / (b0[1][0] - b0[0][0] + 20)));
+      }
+      var h = Math.round(w * alto);
       m.svg.attr('viewBox', '0 0 ' + w + ' ' + h);
       m.zoom.extent([[0, 0], [w, h]]).translateExtent([[0, 0], [w, h]]);
-      var feats = lim.data.features;
-      var munis = feats.filter(function (f) { return !(f.properties && f.properties.provincia); });
-      var prov = feats.find(function (f) { return f.properties && f.properties.provincia; });
-      var proj = d3.geoMercator().fitExtent([[10, 10], [w - 10, h - 10]], prov || { type: 'FeatureCollection', features: munis });
+      var nombres = provs.map(function (c) { return SP.MAPAS[c].nombre; });
+      m.svg.attr('aria-label', 'Mapa de ' + (nombres.length === 1 ? 'la provincia de ' + nombres[0] : 'las provincias de ' + nombres.join(' y '))
+        + (provs.some(function (c) { return SP.MAPAS[c].red; }) ? ' con sus carreteras y calles (OpenStreetMap)' : '')
+        + ' y un punto por cada inmueble en subasta, del color de la administración que la celebra');
+      var proj = d3.geoMercator().fitExtent([[10, 10], [w - 10, h - 10]], contorno);
       var path = d3.geoPath(proj);
-      var filas = pts.status === 'ok' && Array.isArray(pts.data) ? pts.data : [];
+      var claveProvs = provs.join(',');
+      var otras = m.provs && m.provs.length && m.provs.join(',') !== claveProvs;
+      m.provs = provs;
+      if (otras) m.svg.call(m.zoom.transform, d3.zoomIdentity);  // otra provincia: se ve entera
+      /* Lienzo de las calles, del mismo tamaño que el SVG */
+      var cssW = el.clientWidth || w;
+      m.w = w; m.h = h; m.s = cssW / w; m.dpr = window.devicePixelRatio || 1;
+      var cw = Math.round(cssW * m.dpr), chh = Math.round(h * m.s * m.dpr);
+      if (m.canvas.width !== cw || m.canvas.height !== chh) { m.canvas.width = cw; m.canvas.height = chh; }
+      m.canvas.style.width = cssW + 'px'; m.canvas.style.height = (h * m.s) + 'px';
+      m.mpp1 = 6371008.8 * Math.cos(37.4 * Math.PI / 180) / proj.scale();
+      m.zoom.scaleExtent([1, Math.max(24, m.mpp1 / (m.s * MPP_MIN))]);
+      m.provPath = provFeats.length ? new Path2D(path({ type: 'FeatureCollection', features: provFeats })) : null;
+      m.fuente = '500 11px ' + getComputedStyle(el).fontFamily;
+      var clave = claveProvs + ':' + w + 'x' + h;
+      m.capas = [];
+      var ids = [], detalle = [];
+      provs.forEach(function (c) { if (SP.MAPAS[c].red) ids.push(SP.MAPAS[c].red); });
+      if (m.quiere) provs.forEach(function (c) { if (SP.MAPAS[c].calles) { ids.push(SP.MAPAS[c].calles); detalle.push(SP.MAPAS[c].calles); } });
+      var conDetalle = 0;
+      ids.forEach(function (id) {
+        var d = dash.data(id);
+        if (d.status !== 'ok' || !d.data || !Array.isArray(d.data.vias)) return;
+        var c = m.cache[id];
+        if (!c || c.clave !== clave || (c.doc !== d.data && c.n !== d.data.vias.length)) c = m.cache[id] = { doc: d.data, n: d.data.vias.length, clave: clave, res: decodificar(d.data, proj) };
+        m.capas.push(c.res);
+        if (detalle.indexOf(id) >= 0) conDetalle++;
+      });
+      m.conCalles = detalle.length > 0 && conDetalle === detalle.length;
+      var filas = (pts.status === 'ok' && Array.isArray(pts.data) ? pts.data : []).filter(function (r) {
+        return !r.municipio_ine || provs.indexOf(String(r.municipio_ine).slice(0, 2)) >= 0;
+      });
       var conDatos = new Set(filas.map(function (p) { return p.municipio_ine; }));
-      var p = dash.params() || {};
       var centro = new Map(munis.map(function (f) { return [f.properties.ine, path.centroid(f)]; }));
       m.munis.selectAll('path.sv-muni').data(munis, function (f) { return f.properties.ine; }).join('path')
         .attr('class', function (f) { return 'sv-muni' + (conDatos.has(f.properties.ine) ? ' con' : '') + (f.properties.ine === p.sp_mun ? ' sel' : ''); })
         .attr('d', path)
         .on('click', function (e, f) { dash.setParams({ sp_mun: f.properties.ine === p.sp_mun ? null : f.properties.ine }); });
-      m.linea.selectAll('path.sv-provline').data(prov ? [prov] : []).join('path').attr('class', 'sv-provline').attr('d', path);
+      m.linea.selectAll('path.sv-provline').data(provFeats).join('path').attr('class', 'sv-provline').attr('d', path);
       var grupos = new Map();
       filas.forEach(function (r) {
         var x, y, aprox = false;
         if (r.lat != null && r.lon != null) { var xy = proj([Number(r.lon), Number(r.lat)]); x = xy[0]; y = xy[1]; aprox = r.precision === 'calle'; }
         else if (centro.has(r.municipio_ine)) { var c = centro.get(r.municipio_ine); x = c[0]; y = c[1]; aprox = true; }
         else return;
-        if (!(x >= 0 && x <= w && y >= 0 && y <= h)) return;  // fuera de la provincia de Sevilla
+        if (!(x >= 0 && x <= w && y >= 0 && y <= h)) return;  // fuera de las provincias del mapa
         var k = r.lat == null ? 'm' + r.municipio_ine : Number(r.lat).toFixed(5) + ',' + Number(r.lon).toFixed(5);
         var g = grupos.get(k) || { k: k, x: x, y: y, aprox: aprox, items: [] };
         g.items.push(r);
@@ -832,6 +1096,8 @@ dash.calc('sp_det_campos', { title: 'Todos los datos de la subasta elegida', des
       g.select('text').text(function (d) { return d.items.length > 1 ? d.items.length : ''; })
         .style('fill', function (d) { return d.aprox ? colorGrupo(d.items[0].grupo) : 'var(--color-bg)'; });
       m.escala();
+      avisos(el, m);
+      pintar(m);
     }
   });
 

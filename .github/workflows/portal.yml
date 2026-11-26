@@ -5,8 +5,9 @@ name: Portal de Subastas (códigos y fichas)
 # panel (portal_base.py, sin peticiones). Paso 4: ubicación de cada inmueble con el Catastro y CartoCiudad y
 # comprobación de su dirección (portal_geo.py). Paso 5: mapas de detalle del Catastro y del IGN (portal_mapas.py).
 # Los pasos 4 y 5 guardan las respuestas y no repiten las ya hechas. Todo se guarda en el repositorio.
-# Cada día de madrugada (dos intentos, porque GitHub puede retrasar mucho los programados; el segundo no hace nada si
-# el primero ya descargó ese día) o a mano: pestaña Actions → este flujo → Run workflow. La tarea programada de Claude
+# Cada día de madrugada, Sevilla (41) y después Huelva (21): dos intentos, porque GitHub puede retrasar mucho los
+# programados; el segundo solo descarga la provincia que el primero no haya descargado ese día. También a mano: pestaña
+# Actions → este flujo → Run workflow, con una provincia o varias separadas por espacios. La tarea programada de Claude
 # «SeMá · Subida diaria a Drive» sube después el resultado a Google Drive.
 on:
   schedule:
@@ -15,9 +16,9 @@ on:
   workflow_dispatch:
     inputs:
       provincia:
-        description: "Provincia del bien, código con dos cifras (41 Sevilla, 28 Madrid, 08 Barcelona, 21 Huelva)"
+        description: "Provincia del bien, código con dos cifras (41 Sevilla, 28 Madrid, 08 Barcelona, 21 Huelva); varias, separadas por espacios"
         required: false
-        default: "41"
+        default: "41 21"
       solo_codigos:
         description: "Sacar solo los códigos, sin descargar las fichas"
         type: boolean
@@ -39,7 +40,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
-      PROVINCIA: ${{ github.event.inputs.provincia || '41' }}
+      # Programado: Sevilla y luego Huelva. A mano: las que se escriban.
+      PROVINCIAS: ${{ github.event.inputs.provincia || '41 21' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -51,12 +53,17 @@ jobs:
         id: hoy
         run: |
           HOY=$(TZ=Europe/Madrid date +%Y%m%d)
-          if [ "${{ github.event_name }}" = "schedule" ] && ls -d datos/portal/codigos/"$PROVINCIA"/"${HOY}"_* >/dev/null 2>&1; then
-            echo "hecha=true" >> "$GITHUB_OUTPUT"
-            echo "La descarga de hoy ($HOY) ya está hecha: este intento programado no la repite." | tee -a "$GITHUB_STEP_SUMMARY"
-          else
-            echo "hecha=false" >> "$GITHUB_OUTPUT"
-          fi
+          PENDIENTES=""
+          for P in $PROVINCIAS; do
+            if [ "${{ github.event_name }}" = "schedule" ] && ls -d datos/portal/codigos/"$P"/"${HOY}"_* >/dev/null 2>&1; then
+              echo "La descarga de hoy ($HOY) de la provincia $P ya está hecha: este intento programado no la repite." | tee -a "$GITHUB_STEP_SUMMARY"
+            else
+              PENDIENTES="$PENDIENTES $P"
+            fi
+          done
+          PENDIENTES="${PENDIENTES# }"
+          echo "provincias=$PENDIENTES" >> "$GITHUB_OUTPUT"
+          if [ -z "$PENDIENTES" ]; then echo "hecha=true" >> "$GITHUB_OUTPUT"; else echo "hecha=false" >> "$GITHUB_OUTPUT"; fi
 
       - name: Pruebas sin red
         if: ${{ steps.hoy.outputs.hecha != 'true' }}
@@ -64,14 +71,31 @@ jobs:
           pip install -q pillow
           python -m unittest tests.test_portal_codigos tests.test_portal_fichas tests.test_portal_base tests.test_portal_geo tests.test_portal_mapas -v
 
+      # Una provincia tras otra, en el orden escrito (Sevilla primero). Si la búsqueda de una falla, las demás siguen;
+      # el paso 2 solo descarga las fichas de las provincias cuya búsqueda salió bien.
       - name: "Paso 1: códigos SUB activos"
         id: codigos
         if: ${{ steps.hoy.outputs.hecha != 'true' && github.event.inputs.solo_ubicaciones != 'true' }}
-        run: python portal_codigos.py --provincia "$PROVINCIA" --resumen "$GITHUB_STEP_SUMMARY"
+        env:
+          PENDIENTES: ${{ steps.hoy.outputs.provincias }}
+        run: |
+          OK=""; FALLOS=""
+          for P in $PENDIENTES; do
+            if python portal_codigos.py --provincia "$P" --resumen "$GITHUB_STEP_SUMMARY"; then OK="$OK $P"; else FALLOS="$FALLOS $P"; fi
+          done
+          echo "ok=${OK# }" >> "$GITHUB_OUTPUT"
+          if [ -n "$FALLOS" ]; then echo "Búsqueda fallida en la provincia:$FALLOS" >&2; exit 1; fi
 
       - name: "Paso 2: ficha de cada subasta"
-        if: ${{ steps.codigos.outcome == 'success' && github.event.inputs.solo_codigos != 'true' && github.event.inputs.solo_ubicaciones != 'true' }}
-        run: python portal_fichas.py --provincia "$PROVINCIA" --resumen "$GITHUB_STEP_SUMMARY"
+        if: ${{ !cancelled() && steps.codigos.outputs.ok != '' && github.event.inputs.solo_codigos != 'true' && github.event.inputs.solo_ubicaciones != 'true' }}
+        env:
+          OK: ${{ steps.codigos.outputs.ok }}
+        run: |
+          FALLOS=""
+          for P in $OK; do
+            python portal_fichas.py --provincia "$P" --resumen "$GITHUB_STEP_SUMMARY" || FALLOS="$FALLOS $P"
+          done
+          if [ -n "$FALLOS" ]; then echo "Fichas con errores en la provincia:$FALLOS" >&2; exit 1; fi
 
       - name: "Paso 3: base de datos y tablas del panel"
         if: ${{ !cancelled() && steps.hoy.outputs.hecha != 'true' }}
@@ -87,6 +111,8 @@ jobs:
 
       - name: Guardar en el repositorio
         if: ${{ !cancelled() && steps.hoy.outputs.hecha != 'true' }}
+        env:
+          HECHAS: ${{ steps.hoy.outputs.provincias }}
         run: |
           git config user.name "sema-bot"
           git config user.email "sema-bot@users.noreply.github.com"
@@ -94,7 +120,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Sin cambios que guardar"
           else
-            git commit -q -m "Portal: códigos y fichas, provincia $PROVINCIA, $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git commit -q -m "Portal: códigos y fichas, provincias $HECHAS, $(date -u +'%Y-%m-%d %H:%M') UTC"
             git pull -q --rebase origin main
             git push -q
           fi

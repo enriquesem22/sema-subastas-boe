@@ -3,7 +3,7 @@
   "carpeta_drive": "https://drive.google.com/drive/folders/19VpcNE3XFA48HuHf6Yk7KOn2kfinYGFB",
   "nota": "Cada tabla del panel es el archivo más reciente con ese nombre en la carpeta de Drive (JSON con gzip y en base64). El panel guarda la página y estas consultas; los datos se leen al abrirlo con el conector de Google Drive de quien lo abre.",
   "filtros": {
-    "prov": "provincia (código INE)",
+    "prov": "provincia (código INE). El mapa enseña Sevilla (41), Huelva (21) o, con «Todas», las dos",
     "sp_bien": "'' inmuebles · 'todos' · 'otros'",
     "sp_grupo": "administración",
     "sp_mun": "municipio (código INE)",
@@ -58,7 +58,15 @@
       "conector": "Google Drive",
       "herramienta": "search_files",
       "consulta": "title = 'sema-panel-limites.b64.txt' and parentId = '19VpcNE3XFA48HuHf6Yk7KOn2kfinYGFB' and trashed = false",
-      "orden": "modifiedTime desc"
+      "orden": "modifiedTime desc",
+      "nota": "Límites municipales de Sevilla (datos/geo/sevilla-municipios.json, de geo_limites.py)."
+    },
+    "limites_21": {
+      "conector": "Google Drive",
+      "herramienta": "search_files",
+      "consulta": "title = 'sema-panel-limites-21.b64.txt' and parentId = '19VpcNE3XFA48HuHf6Yk7KOn2kfinYGFB' and trashed = false",
+      "orden": "modifiedTime desc",
+      "nota": "Límites municipales de Huelva (datos/geo/huelva-municipios.json, de geo_limites.py). Solo se cargan cuando el mapa enseña Huelva («Huelva» o «Todas»)."
     },
     "sp_mapa": {
       "conector": "Google Drive",
@@ -70,5 +78,12 @@
       "nota": "Solo los mapas de detalle de la subasta elegida (sp_sel). Cada archivo es una imagen en base64 (PNG del Catastro o JPEG de la ortofoto PNOA), sin comprimir."
     }
   },
-  "carpeta_drive_mapas": "https://drive.google.com/drive/folders/1rM-TGd6cV7efaVqY8-MDCk6WWOEKoziB"
+  "carpeta_drive_mapas": "https://drive.google.com/drive/folders/1rM-TGd6cV7efaVqY8-MDCk6WWOEKoziB",
+  "calles": {
+    "nota": "Calles de OpenStreetMap (© colaboradores de OpenStreetMap, ODbL) para dibujar el mapa: archivos fijos del artefacto, no de Drive. calles_red (carreteras y calles principales) se carga al abrir; calles (el resto) al acercar el mapa. Se hacen con calles_osm.py a partir de una consulta a Overpass API.",
+    "sevilla": {
+      "calles_red": "/_blob/7c216a8fc9c61940890fa2ff3fef742f",
+      "calles": "/_blob/75e251afd20c5adce3b4f9d133205624"
+    }
+  }
 }

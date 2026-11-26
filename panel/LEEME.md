@@ -4,6 +4,20 @@
   (https://claude.ai/artifact/H4SSBTA2mTkgTDaMDKAoKb). Es una copia para tenerla versionada: el panel no la lee de aquí.
 - `fuentes.json`: de dónde lee cada tabla (consulta a Google Drive) y qué significa cada filtro.
 
+## Provincias y mapa
+
+La barra de arriba filtra todo el panel por la provincia **de cada bien**. Hay búsqueda diaria de Sevilla (41) y de
+Huelva (21); Madrid y Barcelona solo muestran los bienes que salgan dentro de subastas de esas búsquedas, con un aviso.
+El mapa enseña Sevilla, Huelva o, con «Todas», las dos juntas; con Madrid o Barcelona se oculta. Al cambiar de
+provincia el mapa vuelve a verse entero.
+
+- Límites municipales: `sema-panel-limites.b64.txt` (Sevilla, fuente `limites`) y `sema-panel-limites-21.b64.txt`
+  (Huelva, fuente `limites_21`) en la carpeta del panel de Drive, hechos con `geo_limites.py`. Los de Huelva solo se
+  cargan cuando el mapa enseña Huelva.
+- Calles de OpenStreetMap: las de Sevilla (`calles_red` y `calles`) son archivos fijos del artefacto. Las de Huelva
+  aún no están (hacen falta con `calles_osm.py --provincia 21` y una consulta a Overpass API); mientras no estén, su
+  mapa lleva solo los límites municipales, sin la nota de OpenStreetMap ni el aviso de acercar.
+
 ## Qué muestra la ficha de cada inmueble
 
 Al elegir una subasta, cada bien inmueble tiene, además de los datos de su pestaña «Bienes» del Portal:
