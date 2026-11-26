@@ -84,7 +84,8 @@ class PortalGeoTest(unittest.TestCase):
             base = Path(tmp) / "subastas.sqlite"
             portal_base.construir(raiz, base)
             abrir = Abrir({"RefCat=6297019TG5369N": XML_OK, "RefCat=": XML_ERR,
-                           "cartociudad": jsonp(muni="Alcalá del Río", lat=37.52, lng=-5.98, type="portal", address="X")})
+                           "cartociudad": jsonp(muni="Alcalá del Río", lat=37.52, lng=-5.98, type="portal",
+                                                address="CRUZ CHIQUITA", portalNumber=10, tip_via="POLIGONO")})
             resp = pg.Respuestas(raiz / "geo" / "respuestas", abrir=abrir, dormir=lambda s: None)
             cuenta = pg.ejecutar(raiz, base, resp=resp)
             # los 4 lotes son pisos del mismo edificio: misma parcela, una sola consulta al Catastro
@@ -115,6 +116,53 @@ class PortalGeoTest(unittest.TestCase):
             self.assertIn("NO EXISTE", r["motivo"])
             self.assertIn("otro municipio", r["motivo"])
             self.assertNotIn("lat", r)
+
+
+# Direcciones REALES de las fichas del 25-11-2026 frente a la oficial (Catastro o CartoCiudad) y el resultado correcto
+CASOS_DIRECCION = [
+ ("CL SANTA ANA 1 BJ 2A", "AV ANTONIO MAIRENA", "13", "AV", "Alcalá de Guadaíra", "calle_distinta"),
+ ("Calle Jesús, nº 62, escalera 1, planta baja, puerta izquierda", "CL JESUS", "62", "CL", "Mairena del Alcor", "coincide"),
+ ("PISO 2º, PLANTA 2ª, NUM. 9 C/M ANGEL GANNIVET", "CL ANGEL GANIVET", "9", "CL", "Utrera", "coincide"),
+ ("calle GANDIA, PORTAL 6, 5ª PLANTA, PTA 24 - PARQUE ALCOSA", "CL CIUDAD DE GANDIA", "6", "CL", "Sevilla", "coincide"),
+ ("CALLE HUERTA GAVIRA 25", "HUERTA GAVIRA", 15, "CALLE", "Marchena", "numero_distinto"),
+ ("CL TORREBLANCA 1 -1 B3", "PARSI 1", 13, "CALLE", "Sevilla", "calle_distinta"),
+ ("RONDA DE LA TRINIDAD Nº 20", "TRINIDAD", 20, "RONDA", "Morón de la Frontera", "coincide"),
+ ("EDIFICIO C/ RODRIGO DE TRIANA Nº 66-68", "RODRIGO DE TRIANA", 68, "CALLE", "Pilas", "coincide"),
+ ("Polígono 19 Parcela 17 LA TRINIDAD.", "Polígono 19 Parcela 17 LA TRINIDAD. SEVILLA (SEVILLA)", None, None, "Sevilla", "coincide"),
+ ("HACIENDA DOLORES 8 Nº 1", "CL HACIENDA DOLORES OCHO", "1", "CL", "Alcalá de Guadaíra", "coincide"),
+ ("Plaza España nº 24 Escalera 1 2º Pta 2", "PZ ESPAÑA DE", "24", "PZ", "Pilas", "coincide"),
+ ("calle Perú nº 49 Escalera primera, planta 2ª, puerta 21 edificio CORONA CENTER", "PERU", 19, "CALLE", "Bormujos", "numero_distinto"),
+ ("CALLE NAOS Nº12 - ESC. 1 -2º IZDA.", "NAOS", 10, "CALLE", "Sevilla", "numero_distinto"),
+ ("PARCELA 10, POLIGONO INDUSTRIAL CRUZ CHIQUITA", 'JOSE DELGADO "PEPE MARCELO', 10, "CALLE", "Alcalá del Río", "calle_distinta"),
+ ("Muelle Martínez Catena nº 21, Bloque 2, Planta 00, Puerta 15", "ML MARTINEZ CATENA", "21", "ML", "Isla Cristina", "coincide"),
+ ("CALLE CACERES Nº 4 PISO 3ºA", "CL CACERES", "4", "CL", "San Juan de Aznalfarache", "coincide"),
+ ("Urbanización Roalcao nº 9", "ROALCAO", 9, "URBANIZACION", "Espartinas", "coincide"),
+ ("AVDA PINO MONTANO 118, PLANTA 4, PUERTA B", "AV PINO MONTANO (DE)", "118", "AV", "Sevilla", "coincide"),
+ ("CALLE TRINIDAD 20", "TRINIDAD", 20, "RONDA", "Morón de la Frontera", "calle_distinta"),
+]
+
+
+class ComprobacionDireccionTest(unittest.TestCase):
+    def test_casos_reales(self):
+        for ficha, calle, num, tipo, mun, esperado in CASOS_DIRECCION:
+            with self.subTest(ficha=ficha, oficial=f"{calle} {num}"):
+                self.assertEqual(pg.comparar_direccion(ficha, calle, num, tipo, mun, "Sevilla")[0], esperado)
+
+    def test_calle_distinta_se_descarta_y_numero_distinto_queda_en_la_calle(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            # 1.ª forma: otra calle (se descarta); 2.ª: la calle buena con otro número (punto «en la calle»)
+            abrir = Abrir({"41008": jsonp(muni="Sevilla", muniCode="41091", lat=37.37, lng=-5.92, address="PARSI 1",
+                                          portalNumber=13, tip_via="CALLE"),
+                           "cartociudad": jsonp(muni="Sevilla", muniCode="41091", lat=37.40, lng=-5.97, address="TORREBLANCA",
+                                                portalNumber=3, tip_via="CALLE")})
+            resp = pg.Respuestas(Path(tmp), abrir=abrir, dormir=lambda s: None)
+            r = pg.ubicar({"direccion": "CL TORREBLANCA 1 -1 B3", "codigo_postal": "41008", "municipio": "Sevilla",
+                           "municipio_ine": "41091", "provincia": "Sevilla"}, resp)
+            self.assertEqual((r["precision"], r["comprobacion"], r["lat"]), ("calle", "numero_distinto", 37.40))
+
+    def test_partes_ldt(self):
+        self.assertEqual(pg.partes_ldt("CL JESUS 62 MAIRENA DEL ALCOR (SEVILLA)"), ("CL", "CL JESUS", "62"))
+        self.assertEqual(pg.partes_ldt("Polígono 19 Parcela 17 LA TRINIDAD. SEVILLA (SEVILLA)")[2], None)
 
 
 if __name__ == "__main__":

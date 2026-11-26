@@ -16,8 +16,11 @@ Tablas
 - lotes           una fila por lote (o una sola si la subasta no tiene lotes): importes y puja.
 - bienes          una fila por bien: clase, descripción, referencia catastral, dirección, municipio (con su código
                   INE de la lista del IGN), situación posesoria, cargas, inscripción… y, si portal_geo.py la encontró,
-                  su ubicación (lat, lon, precisión «parcela» del Catastro o «direccion» de CartoCiudad, fuente y URL)
-                  o el motivo de no tenerla.
+                  su ubicación (lat, lon, precisión «parcela» del Catastro, «direccion» o «calle» de CartoCiudad,
+                  fuente y URL) o el motivo de no tenerla; la comprobación de su dirección frente a la oficial
+                  (direccion_oficial, direccion_comprobacion: coincide / numero_distinto / calle_distinta /
+                  sin_comprobar, y el detalle); y enlaces a Google Maps (punto y dirección de la ficha) y al visor
+                  del Catastro.
 - documentos, anuncios, pendientes   lo que trae ficha.json.
 
 En las subastas con varios lotes el Portal no da importes de conjunto («Ver valor de subasta en cada lote…»): esos
@@ -103,7 +106,9 @@ CREATE TABLE bienes (sub TEXT, lote TEXT, bien INTEGER, clase TEXT, subtipo TEXT
                      {', '.join(f'{c} TEXT' for c in dict.fromkeys(MAPA_BIEN.values()))},
                      cargas_importe REAL, municipio TEXT, municipio_ine TEXT, archivo TEXT, url TEXT,
                      lat REAL, lon REAL, ubicacion_precision TEXT, ubicacion_fuente TEXT, ubicacion_url TEXT,
-                     ubicacion_texto TEXT, ubicacion_motivo TEXT,
+                     ubicacion_texto TEXT, ubicacion_motivo TEXT, direccion_oficial TEXT, direccion_comprobacion TEXT,
+                     direccion_comprobacion_detalle TEXT, url_google_punto TEXT, url_google_direccion TEXT,
+                     url_catastro TEXT,
                      PRIMARY KEY (sub, lote, bien));
 CREATE TABLE documentos (sub TEXT, etiqueta TEXT, lote TEXT, archivo TEXT, url TEXT, sha256 TEXT, tipo_mime TEXT,
                          bytes INTEGER, consultado_utc TEXT);
@@ -235,6 +240,25 @@ def pujas_de_pagina(arbol, lote_pagina: str | None):
     return [dict(lote=lote_pagina or "", texto=" ".join(textos), importe=None)] if textos else []
 
 
+def enlaces_mapa(b: dict, u: dict) -> dict:
+    """Enlaces del bien: Google Maps en su punto (si lo hay), Google Maps con la dirección de su ficha y el visor
+    cartográfico del Catastro en su parcela (si la ficha trae referencia catastral)."""
+    from urllib.parse import quote
+    import portal_geo  # aquí y no arriba: portal_geo importa este módulo
+    out = dict(url_google_punto=None, url_google_direccion=None, url_catastro=None)
+    if u.get("lat") is not None and u.get("lon") is not None:
+        out["url_google_punto"] = f"https://www.google.com/maps/search/?api=1&query={u['lat']:.6f}%2C{u['lon']:.6f}"
+    direccion = portal_geo.limpiar_direccion(b.get("direccion"))
+    if direccion and b.get("clase") == "Inmueble":
+        lugar = " ".join(x for x in (b.get("codigo_postal"), b.get("municipio") or b.get("localidad")) if x)
+        q = ", ".join(x for x in (direccion, lugar, b.get("provincia"), "España") if x)
+        out["url_google_direccion"] = "https://www.google.com/maps/search/?api=1&query=" + quote(q)
+    rc = portal_geo.rc14(b.get("referencia_catastral"))
+    if rc:
+        out["url_catastro"] = f"https://www1.sedecatastro.gob.es/Cartografia/mapa.aspx?refcat={rc}"
+    return out
+
+
 # --------------------------------------------------------------------------- construcción
 
 def construir(raiz: Path, ruta_base: Path, geo: Municipios | None = None) -> dict:
@@ -334,10 +358,13 @@ def cargar_ficha(con, raiz: Path, carpeta: Path, f: dict, geo: Municipios, vista
         b.update(clase=clase, subtipo=subtipo, municipio=oficial, municipio_ine=ine, cargas_importe=importe(b.get("cargas")))
         u = (ubicaciones or {}).get(f"{sub}|{lote}|{n}") or {}
         b.update(lat=u.get("lat"), lon=u.get("lon"), ubicacion_precision=u.get("precision"), ubicacion_fuente=u.get("fuente"),
-                 ubicacion_url=u.get("url"), ubicacion_texto=u.get("texto"), ubicacion_motivo=u.get("motivo"))
+                 ubicacion_url=u.get("url"), ubicacion_texto=u.get("texto"), ubicacion_motivo=u.get("motivo"),
+                 direccion_oficial=u.get("direccion_oficial"), direccion_comprobacion=u.get("comprobacion"),
+                 direccion_comprobacion_detalle=u.get("comprobacion_detalle"), **enlaces_mapa(b, u))
         cols = ["clase", "subtipo", *dict.fromkeys(MAPA_BIEN.values()), "cargas_importe", "municipio", "municipio_ine",
                 "archivo", "url", "lat", "lon", "ubicacion_precision", "ubicacion_fuente", "ubicacion_url",
-                "ubicacion_texto", "ubicacion_motivo"]
+                "ubicacion_texto", "ubicacion_motivo", "direccion_oficial", "direccion_comprobacion",
+                "direccion_comprobacion_detalle", "url_google_punto", "url_google_direccion", "url_catastro"]
         con.execute(f"INSERT INTO bienes (sub, lote, bien, {', '.join(cols)}) VALUES ({', '.join('?' * (len(cols) + 3))})",
                     (sub, lote, n, *[b.get(c) for c in cols]))
 

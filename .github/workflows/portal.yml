@@ -2,8 +2,9 @@ name: Portal de Subastas (códigos y fichas)
 
 # Método nuevo. Paso 1: códigos SUB de las subastas «Celebrándose» con el bien en la provincia (portal_codigos.py).
 # Paso 2: ficha completa de cada código (portal_fichas.py). Paso 3: base de datos datos/subastas.sqlite y tablas del
-# panel (portal_base.py, sin peticiones). Paso 4: ubicación de cada inmueble con el Catastro y CartoCiudad
-# (portal_geo.py, guarda las respuestas y no repite las ya hechas). Todo se guarda en el repositorio.
+# panel (portal_base.py, sin peticiones). Paso 4: ubicación de cada inmueble con el Catastro y CartoCiudad y
+# comprobación de su dirección (portal_geo.py). Paso 5: mapas de detalle del Catastro y del IGN (portal_mapas.py).
+# Los pasos 4 y 5 guardan las respuestas y no repiten las ya hechas. Todo se guarda en el repositorio.
 # Cada día de madrugada (dos intentos, porque GitHub puede retrasar mucho los programados; el segundo no hace nada si
 # el primero ya descargó ese día) o a mano: pestaña Actions → este flujo → Run workflow. La tarea programada de Claude
 # «SeMá · Subida diaria a Drive» sube después el resultado a Google Drive.
@@ -59,7 +60,9 @@ jobs:
 
       - name: Pruebas sin red
         if: ${{ steps.hoy.outputs.hecha != 'true' }}
-        run: python -m unittest tests.test_portal_codigos tests.test_portal_fichas tests.test_portal_base tests.test_portal_geo -v
+        run: |
+          pip install -q pillow
+          python -m unittest tests.test_portal_codigos tests.test_portal_fichas tests.test_portal_base tests.test_portal_geo tests.test_portal_mapas -v
 
       - name: "Paso 1: códigos SUB activos"
         id: codigos
@@ -77,6 +80,10 @@ jobs:
       - name: "Paso 4: ubicación de los inmuebles (Catastro y CartoCiudad)"
         if: ${{ !cancelled() && steps.hoy.outputs.hecha != 'true' && github.event.inputs.solo_codigos != 'true' }}
         run: python portal_geo.py
+
+      - name: "Paso 5: mapas de detalle de cada inmueble (Catastro y ortofoto PNOA)"
+        if: ${{ !cancelled() && steps.hoy.outputs.hecha != 'true' && github.event.inputs.solo_codigos != 'true' }}
+        run: python portal_mapas.py
 
       - name: Guardar en el repositorio
         if: ${{ !cancelled() && steps.hoy.outputs.hecha != 'true' }}
