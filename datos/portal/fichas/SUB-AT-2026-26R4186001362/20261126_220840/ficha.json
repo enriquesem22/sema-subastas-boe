@@ -1,0 +1,277 @@
+{
+  "sub": "SUB-AT-2026-26R4186001362",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-AT-2026-26R4186001362",
+  "consultado_utc": "2026-11-26T21:08:47+00:00",
+  "captura_codigos": "21/20261126_220631",
+  "peticiones": 7,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Finca rústica)",
+      "direccion": "PA ALDEA MINAS DE HERRERIASP 0",
+      "localidad": "PUEBLA DE GUZMAN",
+      "provincia": "Huelva",
+      "codigo_postal": "21550",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-AT-2026-26R4186001362/20261126_220840/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001362&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186001362/20261126_220840/portal/general.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-AT-2026-26R4186001362",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001362",
+      "consultado_utc": "2026-11-26T21:08:40+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "e01db6ddbf825d1e4b1f627869996556219924e67cb5a14e4083214c1bb81154",
+      "bytes": 10076,
+      "huella": "7b9c16a421baffaad92975228aa56c5b8c52f1bb20b5e3ee5fe96a0576f381cc",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-AT-2026-26R4186001362"
+          ],
+          [
+            "Tipo de subasta",
+            "AGENCIA TRIBUTARIA"
+          ],
+          [
+            "Fecha de inicio",
+            "24-11-2026 18:00:00 CET  (ISO: 2026-11-24T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "14-12-2026 18:00:00 CET (ISO: 2026-12-14T18:00:00+01:00)"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-38438"
+          ],
+          [
+            "Valor subasta",
+            "295.813,53 €"
+          ],
+          [
+            "Tasación",
+            "295.813,53 €"
+          ],
+          [
+            "Puja mínima",
+            "29.581,35 €"
+          ],
+          [
+            "Tramos entre pujas",
+            "2.000,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "14.790,67 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186001362/20261126_220840/portal/autoridad.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001362&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001362&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:08:42+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "0a60cfcd6411ae7598a884266f6f5c40c0ae5ca14855365e5c1aff77a9c7f90e",
+      "bytes": 9008,
+      "huella": "6585a1efc21972321db8e49d39a887a6d883f671e16f6cb4e517667105d43c11",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "R41860"
+          ],
+          [
+            "Descripción",
+            "U.R. SUBASTAS ANDALUCÍA 41 (AEAT)"
+          ],
+          [
+            "Dirección",
+            "PZ MINISTRO INDALECIO PRIETO 1 ; 41071 SEVILLA"
+          ],
+          [
+            "Teléfono",
+            "913335333"
+          ],
+          [
+            "Fax",
+            "-"
+          ],
+          [
+            "Correo electrónico",
+            "subastas.andalucia@correo.aeat.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186001362/20261126_220840/portal/bienes.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001362&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001362&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:08:43+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "2186a1ef0f51055914a9bbd1b9791bbd229e2c323cd3e3e2d6068ccbba73d5c1",
+      "bytes": 12695,
+      "huella": "550ddc5311da6236230af9897d762d4028f9e22d6f1109eefdb1535a13967e85",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Finca rústica)",
+        "Información complementaria del bien"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "SE ENAJENA EL 100% DEL PLENO DOMINIO DE PARCELA CON OFICINAS, ALMACEN Y      CUARTEL DE LA GUARDIA CIVIL. DOSCIENTOS TREINTA Y OCHO METROS CUADRADOS      ESTAN OCUPADOS POR EL EDIFICIO DESTINADO A OFICINAS.- OCHOCIENTOS NOVENTA Y  NUEVE METROS CUADRADOS POR UN ALMACEN.- SETECIENTOS METROS CUADRADOS, POR EL ANTIGUO CUARTEL DE LA GUARDIA CIVIL.- Y EL RESTO, TRES HECTAREAS, CINCUENTA  Y UN AREAS Y SESENTA Y TRES CENTIAREAS(...). . ESTA FORMADA POR PARTE DE LAS PARCELAS ONCE -ZONA SUROESTE- Y TREINTA -ZONA SUROESTE-, AMBAS DEL POLIGONO  VEINTINUEVE. PARTE DE REFERENCIAS CATASTRALES 21058A029000110000ME,          21058A029000300000MT Y 21058A029000320000MM"
+          ],
+          [
+            "IDUFIR",
+            "21006000304776"
+          ],
+          [
+            "Dirección",
+            "PA ALDEA MINAS DE HERRERIASP 0"
+          ],
+          [
+            "Código Postal",
+            "21550"
+          ],
+          [
+            "Localidad",
+            "PUEBLA DE GUZMAN"
+          ],
+          [
+            "Provincia",
+            "Huelva"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "0,00 €"
+          ],
+          [
+            "Inscripción registral",
+            "BIEN INSCRITO EN REGISTRO  DE VALVERDE DEL CAMINO TOMO: 618 , FOLIO: 26 , LIBRO: 52. FINCA: 4443   , INSCRIPCIÓN: 1"
+          ],
+          [
+            "Título jurídico",
+            "PLENO DOMINIO"
+          ],
+          [
+            "Información adicional",
+            "-\tSe enajena el 100 % del pleno dominio.\n          -\tEs objeto de subasta la anotacion de embargo inscrita en letra A de fecha 14-05-2018, prorrogada por letras B, de fecha 17-05-2022, letra C, de fecha 06-10-2022, y letra E, de fecha 29-04-2026.\n          -\tArrendamientos que constan inscritos por segregacion de la finca 2966, fincas 1420, 1417, 1475 y 607 a favor de la Compañia Quimica y del Metal Bede Limitada inscritos en el año 1896, se encuentran resueltos en la actualidad segun escritura publica de fecha 23-04-1996 (protocolo 198).\n          -\tRealizada la visita al inmueble en fecha 13-04-2026 no se ha podido comprobar la ocupacion de la finca.\n          -\tExiste discrepancias entre la informacion registral y catastral."
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186001362/20261126_220840/portal/pujas.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001362&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001362&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:08:44+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "b8626ccc68babeb88b842853dad0305d63b415179aa76f5bff520b525967cfc1",
+      "bytes": 8504,
+      "huella": "288b870f170337d598aba2edec20657148d561fef30ee7753a8577854bf34c3c",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-38438",
+      "publicado": "2026-11-21",
+      "actualizado_fuente": "20261121071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-38438.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38438",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38438",
+          "consultado_utc": "2026-11-26T21:08:45+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "df693c66f9f069912acc76f84e4abc0c08567b4e44625abc7d096e1aff947c0d",
+          "bytes": 1597
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-38438.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38438.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38438.pdf",
+          "consultado_utc": "2026-11-26T21:08:46+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "6c2d36b3cc569b912181f901b4838404f7fb66e75a7014f30d12cc8c1bf55ad6",
+          "bytes": 199100
+        }
+      ],
+      "aviso": null,
+      "reutilizado": false
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001362",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    },
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001362&ver=3&idBus=&idLote=&numPagBus=",
+      "etiqueta": "Bienes",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

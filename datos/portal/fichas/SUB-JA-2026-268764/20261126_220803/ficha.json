@@ -1,0 +1,282 @@
+{
+  "sub": "SUB-JA-2026-268764",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268764",
+  "consultado_utc": "2026-11-26T21:08:10+00:00",
+  "captura_codigos": "21/20261126_220631",
+  "peticiones": 7,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Otros)",
+      "direccion": "Isla de Canela y del Moral",
+      "localidad": "Ayamonte",
+      "provincia": "Huelva",
+      "codigo_postal": "21409",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-268764/20261126_220803/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268764&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-268764/20261126_220803/portal/general.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268764",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268764",
+      "consultado_utc": "2026-11-26T21:08:03+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "2b1b4d28a7227fd63c7cd1d2f1d31d7ebab0944aae31c4286c88bffbcaa0aada",
+      "bytes": 10306,
+      "huella": "8565c922d20016359d7d0b54f3125d58fa8e0e8d4688223ca866f8dfd8c39b06",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-268764"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "1904 0000 06 0962 12"
+          ],
+          [
+            "Fecha de inicio",
+            "17-11-2026 18:00:00 CET  (ISO: 2026-11-17T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "07-12-2026 18:00:00 CET (ISO: 2026-12-07T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "513.923,62 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-37250"
+          ],
+          [
+            "Valor subasta",
+            "578.988,85 €"
+          ],
+          [
+            "Tasación",
+            "579.998,85 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "11.579,78 €"
+          ],
+          [
+            "Importe del depósito",
+            "28.949,44 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268764/20261126_220803/portal/autoridad.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268764&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268764&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:08:05+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "812b2cd2dda5487d2cb255a2ef8b1acbd12377fdb4ce160ceec64a3148bf7afe",
+      "bytes": 9003,
+      "huella": "1174af324816e5c40b1c9717ce0207cd57aede42d70d72c77985bd246706b374",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "2101041001"
+          ],
+          [
+            "Descripción",
+            "Sección Civil e Instrucción TI Ayamonte. Plz.n 1"
+          ],
+          [
+            "Dirección",
+            "AV ALCALDE NARCISO MARTÍN N 28 28   ; 21400 AYAMONTE"
+          ],
+          [
+            "Teléfono",
+            "600156003"
+          ],
+          [
+            "Fax",
+            "959021206"
+          ],
+          [
+            "Correo electrónico",
+            "scej.ayamonte.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268764/20261126_220803/portal/bienes.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268764&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268764&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:08:06+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "ee5147dc7c878e1a0d136b087977ca7bccfc81b33893f484592c8928e4e497a8",
+      "bytes": 13293,
+      "huella": "d1fc63f31f54bbcb96d4ff4e852440b54dcff45277c8972af9ec5384f30a1f6d",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Otros)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "Ver edicto de subasta"
+          ],
+          [
+            "IDUFIR",
+            "21002000258514"
+          ],
+          [
+            "Referencia catastral",
+            "956704PB4135N0001UX"
+          ],
+          [
+            "Dirección",
+            "Isla de Canela y del Moral"
+          ],
+          [
+            "Código Postal",
+            "21409"
+          ],
+          [
+            "Localidad",
+            "Ayamonte"
+          ],
+          [
+            "Provincia",
+            "Huelva"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta (Escritura de préstamo hipotecario)"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "Una HIPOTECA a favor de la entidad Banco Bilbao Vizcaya Argentaria SA, para responder de 53.000,00 euros de principal; intereses ordinarios al 6,5% hasta un tipo máximo del 12% anual durante 18 meses; intereses de demora por un total de 17.490,00 euros; un total de 10.600,00 euros para costas y gastos Formalizada en escritura autorizada por el/la Notario DON JOSÉ GABRIEL CALVACHE MARTÍNEZ, de HUELVA, el día 19/05/09. Constituida en la inscripción 6ª de fecha 03/06/09."
+          ],
+          [
+            "Inscripción registral",
+            "FINCA REGISTRAL Nº 4638, al tomo 1787, libro 483, folio 114.  INSCRITA EN EL REGISTRO DE LA PROPIEDAD DE AYAMONTE.  Hipoteca inscripción 4ª, modificada por la 5ª y transmitida por la 9ª"
+          ],
+          [
+            "Información adicional",
+            "- Letra J. Fecha 18/11/2022. ANOTACIÓN DE EMBARGO ADMINISTRATIVO a favor de la entidad Ayuntamiento de Trigueros, Procedimiento: 2013/169820\n          - Letra K. Fecha 18/11/22. ANOTACIÓN DE EMBARGO ADMINISTRATIVO a favor de la entidad Ayuntamiento de Huelva, Procedimiento: 2013/169820\n          - Letra L. Fecha 18/11/22. ANOTACIÓN a favor de la entidad Ayuntamiento de Jabugo, Procedimiento: 2013/169820\n           \n          - Letra M. Fecha 18/11/22. ANOTACIÓN a favor de la entidad Ayuntamiento de Ayamonte, Procedimiento: 2013/169820\n           \n          -Letra N. fecha 18/11/22. ANOTACIÓN a favor de la entidad Diputacion Provincial Huelva, Procedimiento: 2013/169820.\n          Con fecha 2/9/26 ha tenido entrada Informe de la Abogacia del Estado en el que se indica:\n           \n          \"...una determinada superficie de la finca se localiza sobre el dominio público marítimo-terrestre. El tramo de costa en que se ubica la finca no cuenta con deslinde aprobado conforme a la vigente Ley de Costas, por lo que su situación con respecto al dominio público marítimo-terrestre queda a expensas del deslinde que ha de practicarse para dicho tramo de costa.\"\n          Resumen de Cargas. Ver Edicto de Subasta"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268764/20261126_220803/portal/pujas.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268764&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268764&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:08:07+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "3c53f8d38f88d2cbb09a84f83fc0e130cbe087b41bbb42b63cceda06082abb1f",
+      "bytes": 8469,
+      "huella": "bd09883ec052b4432d15267a9cb83dccbc5031bd95764f080d3b285da7fef6d5",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-37250",
+      "publicado": "2026-11-14",
+      "actualizado_fuente": "20261114071539",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-37250.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37250",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37250",
+          "consultado_utc": "2026-11-26T21:08:08+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "96c29e6f94d2464d2962936ceea633cc9ec48106160d631268432b254ecfb782",
+          "bytes": 1175
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-37250.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/14/pdfs/BOE-B-2026-37250.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/14/pdfs/BOE-B-2026-37250.pdf",
+          "consultado_utc": "2026-11-26T21:08:09+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "88322818ed6c5b8c86521fd9548f4116c2e520f78b8cd3e0e5e547312b10994f",
+          "bytes": 198419
+        }
+      ],
+      "aviso": null,
+      "reutilizado": false
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268764",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

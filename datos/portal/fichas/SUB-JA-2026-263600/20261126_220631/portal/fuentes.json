@@ -1,0 +1,58 @@
+[
+  {
+    "archivo": "general.html.gz",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600"
+  },
+  {
+    "archivo": "autoridad.html.gz",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=2&idBus=&idLote=&numPagBus="
+  },
+  {
+    "archivo": "bienes.html.gz",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=3&idBus=&idLote=&numPagBus="
+  },
+  {
+    "archivo": "pestana_4.html.gz",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=4&idBus=&idLote=&numPagBus="
+  },
+  {
+    "archivo": "pujas.html.gz",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=5&idBus=&idLote=&numPagBus="
+  },
+  {
+    "archivo": "bienes_lote_1.html.gz",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=3&idLote=1&idBus=&numPagBus="
+  },
+  {
+    "archivo": "bienes_lote_2.html.gz",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=3&idLote=2&idBus=&numPagBus="
+  },
+  {
+    "archivo": "pestana_4_lote_1.html.gz",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=4&idBus=&idLote=1&numPagBus="
+  },
+  {
+    "archivo": "pujas_lote_1.html.gz",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=5&idBus=&idLote=1&numPagBus="
+  },
+  {
+    "archivo": "pestana_4_lote_2.html.gz",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=4&idBus=&idLote=2&numPagBus="
+  },
+  {
+    "archivo": "pujas_lote_2.html.gz",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=5&idBus=&idLote=2&numPagBus="
+  },
+  {
+    "archivo": "37b756defe9d660430a585b5aee16abc5a0d61218ce9f3515cfbccb0f8f771c4.pdf",
+    "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-263600&idDoc=1-6a7223985606ec50294121b407ea1d72"
+  },
+  {
+    "archivo": "74f00702cf54cead00dad677005cc6391f90ccc5f21ee505a4b512ff55563b6a.pdf",
+    "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-263600&idDoc=2-82b8f67f6b3f518b74d18cff89981322"
+  },
+  {
+    "archivo": "7a2fe64ee8a6adfd438dbcd9d229f8cf9d1f9f6160b7a1c1e9cf267589607706.pdf",
+    "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-263600&idDoc=3-09129f57b96d428542b773c923a91ba3"
+  }
+]

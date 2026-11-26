@@ -1,0 +1,274 @@
+{
+  "sub": "SUB-JA-2026-267632",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-267632",
+  "consultado_utc": "2026-11-26T21:07:17+00:00",
+  "captura_codigos": "21/20261126_220631",
+  "peticiones": 7,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Local comercial)",
+      "direccion": "C/ Almadraberos 3",
+      "localidad": "Isla Cristina",
+      "provincia": "Huelva",
+      "codigo_postal": "21431",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-267632/20261126_220710/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267632&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-267632/20261126_220710/portal/general.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-267632",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267632",
+      "consultado_utc": "2026-11-26T21:07:10+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "cc1c9718c83f085b40aec07a1348f23a71100a83f3e07a36e6b38af82c2f139b",
+      "bytes": 10297,
+      "huella": "0c06b978d01d06e1b20f2346f54ce538af4026c30137d6323e38345a8df9bfd5",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-267632"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "1904 0000 06 0439 20"
+          ],
+          [
+            "Fecha de inicio",
+            "10-11-2026 18:00:00 CET  (ISO: 2026-11-10T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "30-11-2026 18:00:00 CET (ISO: 2026-11-30T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "38.582,71 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-36353"
+          ],
+          [
+            "Valor subasta",
+            "101.460,00 €"
+          ],
+          [
+            "Tasación",
+            "0,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "2.029,20 €"
+          ],
+          [
+            "Importe del depósito",
+            "5.073,00 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267632/20261126_220710/portal/autoridad.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267632&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267632&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:07:12+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "bc0b7084c9af15da60a006b931f22f8cc09974ac2d0df81272ba52dd3efeaaca",
+      "bytes": 9003,
+      "huella": "415d77a7747ffd970edaa6cce0c3045fe3917367d5114a792d8f224182608d3a",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "2101041001"
+          ],
+          [
+            "Descripción",
+            "Sección Civil e Instrucción TI Ayamonte. Plz.n 1"
+          ],
+          [
+            "Dirección",
+            "AV ALCALDE NARCISO MARTÍN N 28 28   ; 21400 AYAMONTE"
+          ],
+          [
+            "Teléfono",
+            "600156003"
+          ],
+          [
+            "Fax",
+            "959021206"
+          ],
+          [
+            "Correo electrónico",
+            "scej.ayamonte.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267632/20261126_220710/portal/bienes.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267632&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267632&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:07:13+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "61d34f807fca49812e240c11e01f408c835c95957721c2981f2b98706f275d34",
+      "bytes": 11239,
+      "huella": "e509e3c12c4f4ab492e28e3b3bd9977fb41aa5a4ca6fd5fc129edeca2d590448",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Local comercial)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "URBANA: ELEMENTO NÚMERO QUINCE.- LOCAL COMERCIAL señalado con el número CUATRO, sito en la planta baja del edificio y a la izquierda totalmente del portal número DOS, según se mira desde la calle propia de la Urbanización que la separa de la manzana 13, hoy calle Almadraberos, tres."
+          ],
+          [
+            "Referencia catastral",
+            "9388001PB4198N0015BH"
+          ],
+          [
+            "Dirección",
+            "C/ Almadraberos 3"
+          ],
+          [
+            "Código Postal",
+            "21431"
+          ],
+          [
+            "Localidad",
+            "Isla Cristina"
+          ],
+          [
+            "Provincia",
+            "Huelva"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta (escritura publica de préstamo hipotecario)"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "Al día de la expedición de la certificación de cargas para este procedimiento, no constan cargas posteriores diferentes a la hipoteca que se ejecuta en los presentes autos."
+          ],
+          [
+            "Inscripción registral",
+            "EL REGISTRO DE LA PROPIEDAD DE AYAMONTE, LIBRO 227 DE ISLA CRISTINA Y LA REDONDELA, TOMO 1046, FOLIO 16. HIPOTECA QUE SE EJECUTA: INSCRIPCIÓN 4º"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267632/20261126_220710/portal/pujas.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267632&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267632&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:07:14+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "ff970c861450b3d2335a2ad4658c913017876cfd0c14c7498452153d60336320",
+      "bytes": 8469,
+      "huella": "a60e068c3fa42ce683775508959d64275cb3f3eb33a46e6bcbfcdd9eaa3f3a53",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-36353",
+      "publicado": "2026-11-07",
+      "actualizado_fuente": "20261107071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-36353.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36353",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36353",
+          "consultado_utc": "2026-11-26T21:07:15+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "e3fcd829d3cce2bda894910d640920ad8e16667c66be743d1850298b5c68caea",
+          "bytes": 1174
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-36353.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/07/pdfs/BOE-B-2026-36353.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/07/pdfs/BOE-B-2026-36353.pdf",
+          "consultado_utc": "2026-11-26T21:07:16+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "efcb95c48715445a2564e7fe9d63e1424c867b90650fce4cf69a77ee14ab9ff5",
+          "bytes": 198485
+        }
+      ],
+      "aviso": null,
+      "reutilizado": false
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267632",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "sub": "SUB-JA-2026-267150",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-267150",
+  "consultado_utc": "2026-11-26T21:06:54+00:00",
+  "captura_codigos": "21/20261126_220631",
+  "peticiones": 7,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "Conjunto Residencial Playa Grande I, Bl 3, Esc 8, Pla Baja, Pta 212",
+      "localidad": "Ayamonte",
+      "provincia": "Huelva",
+      "codigo_postal": "21409",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-267150/20261126_220647/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267150&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-267150/20261126_220647/portal/general.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-267150",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267150",
+      "consultado_utc": "2026-11-26T21:06:47+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "09c5972df3bcdcb40d3184c8a029c0ac8ec11535834f681eb0c4b5826d92ed67",
+      "bytes": 10305,
+      "huella": "c98ac03d056753c0d27542dda6198fbd7085d6ccd1e7bb6442606e45b2eb54bc",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-267150"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "1907 0000 06 0672 13"
+          ],
+          [
+            "Fecha de inicio",
+            "20-11-2026 18:00:00 CET  (ISO: 2026-11-20T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "10-12-2026 18:00:00 CET (ISO: 2026-12-10T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "122.174,41 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-37727"
+          ],
+          [
+            "Valor subasta",
+            "201.600,00 €"
+          ],
+          [
+            "Tasación",
+            "146.861,60 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "4.032,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "10.080,00 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267150/20261126_220647/portal/autoridad.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267150&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267150&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:06:49+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "b42d47a6ca4ad1d84127a1c1b75963a68fccca8914467cd9b5693a16d83f6707",
+      "bytes": 9007,
+      "huella": "fc5e0ddddc34f9e3cbdeeef07b59dae8be97639e1bd17b6e5c8086b8241a5e65",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "2101041003"
+          ],
+          [
+            "Descripción",
+            "Sección Civil e Instrucción TI Ayamonte. Plz.n 3"
+          ],
+          [
+            "Dirección",
+            "AV ALCALDE NARCISO MARTÍN N 28 28   ; 21400 AYAMONTE"
+          ],
+          [
+            "Teléfono",
+            "600156010"
+          ],
+          [
+            "Fax",
+            "959021220"
+          ],
+          [
+            "Correo electrónico",
+            "jmixto.3.ayamonte.ius@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267150/20261126_220647/portal/bienes.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267150&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267150&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:06:50+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "4a33b03f51a6571493dd6b3a9c41a3c027965b99e2ca9d18216dbe37233ddd42",
+      "bytes": 11097,
+      "huella": "4e00d43f208b820be112571f95e0c431ed839879310a53c4de8584a52d98c7ab",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "Ver edicto de Subasta"
+          ],
+          [
+            "IDUFIR",
+            "21002000710524"
+          ],
+          [
+            "Referencia catastral",
+            "7468501PB4176N0213OQ"
+          ],
+          [
+            "Dirección",
+            "Conjunto Residencial Playa Grande I, Bl 3, Esc 8, Pla Baja, Pta 212"
+          ],
+          [
+            "Código Postal",
+            "21409"
+          ],
+          [
+            "Localidad",
+            "Ayamonte"
+          ],
+          [
+            "Provincia",
+            "Huelva"
+          ],
+          [
+            "Situación posesoria",
+            "No consta (Escritura de prestamo hipotecario)"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "Se encuentra gravada con ANOTACIÓN DE EMBARGO EJECUTIVO a favor de la entidad C.P. Playa Grande, Procedimiento: Ejecución títulos judiciales 935/2013, para responder de 3.369,67 euros del principal; 1.000,00 euros por intereses , con fecha de providencia 16/09/2014; según autos seguidos con el número 935/2013 en el JUZGADO DE PRIMERA INSTANCIA E INSTRUCCION N* 1 DE AYAMONTE de Ayamonte, el 21/07/2020. Anotado con la letra D de fecha 19/10/2020"
+          ],
+          [
+            "Inscripción registral",
+            "Finca Registral 14738, inscrita en el Registro de la Propiedad de Ayamonte, inscripción 5ª, 7ª, 8ª, 9ª, 10ª, 11ª"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267150/20261126_220647/portal/pujas.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267150&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267150&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:06:51+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "de444f4862ff0baef14c37306d869c28b5b7630de91cc7f44abf73a6eed38ec8",
+      "bytes": 8530,
+      "huella": "fa52b634e8ef8ce23662bfeef2952490d77409d6873ec3ada476209199a36c39",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-37727",
+      "publicado": "2026-11-17",
+      "actualizado_fuente": "20261117071712",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-37727.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37727",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37727",
+          "consultado_utc": "2026-11-26T21:06:52+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "043205d916da490e9a5c720d55380453e8587bdf3243e7ad3a3772f8fe3626c6",
+          "bytes": 1176
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-37727.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/17/pdfs/BOE-B-2026-37727.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/17/pdfs/BOE-B-2026-37727.pdf",
+          "consultado_utc": "2026-11-26T21:06:53+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "c99667a38e52d77e7535e76d6c32813c63febef6f3ede61226a59d1b96d90b84",
+          "bytes": 198446
+        }
+      ],
+      "aviso": null,
+      "reutilizado": false
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267150",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

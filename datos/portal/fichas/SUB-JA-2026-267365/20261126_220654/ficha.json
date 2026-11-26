@@ -1,0 +1,749 @@
+{
+  "sub": "SUB-JA-2026-267365",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-267365",
+  "consultado_utc": "2026-11-26T21:07:10+00:00",
+  "captura_codigos": "21/20261126_220631",
+  "peticiones": 16,
+  "lotes_identificados": [
+    "1",
+    "2"
+  ],
+  "ubicaciones_bienes": [
+    {
+      "lote": "1",
+      "bien": 1,
+      "tipo": "Inmueble (Local comercial)",
+      "direccion": "CALLE NUEVA, 60 (ACTUALMENTE 64) - LOCAL",
+      "localidad": "TRIGUEROS",
+      "provincia": "Huelva",
+      "codigo_postal": "21620",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-267365/20261126_220654/portal/bienes_lote_1.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=3&idLote=1&idBus=&numPagBus="
+      }
+    },
+    {
+      "lote": "2",
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "CALLE NUEVA, 60 - PLANTA ALTA (ACTUALMENTE 64- PLANTA ALTA)",
+      "localidad": "TRIGUEROS",
+      "provincia": "Huelva",
+      "codigo_postal": "21620",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-267365/20261126_220654/portal/bienes_lote_2.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=3&idLote=2&idBus=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-267365/20261126_220654/portal/general.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-267365",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365",
+      "consultado_utc": "2026-11-26T21:06:54+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "dc65c08f6a3bf42e9a914605ba6cc42cf3779327898e69451751867b5b5e1b82",
+      "bytes": 11436,
+      "huella": "1e5336f40db28cb181a68c29bffe0dbddd0cd7f9a73c1da82440007d2c13ef71",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-267365"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "1913 0000 06 0419 24"
+          ],
+          [
+            "Fecha de inicio",
+            "17-11-2026 18:00:00 CET  (ISO: 2026-11-17T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "07-12-2026 18:00:00 CET (ISO: 2026-12-07T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "243.587,82 €"
+          ],
+          [
+            "Lotes",
+            "2"
+          ],
+          [
+            "Forma adjudicación",
+            "Separada para cada lote"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-37317"
+          ],
+          [
+            "Valor subasta",
+            "Ver valor de subasta en cada lote (los lotes se subastan de forma independiente)"
+          ],
+          [
+            "Tasación",
+            "Ver valor de tasación en cada lote (los lotes se subastan de forma independiente)"
+          ],
+          [
+            "Puja mínima",
+            "Ver puja mínima de cada lote (adjudicación independiente)"
+          ],
+          [
+            "Tramos entre pujas",
+            "Ver tramos de cada lote (adjudicación independiente)"
+          ],
+          [
+            "Importe del depósito",
+            "Ver importe de consignación de cada lote (adjudicación independiente)"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267365/20261126_220654/portal/autoridad.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:06:56+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "029dcc7e674bfe7cc93bfa05e2c43391b2a3c6fee6f0a2da1f5bf2c07eb41fcf",
+      "bytes": 9141,
+      "huella": "fed11cf0f547eb11f8318740a75e7eac6d76407512357234068c0cc62e52add1",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "2104142003"
+          ],
+          [
+            "Descripción",
+            "Sección Civil TI Huelva. Plz.n 3"
+          ],
+          [
+            "Dirección",
+            "AL SUNDHEIM 17 15   ; 21003 HUELVA"
+          ],
+          [
+            "Teléfono",
+            "662977100"
+          ],
+          [
+            "Fax",
+            "959014306"
+          ],
+          [
+            "Correo electrónico",
+            "scej.subastas.huelva.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267365/20261126_220654/portal/bienes.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Lotes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:06:57+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "f80994e95d5f455a87fc61749e37d29ba942defaa8d4b48e95243d3adb5d558c",
+      "bytes": 12681,
+      "huella": "a6a2f608de54c7e694a9de94bc8cca26ff234e8224c2a6715917f14f966199a7",
+      "encabezados": [
+        "Lote 1",
+        "Datos relacionados con la subasta del lote 1",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Local comercial)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "137.696,00 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "6.884,80 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "2.753,92 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "DESCRIPCIÓN QUE CONSTA EN CERTIFICACIÓN DE CARGAS PUBLICADA EN EL BOE"
+          ],
+          [
+            "IDUFIR",
+            "21007000372291"
+          ],
+          [
+            "Referencia catastral",
+            "1602645PB9410S0001ZS"
+          ],
+          [
+            "Dirección",
+            "CALLE NUEVA, 60 (ACTUALMENTE 64) - LOCAL"
+          ],
+          [
+            "Código Postal",
+            "21620"
+          ],
+          [
+            "Localidad",
+            "TRIGUEROS"
+          ],
+          [
+            "Provincia",
+            "Huelva"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267365/20261126_220654/portal/pestana_4.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Relacionados",
+      "pestana": "4",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=4&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=4&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:06:58+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "200179eed0fd9099f9583bae4a1884d724451f65f606f192f42d0be9b1ff497b",
+      "bytes": 9145,
+      "huella": "5762b82ed5284a0bfe85bd07c7d9cfd1b070b4120d26161621353942f7b7673f",
+      "encabezados": [
+        "Acreedor"
+      ],
+      "tablas": [
+        [
+          [
+            "Nombre",
+            "DISCAFE HUELVA S.L."
+          ],
+          [
+            "NIF",
+            "B21512280"
+          ],
+          [
+            "Dirección",
+            "POLÍGONO INDUSTRIAL LA PAZ, NAVES 34 Y 35"
+          ],
+          [
+            "Localidad",
+            "21007 HUELVA"
+          ],
+          [
+            "Provincia",
+            "Huelva"
+          ],
+          [
+            "País",
+            "España"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267365/20261126_220654/portal/pujas.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:06:59+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "584602631e82e13625cf2fcccc2bd11237b0813538fb3ed7ac31238ec38b3736",
+      "bytes": 9389,
+      "huella": "002afc3ff5282d8385c79dfd826114288123b270d3c69aa12be5651664156b6d",
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267365/20261126_220654/portal/bienes_lote_1.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Lote 1",
+      "pestana": "3",
+      "lote": "1",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=3&idLote=1&idBus=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=3&idLote=1&idBus=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:07:02+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "abb518c1a0859b43bc0d37453c1f1d378a82a32180699b99db1db8e7810a5fe1",
+      "bytes": 12686,
+      "huella": "e462d043f763d0d26c6bfebed8aea26383fbbb3018bfc5b0b10ad8858539446c",
+      "encabezados": [
+        "Lote 1",
+        "Datos relacionados con la subasta del lote 1",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Local comercial)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "137.696,00 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "6.884,80 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "2.753,92 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "DESCRIPCIÓN QUE CONSTA EN CERTIFICACIÓN DE CARGAS PUBLICADA EN EL BOE"
+          ],
+          [
+            "IDUFIR",
+            "21007000372291"
+          ],
+          [
+            "Referencia catastral",
+            "1602645PB9410S0001ZS"
+          ],
+          [
+            "Dirección",
+            "CALLE NUEVA, 60 (ACTUALMENTE 64) - LOCAL"
+          ],
+          [
+            "Código Postal",
+            "21620"
+          ],
+          [
+            "Localidad",
+            "TRIGUEROS"
+          ],
+          [
+            "Provincia",
+            "Huelva"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267365/20261126_220654/portal/bienes_lote_2.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Lote 2",
+      "pestana": "3",
+      "lote": "2",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=3&idLote=2&idBus=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=3&idLote=2&idBus=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:07:03+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "60b044a659a873373e267b270eead6da0a52948e5f706a69acf1e58485008c8e",
+      "bytes": 12484,
+      "huella": "1a7fc53b721fb94466a433e1748ef076fddbdbb49680d8dcc09c33e1c8d1f92b",
+      "encabezados": [
+        "Lote 2",
+        "Datos relacionados con la subasta del lote 2",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "92.132,27 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "4.606,61 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "1.842,65 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "DESCRIPCIÓN QUE CONSTA EN LA CERTIFICACIÓN DE CARGAS PUBLICADA EN EL BOE"
+          ],
+          [
+            "IDUFIR",
+            "21007000372307"
+          ],
+          [
+            "Dirección",
+            "CALLE NUEVA, 60 - PLANTA ALTA (ACTUALMENTE 64- PLANTA ALTA)"
+          ],
+          [
+            "Código Postal",
+            "21620"
+          ],
+          [
+            "Localidad",
+            "TRIGUEROS"
+          ],
+          [
+            "Provincia",
+            "Huelva"
+          ],
+          [
+            "Vivienda habitual",
+            "Sí"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267365/20261126_220654/portal/pestana_4_lote_1.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Relacionados",
+      "pestana": "4",
+      "lote": "1",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=4&idBus=&idLote=1&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=4&idBus=&idLote=1&numPagBus=",
+      "consultado_utc": "2026-11-26T21:07:04+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "8a5adf2fb93c6e60ebbac0318753d709e907e43dd946b9185ca22375e166c9f1",
+      "bytes": 9150,
+      "huella": "792794765359c07e846fb1512bfdce432fd4ee259ea14f368af438b43afea616",
+      "encabezados": [
+        "Acreedor"
+      ],
+      "tablas": [
+        [
+          [
+            "Nombre",
+            "DISCAFE HUELVA S.L."
+          ],
+          [
+            "NIF",
+            "B21512280"
+          ],
+          [
+            "Dirección",
+            "POLÍGONO INDUSTRIAL LA PAZ, NAVES 34 Y 35"
+          ],
+          [
+            "Localidad",
+            "21007 HUELVA"
+          ],
+          [
+            "Provincia",
+            "Huelva"
+          ],
+          [
+            "País",
+            "España"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267365/20261126_220654/portal/pujas_lote_1.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": "1",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=5&idBus=&idLote=1&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=5&idBus=&idLote=1&numPagBus=",
+      "consultado_utc": "2026-11-26T21:07:05+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "729037f90964aaebe1205ffbfe63a9f24ec851707a77751171c01bf3fe1305ab",
+      "bytes": 9389,
+      "huella": "002afc3ff5282d8385c79dfd826114288123b270d3c69aa12be5651664156b6d",
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267365/20261126_220654/portal/pestana_4_lote_2.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Relacionados",
+      "pestana": "4",
+      "lote": "2",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=4&idBus=&idLote=2&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=4&idBus=&idLote=2&numPagBus=",
+      "consultado_utc": "2026-11-26T21:07:06+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "cea6ec773dbdbe1db341b15b39bd44cf06c5f60314bc624b84cb0dac6ebec620",
+      "bytes": 9150,
+      "huella": "0ee1f32f014bfd2f533cf677b8971c7553bc70d96a567a9c2a29023f5704fed6",
+      "encabezados": [
+        "Acreedor"
+      ],
+      "tablas": [
+        [
+          [
+            "Nombre",
+            "DISCAFE HUELVA S.L."
+          ],
+          [
+            "NIF",
+            "B21512280"
+          ],
+          [
+            "Dirección",
+            "POLÍGONO INDUSTRIAL LA PAZ, NAVES 34 Y 35"
+          ],
+          [
+            "Localidad",
+            "21007 HUELVA"
+          ],
+          [
+            "Provincia",
+            "Huelva"
+          ],
+          [
+            "País",
+            "España"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267365/20261126_220654/portal/pujas_lote_2.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": "2",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=5&idBus=&idLote=2&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267365&ver=5&idBus=&idLote=2&numPagBus=",
+      "consultado_utc": "2026-11-26T21:07:07+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "e8f84cc0710fc1cbda9553815d7fc41323b57f77d4b9829aa4ee62a5598a2a31",
+      "bytes": 9389,
+      "huella": "b984300381f7bfb340b849a777bb23772b6d08790df860375e4ff116323a7caa",
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/81ae889409d72a6eb0bd1f8019569d89bacd57882c11547ea1d513dddbc95bbb.pdf",
+      "etiqueta": "EDICTO",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "1-90b2f1e0674c07bc652c7411901bbd14",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-267365&idDoc=1-90b2f1e0674c07bc652c7411901bbd14",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-267365&idDoc=1-90b2f1e0674c07bc652c7411901bbd14",
+      "consultado_utc": "2026-11-26T21:07:00+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "81ae889409d72a6eb0bd1f8019569d89bacd57882c11547ea1d513dddbc95bbb",
+      "bytes": 349597
+    },
+    {
+      "archivo": "documentos/3d9a234764b0206794fd1c57d48c61b3008f12ec2ab5a36cab4088369b08067e.pdf",
+      "etiqueta": "CERTIFICACIÓN DE CARGAS",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-80022bae53bc05f4735dd61dd45664f2",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-267365&idDoc=2-80022bae53bc05f4735dd61dd45664f2",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-267365&idDoc=2-80022bae53bc05f4735dd61dd45664f2",
+      "consultado_utc": "2026-11-26T21:07:01+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "3d9a234764b0206794fd1c57d48c61b3008f12ec2ab5a36cab4088369b08067e",
+      "bytes": 744012
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-37317",
+      "publicado": "2026-11-14",
+      "actualizado_fuente": "20261114071539",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-37317.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37317",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37317",
+          "consultado_utc": "2026-11-26T21:07:08+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "c0990096c8420b763348b93b97867828161140bfc6cf610d190a1562bdf3327c",
+          "bytes": 1134
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-37317.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/14/pdfs/BOE-B-2026-37317.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/14/pdfs/BOE-B-2026-37317.pdf",
+          "consultado_utc": "2026-11-26T21:07:09+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "8d98e6d3432c9b7b26239d71ea6b32ea31070d99e87a2107d716cc1a9ab71427",
+          "bytes": 197991
+        }
+      ],
+      "aviso": null,
+      "reutilizado": false
+    }
+  ],
+  "pendientes": []
+}

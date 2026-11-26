@@ -1,0 +1,312 @@
+{
+  "sub": "SUB-JA-2026-268416",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268416",
+  "consultado_utc": "2026-11-26T21:07:36+00:00",
+  "captura_codigos": "21/20261126_220631",
+  "peticiones": 8,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "CALLE MIGUEL DE CERVANTES 30",
+      "localidad": "SAN BARTOLOMÉ DE LA TORRE",
+      "provincia": "Huelva",
+      "codigo_postal": "21510",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-268416/20261126_220728/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268416&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-268416/20261126_220728/portal/general.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268416",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268416",
+      "consultado_utc": "2026-11-26T21:07:28+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "32ff80cdff6820f7c667745b874800f7680c13bf92b9308b1961b1c8b240d6e1",
+      "bytes": 10474,
+      "huella": "b76e9d934ebf3ac7f433b162e8b20a68e6487a35a020870d8c8ed0270caf9074",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-268416"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "1921 0000 05 0099 15"
+          ],
+          [
+            "Fecha de inicio",
+            "10-11-2026 18:00:00 CET  (ISO: 2026-11-10T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "30-11-2026 18:00:00 CET (ISO: 2026-11-30T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "112.624,05 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-36450"
+          ],
+          [
+            "Valor subasta",
+            "133.868,68 €"
+          ],
+          [
+            "Tasación",
+            "0,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "2.677,37 €"
+          ],
+          [
+            "Importe del depósito",
+            "6.693,43 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268416/20261126_220728/portal/autoridad.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268416&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268416&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:07:30+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "27e0b2a11da64b51947fe37aaf02d535ea71ddce9c5cbbbbbd0351fe9385e18a",
+      "bytes": 9142,
+      "huella": "d79038645d0918a8734518168941f05ead3e79c525a12a570567af5f6163fae1",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "2104142005"
+          ],
+          [
+            "Descripción",
+            "Sección Civil TI Huelva. Plz.n 5"
+          ],
+          [
+            "Dirección",
+            "AL SUNDHEIM 17 28   ; 21003 HUELVA"
+          ],
+          [
+            "Teléfono",
+            "662977100"
+          ],
+          [
+            "Fax",
+            "959013787"
+          ],
+          [
+            "Correo electrónico",
+            "SCEJ.subastas.huelva.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268416/20261126_220728/portal/bienes.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268416&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268416&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:07:31+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "6ca181ba70561c04af464aae2c26aaa8052466182a91dce9c530e952b4d87c13",
+      "bytes": 10321,
+      "huella": "5c357d431d9de2533b0fb8a6d90e57cbac27a0335b8a5f27fad5c7099139217c",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "VIVIENDA UNIFAMILIAR EN HILERA, ASENTADA SOBRE PARCELA SESENTA Y OCHO DE LA MANZANA M4, SITUADA EN EL SECTOR Nº 1 DEL SUELO RESIDENCIAL DE SAN BARTOLOMÉ DE LA TORRE (HUELVA)"
+          ],
+          [
+            "IDUFIR",
+            "21007000972316"
+          ],
+          [
+            "Dirección",
+            "CALLE MIGUEL DE CERVANTES 30"
+          ],
+          [
+            "Código Postal",
+            "21510"
+          ],
+          [
+            "Localidad",
+            "SAN BARTOLOMÉ DE LA TORRE"
+          ],
+          [
+            "Provincia",
+            "Huelva"
+          ],
+          [
+            "Vivienda habitual",
+            "Sí"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268416/20261126_220728/portal/pestana_4.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Relacionados",
+      "pestana": "4",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268416&ver=4&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268416&ver=4&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:07:32+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "3a169b38aa024736ec47539208b1cfdd7d6578aa3f02e87714647b1e06c51df3",
+      "bytes": 9123,
+      "huella": "4150bdc151c132bda9c4ca10e8faa2a010a00fbc24c9a37110c5888db264c1e5",
+      "encabezados": [
+        "Acreedor"
+      ],
+      "tablas": [
+        [
+          [
+            "Nombre",
+            "DEUTSCHE BANK, S.A.E."
+          ],
+          [
+            "NIF",
+            "A08000614"
+          ],
+          [
+            "Dirección",
+            "CL DIAGONAL 446"
+          ],
+          [
+            "Localidad",
+            "08006 BARCELONA"
+          ],
+          [
+            "Provincia",
+            "Barcelona"
+          ],
+          [
+            "País",
+            "España"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268416/20261126_220728/portal/pujas.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268416&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268416&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:07:33+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "b80549ff48732360a94477dc2ca4e16f49b1b67a7f2fc17b93eeda1d76751f99",
+      "bytes": 8645,
+      "huella": "442c57747c8d34ff60da82a761c47a9fad70da56d6d137217725ae66c6c6d4c4",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-36450",
+      "publicado": "2026-11-07",
+      "actualizado_fuente": "20261107071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-36450.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36450",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36450",
+          "consultado_utc": "2026-11-26T21:07:34+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "0ebb8419d2cf877b913afba903d3f36d2ef1b642a49f7e74f7c83216d8ca4863",
+          "bytes": 1135
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-36450.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/07/pdfs/BOE-B-2026-36450.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/07/pdfs/BOE-B-2026-36450.pdf",
+          "consultado_utc": "2026-11-26T21:07:35+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "adbfdbb30419aa8ba21b0b752bcda66e6201dcb12e28dbcc469a396c13634966",
+          "bytes": 198016
+        }
+      ],
+      "aviso": null,
+      "reutilizado": false
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268416",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

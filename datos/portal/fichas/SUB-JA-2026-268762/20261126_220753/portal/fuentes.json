@@ -1,0 +1,30 @@
+[
+  {
+    "archivo": "general.html.gz",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268762"
+  },
+  {
+    "archivo": "autoridad.html.gz",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268762&ver=2&idBus=&idLote=&numPagBus="
+  },
+  {
+    "archivo": "bienes.html.gz",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268762&ver=3&idBus=&idLote=&numPagBus="
+  },
+  {
+    "archivo": "pestana_4.html.gz",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268762&ver=4&idBus=&idLote=&numPagBus="
+  },
+  {
+    "archivo": "pujas.html.gz",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268762&ver=5&idBus=&idLote=&numPagBus="
+  },
+  {
+    "archivo": "fb5a01f5b2da66e982db307aa72d17fab04c6ad93f40b3486f401c427a5b3dc7.pdf",
+    "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268762&idDoc=1-db46dc6c935f5b5f6a94767717780fe8"
+  },
+  {
+    "archivo": "8769cf2eb3eb92355f1227dd69eeb8696c1f17929295bc2d4a78038390854260.pdf",
+    "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268762&idDoc=2-7d7facb2afc2b5fcc075eb474fc7d8b5"
+  }
+]

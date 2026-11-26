@@ -1,10 +1,28 @@
 {
+ "POST https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC Provincia=&Municipio=&SRS=EPSG%3A4326&RC=1873401PBB217S": {
+  "archivo": "537537f47d831cfc3289a1dd.xml",
+  "bytes": 411,
+  "http": 200,
+  "momento": "2026-11-26T21:09:07+00:00",
+  "post": "Provincia=&Municipio=&SRS=EPSG%3A4326&RC=1873401PBB217S",
+  "sha256": "5e7a2236c06cad857ca1926865c84c718e3059825651633b94e9d1c5f210fd42",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC"
+ },
  "POST https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC Provincia=&Municipio=&SRS=EPSG%3A4326&RC=4410306TG34415": {
   "archivo": "369d37fe88b4e665b3d9bb68.xml",
   "bytes": 411,
   "http": 200,
   "momento": "2026-11-25T20:04:44+00:00",
   "post": "Provincia=&Municipio=&SRS=EPSG%3A4326&RC=4410306TG34415",
+  "sha256": "5e7a2236c06cad857ca1926865c84c718e3059825651633b94e9d1c5f210fd42",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC"
+ },
+ "POST https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC Provincia=&Municipio=&SRS=EPSG%3A4326&RC=956704PB4135N0": {
+  "archivo": "948c7d7dcdfd62a2e2a52bdc.xml",
+  "bytes": 411,
+  "http": 200,
+  "momento": "2026-11-26T21:09:13+00:00",
+  "post": "Provincia=&Municipio=&SRS=EPSG%3A4326&RC=956704PB4135N0",
   "sha256": "5e7a2236c06cad857ca1926865c84c718e3059825651633b94e9d1c5f210fd42",
   "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC"
  },
@@ -32,6 +50,22 @@
   "sha256": "640548e584ff113864ae78d0730966bfdae5bb9b01048a2187d8ea7b1b59f75b",
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=0790006TG4209S"
  },
+ "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=0918007PB9301N": {
+  "archivo": "dccbf48c197c071d76703880.json",
+  "bytes": 250,
+  "http": 200,
+  "momento": "2026-11-26T21:09:18+00:00",
+  "sha256": "6ca6f050a7c7800324f7fb018f5064e80844cd1dee01fc29735452fc1978a15d",
+  "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=0918007PB9301N"
+ },
+ "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=1602645PB9410S": {
+  "archivo": "289c65522140dd8ffbd6d74c.json",
+  "bytes": 234,
+  "http": 200,
+  "momento": "2026-11-26T21:08:56+00:00",
+  "sha256": "ffa61681bdc182680045e6f9f57d99c32fa0158678c2139de30f41bc4602f7f5",
+  "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=1602645PB9410S"
+ },
  "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=1628001TG4412N": {
   "archivo": "1da06165ee58b909244f858a.json",
   "bytes": 271,
@@ -40,6 +74,30 @@
   "sha256": "f5b7b23269e51250a2cb35d81d667ae0e733fc88bd15e421600974dbbbb9e700",
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=1628001TG4412N"
  },
+ "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=1873401PBB217S": {
+  "archivo": "fc7ce803dce55f2a6417e04a.json",
+  "bytes": 111,
+  "http": 200,
+  "momento": "2026-11-26T21:09:05+00:00",
+  "sha256": "560a22082af5be9b88c0b0f981907dd081d836a5e9b1336955072e2668abf9e7",
+  "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=1873401PBB217S"
+ },
+ "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=1979301PB8217N": {
+  "archivo": "54786729e87b2c6a571e411c.json",
+  "bytes": 235,
+  "http": 200,
+  "momento": "2026-11-26T21:09:17+00:00",
+  "sha256": "f61c528a125e9d3da5916bf557f797add73cc6341a52254e5ea222797c26cd25",
+  "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=1979301PB8217N"
+ },
+ "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=2382003PB8228S": {
+  "archivo": "403ef09d699f32f24d69ef2d.json",
+  "bytes": 241,
+  "http": 200,
+  "momento": "2026-11-26T21:09:03+00:00",
+  "sha256": "4c3f9b454a99eb04d21f8c08d63aae946e6f44f3ad769cb484de5699bbd77ab4",
+  "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=2382003PB8228S"
+ },
  "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=2794019TG5129S": {
   "archivo": "2f3fd4430fc6d954cfc910bb.json",
   "bytes": 238,
@@ -47,6 +105,14 @@
   "momento": "2026-11-25T19:48:24+00:00",
   "sha256": "1494bd86bb2fb281a20de1cbc7a623cf262a2feff89fcffcf5403c0ce8c15535",
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=2794019TG5129S"
+ },
+ "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=2849104QB1724N": {
+  "archivo": "ae184ec7a233976707569624.json",
+  "bytes": 238,
+  "http": 200,
+  "momento": "2026-11-26T21:09:04+00:00",
+  "sha256": "baed50ce2a7216476f9552bbb53718cbe26dc069d384de3e877bb645a1489e12",
+  "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=2849104QB1724N"
  },
  "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=2888019QB6328N": {
   "archivo": "cd90eb63254ca708c48e6b38.json",
@@ -71,6 +137,14 @@
   "momento": "2026-11-25T19:48:31+00:00",
   "sha256": "cdaf1ac3d2aec3a4766a6a4c4a0d1f9550f39005b27f7f1a0e00ab79eb564097",
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=2992019QB6329S"
+ },
+ "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=3368901PB8236N": {
+  "archivo": "d8854cc844024b622d5117ea.json",
+  "bytes": 260,
+  "http": 200,
+  "momento": "2026-11-26T21:09:19+00:00",
+  "sha256": "8f8c52614bf9ce09e0c7b708a787e8cc55380f66431065e6426ac7d96d9af988",
+  "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=3368901PB8236N"
  },
  "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=3511018TG3431S": {
   "archivo": "2b657cc22cf2d3a477d95041.json",
@@ -128,6 +202,14 @@
   "sha256": "933db4855407b5c9984530e6750d1e47c7cee8542bf77f17258e6955bb9bf1c7",
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=7046406TG3474N"
  },
+ "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=7468501PB4176N": {
+  "archivo": "7df1ea079158d2146ce0c569.json",
+  "bytes": 241,
+  "http": 200,
+  "momento": "2026-11-26T21:08:55+00:00",
+  "sha256": "f89573b30d93e555ed605b1508f1ba199b0a07f5a0070bceb483326a67bbf6f7",
+  "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=7468501PB4176N"
+ },
  "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=8463834TG4386S": {
   "archivo": "574ce73e4473291b84b0c63c.json",
   "bytes": 254,
@@ -160,6 +242,22 @@
   "sha256": "d7051ba99463e27456b2279df06c4868000acac1e09389e0a7732af80f907064",
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=9336509QB5393N"
  },
+ "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=9388001PB4198N": {
+  "archivo": "8beb328fcd3dfc646429e7ce.json",
+  "bytes": 245,
+  "http": 200,
+  "momento": "2026-11-26T21:08:59+00:00",
+  "sha256": "59eba90704753d8f0d5f3c93e745361798456148a794bb4754d69109f94657c5",
+  "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=9388001PB4198N"
+ },
+ "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=956704PB4135N0": {
+  "archivo": "6e0d71a02cd42b27bb774d29.json",
+  "bytes": 111,
+  "http": 200,
+  "momento": "2026-11-26T21:09:11+00:00",
+  "sha256": "560a22082af5be9b88c0b0f981907dd081d836a5e9b1336955072e2668abf9e7",
+  "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=956704PB4135N0"
+ },
  "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=9720403QB3392S": {
   "archivo": "2bc6e6ed70dedafea5a009b3.json",
   "bytes": 236,
@@ -168,6 +266,14 @@
   "sha256": "af9ad958ff8747f003629353d6c10f5a1a9ed3b298c062305f9034415dea54ba",
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=9720403QB3392S"
  },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RC=1873401PBB217S": {
+  "archivo": "605fa31ffb3435827607032c.xml",
+  "bytes": 411,
+  "http": 200,
+  "momento": "2026-11-26T21:09:06+00:00",
+  "sha256": "5e7a2236c06cad857ca1926865c84c718e3059825651633b94e9d1c5f210fd42",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RC=1873401PBB217S"
+ },
  "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RC=4410306TG34415": {
   "archivo": "e812dd0e8dcf52b13d73903a.xml",
   "bytes": 411,
@@ -175,6 +281,14 @@
   "momento": "2026-11-25T20:04:43+00:00",
   "sha256": "5e7a2236c06cad857ca1926865c84c718e3059825651633b94e9d1c5f210fd42",
   "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RC=4410306TG34415"
+ },
+ "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RC=956704PB4135N0": {
+  "archivo": "15692bcdd24dd3391674fcb8.xml",
+  "bytes": 411,
+  "http": 200,
+  "momento": "2026-11-26T21:09:12+00:00",
+  "sha256": "5e7a2236c06cad857ca1926865c84c718e3059825651633b94e9d1c5f210fd42",
+  "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RC=956704PB4135N0"
  },
  "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=0647204TG4404N": {
   "http": 500,
@@ -291,6 +405,14 @@
   "motivo": "HTTP 500",
   "url": "https://ovc.catastro.meh.es/ovcservweb/OVCSWLocalizacionRC/OVCCoordenadas.asmx/Consulta_CPMRC?Provincia=&Municipio=&SRS=EPSG%3A4326&RefCat=9720403QB3392S"
  },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=1873401PBB217S&limit=1": {
+  "archivo": "48ec87d0605c423f1d9eb067.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-26T21:09:08+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=1873401PBB217S&limit=1"
+ },
  "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=4410306TG34415&limit=1": {
   "archivo": "3904b40ffdf5f8f70d1bf5b9.json",
   "bytes": 12,
@@ -298,6 +420,14 @@
   "momento": "2026-11-25T19:48:44+00:00",
   "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
   "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=4410306TG34415&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=956704PB4135N0&limit=1": {
+  "archivo": "720083b092f702838e8a3d62.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-26T21:09:14+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=956704PB4135N0&limit=1"
  },
  "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=AVDA+PINO+MONTANO+118%2C+Sevilla%2C+Sevilla&limit=1": {
   "archivo": "1c08d24be0aef0370f9f6d69.json",
@@ -339,6 +469,30 @@
   "sha256": "ffd89d495902bbb410b84a8695317cc304d29ed00aa1556e12bf0d2aeb23156e",
   "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=C%2F+RODRIGO+DE+TRIANA+66-68%2C+Pilas&limit=1"
  },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=C%2F+Regulares+Marroqu%C3%ADes+21%2C+Badajoz&limit=1": {
+  "archivo": "fc3373cf7659fe9563432b43.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-26T21:08:52+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=C%2F+Regulares+Marroqu%C3%ADes+21%2C+Badajoz&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=C%2F+Regulares+Marroqu%C3%ADes+21+2%C2%BA-B%2C+06001+Badajoz&limit=1": {
+  "archivo": "7e9a0c249ec862b465fb6428.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-26T21:08:50+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=C%2F+Regulares+Marroqu%C3%ADes+21+2%C2%BA-B%2C+06001+Badajoz&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=C%2F+Regulares+Marroqu%C3%ADes+21+2%C2%BA-B%2C+Badajoz&limit=1": {
+  "archivo": "6d7aec48cbcfd98d3228b3bc.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-26T21:08:51+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=C%2F+Regulares+Marroqu%C3%ADes+21+2%C2%BA-B%2C+Badajoz&limit=1"
+ },
  "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+CACERES+4%2C+San+Juan+de+Aznalfarache%2C+Sevilla&limit=1": {
   "archivo": "d1809bd2a51e8b9358a6800b.json",
   "bytes": 12,
@@ -379,6 +533,38 @@
   "sha256": "956f66e3ecc217c27c5c4d8f51cb660105cd2803099dce5bc039ad9f1d263c79",
   "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+HUERTA+GAVIRA+25%2C+Marchena&limit=1"
  },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+MARTIN+PESCADOR+2%2C+21002+Huelva&limit=1": {
+  "archivo": "7d2e84e9c90d443f472ed25a.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-26T21:09:09+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+MARTIN+PESCADOR+2%2C+21002+Huelva&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+MARTIN+PESCADOR+2%2C+Huelva&limit=1": {
+  "archivo": "4ca18ff8b3cb62d0e036e07e.json",
+  "bytes": 509,
+  "http": 200,
+  "momento": "2026-11-26T21:09:10+00:00",
+  "sha256": "667cda242c1d004b0a09147d25276f90b06ab103698888d13230192a8646f8c2",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+MARTIN+PESCADOR+2%2C+Huelva&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+MIGUEL+DE+CERVANTES+30%2C+21510+San+Bartolom%C3%A9+de+la+Torre&limit=1": {
+  "archivo": "e214b1ac07f7caa7b8d2b87d.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-26T21:09:00+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+MIGUEL+DE+CERVANTES+30%2C+21510+San+Bartolom%C3%A9+de+la+Torre&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+MIGUEL+DE+CERVANTES+30%2C+San+Bartolom%C3%A9+de+la+Torre&limit=1": {
+  "archivo": "5a16ca0c62e55c72eb29ceef.json",
+  "bytes": 554,
+  "http": 200,
+  "momento": "2026-11-26T21:09:02+00:00",
+  "sha256": "c658586387d998701584bb650410f34378532cfff3214a42b858eb897ef646b4",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+MIGUEL+DE+CERVANTES+30%2C+San+Bartolom%C3%A9+de+la+Torre&limit=1"
+ },
  "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+NAOS+12%2C+41011+Sevilla&limit=1": {
   "archivo": "33007d269e50e54e806bd637.json",
   "bytes": 501,
@@ -402,6 +588,22 @@
   "momento": "2026-11-25T19:45:11+00:00",
   "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
   "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+NAOS+12+-+ESC.+1+-2%C2%BA+IZDA%2C+Sevilla%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+NUEVA+60%2C+21620+Trigueros&limit=1": {
+  "archivo": "ecccb1c4058dc96b11025311.json",
+  "bytes": 535,
+  "http": 200,
+  "momento": "2026-11-26T21:08:57+00:00",
+  "sha256": "363ba783f88ed41afda20dd77aa1a2c2219282ae8356dfcc7fa38c495cb252d4",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+NUEVA+60%2C+21620+Trigueros&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+NUEVA+60%2C+Trigueros&limit=1": {
+  "archivo": "84b5aedcd3e33f8403f9c922.json",
+  "bytes": 506,
+  "http": 200,
+  "momento": "2026-11-26T21:08:58+00:00",
+  "sha256": "6c6e51c772b80654fc167ba4d68b07f22a70397859717e73d6de4ecc92e809f6",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+NUEVA+60%2C+Trigueros&limit=1"
  },
  "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CIENTO+OCHENTA+Y+SEIS%2C+Sevilla%2C+Sevilla&limit=1": {
   "archivo": "8557b502d1cd5970be1123a4.json",
@@ -555,6 +757,22 @@
   "sha256": "60078fb0d323158ca1adbb355ff3c80e01a978635cbdf215c242ee9ee8853b63",
   "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Calle+Per%C3%BA+49%2C+Bormujos&limit=1"
  },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Ctra.+de+Zalamea+15%2C+21600+Valverde+del+Camino&limit=1": {
+  "archivo": "2b38d294c28c2beaaf6604ad.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-26T21:08:53+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Ctra.+de+Zalamea+15%2C+21600+Valverde+del+Camino&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Ctra.+de+Zalamea+15%2C+Valverde+del+Camino&limit=1": {
+  "archivo": "994008be53bc288695120c79.json",
+  "bytes": 532,
+  "http": 200,
+  "momento": "2026-11-26T21:08:54+00:00",
+  "sha256": "fe174c66e978a228fb99dcbf93e35ac30277eec9c2924d952ec9d7bc6e9a119b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Ctra.+de+Zalamea+15%2C+Valverde+del+Camino&limit=1"
+ },
  "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=DEHESA+DE+LA+MATA+ALCOZARINA+32%2C+41530+Mor%C3%B3n+de+la+Frontera&limit=1": {
   "archivo": "a3fd96a0245f942fc3bedcd2.json",
   "bytes": 12,
@@ -587,6 +805,22 @@
   "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
   "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=HACIENDA+DOLORES+8+1%2C+Alcal%C3%A1+de+Guada%C3%ADra%2C+Sevilla&limit=1"
  },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Isla+de+Canela+y+del+Moral%2C+21409+Ayamonte&limit=1": {
+  "archivo": "3066676425e18f7ad198f442.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-26T21:09:15+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Isla+de+Canela+y+del+Moral%2C+21409+Ayamonte&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Isla+de+Canela+y+del+Moral%2C+Ayamonte&limit=1": {
+  "archivo": "db0000ba5a8bb994961ff618.json",
+  "bytes": 610,
+  "http": 200,
+  "momento": "2026-11-26T21:09:16+00:00",
+  "sha256": "0b323337bad3653f6a85b75f121a81fb71bd05b0e4c3a3038811cea3727351b8",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Isla+de+Canela+y+del+Moral%2C+Ayamonte&limit=1"
+ },
  "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Muelle+Mart%C3%ADnez+Catena+21%2C+Isla+Cristina%2C+Huelva&limit=1": {
   "archivo": "6d41d91c90321adb5797eb63.json",
   "bytes": 524,
@@ -594,6 +828,22 @@
   "momento": "2026-11-25T19:45:15+00:00",
   "sha256": "82c9eb08dadcb52ae70298bd99e71840fff9f0c1dface44a65ee3ab86ab05857",
   "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Muelle+Mart%C3%ADnez+Catena+21%2C+Isla+Cristina%2C+Huelva&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=PA+ALDEA+MINAS+DE+HERRERIASP+0%2C+21550+Puebla+de+Guzm%C3%A1n&limit=1": {
+  "archivo": "f64f5cca8035c69cb2c94ea4.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-26T21:08:48+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=PA+ALDEA+MINAS+DE+HERRERIASP+0%2C+21550+Puebla+de+Guzm%C3%A1n&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=PA+ALDEA+MINAS+DE+HERRERIASP+0%2C+Puebla+de+Guzm%C3%A1n&limit=1": {
+  "archivo": "aaf0b00f3db59a6ec81d6998.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-26T21:08:49+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=PA+ALDEA+MINAS+DE+HERRERIASP+0%2C+Puebla+de+Guzm%C3%A1n&limit=1"
  },
  "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=PA+LA+MORENA+O+MORONA+0%2C+41530+Mor%C3%B3n+de+la+Frontera&limit=1": {
   "archivo": "e9c1462c3a7e7355536b6b87.json",

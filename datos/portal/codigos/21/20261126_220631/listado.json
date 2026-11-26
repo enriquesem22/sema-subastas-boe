@@ -1,0 +1,65 @@
+{
+  "fecha_captura": "2026-11-26T22:06:31+01:00",
+  "provincia_bien": "Huelva",
+  "cod_provincia": "21",
+  "estado": "Celebrándose",
+  "tipo_bien": "Todos",
+  "fuente": "BOE · Portal de Subastas (búsqueda avanzada)",
+  "url_fuente": "https://subastas.boe.es/subastas_ava.php",
+  "url_consulta": "https://subastas.boe.es/subastas_ava.php?campo%5B2%5D=SUBASTA.ESTADO.CODIGO&dato%5B2%5D=EJ&campo%5B8%5D=BIEN.COD_PROVINCIA&page_hits=500&sort_field%5B0%5D=SUBASTA.ID_SUBASTA_ORDENAR&sort_order%5B0%5D=asc&accion=Buscar&dato%5B8%5D=21",
+  "total_resultados": 14,
+  "paginas": [
+    {
+      "url": "https://subastas.boe.es/subastas_ava.php?campo%5B2%5D=SUBASTA.ESTADO.CODIGO&dato%5B2%5D=EJ&campo%5B8%5D=BIEN.COD_PROVINCIA&page_hits=500&sort_field%5B0%5D=SUBASTA.ID_SUBASTA_ORDENAR&sort_order%5B0%5D=asc&accion=Buscar&dato%5B8%5D=21",
+      "momento": "2026-11-26T22:06:31+01:00",
+      "fecha_servidor": "Thu, 26 Nov 2026 21:06:30 GMT",
+      "sha256": "201d32d2b946707593529a83cda29ceb4f5ee3f2c0eb0926c16db68f4138b89b",
+      "bytes": 37762,
+      "archivo": "pagina-1.html.gz"
+    }
+  ],
+  "subastas": [
+    {
+      "sub": "SUB-JA-2026-263600"
+    },
+    {
+      "sub": "SUB-JA-2026-267150"
+    },
+    {
+      "sub": "SUB-JA-2026-267365"
+    },
+    {
+      "sub": "SUB-JA-2026-267632"
+    },
+    {
+      "sub": "SUB-JA-2026-268212"
+    },
+    {
+      "sub": "SUB-JA-2026-268416"
+    },
+    {
+      "sub": "SUB-JA-2026-268533"
+    },
+    {
+      "sub": "SUB-JA-2026-268711"
+    },
+    {
+      "sub": "SUB-JA-2026-268762"
+    },
+    {
+      "sub": "SUB-JA-2026-268764"
+    },
+    {
+      "sub": "SUB-JA-2026-268801"
+    },
+    {
+      "sub": "SUB-JA-2026-268927"
+    },
+    {
+      "sub": "SUB-JA-2026-269145"
+    },
+    {
+      "sub": "SUB-AT-2026-26R4186001362"
+    }
+  ]
+}

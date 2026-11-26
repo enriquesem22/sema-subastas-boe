@@ -1,0 +1,345 @@
+{
+  "sub": "SUB-JA-2026-268927",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268927",
+  "consultado_utc": "2026-11-26T21:08:30+00:00",
+  "captura_codigos": "21/20261126_220631",
+  "peticiones": 10,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "CALLE PUERTO RICO, PTA B, 2º INT. IZQ.",
+      "localidad": "SAN JUAN DEL PUERTO",
+      "provincia": "Huelva",
+      "codigo_postal": "21610",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-268927/20261126_220820/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268927&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-268927/20261126_220820/portal/general.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268927",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268927",
+      "consultado_utc": "2026-11-26T21:08:20+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "95c6d12639e3d7f5aad0542dff0e193579a9c5927b167ed3b85172bc30675225",
+      "bytes": 10852,
+      "huella": "d64f417ff0c561e56edffb7c20d1afd9c2b4a683acef465fbb4aa7a79731c54f",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-268927"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "1913 0000 06 2397 22"
+          ],
+          [
+            "Fecha de inicio",
+            "24-11-2026 18:00:00 CET  (ISO: 2026-11-24T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "14-12-2026 18:00:00 CET (ISO: 2026-12-14T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "94.532,79 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-38312"
+          ],
+          [
+            "Valor subasta",
+            "126.571,99 €"
+          ],
+          [
+            "Tasación",
+            "0,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "2.531,43 €"
+          ],
+          [
+            "Importe del depósito",
+            "6.328,59 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268927/20261126_220820/portal/autoridad.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268927&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268927&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:08:22+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "db1c726c4bce7d2894feb22e43503e79714aeab6c73eff5c0b6c31af9a50a13a",
+      "bytes": 9142,
+      "huella": "f212ef115e7cd1192c63da68f0ecbabc05e27699cc0b412b98f4a8ec7530622c",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "2104142003"
+          ],
+          [
+            "Descripción",
+            "Sección Civil TI Huelva. Plz.n 3"
+          ],
+          [
+            "Dirección",
+            "AL SUNDHEIM 17 15   ; 21003 HUELVA"
+          ],
+          [
+            "Teléfono",
+            "662977100"
+          ],
+          [
+            "Fax",
+            "959014306"
+          ],
+          [
+            "Correo electrónico",
+            "SCEJ.subastas.huelva.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268927/20261126_220820/portal/bienes.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268927&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268927&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:08:23+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "da2b310d7411a4b766c685bd4d6b6687159734f34e904932b6725aba98660767",
+      "bytes": 10577,
+      "huella": "99e49210efc495ef9d9993e4e4e0279088ede14af709fbcb098f0ea3d3bbf663",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "Piso segundo anterior izquierda, tipo A,\n          letra B, destinado a vivienda del Bloque 2, sito en San Juan del Puerto -Huelva-    (CALLE PUERTO RICO, PTA B, 2º INT. IZQ. 21610 SAN JUAN DEL PUERTO HUELVA)"
+          ],
+          [
+            "IDUFIR",
+            "21007000337221"
+          ],
+          [
+            "Referencia catastral",
+            "0918007PB9301N0012YA"
+          ],
+          [
+            "Dirección",
+            "CALLE PUERTO RICO, PTA B, 2º INT. IZQ."
+          ],
+          [
+            "Código Postal",
+            "21610"
+          ],
+          [
+            "Localidad",
+            "SAN JUAN DEL PUERTO"
+          ],
+          [
+            "Provincia",
+            "Huelva"
+          ],
+          [
+            "Vivienda habitual",
+            "Sí"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268927/20261126_220820/portal/pestana_4.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Relacionados",
+      "pestana": "4",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268927&ver=4&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268927&ver=4&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:08:24+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "16364707ac55bffce19337d8a1dae0bc00d340a3c5dbc3438174326afbc5f3b7",
+      "bytes": 9109,
+      "huella": "ad6376f753fe7f78a98aa1287d4ee1b7419d172661dea5048c0f468717d901de",
+      "encabezados": [
+        "Acreedor"
+      ],
+      "tablas": [
+        [
+          [
+            "Nombre",
+            "PROMONTORIA OMEGA DAC"
+          ],
+          [
+            "NIF",
+            "N0074258E"
+          ],
+          [
+            "Dirección",
+            "No consta"
+          ],
+          [
+            "Localidad",
+            "No consta No consta"
+          ],
+          [
+            "Provincia",
+            "-"
+          ],
+          [
+            "País",
+            "Irlanda"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268927/20261126_220820/portal/pujas.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268927&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268927&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:08:25+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "b6744f09afdf0fa44d5605882cbd9a274a244a63430fc3a62903e28f8c15076f",
+      "bytes": 8645,
+      "huella": "50d410f4763fa11b2d86442b4b146a9d5aea6f3e5140691b637a0e4187179e51",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/4da7a06a3d2a8e2defade2649d7a9268fe6f2c874ab6bb272aec48eec7569c21.pdf",
+      "etiqueta": "EDICTO",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "1-1df76fb30639b38ba3c7c74bf6aa1e8e",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268927&idDoc=1-1df76fb30639b38ba3c7c74bf6aa1e8e",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268927&idDoc=1-1df76fb30639b38ba3c7c74bf6aa1e8e",
+      "consultado_utc": "2026-11-26T21:08:26+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "4da7a06a3d2a8e2defade2649d7a9268fe6f2c874ab6bb272aec48eec7569c21",
+      "bytes": 340987
+    },
+    {
+      "archivo": "documentos/063bd23ba63292354dae407b48639a747c8fee726a8a4f59c01c64206c5e4e5c.pdf",
+      "etiqueta": "CERTIFICADO DE CARGAS",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-24264d58b7163640d641f628c5deb87d",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268927&idDoc=2-24264d58b7163640d641f628c5deb87d",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268927&idDoc=2-24264d58b7163640d641f628c5deb87d",
+      "consultado_utc": "2026-11-26T21:08:27+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "063bd23ba63292354dae407b48639a747c8fee726a8a4f59c01c64206c5e4e5c",
+      "bytes": 1045386
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-38312",
+      "publicado": "2026-11-21",
+      "actualizado_fuente": "20261121071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-38312.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38312",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38312",
+          "consultado_utc": "2026-11-26T21:08:29+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "975fc25072351841776991f3becd8cde43a6092ce1a962252c59f6cd6a6ea8d5",
+          "bytes": 1137
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-38312.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38312.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38312.pdf",
+          "consultado_utc": "2026-11-26T21:08:29+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "8375c756a11cf8ff1912f876879cf03de999ef06da33f27f2133ee5d63b472f8",
+          "bytes": 197911
+        }
+      ],
+      "aviso": null,
+      "reutilizado": false
+    }
+  ],
+  "pendientes": []
+}

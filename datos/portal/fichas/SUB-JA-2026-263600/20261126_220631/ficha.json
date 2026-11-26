@@ -1,0 +1,746 @@
+{
+  "sub": "SUB-JA-2026-263600",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-263600",
+  "consultado_utc": "2026-11-26T21:06:47+00:00",
+  "captura_codigos": "21/20261126_220631",
+  "peticiones": 17,
+  "lotes_identificados": [
+    "1",
+    "2"
+  ],
+  "ubicaciones_bienes": [
+    {
+      "lote": "1",
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "C/ Regulares Marroquíes, 21, 2º-B",
+      "localidad": "Badajoz",
+      "provincia": "Badajoz",
+      "codigo_postal": "06001",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-263600/20261126_220631/portal/bienes_lote_1.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=3&idLote=1&idBus=&numPagBus="
+      }
+    },
+    {
+      "lote": "2",
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "Ctra. de Zalamea, 15",
+      "localidad": "Valverde del Camino",
+      "provincia": "Huelva",
+      "codigo_postal": "21600",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-263600/20261126_220631/portal/bienes_lote_2.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=3&idLote=2&idBus=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-263600/20261126_220631/portal/general.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-263600",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600",
+      "consultado_utc": "2026-11-26T21:06:31+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "40279e8736dd4e03fac81ff939b169866a3f802a420143e558951b86235b9e41",
+      "bytes": 11846,
+      "huella": "bc8826821646a68c581bbc0cd5be5acf6dde55c00207ae21512f28c7b3b278ad",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-263600"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "0882 0000 06 0489 22"
+          ],
+          [
+            "Fecha de inicio",
+            "13-11-2026 18:00:00 CET  (ISO: 2026-11-13T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "03-12-2026 18:00:00 CET (ISO: 2026-12-03T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "138.376,00 €"
+          ],
+          [
+            "Lotes",
+            "2"
+          ],
+          [
+            "Forma adjudicación",
+            "Separada para cada lote"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-36632"
+          ],
+          [
+            "Valor subasta",
+            "Ver valor de subasta en cada lote (los lotes se subastan de forma independiente)"
+          ],
+          [
+            "Tasación",
+            "Ver valor de tasación en cada lote (los lotes se subastan de forma independiente)"
+          ],
+          [
+            "Puja mínima",
+            "Ver puja mínima de cada lote (adjudicación independiente)"
+          ],
+          [
+            "Tramos entre pujas",
+            "Ver tramos de cada lote (adjudicación independiente)"
+          ],
+          [
+            "Importe del depósito",
+            "Ver importe de consignación de cada lote (adjudicación independiente)"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-263600/20261126_220631/portal/autoridad.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:06:32+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "0063f9f7e995888f1563012f55d5ed481c978f0206ffbdca568e08164a0c52eb",
+      "bytes": 9119,
+      "huella": "b83a6dd0d66ad948d7da7fde505ceb68ba62254c2dc574d6ec34ee1572cc9434",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "0601542002"
+          ],
+          [
+            "Descripción",
+            "Sección Civil TI Badajoz. Plz.n 2"
+          ],
+          [
+            "Dirección",
+            "AV COLON 8 8   ; 06005 BADAJOZ"
+          ],
+          [
+            "Teléfono",
+            "-"
+          ],
+          [
+            "Fax",
+            "924284277"
+          ],
+          [
+            "Correo electrónico",
+            "scej.seccion1.badajoz@justicia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-263600/20261126_220631/portal/bienes.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Lotes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:06:33+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "1ae032e1057763de50db721b81bef4341cd4a4c5fc610434718340293b50fa29",
+      "bytes": 12566,
+      "huella": "1d67389f84f6d8a2eb09c7bdd9631d875d208a9670ac6f7dd0cb092d9b563503",
+      "encabezados": [
+        "Lote 1",
+        "Datos relacionados con la subasta del lote 1",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "90.061,40 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "4.503,07 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "0,00 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "URBANA. NUMERO SIETE. Vivienda letra B, planta segunda de la casa en Badajoz, calle Regulares Marroquíes, número diecinueve, diecinueve A, diecinueve B y diecinueve C. Tiene su acceso por el portal y escaleras señalada con el número diecinueve B, hoy número VEINTIUNO."
+          ],
+          [
+            "Dirección",
+            "C/ Regulares Marroquíes, 21, 2º-B"
+          ],
+          [
+            "Código Postal",
+            "06001"
+          ],
+          [
+            "Localidad",
+            "Badajoz"
+          ],
+          [
+            "Provincia",
+            "Badajoz"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-263600/20261126_220631/portal/pestana_4.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Relacionados",
+      "pestana": "4",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=4&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=4&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:06:34+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "ba6037c3962c05d77c5eca3394299683b7e44687ebf355936ae9ff52a4583f38",
+      "bytes": 9097,
+      "huella": "bb6ac236a8e4c8512aafc6a3088e048f24082dfd13e6ccbbf857ce4c28a57eee",
+      "encabezados": [
+        "Acreedor"
+      ],
+      "tablas": [
+        [
+          [
+            "Nombre",
+            "LC ASSET 2 SARL"
+          ],
+          [
+            "NIF",
+            "N0022636E"
+          ],
+          [
+            "Dirección",
+            "No consta"
+          ],
+          [
+            "Localidad",
+            "No consta No consta"
+          ],
+          [
+            "Provincia",
+            "-"
+          ],
+          [
+            "País",
+            "XG"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-263600/20261126_220631/portal/pujas.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:06:35+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "ae5974857f2dcdc28d40d5aa51f253e975a70be149713eb5af47169cc04c62ea",
+      "bytes": 9389,
+      "huella": "8d225425883c18bf3de8961a3cf70f08ddec5d085b229ea9163981c74f002143",
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-263600/20261126_220631/portal/bienes_lote_1.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Lote 1",
+      "pestana": "3",
+      "lote": "1",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=3&idLote=1&idBus=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=3&idLote=1&idBus=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:06:39+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "4a302b23a74c80cef9f0580760485c80fb22a521d4e71a817b6c44d6f92a943d",
+      "bytes": 12571,
+      "huella": "153c2e480f351cb0b1adee2629a33d0fa7f75414beb5c5103d5d3c2c7162c0ea",
+      "encabezados": [
+        "Lote 1",
+        "Datos relacionados con la subasta del lote 1",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "90.061,40 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "4.503,07 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "0,00 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "URBANA. NUMERO SIETE. Vivienda letra B, planta segunda de la casa en Badajoz, calle Regulares Marroquíes, número diecinueve, diecinueve A, diecinueve B y diecinueve C. Tiene su acceso por el portal y escaleras señalada con el número diecinueve B, hoy número VEINTIUNO."
+          ],
+          [
+            "Dirección",
+            "C/ Regulares Marroquíes, 21, 2º-B"
+          ],
+          [
+            "Código Postal",
+            "06001"
+          ],
+          [
+            "Localidad",
+            "Badajoz"
+          ],
+          [
+            "Provincia",
+            "Badajoz"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-263600/20261126_220631/portal/bienes_lote_2.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Lote 2",
+      "pestana": "3",
+      "lote": "2",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=3&idLote=2&idBus=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=3&idLote=2&idBus=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:06:40+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "1df28fb4e3a653b0a4fa86c3c61157db331defdffcebdbcd3e5efd4b299fc614",
+      "bytes": 12508,
+      "huella": "55d2847edfa16af635bad1febb712e8abc9ddbbb8ada5a6aa531621d3249cec0",
+      "encabezados": [
+        "Lote 2",
+        "Datos relacionados con la subasta del lote 2",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "133.349,92 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "6.667,49 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "0,00 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "URBANA.- NUMERO DOS DE PROPIEDAD HORIZONTAL.- Vivienda en planta alta, única de su planta, de la edificación de dos plantas, sita en Carretera de Zalamea, número quince de gobierno, de Valverde del Camino (Huelva)."
+          ],
+          [
+            "Dirección",
+            "Ctra. de Zalamea, 15"
+          ],
+          [
+            "Código Postal",
+            "21600"
+          ],
+          [
+            "Localidad",
+            "Valverde del Camino"
+          ],
+          [
+            "Provincia",
+            "Huelva"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-263600/20261126_220631/portal/pestana_4_lote_1.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Relacionados",
+      "pestana": "4",
+      "lote": "1",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=4&idBus=&idLote=1&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=4&idBus=&idLote=1&numPagBus=",
+      "consultado_utc": "2026-11-26T21:06:41+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "9621b210b3aa455d2519b69fb401bdb7a40859d6baacd37d7d95aabf2d635c3d",
+      "bytes": 9102,
+      "huella": "6aa51648fa31e7c3395f5a61f1971dcf6f31ab6b9947f49b8082aaf70856059c",
+      "encabezados": [
+        "Acreedor"
+      ],
+      "tablas": [
+        [
+          [
+            "Nombre",
+            "LC ASSET 2 SARL"
+          ],
+          [
+            "NIF",
+            "N0022636E"
+          ],
+          [
+            "Dirección",
+            "No consta"
+          ],
+          [
+            "Localidad",
+            "No consta No consta"
+          ],
+          [
+            "Provincia",
+            "-"
+          ],
+          [
+            "País",
+            "XG"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-263600/20261126_220631/portal/pujas_lote_1.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": "1",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=5&idBus=&idLote=1&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=5&idBus=&idLote=1&numPagBus=",
+      "consultado_utc": "2026-11-26T21:06:42+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "803b4ce91c379c77db2fd57c6a2a94d38b0199f20f4640ae60ecae406f346fbd",
+      "bytes": 9389,
+      "huella": "8d225425883c18bf3de8961a3cf70f08ddec5d085b229ea9163981c74f002143",
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-263600/20261126_220631/portal/pestana_4_lote_2.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Relacionados",
+      "pestana": "4",
+      "lote": "2",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=4&idBus=&idLote=2&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=4&idBus=&idLote=2&numPagBus=",
+      "consultado_utc": "2026-11-26T21:06:43+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "59a353d86a11407fe6c8c3a8b5338fab375d8936336b9de31927361eebece6c0",
+      "bytes": 9102,
+      "huella": "5276baaf0e8137c94ba191a9f3b8fa4ad1ac87a88c4f56ff6decc35039127938",
+      "encabezados": [
+        "Acreedor"
+      ],
+      "tablas": [
+        [
+          [
+            "Nombre",
+            "LC ASSET 2 SARL"
+          ],
+          [
+            "NIF",
+            "N0022636E"
+          ],
+          [
+            "Dirección",
+            "No consta"
+          ],
+          [
+            "Localidad",
+            "No consta No consta"
+          ],
+          [
+            "Provincia",
+            "-"
+          ],
+          [
+            "País",
+            "XG"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-263600/20261126_220631/portal/pujas_lote_2.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": "2",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=5&idBus=&idLote=2&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263600&ver=5&idBus=&idLote=2&numPagBus=",
+      "consultado_utc": "2026-11-26T21:06:44+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "b6e07d6a359366174788349702c159a18b6bf0b015a8253c662c0e9f3f89b676",
+      "bytes": 9389,
+      "huella": "d4e832ad391542a4b52634e3f33f2d9182f1ecd0dd645cf339a6780ed7b841f1",
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/37b756defe9d660430a585b5aee16abc5a0d61218ce9f3515cfbccb0f8f771c4.pdf",
+      "etiqueta": "EDICTO DE SUBASTA",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "1-6a7223985606ec50294121b407ea1d72",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-263600&idDoc=1-6a7223985606ec50294121b407ea1d72",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-263600&idDoc=1-6a7223985606ec50294121b407ea1d72",
+      "consultado_utc": "2026-11-26T21:06:36+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "37b756defe9d660430a585b5aee16abc5a0d61218ce9f3515cfbccb0f8f771c4",
+      "bytes": 226161
+    },
+    {
+      "archivo": "documentos/74f00702cf54cead00dad677005cc6391f90ccc5f21ee505a4b512ff55563b6a.pdf",
+      "etiqueta": "CERTIFICACIÓN REGISTRAL DE LA FINCA Nº 3.554 DEL REGISTRO DE LA PROPIEDAD DE BADAJOZ Nº 3 (LOTE 1).",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-82b8f67f6b3f518b74d18cff89981322",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-263600&idDoc=2-82b8f67f6b3f518b74d18cff89981322",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-263600&idDoc=2-82b8f67f6b3f518b74d18cff89981322",
+      "consultado_utc": "2026-11-26T21:06:37+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "74f00702cf54cead00dad677005cc6391f90ccc5f21ee505a4b512ff55563b6a",
+      "bytes": 1104200
+    },
+    {
+      "archivo": "documentos/7a2fe64ee8a6adfd438dbcd9d229f8cf9d1f9f6160b7a1c1e9cf267589607706.pdf",
+      "etiqueta": "CERTIFICACIÓN REGISTRAL DE LA FINCA Nº 10.255 DEL REGISTRO DE LA PROPIEDAD DE VALVERDE DEL CAMINO (LOTE 2).",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "3-09129f57b96d428542b773c923a91ba3",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-263600&idDoc=3-09129f57b96d428542b773c923a91ba3",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-263600&idDoc=3-09129f57b96d428542b773c923a91ba3",
+      "consultado_utc": "2026-11-26T21:06:39+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "7a2fe64ee8a6adfd438dbcd9d229f8cf9d1f9f6160b7a1c1e9cf267589607706",
+      "bytes": 328805
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-36632",
+      "publicado": "2026-11-10",
+      "actualizado_fuente": "20261110071606",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-36632.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36632",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36632",
+          "consultado_utc": "2026-11-26T21:06:45+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "c10de3e572bbcbd72762e0aef2abfccd5a6bca81039ee268d60761ef22ec39f0",
+          "bytes": 1136
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-36632.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/10/pdfs/BOE-B-2026-36632.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/10/pdfs/BOE-B-2026-36632.pdf",
+          "consultado_utc": "2026-11-26T21:06:46+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "98f9498845a1c953b151fbeb427935952c189f0cf38dd5f4d8ab20bb19a8d966",
+          "bytes": 198241
+        }
+      ],
+      "aviso": null,
+      "reutilizado": false
+    }
+  ],
+  "pendientes": []
+}

@@ -1,0 +1,168 @@
+{
+  "inicio": "2026-11-26T22:06:31+01:00",
+  "fin": "2026-11-26T22:08:47+01:00",
+  "captura_codigos": "21/20261126_220631",
+  "total": 14,
+  "peticiones": 137,
+  "detenido": null,
+  "por_estado": {
+    "completa": 8,
+    "con_pendientes": 6
+  },
+  "resultados": [
+    {
+      "sub": "SUB-JA-2026-263600",
+      "estado": "completa",
+      "carpeta": "fichas/SUB-JA-2026-263600/20261126_220631",
+      "peticiones": 17,
+      "paginas": 11,
+      "adjuntos": 3,
+      "adjuntos_nuevos": 3,
+      "anuncios": 1,
+      "pendientes": 0
+    },
+    {
+      "sub": "SUB-JA-2026-267150",
+      "estado": "con_pendientes",
+      "carpeta": "fichas/SUB-JA-2026-267150/20261126_220647",
+      "peticiones": 7,
+      "paginas": 4,
+      "adjuntos": 0,
+      "adjuntos_nuevos": 0,
+      "anuncios": 1,
+      "pendientes": 1
+    },
+    {
+      "sub": "SUB-JA-2026-267365",
+      "estado": "completa",
+      "carpeta": "fichas/SUB-JA-2026-267365/20261126_220654",
+      "peticiones": 16,
+      "paginas": 11,
+      "adjuntos": 2,
+      "adjuntos_nuevos": 2,
+      "anuncios": 1,
+      "pendientes": 0
+    },
+    {
+      "sub": "SUB-JA-2026-267632",
+      "estado": "con_pendientes",
+      "carpeta": "fichas/SUB-JA-2026-267632/20261126_220710",
+      "peticiones": 7,
+      "paginas": 4,
+      "adjuntos": 0,
+      "adjuntos_nuevos": 0,
+      "anuncios": 1,
+      "pendientes": 1
+    },
+    {
+      "sub": "SUB-JA-2026-268212",
+      "estado": "completa",
+      "carpeta": "fichas/SUB-JA-2026-268212/20261126_220717",
+      "peticiones": 11,
+      "paginas": 10,
+      "adjuntos": 4,
+      "adjuntos_nuevos": 0,
+      "anuncios": 1,
+      "pendientes": 0
+    },
+    {
+      "sub": "SUB-JA-2026-268416",
+      "estado": "con_pendientes",
+      "carpeta": "fichas/SUB-JA-2026-268416/20261126_220728",
+      "peticiones": 8,
+      "paginas": 5,
+      "adjuntos": 0,
+      "adjuntos_nuevos": 0,
+      "anuncios": 1,
+      "pendientes": 1
+    },
+    {
+      "sub": "SUB-JA-2026-268533",
+      "estado": "completa",
+      "carpeta": "fichas/SUB-JA-2026-268533/20261126_220736",
+      "peticiones": 10,
+      "paginas": 5,
+      "adjuntos": 2,
+      "adjuntos_nuevos": 2,
+      "anuncios": 1,
+      "pendientes": 0
+    },
+    {
+      "sub": "SUB-JA-2026-268711",
+      "estado": "con_pendientes",
+      "carpeta": "fichas/SUB-JA-2026-268711/20261126_220746",
+      "peticiones": 7,
+      "paginas": 4,
+      "adjuntos": 0,
+      "adjuntos_nuevos": 0,
+      "anuncios": 1,
+      "pendientes": 1
+    },
+    {
+      "sub": "SUB-JA-2026-268762",
+      "estado": "completa",
+      "carpeta": "fichas/SUB-JA-2026-268762/20261126_220753",
+      "peticiones": 10,
+      "paginas": 5,
+      "adjuntos": 2,
+      "adjuntos_nuevos": 2,
+      "anuncios": 1,
+      "pendientes": 0
+    },
+    {
+      "sub": "SUB-JA-2026-268764",
+      "estado": "con_pendientes",
+      "carpeta": "fichas/SUB-JA-2026-268764/20261126_220803",
+      "peticiones": 7,
+      "paginas": 4,
+      "adjuntos": 0,
+      "adjuntos_nuevos": 0,
+      "anuncios": 1,
+      "pendientes": 1
+    },
+    {
+      "sub": "SUB-JA-2026-268801",
+      "estado": "completa",
+      "carpeta": "fichas/SUB-JA-2026-268801/20261126_220810",
+      "peticiones": 10,
+      "paginas": 5,
+      "adjuntos": 2,
+      "adjuntos_nuevos": 2,
+      "anuncios": 1,
+      "pendientes": 0
+    },
+    {
+      "sub": "SUB-JA-2026-268927",
+      "estado": "completa",
+      "carpeta": "fichas/SUB-JA-2026-268927/20261126_220820",
+      "peticiones": 10,
+      "paginas": 5,
+      "adjuntos": 2,
+      "adjuntos_nuevos": 2,
+      "anuncios": 1,
+      "pendientes": 0
+    },
+    {
+      "sub": "SUB-JA-2026-269145",
+      "estado": "completa",
+      "carpeta": "fichas/SUB-JA-2026-269145/20261126_220830",
+      "peticiones": 10,
+      "paginas": 5,
+      "adjuntos": 2,
+      "adjuntos_nuevos": 2,
+      "anuncios": 1,
+      "pendientes": 0
+    },
+    {
+      "sub": "SUB-AT-2026-26R4186001362",
+      "estado": "con_pendientes",
+      "carpeta": "fichas/SUB-AT-2026-26R4186001362/20261126_220840",
+      "peticiones": 7,
+      "paginas": 4,
+      "adjuntos": 0,
+      "adjuntos_nuevos": 0,
+      "anuncios": 1,
+      "pendientes": 2
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "sub": "SUB-JA-2026-268711",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268711",
+  "consultado_utc": "2026-11-26T21:07:53+00:00",
+  "captura_codigos": "21/20261126_220631",
+  "peticiones": 7,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "Calle Ancha nº 7",
+      "localidad": "Valverde del Camino",
+      "provincia": "Huelva",
+      "codigo_postal": "21600",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-268711/20261126_220746/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268711&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-268711/20261126_220746/portal/general.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268711",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268711",
+      "consultado_utc": "2026-11-26T21:07:46+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "6f62fd8742e481ec6f84cee52d0716d863a7fe27eba636d3db5033fab7473787",
+      "bytes": 10296,
+      "huella": "47c046e03a17ff5248471339ee7d0132a03f2030f93fe8854a3a657d988ed5ae",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-268711"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "1945 0000 06 0176 21"
+          ],
+          [
+            "Fecha de inicio",
+            "24-11-2026 18:00:00 CET  (ISO: 2026-11-24T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "14-12-2026 18:00:00 CET (ISO: 2026-12-14T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "16.576,91 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-38287"
+          ],
+          [
+            "Valor subasta",
+            "51.494,94 €"
+          ],
+          [
+            "Tasación",
+            "0,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "1.029,89 €"
+          ],
+          [
+            "Importe del depósito",
+            "2.574,74 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268711/20261126_220746/portal/autoridad.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268711&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268711&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:07:48+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "80c0998005b275f2bf5c4602b549c90ede3b4d96304b5b60a5174b348ecfb927",
+      "bytes": 8996,
+      "huella": "6c6814091ab5cc6b5a166c5c3d3949621ed4436072910e055bef80546de0cfc1",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "2107241001"
+          ],
+          [
+            "Descripción",
+            "Sec. Civil e Inst. TI Valverde del Camino. Plz.n 1"
+          ],
+          [
+            "Dirección",
+            "CL GERMAN CABRERO 35 S/N   ; 21600 VALVERDE DEL CAMINO"
+          ],
+          [
+            "Teléfono",
+            "662977023"
+          ],
+          [
+            "Fax",
+            "959029706"
+          ],
+          [
+            "Correo electrónico",
+            "sara.diaz.morales.ius@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268711/20261126_220746/portal/bienes.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268711&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268711&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:07:49+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "a133af74fd8cf9b41779707ff40aed262541f99c5fc2320ee253b084bb66161d",
+      "bytes": 11355,
+      "huella": "60244d0b24917a6bff5259b29c5b398c33c97142633ead79e5370e3cf825e702",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "Identificación de la finca: URBANA.- Calle Ancha nº 7 de Valverde del Camino.- \n          Tiene una superficie de terreno de setenta y dos metros cuadrados, y construidos \n          cincuenta y siete metros cuadrados. Linda por su frente, con la calle Ancha por donde tiene su entrada; derecha con el número cinco de la calle de su situación ; izquierda con el número nueve de la calle de su situación y por el fondo con los números veintiséis, veintiocho y treinta de la calle Fenicios.\n           \n          Datos registrales: Registro de la Propiedad de Valverde del Camino, finca 4367, inscrita al tomo 868, libro 64, folio 186, inscripción 3ª."
+          ],
+          [
+            "IDUFIR",
+            "21006000563548"
+          ],
+          [
+            "Referencia catastral",
+            "2849104QB1724N0001RI"
+          ],
+          [
+            "Dirección",
+            "Calle Ancha nº 7"
+          ],
+          [
+            "Código Postal",
+            "21600"
+          ],
+          [
+            "Localidad",
+            "Valverde del Camino"
+          ],
+          [
+            "Provincia",
+            "Huelva"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268711/20261126_220746/portal/pujas.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268711&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268711&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T21:07:50+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "a2f401d8922ccaf17c7da0183d88f4f942ee23dbb5151749793c288be4eca467",
+      "bytes": 8469,
+      "huella": "4f34df762a941fbc11cd04a7a12a29e41dd6719b2953ba3b32bf40502ed70e4e",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-38287",
+      "publicado": "2026-11-21",
+      "actualizado_fuente": "20261121071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-38287.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38287",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38287",
+          "consultado_utc": "2026-11-26T21:07:51+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "77451a37edab386c30b9f5077a7bd40e5581e696d8e131302b6f8c23d6090f6f",
+          "bytes": 1197
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-38287.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38287.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38287.pdf",
+          "consultado_utc": "2026-11-26T21:07:52+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "e9d5ff4c207e7a947d49188f569cecfc645556e08c6d7a0f49898de198d7621a",
+          "bytes": 198853
+        }
+      ],
+      "aviso": null,
+      "reutilizado": false
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268711",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

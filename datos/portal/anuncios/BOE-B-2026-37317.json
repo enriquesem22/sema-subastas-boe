@@ -1,0 +1,26 @@
+{
+  "anuncio": "BOE-B-2026-37317",
+  "publicado": "2026-11-14",
+  "actualizado_fuente": "20261114071539",
+  "archivos": [
+    {
+      "archivo": "anuncios/BOE-B-2026-37317.xml",
+      "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37317",
+      "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37317",
+      "consultado_utc": "2026-11-26T21:07:08+00:00",
+      "tipo_mime": "application/xml",
+      "sha256": "c0990096c8420b763348b93b97867828161140bfc6cf610d190a1562bdf3327c",
+      "bytes": 1134
+    },
+    {
+      "archivo": "anuncios/BOE-B-2026-37317.pdf",
+      "url": "https://www.boe.es/boe/dias/2026/11/14/pdfs/BOE-B-2026-37317.pdf",
+      "url_final": "https://www.boe.es/boe/dias/2026/11/14/pdfs/BOE-B-2026-37317.pdf",
+      "consultado_utc": "2026-11-26T21:07:09+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "8d98e6d3432c9b7b26239d71ea6b32ea31070d99e87a2107d716cc1a9ab71427",
+      "bytes": 197991
+    }
+  ],
+  "aviso": null
+}

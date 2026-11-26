@@ -223,6 +223,38 @@
   "sha256_original": "d87fb5a1d2d3b36c4206c87dd38cd0e63ab183aeb4af49c44cc9390c047e8f4e",
   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-5.7882997%2C37.1864735%2C-5.7849169%2C37.1882420&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
  },
+ "SUB-JA-2026-263600_2_1_catastro": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-263600_2_1_catastro.png",
+  "bytes": 8277,
+  "bytes_original": 19388,
+  "fuente": "Dirección General del Catastro · cartografía catastral (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:20+00:00",
+  "punto": [
+   37.5812022,
+   -6.7518247
+  ],
+  "sha256_original": "1ab01dab50a288f9d493bbe582314aeb0fda5fa0f9cb0d0d7eb46018590250aa",
+  "url": "https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=Catastro&STYLES=&SRS=EPSG%3A4326&BBOX=-6.7535250%2C37.5803179%2C-6.7501244%2C37.5820865&WIDTH=640&HEIGHT=420&FORMAT=image%2Fpng"
+ },
+ "SUB-JA-2026-263600_2_1_orto": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-263600_2_1_orto.jpg",
+  "bytes": 46094,
+  "bytes_original": 47570,
+  "fuente": "Instituto Geográfico Nacional · ortofoto PNOA (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:21+00:00",
+  "punto": [
+   37.5812022,
+   -6.7518247
+  ],
+  "sha256_original": "d320c8359212ea2f6dbaacbe8f67fcdb9d3ea79a652d1e4719f0332b6ae3f4b8",
+  "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-6.7535250%2C37.5803179%2C-6.7501244%2C37.5820865&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
+ },
  "SUB-JA-2026-263908_0_1_catastro": {
   "alto": 420,
   "ancho": 640,
@@ -256,12 +288,19 @@
   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-5.9221597%2C37.3930740%2C-5.9187676%2C37.3948426&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
  },
  "SUB-JA-2026-265153_0_1_catastro": {
-  "error": "Remote end closed connection without response",
-  "momento": "2026-11-26T09:54:18+00:00",
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-265153_0_1_catastro.png",
+  "bytes": 28347,
+  "bytes_original": 71176,
+  "fuente": "Dirección General del Catastro · cartografía catastral (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:22+00:00",
   "punto": [
    37.3353655,
    -6.025257
   ],
+  "sha256_original": "c3c10d660f035287fd9cc430ef9728a7a304e33e44c0cbebd5fc247631b4f896",
   "url": "https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=Catastro&STYLES=&SRS=EPSG%3A4326&BBOX=-6.0269517%2C37.3344812%2C-6.0235623%2C37.3362498&WIDTH=640&HEIGHT=420&FORMAT=image%2Fpng"
  },
  "SUB-JA-2026-265153_0_1_orto": {
@@ -408,6 +447,102 @@
   "sha256_original": "f4acc0aa76f0cc3c2cd4769cccee036a85269214f6a3a39e8fd9700ff129f083",
   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-6.0352498%2C37.3594307%2C-6.0318592%2C37.3611993&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
  },
+ "SUB-JA-2026-267150_0_1_catastro": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-267150_0_1_catastro.png",
+  "bytes": 18118,
+  "bytes_original": 48401,
+  "fuente": "Dirección General del Catastro · cartografía catastral (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:23+00:00",
+  "punto": [
+   37.1850788,
+   -7.3392217
+  ],
+  "sha256_original": "dd558b14ee7ba2987fadad0544755e7a5f9a945611940a68f2cd3d4649e043d6",
+  "url": "https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=Catastro&STYLES=&SRS=EPSG%3A4326&BBOX=-7.3409130%2C37.1841945%2C-7.3375303%2C37.1859630&WIDTH=640&HEIGHT=420&FORMAT=image%2Fpng"
+ },
+ "SUB-JA-2026-267150_0_1_orto": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-267150_0_1_orto.jpg",
+  "bytes": 79672,
+  "bytes_original": 82297,
+  "fuente": "Instituto Geográfico Nacional · ortofoto PNOA (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:24+00:00",
+  "punto": [
+   37.1850788,
+   -7.3392217
+  ],
+  "sha256_original": "97980da3dbf988330d4e51add18997a616740801ba67a45fa9932cea609f1e8f",
+  "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-7.3409130%2C37.1841945%2C-7.3375303%2C37.1859630&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
+ },
+ "SUB-JA-2026-267365_1_1_catastro": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-267365_1_1_catastro.png",
+  "bytes": 22914,
+  "bytes_original": 56132,
+  "fuente": "Dirección General del Catastro · cartografía catastral (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:25+00:00",
+  "punto": [
+   37.3864367,
+   -6.8379026
+  ],
+  "sha256_original": "9b15e38685b183359c0a0bfef6f5602fd1cb868c216a98c2f41a3e34dba988ff",
+  "url": "https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=Catastro&STYLES=&SRS=EPSG%3A4326&BBOX=-6.8395984%2C37.3855524%2C-6.8362067%2C37.3873209&WIDTH=640&HEIGHT=420&FORMAT=image%2Fpng"
+ },
+ "SUB-JA-2026-267365_1_1_orto": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-267365_1_1_orto.jpg",
+  "bytes": 65806,
+  "bytes_original": 67993,
+  "fuente": "Instituto Geográfico Nacional · ortofoto PNOA (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:27+00:00",
+  "punto": [
+   37.3864367,
+   -6.8379026
+  ],
+  "sha256_original": "029dcb621631aaf6f1f0602077930ea3de6c6abe4b87c6f1e9d6eec6fa7d8f19",
+  "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-6.8395984%2C37.3855524%2C-6.8362067%2C37.3873209&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
+ },
+ "SUB-JA-2026-267365_2_1_catastro": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-267365_2_1_catastro.png",
+  "bytes": 23460,
+  "bytes_original": 57685,
+  "fuente": "Dirección General del Catastro · cartografía catastral (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:27+00:00",
+  "punto": [
+   37.3864023,
+   -6.837818
+  ],
+  "sha256_original": "536fb2a17405d6568eaae303d7985f03342506ceadbf3f58b04587ea70495915",
+  "url": "https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=Catastro&STYLES=&SRS=EPSG%3A4326&BBOX=-6.8395139%2C37.3855180%2C-6.8361222%2C37.3872865&WIDTH=640&HEIGHT=420&FORMAT=image%2Fpng"
+ },
+ "SUB-JA-2026-267365_2_1_orto": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-267365_2_1_orto.jpg",
+  "bytes": 65948,
+  "bytes_original": 68030,
+  "fuente": "Instituto Geográfico Nacional · ortofoto PNOA (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:29+00:00",
+  "punto": [
+   37.3864023,
+   -6.837818
+  ],
+  "sha256_original": "c063553d7fe9441cdab46d52e42abbd37db615825d167b2ab2ab21a182c09763",
+  "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-6.8395139%2C37.3855180%2C-6.8361222%2C37.3872865&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
+ },
  "SUB-JA-2026-267385_0_1_catastro": {
   "alto": 420,
   "ancho": 640,
@@ -425,12 +560,19 @@
   "url": "https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=Catastro&STYLES=&SRS=EPSG%3A4326&BBOX=-6.0359410%2C37.3555938%2C-6.0325506%2C37.3573624&WIDTH=640&HEIGHT=420&FORMAT=image%2Fpng"
  },
  "SUB-JA-2026-267385_0_1_orto": {
-  "error": "The read operation timed out",
-  "momento": "2026-11-26T09:54:36+00:00",
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-267385_0_1_orto.jpg",
+  "bytes": 72657,
+  "bytes_original": 74978,
+  "fuente": "Instituto Geográfico Nacional · ortofoto PNOA (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:29+00:00",
   "punto": [
    37.3564781,
    -6.0342458
   ],
+  "sha256_original": "674e693a35ca5b17f2d2a4de9572f04ab35f8a6ea578790caf0dd1609f8f00af",
   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-6.0359410%2C37.3555938%2C-6.0325506%2C37.3573624&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
  },
  "SUB-JA-2026-267391_1_1_catastro": {
@@ -560,6 +702,38 @@
   ],
   "sha256_original": "759845df5edfd76c903e712cd62d7cd1e003d24aaa96f6a0efaa630f3e25f42b",
   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-5.7556007%2C37.3701668%2C-5.7522096%2C37.3719354&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
+ },
+ "SUB-JA-2026-267632_0_1_catastro": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-267632_0_1_catastro.png",
+  "bytes": 16805,
+  "bytes_original": 36333,
+  "fuente": "Dirección General del Catastro · cartografía catastral (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:30+00:00",
+  "punto": [
+   37.2025253,
+   -7.3188582
+  ],
+  "sha256_original": "6a051b72bc0b6b014db1e69e2caa9c1606cfc33a9121d64f0476af2291c9fac6",
+  "url": "https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=Catastro&STYLES=&SRS=EPSG%3A4326&BBOX=-7.3205500%2C37.2016410%2C-7.3171665%2C37.2034096&WIDTH=640&HEIGHT=420&FORMAT=image%2Fpng"
+ },
+ "SUB-JA-2026-267632_0_1_orto": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-267632_0_1_orto.jpg",
+  "bytes": 67487,
+  "bytes_original": 69611,
+  "fuente": "Instituto Geográfico Nacional · ortofoto PNOA (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:32+00:00",
+  "punto": [
+   37.2025253,
+   -7.3188582
+  ],
+  "sha256_original": "a25ab7ba22da97ab1007b75b52cf1f606957244bd06948d6bcc6ac20d4b09e54",
+  "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-7.3205500%2C37.2016410%2C-7.3171665%2C37.2034096&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
  },
  "SUB-JA-2026-268087_1_1_catastro": {
   "alto": 420,
@@ -706,13 +880,19 @@
   "url": "https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=Catastro&STYLES=&SRS=EPSG%3A4326&BBOX=-5.8518851%2C37.3951166%2C-5.8484929%2C37.3968851&WIDTH=640&HEIGHT=420&FORMAT=image%2Fpng"
  },
  "SUB-JA-2026-268190_0_1_orto": {
-  "error": "HTTP 502, text/html; charset=iso-8859-1: <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>502 Proxy Error</title>\n</head><body>\n<h1>Proxy Error</h1>\n<p>The proxy server received an invalid\r\nresponse from an upstream ser",
-  "http": 502,
-  "momento": "2026-11-26T09:56:07+00:00",
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-268190_0_1_orto.jpg",
+  "bytes": 52620,
+  "bytes_original": 54382,
+  "fuente": "Instituto Geográfico Nacional · ortofoto PNOA (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:32+00:00",
   "punto": [
    37.3960008,
    -5.850189
   ],
+  "sha256_original": "531e76d70bb88425b9976b60c723d02200676aa78dbc00dff8263f611587de7a",
   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-5.8518851%2C37.3951166%2C-5.8484929%2C37.3968851&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
  },
  "SUB-JA-2026-268195_0_1_catastro": {
@@ -907,6 +1087,70 @@
   "sha256_original": "53e57620860dcd720364ec49184d34e664c6f4b95ca802b3e3c06d7730064bf3",
   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-5.4620073%2C37.1232610%2C-5.4586274%2C37.1250295&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
  },
+ "SUB-JA-2026-268416_0_1_catastro": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-268416_0_1_catastro.png",
+  "bytes": 23150,
+  "bytes_original": 47789,
+  "fuente": "Dirección General del Catastro · cartografía catastral (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:33+00:00",
+  "punto": [
+   37.4474664,
+   -7.1030344
+  ],
+  "sha256_original": "9831a1e7a3bf4091b24d30f199bd921c83df742c07d88bb950dc69fe7c4300b4",
+  "url": "https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=Catastro&STYLES=&SRS=EPSG%3A4326&BBOX=-7.1047316%2C37.4465821%2C-7.1013371%2C37.4483506&WIDTH=640&HEIGHT=420&FORMAT=image%2Fpng"
+ },
+ "SUB-JA-2026-268416_0_1_orto": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-268416_0_1_orto.jpg",
+  "bytes": 62166,
+  "bytes_original": 64111,
+  "fuente": "Instituto Geográfico Nacional · ortofoto PNOA (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:35+00:00",
+  "punto": [
+   37.4474664,
+   -7.1030344
+  ],
+  "sha256_original": "7d3e9972d14332df8e1ab678d9aa860e48a7c87090a69a43489684a1ec13d7e5",
+  "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-7.1047316%2C37.4465821%2C-7.1013371%2C37.4483506&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
+ },
+ "SUB-JA-2026-268533_0_1_catastro": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-268533_0_1_catastro.png",
+  "bytes": 20667,
+  "bytes_original": 48783,
+  "fuente": "Dirección General del Catastro · cartografía catastral (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:36+00:00",
+  "punto": [
+   37.2806183,
+   -6.9448329
+  ],
+  "sha256_original": "b47d8a77118635c8b83fb21b81334ff0c58d9cc381fc01242837ab291e41f493",
+  "url": "https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=Catastro&STYLES=&SRS=EPSG%3A4326&BBOX=-6.9465264%2C37.2797340%2C-6.9431394%2C37.2815026&WIDTH=640&HEIGHT=420&FORMAT=image%2Fpng"
+ },
+ "SUB-JA-2026-268533_0_1_orto": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-268533_0_1_orto.jpg",
+  "bytes": 65249,
+  "bytes_original": 67418,
+  "fuente": "Instituto Geográfico Nacional · ortofoto PNOA (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:37+00:00",
+  "punto": [
+   37.2806183,
+   -6.9448329
+  ],
+  "sha256_original": "49871de46037582cac88329075e64f6cf874c19119783aa6f4635b2379ae4aa9",
+  "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-6.9465264%2C37.2797340%2C-6.9431394%2C37.2815026&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
+ },
  "SUB-JA-2026-268563_0_1_catastro": {
   "alto": 420,
   "ancho": 640,
@@ -1002,6 +1246,198 @@
   ],
   "sha256_original": "9b44dc492d784d065c8cf2c2064a4c256d1f5c1353485430b579593ebe542065",
   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-6.2982333%2C37.3011129%2C-6.2948454%2C37.3028815&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
+ },
+ "SUB-JA-2026-268711_0_1_catastro": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-268711_0_1_catastro.png",
+  "bytes": 24667,
+  "bytes_original": 45944,
+  "fuente": "Dirección General del Catastro · cartografía catastral (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:38+00:00",
+  "punto": [
+   37.6951044,
+   -6.587855
+  ],
+  "sha256_original": "94828c9b8323762a31a2843e0b6ee9ca04324715cdeba4ecfa55466e2473492e",
+  "url": "https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=Catastro&STYLES=&SRS=EPSG%3A4326&BBOX=-6.5895579%2C37.6942201%2C-6.5861521%2C37.6959887&WIDTH=640&HEIGHT=420&FORMAT=image%2Fpng"
+ },
+ "SUB-JA-2026-268711_0_1_orto": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-268711_0_1_orto.jpg",
+  "bytes": 57627,
+  "bytes_original": 59393,
+  "fuente": "Instituto Geográfico Nacional · ortofoto PNOA (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:39+00:00",
+  "punto": [
+   37.6951044,
+   -6.587855
+  ],
+  "sha256_original": "8f1fff77abc0ba63719725e0c2be5a82b2a371aa032ccf939bf355ee42a41f03",
+  "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-6.5895579%2C37.6942201%2C-6.5861521%2C37.6959887&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
+ },
+ "SUB-JA-2026-268762_0_1_catastro": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-268762_0_1_catastro.png",
+  "bytes": 23908,
+  "bytes_original": 53259,
+  "fuente": "Dirección General del Catastro · cartografía catastral (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:40+00:00",
+  "punto": [
+   37.2734083,
+   -6.9506752
+  ],
+  "sha256_original": "807df737858031916fd24046076e904af0d07c0e32090afc0c7b357449f74c6d",
+  "url": "https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=Catastro&STYLES=&SRS=EPSG%3A4326&BBOX=-6.9523686%2C37.2725240%2C-6.9489819%2C37.2742926&WIDTH=640&HEIGHT=420&FORMAT=image%2Fpng"
+ },
+ "SUB-JA-2026-268762_0_1_orto": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-268762_0_1_orto.jpg",
+  "bytes": 62588,
+  "bytes_original": 64604,
+  "fuente": "Instituto Geográfico Nacional · ortofoto PNOA (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:41+00:00",
+  "punto": [
+   37.2734083,
+   -6.9506752
+  ],
+  "sha256_original": "21d14cadba99b555a02e897528b589362073a931de3959c521d54c532f427d9b",
+  "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-6.9523686%2C37.2725240%2C-6.9489819%2C37.2742926&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
+ },
+ "SUB-JA-2026-268764_0_1_catastro": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-268764_0_1_catastro.png",
+  "bytes": 14829,
+  "bytes_original": 30338,
+  "fuente": "Dirección General del Catastro · cartografía catastral (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:42+00:00",
+  "punto": [
+   37.199332,
+   -7.4031398
+  ],
+  "sha256_original": "d0526ad74204e7dd1d61f8a36399cba76214a86bd801b4dfd95926dfcbe6dbf2",
+  "url": "https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=Catastro&STYLES=&SRS=EPSG%3A4326&BBOX=-7.4048314%2C37.1984478%2C-7.4014481%2C37.2002163&WIDTH=640&HEIGHT=420&FORMAT=image%2Fpng"
+ },
+ "SUB-JA-2026-268764_0_1_orto": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-268764_0_1_orto.jpg",
+  "bytes": 72764,
+  "bytes_original": 75130,
+  "fuente": "Instituto Geográfico Nacional · ortofoto PNOA (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:43+00:00",
+  "punto": [
+   37.199332,
+   -7.4031398
+  ],
+  "sha256_original": "2fdd5f8dda9499607fca6a778a4cbb281fff70ef3194e6132a8d544bdc5fbdc2",
+  "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-7.4048314%2C37.1984478%2C-7.4014481%2C37.2002163&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
+ },
+ "SUB-JA-2026-268801_0_1_catastro": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-268801_0_1_catastro.png",
+  "bytes": 10852,
+  "bytes_original": 22900,
+  "fuente": "Dirección General del Catastro · cartografía catastral (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:44+00:00",
+  "punto": [
+   37.279233,
+   -6.9494363
+  ],
+  "sha256_original": "d01e86f4b710016d1b14cb17ab305f9045608da533c4d10ff3f11d2a70152109",
+  "url": "https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=Catastro&STYLES=&SRS=EPSG%3A4326&BBOX=-6.9511297%2C37.2783487%2C-6.9477428%2C37.2801172&WIDTH=640&HEIGHT=420&FORMAT=image%2Fpng"
+ },
+ "SUB-JA-2026-268801_0_1_orto": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-268801_0_1_orto.jpg",
+  "bytes": 52229,
+  "bytes_original": 53807,
+  "fuente": "Instituto Geográfico Nacional · ortofoto PNOA (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:45+00:00",
+  "punto": [
+   37.279233,
+   -6.9494363
+  ],
+  "sha256_original": "e6ed03d57d3dc604147bfff67e063654162c21d6f0527965a863e20ed99fe770",
+  "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-6.9511297%2C37.2783487%2C-6.9477428%2C37.2801172&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
+ },
+ "SUB-JA-2026-268927_0_1_catastro": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-268927_0_1_catastro.png",
+  "bytes": 10382,
+  "bytes_original": 20309,
+  "fuente": "Dirección General del Catastro · cartografía catastral (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:46+00:00",
+  "punto": [
+   37.3108941,
+   -6.8468194
+  ],
+  "sha256_original": "1e973011203027990638c1254ee44f7fb93f08cdddd18560477dfda5afb88387",
+  "url": "https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=Catastro&STYLES=&SRS=EPSG%3A4326&BBOX=-6.8485136%2C37.3100098%2C-6.8451252%2C37.3117784&WIDTH=640&HEIGHT=420&FORMAT=image%2Fpng"
+ },
+ "SUB-JA-2026-268927_0_1_orto": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-268927_0_1_orto.jpg",
+  "bytes": 53845,
+  "bytes_original": 55394,
+  "fuente": "Instituto Geográfico Nacional · ortofoto PNOA (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:47+00:00",
+  "punto": [
+   37.3108941,
+   -6.8468194
+  ],
+  "sha256_original": "55b829e6786c456a6c38d73724a167b4afaf8804dbd36e92b5c429e031ea32c3",
+  "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-6.8485136%2C37.3100098%2C-6.8451252%2C37.3117784&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
+ },
+ "SUB-JA-2026-269145_0_1_catastro": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-269145_0_1_catastro.png",
+  "bytes": 15474,
+  "bytes_original": 41261,
+  "fuente": "Dirección General del Catastro · cartografía catastral (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:48+00:00",
+  "punto": [
+   37.2681295,
+   -6.933688
+  ],
+  "sha256_original": "fd039779d72920d6d2320349d48f7728de81c16f3858212b8bfb808a60597767",
+  "url": "https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=Catastro&STYLES=&SRS=EPSG%3A4326&BBOX=-6.9353812%2C37.2672452%2C-6.9319948%2C37.2690138&WIDTH=640&HEIGHT=420&FORMAT=image%2Fpng"
+ },
+ "SUB-JA-2026-269145_0_1_orto": {
+  "alto": 420,
+  "ancho": 640,
+  "archivo": "SUB-JA-2026-269145_0_1_orto.jpg",
+  "bytes": 62430,
+  "bytes_original": 64384,
+  "fuente": "Instituto Geográfico Nacional · ortofoto PNOA (WMS)",
+  "metros_ancho": 300,
+  "momento": "2026-11-26T21:09:49+00:00",
+  "punto": [
+   37.2681295,
+   -6.933688
+  ],
+  "sha256_original": "d07a100827fdd86cefaa65e101723cd570bfa4fb8dd75bda0d3feea5a3236029",
+  "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&SRS=EPSG%3A4326&BBOX=-6.9353812%2C37.2672452%2C-6.9319948%2C37.2690138&WIDTH=640&HEIGHT=420&FORMAT=image%2Fjpeg"
  },
  "SUB-RC-2026-4107100105_0_1_catastro": {
   "alto": 420,
