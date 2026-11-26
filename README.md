@@ -3,7 +3,7 @@
 Base de datos auditable de las subastas que se celebran en el **Portal de Subastas del BOE**, por provincia del bien
 (de momento, Sevilla), y su panel en Claude. Cada dato dice de qué página oficial sale y cuándo se consultó.
 
-> **Estado (25-11-2026).** Método nuevo en marcha (abajo). Los datos del método anterior (sumario del BOE, Deal Finder
+> **Estado (26-11-2026).** Método nuevo en marcha (abajo). Los datos del método anterior (sumario del BOE, Deal Finder
 > por anuncios, Subastech) se borraron y su programación está en pausa; su código y su documentación siguen más abajo,
 > en «Método anterior». Lo borrado puede recuperarse del historial de Git.
 
@@ -14,22 +14,25 @@ Base de datos auditable de las subastas que se celebran en el **Portal de Subast
 | 1 | `portal_codigos.py` | Búsqueda avanzada del Portal: subastas «Celebrándose» con el bien en la provincia | `datos/portal/codigos/<prov>/<momento>/` |
 | 2 | `portal_fichas.py` | Ficha completa de cada código: pestañas, lotes, documentos y anuncio del BOE | `datos/portal/fichas/<SUB>/<momento>/` |
 | 3 | `portal_base.py` | Base de datos y tablas del panel, sin hacer peticiones | `datos/subastas.sqlite`, `datos/panel/` |
-| 4 | `portal_geo.py` | Coordenadas de cada inmueble (Catastro y CartoCiudad) y nueva base | `datos/portal/geo/` |
-| 5 | Tarea programada de Claude | Subir `datos/panel/sema-panel-sp_*.b64.txt` a la carpeta de Drive del panel y la copia de la base `datos/panel/subastas.sqlite.gz` a la carpeta «Sema Deal Finder» | Panel y copia en Drive |
+| 4 | `portal_geo.py` | Coordenadas de cada inmueble (Catastro y CartoCiudad), comprobación de su dirección y nueva base | `datos/portal/geo/` |
+| 5 | `portal_mapas.py` | Mapas de detalle de cada inmueble: cartografía del Catastro y ortofoto PNOA (IGN) | `datos/portal/geo/mapas/`, `datos/panel/mapas/` |
+| 6 | Tarea programada de Claude | Subir `datos/panel/sema-panel-sp_*.b64.txt` a la carpeta de Drive del panel, los mapas `datos/panel/mapas/sema-mapa-*.b64.txt` a su subcarpeta `mapas` y la copia de la base `datos/panel/subastas.sqlite.gz` a la carpeta «Sema Deal Finder» | Panel y copia en Drive |
 
 **Cada día:**
-- **GitHub, de madrugada** (pasos 1 a 4): el flujo está programado a las 01:17 y a las 04:47 UTC. Son dos intentos
+- **GitHub, de madrugada** (pasos 1 a 5): el flujo está programado a las 01:17 y a las 04:47 UTC. Son dos intentos
   porque GitHub puede retrasar mucho los programados; si el primero ya descargó ese día, el segundo no repite nada.
-- **Claude, a las 13:13 (hora de Madrid)** (paso 5): la tarea programada «SeMá · Subida diaria a Drive» comprueba que
-  la descarga del día está en `main` (si no, espera hasta una hora), rehace la base y sube las tablas del panel y la
-  copia de la base. Si la descarga del día no llega, sube la última que haya y lo avisa. Una tarea programada de Claude
-  no puede lanzar flujos de GitHub (no tiene sus herramientas), por eso cada parte tiene su propio horario.
+- **Claude, a las 13:13 (hora de Madrid)** (paso 6): la tarea programada «SeMá · Subida diaria a Drive» comprueba que
+  la descarga del día está en `main` (si no, espera hasta una hora), rehace la base, prepara los mapas sin pedir nada
+  (`portal_mapas.py --sin-red`) y sube las tablas del panel, los mapas nuevos o cambiados y la copia de la base. Si la
+  descarga del día no llega, sube la última que haya y lo avisa. Una tarea programada de Claude no puede lanzar flujos
+  de GitHub (no tiene sus herramientas), por eso cada parte tiene su propio horario.
 
-Los pasos 1 a 4 los hace el flujo de GitHub **«Portal de Subastas (códigos y fichas)»** (`.github/workflows/portal.yml`):
-Actions → el flujo → *Run workflow*, con el código de provincia (41 Sevilla, 28 Madrid, 08 Barcelona, 21 Huelva). Solo se
-lanza a mano y guarda el resultado en el repositorio; la opción «Solo ubicar los inmuebles» hace solo los pasos 3 y 4,
-sin pedir nada al Portal. En el PC: `py portal_codigos.py --provincia 41`, `py portal_fichas.py`, `py portal_base.py` y
-`py portal_geo.py`. Desde la nube de Claude no se llega a subastas.boe.es, al Catastro ni a CartoCiudad.
+Los pasos 1 a 5 los hace el flujo de GitHub **«Portal de Subastas (códigos y fichas)»** (`.github/workflows/portal.yml`):
+Actions → el flujo → *Run workflow*, con el código de provincia (41 Sevilla, 28 Madrid, 08 Barcelona, 21 Huelva). Además de
+los dos horarios, se puede lanzar a mano; guarda el resultado en el repositorio; la opción «Solo ubicar los inmuebles» hace solo los pasos 3, 4 y 5,
+sin pedir nada al Portal. En el PC: `py portal_codigos.py --provincia 41`, `py portal_fichas.py`, `py portal_base.py`,
+`py portal_geo.py` y `py portal_mapas.py`. Desde la nube de Claude no se llega a subastas.boe.es, al Catastro, a
+CartoCiudad ni a los servidores de mapas.
 
 ### Paso 1 · Códigos (`portal_codigos.py`, basado en `buscar_codigos_sevilla.py`)
 
@@ -82,16 +85,18 @@ guarda en la carpeta de Drive «Sema Deal Finder» como `subastas_AAAA-MM-DD.sql
 comprimida porque el conector de Drive admite unos 3 MB por envío; el 25-11-2026 ocupa 96 KB (0,73 MB sin comprimir).
 Se abre descomprimiéndola (doble clic en Mac, 7-Zip en Windows) con DB Browser for SQLite.
 
-### Paso 4 · Ubicación de los inmuebles (`portal_geo.py`)
+### Paso 4 · Ubicación de los inmuebles y comprobación de su dirección (`portal_geo.py`)
 
-Para cada inmueble, fuentes oficiales por este orden:
+La ubicación sale de **cada bien** (su pestaña «Bienes» de la ficha: referencia catastral, dirección, código postal,
+municipio y provincia), nunca de la sede de la autoridad. Para cada inmueble, fuentes oficiales por este orden:
 
 1. **Catastro**, por la referencia catastral de la ficha (14 primeros caracteres): servicio JSON
    `ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG:4326&RefCat=…`
    → el punto de la parcela (precisión «parcela»). Si fallara, el servicio clásico `OVCCoordenadas.asmx` (parámetro `RC`).
 2. **CartoCiudad (IGN)**, `www.cartociudad.es/geocoder/api/geocoder/findJsonp`: primero con la referencia catastral y
    luego con la dirección (con código postal, sin él y solo «calle número», quitando escalera, planta, puerta…) →
-   precisión «direccion». Solo se acepta si el municipio que devuelve (`muniCode`, INE) es el del bien.
+   precisión «direccion». Solo se acepta si el municipio que devuelve (`muniCode`, INE) es el del bien **y** si su
+   calle y su número son los de la ficha (ver «Comprobación de la dirección»).
 3. Si nada sirve, el bien queda sin coordenadas y con el motivo; el panel lo dibuja con punto hueco en el centro de
    su municipio («aproximada»). No se inventan coordenadas.
 
@@ -102,6 +107,54 @@ o motivo). El 25-11-2026: 21 inmuebles por parcela catastral, 13 por dirección 
 rústicas de Morón sin referencia y un «km 509» de Carmona). Contraste: Pino Montano 118 sale a 11 m entre el Catastro
 y CartoCiudad.
 
+**Comprobación de la dirección.** La dirección que escribe la ficha se compara con la dirección oficial de la fuente:
+la que el Catastro da a la parcela (`ldt`) o la que devuelve CartoCiudad (tipo de vía, calle, número y municipio INE).
+Se normalizan mayúsculas, tildes, tipos de vía abreviados («CL», «Avda.», «C/»…) y «nº»/«núm.». Es la misma calle si
+al menos la mitad de las palabras del nombre oficial están en la ficha (iguales, una empieza por la otra o parecidas
+al menos un 80 % con difflib), alguna de ellas de 4 letras o más, y el tipo de vía no contradice (calle frente a
+avenida, por ejemplo); en fincas rústicas, mismo polígono y parcela. El número de la ficha (el que sigue al nombre de la
+calle o a «nº», o un intervalo como «66-68») tiene que ser el oficial. Resultado en `direccion_comprobacion`:
+
+| Estado | Qué quiere decir | Qué punto se usa |
+|---|---|---|
+| `coincide` | Misma calle y mismo número que la fuente oficial | El de la parcela o el de CartoCiudad |
+| `numero_distinto` | Misma calle, otro número | Con el Catastro, la parcela; con CartoCiudad, el portal más cercano de esa calle (precisión «calle», aproximada) |
+| `calle_distinta` | Otra calle | Con el Catastro, la parcela (la referencia catastral manda) y aviso; con CartoCiudad se **rechaza** |
+| `sin_comprobar` | No hay dirección oficial con la que compararla | — |
+
+`direccion_oficial` guarda la dirección de la fuente y `direccion_comprobacion_detalle` la explicación que muestra el
+panel. Los casos reales que se han visto mal (por ejemplo, «Torreblanca 1» que CartoCiudad llevaba a calle Parsi, o
+«P.I. Cruz Chiquita» que llevaba a calle José Delgado) están en `tests/test_portal_geo.py` para que no vuelvan.
+
+**Enlaces de cada inmueble** (`portal_base.py`, columnas de `bienes` y de `sp_bienes`):
+- `url_google_punto`: Google Maps en su punto (`https://www.google.com/maps/search/?api=1&query=lat,lon`).
+- `url_google_direccion`: Google Maps con la dirección tal como la escribe la ficha, más código postal, municipio,
+  provincia y «España». Si Google la pone en otro sitio que el punto, mirar el aviso de la comprobación.
+- `url_catastro`: el visor de la Sede del Catastro con su referencia catastral
+  (`https://www1.sedecatastro.gob.es/Cartografia/mapa.aspx?refcat=…`).
+
+El 26-11-2026, de 37 inmuebles: 30 con la dirección comprobada (19 por parcela, 11 por CartoCiudad), 2 con una calle
+distinta de la del Catastro (se usa la parcela), 1 solo en su calle (la ficha dice el 32 y CartoCiudad tiene el 33) y
+4 sin punto exacto.
+
+### Paso 5 · Mapas de detalle (`portal_mapas.py`)
+
+Para cada inmueble con punto descarga dos imágenes de 640 × 420 píxeles que abarcan unos 300 m de ancho con el
+inmueble en el centro exacto (el panel dibuja ahí la marca), de servicios WMS oficiales (versión 1.1.1, EPSG:4326):
+
+- **Catastro** (Dirección General del Catastro): `https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx`, capa
+  `Catastro`: parcelas, edificios y números de portal.
+- **Ortofoto PNOA** (Instituto Geográfico Nacional): `https://www.ign.es/wms-inspire/pnoa-ma`, capa
+  `OI.OrthoimageCoverage`: la foto aérea oficial.
+
+Comprueba que la respuesta es HTTP 200 y una imagen (firma PNG o JPEG); si no, guarda el error y lo reintenta en la
+siguiente ejecución. Con Pillow reduce el Catastro a 64 colores (PNG) y la ortofoto a JPEG calidad 70, de unos 40 y
+80 KB. Cada imagen va a `datos/portal/geo/mapas/<SUB>_<lote>_<bien>_<capa>.<ext>` y a `indice.json` (URL del WMS,
+momento, punto, fuente, SHA-256 y tamaño de la original); no se vuelve a pedir mientras el punto no cambie. Para el
+panel deja cada imagen en base64 (`datos/panel/mapas/sema-mapa-<SUB>_<lote>_<bien>_<capa>.b64.txt`) y la tabla
+`sema-panel-sp_mapas` con el origen de cada una. `py portal_mapas.py --sin-red` solo prepara esos archivos a partir de
+las imágenes guardadas.
+
 ### Panel «SeMá Deal Finder»
 
 Lee esas tablas de la carpeta de Drive del panel con el conector de Google Drive de quien lo abre (más los límites
@@ -110,6 +163,10 @@ trastero, solar, vehículos y otros); resumen (celebrándose, por administració
 en 7 días); mapa de Sevilla con un punto por inmueble (color por administración, número si coinciden varios, hueco si
 la ubicación es aproximada, zoom) y subastas por municipio; listado con filtros (bien, administración, municipio, texto, orden) y, al
 pulsar una subasta, su ficha: importes, lotes, bienes, documentos con enlace oficial y todos los datos de la ficha.
+Cada inmueble de la ficha lleva la comprobación de su dirección («✓ Coincide con la dirección oficial» o «⚠» con el
+motivo), cómo se situó su punto, los enlaces a Google Maps (su punto y la dirección de la ficha) y al visor del Catastro,
+y su mapa de detalle con los botones «Catastro» y «Foto aérea». Los mapas se leen de la subcarpeta `mapas` de Drive
+(`1rM-TGd6cV7efaVqY8-MDCk6WWOEKoziB`) y solo los de la subasta elegida.
 La provincia, el tipo y el municipio se aplican a **cada bien con su propia ubicación** (pestaña Bienes de su ficha:
 dirección, código postal, municipio y provincia): una subasta aparece si alguno de sus bienes cumple el filtro, y el
 listado y el mapa muestran solo esos bienes. Un bien sin ubicación (un vehículo) cuenta en la provincia en cuya
@@ -123,11 +180,15 @@ búsqueda salió la subasta.
   original, aunque el robots.txt de www.boe.es no lo permite a programas (los programas del método anterior usan la
   página HTML oficial en su lugar).
 - No se inicia sesión en el Portal ni se usa la cuenta de postor de Enrique.
+- **Mapas en el panel.** Un artefacto de Claude no puede cargar nada de otros sitios (ni teselas de Google Maps ni el
+  visor del Catastro en vivo), y la API de Google Maps pediría además una clave con cuenta de facturación. Por eso el panel lleva las
+  imágenes oficiales del Catastro y del IGN ya descargadas, y los enlaces para abrir Google Maps o el Catastro.
 
 ### Pruebas
 
 `python -m unittest discover -s tests`. Las de `portal_codigos` y `portal_base` usan páginas **reales** del Portal
-guardadas en `tests/fixtures` (Sevilla, 25-11-2026); las de `portal_fichas` usan un Portal simulado.
+guardadas en `tests/fixtures` (Sevilla, 25-11-2026); las de `portal_fichas`, `portal_geo` y `portal_mapas` usan
+servicios simulados, y `tests/test_portal_geo.py` incluye las direcciones reales con las que se probó la comprobación.
 
 ---
 

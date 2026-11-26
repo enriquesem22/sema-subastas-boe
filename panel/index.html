@@ -82,6 +82,15 @@
 .sv-kv dd{margin:0;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
 .sv-kv a{color:var(--color-fg)}
 .sv-bienes{display:grid;gap:var(--cds-gap-sm)}
+.sv-enlaces{display:flex;flex-wrap:wrap;gap:4px 14px}
+.sv-ok{color:var(--color-ok)}
+.sv-aviso{color:var(--color-warn)}
+.sv-mini{display:grid;gap:var(--cds-gap-xs);margin-top:var(--cds-gap-xs)}
+.sv-mini-capas{display:flex;gap:6px}
+.sv-mini-capas .sv-btn[aria-pressed="true"]{background-color:var(--color-fg);color:var(--color-bg);border-color:var(--color-fg)}
+.sv-mini-img{position:relative;border:1px solid var(--color-border-line);border-radius:var(--cds-radius);overflow:hidden;aspect-ratio:640/420;background:var(--color-panel)}
+.sv-mini-img img{display:block;width:100%;height:100%;object-fit:cover}
+.sv-mini-marca{position:absolute;left:50%;top:50%;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;border:3px solid #e0222b;box-shadow:0 0 0 2px #fff;pointer-events:none}
 .sv-bien{display:grid;gap:var(--cds-gap-xs);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-md)}
 .sv-list{margin:0;padding-left:1.1em;display:grid;gap:4px;font-size:var(--cds-font-size-caption);line-height:1.45}
 .sv-list a{color:var(--color-fg)}
@@ -125,7 +134,7 @@
 
   <section class="sv-card" id="mapa" aria-labelledby="mapa-titulo">
     <h2 class="sv-h2" id="mapa-titulo">Dónde están los inmuebles</h2>
-    <p class="sv-note"><b data-draw="sp-ubic" data-source="sp_ubic_resumen" data-field="exactos" data-row="0">—</b> de los <b data-draw="sp-ubic" data-source="sp_ubic_resumen" data-field="inmuebles" data-row="0">—</b> inmuebles del listado tienen su ubicación exacta: <b data-draw="sp-ubic" data-source="sp_ubic_resumen" data-field="parcela" data-row="0">—</b> por su referencia catastral y <b data-draw="sp-ubic" data-source="sp_ubic_resumen" data-field="direccion" data-row="0">—</b> por su dirección. Los otros <b data-draw="sp-ubic" data-source="sp_ubic_resumen" data-field="aproximados" data-row="0">—</b> van, con punto hueco, en el centro de su municipio.</p>
+    <p class="sv-note"><b data-draw="sp-ubic" data-source="sp_ubic_resumen" data-field="exactos" data-row="0">—</b> de los <b data-draw="sp-ubic" data-source="sp_ubic_resumen" data-field="inmuebles" data-row="0">—</b> inmuebles del listado tienen su ubicación exacta: <b data-draw="sp-ubic" data-source="sp_ubic_resumen" data-field="parcela" data-row="0">—</b> por su referencia catastral y <b data-draw="sp-ubic" data-source="sp_ubic_resumen" data-field="direccion" data-row="0">—</b> por su dirección comprobada. Con punto hueco: <b data-draw="sp-ubic" data-source="sp_ubic_resumen" data-field="calle" data-row="0">—</b> en su calle sin el número exacto y <b data-draw="sp-ubic" data-source="sp_ubic_resumen" data-field="aproximados" data-row="0">—</b> en el centro de su municipio. En <b data-draw="sp-ubic" data-source="sp_ubic_resumen" data-field="no_coinciden" data-row="0">—</b> la dirección de la ficha no coincide con la oficial (⚠): revísalas en su ficha.</p>
     <div class="sv-geo">
       <div class="sv-mapwrap">
         <div class="sv-mapbox" data-draw="sp-mapa" data-source="sp_puntos limites"></div>
@@ -152,7 +161,7 @@
       <span class="sv-leg"><span class="sv-dot" data-draw="sp-color" data-i="2"></span>Otras administraciones</span>
       <span class="sv-leg"><span class="sv-dot sv-dot-aprox"></span>Ubicación aproximada</span>
     </div>
-    <p class="sv-note">Ubicación exacta: la parcela del Catastro (por la referencia catastral de la ficha) o la dirección en CartoCiudad (IGN). Un número dentro del punto indica varios inmuebles en el mismo sitio. Pulsa un punto para ver su subasta o un municipio para filtrar; acerca con los botones, la rueda o pellizcando. El mapa es de la provincia de Sevilla.</p>
+    <p class="sv-note">Ubicación exacta: la parcela del Catastro (por la referencia catastral de la ficha) o la dirección en CartoCiudad (IGN) cuando coinciden calle y número con la ficha. Este mapa no puede cargar el mapa del Catastro ni el de Google: en la ficha de cada inmueble están su mapa del Catastro, su foto aérea y los enlaces. Un número dentro del punto indica varios inmuebles en el mismo sitio. Pulsa un punto para ver su subasta o un municipio para filtrar; acerca con los botones, la rueda o pellizcando. El mapa es de la provincia de Sevilla.</p>
   </section>
 
   <section class="sv-card" id="listado" aria-labelledby="listado-titulo">
@@ -239,7 +248,7 @@
           </div>
 
           <h3 class="sv-h3" id="ficha-bienes">Bienes</h3>
-          <div class="sv-bienes" data-draw="sp-det-bienes" data-source="sp_det_bienes"></div>
+          <div class="sv-bienes" data-draw="sp-det-bienes" data-source="sp_det_bienes sp_mapa"></div>
 
           <h3 class="sv-h3" id="ficha-documentos">Documentos</h3>
           <ul class="sv-list" data-draw="sp-det-docs" data-source="sp_det_docs"></ul>
@@ -280,7 +289,9 @@
       <dt>Código postal</dt><dd data-b="codigo_postal"></dd>
       <dt>Municipio</dt><dd data-b="municipio"></dd>
       <dt>Provincia</dt><dd data-b="provincia"></dd>
+      <dt>Comprobación de la dirección</dt><dd data-b="comprobacion"></dd>
       <dt>Punto en el mapa</dt><dd data-b="punto"></dd>
+      <dt>Ver en</dt><dd data-b="enlaces"><span class="sv-enlaces"><a data-enlace="url_google_punto" target="_blank" rel="noopener">Google Maps (su punto)</a><a data-enlace="url_google_direccion" target="_blank" rel="noopener">Google Maps (dirección de la ficha)</a><a data-enlace="url_catastro" target="_blank" rel="noopener">Visor del Catastro</a></span></dd>
       <dt>Descripción</dt><dd data-b="descripcion"></dd>
       <dt>Referencia catastral</dt><dd data-b="referencia_catastral"></dd>
       <dt>IDUFIR</dt><dd data-b="idufir"></dd>
@@ -294,6 +305,14 @@
       <dt>Marca y modelo</dt><dd data-b="marca_modelo"></dd>
       <dt>Matrícula</dt><dd data-b="matricula"></dd>
     </dl>
+    <div class="sv-mini" data-b-mapa hidden>
+      <div class="sv-mini-capas" role="group" aria-label="Capa del mapa de detalle">
+        <button type="button" class="sv-btn" data-capa="catastro" aria-pressed="true">Catastro</button>
+        <button type="button" class="sv-btn" data-capa="orto" aria-pressed="false">Foto aérea</button>
+      </div>
+      <div class="sv-mini-img"><img alt="Mapa de detalle de unos 300 m alrededor del inmueble"><span class="sv-mini-marca"></span></div>
+      <p class="sv-note">Unos 300 m alrededor del punto del inmueble, marcado en el centro. Cartografía: Dirección General del Catastro. Foto aérea: PNOA, Instituto Geográfico Nacional.</p>
+    </div>
   </div>
 </template>
 
@@ -323,6 +342,24 @@ const leerTablaDrive = async ({ answer, call }) => {
   }
   throw new Error('Google Drive todavía no ofrece el contenido del archivo (tarda unos minutos después de subirlo). Vuelve a cargar en un rato.');
 };
+dash.loader('sp_mapa', {
+  description: 'Lee de la carpeta del panel en Google Drive los mapas de detalle de los inmuebles de la subasta elegida: cada archivo es una imagen (cartografía del Catastro u ortofoto PNOA) en base64.',
+  fn: async ({ answer, call }) => {
+    const files = answer && Array.isArray(answer.files) ? answer.files : [];
+    const vistos = new Set(), rows = [];
+    for (const f of files) {
+      const m = String(f.title || '').match(/^sema-mapa-(.+)_(catastro|orto)\.b64\.txt$/);
+      if (!m || vistos.has(m[1] + m[2])) continue;
+      vistos.add(m[1] + m[2]);
+      const r = await call('read_file_content', { fileId: f.id });
+      const b64 = String((r && r.fileContent) || '').replace(/[^A-Za-z0-9+/=]/g, '');
+      if (!b64) continue;
+      const mime = b64.startsWith('iVBOR') ? 'image/png' : b64.startsWith('/9j/') ? 'image/jpeg' : null;
+      if (mime) rows.push({ base: m[1], capa: m[2], imagen: 'data:' + mime + ';base64,' + b64, archivo: f.title });
+    }
+    return { columns: ['base', 'capa', 'imagen', 'archivo'], rows, meta: [{ label: 'Archivos en Drive', value: String(rows.length) }] };
+  }
+});
 ['sp_subastas', 'sp_lotes', 'sp_bienes', 'sp_campos', 'sp_documentos', 'sp_pendientes', 'sp_capturas', 'limites'].forEach((id) => {
   dash.loader(id, {
     description: 'Toma el archivo más reciente de esta tabla en la carpeta del panel en Google Drive, lo lee y lo descomprime (JSON con gzip y en base64). Si Drive aún no ofrece el contenido del más reciente, usa el anterior.',
@@ -388,10 +425,13 @@ window.SP = window.SP || {};
   };
   SP.PLURAL = { 'Vivienda': 'viviendas', 'Garaje': 'garajes', 'Local comercial': 'locales comerciales', 'Nave industrial': 'naves industriales',
     'Finca rústica': 'fincas rústicas', 'Trastero': 'trasteros', 'Solar': 'solares' };
+  SP.NO_COINCIDE = { numero_distinto: true, calle_distinta: true };
   SP.ubicacionBien = function (b) {
     var lugar = [b.codigo_postal, b.municipio || b.localidad].filter(Boolean).join(' ');
-    return [b.direccion, lugar].filter(Boolean).join(' · ') || (b.clase === 'Inmueble' ? 'Sin dirección en la ficha' : 'Sin ubicación (' + (b.subtipo || b.clase || 'bien') + ')');
+    var t = [b.direccion, lugar].filter(Boolean).join(' · ') || (b.clase === 'Inmueble' ? 'Sin dirección en la ficha' : 'Sin ubicación (' + (b.subtipo || b.clase || 'bien') + ')');
+    return (SP.NO_COINCIDE[b.direccion_comprobacion] ? '⚠ ' : '') + t;
   };
+  SP.baseMapa = function (b) { return (b.sub + '_' + (b.lote || 0) + '_' + b.bien).replace(/[^A-Za-z0-9_-]/g, '-'); };
 })(window.SP);
 </script>
 
@@ -531,6 +571,7 @@ dash.calc('sp_puntos', {
         out.push({ clave: b.sub + '|' + (b.lote || '') + '|' + b.bien, sub: b.sub, lote: b.lote, bien: b.bien, lat: b.lat, lon: b.lon,
           precision: b.ubicacion_precision || 'municipio', municipio_ine: b.municipio_ine, municipio: b.municipio || b.localidad,
           codigo_postal: b.codigo_postal, subtipo: b.subtipo, direccion: b.direccion, referencia_catastral: b.referencia_catastral,
+          comprobacion: b.direccion_comprobacion,
           grupo: s.grupo, valor_ref: s.valor_ref, n_lotes: s.n_lotes });
       });
     });
@@ -540,14 +581,16 @@ dash.calc('sp_puntos', {
 
 dash.calc('sp_ubic_resumen', {
   title: 'Inmuebles con ubicación',
-  description: 'Cuántos inmuebles del listado tienen ubicación exacta (por referencia catastral o por dirección) y cuántos solo su municipio.',
+  description: 'Inmuebles del listado con ubicación exacta (parcela de su referencia catastral o dirección comprobada en CartoCiudad), en su calle sin el número exacto, solo con su municipio, y en cuántos la dirección de la ficha no coincide con la oficial.',
   inputs: ['sp_puntos'],
   fn: (puntos) => [{
     inmuebles: puntos.length,
-    exactos: puntos.filter((p) => p.lat != null && p.lon != null).length,
+    exactos: puntos.filter((p) => p.precision === 'parcela' || p.precision === 'direccion').length,
     parcela: puntos.filter((p) => p.precision === 'parcela').length,
     direccion: puntos.filter((p) => p.precision === 'direccion').length,
-    aproximados: puntos.filter((p) => p.lat == null || p.lon == null).length
+    calle: puntos.filter((p) => p.precision === 'calle').length,
+    aproximados: puntos.filter((p) => p.lat == null || p.lon == null).length,
+    no_coinciden: puntos.filter((p) => SP.NO_COINCIDE[p.comprobacion]).length
   }]
 });
 
@@ -703,7 +746,8 @@ dash.calc('sp_det_campos', { title: 'Todos los datos de la subasta elegida', des
 
   var COLOR_GRUPO = { 'Judicial': 0, 'Agencia Tributaria': 1 };
   var colorGrupo = function (g) { return dash.colors[g in COLOR_GRUPO ? COLOR_GRUPO[g] : 2]; };
-  var PRECISION = { parcela: 'la parcela de su referencia catastral (Catastro)', direccion: 'su dirección, localizada en CartoCiudad', municipio: 'aproximado, en el centro de su municipio' };
+  var PRECISION = { parcela: 'la parcela de su referencia catastral (Catastro)', direccion: 'su dirección, comprobada en CartoCiudad',
+    calle: 'en su calle, pero el número de la ficha no está en CartoCiudad', municipio: 'aproximado, en el centro de su municipio' };
 
   dash.draw('sp-mapa', {
     mount: function (el) {
@@ -747,11 +791,11 @@ dash.calc('sp_det_campos', { title: 'Todos los datos de la subasta elegida', des
       var grupos = new Map();
       filas.forEach(function (r) {
         var x, y, aprox = false;
-        if (r.lat != null && r.lon != null) { var xy = proj([Number(r.lon), Number(r.lat)]); x = xy[0]; y = xy[1]; }
+        if (r.lat != null && r.lon != null) { var xy = proj([Number(r.lon), Number(r.lat)]); x = xy[0]; y = xy[1]; aprox = r.precision === 'calle'; }
         else if (centro.has(r.municipio_ine)) { var c = centro.get(r.municipio_ine); x = c[0]; y = c[1]; aprox = true; }
         else return;
         if (!(x >= 0 && x <= w && y >= 0 && y <= h)) return;  // fuera de la provincia de Sevilla
-        var k = aprox ? 'm' + r.municipio_ine : Number(r.lat).toFixed(5) + ',' + Number(r.lon).toFixed(5);
+        var k = r.lat == null ? 'm' + r.municipio_ine : Number(r.lat).toFixed(5) + ',' + Number(r.lon).toFixed(5);
         var g = grupos.get(k) || { k: k, x: x, y: y, aprox: aprox, items: [] };
         g.items.push(r);
         grupos.set(k, g);
@@ -761,11 +805,11 @@ dash.calc('sp_det_campos', { title: 'Todos los datos de la subasta elegida', des
       var host = el;
       var mostrar = function (e, d) {
         var r0 = d.items[0];
-        var titulo = d.aprox ? (r0.municipio || '') + ' · sin punto exacto' : (r0.direccion || r0.municipio || '');
+        var titulo = (SP.NO_COINCIDE[r0.comprobacion] ? '⚠ ' : '') + (r0.lat == null ? (r0.municipio || '') + ' · sin punto exacto' : (r0.direccion || r0.municipio || ''));
         var lineas = [];
-        if (!d.aprox) lineas.push([r0.codigo_postal, r0.municipio].filter(Boolean).join(' '));
+        if (r0.lat != null) lineas.push([r0.codigo_postal, r0.municipio].filter(Boolean).join(' '));
         d.items.slice(0, 6).forEach(function (r) {
-          lineas.push(r.sub + (r.lote ? ' · lote ' + r.lote : '') + ' · ' + (r.subtipo || 'inmueble') + (d.aprox && r.direccion ? ' · ' + r.direccion : '')
+          lineas.push(r.sub + (r.lote ? ' · lote ' + r.lote : '') + ' · ' + (r.subtipo || 'inmueble') + (r.lat == null && r.direccion ? ' · ' + r.direccion : '')
             + (r.valor_ref != null ? ' · ' + (Number(r.n_lotes) > 1 ? 'desde ' : '') + SP.eur.format(r.valor_ref) : ''));
         });
         if (d.items.length > 6) lineas.push('y ' + (d.items.length - 6) + ' más');
@@ -860,22 +904,51 @@ dash.calc('sp_det_campos', { title: 'Todos los datos de la subasta elegida', des
     });
   });
   dash.draw('sp-det-bienes', function (el) {
-    var d = dash.data('sp_det_bienes');
+    var d = dash.data('sp_det_bienes'), m = dash.data('sp_mapa');
     el.replaceChildren();
     if (d.status !== 'ok' || !Array.isArray(d.data)) { el.textContent = d.status === 'loading' ? '' : '—'; return; }
     d.data.forEach(function (b, i) {
       var c = SP.clone('tpl-bien');
       var titulo = (b.lote ? 'Lote ' + b.lote + ' · ' : '') + 'Bien ' + b.bien + ' · ' + [b.clase, b.subtipo].filter(Boolean).join(', ');
-      var punto = b.clase !== 'Inmueble' ? null : b.lat != null && b.lon != null
-        ? (b.ubicacion_precision === 'parcela' ? 'En la parcela de su referencia catastral (Catastro)' : 'En su dirección, localizada en CartoCiudad (IGN)')
-        : 'Sin punto exacto: en el mapa va en el centro de su municipio';
-      var vals = Object.assign({}, b, { titulo: titulo, municipio: b.municipio || b.localidad, punto: punto, marca_modelo: [b.marca, b.modelo].filter(Boolean).join(' ') });
+      var punto = b.clase !== 'Inmueble' ? null : b.lat == null || b.lon == null
+        ? 'Sin punto exacto: en el mapa va en el centro de su municipio'
+        : b.ubicacion_precision === 'parcela' ? 'En la parcela de su referencia catastral (Catastro)'
+        : b.ubicacion_precision === 'calle' ? 'En su calle, pero el número de la ficha no está en CartoCiudad: el punto es aproximado'
+        : 'En su dirección, comprobada en CartoCiudad (IGN)';
+      var comp = b.clase !== 'Inmueble' ? null : b.direccion_comprobacion === 'coincide'
+        ? '✓ Coincide con la dirección oficial' + (b.direccion_oficial ? ' (' + b.direccion_oficial + ')' : '')
+        : SP.NO_COINCIDE[b.direccion_comprobacion] ? '⚠ ' + (b.direccion_comprobacion_detalle || 'No coincide con la dirección oficial')
+          + (b.ubicacion_precision === 'parcela' ? ' El punto del mapa es el de su referencia catastral.' : '')
+        : 'Sin comprobar: no hay dirección oficial con la que compararla' + (b.ubicacion_motivo ? '.' : '');
+      var vals = Object.assign({}, b, { titulo: titulo, municipio: b.municipio || b.localidad, punto: punto, comprobacion: comp,
+        enlaces: b.url_google_punto || b.url_google_direccion || b.url_catastro ? 'x' : null, marca_modelo: [b.marca, b.modelo].filter(Boolean).join(' ') });
       c.querySelectorAll('[data-b]').forEach(function (dd) {
         var k = dd.getAttribute('data-b'), v = vals[k];
         if (k !== 'titulo' && (v == null || v === '')) { var dt = dd.previousElementSibling; if (dt) dt.remove(); dd.remove(); return; }
+        if (k === 'enlaces') {
+          dd.querySelectorAll('[data-enlace]').forEach(function (a) { var u = SP.safeUrl(b[a.getAttribute('data-enlace')]); if (u) a.href = u; else a.remove(); });
+          return;
+        }
         dd.textContent = v;
-        if (k !== 'titulo' && k !== 'marca_modelo' && k !== 'punto' && k in b) { dd.setAttribute('data-source', 'sp_det_bienes'); dd.setAttribute('data-field', k); dd.setAttribute('data-row', String(i)); }
+        if (k === 'comprobacion') dd.className = b.direccion_comprobacion === 'coincide' ? 'sv-ok' : SP.NO_COINCIDE[b.direccion_comprobacion] ? 'sv-aviso' : '';
+        if (k !== 'titulo' && k !== 'marca_modelo' && k !== 'punto' && k !== 'comprobacion' && k in b) { dd.setAttribute('data-source', 'sp_det_bienes'); dd.setAttribute('data-field', k); dd.setAttribute('data-row', String(i)); }
       });
+      var mapas = (m.status === 'ok' && Array.isArray(m.data) ? m.data : []).filter(function (x) { return x.base === SP.baseMapa(b); });
+      var bloque = c.querySelector('[data-b-mapa]');
+      if (bloque && mapas.length) {
+        var img = bloque.querySelector('img');
+        var poner = function (capa) {
+          var x = mapas.find(function (y) { return y.capa === capa; }) || mapas[0];
+          if (x && /^data:image\/(png|jpeg);base64,/.test(x.imagen)) img.src = x.imagen;
+          bloque.querySelectorAll('[data-capa]').forEach(function (bt) { bt.setAttribute('aria-pressed', String(bt.getAttribute('data-capa') === (x && x.capa))); });
+        };
+        bloque.querySelectorAll('[data-capa]').forEach(function (bt) {
+          if (!mapas.some(function (y) { return y.capa === bt.getAttribute('data-capa'); })) bt.remove();
+          else bt.addEventListener('click', function () { poner(bt.getAttribute('data-capa')); });
+        });
+        poner('catastro');
+        bloque.hidden = false;
+      } else if (bloque) bloque.remove();
       el.appendChild(c);
     });
     if (!d.data.length) el.textContent = 'La ficha no describe bienes.';
