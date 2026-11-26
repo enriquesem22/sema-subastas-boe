@@ -1,12 +1,17 @@
 {
  "SUB-AT-2026-26R0886001288||1": {
+  "comprobacion": "sin_comprobar",
   "motivo": "Sin referencia catastral válida en la ficha · CartoCiudad («PA LA MORENA O MORONA 0, 41530 Morón de la Frontera»): Sin resultado · CartoCiudad («PA LA MORENA O MORONA 0, Morón de la Frontera»): Sin resultado"
  },
  "SUB-AT-2026-26R0886001288||2": {
+  "comprobacion": "sin_comprobar",
   "motivo": "Sin referencia catastral válida en la ficha · CartoCiudad («PA LA MORENA O MORONA 0, 41530 Morón de la Frontera»): Sin resultado · CartoCiudad («PA LA MORENA O MORONA 0, Morón de la Frontera»): Sin resultado"
  },
  "SUB-AT-2026-26R4186001460||1": {
+  "comprobacion": "calle_distinta",
+  "comprobacion_detalle": "La ficha dice «CL SANTA ANA 1 BJ 2A» y la fuente oficial, «AV ANTONIO MAIRENA 13»: no es la misma calle.",
   "consultado": "2026-11-25T19:48:13+00:00",
+  "direccion_oficial": "AV ANTONIO MAIRENA 13 ALCALA DE GUADAIRA (SEVILLA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.3385487669731,
   "lon": -5.83986884039243,
@@ -18,7 +23,10 @@
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=8463834TG4386S"
  },
  "SUB-AT-2026-26R4186001561||1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consultado": "2026-11-25T19:48:14+00:00",
+  "direccion_oficial": "CL HACIENDA DE REGLA 47 PALOMARES DEL RIO (SEVILLA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.3124907533635,
   "lon": -6.0756244501449,
@@ -30,7 +38,10 @@
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=9336509QB5393N"
  },
  "SUB-AT-2026-26R4186001561||2": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consultado": "2026-11-25T19:48:15+00:00",
+  "direccion_oficial": "CL HACIENDA DE REGLA 45 PALOMARES DEL RIO (SEVILLA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.3125622719481,
   "lon": -6.07571080000329,
@@ -42,7 +53,10 @@
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=9336507QB5393N"
  },
  "SUB-AT-2026-26R4186001563||1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consultado": "2026-11-25T19:48:16+00:00",
+  "direccion_oficial": "CL JUAN DIAZ DE SOLIS 13 SEVILLA (SEVILLA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.3769366884768,
   "lon": -6.01057084331292,
@@ -54,49 +68,48 @@
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=3511018TG3431S"
  },
  "SUB-AT-2026-26R4186001568||1": {
-  "consulta": "CL TORREBLANCA 1 -1 B3, Sevilla",
-  "consultado": "2026-11-25T19:48:18+00:00",
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
+  "consulta": "CL TORREBLANCA 1, Sevilla",
+  "consultado": "2026-11-26T09:53:38+00:00",
+  "direccion_oficial": "CALLE TORREBLANCA 1 41003",
   "estado": 0,
   "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
-  "lat": 37.37503332165031,
-  "lon": -5.923684980257759,
+  "lat": 37.40115973772453,
+  "lon": -5.98836239630895,
   "precision": "direccion",
-  "referencia": "1206430TG4410N",
-  "sha256": "f04128a3b96b90290a3df76634b2e41d6b24fea17b0999d8af9491cf1695359d",
-  "texto": "PARSI 1 13 41016",
+  "referencia": "5538806TG3453H",
+  "sha256": "f6e9f18447ee0eb6253b494df6b8552c93978fecd6b6f2683025dd2928bce95d",
+  "texto": "TORREBLANCA 1 41003",
   "tipo": "portal",
-  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+TORREBLANCA+1+-1+B3%2C+Sevilla&limit=1"
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+TORREBLANCA+1%2C+Sevilla&limit=1"
  },
  "SUB-AT-2026-26R4186001568||2": {
-  "consulta": "CL TORREBLANCA 1 -1 B4, Sevilla",
-  "consultado": "2026-11-25T19:48:20+00:00",
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
+  "consulta": "CL TORREBLANCA 1, Sevilla",
+  "consultado": "2026-11-26T09:53:38+00:00",
+  "direccion_oficial": "CALLE TORREBLANCA 1 41003",
   "estado": 0,
   "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
-  "lat": 37.37522798588826,
-  "lon": -5.9239171169231115,
+  "lat": 37.40115973772453,
+  "lon": -5.98836239630895,
   "precision": "direccion",
-  "referencia": "1107702TG4410N",
-  "sha256": "52b98646d99ab6c9dc6b6e2cb1df0e4fc95acf94d8cccc91f0729dcac7f05e72",
-  "texto": "PARSI 1 14 41016",
+  "referencia": "5538806TG3453H",
+  "sha256": "f6e9f18447ee0eb6253b494df6b8552c93978fecd6b6f2683025dd2928bce95d",
+  "texto": "TORREBLANCA 1 41003",
   "tipo": "portal",
-  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+TORREBLANCA+1+-1+B4%2C+Sevilla&limit=1"
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+TORREBLANCA+1%2C+Sevilla&limit=1"
  },
  "SUB-JA-2026-257246||1": {
-  "consulta": "PARCELA 10, Alcalá del Río",
-  "consultado": "2026-11-25T19:48:23+00:00",
-  "estado": 0,
-  "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
-  "lat": 37.52224679290083,
-  "lon": -5.98051249809307,
-  "precision": "direccion",
-  "referencia": "6771305TG3567S",
-  "sha256": "0a6781fb4a6fa5d024e9c389acdb4662b8be6476e925683906d4ee0e7bbd2b92",
-  "texto": "JOSE DELGADO \"PEPE MARCELO 10 41200",
-  "tipo": "portal",
-  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=PARCELA+10%2C+Alcal%C3%A1+del+R%C3%ADo&limit=1"
+  "comprobacion": "sin_comprobar",
+  "motivo": "Sin referencia catastral válida en la ficha · CartoCiudad («PARCELA 10, POLIGONO INDUSTRIAL CRUZ CHIQUITA, 41200 Alcalá del Río»): Sin resultado · CartoCiudad («PARCELA 10, POLIGONO INDUSTRIAL CRUZ CHIQUITA, Alcalá del Río»): Sin resultado · CartoCiudad («PARCELA 10, Alcalá del Río»): La ficha dice «PARCELA 10, POLIGONO INDUSTRIAL CRUZ CHIQUITA» y la fuente oficial, «JOSE DELGADO \"PEPE MARCELO 10»: no es la misma calle."
  },
  "SUB-JA-2026-260384||1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consultado": "2026-11-25T19:48:24+00:00",
+  "direccion_oficial": "CL ANGEL GANIVET 9 UTRERA (SEVILLA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.1873577632205,
   "lon": -5.7866082620572,
@@ -108,7 +121,10 @@
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=2794019TG5129S"
  },
  "SUB-JA-2026-263908||1": {
+  "comprobacion": "calle_distinta",
+  "comprobacion_detalle": "La ficha dice «NºCIENTO OCHENTA Y SEIS. Planta quinta, letra D, con acceso por el bloque número 6 del Edificio UE nueve Uno, del Sector Nueve del Plan Parcial número tres del Polígono aeropuerto de Sevilla, denominado Residencial los los Azahares, hoy calle Flor» y la fuente oficial, «AV CIENCIAS (DE LAS) 14»: no es la misma calle.",
   "consultado": "2026-11-25T19:48:25+00:00",
+  "direccion_oficial": "AV CIENCIAS (DE LAS) 14 RES LOS AZAHARES F.I Y II SEVILLA (SEVILLA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.3939582872355,
   "lon": -5.92046362736665,
@@ -120,7 +136,10 @@
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=1628001TG4412N"
  },
  "SUB-JA-2026-265153||1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consultado": "2026-11-25T19:48:26+00:00",
+  "direccion_oficial": "CL REAL 45 GELVES (SEVILLA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.3353655098796,
   "lon": -6.02525699666965,
@@ -132,7 +151,10 @@
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=3664722QB6336S"
  },
  "SUB-JA-2026-265999||1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consultado": "2026-11-25T19:48:27+00:00",
+  "direccion_oficial": "CL CIUDAD DE GANDIA 6 SEVILLA (SEVILLA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.41138324354,
   "lon": -5.93125723814386,
@@ -144,8 +166,11 @@
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=0647204TG4404N"
  },
  "SUB-JA-2026-266091||1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consulta": "Calle Costa del sol 2, Alcalá del Río",
   "consultado": "2026-11-25T19:48:29+00:00",
+  "direccion_oficial": "CALLE COSTA DEL SOL 2 41200",
   "estado": 0,
   "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
   "lat": 37.51677838590051,
@@ -158,7 +183,10 @@
   "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Calle+Costa+del+sol+2%2C+Alcal%C3%A1+del+R%C3%ADo&limit=1"
  },
  "SUB-JA-2026-266147||1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consultado": "2026-11-25T19:48:30+00:00",
+  "direccion_oficial": "AV PINO MONTANO (DE) 118 SEVILLA (SEVILLA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.4090250666255,
   "lon": -5.97244445923165,
@@ -170,7 +198,10 @@
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=7046406TG3474N"
  },
  "SUB-JA-2026-266659||1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consultado": "2026-11-25T19:48:31+00:00",
+  "direccion_oficial": "CL CONDE DE BARCELONA 47 SAN JUAN DE AZNALFARACHE (SEVILLA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.3603149902098,
   "lon": -6.03355449132726,
@@ -182,7 +213,10 @@
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=2992019QB6329S"
  },
  "SUB-JA-2026-267385||1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consultado": "2026-11-25T19:48:32+00:00",
+  "direccion_oficial": "CL CACERES 4 SAN JUAN DE AZNALFARACHE (SEVILLA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.3564781157192,
   "lon": -6.03424576498811,
@@ -194,7 +228,10 @@
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=2888019QB6328N"
  },
  "SUB-JA-2026-267391|1|1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consultado": "2026-11-25T19:48:33+00:00",
+  "direccion_oficial": "CL JESUS 62 MAIRENA DEL ALCOR (SEVILLA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.3710511143083,
   "lon": -5.75390516286549,
@@ -206,7 +243,10 @@
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=6297019TG5369N"
  },
  "SUB-JA-2026-267391|2|1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consultado": "2026-11-25T19:48:33+00:00",
+  "direccion_oficial": "CL JESUS 62 MAIRENA DEL ALCOR (SEVILLA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.3710511143083,
   "lon": -5.75390516286549,
@@ -218,7 +258,10 @@
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=6297019TG5369N"
  },
  "SUB-JA-2026-267391|3|1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consultado": "2026-11-25T19:48:33+00:00",
+  "direccion_oficial": "CL JESUS 62 MAIRENA DEL ALCOR (SEVILLA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.3710511143083,
   "lon": -5.75390516286549,
@@ -230,7 +273,10 @@
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=6297019TG5369N"
  },
  "SUB-JA-2026-267391|4|1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consultado": "2026-11-25T19:48:33+00:00",
+  "direccion_oficial": "CL JESUS 62 MAIRENA DEL ALCOR (SEVILLA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.3710511143083,
   "lon": -5.75390516286549,
@@ -242,10 +288,14 @@
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=6297019TG5369N"
  },
  "SUB-JA-2026-267595||1": {
+  "comprobacion": "sin_comprobar",
   "motivo": "Sin referencia catastral válida en la ficha · CartoCiudad («carretera madrid-cadiz, km 509, El quemadero, 41410 Carmona»): Sin resultado · CartoCiudad («carretera madrid-cadiz, km 509, El quemadero, Carmona»): Sin resultado · CartoCiudad («carretera madrid-cadiz, km 509, Carmona»): devuelve otro municipio (Andújar)"
  },
  "SUB-JA-2026-268087|1|1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consultado": "2026-11-25T19:48:37+00:00",
+  "direccion_oficial": "CL JEREZ DE LA FRONTERA 5 SAN JUAN DE AZNALFARACHE (SEVILLA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.35677398445,
   "lon": -6.03269681338056,
@@ -257,7 +307,10 @@
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=2987202QB6328N"
  },
  "SUB-JA-2026-268087|2|1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consultado": "2026-11-25T19:48:38+00:00",
+  "direccion_oficial": "UR CIUDAD BLANCA 18 DOS HERMANAS (SEVILLA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.2700836966316,
   "lon": -5.92514768213926,
@@ -269,35 +322,44 @@
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=0790006TG4209S"
  },
  "SUB-JA-2026-268155|1|1": {
-  "consulta": "CALLE HUERTA GAVIRA 25, 41620 Marchena",
-  "consultado": "2026-11-25T19:48:39+00:00",
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
+  "consulta": "CALLE HUERTA GAVIRA 25, Marchena",
+  "consultado": "2026-11-26T09:53:39+00:00",
+  "direccion_oficial": "CALLE HUERTA GAVIRA 25 41620",
   "estado": 0,
   "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
-  "lat": 37.32935646897751,
-  "lon": -5.413021828029776,
+  "lat": 37.329131725656104,
+  "lon": -5.413565852865506,
   "precision": "direccion",
-  "referencia": "6442411TG8364S",
-  "sha256": "ae678882663a1396a264f04189ab7691791c4fa043bc50585dd8e1608108e8cd",
-  "texto": "HUERTA GAVIRA 15 41620",
+  "referencia": "6341404TG8364S",
+  "sha256": "956f66e3ecc217c27c5c4d8f51cb660105cd2803099dce5bc039ad9f1d263c79",
+  "texto": "HUERTA GAVIRA 25 41620",
   "tipo": "portal",
-  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+HUERTA+GAVIRA+25%2C+41620+Marchena&limit=1"
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+HUERTA+GAVIRA+25%2C+Marchena&limit=1"
  },
  "SUB-JA-2026-268155|2|1": {
-  "consulta": "CALLE HUERTA GAVIRA 25, 41620 Marchena",
-  "consultado": "2026-11-25T19:48:39+00:00",
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
+  "consulta": "CALLE HUERTA GAVIRA 25, Marchena",
+  "consultado": "2026-11-26T09:53:39+00:00",
+  "direccion_oficial": "CALLE HUERTA GAVIRA 25 41620",
   "estado": 0,
   "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
-  "lat": 37.32935646897751,
-  "lon": -5.413021828029776,
+  "lat": 37.329131725656104,
+  "lon": -5.413565852865506,
   "precision": "direccion",
-  "referencia": "6442411TG8364S",
-  "sha256": "ae678882663a1396a264f04189ab7691791c4fa043bc50585dd8e1608108e8cd",
-  "texto": "HUERTA GAVIRA 15 41620",
+  "referencia": "6341404TG8364S",
+  "sha256": "956f66e3ecc217c27c5c4d8f51cb660105cd2803099dce5bc039ad9f1d263c79",
+  "texto": "HUERTA GAVIRA 25 41620",
   "tipo": "portal",
-  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+HUERTA+GAVIRA+25%2C+41620+Marchena&limit=1"
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+HUERTA+GAVIRA+25%2C+Marchena&limit=1"
  },
  "SUB-JA-2026-268190||1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Mismo polígono y parcela.",
   "consultado": "2026-11-25T19:48:40+00:00",
+  "direccion_oficial": "Polígono 19 Parcela 17 LA TRINIDAD. SEVILLA (SEVILLA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.3960008458216,
   "lon": -5.85018903200819,
@@ -309,49 +371,61 @@
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=41900A01900017"
  },
  "SUB-JA-2026-268195||1": {
-  "consulta": "CALLE NAOS 12, 41011 Sevilla",
-  "consultado": "2026-11-25T19:48:45+00:00",
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
+  "consulta": "CALLE NAOS 12, Sevilla",
+  "consultado": "2026-11-26T09:53:40+00:00",
+  "direccion_oficial": "CALLE NAOS 12 41011",
   "estado": 0,
   "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
-  "lat": 37.37646684735496,
-  "lon": -6.000125857297629,
+  "lat": 37.376315460114846,
+  "lon": -6.000004859254523,
   "precision": "direccion",
-  "referencia": "4410305TG3441S",
-  "sha256": "5a68b53960eedb1b304d144ac90c663aa226c40ff7e220edbcccceb6514dcb4e",
-  "texto": "NAOS 10 41011",
+  "referencia": "4410306TG3441S",
+  "sha256": "e378ca379c2b9c93d7823d16d970a96f617b8369b986d3f78e5d77c85cb95d43",
+  "texto": "NAOS 12 41011",
   "tipo": "portal",
-  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+NAOS+12%2C+41011+Sevilla&limit=1"
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+NAOS+12%2C+Sevilla&limit=1"
  },
  "SUB-JA-2026-268212|1|1": {
-  "consulta": "calle Perú 49, 41930 Bormujos",
-  "consultado": "2026-11-25T19:48:46+00:00",
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
+  "consulta": "calle Perú 49, Bormujos",
+  "consultado": "2026-11-26T09:53:41+00:00",
+  "direccion_oficial": "CALLE PERU 49 41930",
   "estado": 0,
   "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
-  "lat": 37.375188622905,
-  "lon": -6.077926908842347,
+  "lat": 37.37385856123228,
+  "lon": -6.079297734637939,
   "precision": "direccion",
-  "referencia": "8907101QB5480N",
-  "sha256": "ffe72ba284df37218a6498d52babd29507b2885db386fcc401b5d683123b7914",
-  "texto": "PERU 19 41930",
+  "referencia": "8605501QB5480N",
+  "sha256": "60078fb0d323158ca1adbb355ff3c80e01a978635cbdf215c242ee9ee8853b63",
+  "texto": "PERU 49 41930",
   "tipo": "portal",
-  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=calle+Per%C3%BA+49%2C+41930+Bormujos&limit=1"
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=calle+Per%C3%BA+49%2C+Bormujos&limit=1"
  },
  "SUB-JA-2026-268212|2|1": {
-  "consulta": "Calle Perú 49, 41930 Bormujos",
-  "consultado": "2026-11-25T19:48:47+00:00",
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
+  "consulta": "Calle Perú 49, Bormujos",
+  "consultado": "2026-11-26T09:53:42+00:00",
+  "direccion_oficial": "CALLE PERU 49 41930",
   "estado": 0,
   "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
-  "lat": 37.375188622905,
-  "lon": -6.077926908842347,
+  "lat": 37.37385856123228,
+  "lon": -6.079297734637939,
   "precision": "direccion",
-  "referencia": "8907101QB5480N",
-  "sha256": "38c03f2be56aaae74e44bfa6ab9c06b851d5ed38cafd78bfe808aa3f6613fa58",
-  "texto": "PERU 19 41930",
+  "referencia": "8605501QB5480N",
+  "sha256": "60078fb0d323158ca1adbb355ff3c80e01a978635cbdf215c242ee9ee8853b63",
+  "texto": "PERU 49 41930",
   "tipo": "portal",
-  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Calle+Per%C3%BA+49%2C+41930+Bormujos&limit=1"
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Calle+Per%C3%BA+49%2C+Bormujos&limit=1"
  },
  "SUB-JA-2026-268212|3|1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consultado": "2026-11-25T19:48:48+00:00",
+  "direccion_oficial": "ML MARTINEZ CATENA 21 ISLA CRISTINA (HUELVA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.2019752141149,
   "lon": -7.32794250524795,
@@ -363,13 +437,16 @@
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=8588701PB4188N"
  },
  "SUB-JA-2026-268284||1": {
+  "comprobacion": "numero_distinto",
+  "comprobacion_detalle": "Misma calle, pero la ficha dice el nº 32 y la fuente oficial, el nº 33 («MATA ALCOZARINA 33»).",
   "consulta": "DEHESA DE LA MATA ALCOZARINA 32, Morón de la Frontera",
   "consultado": "2026-11-25T19:48:50+00:00",
+  "direccion_oficial": "PAGO MATA ALCOZARINA 33 41530",
   "estado": 0,
   "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
   "lat": 37.19195952997429,
   "lon": -5.465122970033568,
-  "precision": "direccion",
+  "precision": "calle",
   "referencia": "1290004TG8119S",
   "sha256": "aecf7e0f6a5e4a9267421246438ac9c77a7161d46399fd233d6c3b21698cecb1",
   "texto": "MATA ALCOZARINA 33 41530",
@@ -377,8 +454,11 @@
   "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=DEHESA+DE+LA+MATA+ALCOZARINA+32%2C+Mor%C3%B3n+de+la+Frontera&limit=1"
  },
  "SUB-JA-2026-268332||1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consulta": "RONDA DE LA TRINIDAD 20, Morón de la Frontera",
   "consultado": "2026-11-25T19:48:52+00:00",
+  "direccion_oficial": "RONDA TRINIDAD 20 41530",
   "estado": 0,
   "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
   "lat": 37.12414524283967,
@@ -391,8 +471,11 @@
   "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=RONDA+DE+LA+TRINIDAD+20%2C+Mor%C3%B3n+de+la+Frontera&limit=1"
  },
  "SUB-JA-2026-268563||1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consulta": "Urbanización Roalcao 9, Espartinas",
   "consultado": "2026-11-25T19:48:54+00:00",
+  "direccion_oficial": "URBANIZACION ROALCAO 9 41807",
   "estado": 0,
   "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
   "lat": 37.38377128986974,
@@ -405,8 +488,11 @@
   "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Urbanizaci%C3%B3n+Roalcao+9%2C+Espartinas&limit=1"
  },
  "SUB-JA-2026-268564||1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consulta": "C/ RODRIGO DE TRIANA 66-68, Pilas",
   "consultado": "2026-11-25T19:48:56+00:00",
+  "direccion_oficial": "CALLE RODRIGO DE TRIANA 68 41840",
   "estado": 0,
   "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
   "lat": 37.306354931785215,
@@ -419,7 +505,10 @@
   "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=C%2F+RODRIGO+DE+TRIANA+66-68%2C+Pilas&limit=1"
  },
  "SUB-JA-2026-268670||1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consultado": "2026-11-25T19:48:57+00:00",
+  "direccion_oficial": "PZ ESPAÑA DE 24 PILAS (SEVILLA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.3019971863463,
   "lon": -6.29653938371025,
@@ -431,7 +520,10 @@
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=9720403QB3392S"
  },
  "SUB-RC-2026-4107100105||1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
   "consultado": "2026-11-25T19:48:58+00:00",
+  "direccion_oficial": "CL HACIENDA DOLORES OCHO 1 PARCELA 9 UE13 ALCALA DE GUADAIRA (SEVILLA)",
   "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
   "lat": 37.3604322190035,
   "lon": -5.88519370002799,

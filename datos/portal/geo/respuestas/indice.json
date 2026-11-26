@@ -371,6 +371,14 @@
   "sha256": "24ddb6c60d3b9635c067c5ff5f4e31a7ea6d70f6c50d6dcaf768d8b59dc5becb",
   "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+HUERTA+GAVIRA+25%2C+Marchena%2C+Sevilla&limit=1"
  },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+HUERTA+GAVIRA+25%2C+Marchena&limit=1": {
+  "archivo": "e48990d25722382d3198b196.json",
+  "bytes": 514,
+  "http": 200,
+  "momento": "2026-11-26T09:53:39+00:00",
+  "sha256": "956f66e3ecc217c27c5c4d8f51cb660105cd2803099dce5bc039ad9f1d263c79",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+HUERTA+GAVIRA+25%2C+Marchena&limit=1"
+ },
  "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+NAOS+12%2C+41011+Sevilla&limit=1": {
   "archivo": "33007d269e50e54e806bd637.json",
   "bytes": 501,
@@ -378,6 +386,14 @@
   "momento": "2026-11-25T19:48:45+00:00",
   "sha256": "5a68b53960eedb1b304d144ac90c663aa226c40ff7e220edbcccceb6514dcb4e",
   "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+NAOS+12%2C+41011+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+NAOS+12%2C+Sevilla&limit=1": {
+  "archivo": "1db16a0895020a40bdb434a4.json",
+  "bytes": 503,
+  "http": 200,
+  "momento": "2026-11-26T09:53:40+00:00",
+  "sha256": "e378ca379c2b9c93d7823d16d970a96f617b8369b986d3f78e5d77c85cb95d43",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+NAOS+12%2C+Sevilla&limit=1"
  },
  "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+NAOS+12+-+ESC.+1+-2%C2%BA+IZDA%2C+Sevilla%2C+Sevilla&limit=1": {
   "archivo": "13d2a501b63ad51c101c826a.json",
@@ -426,6 +442,14 @@
   "momento": "2026-11-25T19:44:33+00:00",
   "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
   "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+SANTA+ANA+1+BJ+2A%2C+Alcal%C3%A1+de+Guada%C3%ADra%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+TORREBLANCA+1%2C+Sevilla&limit=1": {
+  "archivo": "e42244f30fec5b0c8f45895b.json",
+  "bytes": 507,
+  "http": 200,
+  "momento": "2026-11-26T09:53:38+00:00",
+  "sha256": "f6e9f18447ee0eb6253b494df6b8552c93978fecd6b6f2683025dd2928bce95d",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+TORREBLANCA+1%2C+Sevilla&limit=1"
  },
  "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CL+TORREBLANCA+1+-1+B3%2C+41008+Sevilla&limit=1": {
   "archivo": "bfad16043b81e896dd630c26.json",
@@ -522,6 +546,14 @@
   "momento": "2026-11-25T19:45:13+00:00",
   "sha256": "39435043ee71b406e00870d374d81e2b3381710bf7fa1580c713caebd28dc107",
   "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Calle+Per%C3%BA+49%2C+Bormujos%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Calle+Per%C3%BA+49%2C+Bormujos&limit=1": {
+  "archivo": "fa6029928ed6043bd4fc23aa.json",
+  "bytes": 504,
+  "http": 200,
+  "momento": "2026-11-26T09:53:42+00:00",
+  "sha256": "60078fb0d323158ca1adbb355ff3c80e01a978635cbdf215c242ee9ee8853b63",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=Calle+Per%C3%BA+49%2C+Bormujos&limit=1"
  },
  "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=DEHESA+DE+LA+MATA+ALCOZARINA+32%2C+41530+Mor%C3%B3n+de+la+Frontera&limit=1": {
   "archivo": "a3fd96a0245f942fc3bedcd2.json",
@@ -714,6 +746,14 @@
   "momento": "2026-11-25T19:45:12+00:00",
   "sha256": "22b573fc28210c9dc06805f8be4e4595f7103c31a1949d56fab67745a26251c0",
   "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=calle+Per%C3%BA+49%2C+Bormujos%2C+Sevilla&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=calle+Per%C3%BA+49%2C+Bormujos&limit=1": {
+  "archivo": "7f08aebabdf149222f782067.json",
+  "bytes": 504,
+  "http": 200,
+  "momento": "2026-11-26T09:53:41+00:00",
+  "sha256": "60078fb0d323158ca1adbb355ff3c80e01a978635cbdf215c242ee9ee8853b63",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=calle+Per%C3%BA+49%2C+Bormujos&limit=1"
  },
  "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=calle+Real%2C+45%2C+Gelves%2C+Sevilla&limit=1": {
   "archivo": "4cd92b75ac9564968589a7d2.json",
