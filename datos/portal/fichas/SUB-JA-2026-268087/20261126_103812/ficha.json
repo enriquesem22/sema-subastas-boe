@@ -1,0 +1,668 @@
+{
+  "sub": "SUB-JA-2026-268087",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268087",
+  "consultado_utc": "2026-11-26T09:38:21+00:00",
+  "captura_codigos": "41/20261126_103709",
+  "peticiones": 9,
+  "lotes_identificados": [
+    "1",
+    "2"
+  ],
+  "ubicaciones_bienes": [
+    {
+      "lote": "1",
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "C/ JEREZ DE LA FRONTERA Nº 5 - ESC. 1-4º C- BQ nUESTRA SEÑORA DE FATIMA",
+      "localidad": "SAN JUAN DE AZNALFARACHE",
+      "provincia": "Sevilla",
+      "codigo_postal": "41920",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-268087/20261125_210150/portal/bienes_lote_1.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268087&ver=3&idLote=1&idBus=&numPagBus="
+      }
+    },
+    {
+      "lote": "2",
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "URB.  CIUDAD BLANCA Nº 18 , ESC. 1 - 2º D",
+      "localidad": "DOS HERMANAS",
+      "provincia": "Sevilla",
+      "codigo_postal": "41702",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-268087/20261125_210150/portal/bienes_lote_2.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268087&ver=3&idLote=2&idBus=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-268087/20261125_210150/portal/general.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268087",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268087",
+      "consultado_utc": "2026-11-26T09:38:12+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "1c2019bedfcd5dd34865f125bc8d32e5d476d817a8e4643be44dfc407a4bfbe4",
+      "bytes": 11790,
+      "huella": "271b2f94e1a3c13b3b1e20b6c348b97b2ae3adb6b67ef0764d616cddc0ef3cc2",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-268087"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "4000 0000 05 0285 22"
+          ],
+          [
+            "Fecha de inicio",
+            "17-11-2026 18:00:00 CET  (ISO: 2026-11-17T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "07-12-2026 18:00:00 CET (ISO: 2026-12-07T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "268.979,74 €"
+          ],
+          [
+            "Lotes",
+            "2"
+          ],
+          [
+            "Forma adjudicación",
+            "Separada para cada lote"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-37368"
+          ],
+          [
+            "Valor subasta",
+            "Ver valor de subasta en cada lote (los lotes se subastan de forma independiente)"
+          ],
+          [
+            "Tasación",
+            "Ver valor de tasación en cada lote (los lotes se subastan de forma independiente)"
+          ],
+          [
+            "Puja mínima",
+            "Ver puja mínima de cada lote (adjudicación independiente)"
+          ],
+          [
+            "Tramos entre pujas",
+            "Ver tramos de cada lote (adjudicación independiente)"
+          ],
+          [
+            "Importe del depósito",
+            "Ver importe de consignación de cada lote (adjudicación independiente)"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268087/20261125_210150/portal/autoridad.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268087&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268087&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:38:14+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "5ce9cb52442c61b20170644f407c575ec029d5cf69ccf37c14743b82042166ea",
+      "bytes": 8982,
+      "huella": "3cf58bdbd1108cf4eed81ca8f5f9f8e5bee23b4ae1d7d34b67c233437347a63c",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4109142004"
+          ],
+          [
+            "Descripción",
+            "Sección Civil TI Sevilla. Plz.n 4"
+          ],
+          [
+            "Dirección",
+            "CL VERMONDO RESTA S/N S/N   ; 41018 SEVILLA"
+          ],
+          [
+            "Teléfono",
+            "676767711"
+          ],
+          [
+            "Fax",
+            "955043135"
+          ],
+          [
+            "Correo electrónico",
+            "scej.subastas.sevilla.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268087/20261125_210150/portal/bienes.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Lotes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268087&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268087&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:38:15+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "7c22d0575b4f00555510e5db3319c01b2a1c3539908840f85d583a2569195379",
+      "bytes": 14315,
+      "huella": "a8beb5764daa2a141ae7c61cc939853ccbe50bdf6088a009def610f37a97f8c2",
+      "encabezados": [
+        "Lote 1",
+        "Datos relacionados con la subasta del lote 1",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "135.000,00 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "6.750,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "2.700,00 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "FINCA Nº 3634. URBANA: DIECINUEVE.- Vivienda en planta cuarta letra C, de la casa número tres de la calle Jerez de la Frontera, número cinco, Bloque Nuestra Señora de Fátima, en término de San Juan de Aznalfarache -Sevilla-. Tiene una superficie de sesenta y siete metros, ochenta y siete decímetros cuadrados. Linda: mirando a la casa desde la calle sin nombre, por donde tiene su portal de entrada, hoy calle Jerez de la Frontera; por la derecha, con hueco de la escalera; por la izquierda, con patio de luces y la vivienda letra D, de la casa número dos; y por el fondo, con patio de luces, vivienda letra B, de esta casa y esta planta y hueco de escalera. Tiene asignado un coeficiente o valor en el total de la casa de que forma parte del cinco por ciento."
+          ],
+          [
+            "IDUFIR",
+            "41026000502877"
+          ],
+          [
+            "Referencia catastral",
+            "2987202QB6328N0019SG"
+          ],
+          [
+            "Dirección",
+            "C/ JEREZ DE LA FRONTERA Nº 5 - ESC. 1-4º C- BQ nUESTRA SEÑORA DE FATIMA"
+          ],
+          [
+            "Código Postal",
+            "41920"
+          ],
+          [
+            "Localidad",
+            "SAN JUAN DE AZNALFARACHE"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No"
+          ],
+          [
+            "Cargas",
+            "La hipoteca que se ejecuta es la constituida por la inscripción 15ª , recogida en el certificado de dominio y cargas."
+          ],
+          [
+            "Inscripción registral",
+            "REGISTRO DE LA PROPIEDAD DE SAN JUAN DE AZNALFARACHE FINCA REGISTRAL Nº 3634  TOMO 1879, LIBRO 275 , FOLIO 179, INSCRIPCIÓN 11. SE EJECUTA LA INSCRIPCIÓN 15"
+          ],
+          [
+            "Información adicional",
+            "El estado de coordinación con el catastro no consta"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268087/20261125_210150/portal/pujas.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268087&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268087&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:38:16+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "8a4e331dc6f139c9c3b0779dc8e41b945b07616b2658020fa9415a778fc268c0",
+      "bytes": 9218,
+      "huella": "63889276799beb5db2b218eb968f11abe18670af157122ab7d04323ba98e6d74",
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268087/20261125_210150/portal/bienes_lote_1.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Lote 1",
+      "pestana": "3",
+      "lote": "1",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268087&ver=3&idLote=1&idBus=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268087&ver=3&idLote=1&idBus=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:38:17+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "8bf7e111c821015616378a800a5b79fd4e31d037eef287a4e6ad3674db835a31",
+      "bytes": 14319,
+      "huella": "eb1387eeb82bd52b2add5a84c17254b48335f2a44075975a133bbca34ebcd99b",
+      "encabezados": [
+        "Lote 1",
+        "Datos relacionados con la subasta del lote 1",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "135.000,00 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "6.750,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "2.700,00 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "FINCA Nº 3634. URBANA: DIECINUEVE.- Vivienda en planta cuarta letra C, de la casa número tres de la calle Jerez de la Frontera, número cinco, Bloque Nuestra Señora de Fátima, en término de San Juan de Aznalfarache -Sevilla-. Tiene una superficie de sesenta y siete metros, ochenta y siete decímetros cuadrados. Linda: mirando a la casa desde la calle sin nombre, por donde tiene su portal de entrada, hoy calle Jerez de la Frontera; por la derecha, con hueco de la escalera; por la izquierda, con patio de luces y la vivienda letra D, de la casa número dos; y por el fondo, con patio de luces, vivienda letra B, de esta casa y esta planta y hueco de escalera. Tiene asignado un coeficiente o valor en el total de la casa de que forma parte del cinco por ciento."
+          ],
+          [
+            "IDUFIR",
+            "41026000502877"
+          ],
+          [
+            "Referencia catastral",
+            "2987202QB6328N0019SG"
+          ],
+          [
+            "Dirección",
+            "C/ JEREZ DE LA FRONTERA Nº 5 - ESC. 1-4º C- BQ nUESTRA SEÑORA DE FATIMA"
+          ],
+          [
+            "Código Postal",
+            "41920"
+          ],
+          [
+            "Localidad",
+            "SAN JUAN DE AZNALFARACHE"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No"
+          ],
+          [
+            "Cargas",
+            "La hipoteca que se ejecuta es la constituida por la inscripción 15ª , recogida en el certificado de dominio y cargas."
+          ],
+          [
+            "Inscripción registral",
+            "REGISTRO DE LA PROPIEDAD DE SAN JUAN DE AZNALFARACHE FINCA REGISTRAL Nº 3634  TOMO 1879, LIBRO 275 , FOLIO 179, INSCRIPCIÓN 11. SE EJECUTA LA INSCRIPCIÓN 15"
+          ],
+          [
+            "Información adicional",
+            "El estado de coordinación con el catastro no consta"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268087/20261125_210150/portal/bienes_lote_2.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Lote 2",
+      "pestana": "3",
+      "lote": "2",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268087&ver=3&idLote=2&idBus=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268087&ver=3&idLote=2&idBus=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:38:18+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "834ff4e2a6a927fe5ca4335f775ba1b63bf8f95a5e6cd59c83f91f66aed9f2a4",
+      "bytes": 14408,
+      "huella": "d0211a76abca9aa8b9d8f680afb742bb24f0582d14acd0837ad8a556846f80e5",
+      "encabezados": [
+        "Lote 2",
+        "Datos relacionados con la subasta del lote 2",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "138.000,00 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "6.900,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "2.760,00 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "URBANA: DIECINUEVE.- Vivienda en planta cuarta letra C, de la casa número tres de la calle Jerez de la Frontera, número cinco, Bloque Nuestra Señora de Fátima, en término de San Juan de Aznalfarache -Sevilla-. Tiene una superficie de sesenta y siete metros, ochenta y siete decímetros cuadrados. Linda: mirando a la casa desde la calle sin nombre, por donde tiene su portal de entrada, hoy calle Jerez de la Frontera; por la derecha, con hueco de la escalera; por la izquierda, con patio de luces y la vivienda letra D, de la casa número dos; y por el fondo, con patio de luces, vivienda letra B, de esta casa y esta planta y hueco de escalera. Tiene asignado un coeficiente o valor en el total de la casa de que forma parte del cinco por ciento."
+          ],
+          [
+            "IDUFIR",
+            "41019000182804"
+          ],
+          [
+            "Referencia catastral",
+            "0790006TG4209S0012ML"
+          ],
+          [
+            "Dirección",
+            "URB.  CIUDAD BLANCA Nº 18 , ESC. 1 - 2º D"
+          ],
+          [
+            "Código Postal",
+            "41702"
+          ],
+          [
+            "Localidad",
+            "DOS HERMANAS"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No"
+          ],
+          [
+            "Cargas",
+            "La hipoteca que se ejecuta es la  la constituida por la inscripción  2ª , recogida en el certificado de dominio y cargas."
+          ],
+          [
+            "Inscripción registral",
+            "REGISTRO DE LA PROPIEDAD Nº 3 DE DOS HERMANAS FINCA REGISTRAL 11947, FORMADA POR TRASLADO DE LA NÚMERO 17071 DEL ARCHIVO COMÚN."
+          ],
+          [
+            "Información adicional",
+            "FINCA REGISTRAL Nº 11947, formada por traslado de la Nº 17071 del Archivo Común , en fecha seis de junio de dos mil doce. El estado de coordinación de esta finca no está coordinado con catastro."
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268087/20261125_210150/portal/pujas_lote_1.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": "1",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268087&ver=5&idBus=&idLote=1&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268087&ver=5&idBus=&idLote=1&numPagBus=",
+      "consultado_utc": "2026-11-26T09:38:19+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "61621974a3ff3018cb0586c6dc5202081c5ba763a1ca29895754e48aed2af684",
+      "bytes": 9218,
+      "huella": "63889276799beb5db2b218eb968f11abe18670af157122ab7d04323ba98e6d74",
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268087/20261125_210150/portal/pujas_lote_2.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": "2",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268087&ver=5&idBus=&idLote=2&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268087&ver=5&idBus=&idLote=2&numPagBus=",
+      "consultado_utc": "2026-11-26T09:38:20+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "6a111e3b5610d00b5224acc4910544fd94e248e2cfee6060296fab33a9c2ca3b",
+      "bytes": 9218,
+      "huella": "96ac6d0a88503dcfe898c0e5434c58badf981354b1d779d9517f01d95fae8e20",
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/83a512e55b2403f01ae38bcaea1d4818fbb84d92e14054cb70293a10c929eef0.pdf",
+      "etiqueta": "Edicto subasta de inmuebles ejecución hipotecaria 285/22  Sección Civil del Tribunal de Instancia de Sevilla. Plaza nº 4- FINCA Nº 3634 Y FINCA Nº",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "1-1417784fc01d29ee0bf07d6f74248985",
+        ""
+      ],
+      "reutilizado": true,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268087&idDoc=1-1417784fc01d29ee0bf07d6f74248985",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268087&idDoc=1-1417784fc01d29ee0bf07d6f74248985",
+      "consultado_utc": "2026-11-25T19:10:21+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "83a512e55b2403f01ae38bcaea1d4818fbb84d92e14054cb70293a10c929eef0",
+      "bytes": 370663
+    },
+    {
+      "archivo": "documentos/c84ecab4e7347ac27b211b0f08445198409507da253fe2118c180c6f95c90a32.pdf",
+      "etiqueta": "Certificado de dominio y carga Finca registral nº 11947, formada por traslado de la número 17071 del Archivo Común.",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-1352a6be492d29bcb86eb899049f5b72",
+        ""
+      ],
+      "reutilizado": true,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268087&idDoc=2-1352a6be492d29bcb86eb899049f5b72",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268087&idDoc=2-1352a6be492d29bcb86eb899049f5b72",
+      "consultado_utc": "2026-11-25T19:10:22+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "c84ecab4e7347ac27b211b0f08445198409507da253fe2118c180c6f95c90a32",
+      "bytes": 384493
+    },
+    {
+      "archivo": "documentos/1c09503d163194eb327dd25718710f7ee0237fc1c127b3eae0ba31cb3b95aea5.pdf",
+      "etiqueta": "Certificado de dominio y cargas Finca Registral nª 3634",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "3-e03c743097bf74199d7e22fbeafd60b0",
+        ""
+      ],
+      "reutilizado": true,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268087&idDoc=3-e03c743097bf74199d7e22fbeafd60b0",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268087&idDoc=3-e03c743097bf74199d7e22fbeafd60b0",
+      "consultado_utc": "2026-11-25T19:10:23+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "1c09503d163194eb327dd25718710f7ee0237fc1c127b3eae0ba31cb3b95aea5",
+      "bytes": 428662
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-37368",
+      "publicado": "2026-11-14",
+      "actualizado_fuente": "20261114071539",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-37368.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37368",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37368",
+          "consultado_utc": "2026-11-25T19:10:28+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "4cade8357a3aa813f8d22a0f9bb99ded718d55da7d77b06500eadf55edcbe7ec",
+          "bytes": 1138
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-37368.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/14/pdfs/BOE-B-2026-37368.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/14/pdfs/BOE-B-2026-37368.pdf",
+          "consultado_utc": "2026-11-25T19:10:29+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "b809604c94c53b65273c3be037ac812f5049485b2b5510a53ac8be0344201b25",
+          "bytes": 197998
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": []
+}

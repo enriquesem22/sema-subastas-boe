@@ -1,0 +1,351 @@
+{
+  "sub": "SUB-AT-2026-26R4186001561",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-AT-2026-26R4186001561",
+  "consultado_utc": "2026-11-26T09:39:41+00:00",
+  "captura_codigos": "41/20261126_103709",
+  "peticiones": 5,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Solar)",
+      "direccion": "CL HACIENDA DE REGLA         47",
+      "localidad": "PALOMARES DEL RIO",
+      "provincia": "Sevilla",
+      "codigo_postal": "41928",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-AT-2026-26R4186001561/20261125_210312/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001561&ver=3&idBus=&idLote=&numPagBus="
+      }
+    },
+    {
+      "lote": null,
+      "bien": 2,
+      "tipo": "Inmueble (Solar)",
+      "direccion": "CL HACIENDA DE REGLA         45",
+      "localidad": "PALOMARES DEL RIO",
+      "provincia": "Sevilla",
+      "codigo_postal": "41928",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-AT-2026-26R4186001561/20261125_210312/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001561&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186001561/20261125_210312/portal/general.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-AT-2026-26R4186001561",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001561",
+      "consultado_utc": "2026-11-26T09:39:36+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "2e27a34def94e28b69a6d33861d755255c1efd3009bc16273a53a4476d24e262",
+      "bytes": 10084,
+      "huella": "650faffc14424d654a3454a95ebb7cb2997fc344f2a0c99d0443aca7a610754b",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-AT-2026-26R4186001561"
+          ],
+          [
+            "Tipo de subasta",
+            "AGENCIA TRIBUTARIA"
+          ],
+          [
+            "Fecha de inicio",
+            "24-11-2026 18:00:00 CET  (ISO: 2026-11-24T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "14-12-2026 18:00:00 CET (ISO: 2026-12-14T18:00:00+01:00)"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-38449"
+          ],
+          [
+            "Valor subasta",
+            "257.691,30 €"
+          ],
+          [
+            "Tasación",
+            "461.846,52 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "2.000,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "12.884,56 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186001561/20261125_210312/portal/autoridad.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001561&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001561&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:39:38+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "a81a6a6f6aceee560cc7f9180dda99e8ed66ab7602777bf8482a0309452f4de9",
+      "bytes": 9014,
+      "huella": "df4b5b153ef935cefa5bd9b4b4cd3efc261a9c112b58b01be14c0655e66dbd83",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "R41860"
+          ],
+          [
+            "Descripción",
+            "U.R. SUBASTAS ANDALUCÍA 41 (AEAT)"
+          ],
+          [
+            "Dirección",
+            "PZ MINISTRO INDALECIO PRIETO 1 ; 41071 SEVILLA"
+          ],
+          [
+            "Teléfono",
+            "913335333"
+          ],
+          [
+            "Fax",
+            "-"
+          ],
+          [
+            "Correo electrónico",
+            "subastas.andalucia@correo.aeat.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186001561/20261125_210312/portal/bienes.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001561&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001561&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:39:39+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "5ad64c124fcd4086ec9c732c99bcfa169ec310df4fe98f91347622f1dc5f13b0",
+      "bytes": 17006,
+      "huella": "3b76752a7d3af8cc970d0eb4d8885182516436680bfbcdd198ed3f72d2436100",
+      "encabezados": [
+        "Datos de los bienes subastados",
+        "Bien 1 - Inmueble (Solar)",
+        "Información complementaria del bien",
+        "Bien 2 - Inmueble (Solar)",
+        "Información complementaria del bien"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "100% PLENO DOMINIO. URBANA.- PARCELA CUARENTA Y DOS DEL PLANO DE             PARCELACIÓN DEL SOLAR EN CALLE HACIENDA DE SANTA MARÍA, NÚMERO OCHENTA Y     TRES, DENOMINADO SUBMANZANA M.08.03 DEL PLAN PARCIAL DEL SECTOR SUZ-PP-09     UGENA , TÉRMINO DE PALOMARES DEL RÍO  SEVILLA .- PRESENTA FACHADA AL        SUROESTE, A LA CALLE HACIENDA DE REGLA, DONDE TIENE ASIGNADO EL NÚMERO       CUARENTA Y SIETE.- SUPERFICIE: TIENE UN ÁREA DE CUATROCIENTOS CINCUENTA Y    DOS METROS CUADRADOS."
+          ],
+          [
+            "IDUFIR",
+            "41030001035531"
+          ],
+          [
+            "Referencia catastral",
+            "9336509QB5393N0001IQ"
+          ],
+          [
+            "Dirección",
+            "CL HACIENDA DE REGLA         47"
+          ],
+          [
+            "Código Postal",
+            "41928"
+          ],
+          [
+            "Localidad",
+            "PALOMARES DEL RIO"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No"
+          ],
+          [
+            "Cargas",
+            "204.155,22 €"
+          ],
+          [
+            "Inscripción registral",
+            "BIEN INSCRITO EN REGISTRO NÚM. 3 DE SEVILLA TOMO: 3011 , FOLIO: 115 , LIBRO: 149. FINCA: 6387   , INSCRIPCIÓN: 2"
+          ],
+          [
+            "Título jurídico",
+            "PLENO DOMINIO"
+          ],
+          [
+            "Información adicional",
+            "- Se subasta simultaneamente el 100% del pleno dominio de las fincas registrales 6387 y 6389.\n          - Es objeto de subasta la anotacion preventiva de embargo letra B, con fecha de inscripcion 21-01-2026.\n          - Realizada la visita al inmueble en fecha 17-06-2026, la finca se encuentra ocupada sin que conste titulo juridico que justifique la ocupacion. En el momento de la visita se comprueba que sobre las fincas registrales se encuentra construida una vivienda.\n          - Carga preferente:\n          a) Embargo a favor de la TGSS con numero de expediente 41012500249421 (Letra A, con fecha de inscripcion 19-11-2025), con importe pendiente conforme informacion proporcionada por la entidad acreedora en fecha 12-02-2026 de 204.155,22 euros. La carga es unica y compartida por todas las fincas objeto de subasta.\n          - Existen discrepancias entre la informacion registral y catastral."
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "100% PLENO DOMINIO. URBANA.- PARCELA CUARENTA Y CUATRO DEL PLANO DE          PARCELACIÓN DEL SOLAR EN CALLE HACIENDA DE SANTA MARÍA, NÚMERO OCHENTA Y     TRES, DENOMINADO SUBMANZANA M.08.03 DEL PLAN PARCIAL DEL SECTOR SUZ-PP-09     UGENA , TÉRMINO DE PALOMARES DEL RÍO.- PRESENTA FACHADA AL SUROESTE, A LA   CALLE HACIENDA DE REGLA, DONDE TIENE ASIGNADO EL NÚMERO CUARENTA Y CINCO.-   SUPERFICIE: TIENE UN ÁREA DE CUATROCIENTOS CINCUENTA METROS CUADRADOS.-"
+          ],
+          [
+            "IDUFIR",
+            "41030001035555"
+          ],
+          [
+            "Referencia catastral",
+            "9336507QB5393N0001DQ"
+          ],
+          [
+            "Dirección",
+            "CL HACIENDA DE REGLA         45"
+          ],
+          [
+            "Código Postal",
+            "41928"
+          ],
+          [
+            "Localidad",
+            "PALOMARES DEL RIO"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No"
+          ],
+          [
+            "Cargas",
+            "0,00 €"
+          ],
+          [
+            "Inscripción registral",
+            "BIEN INSCRITO EN REGISTRO NÚM. 3 DE SEVILLA TOMO: 3011 , FOLIO: 121 , LIBRO: 149. FINCA: 6389   , INSCRIPCIÓN: 2"
+          ],
+          [
+            "Título jurídico",
+            "PLENO DOMINIO"
+          ],
+          [
+            "Información adicional",
+            "- Se subasta simultaneamente el 100% del pleno dominio de las fincas registrales 6387 y 6389.\n          - Es objeto de subasta la anotacion preventiva de embargo letra B, con fecha de inscripcion 21-01-2026.\n          - Realizada la visita al inmueble en fecha 17-06-2026, la finca se encuentra ocupada sin que conste titulo juridico que justifique la ocupacion. En el momento de la visita se comprueba que sobre las fincas registrales se encuentra construida una vivienda.\n          - Carga preferente:\n          a) Embargo a favor de la TGSS con numero de expediente 41012500249421 (Letra A, con fecha de inscripcion 19-11-2025), con importe pendiente conforme informacion proporcionada por la entidad acreedora en fecha 12-02-2026 de 204.155,22 euros. La carga es unica y compartida por todas las fincas objeto de subasta.\n          - Existen discrepancias entre la informacion registral y catastral."
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186001561/20261125_210312/portal/pujas.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001561&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001561&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:39:40+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "5ac32b1a949678fcdc5517ee2ae78f63d4fbaa02ab21103f06e5a137aa5e1b91",
+      "bytes": 8510,
+      "huella": "569b697ee710d93dc7fde8148b50ed5c79438349a998bdb5efd9ecc7c38408bb",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-38449",
+      "publicado": "2026-11-21",
+      "actualizado_fuente": "20261121071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-38449.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38449",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38449",
+          "consultado_utc": "2026-11-25T19:12:30+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "fd9124d3030ef129186ae6b32b01bc54c67db9c50ab8bb93951f1b5ad6a2be3d",
+          "bytes": 1597
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-38449.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38449.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38449.pdf",
+          "consultado_utc": "2026-11-25T19:12:31+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "5c14290d8da8c1fead3e38900691fc2998f73e9fa5f5ab21887ab8c6c002bc39",
+          "bytes": 199029
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001561",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    },
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001561&ver=3&idBus=&idLote=&numPagBus=",
+      "etiqueta": "Bienes",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

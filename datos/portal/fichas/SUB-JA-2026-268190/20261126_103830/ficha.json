@@ -1,0 +1,311 @@
+{
+  "sub": "SUB-JA-2026-268190",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268190",
+  "consultado_utc": "2026-11-26T09:38:35+00:00",
+  "captura_codigos": "41/20261126_103709",
+  "peticiones": 5,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Finca rústica)",
+      "direccion": "Polígono 19 Parcela 17 LA TRINIDAD.",
+      "localidad": "SEVILLA",
+      "provincia": "Sevilla",
+      "codigo_postal": "41020",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-268190/20261125_210208/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268190&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-268190/20261125_210208/portal/general.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268190",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268190",
+      "consultado_utc": "2026-11-26T09:38:30+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "677a527b86915a55e18ea4346dbc59c0abaf6da71625eade2574ae76eb7b4052",
+      "bytes": 10738,
+      "huella": "934f4806fa9b007b7034084efcc21a001fb21240311d0e9c27cf7c131786a099",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-268190"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "4001 0000 06 2342 10"
+          ],
+          [
+            "Fecha de inicio",
+            "20-11-2026 18:00:00 CET  (ISO: 2026-11-20T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "10-12-2026 18:00:00 CET (ISO: 2026-12-10T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "284.256,76 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-37766"
+          ],
+          [
+            "Valor subasta",
+            "510.000,00 €"
+          ],
+          [
+            "Tasación",
+            "510.000,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "10.200,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "25.500,00 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268190/20261125_210208/portal/autoridad.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268190&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268190&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:38:32+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "55d110eaef6da269118aeb2424ef05ac3e0a51c59ed58e489fb69a35655e3e0d",
+      "bytes": 8983,
+      "huella": "c899ded89ad0e4e9c63b138cbf51fb99d9d2ada1a25852faa864a4409fa9deff",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4109142005"
+          ],
+          [
+            "Descripción",
+            "Sección Civil TI Sevilla. Plz.n 5"
+          ],
+          [
+            "Dirección",
+            "CL VERMONDO RESTA S/N S/N   ; 41018 SEVILLA"
+          ],
+          [
+            "Teléfono",
+            "686231257"
+          ],
+          [
+            "Fax",
+            "955043135"
+          ],
+          [
+            "Correo electrónico",
+            "scej.subastas.sevilla.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268190/20261125_210208/portal/bienes.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268190&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268190&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:38:33+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "c02ddf93dbcc8e1b1f436f13c2437ef7e38f2e411b931be69c3e66a18b9210f4",
+      "bytes": 11325,
+      "huella": "038dce90d31da7bce619ad74472dc4cc341581e510acb3c9d3e5bcc5cdb84354",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Finca rústica)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "\"RÚSTICA: Suerte de tierra procedente de la\n          Hacienda de olivar denominada \"la Trinidad\", en término de esta capital,\n          sección séptima con una cabida de tres hectareas. linda por el norte con resto\n          de la finca de donde se segrega, por el sur con el mismo resto de la finca\n          matriz, por el este con camino denominado San Mateo y por el oeste con la\n          vereda de la venta de la Escalera.\""
+          ],
+          [
+            "IDUFIR",
+            "41032000371627"
+          ],
+          [
+            "Referencia catastral",
+            "41900A019000170000IZ"
+          ],
+          [
+            "Dirección",
+            "Polígono 19 Parcela 17 LA TRINIDAD."
+          ],
+          [
+            "Código Postal",
+            "41020"
+          ],
+          [
+            "Localidad",
+            "SEVILLA"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No"
+          ],
+          [
+            "Cargas",
+            "EL BIEN CARECE DE CARGAS PREVIAS"
+          ],
+          [
+            "Inscripción registral",
+            "FINCA REGISTRAL Nº 5.650 Inscripción registral: TOMO 1593, LIBRO 137, FOLIO 20"
+          ],
+          [
+            "Información adicional",
+            "Se subasta la tercera parte indivisa de la finca procedente de la\n          Hacienda la Trinidad, en Término de Sevilla"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268190/20261125_210208/portal/pujas.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268190&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268190&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:38:34+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "973bf80011dbb76e19d384c761b35259637bc6f44f9952a7f20abad5b6fca3b9",
+      "bytes": 8475,
+      "huella": "90d7231bfbe59e5de6ae4ff397958f99508fa306485dbee7e5e0b30dfb3fe9ab",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/cfe37ea722ccf469a3df62798a87411985776f83a300542700df6fc93d594d6f.pdf",
+      "etiqueta": "EDICTO FINCA Nº 5.650",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "1-877e64ddcec07b318c10d06e3f849451",
+        ""
+      ],
+      "reutilizado": true,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268190&idDoc=1-877e64ddcec07b318c10d06e3f849451",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268190&idDoc=1-877e64ddcec07b318c10d06e3f849451",
+      "consultado_utc": "2026-11-25T19:10:46+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "cfe37ea722ccf469a3df62798a87411985776f83a300542700df6fc93d594d6f",
+      "bytes": 361776
+    },
+    {
+      "archivo": "documentos/0161edaede24a25d18393922f06d87e8f7d3630438226eb3be9d72d83fd9ec0a.pdf",
+      "etiqueta": "CERTIFICADO DOMINIO Y CARGAS FINCA Nº 5.650",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-7acf2adaf076d274fdf57a8a37378761",
+        ""
+      ],
+      "reutilizado": true,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268190&idDoc=2-7acf2adaf076d274fdf57a8a37378761",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268190&idDoc=2-7acf2adaf076d274fdf57a8a37378761",
+      "consultado_utc": "2026-11-25T19:10:47+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "0161edaede24a25d18393922f06d87e8f7d3630438226eb3be9d72d83fd9ec0a",
+      "bytes": 4055021
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-37766",
+      "publicado": "2026-11-17",
+      "actualizado_fuente": "20261117071712",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-37766.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37766",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37766",
+          "consultado_utc": "2026-11-25T19:10:49+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "049542adf2bc9d6b20e79fb5c53991815a80b7a619e29790f1a5c92a4a5cfe93",
+          "bytes": 1138
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-37766.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/17/pdfs/BOE-B-2026-37766.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/17/pdfs/BOE-B-2026-37766.pdf",
+          "consultado_utc": "2026-11-25T19:10:49+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "3407f8d342b40ee7cea2d40c8ab2c5d3669c0cce060bc5c831784b12764e7888",
+          "bytes": 198127
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": []
+}

@@ -1,0 +1,257 @@
+{
+  "sub": "SUB-AT-2026-26R4186002040",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-AT-2026-26R4186002040",
+  "consultado_utc": "2026-11-26T09:39:56+00:00",
+  "captura_codigos": "41/20261126_103709",
+  "peticiones": 5,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Bien mueble (Otros bienes y derechos)",
+      "direccion": null,
+      "localidad": null,
+      "provincia": null,
+      "codigo_postal": null,
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-AT-2026-26R4186002040/20261125_210327/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002040&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186002040/20261125_210327/portal/general.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-AT-2026-26R4186002040",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002040",
+      "consultado_utc": "2026-11-26T09:39:51+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "3372e700eb87ddc18faa3fae92bf2d67bbac7fd2b99605c37c0aaf9617815281",
+      "bytes": 10082,
+      "huella": "0141bf1e6369ac7063261507de8079921cea6a7d3179473bf9813a285291a107",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-AT-2026-26R4186002040"
+          ],
+          [
+            "Tipo de subasta",
+            "AGENCIA TRIBUTARIA"
+          ],
+          [
+            "Fecha de inicio",
+            "24-11-2026 18:00:00 CET  (ISO: 2026-11-24T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "14-12-2026 18:00:00 CET (ISO: 2026-12-14T18:00:00+01:00)"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-38383"
+          ],
+          [
+            "Valor subasta",
+            "313.027,34 €"
+          ],
+          [
+            "Tasación",
+            "313.027,34 €"
+          ],
+          [
+            "Puja mínima",
+            "31.302,73 €"
+          ],
+          [
+            "Tramos entre pujas",
+            "2.000,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "31.302,73 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186002040/20261125_210327/portal/autoridad.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002040&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002040&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:39:53+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "c14998890add7689957e31ae973e3d1705f9c4f1d1a77b2bf42f8697c9474a73",
+      "bytes": 9014,
+      "huella": "03c62999362b1f77e99f8cbed5c368c02a9a580df05e5f807d2401e264acbf05",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "R41860"
+          ],
+          [
+            "Descripción",
+            "U.R. SUBASTAS ANDALUCÍA 41 (AEAT)"
+          ],
+          [
+            "Dirección",
+            "PZ MINISTRO INDALECIO PRIETO 1 ; 41071 SEVILLA"
+          ],
+          [
+            "Teléfono",
+            "913335333"
+          ],
+          [
+            "Fax",
+            "-"
+          ],
+          [
+            "Correo electrónico",
+            "subastas.andalucia@correo.aeat.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186002040/20261125_210327/portal/bienes.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002040&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002040&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:39:54+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "366f1802dfc8e9877eee14b6acc1fdbad384c340281340864fef6003b2f4f58e",
+      "bytes": 11495,
+      "huella": "32bf5145aea054f17d27a5e7faf83bb84ac84b97642384641a1e85b9c4fa2533",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Bien mueble (Otros bienes y derechos)",
+        "Información complementaria del bien"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "19,80% DE LAS PARTICIPACIONES SOCIALES DE LA ENTIDAD DEHESAS DE BENAJARAFE    SL (NIF B14969497). 262.165 PARTICIPACIONES SOCILAES, NUMEROS 1 AL 262.165,  AMBAS INCLUSIVES."
+          ],
+          [
+            "Referencia Registral",
+            "20240000001"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "0,00 €"
+          ],
+          [
+            "Inscripción registral",
+            "Bien Inscrito en el registro de bienes muebles de CORDOBA                                            Número de bien 20240000001"
+          ],
+          [
+            "Título jurídico",
+            "PLENO DOMINIO"
+          ],
+          [
+            "Información adicional",
+            "1) Se enajenan participaciones sociales de la entidad Dehesa Benajarafe S.L. (B14969497), numeradas desde la 1 hasta la 262.165, ambas inclusive, que representan el 19,80 % (262.165 participaciones sociales) del capital social de dicha entidad. \n          2) El embargo de las participaciones ha generado la inscripcion registral de la prohibicion de disposicion sobre la finca registral  del Registro Propiedad de Huelva numero Uno, y sobre las fincas registrales, 15398, 8747, 19503 y 15363  Registro de la Propiedad Fuente Obejuna y sobre las fincas registrales 10954, 5203, 12310, 11278, 8880, 8879, 7077, 8878, 12428, 8881  Registro de la Propiedad de Cordoba numero Dos y sobre las fincas registrales 46184  Registro de la Propiedad de Huelva numero Uno y sobre las fincas registrales 15398, 8747, 19503 y 15363, todas ellas propiedad de la sociedad participada. Dicha prohibicion de disposicion se cancelara en caso de adjudicacion en subasta."
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186002040/20261125_210327/portal/pujas.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002040&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002040&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:39:55+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "1004278ad51c5c1e5995914635598a175efb33217fc3a82f093cba04b6799384",
+      "bytes": 8510,
+      "huella": "5a0f413dbdb1ed8e481ef25c20126395a6a6869e59e845f3ea433cb5179f47d4",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-38383",
+      "publicado": "2026-11-21",
+      "actualizado_fuente": "20261121071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-38383.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38383",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38383",
+          "consultado_utc": "2026-11-25T19:12:51+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "c53354e0eedb24a1e59954a3fdd4ef6572ede7f01e14a327287c35eb539d537b",
+          "bytes": 1597
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-38383.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38383.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38383.pdf",
+          "consultado_utc": "2026-11-25T19:12:52+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "5c95d6d35a49c992bedf766ac64ef0e530f6711ab18c247f13c77235ea7683f0",
+          "bytes": 199026
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002040",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    },
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186002040&ver=3&idBus=&idLote=&numPagBus=",
+      "etiqueta": "Bienes",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

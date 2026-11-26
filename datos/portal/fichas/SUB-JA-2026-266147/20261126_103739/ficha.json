@@ -1,0 +1,303 @@
+{
+  "sub": "SUB-JA-2026-266147",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-266147",
+  "consultado_utc": "2026-11-26T09:37:44+00:00",
+  "captura_codigos": "41/20261126_103709",
+  "peticiones": 5,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "AVDA PINO MONTANO 118, PLANTA 4, PUERTA B",
+      "localidad": "SEVILLA",
+      "provincia": "Sevilla",
+      "codigo_postal": "41008",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-266147/20261125_210118/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266147&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-266147/20261125_210118/portal/general.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-266147",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266147",
+      "consultado_utc": "2026-11-26T09:37:39+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "77b5699c9eedec6e61c9a0617097c03fe52cb2dd4d80eb1cf42c922db230d21e",
+      "bytes": 10805,
+      "huella": "6c2c7af3791cac52aa91409121a074536f69bb836fdc0ff74e46ab23c246bb02",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-266147"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "4038 0000 06 0013 16"
+          ],
+          [
+            "Fecha de inicio",
+            "17-11-2026 18:00:00 CET  (ISO: 2026-11-17T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "07-12-2026 18:00:00 CET (ISO: 2026-12-07T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "113.341,88 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-37366"
+          ],
+          [
+            "Valor subasta",
+            "135.356,40 €"
+          ],
+          [
+            "Tasación",
+            "0,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "2.707,12 €"
+          ],
+          [
+            "Importe del depósito",
+            "6.767,82 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-266147/20261125_210118/portal/autoridad.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266147&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266147&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:37:41+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "8710e273edc3e013aadffbb96884a16142c23ac06d29e4029e1717807c54c5af",
+      "bytes": 8984,
+      "huella": "1732e667ab0a6196c64f14838bc2fea0cec8fead85c6ee16683324a7dbedde28",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4109142016"
+          ],
+          [
+            "Descripción",
+            "Sección Civil TI Sevilla. Plz.n 16"
+          ],
+          [
+            "Dirección",
+            "CL VERMONDO RESTA S/N S/N   ; 41018 SEVILLA"
+          ],
+          [
+            "Teléfono",
+            "686231257"
+          ],
+          [
+            "Fax",
+            "955043096"
+          ],
+          [
+            "Correo electrónico",
+            "scej.subastas.sevilla.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-266147/20261125_210118/portal/bienes.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266147&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266147&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:37:42+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "7cad52f4e6897e916b3afdcd139f12a698358c8b30ac4105981127fa2bfc54f3",
+      "bytes": 12330,
+      "huella": "36580e6bbcd2b0b9a273d1ba13a41c0670ba1ebdb110223757027f2c3fe26f73",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "FINCA: \"URBANA:  DIECIOCHO.- Piso B de la planta cuarta del bloque B-20 de la Barriada de Pino Flores, construido sobre una parcela de terreno procedente del Cortijo de Miraflores, de esta Ciudad, hoy casanúmero ciento dieciocho de la Avenida de Pino Montano. Su superficie construida con inclusión de la parte proporcional de elementos comunes es de sesenta y dos metros setenta decímetros cuadrados. Tiene vestíbulo, estar comedor, tres dormitorios, cocina, cuarto de baño, lavadero y terraza. Linda, por el frente, con la caja de escalera; por la derecha, con el bloque B-19, hoy casa número ciento dieciséis de la Avenida de Pino Montano; por la izquierda, con el piso A; y por el fondo, con espacios libres que son hoy la calle Jara. \n          FINCA REGISTRAL  13831\n          Código Registral Único/IDUFIR:  41029000130071\n          Referencia catastral:  7046406TG3474N0015ZQ\n          Inscripción registral: INSCRITA AL FOLIO 94, TOMO 1751, LIBRO 1750\n          REGISTRO DE LA PROPIEDAD Nº 5 de Sevilla"
+          ],
+          [
+            "IDUFIR",
+            "41029000130071"
+          ],
+          [
+            "Referencia catastral",
+            "7046406TG3474N0015ZQ"
+          ],
+          [
+            "Dirección",
+            "AVDA PINO MONTANO 118, PLANTA 4, PUERTA B"
+          ],
+          [
+            "Código Postal",
+            "41008"
+          ],
+          [
+            "Localidad",
+            "SEVILLA"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "Sí"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No"
+          ],
+          [
+            "Inscripción registral",
+            "FINCA REGISTRAL  13831 INSCRITA EN EL REGISTRO DE LA PROPIEDAD Nº 5 DE SEVILLA"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-266147/20261125_210118/portal/pujas.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266147&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266147&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:37:43+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "e60cbef2ca6c464c3de046057549e1ad3113a5ae00c943e0815f87ae621da0a9",
+      "bytes": 8475,
+      "huella": "3f0075732aead17a0a314f5bbbae9e04d701ef405d1b953829e846269ae93bd1",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/3c295c5f048b1896bafa62c0998f0bbb0dca190c132b9a5545d4d47701537e10.pdf",
+      "etiqueta": "Edicto subasta procedimiento ejecución hipotecaria nº 13/16 Juzgado de Primera Instancia nº 16 de Sevilla.",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "1-14484bbc8baf5d27ca51185cf9e504fc",
+        ""
+      ],
+      "reutilizado": true,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-266147&idDoc=1-14484bbc8baf5d27ca51185cf9e504fc",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-266147&idDoc=1-14484bbc8baf5d27ca51185cf9e504fc",
+      "consultado_utc": "2026-11-25T19:09:30+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "3c295c5f048b1896bafa62c0998f0bbb0dca190c132b9a5545d4d47701537e10",
+      "bytes": 407876
+    },
+    {
+      "archivo": "documentos/9f3a1c3151616fd7a8386b0d266cb8e1b35404a649e33ef1b76de74f4fd0f266.pdf",
+      "etiqueta": "CERTIFICACIÓN DE CARGAS",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-ac8c8609b0bd7bda1407e5cb1c0ecd80",
+        ""
+      ],
+      "reutilizado": true,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-266147&idDoc=2-ac8c8609b0bd7bda1407e5cb1c0ecd80",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-266147&idDoc=2-ac8c8609b0bd7bda1407e5cb1c0ecd80",
+      "consultado_utc": "2026-11-25T19:09:31+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "9f3a1c3151616fd7a8386b0d266cb8e1b35404a649e33ef1b76de74f4fd0f266",
+      "bytes": 15779407
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-37366",
+      "publicado": "2026-11-14",
+      "actualizado_fuente": "20261114071539",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-37366.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37366",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37366",
+          "consultado_utc": "2026-11-25T19:09:33+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "7bc510ffa001f60c0384ef2cfd20812b32d6d6775004a59f695f63cfcae2b16e",
+          "bytes": 1141
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-37366.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/14/pdfs/BOE-B-2026-37366.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/14/pdfs/BOE-B-2026-37366.pdf",
+          "consultado_utc": "2026-11-25T19:09:33+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "357fe74fca59a95bc3fcde9571d4d43c7da70df65461135ab6aaa8d252a41073",
+          "bytes": 198008
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": []
+}

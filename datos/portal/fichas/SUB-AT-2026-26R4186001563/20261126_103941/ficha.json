@@ -1,0 +1,281 @@
+{
+  "sub": "SUB-AT-2026-26R4186001563",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-AT-2026-26R4186001563",
+  "consultado_utc": "2026-11-26T09:39:46+00:00",
+  "captura_codigos": "41/20261126_103709",
+  "peticiones": 5,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Local comercial)",
+      "direccion": "CL JUAN DÍAZ DE SOLÍS        13      BJ C",
+      "localidad": "SEVILLA",
+      "provincia": "Sevilla",
+      "codigo_postal": "41010",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-AT-2026-26R4186001563/20261125_210317/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001563&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186001563/20261125_210317/portal/general.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-AT-2026-26R4186001563",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001563",
+      "consultado_utc": "2026-11-26T09:39:41+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "3994c6194881d73c0a6183c502c048817ff5a425690e7ee693c396c7fbcd6f7e",
+      "bytes": 10078,
+      "huella": "61b4be9420938bdc0532e377103e6e3d6cdf6f3d1e24b50f225aaa72593877bb",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-AT-2026-26R4186001563"
+          ],
+          [
+            "Tipo de subasta",
+            "AGENCIA TRIBUTARIA"
+          ],
+          [
+            "Fecha de inicio",
+            "24-11-2026 18:00:00 CET  (ISO: 2026-11-24T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "14-12-2026 18:00:00 CET (ISO: 2026-12-14T18:00:00+01:00)"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-38451"
+          ],
+          [
+            "Valor subasta",
+            "75.806,74 €"
+          ],
+          [
+            "Tasación",
+            "75.806,74 €"
+          ],
+          [
+            "Puja mínima",
+            "7.580,67 €"
+          ],
+          [
+            "Tramos entre pujas",
+            "2.000,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "3.790,33 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186001563/20261125_210317/portal/autoridad.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001563&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001563&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:39:43+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "475dc2bb5edf0fce989265d1ad549ef9f8e5322b06574129340a37cc524a080d",
+      "bytes": 9014,
+      "huella": "6b5b450ea1c2fea6ef569c46088b4a27f5b11267c3ac3ee14287878ba788143d",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "R41860"
+          ],
+          [
+            "Descripción",
+            "U.R. SUBASTAS ANDALUCÍA 41 (AEAT)"
+          ],
+          [
+            "Dirección",
+            "PZ MINISTRO INDALECIO PRIETO 1 ; 41071 SEVILLA"
+          ],
+          [
+            "Teléfono",
+            "913335333"
+          ],
+          [
+            "Fax",
+            "-"
+          ],
+          [
+            "Correo electrónico",
+            "subastas.andalucia@correo.aeat.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186001563/20261125_210317/portal/bienes.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001563&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001563&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:39:44+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "5abc76b1c4d8fb7bd8fc0e81deee59c9981d7fec782d9b70e602fce808b8c10b",
+      "bytes": 12295,
+      "huella": "0ca5b525cbbe450f96f7ce06aa06fbc6bdb6dbf31441903d67355c0ba8eb1bd6",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Local comercial)",
+        "Información complementaria del bien"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "100% PLENO DOMINIO. LOCAL LETRA C EN PLANTA BAJA DE LA CASA EN ESTA CIUDAD   EN LA CALLE JUAN DÍAZ DE SOLÍS, NÚMERO TRECE, CON ENTRADA DIRECTAMENTE A     TRAVÉS DE SU FACHADA. MIDE LA SUPERFICIE DE CUARENTA Y TRES METROS, CUARENTA Y TRES DECÍMETROS CUADRADOS, CARECIENDO DE DISTRIBUCIÓN INTERIOR. REFERENCIA CATASTRAL: 3511018TG3431S3001IJ. TITULARIDAD: PLENO DOMINIO DE LA TOTALIDAD  DE ESTA FINCA, POR TÍTULO DE ADJUDICACION POR EXTINCIÓN DE CONDOMINIO"
+          ],
+          [
+            "IDUFIR",
+            "41028000249684"
+          ],
+          [
+            "Referencia catastral",
+            "3511018TG3431S3001IJ"
+          ],
+          [
+            "Dirección",
+            "CL JUAN DÍAZ DE SOLÍS        13      BJ C"
+          ],
+          [
+            "Código Postal",
+            "41010"
+          ],
+          [
+            "Localidad",
+            "SEVILLA"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No"
+          ],
+          [
+            "Cargas",
+            "0,00 €"
+          ],
+          [
+            "Inscripción registral",
+            "BIEN INSCRITO EN REGISTRO NÚM. 2 DE SEVILLA TOMO: 1326 , FOLIO: 44 , LIBRO: 794. FINCA: 20074  , INSCRIPCIÓN: 6"
+          ],
+          [
+            "Título jurídico",
+            "PLENO DOMINIO"
+          ],
+          [
+            "Información adicional",
+            "- Se subasta el 100% del pleno dominio de la finca.\n          - Es objeto de subasta la anotacion preventiva de embargo letra A, con fecha de inscripcion 02-07-2025.\n          - Realizada la visita al inmueble en fecha 25-05-2026, la finca se encuentra ocupada sin que conste titulo juridico que justifique la ocupacion\n          - Existen discrepancias entre la informacion registral y catastral."
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186001563/20261125_210317/portal/pujas.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001563&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001563&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:39:45+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "5ca5a25ede8413c756a2d5254366f66f7c25952f92c4863f7545a851a0c687ff",
+      "bytes": 8510,
+      "huella": "5a1b284efea09aec6fdd414c9c9e28dcb31b46fc74e38c2cf9953f512fd86ee1",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-38451",
+      "publicado": "2026-11-21",
+      "actualizado_fuente": "20261121071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-38451.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38451",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38451",
+          "consultado_utc": "2026-11-25T19:12:37+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "4dd26fa8371531a834362ae1f8fca042473542b10b9ff9805117bef43844f17e",
+          "bytes": 1597
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-38451.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38451.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38451.pdf",
+          "consultado_utc": "2026-11-25T19:12:38+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "5e02aa88178902c610dda119ed4f879dc5655ee4d06f064433a184bbfb3acee0",
+          "bytes": 199102
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001563",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    },
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001563&ver=3&idBus=&idLote=&numPagBus=",
+      "etiqueta": "Bienes",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

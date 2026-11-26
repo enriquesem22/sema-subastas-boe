@@ -1,0 +1,307 @@
+{
+  "sub": "SUB-JA-2026-263908",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-263908",
+  "consultado_utc": "2026-11-26T09:37:24+00:00",
+  "captura_codigos": "41/20261126_103709",
+  "peticiones": 5,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "NºCIENTO OCHENTA Y SEIS. Planta quinta, letra D, con acceso por el bloque número 6 del Edificio UE nueve Uno, del Sector Nueve del Plan Parcial número tres del Polígono aeropuerto de Sevilla, denominado Residencial los los Azahares, hoy calle Flor",
+      "localidad": "sevilla",
+      "provincia": "Sevilla",
+      "codigo_postal": "41020",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-263908/20261125_210047/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263908&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-263908/20261125_210047/portal/general.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-263908",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263908",
+      "consultado_utc": "2026-11-26T09:37:19+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "ca8800cebefe6dcaafdf545657176d23a87a347b0f3e63117bcc06d64d119ee6",
+      "bytes": 10696,
+      "huella": "9ad23d1141d1d8fd0b434d8981bc2d98ba673d43cc90ff5ba1e2a4dd318d4d3e",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-263908"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "5708 0000 06 0160 24"
+          ],
+          [
+            "Fecha de inicio",
+            "06-11-2026 18:00:00 CET  (ISO: 2026-11-06T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "26-11-2026 18:00:00 CET (ISO: 2026-11-26T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "83.079,41 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-35824"
+          ],
+          [
+            "Valor subasta",
+            "90.353,00 €"
+          ],
+          [
+            "Tasación",
+            "0,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "1.807,06 €"
+          ],
+          [
+            "Importe del depósito",
+            "4.517,65 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-263908/20261125_210047/portal/autoridad.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263908&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263908&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:37:21+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "bc69789b5af03bd313fca14d0bdf19cdb209739d9031663e66286894ca926249",
+      "bytes": 8973,
+      "huella": "bcfd4b0a7efa9851560ac2c3370d234419e3adf92e8cc591e025a810ec3fef78",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4109142031"
+          ],
+          [
+            "Descripción",
+            "Sección Civil TI Sevilla. Plz.n 31"
+          ],
+          [
+            "Dirección",
+            "CL VERMONDO RESTA s/n    ; 41018 SEVILLA"
+          ],
+          [
+            "Teléfono",
+            "686231257"
+          ],
+          [
+            "Fax",
+            "-"
+          ],
+          [
+            "Correo electrónico",
+            "scej.subastas.sevilla.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-263908/20261125_210047/portal/bienes.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263908&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263908&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:37:22+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "e48d953c2f6c90d30c7c1504db8e9fd2432d5030d8ab17eae849830be52313ff",
+      "bytes": 13213,
+      "huella": "9e9f8e1c6ee519a5fe5e58c5d11e0d30677535a7b2134d2769c71206ba9cfc8c",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "URBANA:  NUMERO CIENTO OCHENTA Y SEIS. Piso en planta quinta, destinado a \n          vivienda, tipo G, letra D, con acceso por el bloque número seis del Edificio construido \n          sobre la parcela UE nueve Uno, del Sector Nueve del Plan Parcial número tres del Polígono \n          aeropuerto de Sevilla, denominado Residencial los Azahares, hoy calle Flor de Papel, \n          número 11. Consta de hall de entrada, estar comedor, cocina, dos dormitorios y dos \n          cuartos de baño con una superficie útil de sesenta y nueve metros y noventa y seis \n          decímetros cuadrados. Linda, derecha entrando, con vivienda letra C de la misma planta \n          y bloque, izquierda con calle peatonal; fondo con vivienda letra D, de la misma planta del \n          bloque siete; y por su frente con descanso de escalera, huevo de ascensor y patio de luces. \n          A esta vivienda le corresponde como anejo inseparable lo siguiente: la plaza de GARAJE \n          número CIENTO TREINTA Y TRES, con una superficie útil de veinte metros y un decímetro \n          cuadrado. Coeficiente: treinta y ocho centésimas por ciento"
+          ],
+          [
+            "IDUFIR",
+            "41038000109109"
+          ],
+          [
+            "Referencia catastral",
+            "1628001TG4412N0125FA"
+          ],
+          [
+            "Dirección",
+            "NºCIENTO OCHENTA Y SEIS. Planta quinta, letra D, con acceso por el bloque número 6 del Edificio UE nueve Uno, del Sector Nueve del Plan Parcial número tres del Polígono aeropuerto de Sevilla, denominado Residencial los los Azahares, hoy calle Flor"
+          ],
+          [
+            "Código Postal",
+            "41020"
+          ],
+          [
+            "Localidad",
+            "sevilla"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "Sí"
+          ],
+          [
+            "Situación posesoria",
+            "Ocupantes con derecho de permanencia"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "El inmueble objeto de subasta carece de cargas anteriores a la que se ejecuta."
+          ],
+          [
+            "Inscripción registral",
+            "inscrita en el Registro de la Propiedad nº 14 de Sevilla, Tomo\n          3445, Libro 169, Folio 117, inscripción 1ª"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-263908/20261125_210047/portal/pujas.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263908&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-263908&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-26T09:37:23+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "7b6a8d4fc6a0fd5a39f7454523f6e18f8c0bf228c77657150aaf057d437956b6",
+      "bytes": 8475,
+      "huella": "d4f9f8ddc0fb14bec20245b648b6af31d9846ca07deed4af26fc4e2c82eb9dc3",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/5ac1d46ce664564cefc2ef6f9911754aff850e6c5fec0833d6c5e1a19852c2e7.pdf",
+      "etiqueta": "edicto subasta",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "1-803c1530a08e8e42ba8702b9a00fa4a1",
+        ""
+      ],
+      "reutilizado": true,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-263908&idDoc=1-803c1530a08e8e42ba8702b9a00fa4a1",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-263908&idDoc=1-803c1530a08e8e42ba8702b9a00fa4a1",
+      "consultado_utc": "2026-11-25T19:08:52+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "5ac1d46ce664564cefc2ef6f9911754aff850e6c5fec0833d6c5e1a19852c2e7",
+      "bytes": 383589
+    },
+    {
+      "archivo": "documentos/605a03bff030e734b97a43dbb7897a9fbe8d0f0f0f01d2b0688b20848abbf58e.pdf",
+      "etiqueta": "Certificación de cargas",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-5d5e75e84f15a266f0462109f1fe4a39",
+        ""
+      ],
+      "reutilizado": true,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-263908&idDoc=2-5d5e75e84f15a266f0462109f1fe4a39",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-263908&idDoc=2-5d5e75e84f15a266f0462109f1fe4a39",
+      "consultado_utc": "2026-11-25T19:08:54+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "605a03bff030e734b97a43dbb7897a9fbe8d0f0f0f01d2b0688b20848abbf58e",
+      "bytes": 385274
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-35824",
+      "publicado": "2026-11-03",
+      "actualizado_fuente": "20261103071601",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-35824.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-35824",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-35824",
+          "consultado_utc": "2026-11-25T19:08:55+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "1ae92b5a9b59a728a03d05477b171095f5fe161b6d96589ec644bc385f06dfd2",
+          "bytes": 1137
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-35824.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-B-2026-35824.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/03/pdfs/BOE-B-2026-35824.pdf",
+          "consultado_utc": "2026-11-25T19:08:55+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "60781d96bafc4ce7c0bb10b5474063e09ddb941399b5400715e7951445fe5366",
+          "bytes": 198200
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": []
+}
