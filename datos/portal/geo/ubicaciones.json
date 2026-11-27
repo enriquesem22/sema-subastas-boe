@@ -378,6 +378,23 @@
   "texto": "AV BLAS INFANTE 83 ISLA CRISTINA (HUELVA)",
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=9388001PB4198N"
  },
+ "SUB-JA-2026-267835||1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
+  "consulta": "CALLE SILOS 16, Alcalá de Guadaíra",
+  "consultado": "2026-11-27T09:47:17+00:00",
+  "direccion_oficial": "CALLE SILOS 16 41500",
+  "estado": 0,
+  "fuente": "CartoCiudad (IGN) · geocodificador de direcciones",
+  "lat": 37.34055507639902,
+  "lon": -5.848647611878479,
+  "precision": "direccion",
+  "referencia": "7766423TG4376N",
+  "sha256": "0b3d65eba5840c0bb40667e3fe7b5bd06303db9c0bb99f9fa2577c1aac970315",
+  "texto": "SILOS 16 41500",
+  "tipo": "portal",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+SILOS+16%2C+Alcal%C3%A1+de+Guada%C3%ADra&limit=1"
+ },
  "SUB-JA-2026-268087|1|1": {
   "comprobacion": "coincide",
   "comprobacion_detalle": "Misma calle y número.",

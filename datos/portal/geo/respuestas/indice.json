@@ -605,6 +605,22 @@
   "sha256": "6c6e51c772b80654fc167ba4d68b07f22a70397859717e73d6de4ecc92e809f6",
   "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+NUEVA+60%2C+Trigueros&limit=1"
  },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+SILOS+16%2C+41500+Alcal%C3%A1+de+Guada%C3%ADra&limit=1": {
+  "archivo": "15350cbf9f89d2d7892cb8a8.json",
+  "bytes": 12,
+  "http": 200,
+  "momento": "2026-11-27T09:47:16+00:00",
+  "sha256": "b0430fc6b208d8452fd1f6d4af3560e060e720c8d87c8fd259da8534a0e2b04b",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+SILOS+16%2C+41500+Alcal%C3%A1+de+Guada%C3%ADra&limit=1"
+ },
+ "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+SILOS+16%2C+Alcal%C3%A1+de+Guada%C3%ADra&limit=1": {
+  "archivo": "afd989550edc5ff32e40a423.json",
+  "bytes": 528,
+  "http": 200,
+  "momento": "2026-11-27T09:47:17+00:00",
+  "sha256": "0b3d65eba5840c0bb40667e3fe7b5bd06303db9c0bb99f9fa2577c1aac970315",
+  "url": "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CALLE+SILOS+16%2C+Alcal%C3%A1+de+Guada%C3%ADra&limit=1"
+ },
  "https://www.cartociudad.es/geocoder/api/geocoder/findJsonp?q=CIENTO+OCHENTA+Y+SEIS%2C+Sevilla%2C+Sevilla&limit=1": {
   "archivo": "8557b502d1cd5970be1123a4.json",
   "bytes": 12,

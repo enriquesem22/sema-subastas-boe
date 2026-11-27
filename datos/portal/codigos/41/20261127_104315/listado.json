@@ -1,0 +1,143 @@
+{
+  "fecha_captura": "2026-11-27T10:43:15+01:00",
+  "provincia_bien": "Sevilla",
+  "cod_provincia": "41",
+  "estado": "Celebrándose",
+  "tipo_bien": "Todos",
+  "fuente": "BOE · Portal de Subastas (búsqueda avanzada)",
+  "url_fuente": "https://subastas.boe.es/subastas_ava.php",
+  "url_consulta": "https://subastas.boe.es/subastas_ava.php?campo%5B2%5D=SUBASTA.ESTADO.CODIGO&dato%5B2%5D=EJ&campo%5B8%5D=BIEN.COD_PROVINCIA&page_hits=500&sort_field%5B0%5D=SUBASTA.ID_SUBASTA_ORDENAR&sort_order%5B0%5D=asc&accion=Buscar&dato%5B8%5D=41",
+  "total_resultados": 40,
+  "paginas": [
+    {
+      "url": "https://subastas.boe.es/subastas_ava.php?campo%5B2%5D=SUBASTA.ESTADO.CODIGO&dato%5B2%5D=EJ&campo%5B8%5D=BIEN.COD_PROVINCIA&page_hits=500&sort_field%5B0%5D=SUBASTA.ID_SUBASTA_ORDENAR&sort_order%5B0%5D=asc&accion=Buscar&dato%5B8%5D=41",
+      "momento": "2026-11-27T10:43:15+01:00",
+      "fecha_servidor": "Fri, 27 Nov 2026 09:43:15 GMT",
+      "sha256": "74337d69870ee31863151c367921a7a74906a4c9fb4b5609eea2a17f0ed5d8e4",
+      "bytes": 91726,
+      "archivo": "pagina-1.html.gz"
+    }
+  ],
+  "subastas": [
+    {
+      "sub": "SUB-JA-2026-257246"
+    },
+    {
+      "sub": "SUB-JA-2026-260384"
+    },
+    {
+      "sub": "SUB-JA-2026-265153"
+    },
+    {
+      "sub": "SUB-JA-2026-265999"
+    },
+    {
+      "sub": "SUB-JA-2026-266091"
+    },
+    {
+      "sub": "SUB-JA-2026-266147"
+    },
+    {
+      "sub": "SUB-JA-2026-266659"
+    },
+    {
+      "sub": "SUB-JA-2026-267385"
+    },
+    {
+      "sub": "SUB-JA-2026-267391"
+    },
+    {
+      "sub": "SUB-JA-2026-267595"
+    },
+    {
+      "sub": "SUB-JA-2026-267835"
+    },
+    {
+      "sub": "SUB-JA-2026-268087"
+    },
+    {
+      "sub": "SUB-JA-2026-268155"
+    },
+    {
+      "sub": "SUB-JA-2026-268190"
+    },
+    {
+      "sub": "SUB-JA-2026-268212"
+    },
+    {
+      "sub": "SUB-JA-2026-268284"
+    },
+    {
+      "sub": "SUB-JA-2026-268332"
+    },
+    {
+      "sub": "SUB-JA-2026-268563"
+    },
+    {
+      "sub": "SUB-JA-2026-268564"
+    },
+    {
+      "sub": "SUB-JA-2026-268670"
+    },
+    {
+      "sub": "SUB-AT-2026-26R0886001288"
+    },
+    {
+      "sub": "SUB-AT-2026-26R4186001460"
+    },
+    {
+      "sub": "SUB-AT-2026-26R4186001561"
+    },
+    {
+      "sub": "SUB-AT-2026-26R4186001563"
+    },
+    {
+      "sub": "SUB-AT-2026-26R4186001568"
+    },
+    {
+      "sub": "SUB-AT-2026-26R4186002040"
+    },
+    {
+      "sub": "SUB-AT-2026-26R4186002041"
+    },
+    {
+      "sub": "SUB-AT-2026-26R4186002054"
+    },
+    {
+      "sub": "SUB-AT-2026-26R4186002055"
+    },
+    {
+      "sub": "SUB-AT-2026-26R4186002060"
+    },
+    {
+      "sub": "SUB-AT-2026-26R4186002074"
+    },
+    {
+      "sub": "SUB-AT-2026-26R4186002075"
+    },
+    {
+      "sub": "SUB-AT-2026-26R4186002076"
+    },
+    {
+      "sub": "SUB-AT-2026-26R4186002077"
+    },
+    {
+      "sub": "SUB-AT-2026-26R4186002079"
+    },
+    {
+      "sub": "SUB-AT-2026-26R4186002082"
+    },
+    {
+      "sub": "SUB-AT-2026-26R4186002085"
+    },
+    {
+      "sub": "SUB-AT-2026-26R4186002086"
+    },
+    {
+      "sub": "SUB-AT-2026-26R4186002088"
+    },
+    {
+      "sub": "SUB-RC-2026-4107100105"
+    }
+  ]
+}

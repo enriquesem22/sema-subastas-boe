@@ -1,0 +1,26 @@
+[
+  {
+    "tipo": "acceso_restringido",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268564",
+    "etiqueta": "Información general",
+    "motivo": "La página indica que parte de la información requiere identificación."
+  },
+  {
+    "tipo": "descarga_portal",
+    "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268564&idDoc=2-6b084c0f5f26680e2d4d710acba74b32",
+    "etiqueta": "fincas de la 1 a la 21",
+    "motivo": "Adjunto de 51 MB: no se guarda en el repositorio."
+  },
+  {
+    "tipo": "descarga_portal",
+    "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268564&idDoc=3-52e80a9ae50a97831052b40f4cf32bce",
+    "etiqueta": "fincas de la 22 a la 34",
+    "motivo": "Adjunto de 31 MB: no se guarda en el repositorio."
+  },
+  {
+    "tipo": "descarga_portal",
+    "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268564&idDoc=4-25bda879654d5c3aa73c53bba4e4200b",
+    "etiqueta": "fincas de la 35 a la 64",
+    "motivo": "Adjunto de 65 MB: no se guarda en el repositorio."
+  }
+]

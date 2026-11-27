@@ -1,0 +1,570 @@
+{
+  "sub": "SUB-JA-2026-268155",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268155",
+  "consultado_utc": "2026-11-27T09:44:40+00:00",
+  "captura_codigos": "41/20261127_104315",
+  "peticiones": 9,
+  "lotes_identificados": [
+    "1",
+    "2"
+  ],
+  "ubicaciones_bienes": [
+    {
+      "lote": "1",
+      "bien": 1,
+      "tipo": "Inmueble (Garaje)",
+      "direccion": "CALLE HUERTA GAVIRA 25",
+      "localidad": "MARCHENA",
+      "provincia": "Sevilla",
+      "codigo_postal": "41620",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-268155/20261125_210159/portal/bienes_lote_1.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268155&ver=3&idLote=1&idBus=&numPagBus="
+      }
+    },
+    {
+      "lote": "2",
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "CALLE HUERTA GAVIRA 25",
+      "localidad": "MARCHENA",
+      "provincia": "Sevilla",
+      "codigo_postal": "41620",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-268155/20261125_210159/portal/bienes_lote_2.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268155&ver=3&idLote=2&idBus=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-268155/20261125_210159/portal/general.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268155",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268155",
+      "consultado_utc": "2026-11-27T09:44:31+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "8b3fa456cb206cafc4f170b4ff3b406c999c778b12b6e1b509e0e3cbbd806fd8",
+      "bytes": 10879,
+      "huella": "fa864f58d778120da16ed70970db7a89217d1cfffe9c84c1ad2bf0d2c27b6edb",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-268155"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "3979 0000 06 0213 23"
+          ],
+          [
+            "Fecha de inicio",
+            "10-11-2026 18:00:00 CET  (ISO: 2026-11-10T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "30-11-2026 18:00:00 CET (ISO: 2026-11-30T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "98.628,99 €"
+          ],
+          [
+            "Lotes",
+            "2"
+          ],
+          [
+            "Forma adjudicación",
+            "Separada para cada lote"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-36385"
+          ],
+          [
+            "Valor subasta",
+            "Ver valor de subasta en cada lote (los lotes se subastan de forma independiente)"
+          ],
+          [
+            "Tasación",
+            "Ver valor de tasación en cada lote (los lotes se subastan de forma independiente)"
+          ],
+          [
+            "Puja mínima",
+            "Ver puja mínima de cada lote (adjudicación independiente)"
+          ],
+          [
+            "Tramos entre pujas",
+            "Ver tramos de cada lote (adjudicación independiente)"
+          ],
+          [
+            "Importe del depósito",
+            "Ver importe de consignación de cada lote (adjudicación independiente)"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268155/20261125_210159/portal/autoridad.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268155&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268155&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-27T09:44:33+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "136c5b386056264d7128f9e3f4e2a305741a64bda251f45415a158e3b285cc8e",
+      "bytes": 9005,
+      "huella": "8e229af225b74995f0ea2addc99e60f5ebd4d94cc45d84e7701a2074baffb316",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4106041001"
+          ],
+          [
+            "Descripción",
+            "Sección Civil e Instrucción TI Marchena. Plz.n 1"
+          ],
+          [
+            "Dirección",
+            "CL DOCTOR SALVADOR GALLARDO 2 2   ; 41620 MARCHENA"
+          ],
+          [
+            "Teléfono",
+            "955130127"
+          ],
+          [
+            "Fax",
+            "954844411"
+          ],
+          [
+            "Correo electrónico",
+            "jmixto.1.marchena.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268155/20261125_210159/portal/bienes.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Lotes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268155&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268155&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-27T09:44:34+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "b96b26f0dd11d941df50de5ec13b709394df4a281779f3361446e175ad34e3d3",
+      "bytes": 13864,
+      "huella": "8c5999dedfc5593d76bf0f6b8f3a3387ddee55b285f77843b6ea2f866bd6ad58",
+      "encabezados": [
+        "Lote 1",
+        "Datos relacionados con la subasta del lote 1",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Garaje)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "16.200,00 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "810,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "324,00 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "URBANA.-  NUMERO  CUATRO.-  Garaje  Cuatro,  en  planta  de  so-Lana  del  edificio  sefialado  con  el  número  veinticinco  de  la  calle  Huerta  Gavira,  Marchena.  Tiene  una superficie construida de nueve metros y noventa decimetros cuadrados,  \n          y construida, con inclusion de zonas comunes, de treinta y un metros y sesenta  decimetros. Linda: Derecha, entrando, con Garaje Cinco; izquierda, con Garaje Tres; y fondo,  con  la  rampa  de  acceso.  CUOTA.-  Le  corresponde  una  cuota  de  participacion  en  la  comunidad y elementos comunes, del 0,80%"
+          ],
+          [
+            "Dirección",
+            "CALLE HUERTA GAVIRA 25"
+          ],
+          [
+            "Código Postal",
+            "41620"
+          ],
+          [
+            "Localidad",
+            "MARCHENA"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Información adicional",
+            "Insscrita  en  el  Registro  de  la  Propiedad  nº  1  de MARCHENA  de  la  finca  nº  36152  de  Marchena  ,  Inscripción  Se constituyó  inicialmente  a  favor  de  CAJA  DE  AHORROS  \n          Y  MONTE  DE  PIEDAD  DE  CORDOBA  -CAJASUR-  en  virtud  de  escritura  autorizada  el  dia  nueve  de  marzo  de  dos  mil  siete  por  la  Notario  de  Marchena  Dofia  Maria  Enriqueta  Zafra Izquierdo; y fue cedida a la actual entidad acreedora por escritura autorizada el dia  dieciseis de Septiembre del año dos mil veinte por el Notario de Madrid Don Ignacio  Pazres Rodriguez, que causaron, con fechas diecisiete de febrero de dos mil siete y  veinticinco  de  enero  de  dos  mil  veintiuno,  a  los  folios  33  y  34  del  expresado  libro  705  de  \n          Marchena. \n           \n          TITULARIDAD: VICENTE SANCHEZ MARTIN por compraventa . a favor de DON VICENTE SANCHEZ MARTIN, divorciado, por título de compraventa a la Entidad \"`Promociones  Huerta  Gavira,  Sociedad  Limitada\",  en  virtud  de  escritura  autorizada  el  día \n          diecisiete  de  diciembre  de  dos  mil  ocho  por  la  Notario  de  Marchena  Doña  María  Enriqueta Zafra Izquierdo, según así resulta de la inscripción 3ª."
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268155/20261125_210159/portal/pujas.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268155&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268155&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-27T09:44:35+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "b82e6ec3a2e97cbdda9db2a4120bf29f810095a5a24fbd72dc6a050acd6fdd77",
+      "bytes": 9218,
+      "huella": "b949eec65f78ffc53885310ead18a1943c33d46e2bafaa676d618cfa2f6da167",
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268155/20261125_210159/portal/bienes_lote_1.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Lote 1",
+      "pestana": "3",
+      "lote": "1",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268155&ver=3&idLote=1&idBus=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268155&ver=3&idLote=1&idBus=&numPagBus=",
+      "consultado_utc": "2026-11-27T09:44:36+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "b0cd74bcf03f7b2c7777fcd3d461b7596366314390593c2ad4f801b368b1010c",
+      "bytes": 13868,
+      "huella": "9a057e543e367c47213c0b6ce7d0397912bdbcd7abae788b28776d7fcd43ce9c",
+      "encabezados": [
+        "Lote 1",
+        "Datos relacionados con la subasta del lote 1",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Garaje)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "16.200,00 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "810,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "324,00 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "URBANA.-  NUMERO  CUATRO.-  Garaje  Cuatro,  en  planta  de  so-Lana  del  edificio  sefialado  con  el  número  veinticinco  de  la  calle  Huerta  Gavira,  Marchena.  Tiene  una superficie construida de nueve metros y noventa decimetros cuadrados,  \n          y construida, con inclusion de zonas comunes, de treinta y un metros y sesenta  decimetros. Linda: Derecha, entrando, con Garaje Cinco; izquierda, con Garaje Tres; y fondo,  con  la  rampa  de  acceso.  CUOTA.-  Le  corresponde  una  cuota  de  participacion  en  la  comunidad y elementos comunes, del 0,80%"
+          ],
+          [
+            "Dirección",
+            "CALLE HUERTA GAVIRA 25"
+          ],
+          [
+            "Código Postal",
+            "41620"
+          ],
+          [
+            "Localidad",
+            "MARCHENA"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Información adicional",
+            "Insscrita  en  el  Registro  de  la  Propiedad  nº  1  de MARCHENA  de  la  finca  nº  36152  de  Marchena  ,  Inscripción  Se constituyó  inicialmente  a  favor  de  CAJA  DE  AHORROS  \n          Y  MONTE  DE  PIEDAD  DE  CORDOBA  -CAJASUR-  en  virtud  de  escritura  autorizada  el  dia  nueve  de  marzo  de  dos  mil  siete  por  la  Notario  de  Marchena  Dofia  Maria  Enriqueta  Zafra Izquierdo; y fue cedida a la actual entidad acreedora por escritura autorizada el dia  dieciseis de Septiembre del año dos mil veinte por el Notario de Madrid Don Ignacio  Pazres Rodriguez, que causaron, con fechas diecisiete de febrero de dos mil siete y  veinticinco  de  enero  de  dos  mil  veintiuno,  a  los  folios  33  y  34  del  expresado  libro  705  de  \n          Marchena. \n           \n          TITULARIDAD: VICENTE SANCHEZ MARTIN por compraventa . a favor de DON VICENTE SANCHEZ MARTIN, divorciado, por título de compraventa a la Entidad \"`Promociones  Huerta  Gavira,  Sociedad  Limitada\",  en  virtud  de  escritura  autorizada  el  día \n          diecisiete  de  diciembre  de  dos  mil  ocho  por  la  Notario  de  Marchena  Doña  María  Enriqueta Zafra Izquierdo, según así resulta de la inscripción 3ª."
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268155/20261125_210159/portal/bienes_lote_2.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Lote 2",
+      "pestana": "3",
+      "lote": "2",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268155&ver=3&idLote=2&idBus=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268155&ver=3&idLote=2&idBus=&numPagBus=",
+      "consultado_utc": "2026-11-27T09:44:37+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "c336b74c3397b878363683ff21526dbfbc8380e2fac2c573f6f50add05794a31",
+      "bytes": 14787,
+      "huella": "8fcd34a4a0416832fd80c5126d58c54f777c1cc5fc37c25257ddba2a8b9662ff",
+      "encabezados": [
+        "Lote 2",
+        "Datos relacionados con la subasta del lote 2",
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Cantidad reclamada",
+            "No consta"
+          ],
+          [
+            "Valor Subasta",
+            "172.489,29 €"
+          ],
+          [
+            "Valor de tasación",
+            "0,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "8.624,46 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "3.449,78 €"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "URBANA.- NUMERO VEINTIDOS.- Vivienda Primero D, en planta  \n          primera del edificio señalado con el número veinticinco de la calle Huerta  \n          Gavira, Marchena. Tiene su entrada por puerta sita a la izquierda, llegando por su  \n          rellano. Se compone de recibidor, pasillo, salón comedor, cocina, lavadero, dos  \n          dormitorios  y  dos  baños.  Tiene  una  superficie  útil  de  sesenta  y  nueve  metros  y  noventa  \n          decímetros cuadrados, construida de ochenta y dos metros y veinte decímetros  \n          cuadrados, y construida, con inclusión de su parte proporcional en zonas comunes, de  \n          noventa y siete metros y diez decímetros cuadrados. Linda: frente, con galería, rellano,  \n          Vivienda Primero C y rampa de acceso al sótano; derecha, entrando, con dicha rampa  \n          y casa número veintisiete de calle Huerta de Gavira, de Don Miguel Moreno Romero;  \n          izquierda,  con  rellano,  pasaje  y  vivienda  Primero  B;  y  fondo,  con  casas  números  cinco  y  \n          siete de calle José María Rojas Lobo, de Don Antonio Muñoz Luque y José Lebrón  \n          Urbina, respectivamente. CUOTA: Le corresponde una cuota de participación en la  \n          comunidad y elementos comunes, del 9,35%\"."
+          ],
+          [
+            "Dirección",
+            "CALLE HUERTA GAVIRA 25"
+          ],
+          [
+            "Código Postal",
+            "41620"
+          ],
+          [
+            "Localidad",
+            "MARCHENA"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Información adicional",
+            "Inscrita en el Registro de la Propiedad nº 1 de MARCHENA de la finca \n          nº 36170 de Marchena, Inscripción Se constituyó inicialmente a favor de CAJA DE AHORROS \n          Y MONTE DE PIEDAD DE CORDOBA -CAJASUR- en virtud de escritura  \n          autorizada el dia nueve de marzo de dos mil siete por la Notario de Marchena Dofia Maria  Enriqueta  Zafra  Izquierdo;  y  fue  cedida  a  la  actual  entidad  acreedora  por  escritura  \n          autorizada el dia dieciseis de Septiembre del año dos mil veinte por el Notario de  \n          Madrid Don Ignacio Paz Ares Rodriguez, con el número 2.018 de protocolo, que  \n          causaron, con fechas diecisiete de febrero de dos mil siete, diecinueve de febrero de  \n          dos  mil  nueve  y  veinticinco  de  enero  de  dos  mil  veintiuno,  las  inscripciones  2ª,  3ª  y  4ª,  \n          las  dos  primeras  al  folio  87  del  expresado  libro  705  de  Marchena,  y  la  última  al  folio  97  \n          del libro 813, también de Marchena.  \n           \n          TITULARIDAD:  VICENTE  SANCHEZ  MARTIN  divorciado,  por  título  de  compraventa  a  la  \n          Entidad \"`Promociones Huerta Gavira, Sociedad Limitada\", en virtud de escritura  \n          autorizada el día diecisiete de diciembre de dos mil ocho por la Notario de Marchena  \n          Doña María Enriqueta Zafra Izquierdo, con el número 1.673 de protocolo, según así  \n          resulta de la inscripción 3ª ."
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268155/20261125_210159/portal/pujas_lote_1.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": "1",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268155&ver=5&idBus=&idLote=1&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268155&ver=5&idBus=&idLote=1&numPagBus=",
+      "consultado_utc": "2026-11-27T09:44:38+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "2a056e45c8601db7e80bffca3cf0737e904377933250977e28d342a258b2a8ee",
+      "bytes": 9218,
+      "huella": "b949eec65f78ffc53885310ead18a1943c33d46e2bafaa676d618cfa2f6da167",
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268155/20261125_210159/portal/pujas_lote_2.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": "2",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268155&ver=5&idBus=&idLote=2&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268155&ver=5&idBus=&idLote=2&numPagBus=",
+      "consultado_utc": "2026-11-27T09:44:39+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "575370f954b6d56e5498189273b68451d48b6585bfde706a2ea2e3f96ef8fd27",
+      "bytes": 9218,
+      "huella": "9eebcb9e500b415e4f0ad2ef924fe30cbe88a0bd496e52f8fbc65553df2eb6ce",
+      "encabezados": [
+        "Pujas",
+        "Pujas máximas actuales"
+      ],
+      "tablas": [
+        [
+          [
+            "Lote",
+            "Importe de la puja"
+          ],
+          [
+            "1",
+            "Sin puja"
+          ],
+          [
+            "2",
+            "Sin puja"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-36385",
+      "publicado": "2026-11-07",
+      "actualizado_fuente": "20261107071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-36385.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36385",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36385",
+          "consultado_utc": "2026-11-25T19:10:39+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "424d36a8ee3d50ac9ab853078a6c5eacf4a76440c7d649c49c71f79cb945deb8",
+          "bytes": 1174
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-36385.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/07/pdfs/BOE-B-2026-36385.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/07/pdfs/BOE-B-2026-36385.pdf",
+          "consultado_utc": "2026-11-25T19:10:40+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "3430fb12f1ba37c564e693657623093090361d0ab3b19d9faa0037345934e539",
+          "bytes": 198371
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268155",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

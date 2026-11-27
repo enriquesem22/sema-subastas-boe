@@ -1,0 +1,343 @@
+{
+  "sub": "SUB-JA-2026-257246",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-257246",
+  "consultado_utc": "2026-11-27T09:43:21+00:00",
+  "captura_codigos": "41/20261127_104315",
+  "peticiones": 6,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Nave industrial)",
+      "direccion": "PARCELA 10, POLIGONO INDUSTRIAL CRUZ CHIQUITA",
+      "localidad": "ALCALÁ DEL RIO",
+      "provincia": "Sevilla",
+      "codigo_postal": "41200",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-257246/20261125_210037/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-257246&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-257246/20261125_210037/portal/general.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-257246",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-257246",
+      "consultado_utc": "2026-11-27T09:43:15+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "8c17fadad6899ef0c929e521384cfce9e5a037184767850c1853d2020c8d33b0",
+      "bytes": 10879,
+      "huella": "e128ed0b115bd1993293822a450d6ca3e6d5afff9ec2011032def605aa6a54de",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-257246"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "4036 0000 06 1508 23"
+          ],
+          [
+            "Fecha de inicio",
+            "10-11-2026 18:00:00 CET  (ISO: 2026-11-10T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "30-11-2026 18:00:00 CET (ISO: 2026-11-30T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "40.780,96 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-36489"
+          ],
+          [
+            "Valor subasta",
+            "222.958,00 €"
+          ],
+          [
+            "Tasación",
+            "0,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "4.459,16 €"
+          ],
+          [
+            "Importe del depósito",
+            "11.147,90 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-257246/20261125_210037/portal/autoridad.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-257246&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-257246&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-27T09:43:17+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "7b6745645a810b1098d2083b95c5e29ad5d26bf2e0f0f67e2f19ccd28a12a733",
+      "bytes": 9160,
+      "huella": "826c803b489e1c865745a37c0aaaf0bdce60736461876575b75a936b2db8c24f",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4109142014"
+          ],
+          [
+            "Descripción",
+            "Sección Civil TI Sevilla. Plz.n 14"
+          ],
+          [
+            "Dirección",
+            "CL VERMONDO RESTA S/N S/N   ; 41018 SEVILLA"
+          ],
+          [
+            "Teléfono",
+            "955043082"
+          ],
+          [
+            "Fax",
+            "955043135"
+          ],
+          [
+            "Correo electrónico",
+            "JInstancia.14.Sevilla.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-257246/20261125_210037/portal/bienes.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-257246&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-257246&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-27T09:43:18+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "103425105fee69ebd6990480dafc0c3523c678c46487c027a181a3c73d911476",
+      "bytes": 13155,
+      "huella": "2e651efd1bc62781beaac186a402e56224efa032cc3f45b4be0338b65771ae3b",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Nave industrial)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "NAVE INDUSTRIAL ADOSADA, construida sobre la parcela número diez, sitaen Alcalá del Río, perteneciente al Plan Parcial, Sector 1, Subzona IndustrialS.U.N. O.P. 2 del Plan General Municipal de Ordenación Urbana de Alcalá del Río,hoy conocido como POLIGONO INDUSTRIAL CRUZ CHIQUITA. Consta de una sola planta,que ocupa la totalidad de la parcela en la que se ha edificado, con una superficie construida de doscientos metros cuadrados. La nave está construida sobre cimentación mediante pozo independiente de hormigón armado, unidos por zuncho de atado; la estructura es de perfiles metálicos electrosoldados y unidos mediante tornillos de alta resistencia. La cubierta es de acero galvanizado y prelacado en fachadas. Los cerramientos verticales son de panales de hormigón armado y prefabricado. Tienen solera de hormigón de alta resistencia y terminada en cuarzo con tratamiento antipolvo. La parcela es de forma rectangular, y su superficie es de doscientos metros cuadrados. Su linderos son: al Norte, la parcela 11, al Sur, la parcela 9, al Este, la parcela 20 del polígono, y al Oeste, la calle I del polígono."
+          ],
+          [
+            "IDUFIR",
+            "41024000046322"
+          ],
+          [
+            "Referencia catastral",
+            "NOCONSTA"
+          ],
+          [
+            "Dirección",
+            "PARCELA 10, POLIGONO INDUSTRIAL CRUZ CHIQUITA"
+          ],
+          [
+            "Código Postal",
+            "41200"
+          ],
+          [
+            "Localidad",
+            "ALCALÁ DEL RIO"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "la finca que se subasta carece de cargas anteriores a la hipoteca que se ejecuta"
+          ],
+          [
+            "Inscripción registral",
+            "Finca  registral  nº  6842  inscrita  en  el  Registro  de  la  Propiedad  nº  6  de  Sevilla  al tomo 759, libro 127, folio 101"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-257246/20261125_210037/portal/pestana_4.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Relacionados",
+      "pestana": "4",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-257246&ver=4&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-257246&ver=4&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-27T09:43:19+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "90e2872c88bebc5542be4242a5f66df072113a92f638654ca668e7acf2d25903",
+      "bytes": 9143,
+      "huella": "2989e1e27db61fa67177259ad97b50d1715e6dc6b0d3ad5c429bea8549c7d071",
+      "encabezados": [
+        "Acreedor"
+      ],
+      "tablas": [
+        [
+          [
+            "Nombre",
+            "EASTCASTLE FUNDING 5, DESIGNATED ACTIVITY COMPANY"
+          ],
+          [
+            "NIF",
+            "N0074657H"
+          ],
+          [
+            "Dirección",
+            "No consta"
+          ],
+          [
+            "Localidad",
+            "No consta No consta"
+          ],
+          [
+            "Provincia",
+            "-"
+          ],
+          [
+            "País",
+            "Irlanda"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-257246/20261125_210037/portal/pujas.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-257246&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-257246&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-27T09:43:20+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "316c9e51237673fb9372d8e93d7c58b1addad6b1a93f636e9f7a3717dd8c55b1",
+      "bytes": 8712,
+      "huella": "f71aa754186558c2f3a53a4da81a5ad972a387f05f213bfa205d5072016fb1ee",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/e5bd127e84552b5bb9a71d05b43ff0c2c6454321f03a0fa895d6825040482709.pdf",
+      "etiqueta": "certificación de dominio y cargas",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-c8bd8e6545b888b5d1adb1c38fe1c71f",
+        ""
+      ],
+      "reutilizado": true,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-257246&idDoc=2-c8bd8e6545b888b5d1adb1c38fe1c71f",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-257246&idDoc=2-c8bd8e6545b888b5d1adb1c38fe1c71f",
+      "consultado_utc": "2026-11-25T19:08:36+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "e5bd127e84552b5bb9a71d05b43ff0c2c6454321f03a0fa895d6825040482709",
+      "bytes": 248340
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-36489",
+      "publicado": "2026-11-07",
+      "actualizado_fuente": "20261107071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-36489.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36489",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36489",
+          "consultado_utc": "2026-11-25T19:08:38+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "bfeca050910517cc4ded9e906630ca55f36eccf2f4d27b5f12d023ca7cbaf5dd",
+          "bytes": 1137
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-36489.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/07/pdfs/BOE-B-2026-36489.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/07/pdfs/BOE-B-2026-36489.pdf",
+          "consultado_utc": "2026-11-25T19:08:38+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "b494aaf45cb930f64484e647b7dac6a92ed7028913687e56bd104493e98b8d3b",
+          "bytes": 198124
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-257246",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

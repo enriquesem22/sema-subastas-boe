@@ -1,0 +1,308 @@
+{
+  "sub": "SUB-JA-2026-267835",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-267835",
+  "consultado_utc": "2026-11-27T09:44:22+00:00",
+  "captura_codigos": "41/20261127_104315",
+  "peticiones": 8,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "CALLE SILOS Nº 16",
+      "localidad": "Alcalá de Guadaíra",
+      "provincia": "Sevilla",
+      "codigo_postal": "41500",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-267835/20261127_104414/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267835&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-267835/20261127_104414/portal/general.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-267835",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267835",
+      "consultado_utc": "2026-11-27T09:44:14+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "370f01a6e64cf3c31d8e37d9b35816856c068b8a74c85a8bb673098f8c56580d",
+      "bytes": 10479,
+      "huella": "433ef20bad91ac69db513acc37a1e176838dca64454abb36f1cdb70181462909",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-267835"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "3951 0000 05 0823 20"
+          ],
+          [
+            "Fecha de inicio",
+            "26-11-2026 18:00:00 CET  (ISO: 2026-11-26T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "16-12-2026 18:00:00 CET (ISO: 2026-12-16T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "89.803,69 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-38466"
+          ],
+          [
+            "Valor subasta",
+            "173.400,00 €"
+          ],
+          [
+            "Tasación",
+            "0,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "3.468,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "8.670,00 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267835/20261127_104414/portal/autoridad.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267835&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267835&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-27T09:44:16+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "af1f0caf9c1448eaa6195dcab63d26884e2181b2f9638348386419e9ddc90b19",
+      "bytes": 9199,
+      "huella": "d0496ffc0baf1c1a896aeda7b646b695aa947dc8c1080558d6ded59c063a7e18",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4100441002"
+          ],
+          [
+            "Descripción",
+            "Sec. Civil e Inst. TI Alcalá de Guadaíra. Plz.n 2"
+          ],
+          [
+            "Dirección",
+            "PZ DEL DUQUE 12 12   ; 41500 ALCALA DE GUADAIRA"
+          ],
+          [
+            "Teléfono",
+            "662975995"
+          ],
+          [
+            "Fax",
+            "954786275"
+          ],
+          [
+            "Correo electrónico",
+            "Sec.Civil-Instr.PlazaN2.TI.Aguadaira.JUS@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267835/20261127_104414/portal/bienes.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267835&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267835&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-27T09:44:17+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "1a271ab96fba8a703b7340b7100edcee44b2dba86d9845326d92d2b390d15351",
+      "bytes": 10145,
+      "huella": "58b5f7c9fdb2937ad5d5dbda14471ba9bd74b2bb9c4cf5e60431e4b6729053fb",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "URBANA- Nº 16- APARTAMENTO DE SUPERFICIE CONSTRUIDA DE 54,32 METROS CUADDRADOS"
+          ],
+          [
+            "Dirección",
+            "CALLE SILOS Nº 16"
+          ],
+          [
+            "Código Postal",
+            "41500"
+          ],
+          [
+            "Localidad",
+            "Alcalá de Guadaíra"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Inscripción registral",
+            "TOMO 841, LIBRO 512, FOLIO 102, FINCA 29.277 INSCRITA EN EL REGISTRO Nº 2 DE ALCALA DE GUADAIRA"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267835/20261127_104414/portal/pestana_4.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Relacionados",
+      "pestana": "4",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267835&ver=4&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267835&ver=4&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-27T09:44:18+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "20cd2b5380a6b15a1d153ac0118ed4654564f80b07af1b437e8fb6cebf43c8d1",
+      "bytes": 9136,
+      "huella": "f471dc5d60969d403857e45af7f4746526fd75022a756e5d3969ae3fd22800ec",
+      "encabezados": [
+        "Acreedor"
+      ],
+      "tablas": [
+        [
+          [
+            "Nombre",
+            "CRESCENT LAKE SA"
+          ],
+          [
+            "NIF",
+            "N0059944I"
+          ],
+          [
+            "Dirección",
+            "CALLE ALBACETE Nº 3 PLANTA 5"
+          ],
+          [
+            "Localidad",
+            "28027 MADRID"
+          ],
+          [
+            "Provincia",
+            "Madrid"
+          ],
+          [
+            "País",
+            "España"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-267835/20261127_104414/portal/pujas.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267835&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267835&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-27T09:44:19+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "197a21fe77941c73b3a0031320e6288ef6e2521772af74b6618eb6dceed1595d",
+      "bytes": 8651,
+      "huella": "1f57d52294ed14920eec7cff48152adb5e706c46bbeb8026d03d6347b1ba265e",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-38466",
+      "publicado": "2026-11-23",
+      "actualizado_fuente": "20261123071614",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-38466.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38466",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38466",
+          "consultado_utc": "2026-11-27T09:44:20+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "2aa6a4ea965c5b6c669b48c1970e40db8dd37d090f038d6dbc43e8e23e26d04f",
+          "bytes": 1195
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-38466.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/23/pdfs/BOE-B-2026-38466.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/23/pdfs/BOE-B-2026-38466.pdf",
+          "consultado_utc": "2026-11-27T09:44:21+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "8ccdf5f20111c5ca10a30e69a59dbfebb5943a928771f0141ee293a22fc03584",
+          "bytes": 198686
+        }
+      ],
+      "aviso": null,
+      "reutilizado": false
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267835",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "sub": "SUB-JA-2026-268564",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268564",
+  "consultado_utc": "2026-11-27T09:45:28+00:00",
+  "captura_codigos": "41/20261127_104315",
+  "peticiones": 9,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "EDIFICIO C/ RODRIGO DE TRIANA Nº 66-68",
+      "localidad": "PILAS",
+      "provincia": "Sevilla",
+      "codigo_postal": "41840",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-268564/20261125_210245/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268564&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-268564/20261125_210245/portal/general.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268564",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268564",
+      "consultado_utc": "2026-11-27T09:45:12+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "ef76481cd428f9f021a80b1960c5db67b3f0df86880ed53567df3fda9664ca8f",
+      "bytes": 11309,
+      "huella": "5ac064c7d702044d49355a61c6b76529a0ec2adf259d5d3080d404bf809393b8",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-268564"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "3952 0000 06 0046 09"
+          ],
+          [
+            "Fecha de inicio",
+            "24-11-2026 18:00:00 CET  (ISO: 2026-11-24T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "14-12-2026 18:00:00 CET (ISO: 2026-12-14T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "1.668.581,23 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-38277"
+          ],
+          [
+            "Valor subasta",
+            "5.981.656,56 €"
+          ],
+          [
+            "Tasación",
+            "0,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "119.633,13 €"
+          ],
+          [
+            "Importe del depósito",
+            "299.082,82 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268564/20261125_210245/portal/autoridad.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268564&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268564&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-27T09:45:14+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "6f41b215a0b8461057902eb56bf0c8bca8f971e69a99a42592c4c994d4fb3864",
+      "bytes": 9189,
+      "huella": "9962dafe6369d6dc877490f7c0c60f023c762bb58c99e8fb50608fba40a92c2b",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4108741002"
+          ],
+          [
+            "Descripción",
+            "Sec. Civil e Inst. TI Sanlúcar la Mayor. Plz.n 2"
+          ],
+          [
+            "Dirección",
+            "CL DUQUE DE LERMA 8 8   ; 41800 SANLUCAR MAYOR"
+          ],
+          [
+            "Teléfono",
+            "600145436"
+          ],
+          [
+            "Fax",
+            "955622273"
+          ],
+          [
+            "Correo electrónico",
+            "sec.civil-instr.plazan2.ti.smayor.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268564/20261125_210245/portal/bienes.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268564&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268564&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-27T09:45:15+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "5fd5c77b818b81a1a9aa0a6ae1c96f5f68c1db26436c95087abe7ef13947b873",
+      "bytes": 10274,
+      "huella": "69c08c8c82d450ecc2ccc5482cec7422b73959131f3655587daafbc63e310bdc",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "64 fincas urbanas en un solo lote"
+          ],
+          [
+            "Dirección",
+            "EDIFICIO C/ RODRIGO DE TRIANA Nº 66-68"
+          ],
+          [
+            "Código Postal",
+            "41840"
+          ],
+          [
+            "Localidad",
+            "PILAS"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Inscripción registral",
+            "En el Registro de la Propiedad nº 2 de Sanlúcar la Mayor"
+          ],
+          [
+            "Información adicional",
+            "Se incorpora en el BOE las certificaciones registrales de cada finca"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268564/20261125_210245/portal/pestana_4.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Relacionados",
+      "pestana": "4",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268564&ver=4&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268564&ver=4&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-27T09:45:16+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "ab28447228b9ddd9c3c1cf63d9c9aea106b5ea630bedf8bc43009fd717f39e5a",
+      "bytes": 9128,
+      "huella": "165f0e7977f2151c98f786364b3e749c494a9c2256774d07d9f772fa69f2b14c",
+      "encabezados": [
+        "Acreedor"
+      ],
+      "tablas": [
+        [
+          [
+            "Nombre",
+            "TBSR NATURA SL"
+          ],
+          [
+            "NIF",
+            "B90232588"
+          ],
+          [
+            "Dirección",
+            "CALLE NARDO Nº 1"
+          ],
+          [
+            "Localidad",
+            "41849 AZNALCAZAR"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "País",
+            "España"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268564/20261125_210245/portal/pujas.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268564&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268564&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-27T09:45:17+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "27e9ae68b709d99a2fb74e694e65c80989c70b6f630ade9e763effce9b51d64d",
+      "bytes": 8651,
+      "huella": "836fa3c85e03243d99a9674faace88aa0e8d0ba21dc3dc01fccd8359546971b6",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-38277",
+      "publicado": "2026-11-21",
+      "actualizado_fuente": "20261121071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-38277.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38277",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38277",
+          "consultado_utc": "2026-11-25T19:12:01+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "4f03f40afe9a491bc000553f9e91ee3d4f3a9b658f2a487aebdac2efdd431b02",
+          "bytes": 1185
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-38277.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38277.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38277.pdf",
+          "consultado_utc": "2026-11-25T19:12:01+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "e9dd762cc07bc4d3a600823a590851fa255a290b4e7c8400ead39118debffa8f",
+          "bytes": 198870
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268564",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    },
+    {
+      "tipo": "descarga_portal",
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268564&idDoc=2-6b084c0f5f26680e2d4d710acba74b32",
+      "etiqueta": "fincas de la 1 a la 21",
+      "motivo": "Adjunto de 51 MB: no se guarda en el repositorio."
+    },
+    {
+      "tipo": "descarga_portal",
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268564&idDoc=3-52e80a9ae50a97831052b40f4cf32bce",
+      "etiqueta": "fincas de la 22 a la 34",
+      "motivo": "Adjunto de 31 MB: no se guarda en el repositorio."
+    },
+    {
+      "tipo": "descarga_portal",
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268564&idDoc=4-25bda879654d5c3aa73c53bba4e4200b",
+      "etiqueta": "fincas de la 35 a la 64",
+      "motivo": "Adjunto de 65 MB: no se guarda en el repositorio."
+    }
+  ]
+}

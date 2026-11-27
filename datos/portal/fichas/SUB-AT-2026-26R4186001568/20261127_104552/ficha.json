@@ -1,0 +1,343 @@
+{
+  "sub": "SUB-AT-2026-26R4186001568",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-AT-2026-26R4186001568",
+  "consultado_utc": "2026-11-27T09:45:58+00:00",
+  "captura_codigos": "41/20261127_104315",
+  "peticiones": 5,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Trastero)",
+      "direccion": "CL TORREBLANCA               1      -1 B3",
+      "localidad": "SEVILLA",
+      "provincia": "Sevilla",
+      "codigo_postal": "41008",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-AT-2026-26R4186001568/20261125_210322/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001568&ver=3&idBus=&idLote=&numPagBus="
+      }
+    },
+    {
+      "lote": null,
+      "bien": 2,
+      "tipo": "Inmueble (Trastero)",
+      "direccion": "CL TORREBLANCA               1      -1 B4",
+      "localidad": "SEVILLA",
+      "provincia": "Sevilla",
+      "codigo_postal": "41003",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-AT-2026-26R4186001568/20261125_210322/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001568&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186001568/20261125_210322/portal/general.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-AT-2026-26R4186001568",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001568",
+      "consultado_utc": "2026-11-27T09:45:52+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "1cd2c5774985288e45ac68a615950e05e4bfd6854c9b4ac85b6b91b76ea0a32e",
+      "bytes": 10070,
+      "huella": "5ddc7c13dce8248735941ef34249871c57d4b28a5e689fa601795a0a39650602",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-AT-2026-26R4186001568"
+          ],
+          [
+            "Tipo de subasta",
+            "AGENCIA TRIBUTARIA"
+          ],
+          [
+            "Fecha de inicio",
+            "24-11-2026 18:00:00 CET  (ISO: 2026-11-24T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "14-12-2026 18:00:00 CET (ISO: 2026-12-14T18:00:00+01:00)"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-38452"
+          ],
+          [
+            "Valor subasta",
+            "9.348,52 €"
+          ],
+          [
+            "Tasación",
+            "9.348,52 €"
+          ],
+          [
+            "Puja mínima",
+            "934,85 €"
+          ],
+          [
+            "Tramos entre pujas",
+            "500,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "467,42 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186001568/20261125_210322/portal/autoridad.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001568&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001568&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-27T09:45:54+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "bdbae04891398d4c374879b2668b85fb0c2a364f46126aee704d0931f1491fc8",
+      "bytes": 9014,
+      "huella": "c2bd702dd6be8362432b6f81c6a04320235beb2585c4025ab6d43a3c607ad253",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "R41860"
+          ],
+          [
+            "Descripción",
+            "U.R. SUBASTAS ANDALUCÍA 41 (AEAT)"
+          ],
+          [
+            "Dirección",
+            "PZ MINISTRO INDALECIO PRIETO 1 ; 41071 SEVILLA"
+          ],
+          [
+            "Teléfono",
+            "913335333"
+          ],
+          [
+            "Fax",
+            "-"
+          ],
+          [
+            "Correo electrónico",
+            "subastas.andalucia@correo.aeat.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186001568/20261125_210322/portal/bienes.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001568&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001568&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-27T09:45:56+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "b457db88eabe4b713d98c76f8ddb1ec866cef96c1a17d7a210e35f0f400d6e66",
+      "bytes": 14839,
+      "huella": "0a8634781f9b8bbd4588b45ab2b70abcf96a576b53eb81ee2140eef9adcded58",
+      "encabezados": [
+        "Datos de los bienes subastados",
+        "Bien 1 - Inmueble (Trastero)",
+        "Información complementaria del bien",
+        "Bien 2 - Inmueble (Trastero)",
+        "Información complementaria del bien"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "50% PLENO DOMINIO. TRASTERO NÚMERO B-3, EN PLANTA DE SÓTANO, DEL EDIFICIO    DESARROLLADO EN PLANTA DE SÓTANO Y DOS BLOQUES SOBRE EL NIVEL DEL SUELO, UNO QUE COMPRENDE LAS CASAS I Y II, Y EL OTRO LAS CASAS III, IV Y V, EN PLAZA    DEL PUMAREJO NÚMERO CUATRO DE ESTA CAPITAL. DONDE SE AÑADE QUE TIENE ACCESO  TAMBIÉN POR LAS CALLES TORREBLANCA Y SAN LUIS. TIENE UNA SUPERFICIE ÚTIL DE  TRES METROS SESENTA Y TRES DECÍMETROS CUADRADOS. SU CUOTA DE PARTICIPACIÓN   ES DE 0,072100%."
+          ],
+          [
+            "IDUFIR",
+            "41029000673899"
+          ],
+          [
+            "Dirección",
+            "CL TORREBLANCA               1      -1 B3"
+          ],
+          [
+            "Código Postal",
+            "41008"
+          ],
+          [
+            "Localidad",
+            "SEVILLA"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "0,00 €"
+          ],
+          [
+            "Inscripción registral",
+            "BIEN INSCRITO EN REGISTRO NÚM. 15 DE SEVILLA TOMO: 1089 , FOLIO: 19 , LIBRO: 1088. FINCA: 70251  , INSCRIPCIÓN: 2"
+          ],
+          [
+            "Título jurídico",
+            "PLENO DOMINIO"
+          ],
+          [
+            "Información adicional",
+            "Informacion adicional en documentacion anexa."
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "50% PLENO DOMINIO. TRASTERO NÚMERO B-4, EN PLANTA DE SÓTANO, DEL EDIFICIO    DESARROLLADO EN PLANTA DE SÓTANO Y DOS BLOQUES SOBRE EL NIVEL DEL SUELO, UNO QUE COMPRENDE LAS CASAS I Y II, Y EL OTRO LAS CASAS III, IV Y V, EN PLAZA    DEL PUMAREJO NÚMERO CUATRO DE ESTA CAPITAL. DONDE SE AÑADE QUE TIENE ACCESO  TAMBIÉN POR LAS CALLES TORREBLANCA Y SAN LUIS. TIENE UNA SUPERFICIE ÚTIL DE  6,18 METROS CUADRADOS. SU CUOTA DE PARTICIPACIÓN ES DE 0,122800%."
+          ],
+          [
+            "IDUFIR",
+            "41029000673905"
+          ],
+          [
+            "Dirección",
+            "CL TORREBLANCA               1      -1 B4"
+          ],
+          [
+            "Código Postal",
+            "41003"
+          ],
+          [
+            "Localidad",
+            "SEVILLA"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "0,00 €"
+          ],
+          [
+            "Inscripción registral",
+            "BIEN INSCRITO EN REGISTRO NÚM. 15 DE SEVILLA TOMO: 1089 , FOLIO: 22 , LIBRO: 1088. FINCA: 70252  , INSCRIPCIÓN: 2"
+          ],
+          [
+            "Título jurídico",
+            "PLENO DOMINIO"
+          ],
+          [
+            "Información adicional",
+            "Informacion adicional en documentacion anexa."
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186001568/20261125_210322/portal/pujas.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001568&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001568&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-27T09:45:57+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "0e89abc38ba0a23086fc37ae77a5dff8fd2e114eaf41a961d604098a2521a2f8",
+      "bytes": 8510,
+      "huella": "2c3362893f02b809c2a255447fad6d0ab8060731b021813c0d9dfcc24fac3625",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-38452",
+      "publicado": "2026-11-21",
+      "actualizado_fuente": "20261121071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-38452.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38452",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38452",
+          "consultado_utc": "2026-11-25T19:12:44+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "c81fd2817a7472ab8f09fc4afff25be54b43aa29e0a50f53f8ef8e1340534362",
+          "bytes": 1597
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-38452.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38452.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38452.pdf",
+          "consultado_utc": "2026-11-25T19:12:45+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "016f7830c74e5d2cfac293b11c8c88ba66bc6472365e777339a8a369bef44b21",
+          "bytes": 199101
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001568",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    },
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001568&ver=3&idBus=&idLote=&numPagBus=",
+      "etiqueta": "Bienes",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}
