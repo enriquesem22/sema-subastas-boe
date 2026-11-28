@@ -106,6 +106,14 @@
   "sha256": "1494bd86bb2fb281a20de1cbc7a623cf262a2feff89fcffcf5403c0ce8c15535",
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=2794019TG5129S"
  },
+ "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=2818001TG4421N": {
+  "archivo": "e692bdfd6e43fe3c1da9d13e.json",
+  "bytes": 233,
+  "http": 200,
+  "momento": "2026-11-28T09:01:36+00:00",
+  "sha256": "6ddff017cddf790e50f873edd7142bb4131a11d78a918f213fee1cb10c121339",
+  "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=2818001TG4421N"
+ },
  "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=2849104QB1724N": {
   "archivo": "ae184ec7a233976707569624.json",
   "bytes": 238,

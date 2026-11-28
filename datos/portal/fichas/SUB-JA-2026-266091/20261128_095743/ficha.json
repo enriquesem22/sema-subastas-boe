@@ -1,0 +1,301 @@
+{
+  "sub": "SUB-JA-2026-266091",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-266091",
+  "consultado_utc": "2026-11-28T08:57:48+00:00",
+  "captura_codigos": "41/20261128_095722",
+  "peticiones": 5,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "Calle Costa del sol nº2, bloque 2, planta 1ª, puerta C",
+      "localidad": "ALCALA DEL RIO",
+      "provincia": "Sevilla",
+      "codigo_postal": "41200",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-266091/20261125_210102/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266091&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-266091/20261125_210102/portal/general.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-266091",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266091",
+      "consultado_utc": "2026-11-28T08:57:43+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "0e26d3e739691ee97f6fc555f078619163ad563cdb941fde7f01934767053cc7",
+      "bytes": 10692,
+      "huella": "95edd19a9aac3d67bb1e53cbf9c73248cba290550550dec552f8e3b5b4feab41",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-266091"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "4035 0000 06 0892 21"
+          ],
+          [
+            "Fecha de inicio",
+            "10-11-2026 18:00:00 CET  (ISO: 2026-11-10T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "30-11-2026 18:00:00 CET (ISO: 2026-11-30T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "71.094,64 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-36488"
+          ],
+          [
+            "Valor subasta",
+            "204.000,00 €"
+          ],
+          [
+            "Tasación",
+            "0,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "4.080,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "10.200,00 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-266091/20261125_210102/portal/autoridad.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266091&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266091&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T08:57:45+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "5d9acf600579f1cc270a164d3bc4ece0b8edc533481bce3f879a229d7f26960a",
+      "bytes": 8983,
+      "huella": "47eb15b8b7cd243a969c53cc0849c87dc9e3879aa6e1c24f8acfbaa70e11a1c4",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4109142013"
+          ],
+          [
+            "Descripción",
+            "Sección Civil TI Sevilla. Plz.n 13"
+          ],
+          [
+            "Dirección",
+            "CL VERMONDO RESTA S/N S/N   ; 41018 SEVILLA"
+          ],
+          [
+            "Teléfono",
+            "600157956"
+          ],
+          [
+            "Fax",
+            "955043135"
+          ],
+          [
+            "Correo electrónico",
+            "scej.subastas.sevilla.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-266091/20261125_210102/portal/bienes.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266091&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266091&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T08:57:46+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "6fca3aa7432960a6a6c1c164f510851e61af9c7b6a747a938ddc61162da1f91b",
+      "bytes": 12982,
+      "huella": "2a16eb7dab852bb79aaaef3041d156f5bc5e31e461b393a82c0e6c724849ff95",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "URBANA. - NUMERO TREINTA Y SIETE. - VIVIENDA \"C\", situada en la PLANTA PRIMERA del Portal Número Dos del edificio, ya construido,situado entre las calles Santiago, Costa del Sol, Esquina y Pimienta, en Alcalá del Río, hoy sita en calle Costa del Sol, dos, bloque dos primero C. Se distribuye en vestíbulo, cocina, lavadero, salón-comedor, pasillo, tres dormitorios, baño y terraza. Ocupa una superficie útil de sesenta y seis metros, sesenta y cinco decímetros cuadrados. Linda, mirando desde la calle Pimienta, por el frente, con dicha calle; por la derecha, con vivienda \"D\" de esta misma planta y portal; por la izquierda, con vivienda \"C\" de esta misma planta del portal tres y patio de luces; y por el fondo, con vivienda \"B\" de esta misma planta y portal y vestíbulo de planta, por donde tiene su acceso."
+          ],
+          [
+            "IDUFIR",
+            "41024000463822"
+          ],
+          [
+            "Referencia catastral",
+            "NO CONSTA"
+          ],
+          [
+            "Dirección",
+            "Calle Costa del sol nº2, bloque 2, planta 1ª, puerta C"
+          ],
+          [
+            "Código Postal",
+            "41200"
+          ],
+          [
+            "Localidad",
+            "ALCALA DEL RIO"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "Sí"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "-  HIPOTECA  a  favor  de  la  entidad  CAJA  DE  AHORROS  Y \n          PENSIONES DE  BARCELONA ,s egún resulta de la inscripción número DOS, de fecha 13 de Enero de 2004, al \n          folio OCHENTA Y UNO, del Tomo MIL CIENTO CATORCE, Libro CIENTO CINCUENTA Y SEIS del  término  municipal  de  Alcalá  del  Río;     - condicion resolutorio, inscripción número CINCO, de fecha 24 de Febrero de 2006"
+          ],
+          [
+            "Inscripción registral",
+            "FINCA Nº 8097 inscrita en el Registro de la Propiedad Nº 6 de Sevilla, tomo 1114, libro 156, folio 81"
+          ],
+          [
+            "Información adicional",
+            "COEFICIENTE: En el portal siete enteros y ochenta centésimas  por ciento; en la totalidad del edificio dos enteros y cincuenta y nueve centésimas por ciento."
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-266091/20261125_210102/portal/pujas.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266091&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266091&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T08:57:47+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "f57412f51714b8d9cbd76babeeb4427109e1eee7bc6cca84a71c5e91c046db80",
+      "bytes": 8474,
+      "huella": "2e3a0958dcbe32a477a2695f99fa61ec1d9bef20feb44b6cba6149ff5750129f",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/0a1a6cfecc0df19e7972f0db20ecef2e500d3b7e958947c14f3b44322704dcde.pdf",
+      "etiqueta": "certificación de cargas",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-1da45a467357a8ec06130f3b159b425b",
+        ""
+      ],
+      "reutilizado": true,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-266091&idDoc=2-1da45a467357a8ec06130f3b159b425b",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-266091&idDoc=2-1da45a467357a8ec06130f3b159b425b",
+      "consultado_utc": "2026-11-25T19:09:22+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "0a1a6cfecc0df19e7972f0db20ecef2e500d3b7e958947c14f3b44322704dcde",
+      "bytes": 712098
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-36488",
+      "publicado": "2026-11-07",
+      "actualizado_fuente": "20261107071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-36488.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36488",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-36488",
+          "consultado_utc": "2026-11-25T19:09:23+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "1aa78a64387893a91905ac5d34180701bfedafe90336315073472f397eda200e",
+          "bytes": 1142
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-36488.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/07/pdfs/BOE-B-2026-36488.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/07/pdfs/BOE-B-2026-36488.pdf",
+          "consultado_utc": "2026-11-25T19:09:24+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "3e48b8bf33d49ac3d1ee93626cff5cda586db0861d87fb3f126f009dc7bc1f3b",
+          "bytes": 198047
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266091",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

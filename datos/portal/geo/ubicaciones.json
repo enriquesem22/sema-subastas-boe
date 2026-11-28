@@ -222,6 +222,21 @@
   "texto": "AV PINO MONTANO (DE) 118 SEVILLA (SEVILLA)",
   "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=7046406TG3474N"
  },
+ "SUB-JA-2026-266163||1": {
+  "comprobacion": "coincide",
+  "comprobacion_detalle": "Misma calle y número.",
+  "consultado": "2026-11-28T09:01:36+00:00",
+  "direccion_oficial": "CL TORRETA 8 SEVILLA (SEVILLA)",
+  "fuente": "Dirección General del Catastro · coordenadas de la parcela (Consulta_CPMRC)",
+  "lat": 37.385874141303,
+  "lon": -5.90756201658997,
+  "metodo": "GET",
+  "precision": "parcela",
+  "referencia": "2818001TG4421N",
+  "sha256": "6ddff017cddf790e50f873edd7142bb4131a11d78a918f213fee1cb10c121339",
+  "texto": "CL TORRETA 8 SEVILLA (SEVILLA)",
+  "url": "https://ovc.catastro.meh.es/OVCServWeb/OVCWcfCallejero/COVCCoordenadas.svc/json/Consulta_CPMRC?SRS=EPSG%3A4326&RefCat=2818001TG4421N"
+ },
  "SUB-JA-2026-266659||1": {
   "comprobacion": "coincide",
   "comprobacion_detalle": "Misma calle y número.",

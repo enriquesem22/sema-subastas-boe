@@ -1,0 +1,343 @@
+{
+  "sub": "SUB-AT-2026-26R0886001288",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-AT-2026-26R0886001288",
+  "consultado_utc": "2026-11-28T08:59:50+00:00",
+  "captura_codigos": "41/20261128_095722",
+  "peticiones": 5,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Finca rústica)",
+      "direccion": "PA LA MORENA O MORONA        0",
+      "localidad": "MORON DE LA FRONTERA",
+      "provincia": "Sevilla",
+      "codigo_postal": "41530",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-AT-2026-26R0886001288/20261125_210302/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R0886001288&ver=3&idBus=&idLote=&numPagBus="
+      }
+    },
+    {
+      "lote": null,
+      "bien": 2,
+      "tipo": "Inmueble (Finca rústica)",
+      "direccion": "PA LA MORENA O MORONA        0",
+      "localidad": "MORON DE LA FRONTERA",
+      "provincia": "Sevilla",
+      "codigo_postal": "41530",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-AT-2026-26R0886001288/20261125_210302/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R0886001288&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-AT-2026-26R0886001288/20261125_210302/portal/general.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-AT-2026-26R0886001288",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R0886001288",
+      "consultado_utc": "2026-11-28T08:59:44+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "2fc838e17b79097dd76caaf96d3500457de697610d13afde258c9c00bccb102b",
+      "bytes": 10087,
+      "huella": "4b0354240f76df58094e091f216561fad266f02db2f32869c0bda4daf805bd62",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-AT-2026-26R0886001288"
+          ],
+          [
+            "Tipo de subasta",
+            "AGENCIA TRIBUTARIA"
+          ],
+          [
+            "Fecha de inicio",
+            "17-11-2026 18:00:00 CET  (ISO: 2026-11-17T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "07-12-2026 18:00:00 CET (ISO: 2026-12-07T18:00:00+01:00)"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-37451"
+          ],
+          [
+            "Valor subasta",
+            "1.253.692,25 €"
+          ],
+          [
+            "Tasación",
+            "3.107.999,03 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "5.000,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "62.684,61 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R0886001288/20261125_210302/portal/autoridad.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R0886001288&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R0886001288&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T08:59:46+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "494b49b148ad5188d12c0eebea353a8ec6af9b706b2384080a74dd090e803a2a",
+      "bytes": 9013,
+      "huella": "b718efc2144c990459951bcd75e8375e92a502c8f05e61e331866b49be150f8a",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "R08860"
+          ],
+          [
+            "Descripción",
+            "U.R. SUBASTAS CATALUÑA (AEAT)"
+          ],
+          [
+            "Dirección",
+            "PZ DOCTOR LETAMENDI 13-22 ; 08071 BARCELONA"
+          ],
+          [
+            "Teléfono",
+            "913335333"
+          ],
+          [
+            "Fax",
+            "934518930"
+          ],
+          [
+            "Correo electrónico",
+            "subastas.cataluna@correo.aeat.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R0886001288/20261125_210302/portal/bienes.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R0886001288&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R0886001288&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T08:59:47+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "b546458ce19282f530cd15d4b99fd9108e80b0c92df275ca5c227c1326c2fc32",
+      "bytes": 17599,
+      "huella": "67c1dba442e45c81857417c156cdc3466e6d83602560c90fef7d2d73641805a3",
+      "encabezados": [
+        "Datos de los bienes subastados",
+        "Bien 1 - Inmueble (Finca rústica)",
+        "Información complementaria del bien",
+        "Bien 2 - Inmueble (Finca rústica)",
+        "Información complementaria del bien"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "100% PLENO DOMINIO DE RUSTICA. PARCELA DE TIERRA DE DEHESA, MONTE BAJO Y     ALTO Y PARTE DE CALMA, HOY TAMBIÉN PARTE DE OLIVAR EN SECANO, SITA EN LA     MORENA O MORONA, ROSA DE ORELLANA Y ALCORNOQUILLO, TÉRMINO DE MORÓN DE LA    FRONTERA. TIENE UNA CABIDA DE NOVENTA Y CINCO HECTÁREAS, NOVENTA Y CINCO     ÁREAS Y SESENTA CENTIÁREAS, DE LAS QUE DIEZ HECTÁREAS Y CUARENTA Y CINCO     ÁREAS SON DE OLIVAR. SOBRE ESTA PARCELA SE HA CONSTRUIDO UNA NAVE, QUE       CONSTA DE DOS SUBNAVES, CON UNA SUPERFICIE CONSTRUIDA TOTAL DE 1.720 METROS  Y 48 DECÍMETROS CUADRADOS."
+          ],
+          [
+            "IDUFIR",
+            "41008000243837"
+          ],
+          [
+            "Dirección",
+            "PA LA MORENA O MORONA        0"
+          ],
+          [
+            "Código Postal",
+            "41530"
+          ],
+          [
+            "Localidad",
+            "MORON DE LA FRONTERA"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No"
+          ],
+          [
+            "Cargas",
+            "1.232.706,96 €"
+          ],
+          [
+            "Inscripción registral",
+            "BIEN INSCRITO EN REGISTRO  DE MORON DE LA FRONTERA TOMO: 1625 , FOLIO: 131 , LIBRO: 389. FINCA: 10987  , INSCRIPCIÓN: 9"
+          ],
+          [
+            "Título jurídico",
+            "PLENO DOMINIO"
+          ],
+          [
+            "Información adicional",
+            "Segun catastro sita en : Cr Pruna (A-363), pol 18 parc 23 y pol 18 parc 3 de Moron de la F.\n          CARGAS PREVIAS:\n          CENSO por 4.800 reales. Inscrip 3  y 2  de 25 y 28 de sept 1911.\n          HIPOTECA a favor del BANC DE SABADELL, SA por 897.910€ de principal. Inscrip 10  de 28-11-2007. Reclamado judicialmente en el JUZGADO 1  INST E INSTRUCC N  2 DE MORON DE LA F autos n  834-2019. Saldo pendiente a 23-05-2022 892.121,48€ sin perjuicio de los intereses y costas que correspondan.\n          HIPOTECA a favor de la CAJA DE AHORROS DEL MEDITERRANEO (actualmente BANC DE SABADELL, SA) por 349.085  8217 31€ de principal. Inscrip 12  de 14-07-2008. Reclamado judicialmente en el JUZGADO 1  INSTANCIA N  37 DE BARCELONA autos n  3267-2019. Saldo pendiente a 23-05-2022 340.585,48€ sin perjuicio de los intereses y costas que correspondan.\n          AMBOS PRESTAMOS han sido CEDIDOS a razon de un 50% a INVERSIONES LACRISMAN, SL y a INVERSIONES CAMINO Y JOSE AURELIO, SL. Precio total por la cesion conjunta de 650.000,00€"
+          ]
+        ],
+        [
+          [
+            "Descripción",
+            "100% PLENO DOMINIO DE RUSTICA.- PARCELA DE TIERRA DE DEHESA, MONTE BAJO Y    ALTO Y PARTE DE CALMA, EN SECANO, SITA EN EL PAGO DE LA MORENA O MORONA Y    MORISQUILLO, DEL TÉRMINO DE MORÓN DE LA FRONTERA. TIENE UNA CABIDA DE        SETENTA Y OCHO HECTÁREAS, SETENTA Y UN ÁREAS Y TREINTA Y DOS CENTIÁREAS.     LINDEROS: NORTE, DOÑA MARGARITA ESCALANTE VÁZQUEZ Y, EN PARTE, FINCA         SEGREGADA  SUR, FRANCISCO ESCALANTE VÁZQUEZ Y CON TIERRAS DE LAS GORDILLAS   DE DON FELIPE ACEDO  OESTE, ISABEL ESCALANTE VÁZQUEZ Y DOÑA MARGARITA        ESCALANTE VÁZQUEZ, Y, EN PARTE, CON LA FINCA SEGREGADA."
+          ],
+          [
+            "IDUFIR",
+            "41008000243882"
+          ],
+          [
+            "Dirección",
+            "PA LA MORENA O MORONA        0"
+          ],
+          [
+            "Código Postal",
+            "41530"
+          ],
+          [
+            "Localidad",
+            "MORON DE LA FRONTERA"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No"
+          ],
+          [
+            "Cargas",
+            "0,00 €"
+          ],
+          [
+            "Inscripción registral",
+            "BIEN INSCRITO EN REGISTRO  DE MORON DE LA FRONTERA TOMO: 1625 , FOLIO: 138 , LIBRO: 389. FINCA: 10994  , INSCRIPCIÓN: 5"
+          ],
+          [
+            "Título jurídico",
+            "PLENO DOMINIO"
+          ],
+          [
+            "Información adicional",
+            "Poligono 17 parcela 1 y poligono 18 parcela 26 de Moron de la F\n          CARGAS PREVIAS:\n          CENSO por 4.800 reales. Inscrip 3  y 2  de fechas 25 y 28 de sept 1911.\n          HIPOTECA a favor del BANC DE SABADELL, SA por 402.090€ de principal. Inscrip 6  de 28-11-2007. Reclamado judicialmente en el JUZGADO 1  INST E INSTRUCCION N  2 DE MORON DE LA FRONTERA autos n  834-2019. Saldo pendiente a 23-05-2022 892.121,48€ sin perjuicio de los intereses y costas que correspondan.\n          HIPOTECA a favor de la CAJA DE AHORROS DEL MEDITERRANEO (actualmente BANC DE SABADELL, SA) por  131.814  8217 69€ de principal. Inscrip 8  de 14-07-2008. Reclamado judicialmente en el JUZGADO 1  INST N  37 DE BARCELONA autos n  3267-2019. Saldo pendiente a fecha 23-05-2022 340.585,48€ sin perjuicio de los intereses y costas que correspondan.\n          AMBOS PRESTAMOS han sido CEDIDOS a razon de un 50% para cada uno a INVERSIONES LACRISMAN, SL  y a INVERSIONES CAMINO Y JOSE AURELIO, SL. Precio total por la cesion conjunta de 650.000,00€"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R0886001288/20261125_210302/portal/pujas.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R0886001288&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R0886001288&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T08:59:48+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "2cbfddcb08546436e2a9a07cb957b037ee7e0bdd3896a0b155d28dedec9e1151",
+      "bytes": 8509,
+      "huella": "93379ee2f91c2955d9c6aacd994f47948f67bc15d9af69574a27c4bb31a4e4ec",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-37451",
+      "publicado": "2026-11-14",
+      "actualizado_fuente": "20261114071539",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-37451.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37451",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37451",
+          "consultado_utc": "2026-11-25T19:12:16+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "74b97929852d00fb844187ce31b473aa4b889609c2a8d11218e2f738a4abcec2",
+          "bytes": 1594
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-37451.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/14/pdfs/BOE-B-2026-37451.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/14/pdfs/BOE-B-2026-37451.pdf",
+          "consultado_utc": "2026-11-25T19:12:17+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "d4660e02a91aa9ad258b48c666fef6c2bf230868640fc677644ae97bed75f7be",
+          "bytes": 198719
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R0886001288",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    },
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R0886001288&ver=3&idBus=&idLote=&numPagBus=",
+      "etiqueta": "Bienes",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

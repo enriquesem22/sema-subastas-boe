@@ -1,0 +1,26 @@
+[
+  {
+    "archivo": "general.html.gz",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267385"
+  },
+  {
+    "archivo": "autoridad.html.gz",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267385&ver=2&idBus=&idLote=&numPagBus="
+  },
+  {
+    "archivo": "bienes.html.gz",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267385&ver=3&idBus=&idLote=&numPagBus="
+  },
+  {
+    "archivo": "pujas.html.gz",
+    "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-267385&ver=5&idBus=&idLote=&numPagBus="
+  },
+  {
+    "archivo": "07f7d38a96f6c7885cac90a046f4db7435503a0f13cbf7bb7692bd1195161413.pdf",
+    "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-267385&idDoc=1-06f7fea5ffe066d63467f210d0e41fd4"
+  },
+  {
+    "archivo": "4ed25f0221f73c02349cf11682d458cb600c2ad29e5a7ca4d354bbd426f07328.pdf",
+    "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-267385&idDoc=2-4b82b8ea7907cef152490179cca27dc5"
+  }
+]

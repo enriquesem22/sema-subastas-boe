@@ -1,0 +1,327 @@
+{
+  "sub": "SUB-JA-2026-268563",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268563",
+  "consultado_utc": "2026-11-28T08:59:26+00:00",
+  "captura_codigos": "41/20261128_095722",
+  "peticiones": 6,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "Urbanización Roalcao nº 9",
+      "localidad": "ESPARTINAS",
+      "provincia": "Sevilla",
+      "codigo_postal": "41807",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-268563/20261125_210239/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268563&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-268563/20261125_210239/portal/general.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-268563",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268563",
+      "consultado_utc": "2026-11-28T08:59:20+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "2b7fdbf4e97a528c33a298658c7023a80ae24ad0d3d3f3d8f0b144e5ab1df2b0",
+      "bytes": 12140,
+      "huella": "2fead344c5335ae172413a51cfd33915188b8cb7633d6d05a0634fd171191c2a",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-268563"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "4984 0000 06 0986 17"
+          ],
+          [
+            "Fecha de inicio",
+            "17-11-2026 18:00:00 CET  (ISO: 2026-11-17T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "07-12-2026 18:00:00 CET (ISO: 2026-12-07T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "255.068,49 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-37277"
+          ],
+          [
+            "Valor subasta",
+            "657.542,15 €"
+          ],
+          [
+            "Tasación",
+            "657.542,15 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "13.150,84 €"
+          ],
+          [
+            "Importe del depósito",
+            "32.877,10 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268563/20261125_210239/portal/autoridad.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268563&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268563&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T08:59:22+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "4da4938b67da2e9fdb141865eef144b2136f71fdd0bfb966baf37d1ce9092d21",
+      "bytes": 9188,
+      "huella": "eca56cd0dace1904ca4b3b8fd5f7dbfa7d20615db02200c7b9fbefe878ae5e23",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4108741004"
+          ],
+          [
+            "Descripción",
+            "Sec. Civil e Inst. TI Sanlúcar la Mayor. Plz.n 4"
+          ],
+          [
+            "Dirección",
+            "CL DUQUE DE LERMA 8 8   ; 41800 SANLUCAR MAYOR"
+          ],
+          [
+            "Teléfono",
+            "600145436"
+          ],
+          [
+            "Fax",
+            "955624493"
+          ],
+          [
+            "Correo electrónico",
+            "sec.civil-instr.plazan4.ti.smayor.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268563/20261125_210239/portal/bienes.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268563&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268563&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T08:59:23+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "8783a95102b8a464d0d37bb4fb2dbdf19e92705ecca8bccf17dba6d24d668e5b",
+      "bytes": 12186,
+      "huella": "f2127d3d85931324d69d9538bf0b6244e87d02e4bca5328abcc5bd40b2da627b",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "Vivienda unifamiliar en la Carretera Nacional 431 de Espartinas a Sevilla PK 557,9 en el polígono número 4 parcela 97 del término municipal de Espartinas -Sevilla-. Tiene una superficie construida de ciento once metros y cincuenta decímetros cuadrados. Consta en una sola planta cubierta de tejas planas andaluzas. Se compone de hall de acceso, estar-comedor, cocina, baño, distribuidor, tres dormitorios y cuarto lavadero. Está ubicada al sitio de Rubalcaho Grande, que linda al norte, con la carretera de Sevilla a Huelva; Este, propiedad \"Los Arcos\" de Juan Sánchez; al Sur, resto de la finca de la que se segregó la del Señor Goñi Huici, estando la línea divisoria formada por el muro de la alberca y el seto vivo que forma la línea recta con aquél muro; Oeste, carril de entrada de la carretra a la finca que la separa de la finca \"Saudaces\" de José Herrera Pérez. Tiene esta parcela una superficie aproximada de dos mil seiscientos metros cuadrados."
+          ],
+          [
+            "Dirección",
+            "Urbanización Roalcao nº 9"
+          ],
+          [
+            "Código Postal",
+            "41807"
+          ],
+          [
+            "Localidad",
+            "ESPARTINAS"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Inscripción registral",
+            "finca nº 6033 al tomo 1394, libro 102, folio 162 y tomo 1427, libro 106, folio 110 del Registro de la Propiedad de Sanlúcar la Mayor nº 2, inscripción 5ª modificada por la 8ª."
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268563/20261125_210239/portal/pestana_4.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Relacionados",
+      "pestana": "4",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268563&ver=4&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268563&ver=4&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T08:59:24+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "65e3a40425ac70553b45721a8b6a23954b695469b19d71cd1449edff8f2522c2",
+      "bytes": 9171,
+      "huella": "829a54f18159d97114207f5a669b738634384a348b55360405aa155c325c1ea9",
+      "encabezados": [
+        "Acreedor"
+      ],
+      "tablas": [
+        [
+          [
+            "Nombre",
+            "SOCIEDAD DE AVALES Y GARANTIAS DE ANDALUCIA SGR"
+          ],
+          [
+            "NIF",
+            "V90351982"
+          ],
+          [
+            "Dirección",
+            "PLAZA POETA LUIS ROSALES 1 1º 1"
+          ],
+          [
+            "Localidad",
+            "18009 GRANADA"
+          ],
+          [
+            "Provincia",
+            "Granada"
+          ],
+          [
+            "País",
+            "España"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-268563/20261125_210239/portal/pujas.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268563&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268563&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T08:59:25+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "1d829a4f35ffb1e9d251a991de67798e8bfb7b65b08eafbc239aa43bc5e568fe",
+      "bytes": 8650,
+      "huella": "dac32a126d63334dbb9635acdef0325806d37da64eb90faf169d754335aadc72",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/c519249ebc9edad485879b963898ad9e2305d7106fb8a4af06d8872bd9c4ed76.pdf",
+      "etiqueta": "Vivienda unifamiliar en la Carretera Nacional 431 de Espartinas a Sevilla PK 557,9 en el polígono número 4 parcela 97 del término municipal de Espartinas -Sevilla-. Tiene una superficie construida de ciento once metros y cincuenta decímetros cuadrados. Consta en una sola planta cubierta de tejas planas andaluzas. Se compone de hall de acceso, estar-comedor, cocina, baño, distribuidor, tres dormitorios y cuarto lavadero. Está ubicada al sitio de Rubalcaho Grande, que linda al norte, con la carretera de Sevilla a Huelva; Este, propiedad \"Los Arcos\" de Juan Sánchez; al Sur, resto de la finca de la que se segregó la del Señor Goñi Huici, estando la línea divisoria formada por el muro de la alberca y el seto vivo que forma la línea recta con aquél muro; Oeste, carril de entrada de la carretra a la finca que la separa de la finca \"Saudaces\" de José Herrera Pérez. Tiene esta parcela una superficie aproximada de dos mil seiscientos metros cuadrados.\r\n           \r\n          Datos registrales: finca nº 6033 al tomo 1394, libro 102, folio 162 y tomo 1427, libro 106, folio 110 del Registro de la Propiedad de Sanlúcar la Mayor nº 2, inscripción 5ª modificada por la 8ª.",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-cddac7baee323501934352b5f03ccb53",
+        ""
+      ],
+      "reutilizado": true,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268563&idDoc=2-cddac7baee323501934352b5f03ccb53",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-268563&idDoc=2-cddac7baee323501934352b5f03ccb53",
+      "consultado_utc": "2026-11-25T19:11:39+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "c519249ebc9edad485879b963898ad9e2305d7106fb8a4af06d8872bd9c4ed76",
+      "bytes": 8052498
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-37277",
+      "publicado": "2026-11-14",
+      "actualizado_fuente": "20261114071539",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-37277.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37277",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37277",
+          "consultado_utc": "2026-11-25T19:11:42+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "c21b949a0b7f2712826a4186d8af0c90131063f6bb5bd8759aede9ee8de83041",
+          "bytes": 1185
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-37277.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/14/pdfs/BOE-B-2026-37277.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/14/pdfs/BOE-B-2026-37277.pdf",
+          "consultado_utc": "2026-11-25T19:11:42+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "f3ef8ac96cbb4ab620f51cc1b028a06d44794ff18da45777fa0225f740202126",
+          "bytes": 198846
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-268563",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

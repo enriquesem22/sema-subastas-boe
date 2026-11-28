@@ -1,0 +1,303 @@
+{
+  "sub": "SUB-JA-2026-266163",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-266163",
+  "consultado_utc": "2026-11-28T08:58:02+00:00",
+  "captura_codigos": "41/20261128_095722",
+  "peticiones": 9,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "CALLE TORRETA Nº 8, ESCALERA 1, PLANTA 3ª PUERTA A",
+      "localidad": "SEVILLA",
+      "provincia": "Sevilla",
+      "codigo_postal": "41016",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-266163/20261128_095753/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266163&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-266163/20261128_095753/portal/general.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-266163",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266163",
+      "consultado_utc": "2026-11-28T08:57:53+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "ddcbf8d78a0c6b6a6f6898a2de527ad54581bbe16f70dee6cd5f635adcfd61d0",
+      "bytes": 10827,
+      "huella": "2e8b23bc0e6f7b1e270c1b75a74443ecd6e7a017ba51495a533570cb4f924678",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-266163"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "4038 0000 06 0033 24"
+          ],
+          [
+            "Fecha de inicio",
+            "27-11-2026 18:00:00 CET  (ISO: 2026-11-27T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "17-12-2026 18:00:00 CET (ISO: 2026-12-17T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "91.333,72 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-38721"
+          ],
+          [
+            "Valor subasta",
+            "125.925,00 €"
+          ],
+          [
+            "Tasación",
+            "0,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "2.518,50 €"
+          ],
+          [
+            "Importe del depósito",
+            "6.296,25 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-266163/20261128_095753/portal/autoridad.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266163&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266163&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T08:57:55+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "3e78e79b385ff9b3d14b977b3bdfac289340c3aadf589c3870b548c03e82cbaf",
+      "bytes": 8983,
+      "huella": "493b86b43de9e0a80994f77509cd56a5e825e9c9c638c8912807be3bd3942992",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4109142016"
+          ],
+          [
+            "Descripción",
+            "Sección Civil TI Sevilla. Plz.n 16"
+          ],
+          [
+            "Dirección",
+            "CL VERMONDO RESTA S/N S/N   ; 41018 SEVILLA"
+          ],
+          [
+            "Teléfono",
+            "686231257"
+          ],
+          [
+            "Fax",
+            "955043096"
+          ],
+          [
+            "Correo electrónico",
+            "scej.subastas.sevilla.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-266163/20261128_095753/portal/bienes.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266163&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266163&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T08:57:56+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "39d4eec6ec3f1ef8136b314f780cde3ff6b2fe4ee09b1745d0698de02aa29779",
+      "bytes": 12937,
+      "huella": "07a1ea22893c922d90a0fc17c442722ff7997b03107337f0788cd690334fad0f",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "FINCA: \"URBANA:   cinco: piso-vivienda letra A en planta tercera alta de la casa señalada con el número ocho de la calle Torreta, en esta ciudad. Está situado al frente y derecha del edificio convenientemente distribuído para vivienda. Consta de una superficie construída de sesenta metros cuadrados. Y sus linderos son los siguientes: frente o fachada, con terraza a calle Torreta; por la derecha de su frente, con casa de calle Torreta número seis y patio del fondo-derecha; por la izquierda, con hueco de escalera, descansillo de planta, por donde tiene su acceso, piso letra B de igual planta, patio del centro y nuevamente dicho piso letra B de igual planta ;y por el fondo, casa de calle Torrelaguna treinta y cinco-A y citado patio del fondo derecha. Cuota: doce enteros cuarenta y dos centésimas por ciento. Referencia Catastral: 2818001TG4421N0005TR\n          FINCA REGISTRAL 9552\n          Código Registral Único/IDUFIR: 41032000410531\n          Referencia catastral:  2818001TG4421N0005TR.\n          Inscripción registral: FINCA NÚMERO 9552 Inscrita en el Registro de la Propiedad número  9 de Sevilla en el Tomo 190 Libro 2716, Folio 9\n          REGISTRO DE LA PROPIEDAD Nº 9 DE SEVILLA"
+          ],
+          [
+            "IDUFIR",
+            "41032000410531"
+          ],
+          [
+            "Referencia catastral",
+            "2818001TG4421N0005TR"
+          ],
+          [
+            "Dirección",
+            "CALLE TORRETA Nº 8, ESCALERA 1, PLANTA 3ª PUERTA A"
+          ],
+          [
+            "Código Postal",
+            "41016"
+          ],
+          [
+            "Localidad",
+            "SEVILLA"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No"
+          ],
+          [
+            "Inscripción registral",
+            "FINCA NÚMERO 9552 Inscrita en el Registro de la Propiedad número  9 de Sevilla en el Tomo 190 Libro 2716, Folio 9"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-266163/20261128_095753/portal/pujas.html.gz",
+      "igual_que_anterior": false,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266163&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-266163&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T08:57:57+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "ea00dd7ee55e6192f88b9873734daf7010d1f58793f43991917cdd8192bb80f3",
+      "bytes": 8474,
+      "huella": "e307449a68847f07afddc47e86a2d3ad824f1bcce1500d0c5ba054bda8905ced",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/e6476f84a11f18367b70db60c44df3875b67d2ac9e81948779fa31b60fd9581e.pdf",
+      "etiqueta": "Edicto subasta procedimiento ejecución hipotecaria nº 33/2024 Sección Civil del Tribunal de Instancia de Sevilla. Plaza nº 16",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "1-28389d444bdd806c0ab451b300a955f4",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-266163&idDoc=1-28389d444bdd806c0ab451b300a955f4",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-266163&idDoc=1-28389d444bdd806c0ab451b300a955f4",
+      "consultado_utc": "2026-11-28T08:57:58+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "e6476f84a11f18367b70db60c44df3875b67d2ac9e81948779fa31b60fd9581e",
+      "bytes": 443575
+    },
+    {
+      "archivo": "documentos/e7e3ff84b98c5c8fccae00f2a419423c6dd6ec07c9b57f951c456871f168b4a5.pdf",
+      "etiqueta": "CERTIFICACIÓN DE CARGAS",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-b6b3c22883b9bc91f629b3ac636933c6",
+        ""
+      ],
+      "reutilizado": false,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-266163&idDoc=2-b6b3c22883b9bc91f629b3ac636933c6",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-266163&idDoc=2-b6b3c22883b9bc91f629b3ac636933c6",
+      "consultado_utc": "2026-11-28T08:57:59+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "e7e3ff84b98c5c8fccae00f2a419423c6dd6ec07c9b57f951c456871f168b4a5",
+      "bytes": 6667758
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-38721",
+      "publicado": "2026-11-24",
+      "actualizado_fuente": "20261124071558",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-38721.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38721",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38721",
+          "consultado_utc": "2026-11-28T08:58:00+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "31dd0875b70aa335d551f873e06eece02726a9c1675cf99dbdd8e406da2f9e26",
+          "bytes": 1142
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-38721.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/24/pdfs/BOE-B-2026-38721.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/24/pdfs/BOE-B-2026-38721.pdf",
+          "consultado_utc": "2026-11-28T08:58:01+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "de4f6882c9187d429d8ce048b0d73400b0aa4438dec0a2bcb866acd1d57b6fca",
+          "bytes": 198136
+        }
+      ],
+      "aviso": null,
+      "reutilizado": false
+    }
+  ],
+  "pendientes": []
+}

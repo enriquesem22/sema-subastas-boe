@@ -1,0 +1,281 @@
+{
+  "sub": "SUB-AT-2026-26R4186001460",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-AT-2026-26R4186001460",
+  "consultado_utc": "2026-11-28T08:59:54+00:00",
+  "captura_codigos": "41/20261128_095722",
+  "peticiones": 5,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Local comercial)",
+      "direccion": "CL SANTA ANA                 1      BJ 2A",
+      "localidad": "ALCALA DE GUADAIRA",
+      "provincia": "Sevilla",
+      "codigo_postal": "41500",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-AT-2026-26R4186001460/20261125_210307/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001460&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186001460/20261125_210307/portal/general.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-AT-2026-26R4186001460",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001460",
+      "consultado_utc": "2026-11-28T08:59:50+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "b3bab2495c9a91cf6f1f560df39bba764162da4e3b1d6b384ab8b66498113df6",
+      "bytes": 10077,
+      "huella": "ba2f99754990d08eaa9533d2527b31686b58e5701e6a8d391e9668f555a74f95",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-AT-2026-26R4186001460"
+          ],
+          [
+            "Tipo de subasta",
+            "AGENCIA TRIBUTARIA"
+          ],
+          [
+            "Fecha de inicio",
+            "24-11-2026 18:00:00 CET  (ISO: 2026-11-24T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "14-12-2026 18:00:00 CET (ISO: 2026-12-14T18:00:00+01:00)"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-38442"
+          ],
+          [
+            "Valor subasta",
+            "56.669,29 €"
+          ],
+          [
+            "Tasación",
+            "56.669,29 €"
+          ],
+          [
+            "Puja mínima",
+            "5.666,93 €"
+          ],
+          [
+            "Tramos entre pujas",
+            "1.000,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "2.833,46 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186001460/20261125_210307/portal/autoridad.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001460&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001460&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T08:59:51+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "09f79de2202fff2ea03b242c2f5e71f970d8690b4fef947c690e340a80601046",
+      "bytes": 9013,
+      "huella": "39569b6642052ef5ce6f920d2a0535eb86843d19de78648421551b41393e8324",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "R41860"
+          ],
+          [
+            "Descripción",
+            "U.R. SUBASTAS ANDALUCÍA 41 (AEAT)"
+          ],
+          [
+            "Dirección",
+            "PZ MINISTRO INDALECIO PRIETO 1 ; 41071 SEVILLA"
+          ],
+          [
+            "Teléfono",
+            "913335333"
+          ],
+          [
+            "Fax",
+            "-"
+          ],
+          [
+            "Correo electrónico",
+            "subastas.andalucia@correo.aeat.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186001460/20261125_210307/portal/bienes.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001460&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001460&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T08:59:52+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "257e21d849e36c234e3f5ce93320ce1a9bd57fb9fe5c70bb274dac5d82c5ac9c",
+      "bytes": 12777,
+      "huella": "e50196bb3fdc6b6ce7526c54a3a95eb67674b778f4a9ac783c645eb0c6699d80",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Local comercial)",
+        "Información complementaria del bien"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "100% DEL PLENO DOMINIO.URBANA. NÚMERO DOS. LOCAL COMERCIAL NÚM.2, LETRA A,   EN PLANTA BAJA DEL EDIFICIO O CONJ.RESIDENCIAL SITO EN C/SANTA ANA, NÚM.1 DE GOBIERNO , DE ESTA CIUDAD. OCUPA UNASUPERFICIE TOTAL CONSTRUIDA DE 50,64 M2. LINDA, VISTO DESDE AVDA DE ANTONIO MAIRENA, IZQUIERDA DE SU ENTRADA CON EL   LOCAL COMERCIAL Nº 1B  POR LA DERECHA, CON PORTAL DE ACCESO COMÚN A LOS      PISOS-VIVIENDAS Y LOCAL 2, LETRA B  FONDO, CON PATIO COMÚN DEL PROPIO        EDIFICIO."
+          ],
+          [
+            "IDUFIR",
+            "41001000775629"
+          ],
+          [
+            "Referencia catastral",
+            "8463834TG4386S0048GO"
+          ],
+          [
+            "Dirección",
+            "CL SANTA ANA                 1      BJ 2A"
+          ],
+          [
+            "Código Postal",
+            "41500"
+          ],
+          [
+            "Localidad",
+            "ALCALA DE GUADAIRA"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No"
+          ],
+          [
+            "Cargas",
+            "0,00 €"
+          ],
+          [
+            "Inscripción registral",
+            "BIEN INSCRITO EN REGISTRO NÚM. 2 DE ALCALA DE GUADAIRA TOMO: 1834 , FOLIO: 163 , LIBRO: 1185. FINCA: 54004  , INSCRIPCIÓN: 1"
+          ],
+          [
+            "Título jurídico",
+            "PLENO DOMINIO"
+          ],
+          [
+            "Información adicional",
+            "- Se subasta el 100% del pleno dominio de la finca.\n          - Es objeto de subasta la anotacion preventiva de embargo letra D, prorrogado en letra F en fecha 05-06-2024.\n          - Realizada la visita al inmueble en fecha 11-03-2026, no ha podido comprobarse la ocupacion. En respuesta al requerimiento de ocupacion el titular registral manifiesta, en su escrito de 19-03-2026, que la finca no se encuentra arrendada. \n          - Señalar que la finca registral viene siendo utilizada como vivienda, y no como local comercial.\n          - Carga preferente:\n          a) Hipoteca a favor del Banco Español de Credito, que conforme informacion proporcionada por la entidad financiera en fecha 08-07-2025, se encuentra cancelada. Pendiente de cancelacion registral.\n          - Existen discrepancias entre la informacion registral y catastral."
+          ]
+        ]
+      ],
+      "aviso_acceso": true
+    },
+    {
+      "archivo": "fichas/SUB-AT-2026-26R4186001460/20261125_210307/portal/pujas.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001460&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001460&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T08:59:53+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "2fefcdc9121a9d52ef79594efe13ddd8623e5e548c2dfa18b049f8712e97007d",
+      "bytes": 8509,
+      "huella": "15227bb38185483d7ee7355df5f80826531932bc27349b514ffc59f998aa5ad8",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-38442",
+      "publicado": "2026-11-21",
+      "actualizado_fuente": "20261121071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-38442.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38442",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38442",
+          "consultado_utc": "2026-11-25T19:12:23+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "ec568967417db5bddee4b49c954713a02b71c1e7fc632246e5a093c7f4af9dab",
+          "bytes": 1597
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-38442.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38442.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38442.pdf",
+          "consultado_utc": "2026-11-25T19:12:24+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "3800c36cd58bfcdcac5df7bed35d70d74ed1ca5ba60e284e15e89dc6ff8c18ec",
+          "bytes": 199100
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": [
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001460",
+      "etiqueta": "Información general",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    },
+    {
+      "tipo": "acceso_restringido",
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-AT-2026-26R4186001460&ver=3&idBus=&idLote=&numPagBus=",
+      "etiqueta": "Bienes",
+      "motivo": "La página indica que parte de la información requiere identificación."
+    }
+  ]
+}

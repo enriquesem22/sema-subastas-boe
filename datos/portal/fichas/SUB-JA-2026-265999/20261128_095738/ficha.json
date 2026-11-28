@@ -1,0 +1,311 @@
+{
+  "sub": "SUB-JA-2026-265999",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-265999",
+  "consultado_utc": "2026-11-28T08:57:43+00:00",
+  "captura_codigos": "41/20261128_095722",
+  "peticiones": 5,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Vivienda)",
+      "direccion": "calle GANDIA, PORTAL 6, 5ª PLANTA, PTA 24 - PARQUE ALCOSA",
+      "localidad": "SEVILLA",
+      "provincia": "Sevilla",
+      "codigo_postal": "41019",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-JA-2026-265999/20261125_210058/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-265999&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-JA-2026-265999/20261125_210058/portal/general.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-JA-2026-265999",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-265999",
+      "consultado_utc": "2026-11-28T08:57:38+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "b3b3d208067a4e2866761b5e69a5e2b060b709cecc834027523aade82b93fda6",
+      "bytes": 10748,
+      "huella": "cf583bbbc4befa0084d7625973a914670f353db602b33b2cd8cdbcf6595b67e1",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-JA-2026-265999"
+          ],
+          [
+            "Tipo de subasta",
+            "JUDICIAL EN VÍA DE APREMIO"
+          ],
+          [
+            "Cuenta expediente",
+            "4001 0000 06 1568 22"
+          ],
+          [
+            "Fecha de inicio",
+            "19-11-2026 18:00:00 CET  (ISO: 2026-11-19T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "09-12-2026 18:00:00 CET (ISO: 2026-12-09T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "70.271,29 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-37588"
+          ],
+          [
+            "Valor subasta",
+            "67.000,00 €"
+          ],
+          [
+            "Tasación",
+            "0,00 €"
+          ],
+          [
+            "Puja mínima",
+            "Sin puja mínima"
+          ],
+          [
+            "Tramos entre pujas",
+            "1.340,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "3.350,00 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-265999/20261125_210058/portal/autoridad.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-265999&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-265999&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T08:57:40+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "1ff74fcf45e8cad6016d1cce30a8e93a507d966fff962564f065bf391bb00618",
+      "bytes": 8982,
+      "huella": "93d2c5007327d0d67136896b4573f7f276976338915bf8445bb88176ef8d9d18",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "4109142005"
+          ],
+          [
+            "Descripción",
+            "Sección Civil TI Sevilla. Plz.n 5"
+          ],
+          [
+            "Dirección",
+            "CL VERMONDO RESTA S/N S/N   ; 41018 SEVILLA"
+          ],
+          [
+            "Teléfono",
+            "676767711"
+          ],
+          [
+            "Fax",
+            "955043135"
+          ],
+          [
+            "Correo electrónico",
+            "scej.subastas.sevilla.jus@juntadeandalucia.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-265999/20261125_210058/portal/bienes.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-265999&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-265999&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T08:57:41+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "a02a1af42077f0c01f8c2bd91022df93ba20b8a01785ae005c82a3142a780c5d",
+      "bytes": 12033,
+      "huella": "4ab35db9d067e9f11969f34b0f80f3825652a978a8f8a11d7aa61d1643e78176",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Vivienda)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "Vivienda tipo F, en la quinta planta alta, puerta veinticuatro, con acceso por el portal seis de la calle II del plano, denominada Gandia, perteneciente al bloque número dos en el Parque Alcosa en el Polígono Aeropuerto de Sevilla."
+          ],
+          [
+            "IDUFIR",
+            "41031000361164"
+          ],
+          [
+            "Referencia catastral",
+            "0647204TG4404N0024TF"
+          ],
+          [
+            "Dirección",
+            "calle GANDIA, PORTAL 6, 5ª PLANTA, PTA 24 - PARQUE ALCOSA"
+          ],
+          [
+            "Código Postal",
+            "41019"
+          ],
+          [
+            "Localidad",
+            "SEVILLA"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "Sí"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No consta"
+          ],
+          [
+            "Cargas",
+            "Según certificación de dominio y cargas"
+          ],
+          [
+            "Inscripción registral",
+            "Inscrita en el Registro de la Propiedad nº 4 de Sevilla como finca nº 155, en la inscripción quinta, al folio 15, del tomo 3.273, libro 778"
+          ],
+          [
+            "Información adicional",
+            "Tiene una superficie útil de sesenta y cinco metros, treinta y un decímetros cuadrados y construida de OCHENTA Y NUEVE METROS, CUARENTA Y TRES DECIMETROS CUADRADOS. Consta de vestíbulo, comedor, cocina, cuatro dormitorios, aseo, galería y solana. Linda: por su frente, calle II derecha entrando, vivienda con acceso por el portal cuatro de la calle II izquierda, escalera y vivienda de la misma planta, puerta veintitrés; y fondo, escalera y patio de luces. Su cuota es de una centésima, nueve cien avas partes de otra centésima."
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-JA-2026-265999/20261125_210058/portal/pujas.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-265999&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-JA-2026-265999&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T08:57:42+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "d6d6f9197827646e4779f2c2f41c7e62666ce5e5f6fb11f2246cac4a6c1a38cc",
+      "bytes": 8474,
+      "huella": "4df862b21ef753497c288b6383ea41ca97c150522d0a6bb36a0b409273eeae23",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/7c18f02aadac76403c1aff1660ec8ae1812909ca59416a4df2003f65cba10c42.pdf",
+      "etiqueta": "CONFORME A EDICTO: VIVIENDA CALLE GANDIA PARQUE ALCOSA SEVILLA",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "1-d9a6eedd68b6d7373f078ba0513b8ea8",
+        ""
+      ],
+      "reutilizado": true,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-265999&idDoc=1-d9a6eedd68b6d7373f078ba0513b8ea8",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-265999&idDoc=1-d9a6eedd68b6d7373f078ba0513b8ea8",
+      "consultado_utc": "2026-11-25T19:09:12+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "7c18f02aadac76403c1aff1660ec8ae1812909ca59416a4df2003f65cba10c42",
+      "bytes": 374850
+    },
+    {
+      "archivo": "documentos/30449d7370deacf1722b06d80a7b23f5ae6e9cc871bfa00f865d20c8dd492843.pdf",
+      "etiqueta": "CERTIFICACION DE DOMINIO y CARGAS",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "2-72fbb05c96099081e64778526ee89400",
+        ""
+      ],
+      "reutilizado": true,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-265999&idDoc=2-72fbb05c96099081e64778526ee89400",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-JA-2026-265999&idDoc=2-72fbb05c96099081e64778526ee89400",
+      "consultado_utc": "2026-11-25T19:09:14+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "30449d7370deacf1722b06d80a7b23f5ae6e9cc871bfa00f865d20c8dd492843",
+      "bytes": 826790
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-37588",
+      "publicado": "2026-11-16",
+      "actualizado_fuente": "20261116071609",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-37588.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37588",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-37588",
+          "consultado_utc": "2026-11-25T19:09:15+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "0decc12a447586787f742c05d3d7c59417ed333a926a9805cda140e8aaaecb79",
+          "bytes": 1140
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-37588.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/16/pdfs/BOE-B-2026-37588.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/16/pdfs/BOE-B-2026-37588.pdf",
+          "consultado_utc": "2026-11-25T19:09:16+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "bc3066adb5e736140b7e2a1761c4050b1ed619ad296716037092bf5519c61070",
+          "bytes": 197934
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": []
+}

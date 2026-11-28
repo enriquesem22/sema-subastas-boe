@@ -1,0 +1,336 @@
+{
+  "sub": "SUB-RC-2026-4107100105",
+  "fuente": "Basado en datos de la Agencia Estatal Boletín Oficial del Estado",
+  "sede": "https://www.boe.es",
+  "url": "https://subastas.boe.es/ds.php?id=SUB-RC-2026-4107100105",
+  "consultado_utc": "2026-11-28T09:01:35+00:00",
+  "captura_codigos": "41/20261128_095722",
+  "peticiones": 6,
+  "lotes_identificados": [],
+  "ubicaciones_bienes": [
+    {
+      "lote": null,
+      "bien": 1,
+      "tipo": "Inmueble (Nave industrial)",
+      "direccion": "HACIENDA DOLORES 8 Nº 1",
+      "localidad": "ALCALÁ DE GUADAIRA",
+      "provincia": "Sevilla",
+      "codigo_postal": "41500",
+      "fuente": {
+        "pestana": "Bienes",
+        "archivo": "fichas/SUB-RC-2026-4107100105/20261125_210437/portal/bienes.html.gz",
+        "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-RC-2026-4107100105&ver=3&idBus=&idLote=&numPagBus="
+      }
+    }
+  ],
+  "paginas": [
+    {
+      "archivo": "fichas/SUB-RC-2026-4107100105/20261127_104707/portal/general.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Información general",
+      "pestana": "1",
+      "lote": null,
+      "url": "https://subastas.boe.es/ds.php?id=SUB-RC-2026-4107100105",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-RC-2026-4107100105",
+      "consultado_utc": "2026-11-28T09:01:29+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "251799770914dbdedcbaa187968edd73b55854e53d3cdf2bac0f542b4d944c6b",
+      "bytes": 10557,
+      "huella": "aab55128de2ce21f1fedc367e399066bc148ea40c09baca0e2e78e5205d160d7",
+      "encabezados": [
+        "Datos de la subasta",
+        "Información complementaria de la subasta",
+        "Documentos"
+      ],
+      "tablas": [
+        [
+          [
+            "Identificador",
+            "SUB-RC-2026-4107100105"
+          ],
+          [
+            "Tipo de subasta",
+            "RECAUDACIÓN TRIBUTARIA"
+          ],
+          [
+            "Fecha de inicio",
+            "24-11-2026 18:00:00 CET  (ISO: 2026-11-24T18:00:00+01:00)"
+          ],
+          [
+            "Fecha de conclusión",
+            "14-12-2026 18:00:00 CET (ISO: 2026-12-14T18:00:00+01:00)"
+          ],
+          [
+            "Cantidad reclamada",
+            "343.656,95 €"
+          ],
+          [
+            "Lotes",
+            "Sin lotes"
+          ],
+          [
+            "Anuncio BOE",
+            "BOE-B-2026-38463"
+          ],
+          [
+            "Valor subasta",
+            "157.179,28 €"
+          ],
+          [
+            "Tasación",
+            "560.000,00 €"
+          ],
+          [
+            "Puja mínima",
+            "78.589,64 €"
+          ],
+          [
+            "Tramos entre pujas",
+            "3.000,00 €"
+          ],
+          [
+            "Importe del depósito",
+            "7.858,96 €"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-RC-2026-4107100105/20261125_210437/portal/autoridad.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Autoridad gestora",
+      "pestana": "2",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-RC-2026-4107100105&ver=2&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-RC-2026-4107100105&ver=2&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T09:01:31+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "16e2ea7fdf601c7f79477c65167ffe5f3e452b26068eef968a8394675cf99e7d",
+      "bytes": 9238,
+      "huella": "4e52e7a57a82e8cb91f147fd211d0e1997edcfd1547b6388d623328fa05a49c6",
+      "encabezados": [
+        "Datos de la autoridad gestora"
+      ],
+      "tablas": [
+        [
+          [
+            "Código",
+            "41071001"
+          ],
+          [
+            "Descripción",
+            "Diputación Provincial de Sevilla ( OPAEF) (Diputación de Sevilla)"
+          ],
+          [
+            "Dirección",
+            "Av. José María Moreno Galván, 16 ; 41071 Sevilla"
+          ],
+          [
+            "Teléfono",
+            "954550344"
+          ],
+          [
+            "Fax",
+            "954550335"
+          ],
+          [
+            "Correo electrónico",
+            "opaefsubastas@dipusevilla.es"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-RC-2026-4107100105/20261125_210437/portal/bienes.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Bienes",
+      "pestana": "3",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-RC-2026-4107100105&ver=3&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-RC-2026-4107100105&ver=3&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T09:01:32+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "1426007ddf2f7c7c9f3d7406ab14527fe88294e68eb49a964462c21a8cefd175",
+      "bytes": 12277,
+      "huella": "be342ddc865b3e6861d03c82433da233c97a5389cca5d84c407c743518070fae",
+      "encabezados": [
+        "Datos del bien subastado",
+        "Bien 1 - Inmueble (Nave industrial)"
+      ],
+      "tablas": [
+        [
+          [
+            "Descripción",
+            "URBANA. Parcela NÚMERO NUEVE situada en el ámbito de la UNIDAD DE EJECUCIÓN\n          NÚMERO TRECE \"HACIENDA DOLORES\" del P.G.O.0 de esta Ciudad. Ocupa una superficie de cinco mil cuatrocientos cuarenta y ocho metros y ochenta y cuatro decímetros cuadrados. Sobre dicha parcela existe construida una NAVE INDUSTRIAL que ocupa una superficie de mil quinientos ochenta y seis metros cuadrados"
+          ],
+          [
+            "IDUFIR",
+            "41041000804783"
+          ],
+          [
+            "Referencia catastral",
+            "4690808TG4348N0001PU"
+          ],
+          [
+            "Dirección",
+            "HACIENDA DOLORES 8 Nº 1"
+          ],
+          [
+            "Código Postal",
+            "41500"
+          ],
+          [
+            "Localidad",
+            "ALCALÁ DE GUADAIRA"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ],
+          [
+            "Vivienda habitual",
+            "No"
+          ],
+          [
+            "Situación posesoria",
+            "No consta"
+          ],
+          [
+            "Visitable",
+            "No"
+          ],
+          [
+            "Cargas",
+            "EMBARGOS LETRAS  A y C. Ambas a favor del Ayuntamiento de Alcalá de Guadaira"
+          ],
+          [
+            "Inscripción registral",
+            "REGISTRO PROPIEDAD ALCALÁ DE GUADAIRA Nº 2"
+          ],
+          [
+            "Título jurídico",
+            "100% Pleno dominido por adjudicación"
+          ],
+          [
+            "Información adicional",
+            "Nº Finca: 56503 Ref. Catastral: 4690808TG4348N0001PU IDUFIR: 41041000804783 de Alcalá de Guadaira"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-RC-2026-4107100105/20261125_210437/portal/pestana_4.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Relacionados",
+      "pestana": "4",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-RC-2026-4107100105&ver=4&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-RC-2026-4107100105&ver=4&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T09:01:33+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "284c29c7898fdb0e983edbce3d4e0735348d855ab0534c8c39f8fc9e7fa0c1e7",
+      "bytes": 9087,
+      "huella": "59768b2719a8bd31826f60c374c43f14485805dd6ae6108b624ecb29292465db",
+      "encabezados": [
+        "Acreedor"
+      ],
+      "tablas": [
+        [
+          [
+            "Nombre",
+            "Diputación Provincial de Sevilla ( OPAEF)"
+          ],
+          [
+            "NIF",
+            "P9100004B"
+          ],
+          [
+            "Dirección",
+            "Av. José María Moreno Galván, 16"
+          ],
+          [
+            "Localidad",
+            "41071 Sevilla"
+          ],
+          [
+            "Provincia",
+            "Sevilla"
+          ]
+        ]
+      ],
+      "aviso_acceso": false
+    },
+    {
+      "archivo": "fichas/SUB-RC-2026-4107100105/20261125_210437/portal/pujas.html.gz",
+      "igual_que_anterior": true,
+      "etiqueta": "Pujas",
+      "pestana": "5",
+      "lote": null,
+      "url": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-RC-2026-4107100105&ver=5&idBus=&idLote=&numPagBus=",
+      "url_final": "https://subastas.boe.es/detalleSubasta.php?idSub=SUB-RC-2026-4107100105&ver=5&idBus=&idLote=&numPagBus=",
+      "consultado_utc": "2026-11-28T09:01:34+00:00",
+      "tipo_mime": "text/html",
+      "sha256": "dbd293b9032e4d0b58e8accf26aaf47510b5fe217accc2a07cf5b2a2edc789f4",
+      "bytes": 8675,
+      "huella": "032b537519b051d8747c905f334d073f73a6ee265d9862e9dda2e724eda23c80",
+      "encabezados": [
+        "Pujas",
+        "Puja máxima actual de la subasta"
+      ],
+      "tablas": [],
+      "aviso_acceso": false
+    }
+  ],
+  "adjuntos": [
+    {
+      "archivo": "documentos/846894079f2f22746d28bd7b4e4bc09aa6ac4134cb40662bf790df9a177f4ae5.pdf",
+      "etiqueta": "EDICTO DE SUBASTA",
+      "lote": null,
+      "clave": [
+        "/verDocumento.php",
+        "1-a190a7d5b040ad434e87e33aa669b9f4",
+        ""
+      ],
+      "reutilizado": true,
+      "url": "https://subastas.boe.es/verDocumento.php?idSub=SUB-RC-2026-4107100105&idDoc=1-a190a7d5b040ad434e87e33aa669b9f4",
+      "url_final": "https://subastas.boe.es/verDocumento.php?idSub=SUB-RC-2026-4107100105&idDoc=1-a190a7d5b040ad434e87e33aa669b9f4",
+      "consultado_utc": "2026-11-27T09:47:14+00:00",
+      "tipo_mime": "application/pdf",
+      "sha256": "846894079f2f22746d28bd7b4e4bc09aa6ac4134cb40662bf790df9a177f4ae5",
+      "bytes": 137115
+    }
+  ],
+  "anuncios": [
+    {
+      "anuncio": "BOE-B-2026-38463",
+      "publicado": "2026-11-21",
+      "actualizado_fuente": "20261121071527",
+      "archivos": [
+        {
+          "archivo": "anuncios/BOE-B-2026-38463.xml",
+          "url": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38463",
+          "url_final": "https://www.boe.es/diario_boe/xml.php?id=BOE-B-2026-38463",
+          "consultado_utc": "2026-11-25T19:14:30+00:00",
+          "tipo_mime": "application/xml",
+          "sha256": "8614ffd8f1825859bb85a48242d896850296c74a08cd0c3dd729dfbc20cd4233",
+          "bytes": 1560
+        },
+        {
+          "archivo": "anuncios/BOE-B-2026-38463.pdf",
+          "url": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38463.pdf",
+          "url_final": "https://www.boe.es/boe/dias/2026/11/21/pdfs/BOE-B-2026-38463.pdf",
+          "consultado_utc": "2026-11-25T19:14:31+00:00",
+          "tipo_mime": "application/pdf",
+          "sha256": "4faaf91eb9f217dc8fe1b2876a6ee376a5ae05822c06696d2b506ac66b619daf",
+          "bytes": 199122
+        }
+      ],
+      "aviso": null,
+      "reutilizado": true
+    }
+  ],
+  "pendientes": []
+}
