@@ -15,7 +15,7 @@ provincia el mapa vuelve a verse entero.
   (Huelva, fuente `limites_21`) en la carpeta del panel de Drive, hechos con `geo_limites.py`. Los de Huelva solo se
   cargan cuando el mapa enseña Huelva.
 - Calles de OpenStreetMap: las de Sevilla (`calles_red` y `calles`) son archivos fijos del artefacto. Las de Huelva
-  aún no están (hacen falta con `calles_osm.py --provincia 21` y una consulta a Overpass API); mientras no estén, su
+  aún no están (las saca el flujo de GitHub «Calles de OpenStreetMap (mapa del panel)» con `calles_osm.py`); mientras no estén, su
   mapa lleva solo los límites municipales, sin la nota de OpenStreetMap ni el aviso de acercar.
 
 ## Qué muestra la ficha de cada inmueble

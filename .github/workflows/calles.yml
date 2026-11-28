@@ -1,0 +1,63 @@
+name: Calles de OpenStreetMap (mapa del panel)
+
+# Descarga de Overpass API las carreteras y calles de una provincia y las convierte con calles_osm.py en los dos
+# archivos del mapa del panel (calles_red.json, que se carga al abrir, y calles.json, al acercar), que se guardan en
+# datos/geo/calles/<provincia>/. Datos: © colaboradores de OpenStreetMap, licencia ODbL. Solo a mano (pestaña Actions →
+# este flujo → Run workflow): las calles cambian poco y el panel las lleva como archivos fijos del artefacto. Va en
+# GitHub porque desde la nube de Claude no se llega a Overpass.
+on:
+  workflow_dispatch:
+    inputs:
+      provincia:
+        description: "Provincia (21 Huelva, 41 Sevilla)"
+        required: true
+        default: "21"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sema
+  cancel-in-progress: false
+
+jobs:
+  calles:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PROVINCIA: ${{ github.event.inputs.provincia }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Consulta a Overpass API
+        run: |
+          pip install -q shapely
+          python -I calles_osm.py --provincia "$PROVINCIA" --consulta > consulta.overpassql
+          cat consulta.overpassql
+          mkdir -p tmp_osm
+          curl -sS --fail --retry 3 --retry-delay 60 -m 900 -A "SeMa-Deal-Finder/1.0 (mapa del panel de subastas)" \
+            --data-urlencode data@consulta.overpassql -o tmp_osm/overpass.json https://overpass-api.de/api/interpreter
+          ls -la tmp_osm/overpass.json
+
+      - name: Archivos del mapa
+        run: |
+          mkdir -p "datos/geo/calles/$PROVINCIA"
+          python -I calles_osm.py --provincia "$PROVINCIA" tmp_osm/overpass.json "datos/geo/calles/$PROVINCIA" | tee -a "$GITHUB_STEP_SUMMARY"
+          ls -la "datos/geo/calles/$PROVINCIA"
+
+      - name: Guardar en el repositorio
+        run: |
+          git config user.name "sema-bot"
+          git config user.email "sema-bot@users.noreply.github.com"
+          git add "datos/geo/calles/$PROVINCIA"
+          if git diff --cached --quiet; then
+            echo "Sin cambios que guardar"
+          else
+            git commit -q -m "Calles de OpenStreetMap para el mapa del panel, provincia $PROVINCIA"
+            git pull -q --rebase origin "$GITHUB_REF_NAME"
+            git push -q
+          fi

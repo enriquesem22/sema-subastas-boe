@@ -182,7 +182,9 @@ datos de en qué búsqueda salió y cuándo se consultó.
   dibujar el mapa, en dos archivos compactos por provincia (`calles_red`, que se carga al abrir, y `calles`, al acercar).
   Son archivos fijos del artefacto, no de Drive. `py -I calles_osm.py --provincia 21 --consulta` escribe la consulta de
   Overpass API; con la respuesta, `py -I calles_osm.py --provincia 21 respuesta.json carpeta/` hace los dos archivos.
-  El programa va también dentro de cada archivo («meta»).
+  El programa va también dentro de cada archivo («meta»). Desde la nube de Claude no se llega a Overpass, así que el
+  flujo de GitHub **«Calles de OpenStreetMap (mapa del panel)»** (`.github/workflows/calles.yml`, solo a mano) hace la
+  consulta y guarda los dos archivos en `datos/geo/calles/<provincia>/`; luego se suben al artefacto.
 
 ### Panel «SeMá Deal Finder»
 
